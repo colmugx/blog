@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Co1MugX</title>
+  <subtitle>努力工作，认真学习，加油！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.co1mugx.tk/"/>
+  <updated>2017-02-16T06:59:27.000Z</updated>
+  <id>http://blog.co1mugx.tk/</id>
+  
+  <author>
+    <name>Co1MugX</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一次知乎live感受 - 一线大厂如何面试</title>
+    <link href="http://blog.co1mugx.tk/2017/02/16/zhihu-live-yi-xian/"/>
+    <id>http://blog.co1mugx.tk/2017/02/16/zhihu-live-yi-xian/</id>
+    <published>2017-02-16T06:24:37.000Z</published>
+    <updated>2017-02-16T06:59:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>怎么感觉太久没写博客，本地的程序都回档了…</p>
+</blockquote>
+<p>就在昨天参加了知乎里，offer100举办的一次live叫《一线大厂如何面试前端工程师》，我想这应该对即将参加工作的我有很大帮助。<br>确实讲到了为什么一线大厂需要一二三四面，和面试大概需要问些什么，回答些什么。听完之后自己也做了思考，觉得现在的自己还是比别人差太多了。<br>以至于现在很迷茫，不知道怎么做。<a id="more"></a></p>
+<p>印象很深的一句话就是</p>
+<blockquote>
+<p>在简历上，有实践经历你写实践经历，没有你就写案例，连案例都没有的话，你只能写写心得。</p>
+</blockquote>
+<p>所以我在想，就我github这点东西，要死不死还没star，质量也不算高都是自己为了练习写着玩的。能不能算是案例… 而心得？又要怎样写呢？<br>难道要纸上谈兵，写一下我对vue，对react的看法和用法么？我要是能给大项目指指点点的话，也不至于连依靠这两个框架写点什么都写不出来吧。</p>
+<p>每每看到喜欢的工作都会自卑，甚至别人觉得我能胜任这份工作我都不敢提交简历……</p>
+<p>到底我踏入前端到底是不是对的，现在觉得自己有点邯郸学步了。而且也已经知道，<strong>网页设计和前端工程完全是两回事！</strong></p>
+<p>选择学习前端之前学的是iOS开发，读OC读得很认真，同时也喜欢js因为js很自由。到后来接触到nodejs之后才发现，原来js可以这么玩！</p>
+<p>而且通过js可以开发类似于<code>react native</code>这样的通过js翻译器来接近原生开发手机应用，而且跨平台；也可以像<code>ionic</code>一样，通过html+css+js进行封装制作成混合应用。也许当时最吸引我的点就是“可以跨平台”这点了吧。</p>
+<p>从第一次接触计算机语言开始，就觉得指令式的语言好难，小时候参加过奥数信息学的培训用的是<code>pascal</code>，到后来<code>java</code>入门，为了学习基础的算法通过<code>C</code>语言来入门。在学习java的时候基本上都是按照教程，来一句打一句，很多都不理解，一直到继承和对象就直接懵成狗。后来渐渐有所理解还真的是C语言学习中发现的。所以那个时候我也深信C语言是语言入门最好的语言。</p>
+<p>至于自己为什么说语言学习能力挺差的，就是我自己称之为“古老而传说的邪教语言”——<code>C++</code>。这是我接触的语言中，连入门都没办法理解的语言。去年尝试学习一下hello world，依然被拒之门外，现在害怕极了，不敢再靠近…（至于新邪教语言我想不用说出来都知道我会觉得是JavaScript，准确说是<code>ECMAScript 2015</code>，太多大牛把看起来简单的语言各种按CPP的套路妖魔化了。）</p>
+<p>到最后主讲人可能也是为了给主办方拉点流量和客户吧，建议在场的人注册100offer，于是我也去100offer的网站看了一下。噢！竟然还支持Github和LinkIn登陆接入，我想这个平台真的是为工程师而生的。</p>
+<p>然而，<strong>我在注册的过程中产生的满满的挫败感……</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;怎么感觉太久没写博客，本地的程序都回档了…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就在昨天参加了知乎里，offer100举办的一次live叫《一线大厂如何面试前端工程师》，我想这应该对即将参加工作的我有很大帮助。&lt;br&gt;确实讲到了为什么一线大厂需要一二三四面，和面试大概需要问些什么，回答些什么。听完之后自己也做了思考，觉得现在的自己还是比别人差太多了。&lt;br&gt;以至于现在很迷茫，不知道怎么做。
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="吹水" scheme="http://blog.co1mugx.tk/tags/%E5%90%B9%E6%B0%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己造轮子！——Syuanpi.css</title>
+    <link href="http://blog.co1mugx.tk/2017/02/13/Syuanpi-css/"/>
+    <id>http://blog.co1mugx.tk/2017/02/13/Syuanpi-css/</id>
+    <published>2017-02-12T16:50:40.000Z</published>
+    <updated>2017-02-16T07:05:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css" target="_blank" rel="external">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p>
+<p>说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！</p>
+<h3 id="为什么要出这东西…"><a href="#为什么要出这东西…" class="headerlink" title="为什么要出这东西…"></a>为什么要出这东西…</h3><a id="more"></a>
+<p>在知乎看了一段时间了认识了kpi这东西，觉得这东西好坑啊233，导致我现在觉得kpi的意思就是：有现有轮子不要用！不管怎样自己用的东西能做成轮子就给它做成轮子！然后再用自己的轮子！然后kpi就啪啪啪的往上走！不过这库子我的出发点还是想把我原来弄的一些基础的动画归类起来，加上自己比较会常用的操作封装起来，仅此而已。<br>在知乎学习的过程，就有一个关于没工作经验然后怎么面试的问题。就有提到关于自己开源自己的代码，不是不负责任的像托管作业一样把乱七八糟的东西放上去然后就说“噢！劳资也有开源”这样，至少要有一个给人一种便捷操作，要有头有尾，还要会写文档，不会写给个README也行。然后我也没经验，就听话这么做了…</p>
+<h3 id="它是个什么东西…"><a href="#它是个什么东西…" class="headerlink" title="它是个什么东西…"></a>它是个什么东西…</h3><p>好了说回来我的东西~ Syuanpi意思很简单，我喜欢它日后可以炫得一批233。但是它并不炫，而是一些很基础很基础的动画用法。不过，一些稍微认真的网站不就要点轻转场就行了嘛。比如我觉得博客挺认真的，但是没有转场动画又觉得好干燥，所以我的大部分动画起始点都是基于在自己博客上面用。而且动画的过程速度和位置全靠目测！不会计算也是硬伤呀…用的是stylus，不知道为什么总觉得那个被那个绿色的长的 ∮ 撩到了，然后就这么用了。<br>认认真真做作业，不要搞什么大新闻。就像标题说的，针对自己脑洞的产物。不过由于是自己第一次比较成型的“自己的作业自己做”，我还是好高兴的。如果有人愿意给star就更好了，还没体验过被5个star砸死是什么感觉呢~（不贪心的好孩子~）<br>嗯！该讲说明书了！大份说明书在GitHub的头页README.md，所以就不讲了！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。&lt;br&gt;这是demo的页面：&lt;a href=&quot;https://colmugx.github.io/Syuanpi.css&quot;&gt;Syuanpi.css&lt;/a&gt;&lt;br&gt;这是GitHub的页面：&lt;a href=&quot;https://github.com/ColMugX/Syuanpi.css&quot;&gt;ColMugX/Syuanpi.css: ✨A library of CSS animations.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！&lt;/p&gt;
+&lt;h3 id=&quot;为什么要出这东西…&quot;&gt;&lt;a href=&quot;#为什么要出这东西…&quot; class=&quot;headerlink&quot; title=&quot;为什么要出这东西…&quot;&gt;&lt;/a&gt;为什么要出这东西…&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+      <category term="Syuanpi" scheme="http://blog.co1mugx.tk/tags/Syuanpi/"/>
+    
+      <category term="CSS" scheme="http://blog.co1mugx.tk/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更新全局NPM的所有可更新包</title>
+    <link href="http://blog.co1mugx.tk/2016/12/09/update-npm-packages/"/>
+    <id>http://blog.co1mugx.tk/2016/12/09/update-npm-packages/</id>
+    <published>2016-12-09T08:12:41.000Z</published>
+    <updated>2016-12-11T18:05:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>工具比本体好玩系列……</p>
+</blockquote>
+<p>今天在通过<code>vue-cli</code>创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。<br>然后发现，项目内更新就<code>npm update &lt;name&gt;</code>就更新了，全局好像不知道怎么弄。然后就自作聪明的<code>npm update -g vue-cli</code>（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”<br>事实证明是能用的！<code>vue-cli</code>更新好了。<br>但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了<br>于是查了一下，说不定日后还得用，做个记录。<a id="more"></a></p>
+<h3 id="通过npm的cli更新"><a href="#通过npm的cli更新" class="headerlink" title="通过npm的cli更新"></a>通过npm的cli更新</h3><p>后来在某个同性交流平台sf找到了，说<code>npm</code>在<code>2.6.1</code>之后有一个代码叫<code>npm install -g</code>。可以升级全部包。<br>然后我试了一下。</p>
+<blockquote>
+<p>eisdir EISDIR: illegal operation on a directory, read<br>npm ERR! eisdir This is most likely not a problem with npm itself<br>npm ERR! eisdir and is related to npm not being able to find a package.json in<br>npm ERR! eisdir a package you are trying to install.</p>
+</blockquote>
+<p><strong>？？？</strong>我有一句MMP*******</p>
+<p>先查找npm 有多少包需要更新吧，命令是<code>npm -g outdated</code>，这个就正常了。<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Package</span>           Current        Wanted  Latest  Location</div><div class="line">cordova             <span class="number">5</span>.<span class="number">4</span>.<span class="number">1</span>         <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>   <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>  </div><div class="line">egret             MISSING         <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>   <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>  </div><div class="line">ionic       <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>-beta.<span class="number">23</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">0</span>-beta.<span class="number">3</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">14</span>  </div><div class="line">ios-sim             <span class="number">5</span>.<span class="number">0</span>.<span class="number">6</span>        <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  </div><div class="line">npm                <span class="number">3</span>.<span class="number">3</span>.<span class="number">12</span>         <span class="number">4</span>.<span class="number">0</span>.<span class="number">5</span>   <span class="number">4</span>.<span class="number">0</span>.<span class="number">3</span>  </div><div class="line">typescript          <span class="number">1</span>.<span class="number">8</span>.<span class="number">9</span>         <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>   <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>  </div><div class="line">typings             <span class="number">1</span>.<span class="number">3</span>.<span class="number">3</span>         <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>   <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>  </div><div class="line">webpack            <span class="number">1</span>.<span class="number">13</span>.<span class="number">3</span>        <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span>  <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span></div></pre></td></tr></table></figure></p>
+<p>然后我又自作聪明了一下，<code>npm update -g</code><br>然后依然是卡了一下，然后就读条……<br>然后就全部更新完成。</p>
+<h3 id="通过npm-check"><a href="#通过npm-check" class="headerlink" title="通过npm-check"></a>通过npm-check</h3><p>其实还看到了一种方法，是在终端里面的GUI工具，可以直观看到哪些需要更新然后可以顺便更新掉<br>当然需要安装，<code>npm-check</code></p>
+<blockquote>
+<p>npm install -g npm-check （mac宝宝们别忘记sudo）</p>
+</blockquote>
+<p>检查npm包的状态:</p>
+<blockquote>
+<p>npm-check -u -g</p>
+</blockquote>
+<p>然后就移动光标来选择和操作。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;工具比本体好玩系列……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天在通过&lt;code&gt;vue-cli&lt;/code&gt;创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。&lt;br&gt;然后发现，项目内更新就&lt;code&gt;npm update &amp;lt;name&amp;gt;&lt;/code&gt;就更新了，全局好像不知道怎么弄。然后就自作聪明的&lt;code&gt;npm update -g vue-cli&lt;/code&gt;（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”&lt;br&gt;事实证明是能用的！&lt;code&gt;vue-cli&lt;/code&gt;更新好了。&lt;br&gt;但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了&lt;br&gt;于是查了一下，说不定日后还得用，做个记录。
+    
+    </summary>
+    
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端水深JS玄学 —— 尝试后端框架Hapi</title>
+    <link href="http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/"/>
+    <id>http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/</id>
+    <published>2016-12-08T17:37:38.000Z</published>
+    <updated>2016-12-09T08:17:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>Hapi?可我一点都happy不起来…</p>
+</blockquote>
+<p>老规矩老套路：<a href="https://hapijs.com/" target="_blank" rel="external">链接在这</a></p>
+<h3 id="什么是Hapi"><a href="#什么是Hapi" class="headerlink" title="什么是Hapi"></a>什么是Hapi</h3><p>当<code>Node.js</code>用来做后端的时候，后端框架在我听说过的就三个：<code>Express</code>、<code>Koa</code>、<code>Hapi</code>。<br>超喜欢<code>Koa</code>，不过真的，能力有限，那些我没见过的语法我没了解过所以真的不懂，但据说是个超轻可玩性超高的框架，哎好可惜技不如人。例如那个<code>yield</code>，是个<code>python</code>的产物，但是我py真的不精，所以…我有一句妈卖批我现在就要讲。<a id="more"></a><br><code>Hapi</code>同样也是一个后端框架，而且它建立一个App很简单，就这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Hapi = <span class="built_in">require</span>(<span class="string">'hapi'</span>);</div><div class="line"><span class="comment">// Create a server with a host and port</span></div><div class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> Hapi.Server();</div><div class="line">server.connection(&#123; </div><div class="line">    <span class="attr">host</span>: <span class="string">'localhost'</span>, </div><div class="line">    <span class="attr">port</span>: <span class="number">8000</span> </div><div class="line">&#125;);</div><div class="line"><span class="comment">// Add the route</span></div><div class="line">server.route(&#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>:<span class="string">'/hello'</span>, </div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span> (<span class="params">request, reply</span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> reply(<span class="string">'hello world'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// Start the server</span></div><div class="line">server.start(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">throw</span> err;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Server running at:'</span>, server.info.uri);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="Hapi有哪些不一样"><a href="#Hapi有哪些不一样" class="headerlink" title="Hapi有哪些不一样"></a>Hapi有哪些不一样</h3><p>第一眼看起来是超直观，跟<code>Express</code>还是有很大区别的。<br>首先跟直观看到不同的就是，<code>Hapi</code>require之后没有<code>var app = hapi()</code>类似这样的东西，而是重新实例化了一个<code>server</code>，<br>然后用这个实例化出来的<code>server</code>定义接口啊，路由啊。然后通过<code>server.start</code>来启动服务。清新脱俗……<br>另外通过这篇<a href="http://ourjs.com/detail/5490db1c8a34fa320400000e" target="_blank" rel="external">Node.js 框架比较: Express vs. Koa vs. Hapi</a>可以看到，在REST中，<code>Hapi</code>是这么处理的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">server.route([</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'POST'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Post item'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'PUT'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Put item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'DELETE'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Delete item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Hello world'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p>就特别喜欢这样的直观的东西，我记得在知乎看到过一个大手说过：代码是给人看的，顺便机器也看得懂而已。这样看起来就特别舒服不会有点怪怪的。所以我就喜欢上这个框架了。<br>不过，<strong>这个框架的文档实在太少了！</strong>脑子不怎么发达的人真是不知道怎么玩。另外，我怎么看不到社区……而且据说这个框架更适合大型的项目。<br>其实看了官方的英文教程之后，就想，现在就只要加入<code>&#39;use strict&#39;;</code>就可以使用es6么，不需要babel转成es5？我也不知道现在有多少浏览器已经会看es6了。</p>
+<p>也没深入的学习，因为前端还没学好呢…先看一眼日后再挠个坑学习吧。（其实是对于菜鸟来说还是<code>Express</code>+<code>Typescript</code>更适合我…）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Hapi?可我一点都happy不起来…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;老规矩老套路：&lt;a href=&quot;https://hapijs.com/&quot;&gt;链接在这&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;什么是Hapi&quot;&gt;&lt;a href=&quot;#什么是Hapi&quot; class=&quot;headerlink&quot; title=&quot;什么是Hapi&quot;&gt;&lt;/a&gt;什么是Hapi&lt;/h3&gt;&lt;p&gt;当&lt;code&gt;Node.js&lt;/code&gt;用来做后端的时候，后端框架在我听说过的就三个：&lt;code&gt;Express&lt;/code&gt;、&lt;code&gt;Koa&lt;/code&gt;、&lt;code&gt;Hapi&lt;/code&gt;。&lt;br&gt;超喜欢&lt;code&gt;Koa&lt;/code&gt;，不过真的，能力有限，那些我没见过的语法我没了解过所以真的不懂，但据说是个超轻可玩性超高的框架，哎好可惜技不如人。例如那个&lt;code&gt;yield&lt;/code&gt;，是个&lt;code&gt;python&lt;/code&gt;的产物，但是我py真的不精，所以…我有一句妈卖批我现在就要讲。
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你叫什么？ 《你的名字。》</title>
+    <link href="http://blog.co1mugx.tk/2016/12/02/your-name/"/>
+    <id>http://blog.co1mugx.tk/2016/12/02/your-name/</id>
+    <published>2016-12-02T11:27:10.000Z</published>
+    <updated>2016-12-04T07:43:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>没看的别看了，我给你们剧透一下啊<br>故事的大概意思就是；男主被一个女鬼上身，而且还爱上了女鬼，甚至还想去找女鬼的家…<br>这是个恐怖故事。</p>
+</blockquote>
+<p>来扯一扯关于新海诚这老贼的一些思路，纯属自己的想法。别来人道怼我！<br>先从大局开始聊起。</p>
+<h3 id="第一个：三叶有没有死过"><a href="#第一个：三叶有没有死过" class="headerlink" title="第一个：三叶有没有死过"></a>第一个：三叶有没有死过</h3><p>故事讲的是，泷跟三年前的三叶邂逅，泷尝试去找三叶的时候，镇子早就爆炸了的。后来泷穿越去救回村子和三叶，才造就他们的相遇。但是这个说法对么，答案是：</p>
+<p><b style="font-size:17px">错误的。三叶没有死过。</b></p>
+<p>设想一下，答案有可能是：这是个两层的梦境：<code>泷跟三叶都在同一个世界同一个时间轴做着同样的梦，这个梦只是为了他们在现实世界中相遇。</code><br>泷第一层梦境是跟三叶交换身体那部分，第二层梦境是回去救三叶和镇子那部分。也就是说：</p>
+<p><b style="font-size:17px;">整个故事都是在做梦。</b></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;没看的别看了，我给你们剧透一下啊&lt;br&gt;故事的大概意思就是；男主被一个女鬼上身，而且还爱上了女鬼，甚至还想去找女鬼的家…&lt;br&gt;这是个恐怖故事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;来扯一扯关于新海诚这老贼的一些思路，纯属自己的想法。别来人道
+    
+    </summary>
+    
+    
+      <category term="看片子" scheme="http://blog.co1mugx.tk/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
+    
+      <category term="你的名字" scheme="http://blog.co1mugx.tk/tags/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扣肉小记（五）—— 你的名字。</title>
+    <link href="http://blog.co1mugx.tk/2016/12/02/Korou5/"/>
+    <id>http://blog.co1mugx.tk/2016/12/02/Korou5/</id>
+    <published>2016-12-02T09:45:28.000Z</published>
+    <updated>2016-12-04T07:18:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>我早已不记得你的名字，但我记得我喜欢你。</p>
+</blockquote>
+<h3 id="这是一篇不一样的“扣肉小记”"><a href="#这是一篇不一样的“扣肉小记”" class="headerlink" title="这是一篇不一样的“扣肉小记”"></a>这是一篇不一样的“扣肉小记”</h3><p>　　<strong><em>《你的名字。》，记不起“你的名字。”</em></strong><br>　　这次的音乐是这个：</p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=426881503&auto=0&height=32"></iframe><br>（一共8分钟）<br>　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。<br>　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。<br><span style="color:#a5a5a5">　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。</span> <a id="more"></a></p>
+<h4 id="一次未知的身体交换，换来未知的迷惑"><a href="#一次未知的身体交换，换来未知的迷惑" class="headerlink" title="一次未知的身体交换，换来未知的迷惑"></a>一次未知的身体交换，换来未知的迷惑</h4><p>　　已经不知道如何形容心情。<br>　　可能是因为三叶向往大城市，也有可能是神灵听到了三叶的呼声。他说他想变成东京的帅哥，结果在梦里真的成了。<br>　　但是那个梦又好像是真实的，就这么半梦半醒的状态下，跟东京另外一个帅哥泷交换了身体。<br>　　于是，就有了“一周有几天会交换身体，各自要过对方的生活而且不能被发现”的体验。</p>
+<blockquote>
+<p>- “你怎么打这么多份工啊！”<br>- “还不是因为你乱花钱！”</p>
+</blockquote>
+<p>　　就这么互相嫌弃，隔着两个世界小打小闹。为了不露馅，他们彼此在对方手机留下了日记。并通过笔来互相传达自己想说的话。<br>　　但是，虽说是半梦半醒，但梦毕竟是梦，而且梦一醒，就会逐渐淡忘梦里的内容。<br>　　就在一天，三叶帮泷喜欢的女孩子促成了一次约会，而泷带着三叶的身体去见了一次神明……</p>
+<blockquote>
+<p>- “他们现在一定在一起了吧”<br>  - “我真的是在做梦吗”</p>
+</blockquote>
+<p>　　就这么一次偶然的情况，梦醒了……这一醒，或许就要失去什么……<br>　　于是泷决定要去找三叶，三叶也想去找泷，就这样，一个人去了小镇，一个人去了城市。就在这个时候</p>
+<p>　　<strong>三叶遇到泷的时候，泷并不认识三叶！<br>  　　而泷去找三叶的时候，才知道小镇三年前就毁了！</strong></p>
+<h4 id="三年前我不认识你，三年后我遇不到你"><a href="#三年前我不认识你，三年后我遇不到你" class="headerlink" title="三年前我不认识你，三年后我遇不到你"></a>三年前我不认识你，三年后我遇不到你</h4><p>　　满脑子都是“不可能”的泷尝试翻看手机里三叶留下来的日记，才发现…</p>
+<p>　　<strong>那 根本不存在</strong></p>
+<p>　　翻查三年前小镇陨石事件的泷，在死亡花名册看到了“宫水三叶”的泷，不相信这一切都是真的。但是看到了自己的手绳。<br>　　这是一场“三年前三年后”的梦…<br>　　后来泷想起了自己放在神坛的“口嚼酒”，和一叶的提示“那是三叶的一半”。于是泷决定去神坛，为了挽救三叶。</p>
+<blockquote>
+<p>- “既然是三叶的一半，那喝一口是不是能看到更多？”</p>
+</blockquote>
+<p>　　之后，泷才知道，这场跨越三年的邂逅：是三年前的三叶跟自己交换了身体，并去找过自己。而不知情的自己只留下了头绳。</p>
+<h4 id="你-叫什么？"><a href="#你-叫什么？" class="headerlink" title="你 叫什么？"></a>你 叫什么？</h4><p>　　泷借着三叶的身体回到了陨石坠落的那一天。从一叶得知宫水家的女性都会有这样的梦。但每一代都不信陨石会坠落。<br>　　急着挽救小镇的三叶用尽各种方法，而且总有一种奇怪的感觉在驱使着她。<br>　　三叶借着泷的身体，看到了三年后的小镇：<strong>那是一片废墟。</strong><br>　　<br>　　总有一股奇怪的感觉，驱使着他们。而且他们都想到了同一个地方：神体</p>
+<blockquote>
+<p>- “互相留下自己的名字吧，我不想梦醒了，忘记了。”</p>
+</blockquote>
+<p>　　他们在湖中心，隔着三年时空相遇了。身体换回来了，他们的对话机会时间，只有黄昏。<br>　　于是，泷在三叶手上留下了“だすき”</p>
+<p>　　而三叶 <strong>只在泷手上留下了“み”（みつは）的“-”</strong></p>
+<blockquote>
+<p>- “只要记住你的名字，不管你在世界的哪个地方，我一定会去找你。”</p>
+</blockquote>
+<h4 id="我找了你五年，而你却等了我八年"><a href="#我找了你五年，而你却等了我八年" class="headerlink" title="我找了你五年，而你却等了我八年"></a>我找了你五年，而你却等了我八年</h4><blockquote>
+<p>- “真的不会忘记了，真的不会了！三叶！我记住了！みつは！”<br>　“等一下！你叫什么！你叫…什么… 我 为什么在这里…”</p>
+</blockquote>
+<p>　　为了“不知道”的泷找了“不知道”，一直找一直找，直到大学毕业。<br>　　三叶 为了泷 救了镇上的人，顺利读完高中大学，也毕业了，来到了东京。</p>
+<p>　　为了寻找自己的“不知道”的两个人，就算擦肩而过也不知道吧……</p>
+<p>　　但是他们彼此有感觉，他们知道，谁是他们要找的人。</p>
+<blockquote>
+<p>- “我 好像在哪里见过你？”<br>- “我也是”<br>– “君の名前は？”</p>
+</blockquote>
+<p>—— “我找了你五年，谢谢你等了我八年”</p>
+<p>终于，在同一个时空相遇了……</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;我早已不记得你的名字，但我记得我喜欢你。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;a href=&quot;#这是一篇不一样的“扣肉小记”&quot; class=&quot;headerlink&quot; title=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;/a&gt;这是一篇不一样的“扣肉小记”&lt;/h3&gt;&lt;p&gt;　　&lt;strong&gt;&lt;em&gt;《你的名字。》，记不起“你的名字。”&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;　　这次的音乐是这个：&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=298 height=52 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=426881503&amp;auto=0&amp;height=32&quot;&gt;&lt;/iframe&gt;&lt;br&gt;（一共8分钟）&lt;br&gt;　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。&lt;br&gt;　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。&lt;br&gt;&lt;span style=&quot;color:#a5a5a5&quot;&gt;　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。&lt;/span&gt;
+    
+    </summary>
+    
+    
+      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
+    
+      <category term="看片子" scheme="http://blog.co1mugx.tk/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>强迫症从娃娃抓起 - 编程猫体验</title>
+    <link href="http://blog.co1mugx.tk/2016/11/26/bian-cheng-mao/"/>
+    <id>http://blog.co1mugx.tk/2016/11/26/bian-cheng-mao/</id>
+    <published>2016-11-26T14:49:58.000Z</published>
+    <updated>2016-11-26T15:35:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>不知道我写了这个之后，会不会加大我到这家公司的机会指数233333</p>
+</blockquote>
+<h3 id="刚看到这个网站的时候"><a href="#刚看到这个网站的时候" class="headerlink" title="刚看到这个网站的时候"></a>刚看到这个网站的时候</h3><p>其实我是在逛CNODE的时候发现，这家公司在招人，正想找工作的我当然会点进去看一下啊<br>CNODE上面找的，毋庸置疑了就是<code>Node.Js</code>工程师了，然后我就点进官网看，第一眼看的时候我的反应是<br>“卧槽这什么卵…赛尔号么…”（不知道会不会被打死…）<br>然后我就拉到最下面有个加入我们（已经成习惯了，公司的招聘信息都会在footer），看到了有自己喜欢的工作，它是跳到拉钩网的。<br>后来发了简历之后发现，他们有一条要求：<strong>要通过他们的平台制作3个游戏</strong><br>一开始我是懵的，虽然我以前玩过<code>Egret</code>可是要我做游戏，害怕啊！<br>但是我还是去看了这个网站，发现这家网站做的其实是幼儿编程培训（没记错的话是7到15岁）<br>很新颖的题材，瞬间就喜欢了。（一瞬间想到了ios10的swift playground）<a id="more"></a></p>
+<h3 id="再了解这个网站的时候"><a href="#再了解这个网站的时候" class="headerlink" title="再了解这个网站的时候"></a>再了解这个网站的时候</h3><p>后来就想到了解一下这家公司吧。CNODE上面有一条要求是：要会打游戏，而且是老板要求的。<br>我就想…好神奇的公司，是不是公司内部炒鸡活跃，我好喜欢的就是能天天BB的公司（然后我看着别人BB<br>然后就去了解这家公司，发现两个创始人，都是从欧洲留学回来创业。厉害了，有种仰慕之心了。<br>接着就是，这家公司里面好活跃，而且好像每个人颜值超高，而且技术的一拨一拨的大牛（心里一直高潮了好么！）<br>接着再看到，下班后组队LOL…虽然这游戏不怎么玩了（娜美中单出火炮没人愿意跟我玩…），但是还是觉得挺有意思的。<br>还有就是，工作环境什么的都好棒，好自由。<br>于是作为美服无段！国服白银的我决定还是试试（因为S7了…）超想尝试融入这种乱七八糟的群体…</p>
+<h3 id="接触到这个网站之后"><a href="#接触到这个网站之后" class="headerlink" title="接触到这个网站之后"></a>接触到这个网站之后</h3><p><strong>全！程！高！潮！</strong><br><strong>为！什！么！我！出！生！那！么！早！</strong><br>教程很棒，编辑器也很棒。虽然说<code>Egret</code>也有一个不用编程就能写代码的游戏编辑器。<br>但怎么说，编程猫要给的一个思路更清晰。<br>比如最底下那个场景编辑器，分为场景（手机），背景和对象（雪碧？）<br>而且接触了一会就突然意识到一个知识点：<strong>编程猫这样的做法已经体现了“一个对象一个类”的想法了。</strong><br>虽然我不知道小朋友能不能意识到，但是算是解决我以前学习游戏的一个难点了。</p>
+<p>每一个操作对象都使用一个<code>class</code>，然后在这个<code>class</code>里定义这个对象的属性和方法<br>再通过母<code>class</code>来进行调用（通过那个“点击开始按钮”受到的启发）。<br>然后你切换其他的素材（角色）就又是一块空白的代码编辑器。</p>
+<p>然后有一个“接收广播”的设定，这不就是带参回调么！（啊啊啊啊兴奋啊！（全程高潮脸<br>每一个控制流也很清晰，而且变量和对象属性都变成了一个可以拉选的组件。<br><strong>更6的是控制流竟然也包含了<code>continue</code>和<code>break</code>！</strong><br>然后还有个<code>settimeout</code><br>真的好玩<br>不过我想写一个有物理引擎的游戏，发现边界控制控制不到，不知道是不是因为我变量不够还是BUG？</p>
+<h3 id="其实我是很认同“从小还是学编程”这个想法的"><a href="#其实我是很认同“从小还是学编程”这个想法的" class="headerlink" title="其实我是很认同“从小还是学编程”这个想法的"></a>其实我是很认同“从小还是学编程”这个想法的</h3><p>真的佩服两位BOSS想到了这个。仰慕大大。<br>还是觉得，小孩子的学习接受能力真的好很多，特别是启蒙那段时间（上幼儿园那个时候<br>基本上那个时候求知欲很强，而且学什么都很快（我幼儿园的时候要学英语，到了小学的时候英语简直逆天。<i style="color:#e0e0e0;">卧槽别提我高中…</i><br>看到ios10同期退出的那个swift playground的时候，我其实是好想下载来玩一下，但是这个软件最低要求是ios10，只能望而却步了。因为ios10太丑了，而且我还是觉得ios9已经很棒了。</p>
+<h3 id="不管怎么说，本来为了找工作实际上也学习了"><a href="#不管怎么说，本来为了找工作实际上也学习了" class="headerlink" title="不管怎么说，本来为了找工作实际上也学习了"></a>不管怎么说，本来为了找工作实际上也学习了</h3><p>这不就是初衷么，学无止境其实。其实自己本来就菜鸡，还是想去活跃的公司顺便提升一下自己。没想到会因为面试前的题而变得这么兴奋。<br>总之，认真做3个另外的工程吧，还是有必要想一下的。因为想用心做嘛，真的挺希望加入的。</p>
+<p><strong>另外…我可能会安利一些小朋友来玩编程猫了，我想看看一些思维活跃的孩子如果让他接触编程，能力会到哪里</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;不知道我写了这个之后，会不会加大我到这家公司的机会指数233333&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;刚看到这个网站的时候&quot;&gt;&lt;a href=&quot;#刚看到这个网站的时候&quot; class=&quot;headerlink&quot; title=&quot;刚看到这个网站的时候&quot;&gt;&lt;/a&gt;刚看到这个网站的时候&lt;/h3&gt;&lt;p&gt;其实我是在逛CNODE的时候发现，这家公司在招人，正想找工作的我当然会点进去看一下啊&lt;br&gt;CNODE上面找的，毋庸置疑了就是&lt;code&gt;Node.Js&lt;/code&gt;工程师了，然后我就点进官网看，第一眼看的时候我的反应是&lt;br&gt;“卧槽这什么卵…赛尔号么…”（不知道会不会被打死…）&lt;br&gt;然后我就拉到最下面有个加入我们（已经成习惯了，公司的招聘信息都会在footer），看到了有自己喜欢的工作，它是跳到拉钩网的。&lt;br&gt;后来发了简历之后发现，他们有一条要求：&lt;strong&gt;要通过他们的平台制作3个游戏&lt;/strong&gt;&lt;br&gt;一开始我是懵的，虽然我以前玩过&lt;code&gt;Egret&lt;/code&gt;可是要我做游戏，害怕啊！&lt;br&gt;但是我还是去看了这个网站，发现这家网站做的其实是幼儿编程培训（没记错的话是7到15岁）&lt;br&gt;很新颖的题材，瞬间就喜欢了。（一瞬间想到了ios10的swift playground）
+    
+    </summary>
+    
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="编程猫" scheme="http://blog.co1mugx.tk/tags/%E7%BC%96%E7%A8%8B%E7%8C%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扣肉小记（四）</title>
+    <link href="http://blog.co1mugx.tk/2016/11/25/Korou4/"/>
+    <id>http://blog.co1mugx.tk/2016/11/25/Korou4/</id>
+    <published>2016-11-25T09:01:32.000Z</published>
+    <updated>2016-11-25T12:19:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>天气转凉…基本是条冻狗了<br>另外小嘀咕一句：有点想把“Rousy”重写了…</p>
+</blockquote>
+<p>　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）</p>
+<h3 id="最近干了个长得像个音乐播放器的微信小程序"><a href="#最近干了个长得像个音乐播放器的微信小程序" class="headerlink" title="最近干了个长得像个音乐播放器的微信小程序 "></a>最近干了个长得像个音乐播放器的微信小程序 <a id="more"></a></h3><p>　　最近干什么，最近学的前端知识好多，每天都是百度和知乎（暂时不需要用到Google系列），然后就是写了一个微信小程序(weapp)<br>　　反正到现在来说，<code>weapp</code>还是挺好玩的，而且那个<code>wxml</code>和<code>wxss</code>就理解成<code>html</code>和<code>css</code>就好了。然后那个<code>js</code>是用的ES6，身边有个大神honn哥，有问题他还是很愿意解答的，谢谢老板罩着！<br>　　然后写了个什么，写了个音乐程序，有个不愿意透露ID的妹妹她自己有个项目，就是“据她口述的盗链音乐播放器”，不过她是用swift写的，而且长得稍微挺像网某云音乐，但链子好像不是某云的…然后我就想那我也来写一个好了<br>　　然后就去看了她的链子，发现她的链子好像不能用了，然后我就自己找了一个某度的链子，能用。反正这些东西以后都开源了！开源大法好！先上个图！<br>  <img src="https://github.com/ColMugX/GitBed/raw/master/blog/weapp-openradio.gif" alt=""><br>　　但是尴尬的是，这套链子，<strong>不支持在线播放</strong>！卧槽这tm就尴尬了。链子拿下来之后，本地播放是可以的，在线播放是播放不了的。然后我就尝试用浏览器去点，点开之后并不是一个<code>html5</code>的<code>audio</code>而是直接<code>download</code>，代码长这样。<br>  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"songLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span>,</div><div class="line">  <span class="attr">"showLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　而且其实我有想过先down到本地然后在调用播放，后来想了一下，既然是小程序而且是个云端程序，这么玩占用的存储会不会就大了好多…现在只能另辟蹊径了。（为什么我想到了鹅厂…）</p>
+<h3 id="暂时没想到什么写的，来听音乐吧！"><a href="#暂时没想到什么写的，来听音乐吧！" class="headerlink" title="暂时没想到什么写的，来听音乐吧！"></a>暂时没想到什么写的，来听音乐吧！</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=412493379&auto=0&height=32"></iframe>
+
+<p>　　最近一直在听这首，其实去年就听过了，第一次听觉得很感触，虽说这首歌是TFBOYS的吧！但是我向来都是喜欢好音乐，至于谁唱的，只不过是借用了他的声音来表达歌曲的意义而已。<strong>（除了周杰伦！）</strong> <strong>（除了初音未来！）</strong>（为什么分开讲，因为伦哥的地位无可替代！）<br>　　而且应该是我觉得的tfboys的歌里面唯一一首能听的，歌词真的…不行了…</p>
+<blockquote>
+<p>我不完美的梦 　你陪着我想<br>不完美的勇气 　你说更勇敢<br>不完美的泪　 　你笑着擦干<br>不完美的歌　 　你都会唱<br>我不完美心事 　你全放在心上<br>这不完美的我 　你总当作宝贝</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;天气转凉…基本是条冻狗了&lt;br&gt;另外小嘀咕一句：有点想把“Rousy”重写了…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）&lt;/p&gt;
+&lt;h3 id=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;a href=&quot;#最近干了个长得像个音乐播放器的微信小程序&quot; class=&quot;headerlink&quot; title=&quot;最近干了个长得像个音乐播放器的微信小程序 &quot;&gt;&lt;/a&gt;最近干了个长得像个音乐播放器的微信小程序
+    
+    </summary>
+    
+    
+      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安利一个安装很久却冷板凳的编辑器</title>
+    <link href="http://blog.co1mugx.tk/2016/11/09/an-li-yi-ge-bian-ji-qi/"/>
+    <id>http://blog.co1mugx.tk/2016/11/09/an-li-yi-ge-bian-ji-qi/</id>
+    <published>2016-11-09T14:48:57.000Z</published>
+    <updated>2016-11-18T08:45:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>顺带一提，Rousy开源了！可以点击最下面Rousy进入。日后再讲。</p>
+</blockquote>
+<p>最近除了改Rousy和Blank，就学习Vue和做微信程序最多了。<br>上次也提到了，微信小程序官方工具真的就是个工具，用起来真的是，想上天。<br>后来不是也换用Atom嘛，直到昨天，偶然用白鹭家根据VSC定制的<code>Egret Wing</code>…<br>卧槽我不行了！好爽！噢~扛不住了~要*了！<br>这个编辑器，不知道跟微信有什么PY交易，除了完整的代码提示，编写流畅完全无尿点。<br>更厉害的是，<strong>完！整！支！持！预！览！</strong><br>更邪门的是，<strong>可！以！创！建！工！程！</strong></p>
+<p>厉害了…害怕…都不用登陆了…</p>
+<p>不过我今天看了一篇知乎，腾讯自家的一个工程师演示小程序，他用的是Sublime Text<br>难道连腾讯都嫌弃他们家的开发工具了么…<a id="more"></a></p>
+<h3 id="讲讲Egret-Wings-3"><a href="#讲讲Egret-Wings-3" class="headerlink" title="讲讲Egret Wings 3"></a>讲讲Egret Wings 3</h3><p>其实前年就开始关注白鹭，当时没有编辑器，到后来出了wing。<br>现在wing的实验室版本都能上天了，功能特别棒，开发游戏都省了不少事。<br>而且我刚刚看了一下新建工程还有什么厉害的特殊建工程姿势。<br>看到了typescript web和nodejs typescript。然后新建玩了一下。<br>突然有种“解决了我多年心头病患”的感觉…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;顺带一提，Rousy开源了！可以点击最下面Rousy进入。日后再讲。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最近除了改Rousy和Blank，就学习Vue和做微信程序最多了。&lt;br&gt;上次也提到了，微信小程序官方工具真的就是个工具，用起来真的是，想上天。&lt;br&gt;后来不是也换用Atom嘛，直到昨天，偶然用白鹭家根据VSC定制的&lt;code&gt;Egret Wing&lt;/code&gt;…&lt;br&gt;卧槽我不行了！好爽！噢~扛不住了~要*了！&lt;br&gt;这个编辑器，不知道跟微信有什么PY交易，除了完整的代码提示，编写流畅完全无尿点。&lt;br&gt;更厉害的是，&lt;strong&gt;完！整！支！持！预！览！&lt;/strong&gt;&lt;br&gt;更邪门的是，&lt;strong&gt;可！以！创！建！工！程！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;厉害了…害怕…都不用登陆了…&lt;/p&gt;
+&lt;p&gt;不过我今天看了一篇知乎，腾讯自家的一个工程师演示小程序，他用的是Sublime Text&lt;br&gt;难道连腾讯都嫌弃他们家的开发工具了么…
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="微信小程序" scheme="http://blog.co1mugx.tk/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2.0学习记录（零）</title>
+    <link href="http://blog.co1mugx.tk/2016/11/06/vue-study-0/"/>
+    <id>http://blog.co1mugx.tk/2016/11/06/vue-study-0/</id>
+    <published>2016-11-06T10:00:13.000Z</published>
+    <updated>2016-11-08T07:12:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>据说跟JQuery差不多但是比较6，感觉应该是Angular那类可以写webapp的东西，学习一下</p>
+</blockquote>
+<p>怎么说感谢尤老师和他的团队设计这么个，看起来有快感的东西，不过学得好不好我自己也不敢保证<br>这个是尤老师发的一个知乎专栏：<a href="https://zhuanlan.zhihu.com/p/20814761" target="_blank" rel="external">点此跳到专栏</a>（向来良心先发地址！）<br>(自从开了知乎，天天在沉迷学习…<a id="more"></a></p>
+<h3 id="说Vue2-0"><a href="#说Vue2-0" class="headerlink" title="说Vue2.0"></a>说Vue2.0</h3><p>毕竟我一直都是，学新不学旧。就跟<code>Ionic</code>一样，我直接学了<code>Ionic2.0</code>（妈的碰壁啊，碰到死了…<br>Ionic2.0用的是新的<code>Angular2.0</code>和<code>Typescript</code>，感觉TS这东西，因为我是先接触了<code>Swift</code>所以感觉两者太像了。甚至有种想无论什么东西都想用TS写然后让他翻译成JS去用就行了，比如一直老想用TS做node…然后毕竟自己菜没办法乱玩…<br>然后Vue2.0的话，稍微一看想起ES2015和上次看到的微信小程序。我记得Vue1.x的时候尤老师说过不想用虚拟DOM这东西，反正就是有好有不好然后不好更多那样子。不知道为什么Vue2.0就加入了虚拟DOM这么个东西…<br>按尤老师说：</p>
+<blockquote>
+<p>现在的渲染层基于一个轻量级的 virtual-DOM 实现，在大多数场景下初试化渲染速度和内存消耗都提升了 2~4 倍 (详见这里的 benchmarks)。从模板到 virtuel-DOM 的编译器和运行时是可以独立开来的，所以你可以将模板预编译并只通过 Vue 的运行时让你的应用工作起来，而这份运行时的代码 min+gzip 之后只有不到 12kb (提一下，React 15 在 min+gzip 之后的大小是 44kb)。</p>
+</blockquote>
+<p>反正就是好厉害了啦。比隔壁一样用虚拟DOM要效率高很多了啦</p>
+<h3 id="初次使用安装vue2-0"><a href="#初次使用安装vue2-0" class="headerlink" title="初次使用安装vue2.0"></a>初次使用安装vue2.0</h3><p>因为慢入坑，所以<code>vue-cli</code>这种脚手架都有了，我看他的归属是vuejs应该是官方工具了吧。<br>然后就是安装，要安装nodejs webpack 还有vue-cli<br>因为不是教学文档所以我就不说那么明白因为我大概都装了<br>创建一个工程大概就是<code>vue init &lt;要用的模板&gt; &lt;工程名称&gt;</code><br>默认是<code>webpack</code>或者<code>webpack-simple</code>前者是完整开发工程，后者更适合闹着玩<br>然后还有一个第三方很厉害的模板叫<code>egoist/vuepack</code>，已经实现了<code>electron</code>的支持。</p>
+<p>然后<code>npm run dev</code>就能运行起来了。<br>如果是<code>egoist/vuepack</code>要用<code>npm start</code>因为要启动electron</p>
+<h3 id="关于组件库，安利一下饿了么，对！就是那个送外卖的！"><a href="#关于组件库，安利一下饿了么，对！就是那个送外卖的！" class="headerlink" title="关于组件库，安利一下饿了么，对！就是那个送外卖的！"></a>关于组件库，安利一下饿了么，对！就是那个送外卖的！</h3><p>感觉这个送外卖的有点不务正业了啊！<br>一开始我还在想，他们这么做外卖不得亏死啊，怎么生命力这么顽强<br>后来才发现，原来他们是打着送外卖的旗号搞黑科技……</p>
+<h3 id="初见印象"><a href="#初见印象" class="headerlink" title="初见印象"></a>初见印象</h3><p>感觉第一次看到的时候还是觉得挺高潮的。<br>不错最近开的坑实在太多，加上自己还有小生活，坑简直填不完。<br>还tm无业游民…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;据说跟JQuery差不多但是比较6，感觉应该是Angular那类可以写webapp的东西，学习一下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;怎么说感谢尤老师和他的团队设计这么个，看起来有快感的东西，不过学得好不好我自己也不敢保证&lt;br&gt;这个是尤老师发的一个知乎专栏：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/20814761&quot;&gt;点此跳到专栏&lt;/a&gt;（向来良心先发地址！）&lt;br&gt;(自从开了知乎，天天在沉迷学习…
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="Vue" scheme="http://blog.co1mugx.tk/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新主题测试完善中</title>
+    <link href="http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/"/>
+    <id>http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</id>
+    <published>2016-11-02T01:33:51.000Z</published>
+    <updated>2016-11-03T16:34:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>厉害咯我的Blank</p>
+</blockquote>
+<p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
+<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><a href="/Image/Blank-violet.jpg" title="Blank-紫罗兰"><img src="/Image/Blank-violet.jpg" alt="blank"></a> <a id="more"></a></p>
+<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><a href="/Image/Blank-gray.jpg" title="Blank-深空灰"><img src="/Image/Blank-gray.jpg" alt="blank"></a></p>
+<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><a href="/Image/Blank-pink.jpg" title="Blank-樱语粉"><img src="/Image/Blank-pink.jpg" alt="blank"></a></p>
+<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><a href="/Image/Blank-green.jpg" title="Blank-璐璐绿"><img src="/Image/Blank-green.jpg" alt="blank"></a></p>
+<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><a href="/Image/Blank-blue.jpg" title="Blank-编不下去的蓝色"><img src="/Image/Blank-blue.jpg" alt="blank"></a></p>
+<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><a href="/Image/Blank-red.jpg" title="Blank-红红火火"><img src="/Image/Blank-red.jpg" alt="blank"></a></p>
+<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><a href="/Image/Blank-orange.jpg" title="Blank-橙子一样的颜色"><img src="/Image/Blank-orange.jpg" alt="blank"></a><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
+<h3 id="这个主题从写法上，比Rousy改善很多"><a href="#这个主题从写法上，比Rousy改善很多" class="headerlink" title="这个主题从写法上，比Rousy改善很多"></a>这个主题从写法上，比Rousy改善很多</h3><p>怎么来说，Rousy的话，是根据css然后全搬入stylus的，管理性能略差<br>但是Blank的话，我好像不知不觉用了stylus的用法，所以看起来应该…还是不简洁…<br>当然Blank只是半成品，至今只出生后第3天。（都是中午和大半夜，白天有课上）</p>
+<h3 id="新主题有没有什么新东西"><a href="#新主题有没有什么新东西" class="headerlink" title="新主题有没有什么新东西"></a>新主题有没有什么新东西</h3><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>
+<h4 id="好了新主题就挂三天吧，三天之后切回Rousy。"><a href="#好了新主题就挂三天吧，三天之后切回Rousy。" class="headerlink" title="好了新主题就挂三天吧，三天之后切回Rousy。"></a>好了新主题就挂三天吧，三天之后切回Rousy。</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;厉害咯我的Blank&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;我先说好啊！Blank不是SKT T1的打野！&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;/blank.html&quot;&gt;主题演示页面点击这里&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;科技以换色为本！&quot;&gt;&lt;a href=&quot;#科技以换色为本！&quot; class=&quot;headerlink&quot; title=&quot;科技以换色为本！&quot;&gt;&lt;/a&gt;科技以换色为本！&lt;/h3&gt;&lt;h4 id=&quot;紫色&quot;&gt;&lt;a href=&quot;#紫色&quot; class=&quot;headerlink&quot; title=&quot;紫色&quot;&gt;&lt;/a&gt;紫色&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;/Image/Blank-violet.jpg&quot; title=&quot;Blank-紫罗兰&quot;&gt;&lt;img src=&quot;/Image/Blank-violet.jpg&quot; alt=&quot;blank&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+      <category term="Blank" scheme="http://blog.co1mugx.tk/tags/Blank/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享一个DOM操作错误</title>
+    <link href="http://blog.co1mugx.tk/2016/10/30/fen-xiang-yi-ge-DOM-cao-zuo-cuo-wu/"/>
+    <id>http://blog.co1mugx.tk/2016/10/30/fen-xiang-yi-ge-DOM-cao-zuo-cuo-wu/</id>
+    <published>2016-10-29T17:46:57.000Z</published>
+    <updated>2016-10-31T17:25:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>由于最近右下角的鱼不听使唤了，气得肺癌晚期了</p>
+</blockquote>
+<p>就Rousy嘛（卧槽我知道我知道我有夜生活的，还没写好，懒！）<br>本来想是简约风格的，结果听了一个所谓的半路泥腿子出身的设计师<br>再加上自己的主管思想受到影响，最后变成了一个“儿童主题”<br>但是我是希望能说是提供一个想法，我还是希望有人能拿我的主题高度定制的<br>比如头图，它毕竟开放了图片链接接口嘛</p>
+<h3 id="切正题，分享的事一个DOM关于class和id的问题"><a href="#切正题，分享的事一个DOM关于class和id的问题" class="headerlink" title="切正题，分享的事一个DOM关于class和id的问题"></a>切正题，分享的事一个DOM关于class和id的问题</h3><p>其实按道理说，才想起来这个错误，真的自己要检讨一下了<br>就前段时间，右下角那条很跳的鱼，本来是实现放回顶层和call出友情链接的作用（别！再！问！了！）<br>后来做了mobile适配之后发现，那条鱼怎么touch都不会返回顶层<br>后来一次快睡着的时候想到了，所以现在改了。<br>问题就是出在，<strong>id复用</strong>。<a id="more"></a></p>
+<h3 id="id跟class什么关系，怎么区分"><a href="#id跟class什么关系，怎么区分" class="headerlink" title="id跟class什么关系，怎么区分"></a>id跟class什么关系，怎么区分</h3><p>这个很基础的问题，哎妈的…<br><code>id</code>和<code>class</code>都可以用来给<code>css</code>定位置做样式表，也可以在<code>JQuery</code>做节点动作。<br>但是有不同<br><code>id</code>有唯一性，而且每一个节点只能有一个<code>id</code><br><code>class</code>没有，就是一个样式类的定义。而且一个节点可以存在无数个<code>class</code><br>所以这东西都做出潜规则了，<code>class</code>用来定义层叠样式表，<code>id</code>用来做操作<br>可是我犯的错误刚好就在这里</p>
+<h3 id="错误出现在哪"><a href="#错误出现在哪" class="headerlink" title="错误出现在哪"></a>错误出现在哪</h3><p>就是那个该死的mobile标题栏，由于强迫症而且还tm跟老罗那强迫症有点像<br>必须对称设计，音量键也要做两个Hih7#%&amp;T&amp;<em>gt38g2&amp;%</em>&amp;&amp;<em>%Y</em>HWdf<br>咳咳…所以左边那个menu item之后就把海豚加上去了<br><strong>（那两个的同行对齐我还调了特别久！）</strong><br>当然咯，直接右边的鱼也加了跟desktop一样的id名…<br>那死了啊，一页里面两个节点一样名字，认谁啊<br><strong>记住了！认最先看到的那个！</strong><br>那手机的sidebar比desktop的按钮靠前不知道多少，所以后面那个就失灵咯。</p>
+<h3 id="所以解决方法"><a href="#所以解决方法" class="headerlink" title="所以解决方法"></a>所以解决方法</h3><p>解决方法就是换名字咯……</p>
+<p>以上。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;由于最近右下角的鱼不听使唤了，气得肺癌晚期了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就Rousy嘛（卧槽我知道我知道我有夜生活的，还没写好，懒！）&lt;br&gt;本来想是简约风格的，结果听了一个所谓的半路泥腿子出身的设计师&lt;br&gt;再加上自己的主管思想受到影响，最后变成了一个“儿童主题”&lt;br&gt;但是我是希望能说是提供一个想法，我还是希望有人能拿我的主题高度定制的&lt;br&gt;比如头图，它毕竟开放了图片链接接口嘛&lt;/p&gt;
+&lt;h3 id=&quot;切正题，分享的事一个DOM关于class和id的问题&quot;&gt;&lt;a href=&quot;#切正题，分享的事一个DOM关于class和id的问题&quot; class=&quot;headerlink&quot; title=&quot;切正题，分享的事一个DOM关于class和id的问题&quot;&gt;&lt;/a&gt;切正题，分享的事一个DOM关于class和id的问题&lt;/h3&gt;&lt;p&gt;其实按道理说，才想起来这个错误，真的自己要检讨一下了&lt;br&gt;就前段时间，右下角那条很跳的鱼，本来是实现放回顶层和call出友情链接的作用（别！再！问！了！）&lt;br&gt;后来做了mobile适配之后发现，那条鱼怎么touch都不会返回顶层&lt;br&gt;后来一次快睡着的时候想到了，所以现在改了。&lt;br&gt;问题就是出在，&lt;strong&gt;id复用&lt;/strong&gt;。
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于微信小程序</title>
+    <link href="http://blog.co1mugx.tk/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/"/>
+    <id>http://blog.co1mugx.tk/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/</id>
+    <published>2016-10-28T05:26:27.000Z</published>
+    <updated>2016-10-28T06:04:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>向腾讯大佬低头！</p>
+</blockquote>
+<p><strong>说在前面，你们这下可不能说我这博客天天吹水不讲东西了！</strong></p>
+<h3 id="说说这大佬又想干什么！"><a href="#说说这大佬又想干什么！" class="headerlink" title="说说这大佬又想干什么！"></a>说说这大佬又想干什么！</h3><p>怎么说，腾讯微信真的是野心挺大的，要把微信做成一个应用平台<br>谁还能想的起来微信当时只是定位为一个低流语音信息的即时通讯工具啊！<br>小程序怎么定义呢，就是一个在微信启动的App<br>不过归根到底还是个Web App<br>那这么说来其实也可以说是一个以微信做壳的App了，相对于隔壁那个叫Ionic的东西来说。<br>不过怎么说，这小程序应该也是依托公众号来实现的吧，我看它文档都是在公众号里面。<br>先上地址：<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474887501214" target="_blank" rel="external">下载链接</a><br>这开发工具原来就是一个chrome开发者工具，可能是因为加了小程序这么个东西，现在也有开发功能了<br>刚刚试用了一下，效！率！贼！差！（默默打开了Atom）<a id="more"></a></p>
+<h3 id="这东西大概怎么写怎么用"><a href="#这东西大概怎么写怎么用" class="headerlink" title="这东西大概怎么写怎么用"></a>这东西大概怎么写怎么用</h3><p>我粗略看了一下啊，这东西跟隔壁那些什么<code>angular</code>啊，还有<code>vue</code>啊什么都有点差不多，就是前后绑定然后做逻辑。<br>大概结构就是（不会用树形，随便看一下）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- /</div><div class="line"> - pages</div><div class="line">     - index</div><div class="line">         index.js</div><div class="line">         index.wxml</div><div class="line">         index.wxss</div><div class="line">     - logs</div><div class="line">         logs.js</div><div class="line">         logs.json</div><div class="line">         logs.wxml</div><div class="line">         logs.wxss</div><div class="line"> - utils</div><div class="line">     util.js</div><div class="line"> app.js</div><div class="line"> app.json</div><div class="line"> app.wxss</div></pre></td></tr></table></figure></p>
+<p><strong>这结果tm似曾相识啊！</strong><br>好了这就是个Web App，那讲一下那些文件干嘛的呗。<br>说到底还是个老biao子，js就不用说了（哎等下这东西好像还是得依托<code>NodeJs</code>啊，顺便说下我特别不喜欢<code>PHP</code>…）</p>
+<p><code>wxml</code>:是个什么，wxml其实就是xml了，只是有点特殊的xml，可以理解成就是我们做ionic那个html吧<br><code>wxss</code>:卧槽了就是这个wxss！卧槽！挑白了说就是个CSS！不过在像素定义有点不同。引用一下</p>
+<blockquote>
+<p>尺寸单位<br>rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。<br>设备    rpx换算px (屏幕宽度/750)    px换算rpx (750/屏幕宽度)<br>iPhone5    1rpx = 0.42px    1px = 2.34rpx<br>iPhone6    1rpx = 0.5px    1px = 2rpx<br>iPhone6 Plus    1rpx = 0.552px    1px = 1.81rpx</p>
+</blockquote>
+<p>所以官方说的是，<strong>“我们鼓励使用iphone 6 作为标准屏幕开发”</strong><br>原话是</p>
+<blockquote>
+<p>建议： 开发微信小程序时设计师可以用 iPhone6 作为视觉稿的标准。 注意： 在较小的屏幕上不可避免的会有一些毛刺，请在开发时尽量避免这种情况。</p>
+</blockquote>
+<p>（噢…是嘛…</p>
+<h4 id="另外最近在学Vue-js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。"><a href="#另外最近在学Vue-js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。" class="headerlink" title="另外最近在学Vue.js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。"></a>另外最近在学Vue.js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;向腾讯大佬低头！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说在前面，你们这下可不能说我这博客天天吹水不讲东西了！&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;说说这大佬又想干什么！&quot;&gt;&lt;a href=&quot;#说说这大佬又想干什么！&quot; class=&quot;headerlink&quot; title=&quot;说说这大佬又想干什么！&quot;&gt;&lt;/a&gt;说说这大佬又想干什么！&lt;/h3&gt;&lt;p&gt;怎么说，腾讯微信真的是野心挺大的，要把微信做成一个应用平台&lt;br&gt;谁还能想的起来微信当时只是定位为一个低流语音信息的即时通讯工具啊！&lt;br&gt;小程序怎么定义呢，就是一个在微信启动的App&lt;br&gt;不过归根到底还是个Web App&lt;br&gt;那这么说来其实也可以说是一个以微信做壳的App了，相对于隔壁那个叫Ionic的东西来说。&lt;br&gt;不过怎么说，这小程序应该也是依托公众号来实现的吧，我看它文档都是在公众号里面。&lt;br&gt;先上地址：&lt;a href=&quot;https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474887501214&quot;&gt;下载链接&lt;/a&gt;&lt;br&gt;这开发工具原来就是一个chrome开发者工具，可能是因为加了小程序这么个东西，现在也有开发功能了&lt;br&gt;刚刚试用了一下，效！率！贼！差！（默默打开了Atom）
+    
+    </summary>
+    
+    
+      <category term="微信小程序" scheme="http://blog.co1mugx.tk/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>弄了半天，最后武器还是换成Atom</title>
+    <link href="http://blog.co1mugx.tk/2016/10/17/huan-cheng-atom/"/>
+    <id>http://blog.co1mugx.tk/2016/10/17/huan-cheng-atom/</id>
+    <published>2016-10-17T08:42:47.000Z</published>
+    <updated>2016-10-19T17:37:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>又是一次装逼，把自己装死了！</p>
+</blockquote>
+<p>真的服了自己，早干嘛了<br>从Atom跳到sublime text<br>然后觉得st LOW 从sublime text跳到vscode<br>当时的vsc才0.x所以没有插件功能，用了几天就不用了<br>还是换回st<br>再后来还是觉得st好low好难看，好想换掉<br>刚好vsc已经到1.0了，而且能装插件，好像还不错<br>插件库跟st有关<br>所以就用了一段时间，发现并不是自己喜欢的那种<br>即便安装了很多插件<br>所以今天又删了换成了Atom<br><strong>作！作！作！</strong><br><strong>搞事！搞事！搞事！</strong></p>
+<p>上面提到那些，都是当作万能编辑器来用的。<br>毕竟jb全家桶挺不错，还有前端专用brackets</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;又是一次装逼，把自己装死了！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;真的服了自己，早干嘛了&lt;br&gt;从Atom跳到sublime text&lt;br&gt;然后觉得st LOW 从sublime text跳到vscode&lt;br&gt;当时的vsc才
+    
+    </summary>
+    
+    
+      <category term="吹水" scheme="http://blog.co1mugx.tk/tags/%E5%90%B9%E6%B0%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阴阳师真的是个很成功的游戏</title>
+    <link href="http://blog.co1mugx.tk/2016/10/15/Yinyangshi/"/>
+    <id>http://blog.co1mugx.tk/2016/10/15/Yinyangshi/</id>
+    <published>2016-10-15T05:47:31.000Z</published>
+    <updated>2016-12-08T17:49:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>别说了我的肝好疼…</p>
+</blockquote>
+<p>这游戏刚出的时候真的是满脸嫌弃<br>中国的游戏，和风的主题，中文的界面，中文的字幕，日语语音？？？日本声优？？？<br>网易本土游戏，日本的主题？好尴尬。。。<br>看到游戏之后第一反应就是，这游戏肯定又是网易的手游出口计划之一了<br>不过看到游戏被日方接受了心里还是挺高兴的，中国的动漫游戏啊<br>后来查了一下，《阴阳师》本来就是日本的一个小说，然后真的太火了<br>以至于改编成游戏啊，各种形式的节目<br>这次也不例外<br>于是先是“画符成瘾，无法自拔”<br>再到“妈的我的肝好疼。。。”<br>不过这也体现游戏的良心之处<br><strong>只要努力玩，R也能当SR用</strong><br><code>“捂着肝说出了最后一句话…”</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;别说了我的肝好疼…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这游戏刚出的时候真的是满脸嫌弃&lt;br&gt;中国的游戏，和风的主题，中文的界面，中文的字幕，日语语音？？？日本声优？？？&lt;br&gt;网易本土游戏，日本的主题？好尴尬。。。&lt;br&gt;看到游戏之后第一反
+    
+    </summary>
+    
+    
+      <category term="吹水" scheme="http://blog.co1mugx.tk/tags/%E5%90%B9%E6%B0%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Rousy的小前菜</title>
+    <link href="http://blog.co1mugx.tk/2016/10/09/About_Rousy/"/>
+    <id>http://blog.co1mugx.tk/2016/10/09/About_Rousy/</id>
+    <published>2016-10-09T09:12:32.000Z</published>
+    <updated>2016-10-15T05:47:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>灵感来自于坑爹的Mac 欧艾斯死瑞娅(os sierra) 和 挨欧艾斯十！(iOS 10)</p>
+</blockquote>
+<h4 id="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"><a href="#如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！" class="headerlink" title="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"></a>如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！</h4><h3 id="不想说了，新系统那能吐槽十年的通知栏"><a href="#不想说了，新系统那能吐槽十年的通知栏" class="headerlink" title="不想说了，新系统那能吐槽十年的通知栏"></a>不想说了，新系统那能吐槽十年的通知栏</h3><a id="more"></a>
+<p>苹果的美工呢！文案不行美工不能乱来啊！别以为新系统出了个siri就可以安慰我了！<br>通知栏总不能跟个卫生巾一样吧！<br>好吧灵感就来自于圆角（rounded）然后再补上个style。嗯！rounded style！<br>(i have a rounded. i have a style. uhm.. Rousy!)<br> <span style="color:#a5a5a5">(拖出去打死吧不用汇报了！</span></p>
+<h3 id="好了说点关于主题的事"><a href="#好了说点关于主题的事" class="headerlink" title="好了说点关于主题的事.."></a>好了说点关于主题的事..</h3><p>其实一开始主题并不是这样的！我其实想写的超简约超简洁。后来阴差阳错的就多了好多活泼的元素，再后来就变成看起来好像儿童性质的主题了。过几天放几条鱼上去可以改造成海洋世界了。<br>我也不清楚，原计划是白灰蓝怎么就变成这样了…<br>可能是脑子里想法比较多，然后都想放到这个里面，反正随便了。如果有人喜欢更好，没人喜欢那也没办法啊毕竟生出来了…<br>行了那就随便列举几点</p>
+<h3 id="一切为了想玩，各种深沟暗流等着发现"><a href="#一切为了想玩，各种深沟暗流等着发现" class="headerlink" title="一切为了想玩，各种深沟暗流等着发现"></a>一切为了想玩，各种深沟暗流等着发现</h3><p>有大量的鼠标浮动效果，或许现在不华丽，以后可能会更有趣。</p>
+<h3 id="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"><a href="#首先我们有四种语言！分别是English，简体中文，正體中文，日本語" class="headerlink" title="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"></a>首先我们有四种语言！分别是English，简体中文，正體中文，日本語</h3><p>作为中国人，两个中国语言就不用说了，错误应该是没有。日语的话可能问题比较大，希望有小伙伴指正一下。英语应该没多大问题了这个。</p>
+<h3 id="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"><a href="#虽然本着不耍猴，但是我们还是要说点海洋世界的交互" class="headerlink" title="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"></a>虽然本着不耍猴，但是我们还是要说点海洋世界的交互</h3><p>主题砍掉了友情链接和个人介绍页。其实也不是说没掉了，只是需要有点小探索。比如在某个地方点下去可以召唤出来。<br>因为就是喜欢玩嘛，所以说这个主题在博客主题里面来说的话肯定是“妖艳贱货”或者说“没牙小毛孩儿”<br>（这个功能目前还没有实现，反正就是慢慢来。）</p>
+<h3 id="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"><a href="#如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！" class="headerlink" title="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"></a>如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！</h3><p>对的，开放的，应该是给图片链接就会自适应了，反正尽量就是给刚刚好嘛。<br>保留头图可以展现站点个性，这个我还是觉得有必要留的。<br>但是头像的话，如果觉得有必要有的话，那以后加上去就行了。<br>链接方面会在<code>config.yml</code>留出来的这个不必很担心。<br>（会不会太像微博的做法了？）</p>
+<p><strong>最后的话，等想起来再说或者做完了再说吧，其实还差挺多的</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;灵感来自于坑爹的Mac 欧艾斯死瑞娅(os sierra) 和 挨欧艾斯十！(iOS 10)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot;&gt;&lt;a href=&quot;#如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot; class=&quot;headerlink&quot; title=&quot;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot;&gt;&lt;/a&gt;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&lt;/h4&gt;&lt;h3 id=&quot;不想说了，新系统那能吐槽十年的通知栏&quot;&gt;&lt;a href=&quot;#不想说了，新系统那能吐槽十年的通知栏&quot; class=&quot;headerlink&quot; title=&quot;不想说了，新系统那能吐槽十年的通知栏&quot;&gt;&lt;/a&gt;不想说了，新系统那能吐槽十年的通知栏&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
+    
+      <category term="Rousy" scheme="http://blog.co1mugx.tk/tags/Rousy/"/>
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扣肉小记（三）</title>
+    <link href="http://blog.co1mugx.tk/2016/10/09/Korou3/"/>
+    <id>http://blog.co1mugx.tk/2016/10/09/Korou3/</id>
+    <published>2016-10-09T08:19:00.000Z</published>
+    <updated>2016-10-10T08:09:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>怒踹马！你们的狗皇帝回来了！</p>
+</blockquote>
+<h3 id="今天就随便说说"><a href="#今天就随便说说" class="headerlink" title="今天就随便说说"></a>今天就随便说说</h3><p>　　其实本来想把<em>《扣肉小记》</em>当做日记来写，可是我其实并不太喜欢把自己三次元的生活放出来，所以就当做一个没事吹吹水的小吹比本好了。自从上一篇之后，我就去流浪了，看看电影吃吃饭啊。把<em>《逗鸟外传》</em>和<em>《从你的全世界路过》</em>给刷了。其实我的邪式影评还是挺不错的。（我身边的亲朋还有老婆孩子<i style="color:#ff0000">(？？)</i>）所以看心情写一点邪式影评玩一玩也挺好的。<br>　　所以这几天就什么腿儿都没写了。包括<strong>Rousy</strong><br>　　所以今天依然要写Rousy…<a id="more"></a></p>
+<h3 id="所以Rousy写到哪儿了？"><a href="#所以Rousy写到哪儿了？" class="headerlink" title="所以Rousy写到哪儿了？"></a>所以Rousy写到哪儿了？</h3><p>　　这个问题好，本狗也不清楚！反正就是写到了…没个人主页，没友情链接，连微博知乎都没…（这段子手不太专业啊拉出去打死算了）<br>　　其实我是有微博推特这些，可是twitter这个不太爱玩，就是看起来太正经了。微博估计老在别人评论写段子现在上不去那个账号。。。鬼知道那account经历了什么！<br>　　好了其实不是来扯这些儿东西的，其实Rousy我觉得，作为一个博客主题的话它绝对是“妖艳贱货”，但是作为一个个人主页的话，它也是一个“妖艳贱货”，它的视觉和交互可能跟单纯不做作的博客差距很大。毕竟自己的主页嘛，自己玩嗨了就行了，要清新脱俗的推荐两个主题，一个是<a href="http://www.ahonn.me" target="_blank" rel="external">Ahonn</a> 的<a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="external">even</a>，还有一个是<a href="http://www.yzz1995.cn" target="_blank" rel="external">Yzzting</a> 的<a href="https://github.com/yzzting/hexo-theme-MyFairLady" target="_blank" rel="external">“那名字死命长忘记了”</a> 。<br>　　一个详细介绍，或者说一个场前洗脑就再开一篇来吹吧。毕竟儿童主题…</p>
+<p>　　<strong>ＭＤ要是哪天想不开非得改成海底世界不可！叫Rousy多LOW叫Ocean Park吧！</strong></p>
+<h4 id="所以今天份的就先吹到这里吧"><a href="#所以今天份的就先吹到这里吧" class="headerlink" title="所以今天份的就先吹到这里吧"></a>所以今天份的就先吹到这里吧</h4><p>今天份的音乐是这个：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=433103084&auto=1&height=32"></iframe>
+
+<p>这是《从你全世界路过》里面最揪心那段插曲音乐，原版是羽泉的《开往春天的地铁》，片子制作方重新编曲了。<br>然后要感谢一下这曲子的作者（播放器里），网易的独立音乐人之一。因为现在那个曲还找不到原版，这大哥扒带然后重新编曲了，算remix吧大哥。<br>（小小吐槽一下：我曾经也是撸音乐的啊！QAQ）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;怒踹马！你们的狗皇帝回来了！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;今天就随便说说&quot;&gt;&lt;a href=&quot;#今天就随便说说&quot; class=&quot;headerlink&quot; title=&quot;今天就随便说说&quot;&gt;&lt;/a&gt;今天就随便说说&lt;/h3&gt;&lt;p&gt;　　其实本来想把&lt;em&gt;《扣肉小记》&lt;/em&gt;当做日记来写，可是我其实并不太喜欢把自己三次元的生活放出来，所以就当做一个没事吹吹水的小吹比本好了。自从上一篇之后，我就去流浪了，看看电影吃吃饭啊。把&lt;em&gt;《逗鸟外传》&lt;/em&gt;和&lt;em&gt;《从你的全世界路过》&lt;/em&gt;给刷了。其实我的邪式影评还是挺不错的。（我身边的亲朋还有老婆孩子&lt;i style=&quot;color:#ff0000&quot;&gt;(？？)&lt;/i&gt;）所以看心情写一点邪式影评玩一玩也挺好的。&lt;br&gt;　　所以这几天就什么腿儿都没写了。包括&lt;strong&gt;Rousy&lt;/strong&gt;&lt;br&gt;　　所以今天依然要写Rousy…
+    
+    </summary>
+    
+    
+      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>幕课网视频下载器NodeJS版</title>
+    <link href="http://blog.co1mugx.tk/2016/10/06/Imooc_Downloader/"/>
+    <id>http://blog.co1mugx.tk/2016/10/06/Imooc_Downloader/</id>
+    <published>2016-10-06T06:15:46.000Z</published>
+    <updated>2016-10-09T09:07:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>不能让别人知道我也是会撸工具的（嘘..）</p>
+</blockquote>
+<p>像我们这么清真的人，一般都是<a href="https://github.com/ColMugX/ImoocDownloader" target="_blank" rel="external">先上链接！</a></p>
+<p>其实这是个很早就完成的项目了（9月1日开学日…之前！）</p>
+<p><strong>写出来的项目就像嫁出去的女儿，谁说要维护了！我说着玩而已！</strong> <a id="more"></a></p>
+<p>好吧讲一下，这东西其实就是一个视频下载器，通过nodejs的命令行进行全部<strong>盗链操作</strong>！</p>
+<p>实现过程真的完全粗暴，很粗暴的解决了幕课网（Imooc）的视频下载，输入想要下载的视频编号之后，全自动筛选出视频并下载，下载方式是列表内视频并行下载…</p>
+<p><del>P.S.没图！没代码！没食谱！（主题还没有写完，所以关于代码框的东西一概没有，慢慢等吧！）</del></p>
+<p>应该没问题了，写一下食谱吧。</p>
+<h4 id="三种方法安装（Install）"><a href="#三种方法安装（Install）" class="headerlink" title="三种方法安装（Install）"></a>三种方法安装（Install）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/ColMugX/ImoocDownloader.git ./ImoocDownloader</div><div class="line">Download ZIP</div><div class="line">Open in Desktop</div></pre></td></tr></table></figure>
+<h4 id="使用（Usage）"><a href="#使用（Usage）" class="headerlink" title="使用（Usage）"></a>使用（Usage）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ./ImoocDownloader</div><div class="line">npm install</div><div class="line">node app</div></pre></td></tr></table></figure>
+<p>然后按照提示输入各种各样的东西就行了……</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;不能让别人知道我也是会撸工具的（嘘..）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;像我们这么清真的人，一般都是&lt;a href=&quot;https://github.com/ColMugX/ImoocDownloader&quot;&gt;先上链接！&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其实这是个很早就完成的项目了（9月1日开学日…之前！）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;写出来的项目就像嫁出去的女儿，谁说要维护了！我说着玩而已！&lt;/strong&gt;
+    
+    </summary>
+    
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扣肉小记（二）</title>
+    <link href="http://blog.co1mugx.tk/2016/10/04/Korou2/"/>
+    <id>http://blog.co1mugx.tk/2016/10/04/Korou2/</id>
+    <published>2016-10-04T10:21:07.000Z</published>
+    <updated>2016-10-10T08:09:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>感觉自己跟一条热狗差不多了！</p>
+</blockquote>
+<h3 id="不知道为什么，今天天气特别热"><a href="#不知道为什么，今天天气特别热" class="headerlink" title="不知道为什么，今天天气特别热"></a>不知道为什么，今天天气特别热</h3><p>　　本来前几天已经闻到了秋天的气息，甚至闻到了快入冬的气息，结果今天又要开空调了！（摔！<br>　　热得精神不太好…加上自己身体的关系（只要一动脑身体会发热，头发热比较厉害）<br>　　总之就是很难过就对了（捡起来！再摔！<a id="more"></a><br>　　<strong>所以我记得我高三的时候，发烧就跟烧着玩一样。</strong></p>
+<h3 id="今天依然在继续写Rousy"><a href="#今天依然在继续写Rousy" class="headerlink" title="今天依然在继续写Rousy"></a>今天依然在继续写Rousy</h3><p>　　懒癌恶性晚期，本来还以为可以悠闲的把一些过度特效给写掉，然后再用点洪荒之力把动画给写了，再加个fancybox啊balabala，然后发现</p>
+<p>　　<strong>归！档！和！标！签！是！空！的！</strong></p>
+<p>　　这tm就尴尬了。。。<br>　　遥遥无期啊！我现在还慢脑子都是飞来飞去的div呢！</p>
+<h4 id="算了今天就写到这吧。今天的音乐听点什么好。"><a href="#算了今天就写到这吧。今天的音乐听点什么好。" class="headerlink" title="算了今天就写到这吧。今天的音乐听点什么好。"></a>算了今天就写到这吧。今天的音乐听点什么好。</h4><blockquote>
+<p>什么你说什么时候放出自己的作品？ 噢这样啊！你说的话，我就当随便听一下就好了。</p>
+</blockquote>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=399411850&auto=1&height=32"></iframe>
+
+<p>　　<em>或许我以后可以讲点音乐故事？算了以后再说吧（btw，这部动漫很棒，剧场版的）</em></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;感觉自己跟一条热狗差不多了！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;不知道为什么，今天天气特别热&quot;&gt;&lt;a href=&quot;#不知道为什么，今天天气特别热&quot; class=&quot;headerlink&quot; title=&quot;不知道为什么，今天天气特别热&quot;&gt;&lt;/a&gt;不知道为什么，今天天气特别热&lt;/h3&gt;&lt;p&gt;　　本来前几天已经闻到了秋天的气息，甚至闻到了快入冬的气息，结果今天又要开空调了！（摔！&lt;br&gt;　　热得精神不太好…加上自己身体的关系（只要一动脑身体会发热，头发热比较厉害）&lt;br&gt;　　总之就是很难过就对了（捡起来！再摔！
+    
+    </summary>
+    
+    
+      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扣肉小记（一）</title>
+    <link href="http://blog.co1mugx.tk/2016/10/03/Korou1/"/>
+    <id>http://blog.co1mugx.tk/2016/10/03/Korou1/</id>
+    <published>2016-10-03T03:29:07.000Z</published>
+    <updated>2016-10-10T08:09:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>一个不正经的码狗生活。</p>
+</blockquote>
+<h3 id="为什么这么说呢？"><a href="#为什么这么说呢？" class="headerlink" title="为什么这么说呢？"></a>为什么这么说呢？</h3><p>　　实际上我真的是个coder，但是我不是那种天天在coding的人。特别是在不是工作鬼缠身的时候。<br>　　这种东西就是心血来潮嘛，突然feel到了然后就死命写一堆出来，然后，啊爽了，然后睡觉。就这样…</p>
+<p>　　每天无非就是<a href="http://www.bilibili.com/video/av4033926/" target="_blank" rel="external">吃吃饭，喝喝茶，看看电影，聊聊天，逛逛街，牵牵手，喝喝小酒，开开房</a>（啊不对..）</p>
+<p>　　一有新技术，码狗肯定是要接触学习一下，不然跟不上逼格注定被淘汰..虽然我也会看吧，但是不爱做读书笔记，所以，<a id="more"></a></p>
+<p>　　<strong>知！道！我！为！什！么！没！东！西！写！了！吧！</strong></p>
+<h3 id="好吧，其实我是边写着主题边玩着博客的"><a href="#好吧，其实我是边写着主题边玩着博客的" class="headerlink" title="好吧，其实我是边写着主题边玩着博客的"></a>好吧，其实我是边写着主题边玩着博客的</h3><p>　　博客主题的话，hexo theme 叫rousy的东西，好像是挺女孩子的名字。好吧我坦白…就是…<br>　　就是round 和 style 随便混合起来的一个词，挺喜欢Apple那一套圆角的。<br>　　主题的话应该是做的差不多了，毕竟还想要点duangduangduang的东西。</p>
+<h4 id="好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是"><a href="#好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是" class="headerlink" title="好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是"></a>好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是</h4><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=39956017&auto=1&height=32"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;一个不正经的码狗生活。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;为什么这么说呢？&quot;&gt;&lt;a href=&quot;#为什么这么说呢？&quot; class=&quot;headerlink&quot; title=&quot;为什么这么说呢？&quot;&gt;&lt;/a&gt;为什么这么说呢？&lt;/h3&gt;&lt;p&gt;　　实际上我真的是个coder，但是我不是那种天天在coding的人。特别是在不是工作鬼缠身的时候。&lt;br&gt;　　这种东西就是心血来潮嘛，突然feel到了然后就死命写一堆出来，然后，啊爽了，然后睡觉。就这样…&lt;/p&gt;
+&lt;p&gt;　　每天无非就是&lt;a href=&quot;http://www.bilibili.com/video/av4033926/&quot;&gt;吃吃饭，喝喝茶，看看电影，聊聊天，逛逛街，牵牵手，喝喝小酒，开开房&lt;/a&gt;（啊不对..）&lt;/p&gt;
+&lt;p&gt;　　一有新技术，码狗肯定是要接触学习一下，不然跟不上逼格注定被淘汰..虽然我也会看吧，但是不爱做读书笔记，所以，
+    
+    </summary>
+    
+    
+      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>
