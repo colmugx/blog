@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-02-18T10:00:38.000Z</updated>
+  <updated>2017-02-22T14:49:04.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>来搞一手关于Javascript对象继承</title>
+    <link href="http://blog.co1mugx.tk/2017/02/22/js-extends/"/>
+    <id>http://blog.co1mugx.tk/2017/02/22/js-extends/</id>
+    <published>2017-02-22T13:52:24.000Z</published>
+    <updated>2017-02-22T14:49:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>小爝（知乎用户）：js里面什么都是对象，所以你看单身狗学这个语言学的老快了。</p>
+</blockquote>
+<p>就前几天看到的答案，觉得对啊！js这种边缘OP的语言，你说它没对象它是可以有的，你说它是面向对象语言它不是。<br>所以来研究一手关于JavaScript的继承。研究过程用一下typescript（这个真有对象了）<a id="more"></a></p>
+<h3 id="先看一下关于typescript的继承"><a href="#先看一下关于typescript的继承" class="headerlink" title="先看一下关于typescript的继承"></a>先看一下关于typescript的继承</h3><p>看一下ts的类<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;</div><div class="line">    name: string</div><div class="line">    age: number</div><div class="line">    <span class="keyword">constructor</span>(msg:string, age:number) &#123;</div><div class="line">        <span class="keyword">this</span>.age = age</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    sayHello() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>,now is <span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>`</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后来一手调用，全程感觉像在用<code>java</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>)</div><div class="line">par.sayHello()      <span class="comment">//hello mike,now is 16</span></div></pre></td></tr></table></figure></p>
+<p><strong>答案我在terminal验证过的没问题！！</strong></p>
+<p>接下来尝试一下如果我走继承会是什么样，来一手继承<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;</div><div class="line">    name: string</div><div class="line">    age: number</div><div class="line">    <span class="keyword">constructor</span>(msg:string, age:number) &#123;</div><div class="line">        <span class="keyword">this</span>.age = age</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    sayHello() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>,now is <span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>`</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//Now extends.</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Parent</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(msg, age) &#123;</div><div class="line">        <span class="keyword">super</span>(msg, age);</div><div class="line">    &#125;</div><div class="line">    sayHello() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">`hello I'm Son. next is my Parent's say`</span>)</div><div class="line">        <span class="keyword">super</span>.sayHello()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>来手调用验证结果<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>)</div><div class="line">sapi.sayHello()  <span class="comment">//hello I'm Son. next is my Parent's say\n hello peanut,now is 10</span></div></pre></td></tr></table></figure></p>
+<h3 id="该研究JavaScript的继承了"><a href="#该研究JavaScript的继承了" class="headerlink" title="该研究JavaScript的继承了"></a>该研究JavaScript的继承了</h3><p>先来看一下第一个例子翻译成ES5(JavaScript)是什么样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> Parent;</div><div class="line">&#125;());</div><div class="line"><span class="keyword">var</span> par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>);</div><div class="line">par.sayHello();</div></pre></td></tr></table></figure></p>
+<p>首先是建立了个函数，函数内再嵌套一层函数，然后通过内部的<code>prototype</code>添加一个方法，最后返回整个父函数。<br>燃鹅在这个函数内部已经做了一次叫“原型链继承”的事情了。就是从父级，或者说从其他原型来指向到继承的实例来达到元素一并继承，这样我要实现后面的实例的时候就要连带前面的也一并执行了。</p>
+<p>然后第二个例子，多了个继承<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> __extends = (<span class="keyword">this</span> &amp;&amp; <span class="keyword">this</span>.__extends) || <span class="function"><span class="keyword">function</span> (<span class="params">d, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> p <span class="keyword">in</span> b) <span class="keyword">if</span> (b.hasOwnProperty(p)) d[p] = b[p];</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__</span>(<span class="params"></span>) </span>&#123; <span class="keyword">this</span>.constructor = d; &#125;</div><div class="line">    d.prototype = b === <span class="literal">null</span> ? <span class="built_in">Object</span>.create(b) : (__.prototype = b.prototype, <span class="keyword">new</span> __());</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> Parent;</div><div class="line">&#125;());</div><div class="line"><span class="keyword">var</span> Son = (<span class="function"><span class="keyword">function</span> (<span class="params">_super</span>) </span>&#123;</div><div class="line">    __extends(Son, _super);</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">msg, age</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> _super.call(<span class="keyword">this</span>, msg, age) || <span class="keyword">this</span>;</div><div class="line">    &#125;</div><div class="line">    Son.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"hello I'm Son. next is my Parent's say"</span>);</div><div class="line">        _super.prototype.sayHello.call(<span class="keyword">this</span>);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> Son;</div><div class="line">&#125;(Parent));</div><div class="line"><span class="keyword">var</span> sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>);</div><div class="line">sapi.sayHello();</div></pre></td></tr></table></figure></p>
+<p>有点厉害，我先坐下来……</p>
+<p>先是构造了个链子，然后（那个是闭包污染处理嘛…）…… 说不清了……</p>
+<p>反正看子类，很明显在“Son类”结束前，有一个<code>(Parent)</code>，虽说ts对于类的处理都是一个大个的及时运行函数，但是”parent”运行时并没有带参数，而”Son”带了它的爹，如果我的理解的是对的的话，就是”Son”在运行的时候把”Parent”带着运行一次起到“继承”的效果。最后还是照原型链的理解。</p>
+<h3 id="关于JavaScript的其他继承"><a href="#关于JavaScript的其他继承" class="headerlink" title="关于JavaScript的其他继承"></a>关于JavaScript的其他继承</h3><p>还是因为我的爬虫小记中的现世界宝可梦数量及其名字的项目中，用到了<code>.call(this)</code>这个函数句。所以在想，是否可以使用构造函数走一波继承？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'this is a'</span>)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    a.call(<span class="keyword">this</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后调用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">b()     <span class="comment">//this is a</span></div></pre></td></tr></table></figure></p>
+<p>所以也是可以的。结束！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;小爝（知乎用户）：js里面什么都是对象，所以你看单身狗学这个语言学的老快了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就前几天看到的答案，觉得对啊！js这种边缘OP的语言，你说它没对象它是可以有的，你说它是面向对象语言它不是。&lt;br&gt;所以来研究一手关于JavaScript的继承。研究过程用一下typescript（这个真有对象了）
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>async-await 初尝试</title>
@@ -482,7 +525,7 @@
     <link href="http://blog.co1mugx.tk/2016/11/06/vue-study-0/"/>
     <id>http://blog.co1mugx.tk/2016/11/06/vue-study-0/</id>
     <published>2016-11-06T10:00:13.000Z</published>
-    <updated>2016-11-08T07:12:54.000Z</updated>
+    <updated>2017-02-22T13:54:31.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>据说跟JQuery差不多但是比较6，感觉应该是Angular那类可以写webapp的东西，学习一下</p>
@@ -513,7 +556,7 @@
     
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
-      <category term="Vue" scheme="http://blog.co1mugx.tk/tags/Vue/"/>
+      <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
     
   </entry>
   
@@ -640,21 +683,21 @@
     <link href="http://blog.co1mugx.tk/2016/10/17/huan-cheng-atom/"/>
     <id>http://blog.co1mugx.tk/2016/10/17/huan-cheng-atom/</id>
     <published>2016-10-17T08:42:47.000Z</published>
-    <updated>2016-10-19T17:37:24.000Z</updated>
+    <updated>2017-02-22T13:54:16.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>又是一次装逼，把自己装死了！</p>
+<p>又是一次装逼，把自己装死了！</p>
 </blockquote>
-<p>真的服了自己，早干嘛了<br>从Atom跳到sublime text<br>然后觉得st LOW 从sublime text跳到vscode<br>当时的vsc才0.x所以没有插件功能，用了几天就不用了<br>还是换回st<br>再后来还是觉得st好low好难看，好想换掉<br>刚好vsc已经到1.0了，而且能装插件，好像还不错<br>插件库跟st有关<br>所以就用了一段时间，发现并不是自己喜欢的那种<br>即便安装了很多插件<br>所以今天又删了换成了Atom<br><strong>作！作！作！</strong><br><strong>搞事！搞事！搞事！</strong></p>
+<p>真的服了自己，早干嘛了<br>从Atom跳到sublime text<br>然后觉得st LOW 从sublime text跳到vscode<br>当时的vsc才0.x所以没有插件功能，用了几天就不用了<br>还是换回st<br>再后来还是觉得st好low好难看，好想换掉<br>刚好vsc已经到1.0了，而且能装插件，好像还不错<br>插件库跟st有关<br>所以就用了一段时间，发现并不是自己喜欢的那种<br>即便安装了很多插件<br>所以今天又删了换成了Atom<br><strong>作！作！作！</strong><br><strong>搞事！搞事！搞事！</strong></p>
 <p>上面提到那些，都是当作万能编辑器来用的。<br>毕竟jb全家桶挺不错，还有前端专用brackets</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;又是一次装逼，把自己装死了！&lt;/p&gt;
+&lt;p&gt;又是一次装逼，把自己装死了！&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;真的服了自己，早干嘛了&lt;br&gt;从Atom跳到sublime text&lt;br&gt;然后觉得st LOW 从sublime text跳到vscode&lt;br&gt;当时的vsc才
+&lt;p&gt;真的服了自己，早干嘛了&lt;br&gt;从Atom跳到sublime text&lt;br&gt;然后觉得st LOW 从sublime text跳到vscode&lt;br&gt;当时的vsc才0.x所以没有
     
     </summary>
     
@@ -760,46 +803,6 @@
     
     
       <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>幕课网视频下载器NodeJS版</title>
-    <link href="http://blog.co1mugx.tk/2016/10/06/Imooc_Downloader/"/>
-    <id>http://blog.co1mugx.tk/2016/10/06/Imooc_Downloader/</id>
-    <published>2016-10-06T06:15:46.000Z</published>
-    <updated>2016-10-09T09:07:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>不能让别人知道我也是会撸工具的（嘘..）</p>
-</blockquote>
-<p>像我们这么清真的人，一般都是<a href="https://github.com/ColMugX/ImoocDownloader" target="_blank" rel="external">先上链接！</a></p>
-<p>其实这是个很早就完成的项目了（9月1日开学日…之前！）</p>
-<p><strong>写出来的项目就像嫁出去的女儿，谁说要维护了！我说着玩而已！</strong> <a id="more"></a></p>
-<p>好吧讲一下，这东西其实就是一个视频下载器，通过nodejs的命令行进行全部<strong>盗链操作</strong>！</p>
-<p>实现过程真的完全粗暴，很粗暴的解决了幕课网（Imooc）的视频下载，输入想要下载的视频编号之后，全自动筛选出视频并下载，下载方式是列表内视频并行下载…</p>
-<p><del>P.S.没图！没代码！没食谱！（主题还没有写完，所以关于代码框的东西一概没有，慢慢等吧！）</del></p>
-<p>应该没问题了，写一下食谱吧。</p>
-<h4 id="三种方法安装（Install）"><a href="#三种方法安装（Install）" class="headerlink" title="三种方法安装（Install）"></a>三种方法安装（Install）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/ColMugX/ImoocDownloader.git ./ImoocDownloader</div><div class="line">Download ZIP</div><div class="line">Open in Desktop</div></pre></td></tr></table></figure>
-<h4 id="使用（Usage）"><a href="#使用（Usage）" class="headerlink" title="使用（Usage）"></a>使用（Usage）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ./ImoocDownloader</div><div class="line">npm install</div><div class="line">node app</div></pre></td></tr></table></figure>
-<p>然后按照提示输入各种各样的东西就行了……</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;不能让别人知道我也是会撸工具的（嘘..）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;像我们这么清真的人，一般都是&lt;a href=&quot;https://github.com/ColMugX/ImoocDownloader&quot;&gt;先上链接！&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其实这是个很早就完成的项目了（9月1日开学日…之前！）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;写出来的项目就像嫁出去的女儿，谁说要维护了！我说着玩而已！&lt;/strong&gt;
-    
-    </summary>
-    
-    
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
-      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
   </entry>
   
