@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-02-28T04:48:23.000Z</updated>
+  <updated>2017-03-02T16:24:19.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES古往今来所有for的总结</title>
+    <link href="http://blog.co1mugx.tk/2017/03/02/js-for/"/>
+    <id>http://blog.co1mugx.tk/2017/03/02/js-for/</id>
+    <published>2017-03-02T15:40:42.000Z</published>
+    <updated>2017-03-02T16:24:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>准备面试，遇到一家以“工匠精神”为核心，“浪”为资本的公司，太喜欢…</p>
+</blockquote>
+<p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
+<p>觉得我不服！我要上！（你行你上）<a id="more"></a></p>
+<h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</div></pre></td></tr></table></figure></p>
+<p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</div></pre></td></tr></table></figure></p>
+<h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>不过<code>for in</code>的话，为什么说遍历对象比较多，其中一个除了好写<del>（打死吧这人）</del>，还有一点它只能用来遍历有key或者说是个index的东西，比如数组，它只能读到数组的index，那对象的话就直接读到键值咯。而且有一点的是，你读数组，<strong>读出来的index是个string不是number</strong>。这个要记得，因为js这种弱类型的东西，如果索引相加就变成字符串相加了……<strong>（我幼儿园就会20以内加减法了，1加2等于12)</strong></p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>这个方法就不是古老的方法了，JS(ES5)版本的时候的，针对数组的一个方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.forEach(<span class="function">(<span class="params">i</span>)=&gt;</span> &#123;&#125;)</div></pre></td></tr></table></figure></p>
+<p>这种遍历的话，你遍历完直接能把数据处理掉最好，因为如果不是的话就麻烦了…它并不是一个开放的遍历，而是借用的闭包函数做的遍历。可以看成是<code>arr.func()</code>，它是一个数组方法，传进去一个<code>callback</code>，那就厉害了啊，闭包一个特点就是保护变量避免污染啊，变量保护是双向的啊…进得去出不来… （所以我的微信小程序openradio有用到计数器的时候不敢用这个，而且这个方法也是针对数组才能用的）</p>
+<h3 id="for-of"><a href="#for-of" class="headerlink" title="for..of"></a>for..of</h3><p>这是ES6的新东西，它比<code>for in</code>遍历的更多，没有<code>for (;;)</code>复杂，对比<code>forEach</code>它是开放的不是闭包，也就是那些条件控制流什么的都可以操作。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr)</div></pre></td></tr></table></figure></p>
+<p>可是不止，好像还可以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> <span class="string">'colmu'</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//'c'\n 'o'\n 'l'\n 'm'\n 'u'\n</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>不过它不能遍历对象！不能遍历对象！不能遍历对象！而且错误信息<code>TypeError: str[Symbol.iterator] is not a function</code>。所以这里我不行不BB了。</p>
+<blockquote>
+<p>所有实现了[Symbol.iterator]接口的对象都可以被遍历。</p>
+</blockquote>
+<h3 id="for-in-和-for-of-对比"><a href="#for-in-和-for-of-对比" class="headerlink" title="for in 和 for of 对比"></a>for in 和 for of 对比</h3><p>一个栗子就能锤到头皮发麻<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">// 0,1,2,3,4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//6,6,4,2,8</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h3><p>光说区别不行，我要讲怎么用！</p>
+<p><del>万能膏药<code>while</code></del> （不对走错片场…）</p>
+<p>万能膏药<code>for (;;)</code>：这是怎样都能用的，不过就是长了点，但是定义细了多。</p>
+<p>数组专利<code>forEach</code>：数组的方法，只能用在数组。</p>
+<p>能用在数组的：<code>for</code>, <code>forEach</code>, <code>for in</code>, <code>for of</code></p>
+<p>能用在找头的：<code>for in</code></p>
+<p>只要支持[Symbol.iterator]要什么找什么的：<code>for of</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;准备面试，遇到一家以“工匠精神”为核心，“浪”为资本的公司，太喜欢…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实也是看到了&lt;a href=&quot;https://zhuanlan.zhihu.com/jbangit&quot;&gt;匠邦互联网 - 知乎专栏&lt;/a&gt;，其中一篇讲for的&lt;/p&gt;
+&lt;p&gt;觉得我不服！我要上！（你行你上）
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6对象遍历</title>
@@ -265,9 +317,9 @@
     </summary>
     
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Syuanpi" scheme="http://blog.co1mugx.tk/tags/Syuanpi/"/>
     
@@ -348,9 +400,9 @@
     </summary>
     
     
-      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
@@ -638,9 +690,9 @@
     </summary>
     
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Blank" scheme="http://blog.co1mugx.tk/tags/Blank/"/>
     
@@ -775,46 +827,6 @@
     
     
       <category term="吹水" scheme="http://blog.co1mugx.tk/tags/%E5%90%B9%E6%B0%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Rousy的小前菜</title>
-    <link href="http://blog.co1mugx.tk/2016/10/09/About_Rousy/"/>
-    <id>http://blog.co1mugx.tk/2016/10/09/About_Rousy/</id>
-    <published>2016-10-09T09:12:32.000Z</published>
-    <updated>2016-10-15T05:47:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>灵感来自于坑爹的Mac 欧艾斯死瑞娅(os sierra) 和 挨欧艾斯十！(iOS 10)</p>
-</blockquote>
-<h4 id="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"><a href="#如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！" class="headerlink" title="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"></a>如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！</h4><h3 id="不想说了，新系统那能吐槽十年的通知栏"><a href="#不想说了，新系统那能吐槽十年的通知栏" class="headerlink" title="不想说了，新系统那能吐槽十年的通知栏"></a>不想说了，新系统那能吐槽十年的通知栏</h3><a id="more"></a>
-<p>苹果的美工呢！文案不行美工不能乱来啊！别以为新系统出了个siri就可以安慰我了！<br>通知栏总不能跟个卫生巾一样吧！<br>好吧灵感就来自于圆角（rounded）然后再补上个style。嗯！rounded style！<br>(i have a rounded. i have a style. uhm.. Rousy!)<br> <span style="color:#a5a5a5">(拖出去打死吧不用汇报了！</span></p>
-<h3 id="好了说点关于主题的事"><a href="#好了说点关于主题的事" class="headerlink" title="好了说点关于主题的事.."></a>好了说点关于主题的事..</h3><p>其实一开始主题并不是这样的！我其实想写的超简约超简洁。后来阴差阳错的就多了好多活泼的元素，再后来就变成看起来好像儿童性质的主题了。过几天放几条鱼上去可以改造成海洋世界了。<br>我也不清楚，原计划是白灰蓝怎么就变成这样了…<br>可能是脑子里想法比较多，然后都想放到这个里面，反正随便了。如果有人喜欢更好，没人喜欢那也没办法啊毕竟生出来了…<br>行了那就随便列举几点</p>
-<h3 id="一切为了想玩，各种深沟暗流等着发现"><a href="#一切为了想玩，各种深沟暗流等着发现" class="headerlink" title="一切为了想玩，各种深沟暗流等着发现"></a>一切为了想玩，各种深沟暗流等着发现</h3><p>有大量的鼠标浮动效果，或许现在不华丽，以后可能会更有趣。</p>
-<h3 id="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"><a href="#首先我们有四种语言！分别是English，简体中文，正體中文，日本語" class="headerlink" title="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"></a>首先我们有四种语言！分别是English，简体中文，正體中文，日本語</h3><p>作为中国人，两个中国语言就不用说了，错误应该是没有。日语的话可能问题比较大，希望有小伙伴指正一下。英语应该没多大问题了这个。</p>
-<h3 id="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"><a href="#虽然本着不耍猴，但是我们还是要说点海洋世界的交互" class="headerlink" title="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"></a>虽然本着不耍猴，但是我们还是要说点海洋世界的交互</h3><p>主题砍掉了友情链接和个人介绍页。其实也不是说没掉了，只是需要有点小探索。比如在某个地方点下去可以召唤出来。<br>因为就是喜欢玩嘛，所以说这个主题在博客主题里面来说的话肯定是“妖艳贱货”或者说“没牙小毛孩儿”<br>（这个功能目前还没有实现，反正就是慢慢来。）</p>
-<h3 id="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"><a href="#如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！" class="headerlink" title="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"></a>如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！</h3><p>对的，开放的，应该是给图片链接就会自适应了，反正尽量就是给刚刚好嘛。<br>保留头图可以展现站点个性，这个我还是觉得有必要留的。<br>但是头像的话，如果觉得有必要有的话，那以后加上去就行了。<br>链接方面会在<code>config.yml</code>留出来的这个不必很担心。<br>（会不会太像微博的做法了？）</p>
-<p><strong>最后的话，等想起来再说或者做完了再说吧，其实还差挺多的</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;灵感来自于坑爹的Mac 欧艾斯死瑞娅(os sierra) 和 挨欧艾斯十！(iOS 10)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot;&gt;&lt;a href=&quot;#如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot; class=&quot;headerlink&quot; title=&quot;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot;&gt;&lt;/a&gt;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&lt;/h4&gt;&lt;h3 id=&quot;不想说了，新系统那能吐槽十年的通知栏&quot;&gt;&lt;a href=&quot;#不想说了，新系统那能吐槽十年的通知栏&quot; class=&quot;headerlink&quot; title=&quot;不想说了，新系统那能吐槽十年的通知栏&quot;&gt;&lt;/a&gt;不想说了，新系统那能吐槽十年的通知栏&lt;/h3&gt;
-    
-    </summary>
-    
-    
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
-      <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
-    
-      <category term="Rousy" scheme="http://blog.co1mugx.tk/tags/Rousy/"/>
-    
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
