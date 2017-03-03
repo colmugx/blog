@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-03-02T16:24:19.000Z</updated>
+  <updated>2017-03-03T11:17:39.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于JavaScript的this</title>
+    <link href="http://blog.co1mugx.tk/2017/03/03/js-this/"/>
+    <id>http://blog.co1mugx.tk/2017/03/03/js-this/</id>
+    <published>2017-03-03T10:34:23.000Z</published>
+    <updated>2017-03-03T11:17:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>芽儿哟，今天去面试，差点就被骗进去咯。赶紧记录一下！</p>
+</blockquote>
+<h3 id="开门见山"><a href="#开门见山" class="headerlink" title="开门见山"></a>开门见山</h3><p>我就不按原题放出来了，妈的我觉得我第一次说错了都觉得自己像个傻批。<a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()())    <span class="comment">//undefined.</span></div></pre></td></tr></table></figure></p>
+<p>题目这样，我第一次回答的是<code>koala</code>。现在想了一下，估计是想赶紧下来吃波星冰乐给冲昏了脑子。<br>不服！如果我改下！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span>    <span class="comment">//this -&gt; that</span></div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> that.name <span class="comment">//this -&gt; that</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
+<h3 id="解题想法"><a href="#解题想法" class="headerlink" title="解题想法"></a>解题想法</h3><p>我的理解，<code>this</code>其实跟其他语言的<code>self</code>应该是差不多。就是指代自己，比如说在一个<code>function</code>里面，那么<code>this</code>指向的就是这个func。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//do something.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可能我讲的不清楚，就是<strong>this其实就是括号里的东西。</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"><span class="regexp">/** this */</span></span>) </span>&#123;</div><div class="line">    <span class="comment">//do somethings</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当然这是我的理解，我觉得应该就是这样的，所以刚刚那样取到的this并不是this。</p>
+<h3 id="浅谈this"><a href="#浅谈this" class="headerlink" title="浅谈this"></a>浅谈this</h3><p>只讲两种我懂的东西。</p>
+<h4 id="跟着new走"><a href="#跟着new走" class="headerlink" title="跟着new走"></a>跟着new走</h4><p>就是用new来创建对象的话，那么<code>this</code>就会跟着这个new<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.name) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.func()) <span class="comment">//Animal &#123; name: 'koala' &#125;</span></div></pre></td></tr></table></figure>
+<h4 id="ES6中括号函数的this"><a href="#ES6中括号函数的this" class="headerlink" title="ES6中括号函数的this"></a>ES6中括号函数的this</h4><p>括号函数的<code>this</code>，不存在的！</p>
+<p>说是不存在，实际上并不是说真的不见了，而是它会绑定到上一层函数中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;<span class="comment">/** ,this */</span>)</div></pre></td></tr></table></figure></p>
+<p>而如果不是括号的话<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="regexp">/** this */</span></span>)</span>&#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;芽儿哟，今天去面试，差点就被骗进去咯。赶紧记录一下！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;开门见山&quot;&gt;&lt;a href=&quot;#开门见山&quot; class=&quot;headerlink&quot; title=&quot;开门见山&quot;&gt;&lt;/a&gt;开门见山&lt;/h3&gt;&lt;p&gt;我就不按原题放出来了，妈的我觉得我第一次说错了都觉得自己像个傻批。
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>ES古往今来所有for的总结</title>
@@ -409,39 +448,6 @@
   </entry>
   
   <entry>
-    <title>你叫什么？ 《你的名字。》</title>
-    <link href="http://blog.co1mugx.tk/2016/12/02/your-name/"/>
-    <id>http://blog.co1mugx.tk/2016/12/02/your-name/</id>
-    <published>2016-12-02T11:27:10.000Z</published>
-    <updated>2016-12-04T07:43:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>没看的别看了，我给你们剧透一下啊<br>故事的大概意思就是；男主被一个女鬼上身，而且还爱上了女鬼，甚至还想去找女鬼的家…<br>这是个恐怖故事。</p>
-</blockquote>
-<p>来扯一扯关于新海诚这老贼的一些思路，纯属自己的想法。别来人道怼我！<br>先从大局开始聊起。</p>
-<h3 id="第一个：三叶有没有死过"><a href="#第一个：三叶有没有死过" class="headerlink" title="第一个：三叶有没有死过"></a>第一个：三叶有没有死过</h3><p>故事讲的是，泷跟三年前的三叶邂逅，泷尝试去找三叶的时候，镇子早就爆炸了的。后来泷穿越去救回村子和三叶，才造就他们的相遇。但是这个说法对么，答案是：</p>
-<p><b style="font-size:17px">错误的。三叶没有死过。</b></p>
-<p>设想一下，答案有可能是：这是个两层的梦境：<code>泷跟三叶都在同一个世界同一个时间轴做着同样的梦，这个梦只是为了他们在现实世界中相遇。</code><br>泷第一层梦境是跟三叶交换身体那部分，第二层梦境是回去救三叶和镇子那部分。也就是说：</p>
-<p><b style="font-size:17px;">整个故事都是在做梦。</b></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;没看的别看了，我给你们剧透一下啊&lt;br&gt;故事的大概意思就是；男主被一个女鬼上身，而且还爱上了女鬼，甚至还想去找女鬼的家…&lt;br&gt;这是个恐怖故事。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;来扯一扯关于新海诚这老贼的一些思路，纯属自己的想法。别来人道
-    
-    </summary>
-    
-    
-      <category term="看片子" scheme="http://blog.co1mugx.tk/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
-    
-      <category term="你的名字" scheme="http://blog.co1mugx.tk/tags/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/"/>
-    
-  </entry>
-  
-  <entry>
     <title>扣肉小记（五）—— 你的名字。</title>
     <link href="http://blog.co1mugx.tk/2016/12/02/Korou5/"/>
     <id>http://blog.co1mugx.tk/2016/12/02/Korou5/</id>
@@ -776,34 +782,6 @@
   </entry>
   
   <entry>
-    <title>弄了半天，最后武器还是换成Atom</title>
-    <link href="http://blog.co1mugx.tk/2016/10/17/huan-cheng-atom/"/>
-    <id>http://blog.co1mugx.tk/2016/10/17/huan-cheng-atom/</id>
-    <published>2016-10-17T08:42:47.000Z</published>
-    <updated>2017-02-22T13:54:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>又是一次装逼，把自己装死了！</p>
-</blockquote>
-<p>真的服了自己，早干嘛了<br>从Atom跳到sublime text<br>然后觉得st LOW 从sublime text跳到vscode<br>当时的vsc才0.x所以没有插件功能，用了几天就不用了<br>还是换回st<br>再后来还是觉得st好low好难看，好想换掉<br>刚好vsc已经到1.0了，而且能装插件，好像还不错<br>插件库跟st有关<br>所以就用了一段时间，发现并不是自己喜欢的那种<br>即便安装了很多插件<br>所以今天又删了换成了Atom<br><strong>作！作！作！</strong><br><strong>搞事！搞事！搞事！</strong></p>
-<p>上面提到那些，都是当作万能编辑器来用的。<br>毕竟jb全家桶挺不错，还有前端专用brackets</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;又是一次装逼，把自己装死了！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;真的服了自己，早干嘛了&lt;br&gt;从Atom跳到sublime text&lt;br&gt;然后觉得st LOW 从sublime text跳到vscode&lt;br&gt;当时的vsc才0.x所以没有
-    
-    </summary>
-    
-    
-      <category term="吹水" scheme="http://blog.co1mugx.tk/tags/%E5%90%B9%E6%B0%B4/"/>
-    
-  </entry>
-  
-  <entry>
     <title>阴阳师真的是个很成功的游戏</title>
     <link href="http://blog.co1mugx.tk/2016/10/15/Yinyangshi/"/>
     <id>http://blog.co1mugx.tk/2016/10/15/Yinyangshi/</id>
@@ -827,6 +805,46 @@
     
     
       <category term="吹水" scheme="http://blog.co1mugx.tk/tags/%E5%90%B9%E6%B0%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Rousy的小前菜</title>
+    <link href="http://blog.co1mugx.tk/2016/10/09/About_Rousy/"/>
+    <id>http://blog.co1mugx.tk/2016/10/09/About_Rousy/</id>
+    <published>2016-10-09T09:12:32.000Z</published>
+    <updated>2016-10-15T05:47:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>灵感来自于坑爹的Mac 欧艾斯死瑞娅(os sierra) 和 挨欧艾斯十！(iOS 10)</p>
+</blockquote>
+<h4 id="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"><a href="#如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！" class="headerlink" title="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"></a>如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！</h4><h3 id="不想说了，新系统那能吐槽十年的通知栏"><a href="#不想说了，新系统那能吐槽十年的通知栏" class="headerlink" title="不想说了，新系统那能吐槽十年的通知栏"></a>不想说了，新系统那能吐槽十年的通知栏</h3><a id="more"></a>
+<p>苹果的美工呢！文案不行美工不能乱来啊！别以为新系统出了个siri就可以安慰我了！<br>通知栏总不能跟个卫生巾一样吧！<br>好吧灵感就来自于圆角（rounded）然后再补上个style。嗯！rounded style！<br>(i have a rounded. i have a style. uhm.. Rousy!)<br> <span style="color:#a5a5a5">(拖出去打死吧不用汇报了！</span></p>
+<h3 id="好了说点关于主题的事"><a href="#好了说点关于主题的事" class="headerlink" title="好了说点关于主题的事.."></a>好了说点关于主题的事..</h3><p>其实一开始主题并不是这样的！我其实想写的超简约超简洁。后来阴差阳错的就多了好多活泼的元素，再后来就变成看起来好像儿童性质的主题了。过几天放几条鱼上去可以改造成海洋世界了。<br>我也不清楚，原计划是白灰蓝怎么就变成这样了…<br>可能是脑子里想法比较多，然后都想放到这个里面，反正随便了。如果有人喜欢更好，没人喜欢那也没办法啊毕竟生出来了…<br>行了那就随便列举几点</p>
+<h3 id="一切为了想玩，各种深沟暗流等着发现"><a href="#一切为了想玩，各种深沟暗流等着发现" class="headerlink" title="一切为了想玩，各种深沟暗流等着发现"></a>一切为了想玩，各种深沟暗流等着发现</h3><p>有大量的鼠标浮动效果，或许现在不华丽，以后可能会更有趣。</p>
+<h3 id="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"><a href="#首先我们有四种语言！分别是English，简体中文，正體中文，日本語" class="headerlink" title="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"></a>首先我们有四种语言！分别是English，简体中文，正體中文，日本語</h3><p>作为中国人，两个中国语言就不用说了，错误应该是没有。日语的话可能问题比较大，希望有小伙伴指正一下。英语应该没多大问题了这个。</p>
+<h3 id="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"><a href="#虽然本着不耍猴，但是我们还是要说点海洋世界的交互" class="headerlink" title="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"></a>虽然本着不耍猴，但是我们还是要说点海洋世界的交互</h3><p>主题砍掉了友情链接和个人介绍页。其实也不是说没掉了，只是需要有点小探索。比如在某个地方点下去可以召唤出来。<br>因为就是喜欢玩嘛，所以说这个主题在博客主题里面来说的话肯定是“妖艳贱货”或者说“没牙小毛孩儿”<br>（这个功能目前还没有实现，反正就是慢慢来。）</p>
+<h3 id="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"><a href="#如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！" class="headerlink" title="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"></a>如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！</h3><p>对的，开放的，应该是给图片链接就会自适应了，反正尽量就是给刚刚好嘛。<br>保留头图可以展现站点个性，这个我还是觉得有必要留的。<br>但是头像的话，如果觉得有必要有的话，那以后加上去就行了。<br>链接方面会在<code>config.yml</code>留出来的这个不必很担心。<br>（会不会太像微博的做法了？）</p>
+<p><strong>最后的话，等想起来再说或者做完了再说吧，其实还差挺多的</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;灵感来自于坑爹的Mac 欧艾斯死瑞娅(os sierra) 和 挨欧艾斯十！(iOS 10)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot;&gt;&lt;a href=&quot;#如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot; class=&quot;headerlink&quot; title=&quot;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&quot;&gt;&lt;/a&gt;如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！&lt;/h4&gt;&lt;h3 id=&quot;不想说了，新系统那能吐槽十年的通知栏&quot;&gt;&lt;a href=&quot;#不想说了，新系统那能吐槽十年的通知栏&quot; class=&quot;headerlink&quot; title=&quot;不想说了，新系统那能吐槽十年的通知栏&quot;&gt;&lt;/a&gt;不想说了，新系统那能吐槽十年的通知栏&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
+    
+      <category term="Rousy" scheme="http://blog.co1mugx.tk/tags/Rousy/"/>
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
   </entry>
   

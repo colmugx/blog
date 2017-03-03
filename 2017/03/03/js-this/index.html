@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>Co1MugX | 填坑模式运行中…</title>
+    
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+    
+        <link rel="stylesheet" href="/lightbox/css/lightbox.min.css">
+    
+    <link rel="icon" href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+    <!-- isnt analytics -->
+    
+</head>
+
+    <body>
+        <div id="loader">
+    <div class="loader-content">
+        <span>Loading...</span>
+    </div>
+</div>
+
+       <div id="container" style="display:none">
+        <header>
+    <div class="mobile-header">
+        <a href="/"><span id="mobile-title">Co1MugX</span></a>
+    </div>
+    <div class="header">
+        <a><span id="title">Co1MugX</span></a>
+        <div class="squa-list">
+    <ul>
+        <li class="first"><a href="/" id="home">首页</a></li>
+        <li class="second"><a href="javascript:;" id="about">关于</a></li>
+        
+        <li id="subtitle">
+            填坑模式运行中…
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+</header>
+
+        
+    <div class="main">
+    <article class="blog-art-inner" itemprop="blogPost">
+        <div class="art-date-inner">
+    <span>
+        <time datetime="Mar 3rd 2017" itemprop="datePublished">
+            Mar 3rd 2017
+        </time>
+        </span>
+</div>
+
+        <header class="art-title-inner">
+            <h2 itemprop="name">
+                关于JavaScript的this
+            </h2>
+            
+  <div class="art-tags">
+    <ul class="art-tags-list"><li class="art-tags-list-item"><a class="art-tags-list-link" href="/tags/前端/">前端</a></li><li class="art-tags-list-item"><a class="art-tags-list-link" href="/tags/实验室/">实验室</a></li></ul>
+</div>
+
+
+            <hr>
+        </header>
+        <div class="art-content">
+            <div class="content-inner" itemprop="article">
+                <blockquote>
+<p>芽儿哟，今天去面试，差点就被骗进去咯。赶紧记录一下！</p>
+</blockquote>
+<h3 id="开门见山"><a href="#开门见山" class="headerlink" title="开门见山"></a>开门见山</h3><p>我就不按原题放出来了，妈的我觉得我第一次说错了都觉得自己像个傻批。<a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()())    <span class="comment">//undefined.</span></div></pre></td></tr></table></figure></p>
+<p>题目这样，我第一次回答的是<code>koala</code>。现在想了一下，估计是想赶紧下来吃波星冰乐给冲昏了脑子。<br>不服！如果我改下！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span>    <span class="comment">//this -&gt; that</span></div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> that.name <span class="comment">//this -&gt; that</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
+<h3 id="解题想法"><a href="#解题想法" class="headerlink" title="解题想法"></a>解题想法</h3><p>我的理解，<code>this</code>其实跟其他语言的<code>self</code>应该是差不多。就是指代自己，比如说在一个<code>function</code>里面，那么<code>this</code>指向的就是这个func。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//do something.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可能我讲的不清楚，就是<strong>this其实就是括号里的东西。</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"><span class="regexp">/** this */</span></span>) </span>&#123;</div><div class="line">    <span class="comment">//do somethings</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当然这是我的理解，我觉得应该就是这样的，所以刚刚那样取到的this并不是this。</p>
+<h3 id="浅谈this"><a href="#浅谈this" class="headerlink" title="浅谈this"></a>浅谈this</h3><p>只讲两种我懂的东西。</p>
+<h4 id="跟着new走"><a href="#跟着new走" class="headerlink" title="跟着new走"></a>跟着new走</h4><p>就是用new来创建对象的话，那么<code>this</code>就会跟着这个new<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.name) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.func()) <span class="comment">//Animal &#123; name: 'koala' &#125;</span></div></pre></td></tr></table></figure>
+<h4 id="ES6中括号函数的this"><a href="#ES6中括号函数的this" class="headerlink" title="ES6中括号函数的this"></a>ES6中括号函数的this</h4><p>括号函数的<code>this</code>，不存在的！</p>
+<p>说是不存在，实际上并不是说真的不见了，而是它会绑定到上一层函数中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;<span class="comment">/** ,this */</span>)</div></pre></td></tr></table></figure></p>
+<p>而如果不是括号的话<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="regexp">/** this */</span></span>)</span>&#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+
+            </div>
+        
+    
+    <nav id="art-nav">
+     <hr>
+      
+      
+        <a href="/2017/03/02/js-for/" id="art-right" class="art-right">
+          <div class="art-lastTitle">ES古往今来所有for的总结 > </div>
+        </a>
+      
+    </nav>
+    
+
+
+            </div>
+    </article>
+    
+    <hr style="width:60%;margin:0 auto;margin-bottom:10px;color:#FFF">
+    <div id="comSwitch" class="comSwitch">
+        <span>点击这里 ▾ 打开评论</span>
+    </div>
+    
+    
+      
+        
+          
+            <!-- UY BEGIN -->
+<div id="uyan_frame" style="display:none"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2116358"></script>
+<!-- UY END -->
+
+            <script type="text/javascript">
+            $(document).ready(function () {
+                var open = false;
+                $('#comSwitch').click(function () {
+                    if (open) {
+                        $('#uyan_frame').removeClass('showIn');
+                        $('#uyan_frame').addClass('hideIn');
+                        $('#comSwitch span').html("点击这里 ▾ 打开评论")
+                        setTimeout(function(){
+                            $('#uyan_frame').css('display', 'none');
+                        },350);
+                        open = false;
+                    } else {
+                        $('#uyan_frame').removeClass('hideIn');
+                        $('#uyan_frame').addClass('showIn');
+                        $('#uyan_frame').css('display', 'block');
+                        $('#comSwitch span').html("点击这里 ▴ 收起评论")
+                        open = true;
+                    }
+                });
+            });
+            </script>
+            
+    </div>
+
+
+
+        <div class="about">
+    <div class="about-info">
+        <h2>about</h2>
+        <p>您好！我叫　<span>Co1MugX</span>。</p>
+        
+        <p>弄个博客单纯想玩，现在的前端真的好“前端”…噢对了，iOS的阅读体验很嗨喔~</p>
+        
+        <ul class="sub-list">
+            
+                
+                <li>
+                    github：
+                    <a href="https://github.com/ColMugX">ColMugX</a>
+                </li>
+                
+                
+                <li>
+                    zhihu：
+                    <a href="https://www.zhihu.com/people/colmugx">colmugx</a>
+                </li>
+                
+        </ul>
+        
+
+    </div>
+    <div class="about-friend">
+        
+            <h2>这是我的朋友列表</h2>
+            <ul class="friend-list">
+            
+                <li><a href="http://www.ahonn.me">ahonn</a></li>
+            
+            </ul>
+        
+    </div>
+</div>
+
+        <footer id="footer" class="footer">
+    <div class="blog-tags">
+<hr>
+<a href="/tags/Blank/" style="font-size: 14px;">Blank</a> <a href="/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/tags/Rousy/" style="font-size: 14px;">Rousy</a> <a href="/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/tags/vue/" style="font-size: 14px;">vue</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/吹水/" style="font-size: 14px;">吹水</a> <a href="/tags/实验室/" style="font-size: 14px;">实验室</a> <a href="/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/tags/看片子/" style="font-size: 14px;">看片子</a> <a href="/tags/编程猫/" style="font-size: 14px;">编程猫</a>
+</div>
+
+    <div class="info">
+        
+            &copy;
+            2017
+                <a href="https://github.com/ColMugX" target="_blank">
+                    Co1MugX
+                </a> <a href="https://github.com" target="_blank">❤</a>
+                
+    </div>
+    <div class="theme">
+        <p>
+            动力来源于　<a href="http://hexo.io/" target="_blank">Hexo</a>　Theme　<a href="https://github.com/ColMugX/hexo-theme-Blank" target="_blank">Blank</a>&nbsp;
+        </p>
+    </div>
+</footer>
+
+    <script src="/lightbox/js/lightbox-plus-jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            if (window.screen.width >= 540) {
+            var $imga = $('img').parent('a');
+            $imga.attr('rel', 'lightbox');
+            }
+        });
+    </script>
+
+
+        <div class="goTop" id="goTop"></div>
+<div class="mobile-nav">
+    <div class="mobile-nav-item" id="menu-item"></div>
+    <div class="mobile-nav-list">
+        
+        <a class="mobile-nav-list-item" href="/">首页</a>
+        
+        <a class="mobile-nav-list-item" href="/archives">归档</a>
+        
+        <a class="mobile-nav-list-item" href="javascript:;" id="mobile-about">关于</a>
+    </div>
+</div>
+
+      </div>
+    </body>
+</html>
