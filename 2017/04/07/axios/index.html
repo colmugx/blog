@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title> Vue2.0的网络请求 - Axios · Co1MugX </title>
+    <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<link rel="stylesheet" href="/style/style.css">
+<script src="/script/jquery.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="/lightbox/css/lightbox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/syuanpi/syuanpi.min.css">
+
+
+
+
+    <link rel="icon" href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+
+
+
+<script>
+    var CONFIG = {
+        lightbox: true,
+        animate: true
+    }
+</script>
+
+</head>
+<body>
+    <div class="body">
+    <div class="tagcloud" id="tagcloud">
+    <div class="tagcloud-inner">
+        <a href="/tags/Blank/" style="font-size: 14px;">Blank</a> <a href="/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/tags/Slvi/" style="font-size: 14px;">Slvi</a> <a href="/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/tags/vue/" style="font-size: 14px;">vue</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/吹水/" style="font-size: 14px;">吹水</a> <a href="/tags/实验室/" style="font-size: 14px;">实验室</a> <a href="/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/tags/看片子/" style="font-size: 14px;">看片子</a> <a href="/tags/编程猫/" style="font-size: 14px;">编程猫</a>
+    </div>
+</div>
+    <div class="container">
+        <header class="header" id="header">
+    <div class="title syuanpi tvIn">
+    <div class="table">
+        <div class="connect">
+            <div class="connect-inner">
+                <span><a href="/">Co1MugX</a></span>
+                
+                    <span id="subtitle">填坑模式运行中… | 新主题怎么一股中二味…</span>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <nav class="main-nav syuanpi tvIn">
+<div class="table">
+
+    <ul class="menu">
+        
+        
+            <li class="menu-item">
+                <a href="/">
+                    <span>ジャーナル</span>
+                    
+                        <span class="menu-item-label">article</span>
+                    
+                </a>
+            </li>
+        
+        
+        
+            <li class="menu-item">
+                <a href="/archives">
+                    <span>アーカイブ</span>
+                    
+                        <span class="menu-item-label">archives</span>
+                    
+                </a>
+            </li>
+        
+        
+        
+            <li class="menu-item">
+                <a href="javascript:;" id="tags">
+                    <span>ラベル</span>
+                    
+                        <span class="menu-item-label">tags</span>
+                    
+                </a>
+            </li>
+        
+        
+        
+            <li class="menu-item">
+                <a href="/about">
+                    <span>関連する</span>
+                    
+                        <span class="menu-item-label">about</span>
+                    
+                </a>
+            </li>
+        
+        
+    </ul>
+
+</div>
+</nav>
+<div class="mobile-nav"></div>
+</header>
+        <main class="main" id="main">
+            
+    
+    <article class="post">
+        <header class="post-header">
+            <div class="post-time syuanpi riseIn-light back-1">
+                <span>2017年4月7日</span>
+            </div>
+            <h1 class="post-title syuanpi riseIn-light back-2">
+            
+                Vue2.0的网络请求 - Axios
+            
+            </h1>
+            
+                
+                    <div class="post-tags syuanpi riseIn-light back-3">
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+                        <a href="/tags/实验室/">实验室</a>
+                    
+                        <a href="/tags/vue/">vue</a>
+                    
+                    </div>
+                
+            
+        </header>
+        <div class="post-content syuanpi riseIn-light back-3">
+            
+                <blockquote>
+<p>我没进传销！真是日了皮皮虾了…</p>
+</blockquote>
+<p>由于Vue2.0之后，<code>vue-resource</code>也停止更新了，改为使用尤老师钦点的<code>axios</code>。<a href="https://github.com/mzabriskie/axios" target="_blank" rel="external">mzabriskie/axios: Promise based HTTP client for the browser and node.js</a></p>
+<p>那反正不管！他说不合适我不用，我就去学个新的。其实接触过微信小程序的话，稍加理解，这就是一个比较厉害点但是又有局限的<code>wx.request()</code></p>
+<h2 id="what-s-Axios"><a href="#what-s-Axios" class="headerlink" title="what s Axios"></a>what s Axios</h2><blockquote>
+<p>Promise based HTTP client for the browser and node.js</p>
+</blockquote>
+<p>就是一个基于ES6的<code>Promise</code>的网络请求库，其实说干净了就是一个打包好的<code>XMLHttpRequests</code>，也就是说不过一个Ajax库。</p>
+<p>所以它一样可以实现：</p>
+<ul>
+<li>在浏览器里建立XHR</li>
+<li>通过nodejs进行http请求</li>
+<li>转换或者拦截请求数据或者相应数据</li>
+<li>支持<code>Promise</code>的API</li>
+<li>可以取消请求</li>
+<li>自动转换JSON</li>
+<li><strong>可以防御XSRF攻击！</strong></li>
+</ul>
+<p>浏览器支持问题也没什么问题，IE这种本时代异端都能支持到8+，这问题是不大了。（VUE不也是8+！）</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>如果有用npm管理包的话，那么安装还是老规矩的</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install axios</div></pre></td></tr></table></figure>
+<p>或者用到了bower（反正我没用过）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bower install axios</div></pre></td></tr></table></figure>
+<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">axios.get(<span class="string">'/* url */'</span>).then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// Do Somethings</span></div><div class="line">  <span class="comment">// console.log(response)</span></div><div class="line">&#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(error)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>因为可以使用Promise的API，那么毫无悬念它的运行肯定也是以Promise来运行。</p>
+<p>而且url，可以是带参数的，例如<code>/user?id=666</code>，或者也可以拆分开来</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">axios.get(<span class="string">'/user'</span>, &#123;</div><div class="line">  <span class="attr">params</span>: &#123;</div><div class="line">    <span class="attr">id</span>: ColMugX</div><div class="line">  &#125;</div><div class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res)).catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</div></pre></td></tr></table></figure>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">axios.post(<span class="string">'/* url */'</span>, &#123;</div><div class="line">  <span class="comment">/* Config */</span></div><div class="line">  <span class="comment">// id: 666,</span></div><div class="line">  <span class="comment">// name: ColMugX</span></div><div class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res))</div></pre></td></tr></table></figure>
+<p>其他的大概也跟GET相差无几。只不过关于’url’后面传入的Object，有可能是用不了的，也有可能是用的了的。因为其他人有类似情况发生。所以我一般都是按照axios api的做法，怎么做下面有！</p>
+<p>因为大概用的多的就这两个…所以举例就差不多这样了，毕竟<code>vue-resource</code>有的基本都有。</p>
+<h3 id="奇技淫巧"><a href="#奇技淫巧" class="headerlink" title="奇技淫巧"></a>奇技淫巧</h3><h4 id="1-axios是一个方法，你甚至可以整个config传进去"><a href="#1-axios是一个方法，你甚至可以整个config传进去" class="headerlink" title="1. axios是一个方法，你甚至可以整个config传进去"></a>1. axios是一个方法，你甚至可以整个config传进去</h4><p>文档有提到，关于<code>axios API</code>有一条实现方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">axios(config) <span class="comment">//config: Object</span></div></pre></td></tr></table></figure>
+<p>这就意味着，我们可以直接创建一整套静态的config，然后请求的时候带进去就能实现了。比如</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> *	config.js</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">  <span class="attr">url</span>: <span class="string">'localhost:6666'</span>,</div><div class="line">  <span class="attr">headers</span>: &#123;</div><div class="line">    <span class="attr">token</span>: <span class="string">'ftv1443qby6bdfa41t90sfvq89hg3h54u989m9imog79g4'</span> </div><div class="line">    <span class="comment">//这一看就知道是滚键盘的…</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">id</span>: <span class="number">666</span>,</div><div class="line">    <span class="attr">name</span>: <span class="string">'ColMugX'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> *	Axios.js</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">import</span> config <span class="keyword">from</span> <span class="string">'config'</span></div><div class="line"><span class="keyword">import</span> axios form <span class="string">'axios'</span></div><div class="line"></div><div class="line">axios(config)</div></pre></td></tr></table></figure>
+<p>配置和运行分离可以带来很多好处，比如baseUrl，header 等等一堆需要重复调用又可以不用重复写，甚至还可以把这些静态的东西直接静态常量掉。避免自己出错或者被更改。而且这么一来的话，甚至请求的话只需要改动url和method就行了。</p>
+<p>因为用的是对象的方法，那好办啊！干对象有什么难的！</p>
+<p>- 今天要用什么姿势！</p>
+<p>- 要不你在上面吧我趴着！</p>
+<p>好那就趴着！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> conf = config</div><div class="line">conf.method = <span class="string">'PUT'</span></div><div class="line"><span class="comment">//其他该怎么传怎么传</span></div></pre></td></tr></table></figure>
+<p>然后请求配置官方有一个<a href="https://github.com/mzabriskie/axios#request-config" target="_blank" rel="external">默认配置方案</a>，照着这个看一下大概也知道它支持传什么东西进去了。</p>
+<p>（默认就有baseURL的配置确实是很惊讶，而且文档写的很清楚，如果没有baseURL或者url已经绝对了的话直接走url）</p>
+<h4 id="2-换了个姿势也许会压到头！"><a href="#2-换了个姿势也许会压到头！" class="headerlink" title="2. 换了个姿势也许会压到头！"></a>2. 换了个姿势也许会压到头！</h4><p>并不是说上面趴着会压爆头什么的…只是顺着梗玩下来而已！</p>
+<p>因为上面说了，axios是可以把整个config都传进去然后开展工作的，所以也就意味着headers和method也可以带在config对象里一起进去，那么可能会有个小问题</p>
+<p><strong>当你的<code>content-tyle</code>是<code>application/x-www-form-urlencoded</code>的时候，<code>POST</code>会用不了！</strong>你请求一下会发现方法直接变成<code>OPTION</code>。</p>
+<p>那是为什么反正我也不知道，我只知道怎么处理，原因是axios的post请求不支持<code>x-www-form-urlencoded</code>，确实是挺奇怪的一件事…</p>
+<p>所以使用到post的时候，要不主动把头改成<code>application/json</code>，这是没问题的，如果不想用或者不能用json的话，传进去的data也就是参数必须是<code>string</code>形式的。这个时候官方建议是多加一个库叫<code>qs</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qs <span class="keyword">from</span> <span class="string">'qs'</span></div><div class="line"></div><div class="line">axios.post(<span class="string">'foo'</span>, qs.stringify(config.data))</div></pre></td></tr></table></figure>
+<p>这也是上面说的，为什么有些人在使用<code>POST</code>的时候会遇到“明明跟着官方做却又不对”的情况。</p>
+<p>（稍微吐槽一下！隔壁那个什么微信小程序！他们的<code>get</code>是要求<code>json</code>的，<code>post</code>是要求要<code>form-urlencoded</code>的，逆着来对我等运动员不友好啊！）</p>
+<h4 id="3-实际上错误也不是非得catch"><a href="#3-实际上错误也不是非得catch" class="headerlink" title="3. 实际上错误也不是非得catch"></a>3. 实际上错误也不是非得catch</h4><p>实际上<code>.then()</code>会跟两个参数的：<code>resolve, reject</code>，在axios的话，reject是可以用来输出错误的。而且他们也已经这么定义好了。所以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">axios(config).then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res), err =&gt; <span class="built_in">console</span>.log(err))</div></pre></td></tr></table></figure>
+<p>也是没问题的</p>
+<h4 id="4-请求完得到的response会得到这次请求的所有内容"><a href="#4-请求完得到的response会得到这次请求的所有内容" class="headerlink" title="4. 请求完得到的response会得到这次请求的所有内容"></a>4. 请求完得到的response会得到这次请求的所有内容</h4><p>包括<code>config ,data, headers, status, statusText</code>，请求凭证等在headers里，请求到的数据在data里。而且因为会自动转换为JSON，所以基本上请求到的所有数据都已经变成JSON了，可以直接就使用。</p>
+<h4 id="5-withCredentials"><a href="#5-withCredentials" class="headerlink" title="5. withCredentials"></a>5. withCredentials</h4><p>在<code>axios</code>中这是个默认配置里面一个参数，按照我自己的理解，这是一个“是否保存跨域请求凭证”的一个开关，因为众所周知跨域请求是取不到cookie的，这是一个安全策略。但是浏览器可以获取，浏览器可以使用。<strong>人类看不到也使用不到！</strong></p>
+<p>不过道理还是道理，如果你不打开，跨域的不管toekn还是cookie在浏览器里也是一个子都取不到用不到。</p>
+<p>而且设置了<code>withCredentials</code>之后，axios是会保存所有来自远程域的cookie的，比如某些需要登录过后才能访问的内容，就可以直接调用访问了，只要你不清空。</p>
+<p>结束！</p>
+
+            
+        
+        </div>
+    </article>
+    
+        
+    <nav class="article-page">
+        
+        
+            <a href="/2017/03/13/new-theme-slvi/" id="art-right" class="art-right">
+                <span class="next-title">
+                    “旷班”在家的一天<i class="iconfont icon-right"></i> 
+                </span>
+            </a>
+        
+    </nav>
+
+    
+
+
+        </main>
+        <footer class="footer syuanpi fadeIn" id="footer">
+    <hr>
+    <div class="footer-wrapper">
+        <div class="left">
+            <div class="contact-icon">
+    
+    
+    
+    
+    
+        
+            <a href="https://github.com/ColMugX" class="iconfont icon-github" title="github"></a>
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            <a href="https://www.zhihu.com/people/colmugx" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+    
+</div>
+        </div>
+        <div class="right">
+            <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2016 ~ 2017</span>
+        <span>❤</span>
+        <span>Co1MugX</span>
+    </div>
+    <div class="theme">
+        <span>
+            Powered by
+            <a href="http://hexo.io/" target="_blank">Hexo </a>
+        </span>
+        <span>
+            Theme
+            <a href="https://github.com/ColMugX/hexo-theme-Slvi"> Slvi </a>
+        </span>
+    </div>
+</div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="/script/slvi.js"></script>
+<script>
+    $(document).ready(function(){
+        Slvi.tagcloud();
+        Slvi.back2top();
+
+        if (!CONFIG.animate) {
+            $('.syuanpi').removeClass('syuanpi');
+        }
+    })
+</script>
+    </div>
+    <div class="backtop syuanpi dead" id="backtop">
+    <i class="iconfont icon-up"></i>
+</div>
+</body>
+</html>

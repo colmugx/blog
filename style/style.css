@@ -521,7 +521,7 @@ body {
   color: #e6c07b;
 }
 .highlight .code .params {
-  color: #abb2bf;
+  color: #5799de;
 }
 .posts {
   padding: 0 8px;
@@ -643,6 +643,9 @@ body {
 }
 .post-content i {
   font-weight: 100;
+}
+.post-content img {
+  width: 500px;
 }
 .content-link {
   margin: 8px 0;
