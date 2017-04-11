@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-04-10T10:41:28.000Z</updated>
+  <updated>2017-04-11T13:48:39.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://blog.co1mugx.tk/2017/04/07/axios/"/>
     <id>http://blog.co1mugx.tk/2017/04/07/axios/</id>
     <published>2017-04-07T07:20:16.000Z</published>
-    <updated>2017-04-10T10:41:28.000Z</updated>
+    <updated>2017-04-11T13:48:39.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>我没进传销！真是日了皮皮虾了…</p>
 </blockquote>
 <p>由于Vue2.0之后，<code>vue-resource</code>也停止更新了，改为使用尤老师钦点的<code>axios</code>。<a href="https://github.com/mzabriskie/axios" target="_blank" rel="external">mzabriskie/axios: Promise based HTTP client for the browser and node.js</a></p>
 <p>那反正不管！他说不合适我不用，我就去学个新的。其实接触过微信小程序的话，稍加理解，这就是一个比较厉害点但是又有局限的<code>wx.request()</code></p>
-<h2 id="what-s-Axios"><a href="#what-s-Axios" class="headerlink" title="what s Axios"></a>what s Axios</h2><blockquote>
+<h2 id="what-s-Axios"><a href="#what-s-Axios" class="headerlink" title="what s Axios "></a>what s Axios <a id="more"></a></h2><blockquote>
 <p>Promise based HTTP client for the browser and node.js</p>
 </blockquote>
 <p>就是一个基于ES6的<code>Promise</code>的网络请求库，其实说干净了就是一个打包好的<code>XMLHttpRequests</code>，也就是说不过一个Ajax库。</p>
@@ -89,7 +89,9 @@
       &lt;blockquote&gt;
 &lt;p&gt;我没进传销！真是日了皮皮虾了…&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;由于Vue2.0之后，&lt;code&gt;vue-resource&lt;/code&gt;也停止更新了，改为使用尤老师钦点的&lt;code&gt;axios&lt;/code&gt;。&lt;a href=&quot;https:
+&lt;p&gt;由于Vue2.0之后，&lt;code&gt;vue-resource&lt;/code&gt;也停止更新了，改为使用尤老师钦点的&lt;code&gt;axios&lt;/code&gt;。&lt;a href=&quot;https://github.com/mzabriskie/axios&quot;&gt;mzabriskie/axios: Promise based HTTP client for the browser and node.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;那反正不管！他说不合适我不用，我就去学个新的。其实接触过微信小程序的话，稍加理解，这就是一个比较厉害点但是又有局限的&lt;code&gt;wx.request()&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;what-s-Axios&quot;&gt;&lt;a href=&quot;#what-s-Axios&quot; class=&quot;headerlink&quot; title=&quot;what s Axios &quot;&gt;&lt;/a&gt;what s Axios
     
     </summary>
     
@@ -137,11 +139,11 @@
     </summary>
     
     
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
       <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
     
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Slvi" scheme="http://blog.co1mugx.tk/tags/Slvi/"/>
     
@@ -488,9 +490,9 @@
     </summary>
     
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="Syuanpi" scheme="http://blog.co1mugx.tk/tags/Syuanpi/"/>
     
@@ -571,9 +573,9 @@
     </summary>
     
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
@@ -828,9 +830,9 @@
     </summary>
     
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="Blank" scheme="http://blog.co1mugx.tk/tags/Blank/"/>
     
