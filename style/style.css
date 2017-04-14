@@ -201,6 +201,7 @@ template {
   transition-duration: 0.35s;
   -moz-transition-duration: 0.35s;
   -webkit-transition-duration: 0.35s;
+  outline: none;
 }
 body {
   height: 0;
@@ -319,6 +320,11 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
 .main {
   margin: 24px auto;
 }
@@ -346,6 +352,7 @@ body {
   width: 100%;
   height: 100px;
   background-color: #666;
+  box-shadow: inset 0px -8px 10px 0px #585858;
 }
 .tagcloud-inner {
   display: flex;
@@ -365,6 +372,14 @@ body {
 }
 .tagcloud-inner a:hover {
   text-shadow: 1px 1px 1px #fff;
+}
+@media screen and (max-width: 650px) {
+  .tagcloud .tagcloud-inner {
+    justify-content: center;
+  }
+  .tagcloud .tagcloud-inner a {
+    font-size: 9px !important;
+  }
 }
 .header {
   width: 100%;
@@ -430,6 +445,32 @@ body {
 }
 .header .main-nav .menu .menu-item .menu-item-label {
   font-size: 12px;
+}
+@media screen and (max-width: 800px) {
+  .header .title {
+    padding-right: 0;
+  }
+  .header .main-nav {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header .main-nav .menu {
+    margin: 16px 0;
+    padding: 0;
+  }
+  .header .main-nav .menu .menu-item {
+    margin: 0 8px;
+  }
+  .header .main-nav .menu .menu-item a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header {
+    height: inherit;
+    display: block;
+  }
 }
 .highlight {
   position: relative;
@@ -542,6 +583,7 @@ body {
   position: absolute;
   top: -1px;
   left: -1px;
+  -webkit-animation: fadeIn 0.5s ease-in-out backwards 0.5s;
   animation: fadeIn 0.5s ease-in-out backwards 0.5s;
 }
 .post:after {
@@ -554,6 +596,7 @@ body {
   position: absolute;
   bottom: -1px;
   right: -1px;
+  -webkit-animation: fadeIn 0.5s ease-in-out backwards 0.5s;
   animation: fadeIn 0.5s ease-in-out backwards 0.5s;
 }
 .post .post-header {
@@ -575,6 +618,25 @@ body {
 .post .post-header .post-title a {
   text-decoration: none;
   color: #000;
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-time {
+    font-size: 12px;
+  }
+  .post .post-header .post-title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .post {
+    margin: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post {
+    margin: 8px;
+    padding: 8px;
+  }
 }
 .post-content h1 {
   font-weight: 300;
@@ -620,7 +682,7 @@ body {
 }
 .post-content a {
   color: #666;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .post-content a:hover {
   color: #000;
@@ -646,6 +708,11 @@ body {
 }
 .post-content img {
   width: 500px;
+}
+@media screen and (max-width: 650px) {
+  .post-content {
+    font-size: 14px;
+  }
 }
 .content-link {
   margin: 8px 0;
@@ -799,6 +866,11 @@ blockquote p {
   -moz-transform: translateX(-10%);
   -webkit-transform: translateX(-10%);
 }
+@media screen and (max-width: 650px) {
+  .pagination .extend {
+    font-size: 14px;
+  }
+}
 .article-page {
   width: 80%;
   margin: 24px auto;
@@ -808,6 +880,11 @@ blockquote p {
   text-decoration: none;
   color: #666;
   font-size: 16px;
+}
+@media screen and (max-width: 650px) {
+  .article-page a {
+    font-size: 12px;
+  }
 }
 .article-page a:hover {
   color: #000;
@@ -927,8 +1004,11 @@ blockquote p {
   right: 32px;
 }
 .backtop:hover {
+  -webkit-animation-name: float-in;
   animation-name: float-in;
+  -webkit-animation-duration: 2.33s;
   animation-duration: 2.33s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 .backtop i {
