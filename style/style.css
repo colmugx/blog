@@ -197,7 +197,7 @@ template {
   display: none;
 }
 * {
-  font-family: 'Optima', 'PingFang SC', 'Helvetica Neue', 'Helvetica', "微软雅黑", "YaHei-Consolas-Hybrid", sans-serif;
+  font-family: 'Optima', 'PingFang SC', 'Roboto', 'Noto SansCJK', 'Helvetica Neue', 'Helvetica', "微软雅黑", "YaHei-Consolas-Hybrid", sans-serif;
   transition-duration: 0.35s;
   -moz-transition-duration: 0.35s;
   -webkit-transition-duration: 0.35s;
@@ -206,7 +206,9 @@ template {
 body {
   height: 0;
   -webkit-font-smoothing: antialiased;
-  border-top: 3px solid #666;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 .highlight.html:after {
   content: "HTML";
@@ -258,6 +260,118 @@ body {
 }
 .highlight.cpp:after {
   content: "C++";
+}
+@-moz-keyframes indeterminate {
+  from {
+    left: -90%;
+    right: 100%;
+  }
+  60% {
+    left: -90%;
+    right: 100%;
+  }
+  to {
+    left: 100%;
+    right: -35%;
+  }
+}
+@-webkit-keyframes indeterminate {
+  from {
+    left: -90%;
+    right: 100%;
+  }
+  60% {
+    left: -90%;
+    right: 100%;
+  }
+  to {
+    left: 100%;
+    right: -35%;
+  }
+}
+@-o-keyframes indeterminate {
+  from {
+    left: -90%;
+    right: 100%;
+  }
+  60% {
+    left: -90%;
+    right: 100%;
+  }
+  to {
+    left: 100%;
+    right: -35%;
+  }
+}
+@keyframes indeterminate {
+  from {
+    left: -90%;
+    right: 100%;
+  }
+  60% {
+    left: -90%;
+    right: 100%;
+  }
+  to {
+    left: 100%;
+    right: -35%;
+  }
+}
+@-moz-keyframes indeterminate-short {
+  from {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  to {
+    left: 107%;
+    right: -8%;
+  }
+}
+@-webkit-keyframes indeterminate-short {
+  from {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  to {
+    left: 107%;
+    right: -8%;
+  }
+}
+@-o-keyframes indeterminate-short {
+  from {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  to {
+    left: 107%;
+    right: -8%;
+  }
+}
+@keyframes indeterminate-short {
+  from {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  to {
+    left: 107%;
+    right: -8%;
+  }
 }
 @font-face {
   font-family: "LedFont";
@@ -333,6 +447,8 @@ body {
   -ms-transform: translateY(-100px);
   -moz-transform: translateY(-100px);
   -webkit-transform: translateY(-100px);
+  border-top: 3px solid #666;
+  display: none;
 }
 .show {
   display: 1;
@@ -385,6 +501,7 @@ body {
   width: 100%;
   height: 110px;
   display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
 }
@@ -409,7 +526,7 @@ body {
   text-decoration: none;
 }
 .header .title {
-  flex: 1;
+  flex: 2;
   height: 100%;
   text-align: center;
   padding-right: 24px;
@@ -419,7 +536,7 @@ body {
   margin-top: 5px;
 }
 .header .main-nav {
-  flex: 2;
+  flex: 3;
   text-align: center;
   padding-left: 24px;
 }
@@ -452,6 +569,9 @@ body {
   }
   .header .main-nav {
     padding-left: 0;
+  }
+  .header .menu {
+    padding: 0;
   }
 }
 @media screen and (max-width: 650px) {
@@ -701,7 +821,7 @@ body {
 }
 .post-content strong {
   font-weight: bold;
-  font-family: 'Hiragino Sans GB', "微软雅黑", sans-serif;
+  font-family: 'Hiragino Sans GB', 'Noto SansCJK', "微软雅黑", sans-serif;
 }
 .post-content i {
   font-weight: 100;
@@ -770,7 +890,7 @@ blockquote:before {
 }
 blockquote p {
   margin: 0;
-  font-family: 'Hiragino Sans GB', "微软雅黑", sans-serif;
+  font-family: 'Hiragino Sans GB', 'Noto SansCJK', "微软雅黑", sans-serif;
 }
 .archive {
   margin: 0 48px;
@@ -1014,4 +1134,33 @@ blockquote p {
 .backtop i {
   font-size: 24px;
   font-weight: 100;
+}
+.progress .progress-inner {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: 3px;
+  width: 100%;
+}
+.progress .progress-inner:before {
+  content: '';
+  height: inherit;
+  position: absolute;
+  width: auto;
+  will-change: left right;
+  background: #666;
+  -webkit-animation: indeterminate 2.2s ease-out infinite;
+  animation: indeterminate 2.2s ease-out infinite;
+}
+.progress .progress-inner:after {
+  content: '';
+  height: inherit;
+  position: absolute;
+  width: auto;
+  will-change: left right;
+  background: #666;
+  -webkit-animation: indeterminate-short 2.2s ease-out infinite;
+  animation: indeterminate-short 2.2s ease-out infinite;
 }

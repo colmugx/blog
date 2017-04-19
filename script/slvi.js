@@ -13,6 +13,18 @@
             })
         },
 
+        offAnimate() {
+            $('.syuanpi').removeClass('syuanpi');
+        },
+        
+        onPicBox () {
+            $('.post-content').each(function() {
+                $(this).find('img').each(function() {
+                    $(this).replaceWith("<a href='" + this.src + "' data-title='" + this.alt + "' data-lightbox='group'><img src='" + this.src + "' alt='" + this.alt + "'></a>")
+                })
+            })
+        },
+
         back2top() {
             $(window).each(function() {
                 $(this).scroll(function() {
@@ -37,6 +49,6 @@
             });
         }
     }
-    
+
     this.Slvi = Slvi
 }.call(this))

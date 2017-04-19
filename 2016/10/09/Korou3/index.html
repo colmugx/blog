@@ -9,6 +9,14 @@
 
 <link rel="stylesheet" href="/style/style.css">
 <script src="/script/jquery.min.js"></script>
+<script>
+    var CONFIG = {
+        title: "Co1MugX",
+        author: "Co1MugX",
+        lightbox: true,
+        animate: true
+    }
+</script>
 
 
 
@@ -28,25 +36,19 @@
 
 
 
-<script>
-    var CONFIG = {
-        title: Co1MugX,
-        author: Co1MugX,
-        lightbox: true,
-        animate: true
-    }
-</script>
 
 </head>
 <body>
+    <div class="progress">
+    <div class="progress-inner"></div>
+</div>
     <div class="body">
     <div class="tagcloud" id="tagcloud">
     <div class="tagcloud-inner">
         <a href="/tags/Blank/" style="font-size: 14px;">Blank</a> <a href="/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/tags/Slvi/" style="font-size: 14px;">Slvi</a> <a href="/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/tags/vue/" style="font-size: 14px;">vue</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/吹水/" style="font-size: 14px;">吹水</a> <a href="/tags/实验室/" style="font-size: 14px;">实验室</a> <a href="/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/tags/看片子/" style="font-size: 14px;">看片子</a> <a href="/tags/编程猫/" style="font-size: 14px;">编程猫</a>
     </div>
 </div>
-    <div class="container">
-        <header class="header" id="header">
+    <header class="header" id="header">
     <div class="title syuanpi tvIn">
     <div class="table">
         <div class="connect">
@@ -114,6 +116,7 @@
 </nav>
 <div class="mobile-nav"></div>
 </header>
+    <div class="container">
         <main class="main" id="main">
             
     
@@ -178,11 +181,6 @@
 
         <div class="post-comments">
             
-<!-- UY BEGIN -->
-<div id="uyan_frame" style="display:none"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2116358"></script>
-<!-- UY END -->
-
             
         </div>
     
@@ -239,15 +237,21 @@
 </footer>
     </div>
     <script src="/script/slvi.js"></script>
-<script>
-    $(document).ready(function(){
-        Slvi.tagcloud();
-        Slvi.back2top();
 
-        if (!CONFIG.animate) {
-            $('.syuanpi').removeClass('syuanpi');
-        }
-    })
+    <script src="/lightbox/js/lightbox.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    document.body.addEventListener('touchstart', function () {});
+    $('.progress').hide();
+    $('.body').show();
+    Slvi.tagcloud();
+    Slvi.back2top();
+
+    !CONFIG.animate && Slvi.offAnimate();
+
+    CONFIG.lightbox && Slvi.onPicBox();
+})
 </script>
     </div>
     <div class="backtop syuanpi dead" id="backtop">

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-04-14T10:30:48.000Z</updated>
+  <updated>2017-04-19T04:25:21.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.co1mugx.tk/2017/04/14/easyknow-vuex/"/>
     <id>http://blog.co1mugx.tk/2017/04/14/easyknow-vuex/</id>
     <published>2017-04-14T02:58:13.000Z</published>
-    <updated>2017-04-14T10:30:48.000Z</updated>
+    <updated>2017-04-19T04:25:21.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>项目用到了vuex，一开始的我完全是拒绝的…（一头撞死</p>
@@ -254,11 +254,11 @@
     </summary>
     
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
     
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Slvi" scheme="http://blog.co1mugx.tk/tags/Slvi/"/>
     
@@ -605,9 +605,9 @@
     </summary>
     
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Syuanpi" scheme="http://blog.co1mugx.tk/tags/Syuanpi/"/>
     
@@ -688,9 +688,9 @@
     </summary>
     
     
-      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
@@ -917,19 +917,19 @@
     <link href="http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/"/>
     <id>http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</id>
     <published>2016-11-02T01:33:51.000Z</published>
-    <updated>2017-03-13T10:25:50.000Z</updated>
+    <updated>2017-04-19T03:43:35.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>厉害咯我的Blank</p>
 </blockquote>
 <p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
-<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><a href="/Image/Blank-violet.jpg" title="Blank-紫罗兰"><img src="/Image/Blank-violet.jpg" alt="blank"></a> <a id="more"></a></p>
-<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><a href="/Image/Blank-gray.jpg" title="Blank-深空灰"><img src="/Image/Blank-gray.jpg" alt="blank"></a></p>
-<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><a href="/Image/Blank-pink.jpg" title="Blank-樱语粉"><img src="/Image/Blank-pink.jpg" alt="blank"></a></p>
-<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><a href="/Image/Blank-green.jpg" title="Blank-璐璐绿"><img src="/Image/Blank-green.jpg" alt="blank"></a></p>
-<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><a href="/Image/Blank-blue.jpg" title="Blank-编不下去的蓝色"><img src="/Image/Blank-blue.jpg" alt="blank"></a></p>
-<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><a href="/Image/Blank-red.jpg" title="Blank-红红火火"><img src="/Image/Blank-red.jpg" alt="blank"></a></p>
-<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><a href="/Image/Blank-orange.jpg" title="Blank-橙子一样的颜色"><img src="/Image/Blank-orange.jpg" alt="blank"></a><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
+<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p>
+<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><img src="/Image/Blank-gray.jpg" alt="Blank-深空灰"></p>
+<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><img src="/Image/Blank-pink.jpg" alt="Blank-樱语粉"></p>
+<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><img src="/Image/Blank-green.jpg" alt="Blank-璐璐绿"></p>
+<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><img src="/Image/Blank-blue.jpg" alt="Blank-编不下去的蓝色"></p>
+<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><img src="/Image/Blank-red.jpg" alt="Blank-红红火火"></p>
+<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><img src="/Image/Blank-orange.jpg" alt="Blank-橙子一样的颜色"><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
 <h3 id="这个主题从写法上，比Rousy改善很多"><a href="#这个主题从写法上，比Rousy改善很多" class="headerlink" title="这个主题从写法上，比Rousy改善很多"></a>这个主题从写法上，比Rousy改善很多</h3><p>怎么来说，Rousy的话，是根据css然后全搬入stylus的，管理性能略差<br>但是Blank的话，我好像不知不觉用了stylus的用法，所以看起来应该…还是不简洁…<br>当然Blank只是半成品，至今只出生后第3天。（都是中午和大半夜，白天有课上）</p>
 <h3 id="新主题有没有什么新东西"><a href="#新主题有没有什么新东西" class="headerlink" title="新主题有没有什么新东西"></a>新主题有没有什么新东西</h3><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>
 <h4 id="好了新主题就挂三天吧，三天之后切回Rousy。"><a href="#好了新主题就挂三天吧，三天之后切回Rousy。" class="headerlink" title="好了新主题就挂三天吧，三天之后切回Rousy。"></a>好了新主题就挂三天吧，三天之后切回Rousy。</h4>]]></content>
@@ -940,14 +940,14 @@
 &lt;p&gt;厉害咯我的Blank&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;我先说好啊！Blank不是SKT T1的打野！&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;/blank.html&quot;&gt;主题演示页面点击这里&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;科技以换色为本！&quot;&gt;&lt;a href=&quot;#科技以换色为本！&quot; class=&quot;headerlink&quot; title=&quot;科技以换色为本！&quot;&gt;&lt;/a&gt;科技以换色为本！&lt;/h3&gt;&lt;h4 id=&quot;紫色&quot;&gt;&lt;a href=&quot;#紫色&quot; class=&quot;headerlink&quot; title=&quot;紫色&quot;&gt;&lt;/a&gt;紫色&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;/Image/Blank-violet.jpg&quot; title=&quot;Blank-紫罗兰&quot;&gt;&lt;img src=&quot;/Image/Blank-violet.jpg&quot; alt=&quot;blank&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;科技以换色为本！&quot;&gt;&lt;a href=&quot;#科技以换色为本！&quot; class=&quot;headerlink&quot; title=&quot;科技以换色为本！&quot;&gt;&lt;/a&gt;科技以换色为本！&lt;/h3&gt;&lt;h4 id=&quot;紫色&quot;&gt;&lt;a href=&quot;#紫色&quot; class=&quot;headerlink&quot; title=&quot;紫色&quot;&gt;&lt;/a&gt;紫色&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/Image/Blank-violet.jpg&quot; alt=&quot;Blank-紫罗兰&quot;&gt;
     
     </summary>
     
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Blank" scheme="http://blog.co1mugx.tk/tags/Blank/"/>
     
