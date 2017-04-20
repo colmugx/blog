@@ -430,31 +430,8 @@ a {
 .icon-github:before {
   content: "\e6ed";
 }
-.container {
-  width: 800px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 800px) {
-  .container {
-    width: 100%;
-  }
-}
-.main {
-  margin: 24px auto;
-}
-.body {
-  transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
-  -moz-transform: translateY(-100px);
-  -webkit-transform: translateY(-100px);
-  border-top: 3px solid #666;
-  display: none;
-}
-.show {
-  display: 1;
-}
-.hide {
-  opacity: 0;
+.icon-more:before {
+  content: "\e652";
 }
 .show-tag {
   transform: translateY(0px);
@@ -496,6 +473,166 @@ a {
   .tagcloud .tagcloud-inner a {
     font-size: 9px !important;
   }
+}
+.backtop {
+  display: block;
+  z-index: 10;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+}
+.backtop:hover {
+  -webkit-animation-name: float-in;
+  animation-name: float-in;
+  -webkit-animation-duration: 2.33s;
+  animation-duration: 2.33s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.backtop i {
+  font-size: 24px;
+  font-weight: 100;
+}
+.progress .progress-inner {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: 3px;
+  width: 100%;
+}
+.progress .progress-inner:before {
+  content: '';
+  height: inherit;
+  position: absolute;
+  width: auto;
+  will-change: left right;
+  background: #666;
+  -webkit-animation: indeterminate 2.2s ease-out infinite;
+  animation: indeterminate 2.2s ease-out infinite;
+}
+.progress .progress-inner:after {
+  content: '';
+  height: inherit;
+  position: absolute;
+  width: auto;
+  will-change: left right;
+  background: #666;
+  -webkit-animation: indeterminate-short 2.2s ease-out infinite;
+  animation: indeterminate-short 2.2s ease-out infinite;
+}
+.highlight {
+  position: relative;
+  background-color: #f7f7f7;
+  width: 100%;
+  margin: 8px 0;
+  overflow-x: auto;
+}
+.highlight:after {
+  content: 'plain';
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  color: #ddd;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+}
+.highlight table {
+  position: relative;
+}
+.highlight pre {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.highlight .gutter {
+  width: 10px;
+  color: #bbb;
+}
+.highlight .gutter pre {
+  padding: 0 8px;
+}
+.highlight .code {
+  color: #2c2c2c;
+}
+.highlight .code pre {
+  padding: 0 8px;
+}
+.highlight .line {
+  height: 1.5em;
+}
+.highlight tr,
+.highlight td {
+  margin: 0;
+}
+.highlight .code .comment,
+.highlight .code .quote {
+  color: #a1a4aa;
+}
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .addition {
+  color: #c678dd;
+}
+.highlight .code .number,
+.highlight .code .string,
+.highlight .code .meta .meta-string,
+.highlight .code .literal,
+.highlight .code .doctag,
+.highlight .code .regexp {
+  color: #d19a66;
+}
+.highlight .code .title,
+.highlight .code .section,
+.highlight .code .name,
+.highlight .code .selector-id,
+.highlight .code .selector-class {
+  color: #e06c75;
+}
+.highlight .code .attribute,
+.highlight .code .attr,
+.highlight .code .variable,
+.highlight .code .template-variable,
+.highlight .code .class .title,
+.highlight .code .type {
+  color: #61aeee;
+}
+.highlight .code .symbol,
+.highlight .code .bullet,
+.highlight .code .subst,
+.highlight .code .meta,
+.highlight .code .meta .keyword,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo,
+.highlight .code .link {
+  color: #cb4b16;
+}
+.highlight .code .built_in,
+.highlight .code .deletion {
+  color: #e6c07b;
+}
+.highlight .code .params {
+  color: #5799de;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
+.main {
+  margin: 24px auto;
+}
+.body {
+  transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+  border-top: 3px solid #666;
+  display: none;
 }
 .header {
   width: 100%;
@@ -592,104 +729,12 @@ a {
     display: block;
   }
 }
-.highlight {
-  position: relative;
-  background-color: #f7f7f7;
-  width: 100%;
-  margin: 8px 0;
-  overflow-x: auto;
-}
-.highlight:after {
-  content: 'plain';
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 100;
-  color: #ddd;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 8px;
-}
-.highlight table {
-  position: relative;
-}
-.highlight pre {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.highlight .gutter {
-  width: 10px;
-  color: #2c2c2c;
-}
-.highlight .gutter pre {
-  padding: 0 8px;
-}
-.highlight .code {
-  color: #2c2c2c;
-}
-.highlight .code pre {
-  padding: 0 8px;
-}
-.highlight .line {
-  height: 1.5em;
-}
-.highlight tr,
-.highlight td {
-  margin: 0;
-}
-.highlight .code .comment,
-.highlight .code .quote {
-  color: #a1a4aa;
-}
-.highlight .code .keyword,
-.highlight .code .selector-tag,
-.highlight .code .addition {
-  color: #c678dd;
-}
-.highlight .code .number,
-.highlight .code .string,
-.highlight .code .meta .meta-string,
-.highlight .code .literal,
-.highlight .code .doctag,
-.highlight .code .regexp {
-  color: #d19a66;
-}
-.highlight .code .title,
-.highlight .code .section,
-.highlight .code .name,
-.highlight .code .selector-id,
-.highlight .code .selector-class {
-  color: #e06c75;
-}
-.highlight .code .attribute,
-.highlight .code .attr,
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .class .title,
-.highlight .code .type {
-  color: #61aeee;
-}
-.highlight .code .symbol,
-.highlight .code .bullet,
-.highlight .code .subst,
-.highlight .code .meta,
-.highlight .code .meta .keyword,
-.highlight .code .selector-attr,
-.highlight .code .selector-pseudo,
-.highlight .code .link {
-  color: #cb4b16;
-}
-.highlight .code .built_in,
-.highlight .code .deletion {
-  color: #e6c07b;
-}
-.highlight .code .params {
-  color: #5799de;
-}
 .posts {
   padding: 0 8px;
 }
 .post {
   position: relative;
-  background-color: #fdfdfd;
+  background-color: #fefefe;
   padding: 16px;
   margin-bottom: 16px;
 }
@@ -698,7 +743,7 @@ a {
   content: '';
   width: 50px;
   height: 50px;
-  background-color: #444;
+  background-color: #777;
   box-shadow: -1px -1px 1px #bbb;
   position: absolute;
   top: -1px;
@@ -711,7 +756,7 @@ a {
   content: '';
   width: 50px;
   height: 50px;
-  background-color: #444;
+  background-color: #777;
   box-shadow: 1px 1px 1px #bbb;
   position: absolute;
   bottom: -1px;
@@ -1116,51 +1161,28 @@ blockquote p {
 .about p {
   line-height: 1.5em;
 }
-.backtop {
-  display: block;
-  z-index: 10;
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
+.copy-line {
+  border: none;
+  border-bottom: 2px dashed #ddd;
+  height: 16px;
 }
-.backtop:hover {
-  -webkit-animation-name: float-in;
-  animation-name: float-in;
-  -webkit-animation-duration: 2.33s;
-  animation-duration: 2.33s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+.post-copyright .copy-author,
+.post-copyright .copy-url,
+.post-copyright .copy-origin,
+.post-copyright .copy-license {
+  margin: 8px 8px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
-.backtop i {
-  font-size: 24px;
-  font-weight: 100;
+.post-copyright .copy-author a,
+.post-copyright .copy-url a,
+.post-copyright .copy-origin a,
+.post-copyright .copy-license a {
+  color: #666;
 }
-.progress .progress-inner {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  height: 3px;
-  width: 100%;
-}
-.progress .progress-inner:before {
-  content: '';
-  height: inherit;
-  position: absolute;
-  width: auto;
-  will-change: left right;
-  background: #666;
-  -webkit-animation: indeterminate 2.2s ease-out infinite;
-  animation: indeterminate 2.2s ease-out infinite;
-}
-.progress .progress-inner:after {
-  content: '';
-  height: inherit;
-  position: absolute;
-  width: auto;
-  will-change: left right;
-  background: #666;
-  -webkit-animation: indeterminate-short 2.2s ease-out infinite;
-  animation: indeterminate-short 2.2s ease-out infinite;
+.post-copyright .copy-author a:hover,
+.post-copyright .copy-url a:hover,
+.post-copyright .copy-origin a:hover,
+.post-copyright .copy-license a:hover {
+  color: #000;
 }

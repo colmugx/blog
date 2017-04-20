@@ -1,5 +1,5 @@
 (function() {
-    "use strict";
+    "use strict"
     var Slvi = {
         tagcloud() {
             $('#tags').click(function() {
@@ -14,9 +14,9 @@
         },
 
         offAnimate() {
-            $('.syuanpi').removeClass('syuanpi');
+            $('.syuanpi').removeClass('syuanpi')
         },
-        
+
         onPicBox () {
             $('.post-content').each(function() {
                 $(this).find('img').each(function() {
@@ -37,16 +37,22 @@
             });
 
             $('#backtop').click(function() {
-                $('body').animate({ scrollTop: 0 });
+                $('body').animate({ scrollTop: 0 })
             })
         },
 
-        showPost() {
-            $('.post').each(function() {
-                if($(this).offset().top <= $(window).scrollTop()+($(window).height()/1.5) && ($(this).hasClass('hide'))) {
-                    $(this).addClass('show').removeClass('hide')
+        showComments() {
+            $('#com-switch').click(function() {
+                if ($('#post-comments').css('display') == 'none') {
+                    $('#post-comments').css('display', 'block').addClass('syuanpi fallIn-light')
+                    $(this).removeClass('syuanpi').css('transform', 'rotate(180deg)')
+                } else {
+                    $(this).addClass('syuanpi').css('transform', '')
+                    $('#post-comments').removeClass('fallIn-light').addClass('riseOut-light').one('webkitAnimationEnd AnimationEnd', function() {
+                        $(this).removeClass('syuanpi riseOut-light').css('display', 'none')
+                    })
                 }
-            });
+            })
         }
     }
 

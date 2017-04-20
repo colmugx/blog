@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-Hans">
 <head>
     <title>
         Co1MugX
@@ -74,7 +74,7 @@
         
             <li class="menu-item">
                 <a href="/">
-                    <span>ジャーナル</span>
+                    <span>文章</span>
                     
                         <span class="menu-item-label">article</span>
                     
@@ -85,7 +85,7 @@
         
             <li class="menu-item">
                 <a href="/archives">
-                    <span>アーカイブ</span>
+                    <span>归档</span>
                     
                         <span class="menu-item-label">archives</span>
                     
@@ -96,7 +96,7 @@
         
             <li class="menu-item">
                 <a href="javascript:;" id="tags">
-                    <span>ラベル</span>
+                    <span>标签</span>
                     
                         <span class="menu-item-label">tags</span>
                     
@@ -107,7 +107,7 @@
         
             <li class="menu-item">
                 <a href="/about">
-                    <span>関連する</span>
+                    <span>关于</span>
                     
                         <span class="menu-item-label">about</span>
                     
@@ -126,8 +126,8 @@
             
         
             <div class="about syuanpi riseIn-light">
-                <h2 class="title"> 関連する </h2>
-                <div class="content"> <p>我叫Co1MugX。</p><p>一个不成熟的前端工程师。</p> </div>
+                <h2 class="title"> 关于 </h2>
+                <div class="content"> 假如你要做<br>你就要做到最好<br>不要半途而废<br>不要三分钟热度<br><br>我叫ColMugX。<br>一个不成熟的前端。 </div>
             </div>
         
     
@@ -168,11 +168,11 @@
     </div>
     <div class="theme">
         <span>
-            Powered by
+            动力来源于
             <a href="http://hexo.io/" target="_blank">Hexo </a>
         </span>
         <span>
-            Theme
+            主题
             <a href="https://github.com/ColMugX/hexo-theme-Slvi"> Slvi </a>
         </span>
     </div>
@@ -192,9 +192,9 @@ $(document).ready(function(){
     $('.body').show();
     Slvi.tagcloud();
     Slvi.back2top();
+    Slvi.showComments();
 
     !CONFIG.animate && Slvi.offAnimate();
-
     CONFIG.lightbox && Slvi.onPicBox();
 })
 </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-Hans">
 <head>
     <title> 前端水深JS玄学 —— 尝试后端框架Hapi · Co1MugX </title>
     <meta charset="UTF-8"/>
@@ -69,7 +69,7 @@
         
             <li class="menu-item">
                 <a href="/">
-                    <span>ジャーナル</span>
+                    <span>文章</span>
                     
                         <span class="menu-item-label">article</span>
                     
@@ -80,7 +80,7 @@
         
             <li class="menu-item">
                 <a href="/archives">
-                    <span>アーカイブ</span>
+                    <span>归档</span>
                     
                         <span class="menu-item-label">archives</span>
                     
@@ -91,7 +91,7 @@
         
             <li class="menu-item">
                 <a href="javascript:;" id="tags">
-                    <span>ラベル</span>
+                    <span>标签</span>
                     
                         <span class="menu-item-label">tags</span>
                     
@@ -102,7 +102,7 @@
         
             <li class="menu-item">
                 <a href="/about">
-                    <span>関連する</span>
+                    <span>关于</span>
                     
                         <span class="menu-item-label">about</span>
                     
@@ -123,7 +123,7 @@
     <article class="post">
         <header class="post-header">
             <div class="post-time syuanpi riseIn-light back-1">
-                <span>2016年12月9日</span>
+                <span>Dec 9, 2016</span>
             </div>
             <h1 class="post-title syuanpi riseIn-light back-2">
             
@@ -158,6 +158,29 @@
             
         
         </div>
+        
+            
+    <hr class="copy-line">
+    <div class="post-copyright">
+        <div class="copy-author">
+            <span>作者 :</span>
+            <span>Co1MugX</span>
+        </div>
+        <div class="copy-url">
+            <span>地址 :</span>
+            <a href="http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/">http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/</a>
+        </div>
+        <div class="copy-origin">
+            <span>来源 :</span>
+            <a href="http://blog.co1mugx.tk">http://blog.co1mugx.tk</a>
+        </div>
+        <div class="copy-license">
+            
+            著作权归作者所有，转载请联系作者获得授权。
+        </div>
+    </div>
+
+        
     </article>
     
         
@@ -178,13 +201,18 @@
         
     </nav>
 
-    
-    
+        
+    <i id="com-switch" class="iconfont icon-more syuanpi jumping-in long infinite" style="font-size:24px;display:block;text-align:center;"></i>
+    <div class="post-comments" id="post-comments" style="display: none;margin: auto 16px;">
+        
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2116358"></script>
+<!-- UY END -->
 
-        <div class="post-comments">
-            
-            
-        </div>
+        
+    </div>
+
     
 
 
@@ -225,11 +253,11 @@
     </div>
     <div class="theme">
         <span>
-            Powered by
+            动力来源于
             <a href="http://hexo.io/" target="_blank">Hexo </a>
         </span>
         <span>
-            Theme
+            主题
             <a href="https://github.com/ColMugX/hexo-theme-Slvi"> Slvi </a>
         </span>
     </div>
@@ -249,9 +277,9 @@ $(document).ready(function(){
     $('.body').show();
     Slvi.tagcloud();
     Slvi.back2top();
+    Slvi.showComments();
 
     !CONFIG.animate && Slvi.offAnimate();
-
     CONFIG.lightbox && Slvi.onPicBox();
 })
 </script>
