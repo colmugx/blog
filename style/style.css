@@ -203,6 +203,22 @@ template {
   -webkit-transition-duration: 0.35s;
   outline: none;
 }
+::selection {
+  background: #ddd;
+}
+::-webkit-selection {
+  background: #ddd;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 2px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 8px;
+}
 body {
   height: 0;
   -webkit-font-smoothing: antialiased;
@@ -215,6 +231,9 @@ a {
 }
 .highlight.js:after {
   content: "JavaScript";
+}
+.highlight.ts:after {
+  content: "TypeScript";
 }
 .highlight.bash:after {
   content: "BASH";
@@ -260,6 +279,9 @@ a {
 }
 .highlight.cpp:after {
   content: "C++";
+}
+.highlight.cs:after {
+  content: "C#";
 }
 @-moz-keyframes indeterminate {
   from {
