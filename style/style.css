@@ -203,21 +203,23 @@ template {
   -webkit-transition-duration: 0.35s;
   outline: none;
 }
-::selection {
-  background: #ddd;
-}
-::-webkit-selection {
-  background: #ddd;
-}
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 2px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
+  width: 6px;
+  height: 1px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #f0f0f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #666;
-  border-radius: 8px;
+  background-color: #666;
+}
+::selection {
+  background-color: #ddd;
+}
+::-webkit-selection {
+  background-color: #ddd;
 }
 body {
   height: 0;
@@ -707,10 +709,11 @@ a {
 }
 .post-content strong {
   font-weight: bold;
-  font-family: 'Hiragino Sans GB', 'Noto SansCJK', "微软雅黑", sans-serif;
+  font-family: 'Hiragino Sans GB', 'Roboto', 'Noto SansCJK', "微软雅黑", sans-serif;
 }
 .post-content i {
   font-weight: 100;
+  font-family: 'Hiragino Sans GB', 'Roboto', 'Noto SansCJK', "微软雅黑", sans-serif;
 }
 .post-content img {
   width: 500px;
@@ -776,7 +779,7 @@ blockquote:before {
 }
 blockquote p {
   margin: 0;
-  font-family: 'Hiragino Sans GB', 'Noto SansCJK', "微软雅黑", sans-serif;
+  font-family: 'Hiragino Sans GB', 'Roboto', 'Noto SansCJK', "微软雅黑", sans-serif;
 }
 .archive {
   margin: 0 48px;

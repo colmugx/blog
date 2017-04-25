@@ -148,7 +148,8 @@
 <p>花了几天时间都在探究ES6，为了实现对象遍历，一个头两个大。</p>
 </blockquote>
 <p>最新超想玩《尼尔：机械纪元》，被那种机械元素迷得死死的，故把最近正在写的博客主题融入机械风。另外我打算这次主题换个姿势来写，想用各种新鲜没尝试过的结构。于是……</p>
-<h3 id="作死起源"><a href="#作死起源" class="headerlink" title="作死起源"></a>作死起源<a id="more"></a></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app.js</span></div><div class="line">App(&#123;</div><div class="line">  <span class="attr">onLaunch</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">onShow</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">onHide</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">globalData</span>: globalData</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="作死起源"><a href="#作死起源" class="headerlink" title="作死起源"></a>作死起源</h3><a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app.js</span></div><div class="line">App(&#123;</div><div class="line">  <span class="attr">onLaunch</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">onShow</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">onHide</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">globalData</span>: globalData</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>万恶之源就是微信小程序，通过执行App()传入一套<code>params</code>，然后能执行下面那些方法。这我就心底长毛了啊，我也想实现类似这样的执行方法。所以就搞。现在尝试了不知道多少种方法，成功率0%</p>
 <h3 id="谈一下ES6对象扩展-–-遍历对象"><a href="#谈一下ES6对象扩展-–-遍历对象" class="headerlink" title="谈一下ES6对象扩展 – 遍历对象"></a>谈一下ES6对象扩展 – 遍历对象</h3><p>先讲目的，我想这样然后<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">test(&#123;</div><div class="line">    first() &#123;</div><div class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'first 666'</span>)</div><div class="line">    &#125;,</div><div class="line">    second() &#123;</div><div class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'second 666'</span>)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -169,10 +170,6 @@
         </div>
         
             
-    <div class="post-reward">
-        <span class="reward-btn">赞赏</span>
-    </div>
-
             
     <hr class="copy-line">
     <div class="post-copyright">
@@ -225,6 +222,10 @@
 <!-- UY END -->
 
         
+        
+        <!-- Disqus Comments -->
+
+
     </div>
 
     
@@ -272,7 +273,7 @@
         </span>
         <span>
             主题
-            <a href="https://github.com/ColMugX/hexo-theme-Slvi"> Slvi </a>
+            <a href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
         </span>
     </div>
 </div>
