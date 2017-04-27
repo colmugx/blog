@@ -457,6 +457,12 @@ a {
 .icon-more:before {
   content: "\e652";
 }
+.icon-visit:before {
+  content: "\e637";
+}
+.icon-people:before {
+  content: "\e651";
+}
 .container {
   width: 800px;
   margin: 0 auto;
@@ -937,6 +943,7 @@ blockquote p {
 .footer .footer-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .footer .left {
   flex: 1;
@@ -990,6 +997,14 @@ blockquote p {
   color: #000;
   text-decoration: underline;
 }
+.footer .visit_count {
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+.footer .visit_count span {
+  margin: 4px 4px;
+}
 .about {
   padding: 16px 56px;
   font-family: Athelas, "PingFang SC", serif;
@@ -1031,6 +1046,9 @@ blockquote p {
 .post-copyright .copy-license a:hover {
   color: #000;
 }
+.post-reward {
+  width: 100%;
+}
 .post-reward .reward-btn {
   display: block;
   margin: 8px auto;
@@ -1044,6 +1062,19 @@ blockquote p {
   color: #fff;
   background-color: #666;
   cursor: pointer;
+}
+.post-reward .reward-wrapper {
+  margin: 24px 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.post-reward .reward-wrapper .reward-item {
+  margin: 0 2%;
+}
+.post-reward .reward-wrapper img {
+  width: 150px;
+  height: 150px;
 }
 .highlight {
   position: relative;
