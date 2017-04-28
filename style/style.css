@@ -973,6 +973,15 @@ blockquote p {
 .footer .left .icon-zhihu:hover {
   color: #0767c8;
 }
+.footer .left .icon-linkedin:hover {
+  color: #5290bc;
+}
+.footer .left .icon-facebook:hover {
+  color: #4e69a2;
+}
+.footer .left .icon-ins:hover {
+  color: #d10869;
+}
 .footer .right {
   flex: 2;
   display: block;
@@ -1001,6 +1010,9 @@ blockquote p {
   color: #666;
   display: flex;
   align-items: center;
+}
+.footer .visit_count .iconfont {
+  font-size: 14px;
 }
 .footer .visit_count span {
   margin: 4px 4px;
