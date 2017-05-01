@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-04-19T04:25:21.000Z</updated>
+  <updated>2017-05-01T09:28:50.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -16,11 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>扣肉小记（六）</title>
+    <link href="http://blog.co1mugx.tk/2017/04/29/Korou6/"/>
+    <id>http://blog.co1mugx.tk/2017/04/29/Korou6/</id>
+    <published>2017-04-29T06:48:55.000Z</published>
+    <updated>2017-05-01T09:28:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>果然时间能催人成熟。第一次有工作，有正式上班。感觉身边的东西都在改变。</p>
+</blockquote>
+<p>每篇扣肉小记都会有音乐，这是定性。没有音乐的生活是过不下去的。</p>
+<p>为了防止自动播放，那就只能阅读全文的时候才能听到了。<br><a id="more"></a></p>
+<p>接正文。</p>
+<h3 id="梦寐以求的前端，其实不过如此"><a href="#梦寐以求的前端，其实不过如此" class="headerlink" title="梦寐以求的前端，其实不过如此"></a>梦寐以求的前端，其实不过如此</h3><p>　　我在现在的公司做的是前端开发，还是挺谢谢这家公司的，确实就像我在知乎上说的：一个互联网公司竟然招了一个皮艇运动员？<br>　　每天还是挺有意思的，不过就关于前端这部分，每天都多多少少会觉得自己在“激情”和“厌烦”左右徘徊。为什么？说到底还是自己的原因。有点爱玩了。<br>　　现在每天就是现在这个博客主题<code>Nlvi</code>，<code>Syuanpi.css</code>，在公司使用Vue和React。说实话，一开始用vue的时候还是觉得有点意思的，到后面是觉得这个库是真的无聊。得益于环境影响，这次竟然入门了React Native，解了心病。<br>　　可是也跟拖延症有关，以前就有“突然想编程，就天天都写，天天找东西写，天天找新东西学”，“累了就进入空闲期，什么代码都不想动”。但是上班了就没办法了，你不想编程的时候如果你在上班，那么也要硬着头皮写。最后就会变成突然就不喜欢某个框架/程序了……<br>　　而且我还是比较有上进心的嘛，几乎下班时间也要读点Vue或者React的奇技淫巧。这样上班的时候就不会太累。但是每天老想着玩游戏也不是个事啊……<br>　　技术菜是真的，要不然也不会这么累。什么时候才能做到“想写什么就写什么啊！”。现在知道前端复杂了，很烦。</p>
+<h3 id="入门了React，原来这么刺激的"><a href="#入门了React，原来这么刺激的" class="headerlink" title="入门了React，原来这么刺激的"></a>入门了React，原来这么刺激的</h3><p>　　有好有坏嘛，突然就入门了React，可能是因为把理解Vue的思想代入了吧。觉得React太强大，还很自由，可以实现的事情更多了。而基础的理解无非就是Vue的template放在了render函数里了嘛。而且React的那种写法又有种Java的那种感觉，很害怕。<br>　　而且所有的内容都是单向数据流！甚至还要考虑先后顺序的问题！不过React Native是真的有意思。</p>
+<h3 id="本以为自己像极客，然而本身却没那么极"><a href="#本以为自己像极客，然而本身却没那么极" class="headerlink" title="本以为自己像极客，然而本身却没那么极"></a>本以为自己像极客，然而本身却没那么极</h3><p>　　其实我很喜欢GEEK的想法的。无论干点什么都想用自动化来实现。而且觉得很好玩。就算技术菜也有一个想造轮子的心，哪怕是自己用的轮子。在公司工作的话，感觉写的业务代码多一点。不太可以由着自己的性子来，很束缚。毕竟工作，代码稳定比花里胡哨更重要嘛。<br>　　我想，在公司，每次听得最多的一句话就是：我们是小公司，没必要/没办法用这样的技术，因为维护起来有心无力…</p>
+<p>　　悄悄说一句：虽然小公司，可是自从我踏进大门那天起，我可是天天憧憬着它可能上市的呀！</p>
+<h3 id="Nlvi-有心无力中坚持维护的博客主题"><a href="#Nlvi-有心无力中坚持维护的博客主题" class="headerlink" title="Nlvi 有心无力中坚持维护的博客主题"></a>Nlvi 有心无力中坚持维护的博客主题</h3><p>　　虽然最后我还是没买PS4辣，因为想了一下，除了没时间玩，更多还是没操作。尼尔机械纪元如果不开自动的话，操作还是复杂的。如果开了自动的话跟播片有什么区别……<br>　　但是2b小姐姐的故事确实深刻人心了。就看个播片都看哭了。加上完美的音乐，真的是一部优秀的影视作品（逃<br>　　加上那个单色的UX，就觉得要不神似一下的弄个简约的博客主题？所以Nier就有了Nlvi。<br>　　虽然不像就对了…而且还有好多动画还没有实现。毕竟前端技术术业并不专攻。然后以前用过的动画和新主题要用到的动画，全都打包成一个CSS动画库<code>Syuanpi.css</code>。所以对我来说，其实就是配套使用而已。（刚说的造轮子的心，哪怕只是自己用！）</p>
+<h4 id="全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……"><a href="#全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……" class="headerlink" title="全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……"></a>全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……</h4><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=40257799&auto=1&height=32"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;果然时间能催人成熟。第一次有工作，有正式上班。感觉身边的东西都在改变。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;每篇扣肉小记都会有音乐，这是定性。没有音乐的生活是过不下去的。&lt;/p&gt;
+&lt;p&gt;为了防止自动播放，那就只能阅读全文的时候才能听到了。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>也许是第一个最好理解的Vuex入门</title>
     <link href="http://blog.co1mugx.tk/2017/04/14/easyknow-vuex/"/>
     <id>http://blog.co1mugx.tk/2017/04/14/easyknow-vuex/</id>
     <published>2017-04-14T02:58:13.000Z</published>
-    <updated>2017-04-19T04:25:21.000Z</updated>
+    <updated>2017-04-28T09:45:39.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>项目用到了vuex，一开始的我完全是拒绝的…（一头撞死</p>
@@ -254,11 +289,11 @@
     </summary>
     
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
     
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Slvi" scheme="http://blog.co1mugx.tk/tags/Slvi/"/>
     
@@ -606,9 +641,9 @@
     </summary>
     
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Syuanpi" scheme="http://blog.co1mugx.tk/tags/Syuanpi/"/>
     
@@ -689,9 +724,9 @@
     </summary>
     
     
-      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
@@ -947,46 +982,11 @@
     </summary>
     
     
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
       <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="Blank" scheme="http://blog.co1mugx.tk/tags/Blank/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分享一个DOM操作错误</title>
-    <link href="http://blog.co1mugx.tk/2016/10/30/fen-xiang-yi-ge-DOM-cao-zuo-cuo-wu/"/>
-    <id>http://blog.co1mugx.tk/2016/10/30/fen-xiang-yi-ge-DOM-cao-zuo-cuo-wu/</id>
-    <published>2016-10-29T17:46:57.000Z</published>
-    <updated>2016-10-31T17:25:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>由于最近右下角的鱼不听使唤了，气得肺癌晚期了</p>
-</blockquote>
-<p>就Rousy嘛（卧槽我知道我知道我有夜生活的，还没写好，懒！）<br>本来想是简约风格的，结果听了一个所谓的半路泥腿子出身的设计师<br>再加上自己的主管思想受到影响，最后变成了一个“儿童主题”<br>但是我是希望能说是提供一个想法，我还是希望有人能拿我的主题高度定制的<br>比如头图，它毕竟开放了图片链接接口嘛</p>
-<h3 id="切正题，分享的事一个DOM关于class和id的问题"><a href="#切正题，分享的事一个DOM关于class和id的问题" class="headerlink" title="切正题，分享的事一个DOM关于class和id的问题"></a>切正题，分享的事一个DOM关于class和id的问题</h3><p>其实按道理说，才想起来这个错误，真的自己要检讨一下了<br>就前段时间，右下角那条很跳的鱼，本来是实现放回顶层和call出友情链接的作用（别！再！问！了！）<br>后来做了mobile适配之后发现，那条鱼怎么touch都不会返回顶层<br>后来一次快睡着的时候想到了，所以现在改了。<br>问题就是出在，<strong>id复用</strong>。<a id="more"></a></p>
-<h3 id="id跟class什么关系，怎么区分"><a href="#id跟class什么关系，怎么区分" class="headerlink" title="id跟class什么关系，怎么区分"></a>id跟class什么关系，怎么区分</h3><p>这个很基础的问题，哎妈的…<br><code>id</code>和<code>class</code>都可以用来给<code>css</code>定位置做样式表，也可以在<code>JQuery</code>做节点动作。<br>但是有不同<br><code>id</code>有唯一性，而且每一个节点只能有一个<code>id</code><br><code>class</code>没有，就是一个样式类的定义。而且一个节点可以存在无数个<code>class</code><br>所以这东西都做出潜规则了，<code>class</code>用来定义层叠样式表，<code>id</code>用来做操作<br>可是我犯的错误刚好就在这里</p>
-<h3 id="错误出现在哪"><a href="#错误出现在哪" class="headerlink" title="错误出现在哪"></a>错误出现在哪</h3><p>就是那个该死的mobile标题栏，由于强迫症而且还tm跟老罗那强迫症有点像<br>必须对称设计，音量键也要做两个Hih7#%&amp;T&amp;<em>gt38g2&amp;%</em>&amp;&amp;<em>%Y</em>HWdf<br>咳咳…所以左边那个menu item之后就把海豚加上去了<br><strong>（那两个的同行对齐我还调了特别久！）</strong><br>当然咯，直接右边的鱼也加了跟desktop一样的id名…<br>那死了啊，一页里面两个节点一样名字，认谁啊<br><strong>记住了！认最先看到的那个！</strong><br>那手机的sidebar比desktop的按钮靠前不知道多少，所以后面那个就失灵咯。</p>
-<h3 id="所以解决方法"><a href="#所以解决方法" class="headerlink" title="所以解决方法"></a>所以解决方法</h3><p>解决方法就是换名字咯……</p>
-<p>以上。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;由于最近右下角的鱼不听使唤了，气得肺癌晚期了&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;就Rousy嘛（卧槽我知道我知道我有夜生活的，还没写好，懒！）&lt;br&gt;本来想是简约风格的，结果听了一个所谓的半路泥腿子出身的设计师&lt;br&gt;再加上自己的主管思想受到影响，最后变成了一个“儿童主题”&lt;br&gt;但是我是希望能说是提供一个想法，我还是希望有人能拿我的主题高度定制的&lt;br&gt;比如头图，它毕竟开放了图片链接接口嘛&lt;/p&gt;
-&lt;h3 id=&quot;切正题，分享的事一个DOM关于class和id的问题&quot;&gt;&lt;a href=&quot;#切正题，分享的事一个DOM关于class和id的问题&quot; class=&quot;headerlink&quot; title=&quot;切正题，分享的事一个DOM关于class和id的问题&quot;&gt;&lt;/a&gt;切正题，分享的事一个DOM关于class和id的问题&lt;/h3&gt;&lt;p&gt;其实按道理说，才想起来这个错误，真的自己要检讨一下了&lt;br&gt;就前段时间，右下角那条很跳的鱼，本来是实现放回顶层和call出友情链接的作用（别！再！问！了！）&lt;br&gt;后来做了mobile适配之后发现，那条鱼怎么touch都不会返回顶层&lt;br&gt;后来一次快睡着的时候想到了，所以现在改了。&lt;br&gt;问题就是出在，&lt;strong&gt;id复用&lt;/strong&gt;。
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
   </entry>
   
