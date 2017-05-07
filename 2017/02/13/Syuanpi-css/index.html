@@ -157,7 +157,6 @@
                 
             
         </header>
-        
         <div class="post-content syuanpi riseIn-light back-3">
             
                 <p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css" target="_blank" rel="external">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p>
@@ -303,6 +302,7 @@ $(document).ready(function(){
     $('.body').show();
     Nlvi.tagcloud();
     Nlvi.back2top();
+    Nlvi.showToc();
     Nlvi.showComments();
     Nlvi.showReward()
 
@@ -311,8 +311,18 @@ $(document).ready(function(){
 })
 </script>
     </div>
-    <div class="backtop syuanpi dead" id="backtop">
+    
+        
+    <div class="post-toc">
+        <span class="title">文章目录</span>
+        <li class="title-link"><a href="javascript:;" class="toTop">自己造轮子！——Syuanpi.css</a></li>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要出这东西…"><span class="toc-text">为什么要出这东西…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#它是个什么东西…"><span class="toc-text">它是个什么东西…</span></a></li></ol>
+    </div>
+
+    
+    <div class="backtop syuanpi dead toTop" id="backtop">
     <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 </body>
 </html>

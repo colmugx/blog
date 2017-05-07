@@ -153,7 +153,6 @@
                 
             
         </header>
-        
         <div class="post-content syuanpi riseIn-light back-3">
             
                 <blockquote>
@@ -321,6 +320,7 @@ $(document).ready(function(){
     $('.body').show();
     Nlvi.tagcloud();
     Nlvi.back2top();
+    Nlvi.showToc();
     Nlvi.showComments();
     Nlvi.showReward()
 
@@ -329,8 +329,18 @@ $(document).ready(function(){
 })
 </script>
     </div>
-    <div class="backtop syuanpi dead" id="backtop">
+    
+        
+    <div class="post-toc">
+        <span class="title">文章目录</span>
+        <li class="title-link"><a href="javascript:;" class="toTop">async-await 初尝试</a></li>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ImoocDownloaderServer-请求样本"><span class="toc-text">ImoocDownloaderServer 请求样本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小谈ES6和ES7"><span class="toc-text">小谈ES6和ES7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浅谈promise-和-async-await"><span class="toc-text">浅谈promise 和 async-await</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么需要P-A-，我用在哪里了"><span class="toc-text">为什么需要P/A+，我用在哪里了</span></a></li></ol>
+    </div>
+
+    
+    <div class="backtop syuanpi dead toTop" id="backtop">
     <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 </body>
 </html>

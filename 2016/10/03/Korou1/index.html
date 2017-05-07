@@ -151,7 +151,6 @@
                 
             
         </header>
-        
         <div class="post-content syuanpi riseIn-light back-3">
             
                 <blockquote>
@@ -294,6 +293,7 @@ $(document).ready(function(){
     $('.body').show();
     Nlvi.tagcloud();
     Nlvi.back2top();
+    Nlvi.showToc();
     Nlvi.showComments();
     Nlvi.showReward()
 
@@ -302,8 +302,18 @@ $(document).ready(function(){
 })
 </script>
     </div>
-    <div class="backtop syuanpi dead" id="backtop">
+    
+        
+    <div class="post-toc">
+        <span class="title">文章目录</span>
+        <li class="title-link"><a href="javascript:;" class="toTop">扣肉小记（一）</a></li>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么这么说呢？"><span class="toc-text">为什么这么说呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#好吧，其实我是边写着主题边玩着博客的"><span class="toc-text">好吧，其实我是边写着主题边玩着博客的</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是"><span class="toc-text">好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是</span></a></li></ol></li></ol>
+    </div>
+
+    
+    <div class="backtop syuanpi dead toTop" id="backtop">
     <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 </body>
 </html>

@@ -1094,6 +1094,55 @@ blockquote p {
   width: 150px;
   height: 150px;
 }
+.post-toc {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  width: 200px;
+  margin: auto 24px auto 0;
+  border: none;
+  line-height: 1.3rem;
+}
+.post-toc li {
+  padding-left: 24px;
+}
+.post-toc .title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  border-bottom: 1px solid #000;
+}
+.post-toc .title-link {
+  list-style: none;
+  margin-top: 16px;
+}
+.post-toc .title-link a {
+  text-decoration: none;
+  color: #666;
+  padding: 0 8px;
+}
+.post-toc .title-link a.active {
+  border-left: 2px solid #666;
+}
+.post-toc .toc {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.post-toc .toc .toc-item {
+  color: #666;
+}
+.post-toc .toc .toc-item .toc-link {
+  color: #666;
+  text-decoration: none;
+  padding: 0 8px;
+}
+.post-toc .toc .toc-item .toc-link.active {
+  border-left: 2px solid #666;
+}
 .highlight {
   position: relative;
   background-color: #f7f7f7;
@@ -1229,7 +1278,8 @@ blockquote p {
   }
 }
 .backtop {
-  display: block;
+  display: flex;
+  flex-direction: column;
   z-index: 10;
   position: fixed;
   bottom: 32px;

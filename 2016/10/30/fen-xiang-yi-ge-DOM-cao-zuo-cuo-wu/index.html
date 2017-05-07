@@ -153,7 +153,6 @@
                 
             
         </header>
-        
         <div class="post-content syuanpi riseIn-light back-3">
             
                 <blockquote>
@@ -303,6 +302,7 @@ $(document).ready(function(){
     $('.body').show();
     Nlvi.tagcloud();
     Nlvi.back2top();
+    Nlvi.showToc();
     Nlvi.showComments();
     Nlvi.showReward()
 
@@ -311,8 +311,18 @@ $(document).ready(function(){
 })
 </script>
     </div>
-    <div class="backtop syuanpi dead" id="backtop">
+    
+        
+    <div class="post-toc">
+        <span class="title">文章目录</span>
+        <li class="title-link"><a href="javascript:;" class="toTop">分享一个DOM操作错误</a></li>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#切正题，分享的事一个DOM关于class和id的问题"><span class="toc-text">切正题，分享的事一个DOM关于class和id的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#id跟class什么关系，怎么区分"><span class="toc-text">id跟class什么关系，怎么区分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#错误出现在哪"><span class="toc-text">错误出现在哪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#所以解决方法"><span class="toc-text">所以解决方法</span></a></li></ol>
+    </div>
+
+    
+    <div class="backtop syuanpi dead toTop" id="backtop">
     <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 </body>
 </html>

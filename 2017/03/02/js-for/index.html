@@ -153,7 +153,6 @@
                 
             
         </header>
-        
         <div class="post-content syuanpi riseIn-light back-3">
             
                 <blockquote>
@@ -320,6 +319,7 @@ $(document).ready(function(){
     $('.body').show();
     Nlvi.tagcloud();
     Nlvi.back2top();
+    Nlvi.showToc();
     Nlvi.showComments();
     Nlvi.showReward()
 
@@ -328,8 +328,18 @@ $(document).ready(function(){
 })
 </script>
     </div>
-    <div class="backtop syuanpi dead" id="backtop">
+    
+        
+    <div class="post-toc">
+        <span class="title">文章目录</span>
+        <li class="title-link"><a href="javascript:;" class="toTop">ES古往今来所有for的总结</a></li>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先讲for"><span class="toc-text">先讲for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in"><span class="toc-text">for..in</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forEach"><span class="toc-text">forEach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-of"><span class="toc-text">for..of</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in-和-for-of-对比"><span class="toc-text">for in 和 for of 对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#summary"><span class="toc-text">summary</span></a></li></ol>
+    </div>
+
+    
+    <div class="backtop syuanpi dead toTop" id="backtop">
     <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 </body>
 </html>
