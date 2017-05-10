@@ -530,7 +530,6 @@ a {
   justify-content: center;
   list-style: none;
   margin: 40px 0;
-  width: 100%;
 }
 .header .main-nav .menu .menu-item {
   display: inline-table;
@@ -1102,19 +1101,43 @@ blockquote p {
   bottom: 0;
   height: 40%;
   width: 200px;
-  margin: auto 24px auto 0;
+  margin: auto 40px auto 0;
   border: none;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
-.post-toc li {
-  padding-left: 24px;
+.post-toc .toc-inner {
+  height: 80%;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 8px;
+}
+.post-toc .toc-inner::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+.post-toc ol {
+  list-style: none;
+  padding-left: 16px;
 }
 .post-toc .title {
   display: block;
   margin: 0 auto;
   text-align: center;
   width: 50%;
-  border-bottom: 1px solid #000;
+  position: relative;
+}
+.post-toc .title:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background: #999;
+  transition-property: right;
+  animation: lane-right 0.35s linear both;
 }
 .post-toc .title-link {
   list-style: none;
@@ -1124,6 +1147,7 @@ blockquote p {
   text-decoration: none;
   color: #666;
   padding: 0 8px;
+  font-size: 14px;
 }
 .post-toc .title-link a.active {
   border-left: 2px solid #666;
@@ -1140,9 +1164,52 @@ blockquote p {
   color: #666;
   text-decoration: none;
   padding: 0 8px;
+  font-size: 14px;
 }
 .post-toc .toc .toc-item .toc-link.active {
   border-left: 2px solid #666;
+}
+@media screen and (max-width: 650px) {
+  .post-toc {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .post-toc {
+    display: none;
+  }
+}
+@-moz-keyframes lane-right {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@-webkit-keyframes lane-right {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@-o-keyframes lane-right {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes lane-right {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
 }
 .highlight {
   position: relative;
