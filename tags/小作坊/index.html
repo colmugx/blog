@@ -81,6 +81,16 @@
 
     <ul class="menu">
         
+        <li class="menu-item">
+            <a href="javascript:;" id="search">
+                <span>搜索</span>
+                
+                    <span class="menu-item-label">search</span>
+                
+            </a>
+        </li>
+        
+        
         
             <li class="menu-item">
                 <a href="/">
@@ -284,6 +294,7 @@
 </footer>
     </div>
     <script src="/script/nlvi.js"></script>
+<script src="/script/search.js"></script>
 
     <script src="/lightbox/js/lightbox.min.js"></script>
 
@@ -296,7 +307,7 @@ $(document).ready(function(){
     Nlvi.back2top();
     Nlvi.showToc();
     Nlvi.showComments();
-    Nlvi.showReward()
+    Nlvi.showReward();
 
     !CONFIG.animate && Nlvi.offAnimate();
     CONFIG.lightbox && Nlvi.onPicBox();
@@ -308,5 +319,29 @@ $(document).ready(function(){
     <i class="iconfont icon-up"></i>
     <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
+    
+    <div class="search" id="search">
+        <div class="mask" id="mask"></div>
+        <div class="search-wrapper syuanpi">
+            <h1 id="search-header" class="syuanpi">人的天职在于勇于探索真理</h1>
+            <div class="input">
+                <input type="text" id="local-search-input" results="0" name="">
+            </div>
+            <div id="local-search-result"></div>
+        </div>
+    </div>
+    <script>
+    var GREETING = {
+        morning: "早上好，请问您需要点什么？",
+        noon: "记得午休吃饭，不着急看我的博客~",
+        after: "下午好，感谢查阅我的博客",
+        night: "您来我的博客看笑话当做休息嘛",
+        midnight: "我觉得大半夜就不要看啦"
+    }
+    $(document).ready(function(){
+        Nlvi.search();
+    });
+    </script>
+
 </body>
 </html>

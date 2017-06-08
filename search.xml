@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[扣肉小记（六）]]></title>
+      <url>/2017/04/29/Korou6/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>果然时间能催人成熟。第一次有工作，有正式上班。感觉身边的东西都在改变。</p>
+</blockquote>
+<p>每篇扣肉小记都会有音乐，这是定性。没有音乐的生活是过不下去的。</p>
+<p>为了防止自动播放，那就只能阅读全文的时候才能听到了。<br><a id="more"></a></p>
+<p>接正文。</p>
+<h3 id="梦寐以求的前端，其实不过如此"><a href="#梦寐以求的前端，其实不过如此" class="headerlink" title="梦寐以求的前端，其实不过如此"></a>梦寐以求的前端，其实不过如此</h3><p>　　我在现在的公司做的是前端开发，还是挺谢谢这家公司的，确实就像我在知乎上说的：一个互联网公司竟然招了一个皮艇运动员？<br>　　每天还是挺有意思的，不过就关于前端这部分，每天都多多少少会觉得自己在“激情”和“厌烦”左右徘徊。为什么？说到底还是自己的原因。有点爱玩了。<br>　　现在每天就是现在这个博客主题<code>Nlvi</code>，<code>Syuanpi.css</code>，在公司使用Vue和React。说实话，一开始用vue的时候还是觉得有点意思的，到后面是觉得这个库是真的无聊。得益于环境影响，这次竟然入门了React Native，解了心病。<br>　　可是也跟拖延症有关，以前就有“突然想编程，就天天都写，天天找东西写，天天找新东西学”，“累了就进入空闲期，什么代码都不想动”。但是上班了就没办法了，你不想编程的时候如果你在上班，那么也要硬着头皮写。最后就会变成突然就不喜欢某个框架/程序了……<br>　　而且我还是比较有上进心的嘛，几乎下班时间也要读点Vue或者React的奇技淫巧。这样上班的时候就不会太累。但是每天老想着玩游戏也不是个事啊……<br>　　技术菜是真的，要不然也不会这么累。什么时候才能做到“想写什么就写什么啊！”。现在知道前端复杂了，很烦。</p>
+<h3 id="入门了React，原来这么刺激的"><a href="#入门了React，原来这么刺激的" class="headerlink" title="入门了React，原来这么刺激的"></a>入门了React，原来这么刺激的</h3><p>　　有好有坏嘛，突然就入门了React，可能是因为把理解Vue的思想代入了吧。觉得React太强大，还很自由，可以实现的事情更多了。而基础的理解无非就是Vue的template放在了render函数里了嘛。而且React的那种写法又有种Java的那种感觉，很害怕。<br>　　而且所有的内容都是单向数据流！甚至还要考虑先后顺序的问题！不过React Native是真的有意思。</p>
+<h3 id="本以为自己像极客，然而本身却没那么极"><a href="#本以为自己像极客，然而本身却没那么极" class="headerlink" title="本以为自己像极客，然而本身却没那么极"></a>本以为自己像极客，然而本身却没那么极</h3><p>　　其实我很喜欢GEEK的想法的。无论干点什么都想用自动化来实现。而且觉得很好玩。就算技术菜也有一个想造轮子的心，哪怕是自己用的轮子。在公司工作的话，感觉写的业务代码多一点。不太可以由着自己的性子来，很束缚。毕竟工作，代码稳定比花里胡哨更重要嘛。<br>　　我想，在公司，每次听得最多的一句话就是：我们是小公司，没必要/没办法用这样的技术，因为维护起来有心无力…</p>
+<p>　　悄悄说一句：虽然小公司，可是自从我踏进大门那天起，我可是天天憧憬着它可能上市的呀！</p>
+<h3 id="Nlvi-有心无力中坚持维护的博客主题"><a href="#Nlvi-有心无力中坚持维护的博客主题" class="headerlink" title="Nlvi 有心无力中坚持维护的博客主题"></a>Nlvi 有心无力中坚持维护的博客主题</h3><p>　　虽然最后我还是没买PS4辣，因为想了一下，除了没时间玩，更多还是没操作。尼尔机械纪元如果不开自动的话，操作还是复杂的。如果开了自动的话跟播片有什么区别……<br>　　但是2b小姐姐的故事确实深刻人心了。就看个播片都看哭了。加上完美的音乐，真的是一部优秀的影视作品（逃<br>　　加上那个单色的UX，就觉得要不神似一下的弄个简约的博客主题？所以Nier就有了Nlvi。<br>　　虽然不像就对了…而且还有好多动画还没有实现。毕竟前端技术术业并不专攻。然后以前用过的动画和新主题要用到的动画，全都打包成一个CSS动画库<code>Syuanpi.css</code>。所以对我来说，其实就是配套使用而已。（刚说的造轮子的心，哪怕只是自己用！）</p>
+<h4 id="全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……"><a href="#全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……" class="headerlink" title="全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……"></a>全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……</h4><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=40257799&auto=1&height=32"></iframe>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 扣肉小记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[也许是第一个最好理解的Vuex入门]]></title>
+      <url>/2017/04/14/easyknow-vuex/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>项目用到了vuex，一开始的我完全是拒绝的…（一头撞死</p>
+</blockquote>
+<p>刚用vue不久，应该说还有大量的API还没用过还没熟悉过的时候，突然接受一个新内容，而且还是个很抽象的东西，说实话刚接触的时候完全不知道这东西有什么用…只听说过它能状态管理啊，什么全局控制啊。好牛逼啊666啊。</p>
+<p><strong>哦，然后呢？</strong></p>
+<p>后来稍微理解之后，决定写出来。浅入浅出的理解一下vuex。<a id="more"></a></p>
+<h2 id="what-s-vuex"><a href="#what-s-vuex" class="headerlink" title="what s vuex"></a>what s vuex</h2><p>官方文档：<a href="https://vuex.vuejs.org/zh-cn/" target="_blank" rel="external">Introduction · GitBook</a>，vue的内容都挺良心的，都是看似官方的中文文档…</p>
+<p>Vuex还是跟上面所述…一个应用的状态管理模式。</p>
+<blockquote>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态管理模式</strong>。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+</blockquote>
+<p>所以只能说它是一个接近于redux，类似于react与redux的那种存在。可是印象没记错的话，react和redux其实是可以独立使用的，这完全就是两个东西，只是可以配合到一块儿去。而vue+vuex不同，vuex之为vue工作，并不能为react等其他框架使用。（也就是redux和vuex都可以为vue服务！不同在于vuex是正室redux是娼！）</p>
+<p>至于“什么是状态管理模式”，官方给了一个例子，看例子就行了。</p>
+<p>什么看不懂？看得懂就不用看这个了？好的可以。开始举例子了啊！</p>
+<p>比如你现在看到桌面上有个馒头，然后你觉得不够吃不爽，你又从冰箱里拿出了一个叉烧包放在桌子上。所以这个时候桌面上就会有一个馒头和一个叉烧包。然后你是哪种什么难吃先吃什么的人（没酱！干吃！反驳我的人晚上别吃饭了！），然后你拿起一个馒头咬了一口然后放在手上。</p>
+<p>OK举例完了。这就是状态管理。</p>
+<p>我们一个vue实例（我就以我会用的2.0角度说），首先会有一个template，模板文件，里面存放的是dom。然后是<code>data()</code>方法，存放固定或不固定的数据。还有一个<code>methods</code>，存放方法，各种方法。对吧没问题吧！你看到(<code>view or template</code>)桌面上<code>{ mantou: 1 }</code>，你觉得不爽去拿(<code>methods -&gt; take()</code>)，然后多了一个叉烧包放在桌子上<code>{ mantou: 1, chashaobao: 1 }</code>，然后你拿起馒头就吃(<code>methods -&gt; ate()</code>)，还拿在手上(保持状态) ，当然data()目前肯定是 { mantou: 0.9, chashaobao: 1 }。<strong>其实我有个梦想，去教小朋友学编程，从小把路给他带歪掉。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// state</span></div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">food</span>: &#123;</div><div class="line">        <span class="attr">mantou</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">chashaobao</span>: <span class="number">0</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// view</span></div><div class="line">  template: <span class="string">`</span></div><div class="line">    &lt;div class="table"&gt;</div><div class="line">		&lt;p&gt;&#123;&#123; food.mantou &#125;&#125; &lt;/p&gt;</div><div class="line">		&lt;p&gt;&#123;&#123; food.chashaobao &#125;&#125; &lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">  `,</div><div class="line">  <span class="comment">// actions</span></div><div class="line">  methods: &#123;</div><div class="line">    ate () &#123;</div><div class="line">      <span class="keyword">this</span>.mantou -= <span class="number">0.1</span></div><div class="line">    &#125;,</div><div class="line">    take () &#123;</div><div class="line">      <span class="keyword">this</span>.chashaobao += <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>那么按照vuex开说，就是三种状态，<code>state</code>, <code>action</code>,<code>view</code>。分别就状态，动作，视图。按照官方说的，如果是按照单向数据流来说的话就是 视图 -&gt; 动作 -&gt; 状态 -&gt; 视图。当然刚刚那个例子很明显，都在一个组件内…涉及到多个组件了。就会出现“单向数据流简洁性被破坏”</p>
+<blockquote>
+<ul>
+<li>多个视图依赖于同一状态。</li>
+<li>来自不同视图的行为需要变更同一状态。</li>
+</ul>
+</blockquote>
+<p>就好比现在只是你一个人在做这些事而已，如果家里来了个女朋友呢？（对不起我知道你没有。那你还是单组件管理就行了）。</p>
+<p>官方的意思就是：如果多个视图依赖一个状态，就会出现组件嵌套特别繁琐，而且状态数据也不好传递。如果不同视图行为都要变一个状态，意思就是你咬了一口的馒头你女朋友直接从你嘴里叼走一块！那怎么办！你可以选择不带套路的顺便亲一下是吧！<strong>但是程序并不会“亲一下”。</strong></p>
+<p>所以<code>vuex</code>或者说<code>redux</code>就是因为这个“状态共享解决”而诞生的。（或者说vuex的诞生就是为了提醒你你还没有女朋友。</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>按照官方文档，核心概念一共有5个：<code>State</code>, <code>Getters</code>, <code>Mutations</code>, <code>Actions</code>, <code>Modules</code>，一整个vuex在项目里称为<code>store</code>。</p>
+<blockquote>
+<ol>
+<li>Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。</li>
+<li>你不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地<strong>提交(commit) mutations</strong>。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。</li>
+</ol>
+</blockquote>
+<p>首先是在main.js先声明你要用vuex，你要把vuex导入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"></div><div class="line">Vue.use(Vuex)</div></pre></td></tr></table></figure>
+<p>然后创建一个基础的Store，是这样的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * main.js</div><div class="line"> */</div><div class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  <span class="attr">state</span>: &#123;</div><div class="line">    <span class="attr">mantou</span>: <span class="number">1</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">mutations</span>: &#123;</div><div class="line">    <span class="attr">ate</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</div><div class="line">      state.mantou -= <span class="number">0.1</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>要记得实例要调用一下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  ...,</div><div class="line">  ...,</div><div class="line">  store</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><p>冰箱啊！也叫做单一状态树，也就是说一整个应用就只有这么一个state，因为放在store中，而store又是一个全局的，所以这是一个人人都能用的大冰箱！（你女朋友也能开</p>
+<p>那么，比如冰箱现在是这么些东西。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">state = &#123;</div><div class="line">  <span class="attr">mantou</span>: <span class="number">1</span>,</div><div class="line">  <span class="attr">chashao</span>: <span class="number">3</span>,</div><div class="line">  <span class="attr">panzi</span>: <span class="string">'红烧鱼'</span>,</div><div class="line">  <span class="attr">wan</span>: &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'卤水鸡腿'</span>,</div><div class="line">    <span class="attr">num</span>: <span class="number">1</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后这么取出东西：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">store.state.mantou 	<span class="comment">//获取馒头的值(数量)</span></div><div class="line">store.state.panzi 	<span class="comment">//红烧鱼</span></div></pre></td></tr></table></figure>
+<p>如果在vue实例中，应该这么取</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$store.state.mantou 	<span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<p>之所以有<code>$store</code>这种定义，是因为已经作为vue的一个插件了，一开始是不是有<code>Vue.use</code>过。</p>
+<h3 id="Mutations"><a href="#Mutations" class="headerlink" title="Mutations"></a>Mutations</h3><p>这就是决定是你女朋友吃还是你自己吃了</p>
+<blockquote>
+<p>更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutations 非常类似于事件：每个 mutation 都有一个字符串的 <strong>事件类型 (type)</strong> 和 一个 <strong>回调函数 (handler)</strong>。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mutations = &#123;</div><div class="line">  ate (state) &#123;</div><div class="line">    state.mantou -= <span class="number">0.1</span></div><div class="line">  &#125;,</div><div class="line">  take (state) &#123;</div><div class="line">    state.chashao -= <span class="number">1</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>虽然是在<code>mutaitons</code>构造方法，但这个载体并不是一个方法载体，等下讲。</p>
+<p>那么如果决定是谁吃：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * SingleDog.js</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ... ,</div><div class="line">  ... ,</div><div class="line">  <span class="attr">method</span>: &#123;</div><div class="line">    ...() &#123;</div><div class="line">      <span class="keyword">this</span>.$store.commit(<span class="string">'ate'</span>)  <span class="comment">//mantou: 0.9</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>不一定非要这么写，反正只要能调用就行了。</p>
+<h3 id="mutations-payload"><a href="#mutations-payload" class="headerlink" title="mutations payload"></a>mutations payload</h3><p>还有一个是mutations 的载荷（payload），就是在上面那种调用的基础上再传入第二个参数，第二个参数就叫payload。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mutations = &#123;</div><div class="line">  take (state, value) &#123;</div><div class="line">    state.chashao -= value</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>比如这样，首先构建的时候已经有准备可以传入第二个参数，然后调用的时候同理</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">store.commit(<span class="string">'take'</span>, <span class="number">1</span>)		<span class="comment">//chashao - 1</span></div></pre></td></tr></table></figure>
+<p>或者payload也可以是个Object（对象！你没有！）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mutations = &#123;</div><div class="line">  take (state, obj) &#123;</div><div class="line">    state.chashao -= obj.num</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * GirlFriend.js</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ... ,</div><div class="line">  ... ,</div><div class="line">  <span class="attr">method</span>: &#123;</div><div class="line">    ...() &#123;</div><div class="line">      <span class="keyword">this</span>.$store.commit(<span class="string">'take'</span>, &#123;</div><div class="line">        <span class="attr">num</span>: <span class="number">1</span></div><div class="line">      &#125;)  <span class="comment">//chashao - 2 （刚被狗吃了一个）</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>暂时先总结这两个。</p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h3 id="1-mutations-amp-actions"><a href="#1-mutations-amp-actions" class="headerlink" title="1. mutations &amp; actions"></a>1. mutations &amp; actions</h3><p><a href="https://www.zhihu.com/question/48759748" target="_blank" rel="external">vuex中为什么把把异步操作封装在action，把同步操作放在mutations？ - 知乎</a></p>
+<p>官方也有提到，mutations跟actions是差不多的，不同在于</p>
+<blockquote>
+<ul>
+<li>Action 提交的是 mutation，而不是直接变更状态。</li>
+<li>Action 可以包含任意异步操作。</li>
+</ul>
+</blockquote>
+<p>也就是按我的理解，他们的关系是这样的：<strong>mutations直接操作state内容，actions直接操作的是mutations。如果需要用actions去操作state的话建议做法就是通过actions操作mutations使state发生变化。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">actions = &#123;</div><div class="line">  onAte (someOne) &#123;</div><div class="line">    someOne.commit(<span class="string">'ate'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个怎么举例啊…你劝着你女朋友：来嘛来嘛吃一口嘛。这样？</p>
+<p>那么如何劝？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">store.dispatch(<span class="string">'onAte'</span>)</div></pre></td></tr></table></figure>
+<p>不仅这样，mutations和actions分开使用还有一个场景：<strong>同步和异步</strong>。</p>
+<p>这个就好比，如果你只是使用<code>mutations</code>来操作state的话，就是你只能看着你女朋友吃完然后你吃剩下的。</p>
+<p>而使用<code>actions</code>的话，你可以边劝你女朋友吃一口，你自己还可以顺便咬一口，因为异步不受限制。</p>
+<p>关于同步跟异步的代码例子，官方已经列举特别特别多了。</p>
+<p><a href="https://vuex.vuejs.org/zh-cn/actions.html" target="_blank" rel="external">Actions · GitBook</a></p>
+<p>结束！</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+            <tag> vue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Vue2.0的网络请求 - Axios]]></title>
+      <url>/2017/04/07/axios-tutorial/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>我没进传销！真是日了皮皮虾了…</p>
+</blockquote>
+<p>由于Vue2.0之后，<code>vue-resource</code>也停止更新了，改为使用尤老师钦点的<code>axios</code>。<a href="https://github.com/mzabriskie/axios" target="_blank" rel="external">mzabriskie/axios: Promise based HTTP client for the browser and node.js</a></p>
+<p>那反正不管！他说不合适我不用，我就去学个新的。其实接触过微信小程序的话，稍加理解，这就是一个比较厉害点但是又有局限的<code>wx.request()</code></p>
+<h2 id="what-s-Axios"><a href="#what-s-Axios" class="headerlink" title="what s Axios"></a>what s Axios</h2><a id="more"></a>
+<blockquote>
+<p>Promise based HTTP client for the browser and node.js</p>
+</blockquote>
+<p>就是一个基于ES6的<code>Promise</code>的网络请求库，其实说干净了就是一个打包好的<code>XMLHttpRequests</code>，也就是说不过一个Ajax库。</p>
+<p>所以它一样可以实现：</p>
+<ul>
+<li>在浏览器里建立XHR</li>
+<li>通过nodejs进行http请求</li>
+<li>转换或者拦截请求数据或者相应数据</li>
+<li>支持<code>Promise</code>的API</li>
+<li>可以取消请求</li>
+<li>自动转换JSON</li>
+<li><strong>可以防御XSRF攻击！</strong></li>
+</ul>
+<p>浏览器支持问题也没什么问题，IE这种本时代异端都能支持到8+，这问题是不大了。（VUE不也是8+！）</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>如果有用npm管理包的话，那么安装还是老规矩的</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install axios</div></pre></td></tr></table></figure>
+<p>或者用到了bower（反正我没用过）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bower install axios</div></pre></td></tr></table></figure>
+<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">axios.get(<span class="string">'/* url */'</span>).then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// Do Somethings</span></div><div class="line">  <span class="comment">// console.log(response)</span></div><div class="line">&#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(error)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>因为可以使用Promise的API，那么毫无悬念它的运行肯定也是以Promise来运行。</p>
+<p>而且url，可以是带参数的，例如<code>/user?id=666</code>，或者也可以拆分开来</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">axios.get(<span class="string">'/user'</span>, &#123;</div><div class="line">  <span class="attr">params</span>: &#123;</div><div class="line">    <span class="attr">id</span>: ColMugX</div><div class="line">  &#125;</div><div class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res)).catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</div></pre></td></tr></table></figure>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">axios.post(<span class="string">'/* url */'</span>, &#123;</div><div class="line">  <span class="comment">/* Config */</span></div><div class="line">  <span class="comment">// id: 666,</span></div><div class="line">  <span class="comment">// name: ColMugX</span></div><div class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res))</div></pre></td></tr></table></figure>
+<p>其他的大概也跟GET相差无几。只不过关于’url’后面传入的Object，有可能是用不了的，也有可能是用的了的。因为其他人有类似情况发生。所以我一般都是按照axios api的做法，怎么做下面有！</p>
+<p>因为大概用的多的就这两个…所以举例就差不多这样了，毕竟<code>vue-resource</code>有的基本都有。</p>
+<h3 id="奇技淫巧"><a href="#奇技淫巧" class="headerlink" title="奇技淫巧"></a>奇技淫巧</h3><h4 id="1-axios是一个方法，你甚至可以整个config传进去"><a href="#1-axios是一个方法，你甚至可以整个config传进去" class="headerlink" title="1. axios是一个方法，你甚至可以整个config传进去"></a>1. axios是一个方法，你甚至可以整个config传进去</h4><p>文档有提到，关于<code>axios API</code>有一条实现方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">axios(config) <span class="comment">//config: Object</span></div></pre></td></tr></table></figure>
+<p>这就意味着，我们可以直接创建一整套静态的config，然后请求的时候带进去就能实现了。比如</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> *	config.js</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">  <span class="attr">url</span>: <span class="string">'localhost:6666'</span>,</div><div class="line">  <span class="attr">headers</span>: &#123;</div><div class="line">    <span class="attr">token</span>: <span class="string">'ftv1443qby6bdfa41t90sfvq89hg3h54u989m9imog79g4'</span> </div><div class="line">    <span class="comment">//这一看就知道是滚键盘的…</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">id</span>: <span class="number">666</span>,</div><div class="line">    <span class="attr">name</span>: <span class="string">'ColMugX'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> *	Axios.js</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">import</span> config <span class="keyword">from</span> <span class="string">'config'</span></div><div class="line"><span class="keyword">import</span> axios form <span class="string">'axios'</span></div><div class="line"></div><div class="line">axios(config)</div></pre></td></tr></table></figure>
+<p>配置和运行分离可以带来很多好处，比如baseUrl，header 等等一堆需要重复调用又可以不用重复写，甚至还可以把这些静态的东西直接静态常量掉。避免自己出错或者被更改。而且这么一来的话，甚至请求的话只需要改动url和method就行了。</p>
+<p>因为用的是对象的方法，那好办啊！干对象有什么难的！</p>
+<p>- 今天要用什么姿势！</p>
+<p>- 要不你在上面吧我趴着！</p>
+<p>好那就趴着！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> conf = config</div><div class="line">conf.method = <span class="string">'PUT'</span></div><div class="line"><span class="comment">//其他该怎么传怎么传</span></div></pre></td></tr></table></figure>
+<p>然后请求配置官方有一个<a href="https://github.com/mzabriskie/axios#request-config" target="_blank" rel="external">默认配置方案</a>，照着这个看一下大概也知道它支持传什么东西进去了。</p>
+<p>（默认就有baseURL的配置确实是很惊讶，而且文档写的很清楚，如果没有baseURL或者url已经绝对了的话直接走url）</p>
+<h4 id="2-换了个姿势也许会压到头！"><a href="#2-换了个姿势也许会压到头！" class="headerlink" title="2. 换了个姿势也许会压到头！"></a>2. 换了个姿势也许会压到头！</h4><p>并不是说上面趴着会压爆头什么的…只是顺着梗玩下来而已！</p>
+<p>因为上面说了，axios是可以把整个config都传进去然后开展工作的，所以也就意味着headers和method也可以带在config对象里一起进去，那么可能会有个小问题</p>
+<p><strong>当你的<code>content-tyle</code>是<code>application/x-www-form-urlencoded</code>的时候，<code>POST</code>会用不了！</strong>你请求一下会发现方法直接变成<code>OPTION</code>。</p>
+<p>那是为什么反正我也不知道，我只知道怎么处理，原因是axios的post请求不支持<code>x-www-form-urlencoded</code>，确实是挺奇怪的一件事…</p>
+<p>所以使用到post的时候，要不主动把头改成<code>application/json</code>，这是没问题的，如果不想用或者不能用json的话，传进去的data也就是参数必须是<code>string</code>形式的。这个时候官方建议是多加一个库叫<code>qs</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qs <span class="keyword">from</span> <span class="string">'qs'</span></div><div class="line"></div><div class="line">axios.post(<span class="string">'foo'</span>, qs.stringify(config.data))</div></pre></td></tr></table></figure>
+<p>这也是上面说的，为什么有些人在使用<code>POST</code>的时候会遇到“明明跟着官方做却又不对”的情况。</p>
+<p>（稍微吐槽一下！隔壁那个什么微信小程序！他们的<code>get</code>是要求<code>json</code>的，<code>post</code>是要求要<code>form-urlencoded</code>的，逆着来对我等运动员不友好啊！）</p>
+<h4 id="3-实际上错误也不是非得catch"><a href="#3-实际上错误也不是非得catch" class="headerlink" title="3. 实际上错误也不是非得catch"></a>3. 实际上错误也不是非得catch</h4><p>实际上<code>.then()</code>会跟两个参数的：<code>resolve, reject</code>，在axios的话，reject是可以用来输出错误的。而且他们也已经这么定义好了。所以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">axios(config).then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res), err =&gt; <span class="built_in">console</span>.log(err))</div></pre></td></tr></table></figure>
+<p>也是没问题的</p>
+<h4 id="4-请求完得到的response会得到这次请求的所有内容"><a href="#4-请求完得到的response会得到这次请求的所有内容" class="headerlink" title="4. 请求完得到的response会得到这次请求的所有内容"></a>4. 请求完得到的response会得到这次请求的所有内容</h4><p>包括<code>config ,data, headers, status, statusText</code>，请求凭证等在headers里，请求到的数据在data里。而且因为会自动转换为JSON，所以基本上请求到的所有数据都已经变成JSON了，可以直接就使用。</p>
+<h4 id="5-withCredentials"><a href="#5-withCredentials" class="headerlink" title="5. withCredentials"></a>5. withCredentials</h4><p>在<code>axios</code>中这是个默认配置里面一个参数，按照我自己的理解，这是一个“是否保存跨域请求凭证”的一个开关，因为众所周知跨域请求是取不到cookie的，这是一个安全策略。但是浏览器可以获取，浏览器可以使用。<strong>人类看不到也使用不到！</strong></p>
+<p>不过道理还是道理，如果你不打开，跨域的不管toekn还是cookie在浏览器里也是一个子都取不到用不到。</p>
+<p>而且设置了<code>withCredentials</code>之后，axios是会保存所有来自远程域的cookie的，比如某些需要登录过后才能访问的内容，就可以直接调用访问了，只要你不清空。</p>
+<p>结束！</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+            <tag> vue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[“旷班”在家的一天]]></title>
+      <url>/2017/03/13/new-theme-slvi/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>本来今天是第一天上班，燃鹅因为发烧实在走不动…说实话我等上班这天真的度日如年。</p>
+</blockquote>
+<h3 id="说实话有点小失望"><a href="#说实话有点小失望" class="headerlink" title="说实话有点小失望"></a>说实话有点小失望</h3><p>就为了正式上班这天，我Github也没填，游戏也没打。每天都在看关于<code>JavaScript</code>和跟布局有关的东西，就为了上班之后能跟得上同事。毕竟第一次上班嘛…</p>
+<p>但是就天不遂人愿了，妈的。昨天就开始感冒，今天就发烧。整个人醒来之后喉咙直接疼到想把它抠掉…没力气去拿手机，最后给HR发请假信息都是趴着一点一点按出来…（虽说看起来有点惨，可是TM全是实情！）</p>
+<p>说实话，确实失望，不知道第一天就请假会有什么后果…也不知道公司的人会怎么看我…</p>
+<p>后来到中午的时候，身体就渐渐的稍微好了。然后我就躺不住了啊！得搞点事情，所以。<strong>新主题Slvi基本可以使用了！</strong> <a id="more"></a></p>
+<h3 id="新主题Slvi"><a href="#新主题Slvi" class="headerlink" title="新主题Slvi"></a>新主题Slvi</h3><p>接上篇<a href="http://blog.co1mugx.tk/2017/02/28/object-traversal/">ES6对象遍历</a>有提到因为新主题研究ES6的对象。那个时候就已经重新构建一个新的博客主题，用上自己学到的最新的东西和自己即将学会的东西上去。并且作为一个稳定的博客主题长期迭代，不搞太多那些花里胡哨的东西。所以比如刚学会的<code>Swig</code>啊，上次自己给自己盖的<code>Syuanpi.css</code>啊。这次全都用到这里来了。不过，这次的设计是<code>Syuanpi.css</code>是可以关闭的。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># animate (Syuanpi)</span></div><div class="line"><span class="attr">syuanpi:</span> <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p>然后就是，主题用了一种新的布局方式叫<code>flex</code>，这个是在新的前端框架中学习到的。后来就详细的看了一下，这种布局方式只能是<code>IE10</code>以上的浏览器才能用，所以说不到IE10的就看不到这种布局了，也就是以为着我这主题起点就到这了。不过也行！会看技术博客的人，浏览器版本会不是最新的么！像我这种“报纸主题”，肯定是那些追求简单优雅的人才会选择的啦。你看用这主题看文章，跟用Kindle没什么区别嘛。养眼嘛。<br>（流布局我会在下一篇文章中分享，就<code>flex</code>跟<code>grid</code>两个，后面那个不是流了吧…）</p>
+<p>关于字体方面，其他平台暂时还没有优化跟适配（WIN ANDROID），中文默认苹果的苹方，而且我发现，slim的苹方特别有美感，想当初刚更新mac os 10.10的时候，一直对苹方很难习惯，现在还好了，觉得跟雅黑差不多但是又比雅黑有棱有角了一些。</p>
+<p>然后老样子，跟以前一样，主题还是本地化三种语言：简体中文，繁体中文（台湾），英语，日语。台湾繁体中文是按一些游戏和系统的经验做的本地化；日语是玩过一些游戏和查词典做的本地化，如果有这两种语言的使用者使用我的主题的话，第一先表示感谢，第二如果翻译有问题的话我希望能提出来或者<code>pull request</code>嘛。有错必改好孩子。</p>
+<p>本来就是因为《尼尔》系列游戏（《尼尔·机械纪元》）突发奇想的一个主题。想有一种朋克或者后现代科技的感觉，但是用中文的时候一直感觉不到那种<code>game menu</code>的feel。后来换成日语之后，好像有点那么个意思，至于UI更新，慢慢来嘛。毕竟手机平板还没做适配……</p>
+<p>总的来说先这样，毕竟…我对上班这种事情还是觉得挺有压力的。而且我又要空出时间出来玩游戏……前端学习的长期反馈就迭代在这里吧！</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=41650120&auto=0&height=66"></iframe>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 小作坊 </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> Slvi </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于JavaScript的this]]></title>
+      <url>/2017/03/03/js-this/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>芽儿哟，今天去面试，差点就被骗进去咯。赶紧记录一下！</p>
+</blockquote>
+<h3 id="开门见山"><a href="#开门见山" class="headerlink" title="开门见山"></a>开门见山</h3><p>我就不按原题放出来了，妈的我觉得我第一次说错了都觉得自己像个傻批。<a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()())    <span class="comment">//undefined.</span></div></pre></td></tr></table></figure></p>
+<p>题目这样，我第一次回答的是<code>koala</code>。现在想了一下，估计是想赶紧下来吃波星冰乐给冲昏了脑子。<br>不服！如果我改下！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span>    <span class="comment">//this -&gt; that</span></div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> that.name <span class="comment">//this -&gt; that</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
+<h3 id="解题想法"><a href="#解题想法" class="headerlink" title="解题想法"></a>解题想法</h3><p>我的理解，<code>this</code>其实跟其他语言的<code>self</code>应该是差不多。就是指代自己，比如说在一个<code>function</code>里面，那么<code>this</code>指向的就是这个func。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//do something.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可能我讲的不清楚，就是<strong>this其实就是括号里的东西。</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"><span class="regexp">/** this */</span></span>) </span>&#123;</div><div class="line">    <span class="comment">//do somethings</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当然这是我的理解，我觉得应该就是这样的，所以刚刚那样取到的this并不是this。</p>
+<h3 id="浅谈this"><a href="#浅谈this" class="headerlink" title="浅谈this"></a>浅谈this</h3><p>只讲两种我懂的东西。</p>
+<h4 id="跟着new走"><a href="#跟着new走" class="headerlink" title="跟着new走"></a>跟着new走</h4><p>就是用new来创建对象的话，那么<code>this</code>就会跟着这个new<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.name) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.func()) <span class="comment">//Animal &#123; name: 'koala' &#125;</span></div></pre></td></tr></table></figure>
+<h4 id="ES6中括号函数的this"><a href="#ES6中括号函数的this" class="headerlink" title="ES6中括号函数的this"></a>ES6中括号函数的this</h4><p>括号函数的<code>this</code>，不存在的！</p>
+<p>说是不存在，实际上并不是说真的不见了，而是它会绑定到上一层函数中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;<span class="comment">/** ,this */</span>)</div></pre></td></tr></table></figure></p>
+<p>而如果不是括号的话<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="regexp">/** this */</span></span>)</span>&#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES古往今来所有for的总结]]></title>
+      <url>/2017/03/02/js-for/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>准备面试，遇到一家以“工匠精神”为核心，“浪”为资本的公司，太喜欢…</p>
+</blockquote>
+<p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
+<p>觉得我不服！我要上！（你行你上）<br><a id="more"></a></p>
+<h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</div></pre></td></tr></table></figure></p>
+<p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</div></pre></td></tr></table></figure></p>
+<h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>不过<code>for in</code>的话，为什么说遍历对象比较多，其中一个除了好写<del>（打死吧这人）</del>，还有一点它只能用来遍历有key或者说是个index的东西，比如数组，它只能读到数组的index，那对象的话就直接读到键值咯。而且有一点的是，你读数组，<strong>读出来的index是个string不是number</strong>。这个要记得，因为js这种弱类型的东西，如果索引相加就变成字符串相加了……<strong>（我幼儿园就会20以内加减法了，1加2等于12)</strong></p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>这个方法就不是古老的方法了，JS(ES5)版本的时候的，针对数组的一个方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.forEach(<span class="function">(<span class="params">i</span>)=&gt;</span> &#123;&#125;)</div></pre></td></tr></table></figure></p>
+<p>这种遍历的话，你遍历完直接能把数据处理掉最好，因为如果不是的话就麻烦了…它并不是一个开放的遍历，而是借用的闭包函数做的遍历。可以看成是<code>arr.func()</code>，它是一个数组方法，传进去一个<code>callback</code>，那就厉害了啊，闭包一个特点就是保护变量避免污染啊，变量保护是双向的啊…进得去出不来… （所以我的微信小程序openradio有用到计数器的时候不敢用这个，而且这个方法也是针对数组才能用的）</p>
+<h3 id="for-of"><a href="#for-of" class="headerlink" title="for..of"></a>for..of</h3><p>这是ES6的新东西，它比<code>for in</code>遍历的更多，没有<code>for (;;)</code>复杂，对比<code>forEach</code>它是开放的不是闭包，也就是那些条件控制流什么的都可以操作。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr)</div></pre></td></tr></table></figure></p>
+<p>可是不止，好像还可以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> <span class="string">'colmu'</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//'c'\n 'o'\n 'l'\n 'm'\n 'u'\n</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>不过它不能遍历对象！不能遍历对象！不能遍历对象！而且错误信息<code>TypeError: str[Symbol.iterator] is not a function</code>。所以这里我不行不BB了。</p>
+<blockquote>
+<p>所有实现了[Symbol.iterator]接口的对象都可以被遍历。</p>
+</blockquote>
+<h3 id="for-in-和-for-of-对比"><a href="#for-in-和-for-of-对比" class="headerlink" title="for in 和 for of 对比"></a>for in 和 for of 对比</h3><p>一个栗子就能锤到头皮发麻<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">// 0,1,2,3,4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//6,6,4,2,8</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h3><p>光说区别不行，我要讲怎么用！</p>
+<p><del>万能膏药<code>while</code></del> （不对走错片场…）</p>
+<p>万能膏药<code>for (;;)</code>：这是怎样都能用的，不过就是长了点，但是定义细了多。</p>
+<p>数组专利<code>forEach</code>：数组的方法，只能用在数组。</p>
+<p>能用在数组的：<code>for</code>, <code>forEach</code>, <code>for in</code>, <code>for of</code></p>
+<p>能用在找头的：<code>for in</code></p>
+<p>只要支持[Symbol.iterator]要什么找什么的：<code>for of</code></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ES6对象遍历]]></title>
+      <url>/2017/02/28/object-traversal/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>花了几天时间都在探究ES6，为了实现对象遍历，一个头两个大。</p>
+</blockquote>
+<p>最新超想玩《尼尔：机械纪元》，被那种机械元素迷得死死的，故把最近正在写的博客主题融入机械风。另外我打算这次主题换个姿势来写，想用各种新鲜没尝试过的结构。于是……</p>
+<h3 id="作死起源"><a href="#作死起源" class="headerlink" title="作死起源"></a>作死起源</h3><a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app.js</span></div><div class="line">App(&#123;</div><div class="line">  <span class="attr">onLaunch</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">onShow</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">onHide</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  <span class="attr">globalData</span>: globalData</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>万恶之源就是微信小程序，通过执行App()传入一套<code>params</code>，然后能执行下面那些方法。这我就心底长毛了啊，我也想实现类似这样的执行方法。所以就搞。现在尝试了不知道多少种方法，成功率0%</p>
+<h3 id="谈一下ES6对象扩展-–-遍历对象"><a href="#谈一下ES6对象扩展-–-遍历对象" class="headerlink" title="谈一下ES6对象扩展 – 遍历对象"></a>谈一下ES6对象扩展 – 遍历对象</h3><p>先讲目的，我想这样然后<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">test(&#123;</div><div class="line">    first() &#123;</div><div class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'first 666'</span>)</div><div class="line">    &#125;,</div><div class="line">    second() &#123;</div><div class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'second 666'</span>)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>当然了无法执行，东西是读进去了，但是谁知道你想执行谁，就因为这个所以想到了对象遍历。好了</p>
+<h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><p><code>for in</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> params) &#123;</div><div class="line">        <span class="built_in">console</span>.log(i)      <span class="comment">//first, second</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><p><code>Object.keys()</code><br>我的处理方法是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">let</span> &#123;keys&#125; = <span class="built_in">Object</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> keys(sliv)) &#123;</div><div class="line">        <span class="built_in">console</span>.log(i)      <span class="comment">//first, second</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>结果跟第一种一样，下一个！</p>
+<h4 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h4><p><code>Object.getOwnPropertyNames()</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">let</span> a = <span class="built_in">Object</span>.getOwnPropertyNames(params)</div><div class="line">    <span class="built_in">console</span>.log(a)      <span class="comment">//[ 'first', 'second' ]</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;a.length;i++) &#123;</div><div class="line">        <span class="built_in">console</span>.log(a[i])    <span class="comment">//first, second</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>对象遍历讲完！</p>
+<h3 id="目的，我想执行"><a href="#目的，我想执行" class="headerlink" title="目的，我想执行"></a>目的，我想执行</h3><p>所以我想到的执行方法是这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    params.first()      <span class="comment">//first 666</span></div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>但是如果我这么执行的话<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> params) &#123;</div><div class="line">        <span class="keyword">let</span> func = sliv.i   <span class="comment">//undefined</span></div><div class="line">        func()</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>亦或者<code>sliv.i()</code>都是失败告终，所以我就看了一下<code>typeof</code>，这first这些的类型均为<code>string</code>。</p>
+<p>于是挖个坑记录一下，是否有办法可以遍历完对象之后执行掉对象内函数，我甚至连<code>new Object</code>都用过了……</p>
+<p>所以这篇的记录只是ES6中对象的遍历！</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[来搞一手关于Javascript对象继承]]></title>
+      <url>/2017/02/22/js-extends/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>小爝（知乎用户）：js里面什么都是对象，所以你看单身狗学这个语言学的老快了。</p>
+</blockquote>
+<p>就前几天看到的答案，觉得对啊！js这种边缘OP的语言，你说它没对象它是可以有的，你说它是面向对象语言它不是。<br>所以来研究一手关于JavaScript的继承。研究过程用一下typescript（这个真有对象了）<a id="more"></a></p>
+<h3 id="先看一下关于typescript的继承"><a href="#先看一下关于typescript的继承" class="headerlink" title="先看一下关于typescript的继承"></a>先看一下关于typescript的继承</h3><p>看一下ts的类<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Parent &#123;</div><div class="line">    name: <span class="built_in">string</span></div><div class="line">    age: <span class="built_in">number</span></div><div class="line">    <span class="keyword">constructor</span>(msg:string, age:number) &#123;</div><div class="line">        <span class="keyword">this</span>.age = age</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    sayHello() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;this.name&#125;</span>,now is <span class="subst">$&#123;this.age&#125;</span>`</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后来一手调用，全程感觉像在用<code>java</code><br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>)</div><div class="line">par.sayHello()      <span class="comment">//hello mike,now is 16</span></div></pre></td></tr></table></figure></p>
+<p><strong>答案我在terminal验证过的没问题！！</strong></p>
+<p>接下来尝试一下如果我走继承会是什么样，来一手继承<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Parent &#123;</div><div class="line">    name: <span class="built_in">string</span></div><div class="line">    age: <span class="built_in">number</span></div><div class="line">    <span class="keyword">constructor</span>(msg:string, age:number) &#123;</div><div class="line">        <span class="keyword">this</span>.age = age</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    sayHello() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;this.name&#125;</span>,now is <span class="subst">$&#123;this.age&#125;</span>`</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//Now extends.</span></div><div class="line"><span class="keyword">class</span> Son extends Parent &#123;</div><div class="line">    <span class="keyword">constructor</span>(msg, age) &#123;</div><div class="line">        <span class="keyword">super</span>(msg, age);</div><div class="line">    &#125;</div><div class="line">    sayHello() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">`hello I'm Son. next is my Parent's say`</span>)</div><div class="line">        <span class="keyword">super</span>.sayHello()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>来手调用验证结果<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>)</div><div class="line">sapi.sayHello()  <span class="comment">//hello I'm Son. next is my Parent's say\n hello peanut,now is 10</span></div></pre></td></tr></table></figure></p>
+<h3 id="该研究JavaScript的继承了"><a href="#该研究JavaScript的继承了" class="headerlink" title="该研究JavaScript的继承了"></a>该研究JavaScript的继承了</h3><p>先来看一下第一个例子翻译成ES5(JavaScript)是什么样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> Parent;</div><div class="line">&#125;());</div><div class="line"><span class="keyword">var</span> par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>);</div><div class="line">par.sayHello();</div></pre></td></tr></table></figure></p>
+<p>首先是建立了个函数，函数内再嵌套一层函数，然后通过内部的<code>prototype</code>添加一个方法，最后返回整个父函数。<br>燃鹅在这个函数内部已经做了一次叫“原型链继承”的事情了。就是从父级，或者说从其他原型来指向到继承的实例来达到元素一并继承，这样我要实现后面的实例的时候就要连带前面的也一并执行了。</p>
+<p>然后第二个例子，多了个继承<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> __extends = (<span class="keyword">this</span> &amp;&amp; <span class="keyword">this</span>.__extends) || <span class="function"><span class="keyword">function</span> (<span class="params">d, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> p <span class="keyword">in</span> b) <span class="keyword">if</span> (b.hasOwnProperty(p)) d[p] = b[p];</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__</span>(<span class="params"></span>) </span>&#123; <span class="keyword">this</span>.constructor = d; &#125;</div><div class="line">    d.prototype = b === <span class="literal">null</span> ? <span class="built_in">Object</span>.create(b) : (__.prototype = b.prototype, <span class="keyword">new</span> __());</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">        <span class="keyword">this</span>.name = msg;</div><div class="line">    &#125;</div><div class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> Parent;</div><div class="line">&#125;());</div><div class="line"><span class="keyword">var</span> Son = (<span class="function"><span class="keyword">function</span> (<span class="params">_super</span>) </span>&#123;</div><div class="line">    __extends(Son, _super);</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">msg, age</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> _super.call(<span class="keyword">this</span>, msg, age) || <span class="keyword">this</span>;</div><div class="line">    &#125;</div><div class="line">    Son.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"hello I'm Son. next is my Parent's say"</span>);</div><div class="line">        _super.prototype.sayHello.call(<span class="keyword">this</span>);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> Son;</div><div class="line">&#125;(Parent));</div><div class="line"><span class="keyword">var</span> sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>);</div><div class="line">sapi.sayHello();</div></pre></td></tr></table></figure></p>
+<p>有点厉害，我先坐下来……</p>
+<p>先是构造了个链子，然后（那个是闭包污染处理嘛…）…… 说不清了……</p>
+<p>反正看子类，很明显在“Son类”结束前，有一个<code>(Parent)</code>，虽说ts对于类的处理都是一个大个的及时运行函数，但是”parent”运行时并没有带参数，而”Son”带了它的爹，如果我的理解的是对的的话，就是”Son”在运行的时候把”Parent”带着运行一次起到“继承”的效果。最后还是照原型链的理解。</p>
+<h3 id="关于JavaScript的其他继承"><a href="#关于JavaScript的其他继承" class="headerlink" title="关于JavaScript的其他继承"></a>关于JavaScript的其他继承</h3><p>还是因为我的爬虫小记中的现世界宝可梦数量及其名字的项目中，用到了<code>.call(this)</code>这个函数句。所以在想，是否可以使用构造函数走一波继承？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'this is a'</span>)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    a.call(<span class="keyword">this</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后调用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">b()     <span class="comment">//this is a</span></div></pre></td></tr></table></figure></p>
+<p>所以也是可以的。结束！</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[async-await 初尝试]]></title>
+      <url>/2017/02/17/async-await-first/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p>
+</blockquote>
+<p>想起去年第一个放在github的东西，就是获取课程然后下载课程视频的下载器。<br>然后今天，想到弄一个服务端版本。这样我可以无论作为移动端还是webapp端都能用到爬虫的数据了。所以就做了一次改造。<br><a id="more"></a><br>github地址：<a href="https://github.com/ColMugX/ImoocDownloader/tree/server" target="_blank" rel="external">ColMugX/ImoocDownloader at server</a><br>地址跟ImoodDownloader一样，放在同一个项目里。多开了一个server版本分支。归类方便吧！</p>
+<h3 id="ImoocDownloaderServer-请求样本"><a href="#ImoocDownloaderServer-请求样本" class="headerlink" title="ImoocDownloaderServer 请求样本"></a>ImoocDownloaderServer 请求样本</h3><p>请求之后样本大概是这样的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</div><div class="line">  <span class="string">"Info"</span>: &#123;</div><div class="line">    <span class="string">"title"</span>: <span class="string">"使用Struts2+Hibernate开发学生信息管理功能"</span>,</div><div class="line">    <span class="string">"author"</span>: <span class="string">"milanlover"</span>,</div><div class="line">    <span class="string">"job"</span>: <span class="string">"JAVA开发工程师"</span>,</div><div class="line">    <span class="string">"classTime"</span>: <span class="string">"2小时35分"</span>,</div><div class="line">    <span class="string">"classValue"</span>: <span class="string">"高级"</span>,</div><div class="line">    <span class="string">"classInfo"</span>: <span class="string">"简介：本课程通过学生信息管理功能的开发，来介绍Struts2和Hibernate的整合。主要内容包括：Struts2和Hibernate整合，用户登录模块和学生信息管理模块的设计和实现。通过本课程的学习，一定会使小伙伴们的Java Web开发技能更上一层楼。"</span>,</div><div class="line">    <span class="string">"classKn"</span>: <span class="string">"各位小伙伴，学习本课程前需要对\r\nStruts2和Hibernate的基础知识有所了解。"</span>,</div><div class="line">    <span class="string">"classWh"</span>: <span class="string">"1、掌握Struts2和Hibernate的整合开发\r\n2、能够使用Struts2+Hibernate独立开发信息管理类的项目，进行数据的增删改查。"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"Video"</span>: &#123; ... &#125;</div></pre></td></tr></table></figure></p>
+<p>解析完采用json格式进行输出，这是app最好的数据来源方式有木有！所以这样就更方便做APP了。而且这估计也是我第一次正式后端入门吧。<br>至于imoocdownloader这个名字，随便吧毕竟不能算是很好的作品，所以不重新起名字了。</p>
+<h3 id="小谈ES6和ES7"><a href="#小谈ES6和ES7" class="headerlink" title="小谈ES6和ES7"></a>小谈ES6和ES7</h3><p>node更新到了v7.4，毋容置疑ES2016也就是顺势ES7也得到支持了，对于js或者说nodejs这种全靠异步吃饭的服务端有时候也是个很大的问题。<br>js是很经典的函数式语言，至少我这么觉得。函数式编程自然逃不过回调地狱…再加上nodejs这种非阻塞多并发的操作方式有时候确实是一种难题。（我的爬虫小记项目中的宝可梦基本数据爬虫<strong>已经是车祸现场</strong>了。）</p>
+<p>按道理说，并没有ES6和ES7这种称呼，ESX最多只延续到了ES5。因为从ES1~ES5实际上都是ECMA-262的版本。根据百度百科</p>
+<blockquote>
+<p>ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。</p>
+</blockquote>
+<p>而到了ES6并不是叫ES6了，ECMA开始使用年份来命名，比如<code>ECMAScript 2015</code>，和<code>ECMAScript 2016</code>。1到5只是因为编号太长加上该编号一直在迭代。实际上该标准里面有两个语言，但渐渐的由于微软各种不给看好和JavaScript实在名声太大，所以变成了ES-262的扛把子。到了es2015我觉得已经变成一种跟JavaScript关系不大的语言了。虽然还有种<strong>“如果es6取代了js，那么就把es6改名为js”</strong>的说法。不过也不是不可行~</p>
+<p>而ES6增加的内容和改变的内容实在太多了。多了类型的定义方式不再需要下划线约定俗成；简单的括号函数取代闭包函数臃肿的写法（不过括号函数不存在this，以后有机会掰扯。以前不懂事以为反正都一样，之后在微信小程序吃尽苦头）；引入了类的定义再也不需要被es5使用者各种邪魔化（在es6之前我唯一懂的es5对类的定义写法就是<code>new object()</code>）。</p>
+<p>其实看到了es6之后，我就在后悔为什么当时不好好使用typescript和使用ts，这样的话到es6普及时我也可以成为扛把子了（逃。</p>
+<p>所以ES6和ES7的说法，应该是因为ES5被叫顺口了，再说ES2015确实太长，那么顺位下来叫ES6也行，反正都懂就行了。</p>
+<p>而ES2016不比ES2015，TMD竟然就只加入了一个能用的特性：<code>async-await</code>。</p>
+<h3 id="浅谈promise-和-async-await"><a href="#浅谈promise-和-async-await" class="headerlink" title="浅谈promise 和 async-await"></a>浅谈promise 和 async-await</h3><p><code>promise</code>是es6的特性，<code>async-await</code>是es7的特性。前者在es6的学习中被我直接忽视了…觉得用不到而且不知道怎么用。但是在async出现之后，意识到promise的作用，而且我认为他们才是天造地设，缺一不可。<br>es6时代的时候据说也是邪魔写法很多，使用promise解决同步问题，再到后面有Generator函数的说法。最后都并不理想。毕竟语言这东西，如果有原生支持肯定是再好不过了。就跟Android一样，如果原生安卓在这片大陆上能正常使用的话体验肯定比现在任何XUI舒服。</p>
+<p>作为异步程序同步处理，async/await也有矫情的地方，后者只能出现在有前者的上下文中，单独不可使用。而await只能用在promise的函数上面，用在其他函数上也行只不过没作用，还是瞬发还是异步。</p>
+<h3 id="为什么需要P-A-，我用在哪里了"><a href="#为什么需要P-A-，我用在哪里了" class="headerlink" title="为什么需要P/A+，我用在哪里了"></a>为什么需要P/A+，我用在哪里了</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> msgGet = <span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</div><div class="line">        request.get(url, <span class="function"><span class="keyword">function</span>(<span class="params">err, res, body</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span> (err) <span class="keyword">return</span> reject(err);</div><div class="line">                resolve(body);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>首先在查询那部分已经使用到了，因为异步的关系，文件内所有函数几乎都是在同一时间请求（高并发），所以这就导致可能有某种情况：<strong>劳资TMD等着第一个函数执行完得到个值用在第二个函数中计算，等第一的数据准备就绪的时候，第二的老人家竟然告诉我我早在1s前已经完成工作了。请问你拿什么在完成工作！</strong><br>所以就这样，在请求的数据还没到的时候，下面早早把空值传入下一步的操作中了，自然什么都没有，毕竟传值这工作比请求好完成。所以这就体现到需要同步解决的重要性了，“你必须要等你前面的人进去之后你再进去，不能插队！”</p>
+<p>而且，虽然new了，这是一个Promise对象，但是它可以直接去到值，直接取出resolve。不过怎么说，看下面：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fi = <span class="keyword">await</span> msgGet(url);     <span class="comment">//得到msgGet(url)的值</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">await</span> msgGet(url)); <span class="comment">//输出Promise &#123;&lt;padding...&gt;&#125;</span></div></pre></td></tr></table></figure></p>
+<p>通过变量定义之后，获取的值是可以进一步使用的，可以丢入下一个函数进行下一步工作。不需要<code>.then()</code>。但是如果要它直接打印出来就不可能了！因为上面已经说了，这是一个对象并不是一个可直接使用的数值。只有其他函数可以直接get到对象的内容，而没办法直接显示。需要像第二种的方式只能是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fi.then(<span class="function">(<span class="params">m</span>)=&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(m);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>这样操作才能得到真正里面的东西。take it off。不过这样也就依然跌入回调地狱…<br>而到了视频地址解析那部分的时候，由于需要去请求视频地址，同样又出现了相同的情况。但是调用我是在查询的位置调用，在这里<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app.js</span></div><div class="line">    allMsg[<span class="string">'Info'</span>] = classData;</div><div class="line">    allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</div><div class="line">    allMsg[<span class="string">'vidic'</span>] = viDic;</div></pre></td></tr></table></figure></p>
+<p>如果我不是把视频数据向前传，而是在里面直接调用操作的话。就第一次尝试那样：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> vidInfo = getVideoUrl(viDic);</div><div class="line">allMsg[<span class="string">'Info'</span>] = classData;</div><div class="line">allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</div><div class="line">allMsg[<span class="string">'video'</span>] = vidInfo;</div></pre></td></tr></table></figure></p>
+<p>反正差不多吧我忘记了……到后面取值输出的时候就是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</div><div class="line">  <span class="string">"Info"</span>: &#123; ... &#125;</div><div class="line">  <span class="string">"video"</span>: &#123;<span class="built_in">Promise</span> &#123; &lt;padding...&gt; &#125; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>什么都取不到玩腿毛？<br>所以后来就抖了个小聪明，把整理完的视频信息往回传，在前面<code>.then()</code>操作之后取出真实数据再去请求，再得到数据再<code>.then()</code>一次，获得所有真实数据再反馈出来。得到现在要的所有数据。最后一步 send到express。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">msg.then(<span class="function">(<span class="params">data</span>)=&gt;</span> &#123;</div><div class="line">    <span class="keyword">var</span> s = &#123;&#125;;</div><div class="line">    <span class="keyword">if</span> (!data[<span class="string">'err'</span>]) &#123;</div><div class="line">        <span class="keyword">var</span> vidInfo = getVideoUrl(data[<span class="string">'vidic'</span>]);</div><div class="line">        vidInfo.then(<span class="function">(<span class="params">v</span>)=&gt;</span> &#123;</div><div class="line">            <span class="keyword">let</span> s = &#123;&#125;;</div><div class="line">            s[<span class="string">'code'</span>] = data[<span class="string">'code'</span>];</div><div class="line">            s[<span class="string">'classID'</span>] = id;</div><div class="line">            s[<span class="string">'Info'</span>] = data[<span class="string">'Info'</span>];</div><div class="line">            s[<span class="string">'Video'</span>] = v;</div><div class="line">            res.send(s);</div><div class="line">            <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'request finish'</span>)</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>结束。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[仅Web来说，我可能更喜欢vue而不喜欢react]]></title>
+      <url>/2017/02/17/vue-react-likes/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>写写我自己根据自己对选型的想法</p>
+</blockquote>
+<p>为了不落后别人，也可以说我正在以一个人为目标想努力跟他齐平，最近在尝试入门react。</p>
+<p>知乎上面有个问题：<a href="https://www.zhihu.com/question/51690331" target="_blank" rel="external">为什么 react 还比 vue 火？</a>，这是我还在学习vue的时候看的。其中提到了vue和react各自的特点。<a id="more"></a></p>
+<h3 id="讲讲我对两个框架的表面理解"><a href="#讲讲我对两个框架的表面理解" class="headerlink" title="讲讲我对两个框架的表面理解"></a>讲讲我对两个框架的表面理解</h3><p>vue1.0我跳过了，因为我还是比较偏向学新不学旧（假设新比旧更好，Python除外），所以我直接接触到的是vue2.0。一上来就是接触<code>.vue</code>文件格式版本，首先给我的感觉就是，把HTML+CSS+JS全集合到同一个文件上，特别直观特别方便，而且这类前端框架都是一种“组件化”的思路。所以一个文件对应一个组件，各种DOM操作也按照组件化来进行。style部分除了支持css也支持less和sass的编译，但是并不原生支持我喜欢的stylus！<br>而且学习vue的时候刚好也在接触微信小程序，所以这两种的学习效果不相上下。通过在template里写DOM，然后第二部分的js/es来操作template，最后style加样式，很直观。<br>看过一眼vue1.0，感觉就像jQuery一样，通过对整篇幅的DOM进行操作，也有点让我想起了angularjs1.0的感觉，就是需要双向绑定。而我接触的2.0是已经支持了虚拟DOM，使用template渲染完之后再拿去原DOM比对修改。我也不知道快多少反正就很好用。</p>
+<p>react有大部分东西都同vue，而且它是我知道的东西中最先使用虚拟DOM的框架，但是我不清楚虚拟DOM是不是Facebook提出来的。我觉得它的特点就是，“万物皆为JS”。<br>他们可以把HTML语句直接写在JS里面，用到了Facebook提出推荐的JSX，就是可以在JS里面编写XML语句。通过中间翻译例如babel转成原生js。直到react native，他们甚至可以在js里定义css。而且它让我觉得他们的做法就是“一个方法即一个模块”。</p>
+<h3 id="为什么喜欢vue多过react，不包括react-native"><a href="#为什么喜欢vue多过react，不包括react-native" class="headerlink" title="为什么喜欢vue多过react，不包括react native"></a>为什么喜欢vue多过react，不包括react native</h3><p><strong>越热门越玄学</strong>，我也不知道为什么会这么觉得。<br>也许是react不适合我，或许是因为我太作。作为曾经的果粉，我本来应该踏踏实实学好objective-c然后踏踏实实学习iOS编程然后踏踏实实走上不归路的。半途爱上前端“能跨平台”的特性转而跳前端。但是跳完才知道，前端更新速度远高于苹果<code>Swift</code>的更新速度…</p>
+<p>所以我讲讲怎么就不喜欢react了…</p>
+<ul>
+<li><p><strong>脚手架各种迷茫</strong><br>一会又是yeoman通过创建生成器作为脚手架，一会是官方推荐的create-react，一会又是某个大牛自建github案例，一会又是以“守望先锋”英雄起的名字的dva-cli，<strong>甚至连路霸都来了</strong>！<br>可能说是对入门学徒的不友好，也可能是因为自己的相关技术不够吧。还没深入学习过webpack，用gulp好像有点力不从心？</p>
+</li>
+<li><p><strong>语言的使用困难（或者说自己作得要死）</strong><br>先入为主，由于接触苹果的swift比接触微软的typescirpt更快，所以会觉得ts很像swift并喜欢上使用ts来解决js的问题。可以说浪费机会，可以说自己不够努力，0.7时期入门的typescript，竟然2.1时代才意识到当时的无知。ts那种“有着swift影子又强类型的语言（或说超级类）来解决js的问题”让我特别喜欢。<br>所以遇到“万物皆JS”的react之后，在看到proptypes时，看了一会第一反应意识到，好像java的<code>interface</code>，然后第二意识是好像swift的<code>enum</code>。然后接下来才想到</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> <span class="title">Proptypes</span> &#123;</div><div class="line">    bar: foo;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后就好激动！然后就碰壁了…原因还是跟脚手架有关，因为各种各样的脚手架造成迷茫的状态。而且无论哪种脚手架都让我感觉找不到入口…再后来想到了要不自己摸清思路然后自己起一个自己顺手的脚手架算了…但是这样的话可能最后我什么都没学会…</p>
+<h3 id="为什么就喜欢vue了"><a href="#为什么就喜欢vue了" class="headerlink" title="为什么就喜欢vue了"></a>为什么就喜欢vue了</h3><p>首先就官方的脚手架已经很棒了呀！<code>vue-cli</code>基本包括了我能学会的不能学会的，很容易上手。<br>其次是创建工程后，思路很清晰。我知道我进去后能怎么做和该怎么做。<br>虽然不能用typescript，可是能用eshint和es6啊，大致差不多，不懂就顺手查一下就行了。</p>
+<p>所以react不是不学了，只是我觉得要延后一段时间，等我的vue也能进入工作模式，有空再补react吧！（说实话我是挺喜欢那种js模式的工作环境的）</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> vue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[一次知乎live感受 - 一线大厂如何面试]]></title>
+      <url>/2017/02/16/zhihu-live-yi-xian/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>怎么感觉太久没写博客，本地的程序都回档了…</p>
+</blockquote>
+<p>就在昨天参加了知乎里，offer100举办的一次live叫《一线大厂如何面试前端工程师》，我想这应该对即将参加工作的我有很大帮助。<br>确实讲到了为什么一线大厂需要一二三四面，和面试大概需要问些什么，回答些什么。听完之后自己也做了思考，觉得现在的自己还是比别人差太多了。<br>以至于现在很迷茫，不知道怎么做。<a id="more"></a></p>
+<p>印象很深的一句话就是</p>
+<blockquote>
+<p>在简历上，有实践经历你写实践经历，没有你就写案例，连案例都没有的话，你只能写写心得。</p>
+</blockquote>
+<p>所以我在想，就我github这点东西，要死不死还没star，质量也不算高都是自己为了练习写着玩的。能不能算是案例… 而心得？又要怎样写呢？<br>难道要纸上谈兵，写一下我对vue，对react的看法和用法么？我要是能给大项目指指点点的话，也不至于连依靠这两个框架写点什么都写不出来吧。</p>
+<p>每每看到喜欢的工作都会自卑，甚至别人觉得我能胜任这份工作我都不敢提交简历……</p>
+<p>到底我踏入前端到底是不是对的，现在觉得自己有点邯郸学步了。而且也已经知道，<strong>网页设计和前端工程完全是两回事！</strong></p>
+<p>选择学习前端之前学的是iOS开发，读OC读得很认真，同时也喜欢js因为js很自由。到后来接触到nodejs之后才发现，原来js可以这么玩！</p>
+<p>而且通过js可以开发类似于<code>react native</code>这样的通过js翻译器来接近原生开发手机应用，而且跨平台；也可以像<code>ionic</code>一样，通过html+css+js进行封装制作成混合应用。也许当时最吸引我的点就是“可以跨平台”这点了吧。</p>
+<p>从第一次接触计算机语言开始，就觉得指令式的语言好难，小时候参加过奥数信息学的培训用的是<code>pascal</code>，到后来<code>java</code>入门，为了学习基础的算法通过<code>C</code>语言来入门。在学习java的时候基本上都是按照教程，来一句打一句，很多都不理解，一直到继承和对象就直接懵成狗。后来渐渐有所理解还真的是C语言学习中发现的。所以那个时候我也深信C语言是语言入门最好的语言。</p>
+<p>至于自己为什么说语言学习能力挺差的，就是我自己称之为“古老而传说的邪教语言”——<code>C++</code>。这是我接触的语言中，连入门都没办法理解的语言。去年尝试学习一下hello world，依然被拒之门外，现在害怕极了，不敢再靠近…（至于新邪教语言我想不用说出来都知道我会觉得是JavaScript，准确说是<code>ECMAScript 2015</code>，太多大牛把看起来简单的语言各种按CPP的套路妖魔化了。）</p>
+<p>到最后主讲人可能也是为了给主办方拉点流量和客户吧，建议在场的人注册100offer，于是我也去100offer的网站看了一下。噢！竟然还支持Github和LinkIn登陆接入，我想这个平台真的是为工程师而生的。</p>
+<p>然而，<strong>我在注册的过程中产生的满满的挫败感……</strong></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 吹水 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[自己造轮子！——Syuanpi.css]]></title>
+      <url>/2017/02/13/Syuanpi-css/</url>
+      <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css" target="_blank" rel="external">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p>
+<p>说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！</p>
+<h3 id="为什么要出这东西…"><a href="#为什么要出这东西…" class="headerlink" title="为什么要出这东西…"></a>为什么要出这东西…</h3><a id="more"></a>
+<p>在知乎看了一段时间了认识了kpi这东西，觉得这东西好坑啊233，导致我现在觉得kpi的意思就是：有现有轮子不要用！不管怎样自己用的东西能做成轮子就给它做成轮子！然后再用自己的轮子！然后kpi就啪啪啪的往上走！不过这库子我的出发点还是想把我原来弄的一些基础的动画归类起来，加上自己比较会常用的操作封装起来，仅此而已。<br>在知乎学习的过程，就有一个关于没工作经验然后怎么面试的问题。就有提到关于自己开源自己的代码，不是不负责任的像托管作业一样把乱七八糟的东西放上去然后就说“噢！劳资也有开源”这样，至少要有一个给人一种便捷操作，要有头有尾，还要会写文档，不会写给个README也行。然后我也没经验，就听话这么做了…</p>
+<h3 id="它是个什么东西…"><a href="#它是个什么东西…" class="headerlink" title="它是个什么东西…"></a>它是个什么东西…</h3><p>好了说回来我的东西~ Syuanpi意思很简单，我喜欢它日后可以炫得一批233。但是它并不炫，而是一些很基础很基础的动画用法。不过，一些稍微认真的网站不就要点轻转场就行了嘛。比如我觉得博客挺认真的，但是没有转场动画又觉得好干燥，所以我的大部分动画起始点都是基于在自己博客上面用。而且动画的过程速度和位置全靠目测！不会计算也是硬伤呀…用的是stylus，不知道为什么总觉得那个被那个绿色的长的 ∮ 撩到了，然后就这么用了。<br>认认真真做作业，不要搞什么大新闻。就像标题说的，针对自己脑洞的产物。不过由于是自己第一次比较成型的“自己的作业自己做”，我还是好高兴的。如果有人愿意给star就更好了，还没体验过被5个star砸死是什么感觉呢~（不贪心的好孩子~）<br>嗯！该讲说明书了！大份说明书在GitHub的头页README.md，所以就不讲了！</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 小作坊 </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> Syuanpi </tag>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[更新全局NPM的所有可更新包]]></title>
+      <url>/2016/12/09/update-npm-packages/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>工具比本体好玩系列……</p>
+</blockquote>
+<p>今天在通过<code>vue-cli</code>创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。<br>然后发现，项目内更新就<code>npm update &lt;name&gt;</code>就更新了，全局好像不知道怎么弄。然后就自作聪明的<code>npm update -g vue-cli</code>（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”<br>事实证明是能用的！<code>vue-cli</code>更新好了。<br>但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了<br>于是查了一下，说不定日后还得用，做个记录。<a id="more"></a></p>
+<h3 id="通过npm的cli更新"><a href="#通过npm的cli更新" class="headerlink" title="通过npm的cli更新"></a>通过npm的cli更新</h3><p>后来在某个同性交流平台sf找到了，说<code>npm</code>在<code>2.6.1</code>之后有一个代码叫<code>npm install -g</code>。可以升级全部包。<br>然后我试了一下。</p>
+<blockquote>
+<p>eisdir EISDIR: illegal operation on a directory, read<br>npm ERR! eisdir This is most likely not a problem with npm itself<br>npm ERR! eisdir and is related to npm not being able to find a package.json in<br>npm ERR! eisdir a package you are trying to install.</p>
+</blockquote>
+<p><strong>？？？</strong>我有一句MMP*******</p>
+<p>先查找npm 有多少包需要更新吧，命令是<code>npm -g outdated</code>，这个就正常了。<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Package</span>           Current        Wanted  Latest  Location</div><div class="line">cordova             <span class="number">5</span>.<span class="number">4</span>.<span class="number">1</span>         <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>   <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>  </div><div class="line">egret             MISSING         <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>   <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>  </div><div class="line">ionic       <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>-beta.<span class="number">23</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">0</span>-beta.<span class="number">3</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">14</span>  </div><div class="line">ios-sim             <span class="number">5</span>.<span class="number">0</span>.<span class="number">6</span>        <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  </div><div class="line">npm                <span class="number">3</span>.<span class="number">3</span>.<span class="number">12</span>         <span class="number">4</span>.<span class="number">0</span>.<span class="number">5</span>   <span class="number">4</span>.<span class="number">0</span>.<span class="number">3</span>  </div><div class="line">typescript          <span class="number">1</span>.<span class="number">8</span>.<span class="number">9</span>         <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>   <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>  </div><div class="line">typings             <span class="number">1</span>.<span class="number">3</span>.<span class="number">3</span>         <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>   <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>  </div><div class="line">webpack            <span class="number">1</span>.<span class="number">13</span>.<span class="number">3</span>        <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span>  <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span></div></pre></td></tr></table></figure></p>
+<p>然后我又自作聪明了一下，<code>npm update -g</code><br>然后依然是卡了一下，然后就读条……<br>然后就全部更新完成。</p>
+<h3 id="通过npm-check"><a href="#通过npm-check" class="headerlink" title="通过npm-check"></a>通过npm-check</h3><p>其实还看到了一种方法，是在终端里面的GUI工具，可以直观看到哪些需要更新然后可以顺便更新掉<br>当然需要安装，<code>npm-check</code></p>
+<blockquote>
+<p>npm install -g npm-check （mac宝宝们别忘记sudo）</p>
+</blockquote>
+<p>检查npm包的状态:</p>
+<blockquote>
+<p>npm-check -u -g</p>
+</blockquote>
+<p>然后就移动光标来选择和操作。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> NodeJS </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[前端水深JS玄学 —— 尝试后端框架Hapi]]></title>
+      <url>/2016/12/09/nodejs-hapi/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>Hapi?可我一点都happy不起来…</p>
+</blockquote>
+<p>老规矩老套路：<a href="https://hapijs.com/" target="_blank" rel="external">链接在这</a></p>
+<h3 id="什么是Hapi"><a href="#什么是Hapi" class="headerlink" title="什么是Hapi"></a>什么是Hapi</h3><p>当<code>Node.js</code>用来做后端的时候，后端框架在我听说过的就三个：<code>Express</code>、<code>Koa</code>、<code>Hapi</code>。<br>超喜欢<code>Koa</code>，不过真的，能力有限，那些我没见过的语法我没了解过所以真的不懂，但据说是个超轻可玩性超高的框架，哎好可惜技不如人。例如那个<code>yield</code>，是个<code>python</code>的产物，但是我py真的不精，所以…我有一句妈卖批我现在就要讲。<a id="more"></a><br><code>Hapi</code>同样也是一个后端框架，而且它建立一个App很简单，就这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Hapi = <span class="built_in">require</span>(<span class="string">'hapi'</span>);</div><div class="line"><span class="comment">// Create a server with a host and port</span></div><div class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> Hapi.Server();</div><div class="line">server.connection(&#123; </div><div class="line">    <span class="attr">host</span>: <span class="string">'localhost'</span>, </div><div class="line">    <span class="attr">port</span>: <span class="number">8000</span> </div><div class="line">&#125;);</div><div class="line"><span class="comment">// Add the route</span></div><div class="line">server.route(&#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>:<span class="string">'/hello'</span>, </div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span> (<span class="params">request, reply</span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> reply(<span class="string">'hello world'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// Start the server</span></div><div class="line">server.start(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">throw</span> err;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Server running at:'</span>, server.info.uri);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="Hapi有哪些不一样"><a href="#Hapi有哪些不一样" class="headerlink" title="Hapi有哪些不一样"></a>Hapi有哪些不一样</h3><p>第一眼看起来是超直观，跟<code>Express</code>还是有很大区别的。<br>首先跟直观看到不同的就是，<code>Hapi</code>require之后没有<code>var app = hapi()</code>类似这样的东西，而是重新实例化了一个<code>server</code>，<br>然后用这个实例化出来的<code>server</code>定义接口啊，路由啊。然后通过<code>server.start</code>来启动服务。清新脱俗……<br>另外通过这篇<a href="http://ourjs.com/detail/5490db1c8a34fa320400000e" target="_blank" rel="external">Node.js 框架比较: Express vs. Koa vs. Hapi</a>可以看到，在REST中，<code>Hapi</code>是这么处理的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">server.route([</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'POST'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Post item'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'PUT'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Put item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'DELETE'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Delete item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/'</span>,</div><div class="line">    <span class="attr">handler</span>: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Hello world'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p>就特别喜欢这样的直观的东西，我记得在知乎看到过一个大手说过：代码是给人看的，顺便机器也看得懂而已。这样看起来就特别舒服不会有点怪怪的。所以我就喜欢上这个框架了。<br>不过，<strong>这个框架的文档实在太少了！</strong>脑子不怎么发达的人真是不知道怎么玩。另外，我怎么看不到社区……而且据说这个框架更适合大型的项目。<br>其实看了官方的英文教程之后，就想，现在就只要加入<code>&#39;use strict&#39;;</code>就可以使用es6么，不需要babel转成es5？我也不知道现在有多少浏览器已经会看es6了。</p>
+<p>也没深入的学习，因为前端还没学好呢…先看一眼日后再挠个坑学习吧。（其实是对于菜鸟来说还是<code>Express</code>+<code>Typescript</code>更适合我…）</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> NodeJS </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[扣肉小记（五）—— 你的名字。]]></title>
+      <url>/2016/12/02/Korou5/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>我早已不记得你的名字，但我记得我喜欢你。</p>
+</blockquote>
+<h3 id="这是一篇不一样的“扣肉小记”"><a href="#这是一篇不一样的“扣肉小记”" class="headerlink" title="这是一篇不一样的“扣肉小记”"></a>这是一篇不一样的“扣肉小记”</h3><p>　　<strong><em>《你的名字。》，记不起“你的名字。”</em></strong><br>　　这次的音乐是这个：</p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=426881503&auto=0&height=32"></iframe><br>（一共8分钟）<br>　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。<br>　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。<br><span style="color:#a5a5a5">　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。</span> <a id="more"></a></p>
+<h4 id="一次未知的身体交换，换来未知的迷惑"><a href="#一次未知的身体交换，换来未知的迷惑" class="headerlink" title="一次未知的身体交换，换来未知的迷惑"></a>一次未知的身体交换，换来未知的迷惑</h4><p>　　已经不知道如何形容心情。<br>　　可能是因为三叶向往大城市，也有可能是神灵听到了三叶的呼声。他说他想变成东京的帅哥，结果在梦里真的成了。<br>　　但是那个梦又好像是真实的，就这么半梦半醒的状态下，跟东京另外一个帅哥泷交换了身体。<br>　　于是，就有了“一周有几天会交换身体，各自要过对方的生活而且不能被发现”的体验。</p>
+<blockquote>
+<p>- “你怎么打这么多份工啊！”<br>- “还不是因为你乱花钱！”</p>
+</blockquote>
+<p>　　就这么互相嫌弃，隔着两个世界小打小闹。为了不露馅，他们彼此在对方手机留下了日记。并通过笔来互相传达自己想说的话。<br>　　但是，虽说是半梦半醒，但梦毕竟是梦，而且梦一醒，就会逐渐淡忘梦里的内容。<br>　　就在一天，三叶帮泷喜欢的女孩子促成了一次约会，而泷带着三叶的身体去见了一次神明……</p>
+<blockquote>
+<p>- “他们现在一定在一起了吧”<br>  - “我真的是在做梦吗”</p>
+</blockquote>
+<p>　　就这么一次偶然的情况，梦醒了……这一醒，或许就要失去什么……<br>　　于是泷决定要去找三叶，三叶也想去找泷，就这样，一个人去了小镇，一个人去了城市。就在这个时候</p>
+<p>　　<strong>三叶遇到泷的时候，泷并不认识三叶！<br>  　　而泷去找三叶的时候，才知道小镇三年前就毁了！</strong></p>
+<h4 id="三年前我不认识你，三年后我遇不到你"><a href="#三年前我不认识你，三年后我遇不到你" class="headerlink" title="三年前我不认识你，三年后我遇不到你"></a>三年前我不认识你，三年后我遇不到你</h4><p>　　满脑子都是“不可能”的泷尝试翻看手机里三叶留下来的日记，才发现…</p>
+<p>　　<strong>那 根本不存在</strong></p>
+<p>　　翻查三年前小镇陨石事件的泷，在死亡花名册看到了“宫水三叶”的泷，不相信这一切都是真的。但是看到了自己的手绳。<br>　　这是一场“三年前三年后”的梦…<br>　　后来泷想起了自己放在神坛的“口嚼酒”，和一叶的提示“那是三叶的一半”。于是泷决定去神坛，为了挽救三叶。</p>
+<blockquote>
+<p>- “既然是三叶的一半，那喝一口是不是能看到更多？”</p>
+</blockquote>
+<p>　　之后，泷才知道，这场跨越三年的邂逅：是三年前的三叶跟自己交换了身体，并去找过自己。而不知情的自己只留下了头绳。</p>
+<h4 id="你-叫什么？"><a href="#你-叫什么？" class="headerlink" title="你 叫什么？"></a>你 叫什么？</h4><p>　　泷借着三叶的身体回到了陨石坠落的那一天。从一叶得知宫水家的女性都会有这样的梦。但每一代都不信陨石会坠落。<br>　　急着挽救小镇的三叶用尽各种方法，而且总有一种奇怪的感觉在驱使着她。<br>　　三叶借着泷的身体，看到了三年后的小镇：<strong>那是一片废墟。</strong><br>　　<br>　　总有一股奇怪的感觉，驱使着他们。而且他们都想到了同一个地方：神体</p>
+<blockquote>
+<p>- “互相留下自己的名字吧，我不想梦醒了，忘记了。”</p>
+</blockquote>
+<p>　　他们在湖中心，隔着三年时空相遇了。身体换回来了，他们的对话机会时间，只有黄昏。<br>　　于是，泷在三叶手上留下了“だすき”</p>
+<p>　　而三叶 <strong>只在泷手上留下了“み”（みつは）的“-”</strong></p>
+<blockquote>
+<p>- “只要记住你的名字，不管你在世界的哪个地方，我一定会去找你。”</p>
+</blockquote>
+<h4 id="我找了你五年，而你却等了我八年"><a href="#我找了你五年，而你却等了我八年" class="headerlink" title="我找了你五年，而你却等了我八年"></a>我找了你五年，而你却等了我八年</h4><blockquote>
+<p>- “真的不会忘记了，真的不会了！三叶！我记住了！みつは！”<br>　“等一下！你叫什么！你叫…什么… 我 为什么在这里…”</p>
+</blockquote>
+<p>　　为了“不知道”的泷找了“不知道”，一直找一直找，直到大学毕业。<br>　　三叶 为了泷 救了镇上的人，顺利读完高中大学，也毕业了，来到了东京。</p>
+<p>　　为了寻找自己的“不知道”的两个人，就算擦肩而过也不知道吧……</p>
+<p>　　但是他们彼此有感觉，他们知道，谁是他们要找的人。</p>
+<blockquote>
+<p>- “我 好像在哪里见过你？”<br>- “我也是”<br>– “君の名前は？”</p>
+</blockquote>
+<p>—— “我找了你五年，谢谢你等了我八年”</p>
+<p>终于，在同一个时空相遇了……</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 扣肉小记 </tag>
+            
+            <tag> 看片子 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[强迫症从娃娃抓起 - 编程猫体验]]></title>
+      <url>/2016/11/26/bian-cheng-mao/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>不知道我写了这个之后，会不会加大我到这家公司的机会指数233333</p>
+</blockquote>
+<h3 id="刚看到这个网站的时候"><a href="#刚看到这个网站的时候" class="headerlink" title="刚看到这个网站的时候"></a>刚看到这个网站的时候</h3><p>其实我是在逛CNODE的时候发现，这家公司在招人，正想找工作的我当然会点进去看一下啊<br>CNODE上面找的，毋庸置疑了就是<code>Node.Js</code>工程师了，然后我就点进官网看，第一眼看的时候我的反应是<br>“卧槽这什么卵…赛尔号么…”（不知道会不会被打死…）<br>然后我就拉到最下面有个加入我们（已经成习惯了，公司的招聘信息都会在footer），看到了有自己喜欢的工作，它是跳到拉钩网的。<br>后来发了简历之后发现，他们有一条要求：<strong>要通过他们的平台制作3个游戏</strong><br>一开始我是懵的，虽然我以前玩过<code>Egret</code>可是要我做游戏，害怕啊！<br>但是我还是去看了这个网站，发现这家网站做的其实是幼儿编程培训（没记错的话是7到15岁）<br>很新颖的题材，瞬间就喜欢了。（一瞬间想到了ios10的swift playground）<a id="more"></a></p>
+<h3 id="再了解这个网站的时候"><a href="#再了解这个网站的时候" class="headerlink" title="再了解这个网站的时候"></a>再了解这个网站的时候</h3><p>后来就想到了解一下这家公司吧。CNODE上面有一条要求是：要会打游戏，而且是老板要求的。<br>我就想…好神奇的公司，是不是公司内部炒鸡活跃，我好喜欢的就是能天天BB的公司（然后我看着别人BB<br>然后就去了解这家公司，发现两个创始人，都是从欧洲留学回来创业。厉害了，有种仰慕之心了。<br>接着就是，这家公司里面好活跃，而且好像每个人颜值超高，而且技术的一拨一拨的大牛（心里一直高潮了好么！）<br>接着再看到，下班后组队LOL…虽然这游戏不怎么玩了（娜美中单出火炮没人愿意跟我玩…），但是还是觉得挺有意思的。<br>还有就是，工作环境什么的都好棒，好自由。<br>于是作为美服无段！国服白银的我决定还是试试（因为S7了…）超想尝试融入这种乱七八糟的群体…</p>
+<h3 id="接触到这个网站之后"><a href="#接触到这个网站之后" class="headerlink" title="接触到这个网站之后"></a>接触到这个网站之后</h3><p><strong>全！程！高！潮！</strong><br><strong>为！什！么！我！出！生！那！么！早！</strong><br>教程很棒，编辑器也很棒。虽然说<code>Egret</code>也有一个不用编程就能写代码的游戏编辑器。<br>但怎么说，编程猫要给的一个思路更清晰。<br>比如最底下那个场景编辑器，分为场景（手机），背景和对象（雪碧？）<br>而且接触了一会就突然意识到一个知识点：<strong>编程猫这样的做法已经体现了“一个对象一个类”的想法了。</strong><br>虽然我不知道小朋友能不能意识到，但是算是解决我以前学习游戏的一个难点了。</p>
+<p>每一个操作对象都使用一个<code>class</code>，然后在这个<code>class</code>里定义这个对象的属性和方法<br>再通过母<code>class</code>来进行调用（通过那个“点击开始按钮”受到的启发）。<br>然后你切换其他的素材（角色）就又是一块空白的代码编辑器。</p>
+<p>然后有一个“接收广播”的设定，这不就是带参回调么！（啊啊啊啊兴奋啊！（全程高潮脸<br>每一个控制流也很清晰，而且变量和对象属性都变成了一个可以拉选的组件。<br><strong>更6的是控制流竟然也包含了<code>continue</code>和<code>break</code>！</strong><br>然后还有个<code>settimeout</code><br>真的好玩<br>不过我想写一个有物理引擎的游戏，发现边界控制控制不到，不知道是不是因为我变量不够还是BUG？</p>
+<h3 id="其实我是很认同“从小还是学编程”这个想法的"><a href="#其实我是很认同“从小还是学编程”这个想法的" class="headerlink" title="其实我是很认同“从小还是学编程”这个想法的"></a>其实我是很认同“从小还是学编程”这个想法的</h3><p>真的佩服两位BOSS想到了这个。仰慕大大。<br>还是觉得，小孩子的学习接受能力真的好很多，特别是启蒙那段时间（上幼儿园那个时候<br>基本上那个时候求知欲很强，而且学什么都很快（我幼儿园的时候要学英语，到了小学的时候英语简直逆天。<i style="color:#e0e0e0;">卧槽别提我高中…</i><br>看到ios10同期退出的那个swift playground的时候，我其实是好想下载来玩一下，但是这个软件最低要求是ios10，只能望而却步了。因为ios10太丑了，而且我还是觉得ios9已经很棒了。</p>
+<h3 id="不管怎么说，本来为了找工作实际上也学习了"><a href="#不管怎么说，本来为了找工作实际上也学习了" class="headerlink" title="不管怎么说，本来为了找工作实际上也学习了"></a>不管怎么说，本来为了找工作实际上也学习了</h3><p>这不就是初衷么，学无止境其实。其实自己本来就菜鸡，还是想去活跃的公司顺便提升一下自己。没想到会因为面试前的题而变得这么兴奋。<br>总之，认真做3个另外的工程吧，还是有必要想一下的。因为想用心做嘛，真的挺希望加入的。</p>
+<p><strong>另外…我可能会安利一些小朋友来玩编程猫了，我想看看一些思维活跃的孩子如果让他接触编程，能力会到哪里</strong></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 实验室 </tag>
+            
+            <tag> 编程猫 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[扣肉小记（四）]]></title>
+      <url>/2016/11/25/Korou4/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>天气转凉…基本是条冻狗了<br>另外小嘀咕一句：有点想把“Rousy”重写了…</p>
+</blockquote>
+<p>　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）</p>
+<h3 id="最近干了个长得像个音乐播放器的微信小程序"><a href="#最近干了个长得像个音乐播放器的微信小程序" class="headerlink" title="最近干了个长得像个音乐播放器的微信小程序"></a>最近干了个长得像个音乐播放器的微信小程序</h3><a id="more"></a>
+<p>　　最近干什么，最近学的前端知识好多，每天都是百度和知乎（暂时不需要用到Google系列），然后就是写了一个微信小程序(weapp)<br>　　反正到现在来说，<code>weapp</code>还是挺好玩的，而且那个<code>wxml</code>和<code>wxss</code>就理解成<code>html</code>和<code>css</code>就好了。然后那个<code>js</code>是用的ES6，身边有个大神honn哥，有问题他还是很愿意解答的，谢谢老板罩着！<br>　　然后写了个什么，写了个音乐程序，有个不愿意透露ID的妹妹她自己有个项目，就是“据她口述的盗链音乐播放器”，不过她是用swift写的，而且长得稍微挺像网某云音乐，但链子好像不是某云的…然后我就想那我也来写一个好了<br>　　然后就去看了她的链子，发现她的链子好像不能用了，然后我就自己找了一个某度的链子，能用。反正这些东西以后都开源了！开源大法好！先上个图！<br>  <img src="https://github.com/ColMugX/GitBed/raw/master/blog/weapp-openradio.gif" alt=""><br>　　但是尴尬的是，这套链子，<strong>不支持在线播放</strong>！卧槽这tm就尴尬了。链子拿下来之后，本地播放是可以的，在线播放是播放不了的。然后我就尝试用浏览器去点，点开之后并不是一个<code>html5</code>的<code>audio</code>而是直接<code>download</code>，代码长这样。<br>  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"songLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span>,</div><div class="line">  <span class="attr">"showLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　而且其实我有想过先down到本地然后在调用播放，后来想了一下，既然是小程序而且是个云端程序，这么玩占用的存储会不会就大了好多…现在只能另辟蹊径了。（为什么我想到了鹅厂…）</p>
+<h3 id="暂时没想到什么写的，来听音乐吧！"><a href="#暂时没想到什么写的，来听音乐吧！" class="headerlink" title="暂时没想到什么写的，来听音乐吧！"></a>暂时没想到什么写的，来听音乐吧！</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=412493379&auto=0&height=32"></iframe>
+
+<p>　　最近一直在听这首，其实去年就听过了，第一次听觉得很感触，虽说这首歌是TFBOYS的吧！但是我向来都是喜欢好音乐，至于谁唱的，只不过是借用了他的声音来表达歌曲的意义而已。<strong>（除了周杰伦！）</strong> <strong>（除了初音未来！）</strong>（为什么分开讲，因为伦哥的地位无可替代！）<br>　　而且应该是我觉得的tfboys的歌里面唯一一首能听的，歌词真的…不行了…</p>
+<blockquote>
+<p>我不完美的梦 　你陪着我想<br>不完美的勇气 　你说更勇敢<br>不完美的泪　 　你笑着擦干<br>不完美的歌　 　你都会唱<br>我不完美心事 　你全放在心上<br>这不完美的我 　你总当作宝贝</p>
+</blockquote>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 扣肉小记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[安利一个安装很久却冷板凳的编辑器]]></title>
+      <url>/2016/11/09/an-li-yi-ge-bian-ji-qi/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>顺带一提，Rousy开源了！可以点击最下面Rousy进入。日后再讲。</p>
+</blockquote>
+<p>最近除了改Rousy和Blank，就学习Vue和做微信程序最多了。<br>上次也提到了，微信小程序官方工具真的就是个工具，用起来真的是，想上天。<br>后来不是也换用Atom嘛，直到昨天，偶然用白鹭家根据VSC定制的<code>Egret Wing</code>…<br>卧槽我不行了！好爽！噢~扛不住了~要*了！<br>这个编辑器，不知道跟微信有什么PY交易，除了完整的代码提示，编写流畅完全无尿点。<br>更厉害的是，<strong>完！整！支！持！预！览！</strong><br>更邪门的是，<strong>可！以！创！建！工！程！</strong></p>
+<p>厉害了…害怕…都不用登陆了…</p>
+<p>不过我今天看了一篇知乎，腾讯自家的一个工程师演示小程序，他用的是Sublime Text<br>难道连腾讯都嫌弃他们家的开发工具了么…<a id="more"></a></p>
+<h3 id="讲讲Egret-Wings-3"><a href="#讲讲Egret-Wings-3" class="headerlink" title="讲讲Egret Wings 3"></a>讲讲Egret Wings 3</h3><p>其实前年就开始关注白鹭，当时没有编辑器，到后来出了wing。<br>现在wing的实验室版本都能上天了，功能特别棒，开发游戏都省了不少事。<br>而且我刚刚看了一下新建工程还有什么厉害的特殊建工程姿势。<br>看到了typescript web和nodejs typescript。然后新建玩了一下。<br>突然有种“解决了我多年心头病患”的感觉…</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 微信小程序 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Vue2.0学习记录（零）]]></title>
+      <url>/2016/11/06/vue-study-0/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>据说跟JQuery差不多但是比较6，感觉应该是Angular那类可以写webapp的东西，学习一下</p>
+</blockquote>
+<p>怎么说感谢尤老师和他的团队设计这么个，看起来有快感的东西，不过学得好不好我自己也不敢保证<br>这个是尤老师发的一个知乎专栏：<a href="https://zhuanlan.zhihu.com/p/20814761" target="_blank" rel="external">点此跳到专栏</a>（向来良心先发地址！）<br>(自从开了知乎，天天在沉迷学习…<a id="more"></a></p>
+<h3 id="说Vue2-0"><a href="#说Vue2-0" class="headerlink" title="说Vue2.0"></a>说Vue2.0</h3><p>毕竟我一直都是，学新不学旧。就跟<code>Ionic</code>一样，我直接学了<code>Ionic2.0</code>（妈的碰壁啊，碰到死了…<br>Ionic2.0用的是新的<code>Angular2.0</code>和<code>Typescript</code>，感觉TS这东西，因为我是先接触了<code>Swift</code>所以感觉两者太像了。甚至有种想无论什么东西都想用TS写然后让他翻译成JS去用就行了，比如一直老想用TS做node…然后毕竟自己菜没办法乱玩…<br>然后Vue2.0的话，稍微一看想起ES2015和上次看到的微信小程序。我记得Vue1.x的时候尤老师说过不想用虚拟DOM这东西，反正就是有好有不好然后不好更多那样子。不知道为什么Vue2.0就加入了虚拟DOM这么个东西…<br>按尤老师说：</p>
+<blockquote>
+<p>现在的渲染层基于一个轻量级的 virtual-DOM 实现，在大多数场景下初试化渲染速度和内存消耗都提升了 2~4 倍 (详见这里的 benchmarks)。从模板到 virtuel-DOM 的编译器和运行时是可以独立开来的，所以你可以将模板预编译并只通过 Vue 的运行时让你的应用工作起来，而这份运行时的代码 min+gzip 之后只有不到 12kb (提一下，React 15 在 min+gzip 之后的大小是 44kb)。</p>
+</blockquote>
+<p>反正就是好厉害了啦。比隔壁一样用虚拟DOM要效率高很多了啦</p>
+<h3 id="初次使用安装vue2-0"><a href="#初次使用安装vue2-0" class="headerlink" title="初次使用安装vue2.0"></a>初次使用安装vue2.0</h3><p>因为慢入坑，所以<code>vue-cli</code>这种脚手架都有了，我看他的归属是vuejs应该是官方工具了吧。<br>然后就是安装，要安装nodejs webpack 还有vue-cli<br>因为不是教学文档所以我就不说那么明白因为我大概都装了<br>创建一个工程大概就是<code>vue init &lt;要用的模板&gt; &lt;工程名称&gt;</code><br>默认是<code>webpack</code>或者<code>webpack-simple</code>前者是完整开发工程，后者更适合闹着玩<br>然后还有一个第三方很厉害的模板叫<code>egoist/vuepack</code>，已经实现了<code>electron</code>的支持。</p>
+<p>然后<code>npm run dev</code>就能运行起来了。<br>如果是<code>egoist/vuepack</code>要用<code>npm start</code>因为要启动electron</p>
+<h3 id="关于组件库，安利一下饿了么，对！就是那个送外卖的！"><a href="#关于组件库，安利一下饿了么，对！就是那个送外卖的！" class="headerlink" title="关于组件库，安利一下饿了么，对！就是那个送外卖的！"></a>关于组件库，安利一下饿了么，对！就是那个送外卖的！</h3><p>感觉这个送外卖的有点不务正业了啊！<br>一开始我还在想，他们这么做外卖不得亏死啊，怎么生命力这么顽强<br>后来才发现，原来他们是打着送外卖的旗号搞黑科技……</p>
+<h3 id="初见印象"><a href="#初见印象" class="headerlink" title="初见印象"></a>初见印象</h3><p>感觉第一次看到的时候还是觉得挺高潮的。<br>不错最近开的坑实在太多，加上自己还有小生活，坑简直填不完。<br>还tm无业游民…</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+            <tag> vue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[新主题测试完善中]]></title>
+      <url>/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>厉害咯我的Blank</p>
+</blockquote>
+<p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
+<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p>
+<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><img src="/Image/Blank-gray.jpg" alt="Blank-深空灰"></p>
+<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><img src="/Image/Blank-pink.jpg" alt="Blank-樱语粉"></p>
+<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><img src="/Image/Blank-green.jpg" alt="Blank-璐璐绿"></p>
+<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><img src="/Image/Blank-blue.jpg" alt="Blank-编不下去的蓝色"></p>
+<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><img src="/Image/Blank-red.jpg" alt="Blank-红红火火"></p>
+<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><img src="/Image/Blank-orange.jpg" alt="Blank-橙子一样的颜色"><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
+<h3 id="这个主题从写法上，比Rousy改善很多"><a href="#这个主题从写法上，比Rousy改善很多" class="headerlink" title="这个主题从写法上，比Rousy改善很多"></a>这个主题从写法上，比Rousy改善很多</h3><p>怎么来说，Rousy的话，是根据css然后全搬入stylus的，管理性能略差<br>但是Blank的话，我好像不知不觉用了stylus的用法，所以看起来应该…还是不简洁…<br>当然Blank只是半成品，至今只出生后第3天。（都是中午和大半夜，白天有课上）</p>
+<h3 id="新主题有没有什么新东西"><a href="#新主题有没有什么新东西" class="headerlink" title="新主题有没有什么新东西"></a>新主题有没有什么新东西</h3><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>
+<h4 id="好了新主题就挂三天吧，三天之后切回Rousy。"><a href="#好了新主题就挂三天吧，三天之后切回Rousy。" class="headerlink" title="好了新主题就挂三天吧，三天之后切回Rousy。"></a>好了新主题就挂三天吧，三天之后切回Rousy。</h4>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 小作坊 </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> Blank </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[分享一个DOM操作错误]]></title>
+      <url>/2016/10/30/fen-xiang-yi-ge-DOM-cao-zuo-cuo-wu/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>由于最近右下角的鱼不听使唤了，气得肺癌晚期了</p>
+</blockquote>
+<p>就Rousy嘛（卧槽我知道我知道我有夜生活的，还没写好，懒！）<br>本来想是简约风格的，结果听了一个所谓的半路泥腿子出身的设计师<br>再加上自己的主管思想受到影响，最后变成了一个“儿童主题”<br>但是我是希望能说是提供一个想法，我还是希望有人能拿我的主题高度定制的<br>比如头图，它毕竟开放了图片链接接口嘛</p>
+<h3 id="切正题，分享的事一个DOM关于class和id的问题"><a href="#切正题，分享的事一个DOM关于class和id的问题" class="headerlink" title="切正题，分享的事一个DOM关于class和id的问题"></a>切正题，分享的事一个DOM关于class和id的问题</h3><p>其实按道理说，才想起来这个错误，真的自己要检讨一下了<br>就前段时间，右下角那条很跳的鱼，本来是实现放回顶层和call出友情链接的作用（别！再！问！了！）<br>后来做了mobile适配之后发现，那条鱼怎么touch都不会返回顶层<br>后来一次快睡着的时候想到了，所以现在改了。<br>问题就是出在，<strong>id复用</strong>。<a id="more"></a></p>
+<h3 id="id跟class什么关系，怎么区分"><a href="#id跟class什么关系，怎么区分" class="headerlink" title="id跟class什么关系，怎么区分"></a>id跟class什么关系，怎么区分</h3><p>这个很基础的问题，哎妈的…<br><code>id</code>和<code>class</code>都可以用来给<code>css</code>定位置做样式表，也可以在<code>JQuery</code>做节点动作。<br>但是有不同<br><code>id</code>有唯一性，而且每一个节点只能有一个<code>id</code><br><code>class</code>没有，就是一个样式类的定义。而且一个节点可以存在无数个<code>class</code><br>所以这东西都做出潜规则了，<code>class</code>用来定义层叠样式表，<code>id</code>用来做操作<br>可是我犯的错误刚好就在这里</p>
+<h3 id="错误出现在哪"><a href="#错误出现在哪" class="headerlink" title="错误出现在哪"></a>错误出现在哪</h3><p>就是那个该死的mobile标题栏，由于强迫症而且还tm跟老罗那强迫症有点像<br>必须对称设计，音量键也要做两个Hih7#%&amp;T&amp;<em>gt38g2&amp;%</em>&amp;&amp;<em>%Y</em>HWdf<br>咳咳…所以左边那个menu item之后就把海豚加上去了<br><strong>（那两个的同行对齐我还调了特别久！）</strong><br>当然咯，直接右边的鱼也加了跟desktop一样的id名…<br>那死了啊，一页里面两个节点一样名字，认谁啊<br><strong>记住了！认最先看到的那个！</strong><br>那手机的sidebar比desktop的按钮靠前不知道多少，所以后面那个就失灵咯。</p>
+<h3 id="所以解决方法"><a href="#所以解决方法" class="headerlink" title="所以解决方法"></a>所以解决方法</h3><p>解决方法就是换名字咯……</p>
+<p>以上。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于微信小程序]]></title>
+      <url>/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>向腾讯大佬低头！</p>
+</blockquote>
+<p><strong>说在前面，你们这下可不能说我这博客天天吹水不讲东西了！</strong></p>
+<h3 id="说说这大佬又想干什么！"><a href="#说说这大佬又想干什么！" class="headerlink" title="说说这大佬又想干什么！"></a>说说这大佬又想干什么！</h3><p>怎么说，腾讯微信真的是野心挺大的，要把微信做成一个应用平台<br>谁还能想的起来微信当时只是定位为一个低流语音信息的即时通讯工具啊！<br>小程序怎么定义呢，就是一个在微信启动的App<br>不过归根到底还是个Web App<br>那这么说来其实也可以说是一个以微信做壳的App了，相对于隔壁那个叫Ionic的东西来说。<br>不过怎么说，这小程序应该也是依托公众号来实现的吧，我看它文档都是在公众号里面。<br>先上地址：<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474887501214" target="_blank" rel="external">下载链接</a><br>这开发工具原来就是一个chrome开发者工具，可能是因为加了小程序这么个东西，现在也有开发功能了<br>刚刚试用了一下，效！率！贼！差！（默默打开了Atom）<a id="more"></a></p>
+<h3 id="这东西大概怎么写怎么用"><a href="#这东西大概怎么写怎么用" class="headerlink" title="这东西大概怎么写怎么用"></a>这东西大概怎么写怎么用</h3><p>我粗略看了一下啊，这东西跟隔壁那些什么<code>angular</code>啊，还有<code>vue</code>啊什么都有点差不多，就是前后绑定然后做逻辑。<br>大概结构就是（不会用树形，随便看一下）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- /</div><div class="line"> - pages</div><div class="line">     - index</div><div class="line">         index.js</div><div class="line">         index.wxml</div><div class="line">         index.wxss</div><div class="line">     - logs</div><div class="line">         logs.js</div><div class="line">         logs.json</div><div class="line">         logs.wxml</div><div class="line">         logs.wxss</div><div class="line"> - utils</div><div class="line">     util.js</div><div class="line"> app.js</div><div class="line"> app.json</div><div class="line"> app.wxss</div></pre></td></tr></table></figure></p>
+<p><strong>这结果tm似曾相识啊！</strong><br>好了这就是个Web App，那讲一下那些文件干嘛的呗。<br>说到底还是个老biao子，js就不用说了（哎等下这东西好像还是得依托<code>NodeJs</code>啊，顺便说下我特别不喜欢<code>PHP</code>…）</p>
+<p><code>wxml</code>:是个什么，wxml其实就是xml了，只是有点特殊的xml，可以理解成就是我们做ionic那个html吧<br><code>wxss</code>:卧槽了就是这个wxss！卧槽！挑白了说就是个CSS！不过在像素定义有点不同。引用一下</p>
+<blockquote>
+<p>尺寸单位<br>rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。<br>设备    rpx换算px (屏幕宽度/750)    px换算rpx (750/屏幕宽度)<br>iPhone5    1rpx = 0.42px    1px = 2.34rpx<br>iPhone6    1rpx = 0.5px    1px = 2rpx<br>iPhone6 Plus    1rpx = 0.552px    1px = 1.81rpx</p>
+</blockquote>
+<p>所以官方说的是，<strong>“我们鼓励使用iphone 6 作为标准屏幕开发”</strong><br>原话是</p>
+<blockquote>
+<p>建议： 开发微信小程序时设计师可以用 iPhone6 作为视觉稿的标准。 注意： 在较小的屏幕上不可避免的会有一些毛刺，请在开发时尽量避免这种情况。</p>
+</blockquote>
+<p>（噢…是嘛…</p>
+<h4 id="另外最近在学Vue-js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。"><a href="#另外最近在学Vue-js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。" class="headerlink" title="另外最近在学Vue.js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。"></a>另外最近在学Vue.js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。</h4>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 微信小程序 </tag>
+            
+            <tag> 实验室 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[阴阳师真的是个很成功的游戏]]></title>
+      <url>/2016/10/15/Yinyangshi/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>别说了我的肝好疼…</p>
+</blockquote>
+<p>这游戏刚出的时候真的是满脸嫌弃<br>中国的游戏，和风的主题，中文的界面，中文的字幕，日语语音？？？日本声优？？？<br>网易本土游戏，日本的主题？好尴尬。。。<br>看到游戏之后第一反应就是，这游戏肯定又是网易的手游出口计划之一了<br>不过看到游戏被日方接受了心里还是挺高兴的，中国的动漫游戏啊<br>后来查了一下，《阴阳师》本来就是日本的一个小说，然后真的太火了<br>以至于改编成游戏啊，各种形式的节目<br>这次也不例外<br>于是先是“画符成瘾，无法自拔”<br>再到“妈的我的肝好疼。。。”<br>不过这也体现游戏的良心之处<br><strong>只要努力玩，R也能当SR用</strong><br><code>“捂着肝说出了最后一句话…”</code></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 吹水 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于Rousy的小前菜]]></title>
+      <url>/2016/10/09/About_Rousy/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>灵感来自于坑爹的Mac 欧艾斯死瑞娅(os sierra) 和 挨欧艾斯十！(iOS 10)</p>
+</blockquote>
+<h4 id="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"><a href="#如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！" class="headerlink" title="如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！"></a>如果你发现了社交按钮！请不要点击第二，第三，第四个！因为那些我都没有！我就是放上去看着玩！</h4><h3 id="不想说了，新系统那能吐槽十年的通知栏"><a href="#不想说了，新系统那能吐槽十年的通知栏" class="headerlink" title="不想说了，新系统那能吐槽十年的通知栏"></a>不想说了，新系统那能吐槽十年的通知栏</h3><a id="more"></a>
+<p>苹果的美工呢！文案不行美工不能乱来啊！别以为新系统出了个siri就可以安慰我了！<br>通知栏总不能跟个卫生巾一样吧！<br>好吧灵感就来自于圆角（rounded）然后再补上个style。嗯！rounded style！<br>(i have a rounded. i have a style. uhm.. Rousy!)<br> <span style="color:#a5a5a5">(拖出去打死吧不用汇报了！</span></p>
+<h3 id="好了说点关于主题的事"><a href="#好了说点关于主题的事" class="headerlink" title="好了说点关于主题的事.."></a>好了说点关于主题的事..</h3><p>其实一开始主题并不是这样的！我其实想写的超简约超简洁。后来阴差阳错的就多了好多活泼的元素，再后来就变成看起来好像儿童性质的主题了。过几天放几条鱼上去可以改造成海洋世界了。<br>我也不清楚，原计划是白灰蓝怎么就变成这样了…<br>可能是脑子里想法比较多，然后都想放到这个里面，反正随便了。如果有人喜欢更好，没人喜欢那也没办法啊毕竟生出来了…<br>行了那就随便列举几点</p>
+<h3 id="一切为了想玩，各种深沟暗流等着发现"><a href="#一切为了想玩，各种深沟暗流等着发现" class="headerlink" title="一切为了想玩，各种深沟暗流等着发现"></a>一切为了想玩，各种深沟暗流等着发现</h3><p>有大量的鼠标浮动效果，或许现在不华丽，以后可能会更有趣。</p>
+<h3 id="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"><a href="#首先我们有四种语言！分别是English，简体中文，正體中文，日本語" class="headerlink" title="首先我们有四种语言！分别是English，简体中文，正體中文，日本語"></a>首先我们有四种语言！分别是English，简体中文，正體中文，日本語</h3><p>作为中国人，两个中国语言就不用说了，错误应该是没有。日语的话可能问题比较大，希望有小伙伴指正一下。英语应该没多大问题了这个。</p>
+<h3 id="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"><a href="#虽然本着不耍猴，但是我们还是要说点海洋世界的交互" class="headerlink" title="虽然本着不耍猴，但是我们还是要说点海洋世界的交互"></a>虽然本着不耍猴，但是我们还是要说点海洋世界的交互</h3><p>主题砍掉了友情链接和个人介绍页。其实也不是说没掉了，只是需要有点小探索。比如在某个地方点下去可以召唤出来。<br>因为就是喜欢玩嘛，所以说这个主题在博客主题里面来说的话肯定是“妖艳贱货”或者说“没牙小毛孩儿”<br>（这个功能目前还没有实现，反正就是慢慢来。）</p>
+<h3 id="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"><a href="#如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！" class="headerlink" title="如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！"></a>如果你觉得头部图片不好看，那你就换啊！不收你会员费用的！</h3><p>对的，开放的，应该是给图片链接就会自适应了，反正尽量就是给刚刚好嘛。<br>保留头图可以展现站点个性，这个我还是觉得有必要留的。<br>但是头像的话，如果觉得有必要有的话，那以后加上去就行了。<br>链接方面会在<code>config.yml</code>留出来的这个不必很担心。<br>（会不会太像微博的做法了？）</p>
+<p><strong>最后的话，等想起来再说或者做完了再说吧，其实还差挺多的</strong></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 小作坊 </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[扣肉小记（三）]]></title>
+      <url>/2016/10/09/Korou3/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>怒踹马！你们的狗皇帝回来了！</p>
+</blockquote>
+<h3 id="今天就随便说说"><a href="#今天就随便说说" class="headerlink" title="今天就随便说说"></a>今天就随便说说</h3><p>　　其实本来想把<em>《扣肉小记》</em>当做日记来写，可是我其实并不太喜欢把自己三次元的生活放出来，所以就当做一个没事吹吹水的小吹比本好了。自从上一篇之后，我就去流浪了，看看电影吃吃饭啊。把<em>《逗鸟外传》</em>和<em>《从你的全世界路过》</em>给刷了。其实我的邪式影评还是挺不错的。（我身边的亲朋还有老婆孩子<i style="color:#ff0000">(？？)</i>）所以看心情写一点邪式影评玩一玩也挺好的。<br>　　所以这几天就什么腿儿都没写了。包括<strong>Rousy</strong><br>　　所以今天依然要写Rousy…<a id="more"></a></p>
+<h3 id="所以Rousy写到哪儿了？"><a href="#所以Rousy写到哪儿了？" class="headerlink" title="所以Rousy写到哪儿了？"></a>所以Rousy写到哪儿了？</h3><p>　　这个问题好，本狗也不清楚！反正就是写到了…没个人主页，没友情链接，连微博知乎都没…（这段子手不太专业啊拉出去打死算了）<br>　　其实我是有微博推特这些，可是twitter这个不太爱玩，就是看起来太正经了。微博估计老在别人评论写段子现在上不去那个账号。。。鬼知道那account经历了什么！<br>　　好了其实不是来扯这些儿东西的，其实Rousy我觉得，作为一个博客主题的话它绝对是“妖艳贱货”，但是作为一个个人主页的话，它也是一个“妖艳贱货”，它的视觉和交互可能跟单纯不做作的博客差距很大。毕竟自己的主页嘛，自己玩嗨了就行了，要清新脱俗的推荐两个主题，一个是<a href="http://www.ahonn.me" target="_blank" rel="external">Ahonn</a> 的<a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="external">even</a>，还有一个是<a href="http://www.yzz1995.cn" target="_blank" rel="external">Yzzting</a> 的<a href="https://github.com/yzzting/hexo-theme-MyFairLady" target="_blank" rel="external">“那名字死命长忘记了”</a> 。<br>　　一个详细介绍，或者说一个场前洗脑就再开一篇来吹吧。毕竟儿童主题…</p>
+<p>　　<strong>ＭＤ要是哪天想不开非得改成海底世界不可！叫Rousy多LOW叫Ocean Park吧！</strong></p>
+<h4 id="所以今天份的就先吹到这里吧"><a href="#所以今天份的就先吹到这里吧" class="headerlink" title="所以今天份的就先吹到这里吧"></a>所以今天份的就先吹到这里吧</h4><p>今天份的音乐是这个：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=433103084&auto=1&height=32"></iframe>
+
+<p>这是《从你全世界路过》里面最揪心那段插曲音乐，原版是羽泉的《开往春天的地铁》，片子制作方重新编曲了。<br>然后要感谢一下这曲子的作者（播放器里），网易的独立音乐人之一。因为现在那个曲还找不到原版，这大哥扒带然后重新编曲了，算remix吧大哥。<br>（小小吐槽一下：我曾经也是撸音乐的啊！QAQ）</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 扣肉小记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[幕课网视频下载器NodeJS版]]></title>
+      <url>/2016/10/06/Imooc_Downloader/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>不能让别人知道我也是会撸工具的（嘘..）</p>
+</blockquote>
+<p>像我们这么清真的人，一般都是<a href="https://github.com/ColMugX/ImoocDownloader" target="_blank" rel="external">先上链接！</a></p>
+<p>其实这是个很早就完成的项目了（9月1日开学日…之前！）</p>
+<p><strong>写出来的项目就像嫁出去的女儿，谁说要维护了！我说着玩而已！</strong> <a id="more"></a></p>
+<p>好吧讲一下，这东西其实就是一个视频下载器，通过nodejs的命令行进行全部<strong>盗链操作</strong>！</p>
+<p>实现过程真的完全粗暴，很粗暴的解决了幕课网（Imooc）的视频下载，输入想要下载的视频编号之后，全自动筛选出视频并下载，下载方式是列表内视频并行下载…</p>
+<p><del>P.S.没图！没代码！没食谱！（主题还没有写完，所以关于代码框的东西一概没有，慢慢等吧！）</del></p>
+<p>应该没问题了，写一下食谱吧。</p>
+<h4 id="三种方法安装（Install）"><a href="#三种方法安装（Install）" class="headerlink" title="三种方法安装（Install）"></a>三种方法安装（Install）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/ColMugX/ImoocDownloader.git ./ImoocDownloader</div><div class="line">Download ZIP</div><div class="line">Open in Desktop</div></pre></td></tr></table></figure>
+<h4 id="使用（Usage）"><a href="#使用（Usage）" class="headerlink" title="使用（Usage）"></a>使用（Usage）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ./ImoocDownloader</div><div class="line">npm install</div><div class="line">node app</div></pre></td></tr></table></figure>
+<p>然后按照提示输入各种各样的东西就行了……</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> NodeJS </tag>
+            
+            <tag> 小作坊 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[扣肉小记（二）]]></title>
+      <url>/2016/10/04/Korou2/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>感觉自己跟一条热狗差不多了！</p>
+</blockquote>
+<h3 id="不知道为什么，今天天气特别热"><a href="#不知道为什么，今天天气特别热" class="headerlink" title="不知道为什么，今天天气特别热"></a>不知道为什么，今天天气特别热</h3><p>　　本来前几天已经闻到了秋天的气息，甚至闻到了快入冬的气息，结果今天又要开空调了！（摔！<br>　　热得精神不太好…加上自己身体的关系（只要一动脑身体会发热，头发热比较厉害）<br>　　总之就是很难过就对了（捡起来！再摔！<a id="more"></a><br>　　<strong>所以我记得我高三的时候，发烧就跟烧着玩一样。</strong></p>
+<h3 id="今天依然在继续写Rousy"><a href="#今天依然在继续写Rousy" class="headerlink" title="今天依然在继续写Rousy"></a>今天依然在继续写Rousy</h3><p>　　懒癌恶性晚期，本来还以为可以悠闲的把一些过度特效给写掉，然后再用点洪荒之力把动画给写了，再加个fancybox啊balabala，然后发现</p>
+<p>　　<strong>归！档！和！标！签！是！空！的！</strong></p>
+<p>　　这tm就尴尬了。。。<br>　　遥遥无期啊！我现在还慢脑子都是飞来飞去的div呢！</p>
+<h4 id="算了今天就写到这吧。今天的音乐听点什么好。"><a href="#算了今天就写到这吧。今天的音乐听点什么好。" class="headerlink" title="算了今天就写到这吧。今天的音乐听点什么好。"></a>算了今天就写到这吧。今天的音乐听点什么好。</h4><blockquote>
+<p>什么你说什么时候放出自己的作品？ 噢这样啊！你说的话，我就当随便听一下就好了。</p>
+</blockquote>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=399411850&auto=1&height=32"></iframe>
+
+<p>　　<em>或许我以后可以讲点音乐故事？算了以后再说吧（btw，这部动漫很棒，剧场版的）</em></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 扣肉小记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[扣肉小记（一）]]></title>
+      <url>/2016/10/03/Korou1/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>一个不正经的码狗生活。</p>
+</blockquote>
+<h3 id="为什么这么说呢？"><a href="#为什么这么说呢？" class="headerlink" title="为什么这么说呢？"></a>为什么这么说呢？</h3><p>　　实际上我真的是个coder，但是我不是那种天天在coding的人。特别是在不是工作鬼缠身的时候。<br>　　这种东西就是心血来潮嘛，突然feel到了然后就死命写一堆出来，然后，啊爽了，然后睡觉。就这样…</p>
+<p>　　每天无非就是<a href="http://www.bilibili.com/video/av4033926/" target="_blank" rel="external">吃吃饭，喝喝茶，看看电影，聊聊天，逛逛街，牵牵手，喝喝小酒，开开房</a>（啊不对..）</p>
+<p>　　一有新技术，码狗肯定是要接触学习一下，不然跟不上逼格注定被淘汰..虽然我也会看吧，但是不爱做读书笔记，所以，<a id="more"></a></p>
+<p>　　<strong>知！道！我！为！什！么！没！东！西！写！了！吧！</strong></p>
+<h3 id="好吧，其实我是边写着主题边玩着博客的"><a href="#好吧，其实我是边写着主题边玩着博客的" class="headerlink" title="好吧，其实我是边写着主题边玩着博客的"></a>好吧，其实我是边写着主题边玩着博客的</h3><p>　　博客主题的话，hexo theme 叫rousy的东西，好像是挺女孩子的名字。好吧我坦白…就是…<br>　　就是round 和 style 随便混合起来的一个词，挺喜欢Apple那一套圆角的。<br>　　主题的话应该是做的差不多了，毕竟还想要点duangduangduang的东西。</p>
+<h4 id="好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是"><a href="#好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是" class="headerlink" title="好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是"></a>好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是</h4><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=39956017&auto=1&height=32"></iframe>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 扣肉小记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
