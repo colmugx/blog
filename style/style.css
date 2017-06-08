@@ -1431,6 +1431,16 @@ blockquote p {
   font-weight: 100;
   font-size: 3.6rem;
 }
+@media screen and (max-width: 800px) {
+  .search .search-wrapper h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .search .search-wrapper h1 {
+    font-size: 1.2rem;
+  }
+}
 .search .search-wrapper input {
   width: 800px;
   height: 60px;
@@ -1443,8 +1453,31 @@ blockquote p {
   padding: 8px;
   font-weight: 100;
 }
+@media screen and (max-width: 800px) {
+  .search .search-wrapper input {
+    width: 570px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .search .search-wrapper input {
+    width: 230px;
+    font-size: 18px;
+    height: 24px;
+  }
+}
 .search #local-search-result {
   background-color: rgba(0,0,0,0.2);
+}
+@media screen and (max-width: 800px) {
+  .search #local-search-result {
+    width: 590px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .search #local-search-result {
+    width: 100%;
+  }
 }
 .search #local-search-result .search-result-list {
   font-weight: 300;
@@ -1452,6 +1485,11 @@ blockquote p {
   width: 800px;
   color: #fff;
   padding: 8px;
+}
+@media screen and (max-width: 800px) {
+  .search #local-search-result .search-result-list {
+    width: auto;
+  }
 }
 .search #local-search-result .search-result-list .search-result-title {
   color: #fff;
