@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-05-01T09:28:50.000Z</updated>
+  <updated>2017-06-12T17:08:24.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从0到1的Bandix（零） - 想法记录</title>
+    <link href="http://blog.co1mugx.tk/2017/06/13/Bandix1/"/>
+    <id>http://blog.co1mugx.tk/2017/06/13/Bandix1/</id>
+    <published>2017-06-12T16:17:10.000Z</published>
+    <updated>2017-06-12T17:08:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>说起来你可能不信，这是个被傻逼气到不行最后拍断大腿决定实现的Vue组件库。</p>
+</blockquote>
+<p>觉得既然决定要做了，那就至少得做出个样子（就像隔壁Syuanpi.css一样看起来很帅，实际上很糜烂…）</p>
+<a id="more"></a>
+<p>话说我开过的坑还少么！TickTick开出来，从白到红，从音乐到代码，从记事本到路由器，怕不是能溢出来？而且，Syuanpi.css一开始的想法就是让一些普通的网页动画比较好收拾，现在看来要添加一些比较有灵性的动画了。我是不指望有人看毕竟，animate.css在页面动画依然是大头。另外我想给Syuanpi.css开个针对vue的分支，也是为了方便收拾。<strong>叫Syuanpi.vue！</strong></p>
+<p>我是觉得也没什么好记录的就随便讲讲。其实现在的组件库都挺不错的，而且很完善，就算是个人项目也是有几十甚至上百的维护者。不过，<strong>毕竟有买卖就有杀害！</strong>（逃</p>
+<p>但是问题就在这了，成熟的库都讲究一个“样式统一”。无论从颜色还是到长相，都有很统一或者很神似的统一性。而这在我们这个什么都干的团队就明显吃不下。因为杂七杂八的，什么互联网大旗，O2O称霸世界。称霸nmlgb！五个界面四种样式！真是让我想起了苹果手机和山寨手机。你想蹭风口又蹭不到，瞎几把做了一堆屎出来。然后还脾气很大？劳资脾气也很大！</p>
+<p>我并不是说主流组件库定制不高什么的。样式统一本来就是一件很重要的事情，一个设计你非得弄得大红大绿，以老土的样式强势吸引目光的，不是傻的就是传销，就这样！</p>
+<p>所以为了给自己续命我也是想到，为什么我不自己实现一个组件库？就光组件库就行了。组件之间有联动性又有独立性，而且样式灵活。我只负责提供简笔画，你们来上色。这不也挺好的？所以，Bandix的初步想法诞生了。<strong>当然目前还是受精卵。</strong></p>
+<p>为什么叫Bandix呢，这个名字其实也是个闪念（老罗你手机质量好点我就投靠你了，你这个Pro不行啊。），我是先想到了公司的名称，然后想到了邦迪<code>band-aid</code>，最后索性得出一个<code>Band-ix</code>。因为一开始会有这个念头也是因为公司，有个能轻松干活的东西再上架npm，死活都掌控在自己手上，稳不稳定还不是我们自己的。</p>
+<p>所以，我是希望他可以跟创可贴一样，想贴就贴有伤也贴。什么情况都能贴还不会很丑，能屈能伸。</p>
+<p>而且在没有什么定义的情况下，它是空的，但又不是空的。空亦非空。</p>
+<p>而且按照现在的计划，我是想整合一部分微商常见的组件。在部分界面内的组件统一样式，只允许传值不允许乱改。这样会稳定很多。</p>
+<p>说实话我是心疼了公司大哥大姐了，本来就我的锅。弄到他们要下来一起实现这个东西。不过大概摸清楚套路之后，组件有库的加持，日后的业务代码应该就根据情况编编逻辑就行了。（说实话我巨讨厌业务代码，为了照顾其他人，函数取名字不能用水果名字或者小动物名称！</p>
+<p>一开始在语言使用上的选择，我想用Typescript。后来想了一下，算了吧这东西是要给人用的！所以还是用<code>*.vue</code>。</p>
+<p>目前只是大致的规划了一下，并且稍微做了一点。这个主题的博客用来记录开发vue组件库会遇到的知识点和坑。就这样。</p>
+<p>库的定位还是跟<code>Syuanpi.css</code>一样，我只是想让它在项目或者玩具中更容易收拾一些。比起现有的各种组件库来说，还是算了吧。</p>
+<p>（要不要先上个首页卖波饼？算了吧我还是不擅长卖饼…能实现出70%我都觉得这次不亏了。</p>
+<p>（另外拖了三个月的Syuanpi.hover应该找个时间一次性干了…这拖延症真是越来越厉害了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;说起来你可能不信，这是个被傻逼气到不行最后拍断大腿决定实现的Vue组件库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;觉得既然决定要做了，那就至少得做出个样子（就像隔壁Syuanpi.css一样看起来很帅，实际上很糜烂…）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>扣肉小记（六）</title>
@@ -289,11 +336,11 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
-    
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+      <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
     
       <category term="Slvi" scheme="http://blog.co1mugx.tk/tags/Slvi/"/>
     
@@ -690,9 +737,9 @@
     </summary>
     
     
-      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
-    
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
   </entry>
   
@@ -726,9 +773,9 @@
     
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
-    
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
   </entry>
   
@@ -903,9 +950,9 @@
     
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="微信小程序" scheme="http://blog.co1mugx.tk/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="微信小程序" scheme="http://blog.co1mugx.tk/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
@@ -946,47 +993,6 @@
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新主题测试完善中</title>
-    <link href="http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/"/>
-    <id>http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</id>
-    <published>2016-11-02T01:33:51.000Z</published>
-    <updated>2017-04-19T03:43:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>厉害咯我的Blank</p>
-</blockquote>
-<p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
-<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p>
-<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><img src="/Image/Blank-gray.jpg" alt="Blank-深空灰"></p>
-<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><img src="/Image/Blank-pink.jpg" alt="Blank-樱语粉"></p>
-<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><img src="/Image/Blank-green.jpg" alt="Blank-璐璐绿"></p>
-<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><img src="/Image/Blank-blue.jpg" alt="Blank-编不下去的蓝色"></p>
-<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><img src="/Image/Blank-red.jpg" alt="Blank-红红火火"></p>
-<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><img src="/Image/Blank-orange.jpg" alt="Blank-橙子一样的颜色"><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
-<h3 id="这个主题从写法上，比Rousy改善很多"><a href="#这个主题从写法上，比Rousy改善很多" class="headerlink" title="这个主题从写法上，比Rousy改善很多"></a>这个主题从写法上，比Rousy改善很多</h3><p>怎么来说，Rousy的话，是根据css然后全搬入stylus的，管理性能略差<br>但是Blank的话，我好像不知不觉用了stylus的用法，所以看起来应该…还是不简洁…<br>当然Blank只是半成品，至今只出生后第3天。（都是中午和大半夜，白天有课上）</p>
-<h3 id="新主题有没有什么新东西"><a href="#新主题有没有什么新东西" class="headerlink" title="新主题有没有什么新东西"></a>新主题有没有什么新东西</h3><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>
-<h4 id="好了新主题就挂三天吧，三天之后切回Rousy。"><a href="#好了新主题就挂三天吧，三天之后切回Rousy。" class="headerlink" title="好了新主题就挂三天吧，三天之后切回Rousy。"></a>好了新主题就挂三天吧，三天之后切回Rousy。</h4>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;厉害咯我的Blank&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;我先说好啊！Blank不是SKT T1的打野！&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;/blank.html&quot;&gt;主题演示页面点击这里&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;科技以换色为本！&quot;&gt;&lt;a href=&quot;#科技以换色为本！&quot; class=&quot;headerlink&quot; title=&quot;科技以换色为本！&quot;&gt;&lt;/a&gt;科技以换色为本！&lt;/h3&gt;&lt;h4 id=&quot;紫色&quot;&gt;&lt;a href=&quot;#紫色&quot; class=&quot;headerlink&quot; title=&quot;紫色&quot;&gt;&lt;/a&gt;紫色&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/Image/Blank-violet.jpg&quot; alt=&quot;Blank-紫罗兰&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
-      <category term="Blank" scheme="http://blog.co1mugx.tk/tags/Blank/"/>
     
   </entry>
   
