@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-06-12T17:08:24.000Z</updated>
+  <updated>2017-06-15T08:55:21.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从0到1的Bandix（一）- npm package</title>
+    <link href="http://blog.co1mugx.tk/2017/06/14/Bandix2/"/>
+    <id>http://blog.co1mugx.tk/2017/06/14/Bandix2/</id>
+    <published>2017-06-14T15:54:03.000Z</published>
+    <updated>2017-06-15T08:55:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>这人怕是急于求成喔，做出来的东西肯定不怎样，算了Bandix必暴死。</p>
+</blockquote>
+<p>关于<code>npmjs.org</code>的内容本来是要到最后的。因为能到操作npm部分的话必然项目已经到了收官阶段。</p>
+<p>不过我不熟悉npm从上架到下架的过程，之前是打算让<code>Syuanpi.css</code>上架，但是觉得还是算了吧别给别人的市场添加垃圾。<strong>不过从今天这事之后我觉得完善这个东西意义重大！</strong></p>
+<p>所以说这次的旅程，开刀的还是<code>Syuanpi.css</code>。。。（这个东西肯定不是亲生的。</p>
+<h2 id="0-注册账号"><a href="#0-注册账号" class="headerlink" title="0. 注册账号"></a>0. 注册账号</h2><p>一开始我以为是要多NB的项目才能上架npm，把npm想作和app store 一样厉害的东西。后来看了一眼并不是的，这只是个node的打包平台（但不是nodejs家的，这段历史值得去了解一下）。而且他们也是有收费标准的，跟github一样，如果你的项目/包是私有的，你必须交月费/年费。不过我们的东西本身就是开源的，所以交钱？不存在的。</p>
+<p><a href="https://www.npmjs.com/" target="_blank" rel="external">NPM的主页</a>，点进去之后点sign up。剩下的应该很容易理解。像注册知乎一样。写个你要展示的名字，<code>username</code>是用在你个人主页的后缀上的，同时也是账号。注册完之后直接就能用了。什么验证都不要。</p>
+<h2 id="1-登录"><a href="#1-登录" class="headerlink" title="1. 登录"></a>1. 登录</h2><p>几个命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm adduser	<span class="comment">#添加一个账户</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm login	<span class="comment">#登录</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">logout</span>	<span class="comment">#登出</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm whoami	<span class="comment">#我是谁？指现在哪个用户登录着</span></div></pre></td></tr></table></figure>
+<p>首先添加用户<code>npm adduser</code>，需要输入三个字段：用户名，密码，公开的Email。如果没报错的话就是登录成功了，而且会告诉你登录了哪个域。</p>
+<p><strong>对了，为什么要强调域！这就是第一个大坑。</strong></p>
+<p>由于我们所处的网络环境，各种电波横七竖八。特别厉害。100M用不到2M。所以大部分用户都在阿里爸爸蹭口水喝。把源替换成taobao mirror。</p>
+<p>在之前的话，如果你是设置的永久的淘宝源，你是登录不上去的。要命的是，现在如果你忘记加临时源入口的话，你会发现，<strong>淘宝源也***的能登录进去</strong>。这谁敢登录啊，指不定有指向到什么鬼地方去了。所以为了日后方便，登录提交各种乱七八糟加上临时源。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm adduser --registry=<span class="string">"https://registry.npmjs.org"</span></div></pre></td></tr></table></figure>
+<p>以确保我确实是登录了npmjs的库。</p>
+<h2 id="2-npm库初始化"><a href="#2-npm库初始化" class="headerlink" title="2.npm库初始化"></a>2.npm库初始化</h2><p>一个命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+<p>按照这个命令输入之后，给的信息一般都是必要信息了。也就是说依照这个命令所给的内容填完整，上架的准备就好了。</p>
+<p>内容列一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package name</div><div class="line">version</div><div class="line">description		//介绍</div><div class="line">entry point		//启动入口，这个很重要。</div><div class="line">test command	//用来测试的命令</div><div class="line">git repository	//git地址</div><div class="line">keywords		//关键词</div><div class="line">author			//作者</div><div class="line">license: (ISC)  //这个项目的协议</div></pre></td></tr></table></figure>
+<p>关于<code>package.json</code>的内容<a href="https://docs.npmjs.com/getting-started/using-a-package.json" target="_blank" rel="external">全在这里</a>。</p>
+<h2 id="3-上架和下架"><a href="#3-上架和下架" class="headerlink" title="3.上架和下架"></a>3.上架和下架</h2><p>几个命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm publish --registry=<span class="string">"https://registry.npmjs.org"</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm unpublish package@version --registry=<span class="string">"https://registry.npmjs.org"</span></div></pre></td></tr></table></figure>
+<p><strong>如果你不确定你用的是哪里的源，你还是加上吧以防万一。如果你很清楚我从装npm就没换过，那就后面那串就不要加上去了给键盘省点寿命……</strong></p>
+<p><code>npm publish</code>的话会根据你现在项目的version进行提交和更新（所以version不要随便填）。</p>
+<p><code>npm unpublish</code>需要声明你要撤下那个库，版本是多少。也就是像上面那样的写法。</p>
+<p><code>npm publish</code>之后，经过一段时间的编译和上传，然后你就可以在npm的个人页面上看到自己的库了。接下来就可以让别人通过<code>npm install syuanpi --save</code>安装来装b了。</p>
+<p>但是我这个人比较实诚，不会教你们装x，<strong>所以我把syuanpi给撤下来了！</strong></p>
+<p>所以怎么撤下，按照syuanpi.css的话。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm unpublish syuanpi@0.0.1</div></pre></td></tr></table></figure>
+<p>撤下的话，是因为你在库上面撤回，所以要带版本号撤回。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这人怕是急于求成喔，做出来的东西肯定不怎样，算了Bandix必暴死。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;关于&lt;code&gt;npmjs.org&lt;/code&gt;的内容本来是要到最后的。因为能到操作npm部分的话必然项目已经到了收官阶段。&lt;/p&gt;
+&lt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>从0到1的Bandix（零） - 想法记录</title>
@@ -338,9 +402,9 @@
     
       <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
       <category term="Hexo" scheme="http://blog.co1mugx.tk/tags/Hexo/"/>
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
       <category term="Slvi" scheme="http://blog.co1mugx.tk/tags/Slvi/"/>
     
@@ -953,46 +1017,6 @@
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="微信小程序" scheme="http://blog.co1mugx.tk/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue2.0学习记录（零）</title>
-    <link href="http://blog.co1mugx.tk/2016/11/06/vue-study-0/"/>
-    <id>http://blog.co1mugx.tk/2016/11/06/vue-study-0/</id>
-    <published>2016-11-06T10:00:13.000Z</published>
-    <updated>2017-02-22T13:54:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>据说跟JQuery差不多但是比较6，感觉应该是Angular那类可以写webapp的东西，学习一下</p>
-</blockquote>
-<p>怎么说感谢尤老师和他的团队设计这么个，看起来有快感的东西，不过学得好不好我自己也不敢保证<br>这个是尤老师发的一个知乎专栏：<a href="https://zhuanlan.zhihu.com/p/20814761" target="_blank" rel="external">点此跳到专栏</a>（向来良心先发地址！）<br>(自从开了知乎，天天在沉迷学习…<a id="more"></a></p>
-<h3 id="说Vue2-0"><a href="#说Vue2-0" class="headerlink" title="说Vue2.0"></a>说Vue2.0</h3><p>毕竟我一直都是，学新不学旧。就跟<code>Ionic</code>一样，我直接学了<code>Ionic2.0</code>（妈的碰壁啊，碰到死了…<br>Ionic2.0用的是新的<code>Angular2.0</code>和<code>Typescript</code>，感觉TS这东西，因为我是先接触了<code>Swift</code>所以感觉两者太像了。甚至有种想无论什么东西都想用TS写然后让他翻译成JS去用就行了，比如一直老想用TS做node…然后毕竟自己菜没办法乱玩…<br>然后Vue2.0的话，稍微一看想起ES2015和上次看到的微信小程序。我记得Vue1.x的时候尤老师说过不想用虚拟DOM这东西，反正就是有好有不好然后不好更多那样子。不知道为什么Vue2.0就加入了虚拟DOM这么个东西…<br>按尤老师说：</p>
-<blockquote>
-<p>现在的渲染层基于一个轻量级的 virtual-DOM 实现，在大多数场景下初试化渲染速度和内存消耗都提升了 2~4 倍 (详见这里的 benchmarks)。从模板到 virtuel-DOM 的编译器和运行时是可以独立开来的，所以你可以将模板预编译并只通过 Vue 的运行时让你的应用工作起来，而这份运行时的代码 min+gzip 之后只有不到 12kb (提一下，React 15 在 min+gzip 之后的大小是 44kb)。</p>
-</blockquote>
-<p>反正就是好厉害了啦。比隔壁一样用虚拟DOM要效率高很多了啦</p>
-<h3 id="初次使用安装vue2-0"><a href="#初次使用安装vue2-0" class="headerlink" title="初次使用安装vue2.0"></a>初次使用安装vue2.0</h3><p>因为慢入坑，所以<code>vue-cli</code>这种脚手架都有了，我看他的归属是vuejs应该是官方工具了吧。<br>然后就是安装，要安装nodejs webpack 还有vue-cli<br>因为不是教学文档所以我就不说那么明白因为我大概都装了<br>创建一个工程大概就是<code>vue init &lt;要用的模板&gt; &lt;工程名称&gt;</code><br>默认是<code>webpack</code>或者<code>webpack-simple</code>前者是完整开发工程，后者更适合闹着玩<br>然后还有一个第三方很厉害的模板叫<code>egoist/vuepack</code>，已经实现了<code>electron</code>的支持。</p>
-<p>然后<code>npm run dev</code>就能运行起来了。<br>如果是<code>egoist/vuepack</code>要用<code>npm start</code>因为要启动electron</p>
-<h3 id="关于组件库，安利一下饿了么，对！就是那个送外卖的！"><a href="#关于组件库，安利一下饿了么，对！就是那个送外卖的！" class="headerlink" title="关于组件库，安利一下饿了么，对！就是那个送外卖的！"></a>关于组件库，安利一下饿了么，对！就是那个送外卖的！</h3><p>感觉这个送外卖的有点不务正业了啊！<br>一开始我还在想，他们这么做外卖不得亏死啊，怎么生命力这么顽强<br>后来才发现，原来他们是打着送外卖的旗号搞黑科技……</p>
-<h3 id="初见印象"><a href="#初见印象" class="headerlink" title="初见印象"></a>初见印象</h3><p>感觉第一次看到的时候还是觉得挺高潮的。<br>不错最近开的坑实在太多，加上自己还有小生活，坑简直填不完。<br>还tm无业游民…</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;据说跟JQuery差不多但是比较6，感觉应该是Angular那类可以写webapp的东西，学习一下&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;怎么说感谢尤老师和他的团队设计这么个，看起来有快感的东西，不过学得好不好我自己也不敢保证&lt;br&gt;这个是尤老师发的一个知乎专栏：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/20814761&quot;&gt;点此跳到专栏&lt;/a&gt;（向来良心先发地址！）&lt;br&gt;(自从开了知乎，天天在沉迷学习…
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
-    
-      <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
     
   </entry>
   
