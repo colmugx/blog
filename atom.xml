@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-06-15T08:55:21.000Z</updated>
+  <updated>2017-06-19T01:55:13.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.co1mugx.tk/2017/06/14/Bandix2/"/>
     <id>http://blog.co1mugx.tk/2017/06/14/Bandix2/</id>
     <published>2017-06-14T15:54:03.000Z</published>
-    <updated>2017-06-15T08:55:21.000Z</updated>
+    <updated>2017-06-19T01:55:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>这人怕是急于求成喔，做出来的东西肯定不怎样，算了Bandix必暴死。</p>
@@ -28,6 +28,7 @@
 <p>关于<code>npmjs.org</code>的内容本来是要到最后的。因为能到操作npm部分的话必然项目已经到了收官阶段。</p>
 <p>不过我不熟悉npm从上架到下架的过程，之前是打算让<code>Syuanpi.css</code>上架，但是觉得还是算了吧别给别人的市场添加垃圾。<strong>不过从今天这事之后我觉得完善这个东西意义重大！</strong></p>
 <p>所以说这次的旅程，开刀的还是<code>Syuanpi.css</code>。。。（这个东西肯定不是亲生的。</p>
+<a id="more"></a>
 <h2 id="0-注册账号"><a href="#0-注册账号" class="headerlink" title="0. 注册账号"></a>0. 注册账号</h2><p>一开始我以为是要多NB的项目才能上架npm，把npm想作和app store 一样厉害的东西。后来看了一眼并不是的，这只是个node的打包平台（但不是nodejs家的，这段历史值得去了解一下）。而且他们也是有收费标准的，跟github一样，如果你的项目/包是私有的，你必须交月费/年费。不过我们的东西本身就是开源的，所以交钱？不存在的。</p>
 <p><a href="https://www.npmjs.com/" target="_blank" rel="external">NPM的主页</a>，点进去之后点sign up。剩下的应该很容易理解。像注册知乎一样。写个你要展示的名字，<code>username</code>是用在你个人主页的后缀上的，同时也是账号。注册完之后直接就能用了。什么验证都不要。</p>
 <h2 id="1-登录"><a href="#1-登录" class="headerlink" title="1. 登录"></a>1. 登录</h2><p>几个命令：</p>
@@ -66,7 +67,8 @@
 &lt;p&gt;这人怕是急于求成喔，做出来的东西肯定不怎样，算了Bandix必暴死。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;关于&lt;code&gt;npmjs.org&lt;/code&gt;的内容本来是要到最后的。因为能到操作npm部分的话必然项目已经到了收官阶段。&lt;/p&gt;
-&lt;
+&lt;p&gt;不过我不熟悉npm从上架到下架的过程，之前是打算让&lt;code&gt;Syuanpi.css&lt;/code&gt;上架，但是觉得还是算了吧别给别人的市场添加垃圾。&lt;strong&gt;不过从今天这事之后我觉得完善这个东西意义重大！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所以说这次的旅程，开刀的还是&lt;code&gt;Syuanpi.css&lt;/code&gt;。。。（这个东西肯定不是亲生的。&lt;/p&gt;
     
     </summary>
     
@@ -350,7 +352,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;我没进传销！真是日了皮皮虾了…&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;由于Vue2.0之后，&lt;code&gt;vue-resource&lt;/code&gt;也停止更新了，改为使用尤老师钦点的&lt;code&gt;axios&lt;/code&gt;。&lt;a href=&quot;https://github.com/mzabriskie/axios&quot;&gt;mzabriskie/axios: Promise based HTTP client for the browser and node.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由于Vue2.0之后，&lt;code&gt;vue-resource&lt;/code&gt;也停止更新了，改为使用尤老师钦点的&lt;code&gt;axios&lt;/code&gt;。&lt;a href=&quot;https://github.com/mzabriskie/axios&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;mzabriskie/axios: Promise based HTTP client for the browser and node.js&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;那反正不管！他说不合适我不用，我就去学个新的。其实接触过微信小程序的话，稍加理解，这就是一个比较厉害点但是又有局限的&lt;code&gt;wx.request()&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&quot;what-s-Axios&quot;&gt;&lt;a href=&quot;#what-s-Axios&quot; class=&quot;headerlink&quot; title=&quot;what s Axios&quot;&gt;&lt;/a&gt;what s Axios&lt;/h2&gt;
     
@@ -489,7 +491,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;准备面试，遇到一家以“工匠精神”为核心，“浪”为资本的公司，太喜欢…&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;其实也是看到了&lt;a href=&quot;https://zhuanlan.zhihu.com/jbangit&quot;&gt;匠邦互联网 - 知乎专栏&lt;/a&gt;，其中一篇讲for的&lt;/p&gt;
+&lt;p&gt;其实也是看到了&lt;a href=&quot;https://zhuanlan.zhihu.com/jbangit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;匠邦互联网 - 知乎专栏&lt;/a&gt;，其中一篇讲for的&lt;/p&gt;
 &lt;p&gt;觉得我不服！我要上！（你行你上）&lt;br&gt;
     
     </summary>
@@ -676,7 +678,7 @@
 &lt;p&gt;写写我自己根据自己对选型的想法&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;为了不落后别人，也可以说我正在以一个人为目标想努力跟他齐平，最近在尝试入门react。&lt;/p&gt;
-&lt;p&gt;知乎上面有个问题：&lt;a href=&quot;https://www.zhihu.com/question/51690331&quot;&gt;为什么 react 还比 vue 火？&lt;/a&gt;，这是我还在学习vue的时候看的。其中提到了vue和react各自的特点。
+&lt;p&gt;知乎上面有个问题：&lt;a href=&quot;https://www.zhihu.com/question/51690331&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为什么 react 还比 vue 火？&lt;/a&gt;，这是我还在学习vue的时候看的。其中提到了vue和react各自的特点。
     
     </summary>
     
@@ -745,7 +747,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。&lt;br&gt;这是demo的页面：&lt;a href=&quot;https://colmugx.github.io/Syuanpi.css&quot;&gt;Syuanpi.css&lt;/a&gt;&lt;br&gt;这是GitHub的页面：&lt;a href=&quot;https://github.com/ColMugX/Syuanpi.css&quot;&gt;ColMugX/Syuanpi.css: ✨A library of CSS animations.&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。&lt;br&gt;这是demo的页面：&lt;a href=&quot;https://colmugx.github.io/Syuanpi.css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Syuanpi.css&lt;/a&gt;&lt;br&gt;这是GitHub的页面：&lt;a href=&quot;https://github.com/ColMugX/Syuanpi.css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ColMugX/Syuanpi.css: ✨A library of CSS animations.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！&lt;/p&gt;
 &lt;h3 id=&quot;为什么要出这东西…&quot;&gt;&lt;a href=&quot;#为什么要出这东西…&quot; class=&quot;headerlink&quot; title=&quot;为什么要出这东西…&quot;&gt;&lt;/a&gt;为什么要出这东西…&lt;/h3&gt;
     
@@ -829,7 +831,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;Hapi?可我一点都happy不起来…&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;老规矩老套路：&lt;a href=&quot;https://hapijs.com/&quot;&gt;链接在这&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;老规矩老套路：&lt;a href=&quot;https://hapijs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接在这&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;什么是Hapi&quot;&gt;&lt;a href=&quot;#什么是Hapi&quot; class=&quot;headerlink&quot; title=&quot;什么是Hapi&quot;&gt;&lt;/a&gt;什么是Hapi&lt;/h3&gt;&lt;p&gt;当&lt;code&gt;Node.js&lt;/code&gt;用来做后端的时候，后端框架在我听说过的就三个：&lt;code&gt;Express&lt;/code&gt;、&lt;code&gt;Koa&lt;/code&gt;、&lt;code&gt;Hapi&lt;/code&gt;。&lt;br&gt;超喜欢&lt;code&gt;Koa&lt;/code&gt;，不过真的，能力有限，那些我没见过的语法我没了解过所以真的不懂，但据说是个超轻可玩性超高的框架，哎好可惜技不如人。例如那个&lt;code&gt;yield&lt;/code&gt;，是个&lt;code&gt;python&lt;/code&gt;的产物，但是我py真的不精，所以…我有一句妈卖批我现在就要讲。
     
     </summary>
@@ -900,7 +902,7 @@
 &lt;p&gt;我早已不记得你的名字，但我记得我喜欢你。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;a href=&quot;#这是一篇不一样的“扣肉小记”&quot; class=&quot;headerlink&quot; title=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;/a&gt;这是一篇不一样的“扣肉小记”&lt;/h3&gt;&lt;p&gt;　　&lt;strong&gt;&lt;em&gt;《你的名字。》，记不起“你的名字。”&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;　　这次的音乐是这个：&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=298 height=52 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=426881503&amp;auto=0&amp;height=32&quot;&gt;&lt;/iframe&gt;&lt;br&gt;（一共8分钟）&lt;br&gt;　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。&lt;br&gt;　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。&lt;br&gt;&lt;span style=&quot;color:#a5a5a5&quot;&gt;　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。&lt;/span&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;298&quot; height=&quot;52&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=426881503&amp;auto=0&amp;height=32&quot;&gt;&lt;/iframe&gt;&lt;br&gt;（一共8分钟）&lt;br&gt;　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。&lt;br&gt;　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。&lt;br&gt;&lt;span style=&quot;color:#a5a5a5&quot;&gt;　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。&lt;/span&gt;
     
     </summary>
     
