@@ -3,8 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[从0到1的Bandix（二）- component & extend]]></title>
+      <url>/2017/06/19/Bandix2/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>虽然Bandix是因为它的环境而出生，不过不排除改名的可能。</p>
+</blockquote>
+<p>可能无论写一个什么，就算只是单纯的一个vue插件，也会用到<code>vue component</code>。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+            <tag> vue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[从0到1的Bandix（一）- npm package]]></title>
-      <url>/2017/06/14/Bandix2/</url>
+      <url>/2017/06/14/Bandix1/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>这人怕是急于求成喔，做出来的东西肯定不怎样，算了Bandix必暴死。</p>
 </blockquote>
@@ -59,7 +81,7 @@
     
     <entry>
       <title><![CDATA[从0到1的Bandix（零） - 想法记录]]></title>
-      <url>/2017/06/13/Bandix1/</url>
+      <url>/2017/06/13/Bandix0/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>说起来你可能不信，这是个被傻逼气到不行最后拍断大腿决定实现的Vue组件库。</p>
 </blockquote>
@@ -90,31 +112,6 @@
             <tag> 实验室 </tag>
             
             <tag> vue </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[扣肉小记（六）]]></title>
-      <url>/2017/04/29/Korou6/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>果然时间能催人成熟。第一次有工作，有正式上班。感觉身边的东西都在改变。</p>
-</blockquote>
-<p>每篇扣肉小记都会有音乐，这是定性。没有音乐的生活是过不下去的。</p>
-<p>为了防止自动播放，那就只能阅读全文的时候才能听到了。<br><a id="more"></a></p>
-<p>接正文。</p>
-<h3 id="梦寐以求的前端，其实不过如此"><a href="#梦寐以求的前端，其实不过如此" class="headerlink" title="梦寐以求的前端，其实不过如此"></a>梦寐以求的前端，其实不过如此</h3><p>　　我在现在的公司做的是前端开发，还是挺谢谢这家公司的，确实就像我在知乎上说的：一个互联网公司竟然招了一个皮艇运动员？<br>　　每天还是挺有意思的，不过就关于前端这部分，每天都多多少少会觉得自己在“激情”和“厌烦”左右徘徊。为什么？说到底还是自己的原因。有点爱玩了。<br>　　现在每天就是现在这个博客主题<code>Nlvi</code>，<code>Syuanpi.css</code>，在公司使用Vue和React。说实话，一开始用vue的时候还是觉得有点意思的，到后面是觉得这个库是真的无聊。得益于环境影响，这次竟然入门了React Native，解了心病。<br>　　可是也跟拖延症有关，以前就有“突然想编程，就天天都写，天天找东西写，天天找新东西学”，“累了就进入空闲期，什么代码都不想动”。但是上班了就没办法了，你不想编程的时候如果你在上班，那么也要硬着头皮写。最后就会变成突然就不喜欢某个框架/程序了……<br>　　而且我还是比较有上进心的嘛，几乎下班时间也要读点Vue或者React的奇技淫巧。这样上班的时候就不会太累。但是每天老想着玩游戏也不是个事啊……<br>　　技术菜是真的，要不然也不会这么累。什么时候才能做到“想写什么就写什么啊！”。现在知道前端复杂了，很烦。</p>
-<h3 id="入门了React，原来这么刺激的"><a href="#入门了React，原来这么刺激的" class="headerlink" title="入门了React，原来这么刺激的"></a>入门了React，原来这么刺激的</h3><p>　　有好有坏嘛，突然就入门了React，可能是因为把理解Vue的思想代入了吧。觉得React太强大，还很自由，可以实现的事情更多了。而基础的理解无非就是Vue的template放在了render函数里了嘛。而且React的那种写法又有种Java的那种感觉，很害怕。<br>　　而且所有的内容都是单向数据流！甚至还要考虑先后顺序的问题！不过React Native是真的有意思。</p>
-<h3 id="本以为自己像极客，然而本身却没那么极"><a href="#本以为自己像极客，然而本身却没那么极" class="headerlink" title="本以为自己像极客，然而本身却没那么极"></a>本以为自己像极客，然而本身却没那么极</h3><p>　　其实我很喜欢GEEK的想法的。无论干点什么都想用自动化来实现。而且觉得很好玩。就算技术菜也有一个想造轮子的心，哪怕是自己用的轮子。在公司工作的话，感觉写的业务代码多一点。不太可以由着自己的性子来，很束缚。毕竟工作，代码稳定比花里胡哨更重要嘛。<br>　　我想，在公司，每次听得最多的一句话就是：我们是小公司，没必要/没办法用这样的技术，因为维护起来有心无力…</p>
-<p>　　悄悄说一句：虽然小公司，可是自从我踏进大门那天起，我可是天天憧憬着它可能上市的呀！</p>
-<h3 id="Nlvi-有心无力中坚持维护的博客主题"><a href="#Nlvi-有心无力中坚持维护的博客主题" class="headerlink" title="Nlvi 有心无力中坚持维护的博客主题"></a>Nlvi 有心无力中坚持维护的博客主题</h3><p>　　虽然最后我还是没买PS4辣，因为想了一下，除了没时间玩，更多还是没操作。尼尔机械纪元如果不开自动的话，操作还是复杂的。如果开了自动的话跟播片有什么区别……<br>　　但是2b小姐姐的故事确实深刻人心了。就看个播片都看哭了。加上完美的音乐，真的是一部优秀的影视作品（逃<br>　　加上那个单色的UX，就觉得要不神似一下的弄个简约的博客主题？所以Nier就有了Nlvi。<br>　　虽然不像就对了…而且还有好多动画还没有实现。毕竟前端技术术业并不专攻。然后以前用过的动画和新主题要用到的动画，全都打包成一个CSS动画库<code>Syuanpi.css</code>。所以对我来说，其实就是配套使用而已。（刚说的造轮子的心，哪怕只是自己用！）</p>
-<h4 id="全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……"><a href="#全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……" class="headerlink" title="全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……"></a>全篇吐槽，可能是成熟了，也可能是现在心念念想着去玩马里奥赛车8……</h4><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=40257799&auto=1&height=32"></iframe>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 扣肉小记 </tag>
             
         </tags>
         
@@ -303,39 +300,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[“旷班”在家的一天]]></title>
-      <url>/2017/03/13/new-theme-slvi/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>本来今天是第一天上班，燃鹅因为发烧实在走不动…说实话我等上班这天真的度日如年。</p>
-</blockquote>
-<h3 id="说实话有点小失望"><a href="#说实话有点小失望" class="headerlink" title="说实话有点小失望"></a>说实话有点小失望</h3><p>就为了正式上班这天，我Github也没填，游戏也没打。每天都在看关于<code>JavaScript</code>和跟布局有关的东西，就为了上班之后能跟得上同事。毕竟第一次上班嘛…</p>
-<p>但是就天不遂人愿了，妈的。昨天就开始感冒，今天就发烧。整个人醒来之后喉咙直接疼到想把它抠掉…没力气去拿手机，最后给HR发请假信息都是趴着一点一点按出来…（虽说看起来有点惨，可是TM全是实情！）</p>
-<p>说实话，确实失望，不知道第一天就请假会有什么后果…也不知道公司的人会怎么看我…</p>
-<p>后来到中午的时候，身体就渐渐的稍微好了。然后我就躺不住了啊！得搞点事情，所以。<strong>新主题Slvi基本可以使用了！</strong> <a id="more"></a></p>
-<h3 id="新主题Slvi"><a href="#新主题Slvi" class="headerlink" title="新主题Slvi"></a>新主题Slvi</h3><p>接上篇<a href="http://blog.co1mugx.tk/2017/02/28/object-traversal/">ES6对象遍历</a>有提到因为新主题研究ES6的对象。那个时候就已经重新构建一个新的博客主题，用上自己学到的最新的东西和自己即将学会的东西上去。并且作为一个稳定的博客主题长期迭代，不搞太多那些花里胡哨的东西。所以比如刚学会的<code>Swig</code>啊，上次自己给自己盖的<code>Syuanpi.css</code>啊。这次全都用到这里来了。不过，这次的设计是<code>Syuanpi.css</code>是可以关闭的。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># animate (Syuanpi)</span></div><div class="line"><span class="attr">syuanpi:</span> <span class="literal">true</span></div></pre></td></tr></table></figure></p>
-<p>然后就是，主题用了一种新的布局方式叫<code>flex</code>，这个是在新的前端框架中学习到的。后来就详细的看了一下，这种布局方式只能是<code>IE10</code>以上的浏览器才能用，所以说不到IE10的就看不到这种布局了，也就是以为着我这主题起点就到这了。不过也行！会看技术博客的人，浏览器版本会不是最新的么！像我这种“报纸主题”，肯定是那些追求简单优雅的人才会选择的啦。你看用这主题看文章，跟用Kindle没什么区别嘛。养眼嘛。<br>（流布局我会在下一篇文章中分享，就<code>flex</code>跟<code>grid</code>两个，后面那个不是流了吧…）</p>
-<p>关于字体方面，其他平台暂时还没有优化跟适配（WIN ANDROID），中文默认苹果的苹方，而且我发现，slim的苹方特别有美感，想当初刚更新mac os 10.10的时候，一直对苹方很难习惯，现在还好了，觉得跟雅黑差不多但是又比雅黑有棱有角了一些。</p>
-<p>然后老样子，跟以前一样，主题还是本地化三种语言：简体中文，繁体中文（台湾），英语，日语。台湾繁体中文是按一些游戏和系统的经验做的本地化；日语是玩过一些游戏和查词典做的本地化，如果有这两种语言的使用者使用我的主题的话，第一先表示感谢，第二如果翻译有问题的话我希望能提出来或者<code>pull request</code>嘛。有错必改好孩子。</p>
-<p>本来就是因为《尼尔》系列游戏（《尼尔·机械纪元》）突发奇想的一个主题。想有一种朋克或者后现代科技的感觉，但是用中文的时候一直感觉不到那种<code>game menu</code>的feel。后来换成日语之后，好像有点那么个意思，至于UI更新，慢慢来嘛。毕竟手机平板还没做适配……</p>
-<p>总的来说先这样，毕竟…我对上班这种事情还是觉得挺有压力的。而且我又要空出时间出来玩游戏……前端学习的长期反馈就迭代在这里吧！</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=41650120&auto=0&height=66"></iframe>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 小作坊 </tag>
-            
-            <tag> Slvi </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于JavaScript的this]]></title>
       <url>/2017/03/03/js-this/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -515,41 +479,6 @@
             <tag> 前端 </tag>
             
             <tag> 实验室 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[仅Web来说，我可能更喜欢vue而不喜欢react]]></title>
-      <url>/2017/02/17/vue-react-likes/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>写写我自己根据自己对选型的想法</p>
-</blockquote>
-<p>为了不落后别人，也可以说我正在以一个人为目标想努力跟他齐平，最近在尝试入门react。</p>
-<p>知乎上面有个问题：<a href="https://www.zhihu.com/question/51690331" target="_blank" rel="external">为什么 react 还比 vue 火？</a>，这是我还在学习vue的时候看的。其中提到了vue和react各自的特点。<a id="more"></a></p>
-<h3 id="讲讲我对两个框架的表面理解"><a href="#讲讲我对两个框架的表面理解" class="headerlink" title="讲讲我对两个框架的表面理解"></a>讲讲我对两个框架的表面理解</h3><p>vue1.0我跳过了，因为我还是比较偏向学新不学旧（假设新比旧更好，Python除外），所以我直接接触到的是vue2.0。一上来就是接触<code>.vue</code>文件格式版本，首先给我的感觉就是，把HTML+CSS+JS全集合到同一个文件上，特别直观特别方便，而且这类前端框架都是一种“组件化”的思路。所以一个文件对应一个组件，各种DOM操作也按照组件化来进行。style部分除了支持css也支持less和sass的编译，但是并不原生支持我喜欢的stylus！<br>而且学习vue的时候刚好也在接触微信小程序，所以这两种的学习效果不相上下。通过在template里写DOM，然后第二部分的js/es来操作template，最后style加样式，很直观。<br>看过一眼vue1.0，感觉就像jQuery一样，通过对整篇幅的DOM进行操作，也有点让我想起了angularjs1.0的感觉，就是需要双向绑定。而我接触的2.0是已经支持了虚拟DOM，使用template渲染完之后再拿去原DOM比对修改。我也不知道快多少反正就很好用。</p>
-<p>react有大部分东西都同vue，而且它是我知道的东西中最先使用虚拟DOM的框架，但是我不清楚虚拟DOM是不是Facebook提出来的。我觉得它的特点就是，“万物皆为JS”。<br>他们可以把HTML语句直接写在JS里面，用到了Facebook提出推荐的JSX，就是可以在JS里面编写XML语句。通过中间翻译例如babel转成原生js。直到react native，他们甚至可以在js里定义css。而且它让我觉得他们的做法就是“一个方法即一个模块”。</p>
-<h3 id="为什么喜欢vue多过react，不包括react-native"><a href="#为什么喜欢vue多过react，不包括react-native" class="headerlink" title="为什么喜欢vue多过react，不包括react native"></a>为什么喜欢vue多过react，不包括react native</h3><p><strong>越热门越玄学</strong>，我也不知道为什么会这么觉得。<br>也许是react不适合我，或许是因为我太作。作为曾经的果粉，我本来应该踏踏实实学好objective-c然后踏踏实实学习iOS编程然后踏踏实实走上不归路的。半途爱上前端“能跨平台”的特性转而跳前端。但是跳完才知道，前端更新速度远高于苹果<code>Swift</code>的更新速度…</p>
-<p>所以我讲讲怎么就不喜欢react了…</p>
-<ul>
-<li><p><strong>脚手架各种迷茫</strong><br>一会又是yeoman通过创建生成器作为脚手架，一会是官方推荐的create-react，一会又是某个大牛自建github案例，一会又是以“守望先锋”英雄起的名字的dva-cli，<strong>甚至连路霸都来了</strong>！<br>可能说是对入门学徒的不友好，也可能是因为自己的相关技术不够吧。还没深入学习过webpack，用gulp好像有点力不从心？</p>
-</li>
-<li><p><strong>语言的使用困难（或者说自己作得要死）</strong><br>先入为主，由于接触苹果的swift比接触微软的typescirpt更快，所以会觉得ts很像swift并喜欢上使用ts来解决js的问题。可以说浪费机会，可以说自己不够努力，0.7时期入门的typescript，竟然2.1时代才意识到当时的无知。ts那种“有着swift影子又强类型的语言（或说超级类）来解决js的问题”让我特别喜欢。<br>所以遇到“万物皆JS”的react之后，在看到proptypes时，看了一会第一反应意识到，好像java的<code>interface</code>，然后第二意识是好像swift的<code>enum</code>。然后接下来才想到</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> <span class="title">Proptypes</span> &#123;</div><div class="line">    bar: foo;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>然后就好激动！然后就碰壁了…原因还是跟脚手架有关，因为各种各样的脚手架造成迷茫的状态。而且无论哪种脚手架都让我感觉找不到入口…再后来想到了要不自己摸清思路然后自己起一个自己顺手的脚手架算了…但是这样的话可能最后我什么都没学会…</p>
-<h3 id="为什么就喜欢vue了"><a href="#为什么就喜欢vue了" class="headerlink" title="为什么就喜欢vue了"></a>为什么就喜欢vue了</h3><p>首先就官方的脚手架已经很棒了呀！<code>vue-cli</code>基本包括了我能学会的不能学会的，很容易上手。<br>其次是创建工程后，思路很清晰。我知道我进去后能怎么做和该怎么做。<br>虽然不能用typescript，可是能用eshint和es6啊，大致差不多，不懂就顺手查一下就行了。</p>
-<p>所以react不是不学了，只是我觉得要延后一段时间，等我的vue也能进入工作模式，有空再补react吧！（说实话我是挺喜欢那种js模式的工作环境的）</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> vue </tag>
             
         </tags>
         
@@ -813,37 +742,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Vue2.0学习记录（零）]]></title>
-      <url>/2016/11/06/vue-study-0/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>据说跟JQuery差不多但是比较6，感觉应该是Angular那类可以写webapp的东西，学习一下</p>
-</blockquote>
-<p>怎么说感谢尤老师和他的团队设计这么个，看起来有快感的东西，不过学得好不好我自己也不敢保证<br>这个是尤老师发的一个知乎专栏：<a href="https://zhuanlan.zhihu.com/p/20814761" target="_blank" rel="external">点此跳到专栏</a>（向来良心先发地址！）<br>(自从开了知乎，天天在沉迷学习…<a id="more"></a></p>
-<h3 id="说Vue2-0"><a href="#说Vue2-0" class="headerlink" title="说Vue2.0"></a>说Vue2.0</h3><p>毕竟我一直都是，学新不学旧。就跟<code>Ionic</code>一样，我直接学了<code>Ionic2.0</code>（妈的碰壁啊，碰到死了…<br>Ionic2.0用的是新的<code>Angular2.0</code>和<code>Typescript</code>，感觉TS这东西，因为我是先接触了<code>Swift</code>所以感觉两者太像了。甚至有种想无论什么东西都想用TS写然后让他翻译成JS去用就行了，比如一直老想用TS做node…然后毕竟自己菜没办法乱玩…<br>然后Vue2.0的话，稍微一看想起ES2015和上次看到的微信小程序。我记得Vue1.x的时候尤老师说过不想用虚拟DOM这东西，反正就是有好有不好然后不好更多那样子。不知道为什么Vue2.0就加入了虚拟DOM这么个东西…<br>按尤老师说：</p>
-<blockquote>
-<p>现在的渲染层基于一个轻量级的 virtual-DOM 实现，在大多数场景下初试化渲染速度和内存消耗都提升了 2~4 倍 (详见这里的 benchmarks)。从模板到 virtuel-DOM 的编译器和运行时是可以独立开来的，所以你可以将模板预编译并只通过 Vue 的运行时让你的应用工作起来，而这份运行时的代码 min+gzip 之后只有不到 12kb (提一下，React 15 在 min+gzip 之后的大小是 44kb)。</p>
-</blockquote>
-<p>反正就是好厉害了啦。比隔壁一样用虚拟DOM要效率高很多了啦</p>
-<h3 id="初次使用安装vue2-0"><a href="#初次使用安装vue2-0" class="headerlink" title="初次使用安装vue2.0"></a>初次使用安装vue2.0</h3><p>因为慢入坑，所以<code>vue-cli</code>这种脚手架都有了，我看他的归属是vuejs应该是官方工具了吧。<br>然后就是安装，要安装nodejs webpack 还有vue-cli<br>因为不是教学文档所以我就不说那么明白因为我大概都装了<br>创建一个工程大概就是<code>vue init &lt;要用的模板&gt; &lt;工程名称&gt;</code><br>默认是<code>webpack</code>或者<code>webpack-simple</code>前者是完整开发工程，后者更适合闹着玩<br>然后还有一个第三方很厉害的模板叫<code>egoist/vuepack</code>，已经实现了<code>electron</code>的支持。</p>
-<p>然后<code>npm run dev</code>就能运行起来了。<br>如果是<code>egoist/vuepack</code>要用<code>npm start</code>因为要启动electron</p>
-<h3 id="关于组件库，安利一下饿了么，对！就是那个送外卖的！"><a href="#关于组件库，安利一下饿了么，对！就是那个送外卖的！" class="headerlink" title="关于组件库，安利一下饿了么，对！就是那个送外卖的！"></a>关于组件库，安利一下饿了么，对！就是那个送外卖的！</h3><p>感觉这个送外卖的有点不务正业了啊！<br>一开始我还在想，他们这么做外卖不得亏死啊，怎么生命力这么顽强<br>后来才发现，原来他们是打着送外卖的旗号搞黑科技……</p>
-<h3 id="初见印象"><a href="#初见印象" class="headerlink" title="初见印象"></a>初见印象</h3><p>感觉第一次看到的时候还是觉得挺高潮的。<br>不错最近开的坑实在太多，加上自己还有小生活，坑简直填不完。<br>还tm无业游民…</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
-            
-            <tag> vue </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[新主题测试完善中]]></title>
       <url>/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -869,31 +767,6 @@
             <tag> 小作坊 </tag>
             
             <tag> Blank </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[分享一个DOM操作错误]]></title>
-      <url>/2016/10/30/fen-xiang-yi-ge-DOM-cao-zuo-cuo-wu/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>由于最近右下角的鱼不听使唤了，气得肺癌晚期了</p>
-</blockquote>
-<p>就Rousy嘛（卧槽我知道我知道我有夜生活的，还没写好，懒！）<br>本来想是简约风格的，结果听了一个所谓的半路泥腿子出身的设计师<br>再加上自己的主管思想受到影响，最后变成了一个“儿童主题”<br>但是我是希望能说是提供一个想法，我还是希望有人能拿我的主题高度定制的<br>比如头图，它毕竟开放了图片链接接口嘛</p>
-<h3 id="切正题，分享的事一个DOM关于class和id的问题"><a href="#切正题，分享的事一个DOM关于class和id的问题" class="headerlink" title="切正题，分享的事一个DOM关于class和id的问题"></a>切正题，分享的事一个DOM关于class和id的问题</h3><p>其实按道理说，才想起来这个错误，真的自己要检讨一下了<br>就前段时间，右下角那条很跳的鱼，本来是实现放回顶层和call出友情链接的作用（别！再！问！了！）<br>后来做了mobile适配之后发现，那条鱼怎么touch都不会返回顶层<br>后来一次快睡着的时候想到了，所以现在改了。<br>问题就是出在，<strong>id复用</strong>。<a id="more"></a></p>
-<h3 id="id跟class什么关系，怎么区分"><a href="#id跟class什么关系，怎么区分" class="headerlink" title="id跟class什么关系，怎么区分"></a>id跟class什么关系，怎么区分</h3><p>这个很基础的问题，哎妈的…<br><code>id</code>和<code>class</code>都可以用来给<code>css</code>定位置做样式表，也可以在<code>JQuery</code>做节点动作。<br>但是有不同<br><code>id</code>有唯一性，而且每一个节点只能有一个<code>id</code><br><code>class</code>没有，就是一个样式类的定义。而且一个节点可以存在无数个<code>class</code><br>所以这东西都做出潜规则了，<code>class</code>用来定义层叠样式表，<code>id</code>用来做操作<br>可是我犯的错误刚好就在这里</p>
-<h3 id="错误出现在哪"><a href="#错误出现在哪" class="headerlink" title="错误出现在哪"></a>错误出现在哪</h3><p>就是那个该死的mobile标题栏，由于强迫症而且还tm跟老罗那强迫症有点像<br>必须对称设计，音量键也要做两个Hih7#%&amp;T&amp;<em>gt38g2&amp;%</em>&amp;&amp;<em>%Y</em>HWdf<br>咳咳…所以左边那个menu item之后就把海豚加上去了<br><strong>（那两个的同行对齐我还调了特别久！）</strong><br>当然咯，直接右边的鱼也加了跟desktop一样的id名…<br>那死了啊，一页里面两个节点一样名字，认谁啊<br><strong>记住了！认最先看到的那个！</strong><br>那手机的sidebar比desktop的按钮靠前不知道多少，所以后面那个就失灵咯。</p>
-<h3 id="所以解决方法"><a href="#所以解决方法" class="headerlink" title="所以解决方法"></a>所以解决方法</h3><p>解决方法就是换名字咯……</p>
-<p>以上。</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
             
         </tags>
         
@@ -932,24 +805,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[阴阳师真的是个很成功的游戏]]></title>
-      <url>/2016/10/15/Yinyangshi/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>别说了我的肝好疼…</p>
-</blockquote>
-<p>这游戏刚出的时候真的是满脸嫌弃<br>中国的游戏，和风的主题，中文的界面，中文的字幕，日语语音？？？日本声优？？？<br>网易本土游戏，日本的主题？好尴尬。。。<br>看到游戏之后第一反应就是，这游戏肯定又是网易的手游出口计划之一了<br>不过看到游戏被日方接受了心里还是挺高兴的，中国的动漫游戏啊<br>后来查了一下，《阴阳师》本来就是日本的一个小说，然后真的太火了<br>以至于改编成游戏啊，各种形式的节目<br>这次也不例外<br>于是先是“画符成瘾，无法自拔”<br>再到“妈的我的肝好疼。。。”<br>不过这也体现游戏的良心之处<br><strong>只要努力玩，R也能当SR用</strong><br><code>“捂着肝说出了最后一句话…”</code></p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 吹水 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于Rousy的小前菜]]></title>
       <url>/2016/10/09/About_Rousy/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -968,9 +823,9 @@
         
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 前端 </tag>
             
             <tag> 小作坊 </tag>
             
