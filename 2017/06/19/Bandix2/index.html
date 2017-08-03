@@ -172,7 +172,7 @@
 </blockquote>
 <p>在vue中，可能无论写一个什么，就算只是单纯的一个vue插件，也会用到<code>vue component</code>。因为你搞一个<code>*.vue</code>就已经是了啊（逃</p>
 <p>一切还是以探索为主，我只是想把看到的东西按照自己理解记录一下。关于这部分的内容，在<a href="https://cn.vuejs.org/v2/guide/components.html" target="_blank" rel="external">Vue组件</a>这里有中文文档，在<a href="https://cn.vuejs.org/v2/api/#Vue-extend-options" target="_blank" rel="external">Vue.extend</a>有关于extend的内容。</p>
-<p>现在大多数组件库的话，都是<code>Vue.use()</code>来使用，那么为什么use就能用了？到底是在u些什么鬼东西。</p>
+<p>现在大多数组件库的话，都是<code>Vue.use()</code>来使用，那么为什么use就能用了？到底是在u些什么鬼东西。<br><a id="more"></a></p>
 <h2 id="Vue-component"><a href="#Vue-component" class="headerlink" title="Vue component"></a>Vue component</h2><p>简单来说，就是<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="comment">/* 组件名称 */</span>, <span class="comment">/* 组件内容 */</span>)</div></pre></td></tr></table></figure></p>
 <p>所以就算看一些组件库的话，在入口js文件看到最多的就是这玩意儿。这是一个全局引用组件的方法。一次引用了，在项目里哪个地方都能使用了。</p>
 <p>当然还有局部引用方法，这个就常见了，你在每个vue文件里，<code>&lt;script&gt;</code>区块里写的那个<code>components: {}</code>不就是这个作用！</p>
