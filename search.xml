@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[从0到1的Bandix（三）- vue.use]]></title>
+      <url>/2017/08/04/Bandix3/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>我不指望Bandix有多牛逼，跟Syuanpi一个态度，我只是想给自己做作业</p>
+</blockquote>
+<p>其实，完整的函数是<code>Vue.use(plugin)</code>，在中文文档上是这么说的</p>
+<blockquote>
+<p>安装 Vue.js 插件。如果插件是一个对象，必须提供<code>install</code>方法。如果插件是一个函数，它会被作为 install 方法。install 方法将被作为 Vue 的参数调用。<br>当 install 方法被同一个插件多次调用，插件将只会被安装一次。</p>
+</blockquote>
+<p>所以实际上，我们使用一个库的时候，组件库本身是把自己当做一个插件插入到项目中，而不是一个什么大头鬼。<br><a id="more"></a></p>
+<h2 id="Vue-use"><a href="#Vue-use" class="headerlink" title="Vue use"></a>Vue use</h2><p>而且官方也提供了几个例子</p>
+<blockquote>
+<p>添加全局方法或者属性，如:<code>vue-custom-element</code><br>添加全局资源：指令/过滤器/过渡等，如<code>vue-touch</code><br>通过全局 mixin方法添加一些组件选项，如:<code>vuex</code><br>添加 Vue 实例方法，通过把它们添加到<code>Vue.prototype</code>上实现。<br>一个库，提供自己的 API，同时提供上面提到的一个或多个功能，如<code>vue-router</code></p>
+</blockquote>
+<p>要用<code>Vue.use()</code>的话，use的这个东西里面必须有一个公开的<code>install</code>方法，方法要两个参数，第一个就是<code>Vue</code>，第二个是个可选的<code>option</code></p>
+<p>所以，既然方法已经把Vue实例传进去了，那么就意味着，vue的全局函数都可以在这个方法里面调用，什么<code>component</code>, <code>extend</code>, <code>mixin</code>等。</p>
+<p>那么库的入口就好解决了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">install (Vue, option = &#123;&#125;) &#123;</div><div class="line">  <span class="comment">//有组件搞组件！</span></div><div class="line">  Vue.component(<span class="comment">/* xxx */</span>)</div><div class="line"></div><div class="line">  <span class="comment">//没组件造组件！</span></div><div class="line">  Vue.extend(&#123;&#125;)</div><div class="line"></div><div class="line">  <span class="comment">//都有搞混合</span></div><div class="line">  Vue.mixin(&#123;&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="入口是解决了，那么如果发布怎么办？"><a href="#入口是解决了，那么如果发布怎么办？" class="headerlink" title="入口是解决了，那么如果发布怎么办？"></a>入口是解决了，那么如果发布怎么办？</h2><p>一切npm包都是靠<code>package.json</code>啊这个很早就有提到，不管发布还是管理，都要靠这个json文件。如果你的入口js文件写好了，入口js文件的install方法确定是妥的，那么在<code>package.json</code>中，<code>main</code>节点大胆写进去就行了。这样届时从npm下载的话，安装完，该怎么import怎么import，然后use，完事儿！</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 实验室 </tag>
+            
+            <tag> vue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[玩NS也有几个月了]]></title>
       <url>/2017/08/03/nintendo-switch/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -862,9 +896,9 @@
         
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 前端 </tag>
             
             <tag> 小作坊 </tag>
             

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-08-03T15:40:16.000Z</updated>
+  <updated>2017-08-03T16:29:09.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从0到1的Bandix（三）- vue.use</title>
+    <link href="http://blog.co1mugx.tk/2017/08/04/Bandix3/"/>
+    <id>http://blog.co1mugx.tk/2017/08/04/Bandix3/</id>
+    <published>2017-08-03T16:13:39.000Z</published>
+    <updated>2017-08-03T16:29:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>我不指望Bandix有多牛逼，跟Syuanpi一个态度，我只是想给自己做作业</p>
+</blockquote>
+<p>其实，完整的函数是<code>Vue.use(plugin)</code>，在中文文档上是这么说的</p>
+<blockquote>
+<p>安装 Vue.js 插件。如果插件是一个对象，必须提供<code>install</code>方法。如果插件是一个函数，它会被作为 install 方法。install 方法将被作为 Vue 的参数调用。<br>当 install 方法被同一个插件多次调用，插件将只会被安装一次。</p>
+</blockquote>
+<p>所以实际上，我们使用一个库的时候，组件库本身是把自己当做一个插件插入到项目中，而不是一个什么大头鬼。<br><a id="more"></a></p>
+<h2 id="Vue-use"><a href="#Vue-use" class="headerlink" title="Vue use"></a>Vue use</h2><p>而且官方也提供了几个例子</p>
+<blockquote>
+<p>添加全局方法或者属性，如:<code>vue-custom-element</code><br>添加全局资源：指令/过滤器/过渡等，如<code>vue-touch</code><br>通过全局 mixin方法添加一些组件选项，如:<code>vuex</code><br>添加 Vue 实例方法，通过把它们添加到<code>Vue.prototype</code>上实现。<br>一个库，提供自己的 API，同时提供上面提到的一个或多个功能，如<code>vue-router</code></p>
+</blockquote>
+<p>要用<code>Vue.use()</code>的话，use的这个东西里面必须有一个公开的<code>install</code>方法，方法要两个参数，第一个就是<code>Vue</code>，第二个是个可选的<code>option</code></p>
+<p>所以，既然方法已经把Vue实例传进去了，那么就意味着，vue的全局函数都可以在这个方法里面调用，什么<code>component</code>, <code>extend</code>, <code>mixin</code>等。</p>
+<p>那么库的入口就好解决了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">install (Vue, option = &#123;&#125;) &#123;</div><div class="line">  <span class="comment">//有组件搞组件！</span></div><div class="line">  Vue.component(<span class="comment">/* xxx */</span>)</div><div class="line"></div><div class="line">  <span class="comment">//没组件造组件！</span></div><div class="line">  Vue.extend(&#123;&#125;)</div><div class="line"></div><div class="line">  <span class="comment">//都有搞混合</span></div><div class="line">  Vue.mixin(&#123;&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="入口是解决了，那么如果发布怎么办？"><a href="#入口是解决了，那么如果发布怎么办？" class="headerlink" title="入口是解决了，那么如果发布怎么办？"></a>入口是解决了，那么如果发布怎么办？</h2><p>一切npm包都是靠<code>package.json</code>啊这个很早就有提到，不管发布还是管理，都要靠这个json文件。如果你的入口js文件写好了，入口js文件的install方法确定是妥的，那么在<code>package.json</code>中，<code>main</code>节点大胆写进去就行了。这样届时从npm下载的话，安装完，该怎么import怎么import，然后use，完事儿！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;我不指望Bandix有多牛逼，跟Syuanpi一个态度，我只是想给自己做作业&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实，完整的函数是&lt;code&gt;Vue.use(plugin)&lt;/code&gt;，在中文文档上是这么说的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装 Vue.js 插件。如果插件是一个对象，必须提供&lt;code&gt;install&lt;/code&gt;方法。如果插件是一个函数，它会被作为 install 方法。install 方法将被作为 Vue 的参数调用。&lt;br&gt;当 install 方法被同一个插件多次调用，插件将只会被安装一次。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以实际上，我们使用一个库的时候，组件库本身是把自己当做一个插件插入到项目中，而不是一个什么大头鬼。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>玩NS也有几个月了</title>
@@ -975,47 +1022,6 @@
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="微信小程序" scheme="http://blog.co1mugx.tk/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新主题测试完善中</title>
-    <link href="http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/"/>
-    <id>http://blog.co1mugx.tk/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</id>
-    <published>2016-11-02T01:33:51.000Z</published>
-    <updated>2017-04-19T03:43:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>厉害咯我的Blank</p>
-</blockquote>
-<p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
-<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p>
-<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><img src="/Image/Blank-gray.jpg" alt="Blank-深空灰"></p>
-<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><img src="/Image/Blank-pink.jpg" alt="Blank-樱语粉"></p>
-<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><img src="/Image/Blank-green.jpg" alt="Blank-璐璐绿"></p>
-<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><img src="/Image/Blank-blue.jpg" alt="Blank-编不下去的蓝色"></p>
-<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><img src="/Image/Blank-red.jpg" alt="Blank-红红火火"></p>
-<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><img src="/Image/Blank-orange.jpg" alt="Blank-橙子一样的颜色"><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
-<h3 id="这个主题从写法上，比Rousy改善很多"><a href="#这个主题从写法上，比Rousy改善很多" class="headerlink" title="这个主题从写法上，比Rousy改善很多"></a>这个主题从写法上，比Rousy改善很多</h3><p>怎么来说，Rousy的话，是根据css然后全搬入stylus的，管理性能略差<br>但是Blank的话，我好像不知不觉用了stylus的用法，所以看起来应该…还是不简洁…<br>当然Blank只是半成品，至今只出生后第3天。（都是中午和大半夜，白天有课上）</p>
-<h3 id="新主题有没有什么新东西"><a href="#新主题有没有什么新东西" class="headerlink" title="新主题有没有什么新东西"></a>新主题有没有什么新东西</h3><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>
-<h4 id="好了新主题就挂三天吧，三天之后切回Rousy。"><a href="#好了新主题就挂三天吧，三天之后切回Rousy。" class="headerlink" title="好了新主题就挂三天吧，三天之后切回Rousy。"></a>好了新主题就挂三天吧，三天之后切回Rousy。</h4>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;厉害咯我的Blank&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;我先说好啊！Blank不是SKT T1的打野！&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;/blank.html&quot;&gt;主题演示页面点击这里&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;科技以换色为本！&quot;&gt;&lt;a href=&quot;#科技以换色为本！&quot; class=&quot;headerlink&quot; title=&quot;科技以换色为本！&quot;&gt;&lt;/a&gt;科技以换色为本！&lt;/h3&gt;&lt;h4 id=&quot;紫色&quot;&gt;&lt;a href=&quot;#紫色&quot; class=&quot;headerlink&quot; title=&quot;紫色&quot;&gt;&lt;/a&gt;紫色&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/Image/Blank-violet.jpg&quot; alt=&quot;Blank-紫罗兰&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
-    
-      <category term="Blank" scheme="http://blog.co1mugx.tk/tags/Blank/"/>
     
   </entry>
   

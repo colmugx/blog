@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>
-  
-    归档 · Co1MugX
-  
-</title>
+    <title> 从0到1的Bandix（三）- vue.use · Co1MugX </title>
     <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -145,171 +141,117 @@
         <main class="main" id="main">
             
     
-    <div class="archive syuanpi riseIn-light" id="archive">
-        
-            <h1 class="archive-title">Total</h1>
-            <span class="archive-num">一共有 27 篇文章</span>
-        
-        <div class="archive-list">
-            <ul>
-        
+    <article class="post">
+        <header class="post-header">
+            <div class="post-time syuanpi riseIn-light back-1">
+                <span>2017年8月4日</span>
+            </div>
+            <h1 class="post-title syuanpi riseIn-light back-2">
+            
+                从0到1的Bandix（三）- vue.use
+            
+            </h1>
             
                 
-                
-                
+                    <div class="post-tags syuanpi riseIn-light back-3">
                     
-                     
-                        <h2 class="archive-year"> 2016 </h2>
+                        <a href="/tags/前端/">前端</a>
                     
+                        <a href="/tags/实验室/">实验室</a>
+                    
+                        <a href="/tags/vue/">vue</a>
+                    
+                    </div>
                 
             
+        </header>
+        <div class="post-content syuanpi riseIn-light back-3">
             
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    12-09
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/12/09/update-npm-packages/">更新全局NPM的所有可更新包</a>
-                </span>
-            </li>
+                <blockquote>
+<p>我不指望Bandix有多牛逼，跟Syuanpi一个态度，我只是想给自己做作业</p>
+</blockquote>
+<p>其实，完整的函数是<code>Vue.use(plugin)</code>，在中文文档上是这么说的</p>
+<blockquote>
+<p>安装 Vue.js 插件。如果插件是一个对象，必须提供<code>install</code>方法。如果插件是一个函数，它会被作为 install 方法。install 方法将被作为 Vue 的参数调用。<br>当 install 方法被同一个插件多次调用，插件将只会被安装一次。</p>
+</blockquote>
+<p>所以实际上，我们使用一个库的时候，组件库本身是把自己当做一个插件插入到项目中，而不是一个什么大头鬼。<br><a id="more"></a></p>
+<h2 id="Vue-use"><a href="#Vue-use" class="headerlink" title="Vue use"></a>Vue use</h2><p>而且官方也提供了几个例子</p>
+<blockquote>
+<p>添加全局方法或者属性，如:<code>vue-custom-element</code><br>添加全局资源：指令/过滤器/过渡等，如<code>vue-touch</code><br>通过全局 mixin方法添加一些组件选项，如:<code>vuex</code><br>添加 Vue 实例方法，通过把它们添加到<code>Vue.prototype</code>上实现。<br>一个库，提供自己的 API，同时提供上面提到的一个或多个功能，如<code>vue-router</code></p>
+</blockquote>
+<p>要用<code>Vue.use()</code>的话，use的这个东西里面必须有一个公开的<code>install</code>方法，方法要两个参数，第一个就是<code>Vue</code>，第二个是个可选的<code>option</code></p>
+<p>所以，既然方法已经把Vue实例传进去了，那么就意味着，vue的全局函数都可以在这个方法里面调用，什么<code>component</code>, <code>extend</code>, <code>mixin</code>等。</p>
+<p>那么库的入口就好解决了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">install (Vue, option = &#123;&#125;) &#123;</div><div class="line">  <span class="comment">//有组件搞组件！</span></div><div class="line">  Vue.component(<span class="comment">/* xxx */</span>)</div><div class="line"></div><div class="line">  <span class="comment">//没组件造组件！</span></div><div class="line">  Vue.extend(&#123;&#125;)</div><div class="line"></div><div class="line">  <span class="comment">//都有搞混合</span></div><div class="line">  Vue.mixin(&#123;&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="入口是解决了，那么如果发布怎么办？"><a href="#入口是解决了，那么如果发布怎么办？" class="headerlink" title="入口是解决了，那么如果发布怎么办？"></a>入口是解决了，那么如果发布怎么办？</h2><p>一切npm包都是靠<code>package.json</code>啊这个很早就有提到，不管发布还是管理，都要靠这个json文件。如果你的入口js文件写好了，入口js文件的install方法确定是妥的，那么在<code>package.json</code>中，<code>main</code>节点大胆写进去就行了。这样届时从npm下载的话，安装完，该怎么import怎么import，然后use，完事儿！</p>
 
+            
+        
+        </div>
         
             
-                
-                
-                
             
+    <hr class="copy-line">
+    <div class="post-copyright">
+        <div class="copy-author">
+            <span>作者 :</span>
+            <span>Co1MugX</span>
+        </div>
+        <div class="copy-url">
+            <span>地址 :</span>
+            <a href="http://blog.co1mugx.tk/2017/08/04/Bandix3/">http://blog.co1mugx.tk/2017/08/04/Bandix3/</a>
+        </div>
+        <div class="copy-origin">
+            <span>来源 :</span>
+            <a href="http://blog.co1mugx.tk">http://blog.co1mugx.tk</a>
+        </div>
+        <div class="copy-license">
             
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    12-09
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/12/09/nodejs-hapi/">前端水深JS玄学 —— 尝试后端框架Hapi</a>
-                </span>
-            </li>
-
-        
-            
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    12-02
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/12/02/Korou5/">扣肉小记（五）—— 你的名字。</a>
-                </span>
-            </li>
-
-        
-            
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    11-26
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/11/26/bian-cheng-mao/">强迫症从娃娃抓起 - 编程猫体验</a>
-                </span>
-            </li>
-
-        
-            
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    11-25
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/11/25/Korou4/">扣肉小记（四）</a>
-                </span>
-            </li>
-
-        
-            
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    11-09
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/11/09/an-li-yi-ge-bian-ji-qi/">安利一个安装很久却冷板凳的编辑器</a>
-                </span>
-            </li>
-
-        
-            
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    11-02
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/">新主题测试完善中</a>
-                </span>
-            </li>
-
-        
-            
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    10-28
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">关于微信小程序</a>
-                </span>
-            </li>
-
-        
-            </ul>
+            著作权归作者所有，转载请联系作者获得授权。
         </div>
     </div>
+
+        
+    </article>
     
-    <nav class="pagination">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/page/2/">下一页 ></a>
+        
+    <nav class="article-page">
+        
+        
+            <a href="/2017/08/03/nintendo-switch/" id="art-right" class="art-left">
+                <span class="prev-title"> 
+                    <i class="iconfont icon-left"></i>玩NS也有几个月了
+                </span>
+            </a>
+        
     </nav>
 
+        
+    <i id="com-switch" class="iconfont icon-more syuanpi jumping-in long infinite" style="font-size:24px;display:block;text-align:center;"></i>
+    <div class="post-comments" id="post-comments" style="display: none;margin: auto 16px;">
+        
+        
+        
+        <!-- Disqus Comments -->
+
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    </div>
+
+    
 
 
         </main>
@@ -393,6 +335,16 @@ $(document).ready(function(){
 })
 </script>
     </div>
+    
+        
+    <div class="post-toc">
+        <span class="title">文章目录</span>
+        <div class="toc-inner syuanpi back-1 fallIn-light">
+            <li class="title-link"><a href="javascript:;" class="toTop">从0到1的Bandix（三）- vue.use</a></li>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-use"><span class="toc-text">Vue use</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入口是解决了，那么如果发布怎么办？"><span class="toc-text">入口是解决了，那么如果发布怎么办？</span></a></li></ol>
+        </div>
+    </div>
+
     
     <div class="backtop syuanpi dead toTop" id="backtop">
     <i class="iconfont icon-up"></i>
