@@ -168,9 +168,21 @@
         <div class="post-content syuanpi riseIn-light back-3">
             
                 <blockquote>
-<p>虽然Bandix是因为它的环境而出生，不过不排除改名的可能。</p>
+<p>如果没玩过Nintendo Switch的话，就千万不要去接触这个东西，这东西让人鬼迷心窍的！</p>
 </blockquote>
-<p>可能无论写一个什么，就算只是单纯的一个vue插件，也会用到<code>vue component</code>。</p>
+<p>在vue中，可能无论写一个什么，就算只是单纯的一个vue插件，也会用到<code>vue component</code>。因为你搞一个<code>*.vue</code>就已经是了啊（逃</p>
+<p>一切还是以探索为主，我只是想把看到的东西按照自己理解记录一下。关于这部分的内容，在<a href="https://cn.vuejs.org/v2/guide/components.html" target="_blank" rel="external">Vue组件</a>这里有中文文档，在<a href="https://cn.vuejs.org/v2/api/#Vue-extend-options" target="_blank" rel="external">Vue.extend</a>有关于extend的内容。</p>
+<p>现在大多数组件库的话，都是<code>Vue.use()</code>来使用，那么为什么use就能用了？到底是在u些什么鬼东西。</p>
+<h2 id="Vue-component"><a href="#Vue-component" class="headerlink" title="Vue component"></a>Vue component</h2><p>简单来说，就是<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="comment">/* 组件名称 */</span>, <span class="comment">/* 组件内容 */</span>)</div></pre></td></tr></table></figure></p>
+<p>所以就算看一些组件库的话，在入口js文件看到最多的就是这玩意儿。这是一个全局引用组件的方法。一次引用了，在项目里哪个地方都能使用了。</p>
+<p>当然还有局部引用方法，这个就常见了，你在每个vue文件里，<code>&lt;script&gt;</code>区块里写的那个<code>components: {}</code>不就是这个作用！</p>
+<p>所以按照我的理解，<code>Vue.component</code>主要还是一个声明，一个注册组件的作用，毕竟你写组件的话都直接用<code>*.vue</code>了，搞这东西来写不是很蛋疼。</p>
+<h2 id="Vue-extend"><a href="#Vue-extend" class="headerlink" title="Vue extend"></a>Vue extend</h2><p>对没错我就是来蛋疼了…简单来说就是<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="comment">/* 组件名称 */</span>, Vue.extend())</div></pre></td></tr></table></figure></p>
+<p>当然没叫你这么写！</p>
+<p>所以<code>extend</code>来说，这就是一个类似于<code>*.vue</code>但可以不专门弄一个文件来写的，一个类构造器的东西。或者说是组件构造器吧，另一种写组件的姿势。它的后缀就可以不是vue了，而是一个纯js文件。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Vue.extend(&#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">`&lt;h1&gt;Hello Bed&lt;/h1&gt;`</span>,</div><div class="line">  ... <span class="comment">//该干嘛干嘛还是跟&lt;script&gt;一样</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>这种我觉得，比较适合那种模板内容不多，但是逻辑或者功能又特别复杂的东西。比如插件之类的开发，因为就一个js文件，看起来也很舒服。而且它是以扩展的形式插入进去的，当然可以全局扩展也可以局部扩展，跟component是一样的。</p>
+<p>不过这种写法，让我觉得可以用<code>jsx</code>或者<code>typescript</code>来皮一下是怎么回事……不过<code>typescript</code>确实还是大多靠这种方式来实现，很好玩我很喜欢玩。不知道现在有没有更好的方法。而且<code>jsx</code>有官方插件可以用了，加上<code>render</code>函数。我怎么觉得有点变味……</p>
+<p>所以为什么库引用的时候用的是use，下篇再讲use的东西。</p>
 
             
         
@@ -329,7 +341,7 @@ $(document).ready(function(){
         <span class="title">文章目录</span>
         <div class="toc-inner syuanpi back-1 fallIn-light">
             <li class="title-link"><a href="javascript:;" class="toTop">从0到1的Bandix（二）- component & extend</a></li>
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-component"><span class="toc-text">Vue component</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-extend"><span class="toc-text">Vue extend</span></a></li></ol>
         </div>
     </div>
 
