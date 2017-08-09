@@ -515,6 +515,9 @@ a {
   height: 100%;
   text-align: center;
   padding-right: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .header #subtitle {
   font-size: 12px;
