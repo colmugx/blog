@@ -87,28 +87,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[从0到1的Bandix（四）- 组件通讯]]></title>
-      <url>/2017/08/09/Bandix4/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>我个人建议，如果你开发了一个组件或者牛逼了开发了组件库，建议封装成起来，要不要npm包随便你。</p>
-<p>如果你直接把源码包放进你的工作项目中，别说我没有提醒过。</p>
-</blockquote>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
-            
-            <tag> vue </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[从0到1的Bandix（三）- vue.use]]></title>
       <url>/2017/08/04/Bandix3/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -1002,9 +980,9 @@
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> 小作坊 </tag>
             
