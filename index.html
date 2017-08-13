@@ -215,65 +215,15 @@
 <p>如果你直接把源码包放进你的工作项目中，别说我没有提醒过。</p>
 </blockquote>
 <p>组件化了，证明把一个页面若干项目都视为一个组件，然后像搭积木一样重新组合。组件化的目的最早就为了，同样的组件可以重复利用避免反复开发。但是如果同一页面那么交互起来肯定是最方便的，因为页面数据都在同一页面上。如果独立成组件之后，势必会有数据传入组件然后来回刷新的情况。（在这里我要操了小程序的设计）</p>
-<p>所以Bandix不例外的，肯定要组件通讯的，不然玩奶子。</p>
-<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>Bandix主要还是用了四种：</p>
-<ul>
-<li>emit &amp; on</li>
-<li>parent &amp; children</li>
-<li>refs</li>
-<li>props</li>
-</ul>
-<p>你要说没有参考前辈（<code>Mint-UI</code>，<code>VUX</code>）我是不信的，我自己不信的。最常用的是props，也是我觉得我用的最好的。<code>emit</code>的话我一开始只会用来建立方法通讯。后来是在阅读<code>element</code>源码才发现，原来<code>emit</code>可以带参数通讯！方便了好多。<code>parent&amp;children</code>是在<code>mint-ui</code>得到启示。（对就是<code>tabbar</code>）。</p>
-<p>顺便再吐槽一下：<del>elefe是不是打算不想理mint-ui了我提了pr竟然两个星期没人管</del>。</p>
-<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p><a href="https://cn.vuejs.org/v2/guide/components.html#Prop" target="_blank" rel="external">Prop</a></p>
-<p>按循序讲吧，本来想按照上面的List来跳的……</p>
-<p><code>prop</code>绝对是用得最爽而且是最方便的一种做法：给组件开孔。</p>
-<p>一般做法就是给一个数组就完事了</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">props: [<span class="string">'message'</span>] <span class="comment">// 建立一个叫message prop</span></div><div class="line"></div><div class="line"><span class="comment">// usage</span></div><div class="line">&lt;component message=<span class="string">""</span> /&gt;</div></pre></td></tr></table></figure>
-<p>这是最简单最基础的，通过message把新数据传入这个组件，完事。</p>
-<p>那有同学说，动态数据怎么办！那你就真滴麻瓜！</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;component v-bind:message=<span class="string">""</span> /&gt;</div></pre></td></tr></table></figure>
-<p>当然<code>prop</code>并不只这样。这样做仅是当<code>message: any</code>的时候。如果<code>message: string</code>的时候。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">props: &#123;</div><div class="line">  <span class="attr">message</span>: <span class="built_in">String</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>哎！别嘲笑<code>props</code>验证不行，不存在的！那又有同学说了，想要默认值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">props: &#123;</div><div class="line">  <span class="attr">message</span>: &#123;</div><div class="line">    <span class="attr">type</span>: <span class="built_in">String</span>,</div><div class="line">    <span class="attr">default</span>: <span class="string">'co1mugx'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>还有內建验证方法。略！</p>
-<h2 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h2><p><a href="https://cn.vuejs.org/v2/guide/components.html#子组件索引" target="_blank" rel="external">子组件 Refs</a></p>
-<p>数据进得去出不来怎么搞。换一个<code>refs</code></p>
-<p><code>refs</code>的定位是，获取真实<code>dom</code>进行dom操作。我玩了一会，<code>refs</code>如果挂在本身是真实dom的情况下，获取的是真实dom。如果你挂在了虚拟dom下。获取到的是<code>vue component</code>。哎，你不信你去试一下！</p>
-<p>挂在真实dom可以干多少不可见人的事情不赘述。讲挂在虚拟dom的情况。如果能获取到整个<code>vue component</code>证明你在该实例建立的数据都可以使用到。不过我用最多的是通过在<code>method</code>来反馈一些父组件需要用到的数据（不懂得用emit的时候）。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* component.js</div><div class="line">*/</div><div class="line"></div><div class="line">Vue.extends(&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'component'</span></div><div class="line">  template: <span class="string">'&lt;span&gt;&lt;/span&gt;'</span>,</div><div class="line">  <span class="attr">method</span>: &#123;</div><div class="line">    getNum () &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;component ref=&quot;getAref&quot;&gt;&lt;/component&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">	var ref = this.$refs.getAref</div><div class="line">    console.log(ref.getNum)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>对，看起来巨蠢。这样子组件就搞得像窑子一样，什么都有。</p>
-<p>当然ref可以做很多事情不仅这种糟糕事情，比如你想获取真实dom的位置或者各种数据，可以嵌套ref取到这也不是不可以，自行做手效率转换吧！</p>
-<h2 id="emit-amp-on"><a href="#emit-amp-on" class="headerlink" title="emit &amp; on"></a>emit &amp; on</h2><p><a href="https://cn.vuejs.org/v2/api/#实例方法-事件" target="_blank" rel="external">实例方法/事件</a></p>
-<p>就是因为上面所述，我才发现了emit的另外一个用法，一开始我的用法是这样的</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"$emit('on-click')"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>当然没说你这么搞不对啊。这样做到了，从父组件跨入子组件运行方法。也就是说子组件这部分方法控制权交给了父组件。而且当我发现了<code>emit</code>可以带参数传输的时候，我发现了如果自组件一旦更新数据，父组件可以第一时间获取到。也不会像前面那么sb了。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Vue.extend(&#123;</div><div class="line">  <span class="attr">watch</span>: &#123;</div><div class="line">  	valChange(val) &#123;</div><div class="line">    	<span class="keyword">this</span>.$emit(<span class="string">'val-change'</span>, val)</div><div class="line">  	&#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">component</span> @<span class="attr">val-change</span>=<span class="string">"handleChange"</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">handleChange(val) &#123;</div><div class="line">  <span class="comment">// 这个时候就实时获取到valChange的数据了</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如果<code>emit</code>是触发器，那么<code>on</code>就是始作俑者了。只不过我的组件没那么复杂所以<code>on</code>基本上我是不需要用到。看文档看文档。</p>
-<h2 id="parent-amp-children"><a href="#parent-amp-children" class="headerlink" title="parent &amp; children"></a>parent &amp; children</h2><p><a href="https://cn.vuejs.org/v2/api/#parent" target="_blank" rel="external">parent</a></p>
-<p>限制最大最没什么几把用的设定。虽然是得到启示，但是我没用过。</p>
-<p>这设定是真的蠢到极致。</p>
-<blockquote>
-<p>同时使用 <code>$parent</code> 和 <code>$children</code> 有冲突 - 他们作为同一个入口 。更推荐用 props 和 events 实现父子组件通信</p>
-</blockquote>
-<p>其实就是，如果你想直接操作父组件的数据或者直接拿到父组件的东西，直接<code>$parent.data</code>就能取到了，或者给父组件某个数据赋值也是同理</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$parent.num = <span class="number">0</span> <span class="comment">// 为了避免破事，父组件data中要先有num这个字段</span></div></pre></td></tr></table></figure>
-<p>如果这种操作的话，意味着父组件会直接把这个组件当做<code>$children</code>了，也就是做这个操作的组件没有<code>$children</code>的资格了。但是父组件那么多<code>$children</code>这么操作也不合理。</p>
-<p>所以如果组件和组件是相互独立，非强耦合的情况下，我想只有傻逼会想到去用这个。而且子指使父的这种做法在中华文化里是要受到谴责的！不懂得什么叫孝顺和敬老！</p>
-<p>所以说孔子文化是很有深度且值得现代人思考的思想文化！还有《三字经》记载：</p>
-<blockquote>
-<p>养不教，父之过。教不严，师之惰。</p>
-</blockquote>
-<p>谁敢子教父的？没有这种操作！</p>
-<p>就算没有受过中华文化影响的西文代码界，也明确了子组件向来没有操作子组件的做法。因为父所管理的内容甚多，如果子组件操作父组件的操作打通之后，父组件有可能无法保证其他组件正常运行。</p>
-<p>所以说，Vue是真TM的刺激……</p>
-
-                
+<p>所以Bandix不例外的，肯定要组件通讯的，不然玩奶子。<br>
+                    
             
+        
+            <p class="content-link">
+                <a href="/2017/08/09/Bandix4/#more">
+                    <span class="iconfont icon-right">继续阅读</span>
+                </a>
+            </p>
         
         </div>
         
@@ -600,7 +550,7 @@ $(document).ready(function(){
     <div class="search" id="search">
         <div class="mask" id="mask"></div>
         <div class="search-wrapper syuanpi">
-            <h1 id="search-header" class="syuanpi">人的天职在于勇于探索真理</h1>
+            <h1 id="search-header" class="syuanpi">搜索一下？</h1>
             <div class="input">
                 <input type="text" id="local-search-input" results="0" name="">
             </div>
