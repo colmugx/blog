@@ -109,6 +109,95 @@
   </entry>
   
   <entry>
+    <title>从0到1的Bandix（四）- 组件通讯</title>
+    <link href="http://blog.co1mugx.tk/2017/08/09/Bandix4/"/>
+    <id>http://blog.co1mugx.tk/2017/08/09/Bandix4/</id>
+    <published>2017-08-09T03:09:59.000Z</published>
+    <updated>2017-08-13T09:09:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>我个人建议，如果你开发了一个组件或者牛逼了开发了组件库，建议封装成起来，要不要npm包随便你。</p>
+<p>如果你直接把源码包放进你的工作项目中，别说我没有提醒过。</p>
+</blockquote>
+<p>组件化了，证明把一个页面若干项目都视为一个组件，然后像搭积木一样重新组合。组件化的目的最早就为了，同样的组件可以重复利用避免反复开发。但是如果同一页面那么交互起来肯定是最方便的，因为页面数据都在同一页面上。如果独立成组件之后，势必会有数据传入组件然后来回刷新的情况。（在这里我要操了小程序的设计）</p>
+<p>所以Bandix不例外的，肯定要组件通讯的，不然玩奶子。</p>
+<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>Bandix主要还是用了四种：</p>
+<ul>
+<li>emit &amp; on</li>
+<li>parent &amp; children</li>
+<li>refs</li>
+<li>props</li>
+</ul>
+<p>你要说没有参考前辈（<code>Mint-UI</code>，<code>VUX</code>）我是不信的，我自己不信的。最常用的是props，也是我觉得我用的最好的。<code>emit</code>的话我一开始只会用来建立方法通讯。后来是在阅读<code>element</code>源码才发现，原来<code>emit</code>可以带参数通讯！方便了好多。<code>parent&amp;children</code>是在<code>mint-ui</code>得到启示。（对就是<code>tabbar</code>）。</p>
+<p>顺便再吐槽一下：<del>elefe是不是打算不想理mint-ui了我提了pr竟然两个星期没人管</del>。</p>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p><a href="https://cn.vuejs.org/v2/guide/components.html#Prop" target="_blank" rel="external">Prop</a></p>
+<p>按循序讲吧，本来想按照上面的List来跳的……</p>
+<p><code>prop</code>绝对是用得最爽而且是最方便的一种做法：给组件开孔。</p>
+<p>一般做法就是给一个数组就完事了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">props: [<span class="string">'message'</span>] <span class="comment">// 建立一个叫message prop</span></div><div class="line"></div><div class="line"><span class="comment">// usage</span></div><div class="line">&lt;component message=<span class="string">""</span> /&gt;</div></pre></td></tr></table></figure>
+<p>这是最简单最基础的，通过message把新数据传入这个组件，完事。</p>
+<p>那有同学说，动态数据怎么办！那你就真滴麻瓜！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;component v-bind:message=<span class="string">""</span> /&gt;</div></pre></td></tr></table></figure>
+<p>当然<code>prop</code>并不只这样。这样做仅是当<code>message: any</code>的时候。如果<code>message: string</code>的时候。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">props: &#123;</div><div class="line">  <span class="attr">message</span>: <span class="built_in">String</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>哎！别嘲笑<code>props</code>验证不行，不存在的！那又有同学说了，想要默认值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">props: &#123;</div><div class="line">  <span class="attr">message</span>: &#123;</div><div class="line">    <span class="attr">type</span>: <span class="built_in">String</span>,</div><div class="line">    <span class="attr">default</span>: <span class="string">'co1mugx'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>还有內建验证方法。略！</p>
+<h2 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h2><p><a href="https://cn.vuejs.org/v2/guide/components.html#子组件索引" target="_blank" rel="external">子组件 Refs</a></p>
+<p>数据进得去出不来怎么搞。换一个<code>refs</code></p>
+<p><code>refs</code>的定位是，获取真实<code>dom</code>进行dom操作。我玩了一会，<code>refs</code>如果挂在本身是真实dom的情况下，获取的是真实dom。如果你挂在了虚拟dom下。获取到的是<code>vue component</code>。哎，你不信你去试一下！</p>
+<p>挂在真实dom可以干多少不可见人的事情不赘述。讲挂在虚拟dom的情况。如果能获取到整个<code>vue component</code>证明你在该实例建立的数据都可以使用到。不过我用最多的是通过在<code>method</code>来反馈一些父组件需要用到的数据（不懂得用emit的时候）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* component.js</div><div class="line">*/</div><div class="line"></div><div class="line">Vue.extends(&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'component'</span></div><div class="line">  template: <span class="string">'&lt;span&gt;&lt;/span&gt;'</span>,</div><div class="line">  <span class="attr">method</span>: &#123;</div><div class="line">    getNum () &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;component ref=&quot;getAref&quot;&gt;&lt;/component&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">	var ref = this.$refs.getAref</div><div class="line">    console.log(ref.getNum)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>对，看起来巨蠢。这样子组件就搞得像窑子一样，什么都有。</p>
+<p>当然ref可以做很多事情不仅这种糟糕事情，比如你想获取真实dom的位置或者各种数据，可以嵌套ref取到这也不是不可以，自行做手效率转换吧！</p>
+<h2 id="emit-amp-on"><a href="#emit-amp-on" class="headerlink" title="emit &amp; on"></a>emit &amp; on</h2><p><a href="https://cn.vuejs.org/v2/api/#实例方法-事件" target="_blank" rel="external">实例方法/事件</a></p>
+<p>就是因为上面所述，我才发现了emit的另外一个用法，一开始我的用法是这样的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"$emit('on-click')"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>当然没说你这么搞不对啊。这样做到了，从父组件跨入子组件运行方法。也就是说子组件这部分方法控制权交给了父组件。而且当我发现了<code>emit</code>可以带参数传输的时候，我发现了如果自组件一旦更新数据，父组件可以第一时间获取到。也不会像前面那么sb了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Vue.extend(&#123;</div><div class="line">  <span class="attr">watch</span>: &#123;</div><div class="line">  	valChange(val) &#123;</div><div class="line">    	<span class="keyword">this</span>.$emit(<span class="string">'val-change'</span>, val)</div><div class="line">  	&#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">component</span> @<span class="attr">val-change</span>=<span class="string">"handleChange"</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">handleChange(val) &#123;</div><div class="line">  <span class="comment">// 这个时候就实时获取到valChange的数据了</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果<code>emit</code>是触发器，那么<code>on</code>就是始作俑者了。只不过我的组件没那么复杂所以<code>on</code>基本上我是不需要用到。看文档看文档。</p>
+<h2 id="parent-amp-children"><a href="#parent-amp-children" class="headerlink" title="parent &amp; children"></a>parent &amp; children</h2><p><a href="https://cn.vuejs.org/v2/api/#parent" target="_blank" rel="external">parent</a></p>
+<p>限制最大最没什么几把用的设定。虽然是得到启示，但是我没用过。</p>
+<p>这设定是真的蠢到极致。</p>
+<blockquote>
+<p>同时使用 <code>$parent</code> 和 <code>$children</code> 有冲突 - 他们作为同一个入口 。更推荐用 props 和 events 实现父子组件通信</p>
+</blockquote>
+<p>其实就是，如果你想直接操作父组件的数据或者直接拿到父组件的东西，直接<code>$parent.data</code>就能取到了，或者给父组件某个数据赋值也是同理</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$parent.num = <span class="number">0</span> <span class="comment">// 为了避免破事，父组件data中要先有num这个字段</span></div></pre></td></tr></table></figure>
+<p>如果这种操作的话，意味着父组件会直接把这个组件当做<code>$children</code>了，也就是做这个操作的组件没有<code>$children</code>的资格了。但是父组件那么多<code>$children</code>这么操作也不合理。</p>
+<p>所以如果组件和组件是相互独立，非强耦合的情况下，我想只有傻逼会想到去用这个。而且子指使父的这种做法在中华文化里是要受到谴责的！不懂得什么叫孝顺和敬老！</p>
+<p>所以说孔子文化是很有深度且值得现代人思考的思想文化！还有《三字经》记载：</p>
+<blockquote>
+<p>养不教，父之过。教不严，师之惰。</p>
+</blockquote>
+<p>谁敢子教父的？没有这种操作！</p>
+<p>就算没有受过中华文化影响的西文代码界，也明确了子组件向来没有操作子组件的做法。因为父所管理的内容甚多，如果子组件操作父组件的操作打通之后，父组件有可能无法保证其他组件正常运行。</p>
+<p>所以说，Vue是真TM的刺激……</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;我个人建议，如果你开发了一个组件或者牛逼了开发了组件库，建议封装成起来，要不要npm包随便你。&lt;/p&gt;
+&lt;p&gt;如果你直接把源码包放进你的工作项目中，别说我没有提醒过。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;组件化了，证明把一个页面若干项目都视为
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+      <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从0到1的Bandix（三）- vue.use</title>
     <link href="http://blog.co1mugx.tk/2017/08/04/Bandix3/"/>
     <id>http://blog.co1mugx.tk/2017/08/04/Bandix3/</id>
@@ -1042,43 +1131,6 @@
       <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="编程猫" scheme="http://blog.co1mugx.tk/tags/%E7%BC%96%E7%A8%8B%E7%8C%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扣肉小记（四）</title>
-    <link href="http://blog.co1mugx.tk/2016/11/25/Korou4/"/>
-    <id>http://blog.co1mugx.tk/2016/11/25/Korou4/</id>
-    <published>2016-11-25T09:01:32.000Z</published>
-    <updated>2017-04-20T06:40:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>天气转凉…基本是条冻狗了<br>另外小嘀咕一句：有点想把“Rousy”重写了…</p>
-</blockquote>
-<p>　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）</p>
-<h3 id="最近干了个长得像个音乐播放器的微信小程序"><a href="#最近干了个长得像个音乐播放器的微信小程序" class="headerlink" title="最近干了个长得像个音乐播放器的微信小程序"></a>最近干了个长得像个音乐播放器的微信小程序</h3><a id="more"></a>
-<p>　　最近干什么，最近学的前端知识好多，每天都是百度和知乎（暂时不需要用到Google系列），然后就是写了一个微信小程序(weapp)<br>　　反正到现在来说，<code>weapp</code>还是挺好玩的，而且那个<code>wxml</code>和<code>wxss</code>就理解成<code>html</code>和<code>css</code>就好了。然后那个<code>js</code>是用的ES6，身边有个大神honn哥，有问题他还是很愿意解答的，谢谢老板罩着！<br>　　然后写了个什么，写了个音乐程序，有个不愿意透露ID的妹妹她自己有个项目，就是“据她口述的盗链音乐播放器”，不过她是用swift写的，而且长得稍微挺像网某云音乐，但链子好像不是某云的…然后我就想那我也来写一个好了<br>　　然后就去看了她的链子，发现她的链子好像不能用了，然后我就自己找了一个某度的链子，能用。反正这些东西以后都开源了！开源大法好！先上个图！<br>  <img src="https://github.com/ColMugX/GitBed/raw/master/blog/weapp-openradio.gif" alt=""><br>　　但是尴尬的是，这套链子，<strong>不支持在线播放</strong>！卧槽这tm就尴尬了。链子拿下来之后，本地播放是可以的，在线播放是播放不了的。然后我就尝试用浏览器去点，点开之后并不是一个<code>html5</code>的<code>audio</code>而是直接<code>download</code>，代码长这样。<br>  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"songLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span>,</div><div class="line">  <span class="attr">"showLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>　　而且其实我有想过先down到本地然后在调用播放，后来想了一下，既然是小程序而且是个云端程序，这么玩占用的存储会不会就大了好多…现在只能另辟蹊径了。（为什么我想到了鹅厂…）</p>
-<h3 id="暂时没想到什么写的，来听音乐吧！"><a href="#暂时没想到什么写的，来听音乐吧！" class="headerlink" title="暂时没想到什么写的，来听音乐吧！"></a>暂时没想到什么写的，来听音乐吧！</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=412493379&auto=0&height=32"></iframe>
-
-<p>　　最近一直在听这首，其实去年就听过了，第一次听觉得很感触，虽说这首歌是TFBOYS的吧！但是我向来都是喜欢好音乐，至于谁唱的，只不过是借用了他的声音来表达歌曲的意义而已。<strong>（除了周杰伦！）</strong> <strong>（除了初音未来！）</strong>（为什么分开讲，因为伦哥的地位无可替代！）<br>　　而且应该是我觉得的tfboys的歌里面唯一一首能听的，歌词真的…不行了…</p>
-<blockquote>
-<p>我不完美的梦 　你陪着我想<br>不完美的勇气 　你说更勇敢<br>不完美的泪　 　你笑着擦干<br>不完美的歌　 　你都会唱<br>我不完美心事 　你全放在心上<br>这不完美的我 　你总当作宝贝</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;天气转凉…基本是条冻狗了&lt;br&gt;另外小嘀咕一句：有点想把“Rousy”重写了…&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）&lt;/p&gt;
-&lt;h3 id=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;a href=&quot;#最近干了个长得像个音乐播放器的微信小程序&quot; class=&quot;headerlink&quot; title=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;/a&gt;最近干了个长得像个音乐播放器的微信小程序&lt;/h3&gt;
-    
-    </summary>
-    
-    
-      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
     
   </entry>
   
