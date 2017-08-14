@@ -163,6 +163,47 @@
     <article class="post">
         <header class="post-header">
             <div class="post-time syuanpi riseIn-light back-1">
+                <span>2017年8月14日</span>
+            </div>
+            <h1 class="post-title syuanpi riseIn-light back-2">
+            
+                <a href="/2017/08/14/js-call-apply-bind/">javascript的call，bind，apply</a>
+            
+            </h1>
+            
+        </header>
+        <div class="post-content syuanpi riseIn-light back-3">
+            
+                
+                    <blockquote>
+<p>联动水文，大约半年前讲了Javascript的this。顺水推舟理一下call，bind，apply</p>
+</blockquote>
+<p>还是想记录一下关于函数式编程的内容，以防一些有心人质疑：哎呀你这个狗比只是嘴上说说而已啊！</p>
+<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/" target="_blank" rel="external">关于JavaScript的this</a></p>
+<p>还是上次的代码，修改一下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()					<span class="comment">//undefined.</span></div></pre></td></tr></table></figure>
+<p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.getName()		<span class="comment">//koala</span></div></pre></td></tr></table></figure>
+<p>不可以我头给你好伐。</p>
+                    
+            
+        
+            <p class="content-link">
+                <a href="/2017/08/14/js-call-apply-bind/#more">
+                    <span class="iconfont icon-right">继续阅读</span>
+                </a>
+            </p>
+        
+        </div>
+        
+    </article>
+    
+
+    
+        
+    <article class="post">
+        <header class="post-header">
+            <div class="post-time syuanpi riseIn-light back-1">
                 <span>2017年8月9日</span>
             </div>
             <h1 class="post-title syuanpi riseIn-light back-2">
@@ -404,43 +445,6 @@
         
             <p class="content-link">
                 <a href="/2017/06/13/Bandix0/#more">
-                    <span class="iconfont icon-right">继续阅读</span>
-                </a>
-            </p>
-        
-        </div>
-        
-    </article>
-    
-
-    
-        
-    <article class="post">
-        <header class="post-header">
-            <div class="post-time syuanpi riseIn-light back-1">
-                <span>2017年4月14日</span>
-            </div>
-            <h1 class="post-title syuanpi riseIn-light back-2">
-            
-                <a href="/2017/04/14/easyknow-vuex/">也许是第一个最好理解的Vuex入门</a>
-            
-            </h1>
-            
-        </header>
-        <div class="post-content syuanpi riseIn-light back-3">
-            
-                
-                    <blockquote>
-<p>项目用到了vuex，一开始的我完全是拒绝的…（一头撞死</p>
-</blockquote>
-<p>刚用vue不久，应该说还有大量的API还没用过还没熟悉过的时候，突然接受一个新内容，而且还是个很抽象的东西，说实话刚接触的时候完全不知道这东西有什么用…只听说过它能状态管理啊，什么全局控制啊。好牛逼啊666啊。</p>
-<p><strong>哦，然后呢？</strong></p>
-<p>后来稍微理解之后，决定写出来。浅入浅出的理解一下vuex。
-                    
-            
-        
-            <p class="content-link">
-                <a href="/2017/04/14/easyknow-vuex/#more">
                     <span class="iconfont icon-right">继续阅读</span>
                 </a>
             </p>

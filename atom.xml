@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-08-09T08:27:25.000Z</updated>
+  <updated>2017-08-14T16:33:00.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript的call，bind，apply</title>
+    <link href="http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/"/>
+    <id>http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/</id>
+    <published>2017-08-14T04:26:44.000Z</published>
+    <updated>2017-08-14T16:33:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>联动水文，大约半年前讲了Javascript的this。顺水推舟理一下call，bind，apply</p>
+</blockquote>
+<p>还是想记录一下关于函数式编程的内容，以防一些有心人质疑：哎呀你这个狗比只是嘴上说说而已啊！</p>
+<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/" target="_blank" rel="external">关于JavaScript的this</a></p>
+<p>还是上次的代码，修改一下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()					<span class="comment">//undefined.</span></div></pre></td></tr></table></figure>
+<p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.getName()		<span class="comment">//koala</span></div></pre></td></tr></table></figure>
+<p>不可以我头给你好伐。</p>
+<a id="more"></a>
+<p>讲正事！那如果要搞出个变量来用，因为有时候并没办法这么自由的随便调用。怎么做！</p>
+<h2 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h2><blockquote>
+<p><strong>call</strong></p>
+<ul>
+<li>vi. 呼叫；拜访；叫牌</li>
+<li>vt. 呼叫；称呼；召集</li>
+<li>n. 电话；呼叫；要求；访问</li>
+<li>n. (Call)人名；(瑞典、罗)卡尔；(英)考尔</li>
+</ul>
+<p>以上来自有道翻译</p>
+</blockquote>
+<p>有一手百度翻译就方便了，就是call它，把要用的方法call出来。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj)		<span class="comment">//koala  指向还给他，假装他打电话叫它出来</span></div></pre></td></tr></table></figure>
+<h2 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h2><blockquote>
+<p><strong>apply</strong></p>
+<ul>
+<li>v.应用；使用；涂；敷</li>
+<li>Web申请；适用；套用</li>
+</ul>
+<p>以上来自bing词典，感谢微软爸爸</p>
+</blockquote>
+<p>再来一手必应翻译简直就是，不谈了！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> apy = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj)		<span class="comment">//koala  可以说不是指向还给他，这不是假装了是直接抓他来了</span></div></pre></td></tr></table></figure>
+<p>有人要问，那你这手跟<code>call()</code>不是一样的么，为什么要区分开来。你问这个问题<a href="#call(">下面再讲</a>和#apply()区别)</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>是不是以为我要用百度翻译了？我偏不！</p>
+<blockquote>
+<p><strong>bind</strong></p>
+<p><strong>n.</strong> 窘境；讨厌的事情；捆绑；植物的藤蔓<br><strong>v.</strong> 捆绑；约束；装订；（使）结合；使关系密切</p>
+<p>以上来自沪江小d，我学日语就靠它</p>
+</blockquote>
+<p><strong>顺便，请以上三家公司尽快给我打钱，谢谢合作。</strong></p>
+<p><code>bind()</code>有点土匪的意思，它就是想抢走你老婆借用一晚的意思。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> bid = obj.getName	<span class="comment">// 这手还是不变</span></div><div class="line">bid.bind(obj)			<span class="comment">// 这样就结束了，但是什么都不会发生</span></div><div class="line">bid()					<span class="comment">// koala 这样才会运行，因为是抢过来了，所以可以直接借用</span></div></pre></td></tr></table></figure>
+<h2 id="call-和-apply-区别"><a href="#call-和-apply-区别" class="headerlink" title="call()和#apply()区别"></a>call()和#apply()区别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj)		<span class="comment">//koala  指向还给他，假装他打电话叫它出来</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> apy = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj)		<span class="comment">//koala  可以说不是指向还给他，这不是假装了是直接抓他来了</span></div></pre></td></tr></table></figure>
+<p>说是这么说了，可是，他们并不是说就这么改变<code>this</code>方向然后就没什么用处了啊，可以借用<code>call()</code>和<code>apply()</code>传参数的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName(param1, param2) &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">' params: '</span> + param1 + param2</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj, <span class="number">1</span>, <span class="number">2</span>)		<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure>
+<p>那么<code>apply()</code>就有区别了？哎！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> apy = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj, [<span class="number">1</span>, <span class="number">2</span>])		<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure>
+<p><code>apply</code>后面接参数，只接受数组，<code>call</code>的话按顺序怼进去就行了。就这点区别。</p>
+<p>暂时先这样，以后更深入的使用再深入的理解一下。现在大概就用到这些。</p>
+<p><strong>下一篇，讲Javascript的柯基化！</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;联动水文，大约半年前讲了Javascript的this。顺水推舟理一下call，bind，apply&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;还是想记录一下关于函数式编程的内容，以防一些有心人质疑：哎呀你这个狗比只是嘴上说说而已啊！&lt;/p&gt;
+&lt;p&gt;扩展阅读：&lt;a href=&quot;https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;关于JavaScript的this&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;还是上次的代码，修改一下&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;panda&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;koala&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    getName() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; test = obj.getName&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;test()					&lt;span class=&quot;comment&quot;&gt;//undefined.&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;（敲黑板！）复习一下！为什么就&lt;code&gt;undefined&lt;/code&gt;了！原因就是，&lt;code&gt;this&lt;/code&gt;指向不同了。那么直接运行是否可以&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;panda&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;koala&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    getName() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;obj.getName()		&lt;span class=&quot;comment&quot;&gt;//koala&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;不可以我头给你好伐。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Javascript的条件判断</title>
@@ -1096,42 +1177,6 @@
       <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
     
       <category term="看片子" scheme="http://blog.co1mugx.tk/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>强迫症从娃娃抓起 - 编程猫体验</title>
-    <link href="http://blog.co1mugx.tk/2016/11/26/bian-cheng-mao/"/>
-    <id>http://blog.co1mugx.tk/2016/11/26/bian-cheng-mao/</id>
-    <published>2016-11-26T14:49:58.000Z</published>
-    <updated>2016-11-26T15:35:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>不知道我写了这个之后，会不会加大我到这家公司的机会指数233333</p>
-</blockquote>
-<h3 id="刚看到这个网站的时候"><a href="#刚看到这个网站的时候" class="headerlink" title="刚看到这个网站的时候"></a>刚看到这个网站的时候</h3><p>其实我是在逛CNODE的时候发现，这家公司在招人，正想找工作的我当然会点进去看一下啊<br>CNODE上面找的，毋庸置疑了就是<code>Node.Js</code>工程师了，然后我就点进官网看，第一眼看的时候我的反应是<br>“卧槽这什么卵…赛尔号么…”（不知道会不会被打死…）<br>然后我就拉到最下面有个加入我们（已经成习惯了，公司的招聘信息都会在footer），看到了有自己喜欢的工作，它是跳到拉钩网的。<br>后来发了简历之后发现，他们有一条要求：<strong>要通过他们的平台制作3个游戏</strong><br>一开始我是懵的，虽然我以前玩过<code>Egret</code>可是要我做游戏，害怕啊！<br>但是我还是去看了这个网站，发现这家网站做的其实是幼儿编程培训（没记错的话是7到15岁）<br>很新颖的题材，瞬间就喜欢了。（一瞬间想到了ios10的swift playground）<a id="more"></a></p>
-<h3 id="再了解这个网站的时候"><a href="#再了解这个网站的时候" class="headerlink" title="再了解这个网站的时候"></a>再了解这个网站的时候</h3><p>后来就想到了解一下这家公司吧。CNODE上面有一条要求是：要会打游戏，而且是老板要求的。<br>我就想…好神奇的公司，是不是公司内部炒鸡活跃，我好喜欢的就是能天天BB的公司（然后我看着别人BB<br>然后就去了解这家公司，发现两个创始人，都是从欧洲留学回来创业。厉害了，有种仰慕之心了。<br>接着就是，这家公司里面好活跃，而且好像每个人颜值超高，而且技术的一拨一拨的大牛（心里一直高潮了好么！）<br>接着再看到，下班后组队LOL…虽然这游戏不怎么玩了（娜美中单出火炮没人愿意跟我玩…），但是还是觉得挺有意思的。<br>还有就是，工作环境什么的都好棒，好自由。<br>于是作为美服无段！国服白银的我决定还是试试（因为S7了…）超想尝试融入这种乱七八糟的群体…</p>
-<h3 id="接触到这个网站之后"><a href="#接触到这个网站之后" class="headerlink" title="接触到这个网站之后"></a>接触到这个网站之后</h3><p><strong>全！程！高！潮！</strong><br><strong>为！什！么！我！出！生！那！么！早！</strong><br>教程很棒，编辑器也很棒。虽然说<code>Egret</code>也有一个不用编程就能写代码的游戏编辑器。<br>但怎么说，编程猫要给的一个思路更清晰。<br>比如最底下那个场景编辑器，分为场景（手机），背景和对象（雪碧？）<br>而且接触了一会就突然意识到一个知识点：<strong>编程猫这样的做法已经体现了“一个对象一个类”的想法了。</strong><br>虽然我不知道小朋友能不能意识到，但是算是解决我以前学习游戏的一个难点了。</p>
-<p>每一个操作对象都使用一个<code>class</code>，然后在这个<code>class</code>里定义这个对象的属性和方法<br>再通过母<code>class</code>来进行调用（通过那个“点击开始按钮”受到的启发）。<br>然后你切换其他的素材（角色）就又是一块空白的代码编辑器。</p>
-<p>然后有一个“接收广播”的设定，这不就是带参回调么！（啊啊啊啊兴奋啊！（全程高潮脸<br>每一个控制流也很清晰，而且变量和对象属性都变成了一个可以拉选的组件。<br><strong>更6的是控制流竟然也包含了<code>continue</code>和<code>break</code>！</strong><br>然后还有个<code>settimeout</code><br>真的好玩<br>不过我想写一个有物理引擎的游戏，发现边界控制控制不到，不知道是不是因为我变量不够还是BUG？</p>
-<h3 id="其实我是很认同“从小还是学编程”这个想法的"><a href="#其实我是很认同“从小还是学编程”这个想法的" class="headerlink" title="其实我是很认同“从小还是学编程”这个想法的"></a>其实我是很认同“从小还是学编程”这个想法的</h3><p>真的佩服两位BOSS想到了这个。仰慕大大。<br>还是觉得，小孩子的学习接受能力真的好很多，特别是启蒙那段时间（上幼儿园那个时候<br>基本上那个时候求知欲很强，而且学什么都很快（我幼儿园的时候要学英语，到了小学的时候英语简直逆天。<i style="color:#e0e0e0;">卧槽别提我高中…</i><br>看到ios10同期退出的那个swift playground的时候，我其实是好想下载来玩一下，但是这个软件最低要求是ios10，只能望而却步了。因为ios10太丑了，而且我还是觉得ios9已经很棒了。</p>
-<h3 id="不管怎么说，本来为了找工作实际上也学习了"><a href="#不管怎么说，本来为了找工作实际上也学习了" class="headerlink" title="不管怎么说，本来为了找工作实际上也学习了"></a>不管怎么说，本来为了找工作实际上也学习了</h3><p>这不就是初衷么，学无止境其实。其实自己本来就菜鸡，还是想去活跃的公司顺便提升一下自己。没想到会因为面试前的题而变得这么兴奋。<br>总之，认真做3个另外的工程吧，还是有必要想一下的。因为想用心做嘛，真的挺希望加入的。</p>
-<p><strong>另外…我可能会安利一些小朋友来玩编程猫了，我想看看一些思维活跃的孩子如果让他接触编程，能力会到哪里</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;不知道我写了这个之后，会不会加大我到这家公司的机会指数233333&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;刚看到这个网站的时候&quot;&gt;&lt;a href=&quot;#刚看到这个网站的时候&quot; class=&quot;headerlink&quot; title=&quot;刚看到这个网站的时候&quot;&gt;&lt;/a&gt;刚看到这个网站的时候&lt;/h3&gt;&lt;p&gt;其实我是在逛CNODE的时候发现，这家公司在招人，正想找工作的我当然会点进去看一下啊&lt;br&gt;CNODE上面找的，毋庸置疑了就是&lt;code&gt;Node.Js&lt;/code&gt;工程师了，然后我就点进官网看，第一眼看的时候我的反应是&lt;br&gt;“卧槽这什么卵…赛尔号么…”（不知道会不会被打死…）&lt;br&gt;然后我就拉到最下面有个加入我们（已经成习惯了，公司的招聘信息都会在footer），看到了有自己喜欢的工作，它是跳到拉钩网的。&lt;br&gt;后来发了简历之后发现，他们有一条要求：&lt;strong&gt;要通过他们的平台制作3个游戏&lt;/strong&gt;&lt;br&gt;一开始我是懵的，虽然我以前玩过&lt;code&gt;Egret&lt;/code&gt;可是要我做游戏，害怕啊！&lt;br&gt;但是我还是去看了这个网站，发现这家网站做的其实是幼儿编程培训（没记错的话是7到15岁）&lt;br&gt;很新颖的题材，瞬间就喜欢了。（一瞬间想到了ios10的swift playground）
-    
-    </summary>
-    
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
-    
-      <category term="编程猫" scheme="http://blog.co1mugx.tk/tags/%E7%BC%96%E7%A8%8B%E7%8C%AB/"/>
     
   </entry>
   
