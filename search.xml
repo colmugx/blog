@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[javascript的call，bind，apply]]></title>
+      <title><![CDATA[javascript的call()，bind()，apply()]]></title>
       <url>/2017/08/14/js-call-apply-bind/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>联动水文，大约半年前讲了Javascript的this。顺水推舟理一下call，bind，apply</p>
@@ -1125,9 +1125,9 @@
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> 小作坊 </tag>
             

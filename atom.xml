@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-08-14T16:33:00.000Z</updated>
+  <updated>2017-08-14T16:35:31.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>javascript的call，bind，apply</title>
+    <title>javascript的call()，bind()，apply()</title>
     <link href="http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/"/>
     <id>http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/</id>
     <published>2017-08-14T04:26:44.000Z</published>
-    <updated>2017-08-14T16:33:00.000Z</updated>
+    <updated>2017-08-14T16:35:31.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>联动水文，大约半年前讲了Javascript的this。顺水推舟理一下call，bind，apply</p>
