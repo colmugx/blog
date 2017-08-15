@@ -27,7 +27,7 @@
 </ul>
 <p>以上来自有道翻译</p>
 </blockquote>
-<p>有一手百度翻译就方便了，就是call它，把要用的方法call出来。</p>
+<p>有一手有道翻译就方便了，就是call它，把要用的方法call出来。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj)		<span class="comment">//koala  指向还给他，假装他打电话叫它出来</span></div></pre></td></tr></table></figure>
 <h2 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h2><blockquote>
 <p><strong>apply</strong></p>
@@ -139,7 +139,7 @@
 <p>声明式编程是让你声明某些东西，把内容转化为数据，数据转化为数据。而很明显javascript并不隶属这一家族。而且，js好像连Object都是Function类型的吧！</p>
 <p>而且script，脚本语言+函数式语言，这才是我热爱并追随的地方。虽然我在JS是真的菜！</p>
 <p>最后</p>
-<p style="font-size:24px;font-weight:500;text-align:center;">把Javascript当做指令式函数的人都是神经病！</p>]]></content>
+<p style="font-size:24px;font-weight:500;text-align:center;">把Javascript当做指令式编程的人都是神经病！</p>]]></content>
       
         
         <tags>

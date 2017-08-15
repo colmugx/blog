@@ -198,7 +198,7 @@
 </ul>
 <p>以上来自有道翻译</p>
 </blockquote>
-<p>有一手百度翻译就方便了，就是call它，把要用的方法call出来。</p>
+<p>有一手有道翻译就方便了，就是call它，把要用的方法call出来。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj)		<span class="comment">//koala  指向还给他，假装他打电话叫它出来</span></div></pre></td></tr></table></figure>
 <h2 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h2><blockquote>
 <p><strong>apply</strong></p>
