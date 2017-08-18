@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-08-15T13:42:54.000Z</updated>
+  <updated>2017-08-18T17:11:16.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -20,55 +20,50 @@
     <link href="http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/"/>
     <id>http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/</id>
     <published>2017-08-14T04:26:44.000Z</published>
-    <updated>2017-08-15T13:42:54.000Z</updated>
+    <updated>2017-08-18T17:11:16.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>联动水文，大约半年前讲了Javascript的this。顺水推舟理一下call，bind，apply</p>
+<p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
 </blockquote>
-<p>还是想记录一下关于函数式编程的内容，以防一些有心人质疑：哎呀你这个狗比只是嘴上说说而已啊！</p>
 <p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/" target="_blank" rel="external">关于JavaScript的this</a></p>
 <p>还是上次的代码，修改一下</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()					<span class="comment">//undefined.</span></div></pre></td></tr></table></figure>
 <p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.getName()		<span class="comment">//koala</span></div></pre></td></tr></table></figure>
-<p>不可以我头给你好伐。</p>
 <a id="more"></a>
-<p>讲正事！那如果要搞出个变量来用，因为有时候并没办法这么自由的随便调用。怎么做！</p>
+<p>因为有时候并没办法这么自由的随便调用，那如果要搞个变量出来用，怎么做？</p>
 <h2 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h2><blockquote>
 <p><strong>call</strong></p>
 <ul>
 <li>vi. 呼叫；拜访；叫牌</li>
 <li>vt. 呼叫；称呼；召集</li>
 <li>n. 电话；呼叫；要求；访问</li>
-<li>n. (Call)人名；(瑞典、罗)卡尔；(英)考尔</li>
+<li>n. (Call)人名；(瑞典、罗)卡尔；(英)考尔<br>以上来自有道翻译</li>
 </ul>
-<p>以上来自有道翻译</p>
 </blockquote>
-<p>有一手有道翻译就方便了，就是call它，把要用的方法call出来。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj)		<span class="comment">//koala  指向还给他，假装他打电话叫它出来</span></div></pre></td></tr></table></figure>
+<p>有一手有道翻译就方便了，就是call（叫）它，把要用的方法call（叫）出来。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//先定义出来</span></div><div class="line">cal.call(obj)		<span class="comment">//koala   （指向还给他，不动其他把它叫出来</span></div></pre></td></tr></table></figure>
 <h2 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h2><blockquote>
 <p><strong>apply</strong></p>
 <ul>
 <li>v.应用；使用；涂；敷</li>
-<li>Web申请；适用；套用</li>
+<li>Web申请；适用；套用<br>以上来自bing词典，感谢微软爸爸</li>
 </ul>
-<p>以上来自bing词典，感谢微软爸爸</p>
 </blockquote>
 <p>再来一手必应翻译简直就是，不谈了！</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> apy = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj)		<span class="comment">//koala  可以说不是指向还给他，这不是假装了是直接抓他来了</span></div></pre></td></tr></table></figure>
-<p>有人要问，那你这手跟<code>call()</code>不是一样的么，为什么要区分开来。你问这个问题<a href="/2017/08/14/js-call-apply-bind/#call-和-apply-区别">下面再讲</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> apy = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj)		<span class="comment">//koala  （可以说不是指向还给他，这不是假装了，而是直接套用</span></div></pre></td></tr></table></figure>
+<p>有人要问，那你这手跟<code>call()</code>不是一样的么，为什么要区分开来。这个问题<a href="/2017/08/14/js-call-apply-bind/#call-和-apply-区别">下面再讲</a></p>
 <h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>是不是以为我要用百度翻译了？我偏不！</p>
 <blockquote>
 <p><strong>bind</strong></p>
-<p><strong>n.</strong> 窘境；讨厌的事情；捆绑；植物的藤蔓<br><strong>v.</strong> 捆绑；约束；装订；（使）结合；使关系密切</p>
-<p>以上来自沪江小d，我学日语就靠它</p>
+<p><strong>n.</strong> 窘境；讨厌的事情；捆绑；植物的藤蔓<br><strong>v.</strong> 捆绑；约束；装订；（使）结合；使关系密切<br>以上来自沪江小d，我学日语就靠它</p>
 </blockquote>
-<p><strong>顺便，请以上三家公司尽快给我打钱，谢谢合作。</strong></p>
+<p><del>顺便，请以上三家公司尽快给我打钱，谢谢合作。</del></p>
 <p><code>bind()</code>有点土匪的意思，它就是想抢走你老婆借用一晚的意思。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> bid = obj.getName	<span class="comment">// 这手还是不变</span></div><div class="line">bid.bind(obj)			<span class="comment">// 这样就结束了，但是什么都不会发生</span></div><div class="line">bid()					<span class="comment">// koala 这样才会运行，因为是抢过来了，所以可以直接借用</span></div></pre></td></tr></table></figure>
-<h2 id="call-和-apply-区别"><a href="#call-和-apply-区别" class="headerlink" title="call()和#apply()区别"></a>call()和#apply()区别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj)		<span class="comment">//koala  指向还给他，假装他打电话叫它出来</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> apy = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj)		<span class="comment">//koala  可以说不是指向还给他，这不是假装了是直接抓他来了</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> bid = obj.getName	<span class="comment">// 这手还是不变</span></div><div class="line">bid.bind(obj)			<span class="comment">// 这样就做到了，把this指向回去，又变成一个可以自由操作的变量</span></div><div class="line">bid()					<span class="comment">// koala    （这样才会运行，因为刚刚只是抢过来了</span></div></pre></td></tr></table></figure>
+<h2 id="call-和-apply-区别"><a href="#call-和-apply-区别" class="headerlink" title="call()和#apply()区别"></a>call()和#apply()区别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj)		<span class="comment">//koala</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> apy = obj.getName</div><div class="line">apy.apply(obj)		<span class="comment">//koala</span></div></pre></td></tr></table></figure>
 <p>说是这么说了，可是，他们并不是说就这么改变<code>this</code>方向然后就没什么用处了啊，可以借用<code>call()</code>和<code>apply()</code>传参数的。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName(param1, param2) &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">' params: '</span> + param1 + param2</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">cal.call(obj, <span class="number">1</span>, <span class="number">2</span>)		<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName(param1, param2) &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">' params: '</span> + param1 + param2</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj, <span class="number">1</span>, <span class="number">2</span>)		<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure>
 <p>那么<code>apply()</code>就有区别了？哎！</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> apy = obj.getName	<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj, [<span class="number">1</span>, <span class="number">2</span>])		<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure>
 <p><code>apply</code>后面接参数，只接受数组，<code>call</code>的话按顺序怼进去就行了。就这点区别。</p>
@@ -79,15 +74,13 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;联动水文，大约半年前讲了Javascript的this。顺水推舟理一下call，bind，apply&lt;/p&gt;
+&lt;p&gt;联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;还是想记录一下关于函数式编程的内容，以防一些有心人质疑：哎呀你这个狗比只是嘴上说说而已啊！&lt;/p&gt;
 &lt;p&gt;扩展阅读：&lt;a href=&quot;https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;关于JavaScript的this&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;还是上次的代码，修改一下&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;panda&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;koala&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    getName() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; test = obj.getName&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;test()					&lt;span class=&quot;comment&quot;&gt;//undefined.&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;（敲黑板！）复习一下！为什么就&lt;code&gt;undefined&lt;/code&gt;了！原因就是，&lt;code&gt;this&lt;/code&gt;指向不同了。那么直接运行是否可以&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;panda&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;koala&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    getName() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;obj.getName()		&lt;span class=&quot;comment&quot;&gt;//koala&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;不可以我头给你好伐。&lt;/p&gt;
     
     </summary>
     
@@ -703,13 +696,14 @@
     <link href="http://blog.co1mugx.tk/2017/03/03/js-this/"/>
     <id>http://blog.co1mugx.tk/2017/03/03/js-this/</id>
     <published>2017-03-03T10:34:23.000Z</published>
-    <updated>2017-03-03T11:17:39.000Z</updated>
+    <updated>2017-08-18T17:18:06.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>芽儿哟，今天去面试，差点就被骗进去咯。赶紧记录一下！</p>
+<p>一次被this支配之后的思考</p>
 </blockquote>
-<h3 id="开门见山"><a href="#开门见山" class="headerlink" title="开门见山"></a>开门见山</h3><p>我就不按原题放出来了，妈的我觉得我第一次说错了都觉得自己像个傻批。<a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()())    <span class="comment">//undefined.</span></div></pre></td></tr></table></figure></p>
-<p>题目这样，我第一次回答的是<code>koala</code>。现在想了一下，估计是想赶紧下来吃波星冰乐给冲昏了脑子。<br>不服！如果我改下！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span>    <span class="comment">//this -&gt; that</span></div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> that.name <span class="comment">//this -&gt; that</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
+<h3 id="开门见山"><a href="#开门见山" class="headerlink" title="开门见山"></a>开门见山</h3><a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()())    <span class="comment">//undefined.</span></div></pre></td></tr></table></figure>
+<p>题目这样，我第一次回答的是<code>koala</code>。现在想了一下，估计是满脑子想吃波星冰乐给冲昏了脑子。<br>如果我改下！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span>    <span class="comment">//this -&gt; that</span></div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> that.name <span class="comment">//this -&gt; that</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div><div class="line"></div><div class="line"><span class="comment">// 或者第二种，利用ES6</span></div><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p>
 <h3 id="解题想法"><a href="#解题想法" class="headerlink" title="解题想法"></a>解题想法</h3><p>我的理解，<code>this</code>其实跟其他语言的<code>self</code>应该是差不多。就是指代自己，比如说在一个<code>function</code>里面，那么<code>this</code>指向的就是这个func。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//do something.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>可能我讲的不清楚，就是<strong>this其实就是括号里的东西。</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"><span class="regexp">/** this */</span></span>) </span>&#123;</div><div class="line">    <span class="comment">//do somethings</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>当然这是我的理解，我觉得应该就是这样的，所以刚刚那样取到的this并不是this。</p>
@@ -718,15 +712,15 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.func()) <span class="comment">//Animal &#123; name: 'koala' &#125;</span></div></pre></td></tr></table></figure>
 <h4 id="ES6中括号函数的this"><a href="#ES6中括号函数的this" class="headerlink" title="ES6中括号函数的this"></a>ES6中括号函数的this</h4><p>括号函数的<code>this</code>，不存在的！</p>
 <p>说是不存在，实际上并不是说真的不见了，而是它会绑定到上一层函数中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;<span class="comment">/** ,this */</span>)</div></pre></td></tr></table></figure></p>
-<p>而如果不是括号的话<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="regexp">/** this */</span></span>)</span>&#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-]]></content>
+<p>而如果不是括号的话</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="regexp">/** this */</span></span>)</span>&#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;芽儿哟，今天去面试，差点就被骗进去咯。赶紧记录一下！&lt;/p&gt;
+&lt;p&gt;一次被this支配之后的思考&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;开门见山&quot;&gt;&lt;a href=&quot;#开门见山&quot; class=&quot;headerlink&quot; title=&quot;开门见山&quot;&gt;&lt;/a&gt;开门见山&lt;/h3&gt;&lt;p&gt;我就不按原题放出来了，妈的我觉得我第一次说错了都觉得自己像个傻批。
+&lt;h3 id=&quot;开门见山&quot;&gt;&lt;a href=&quot;#开门见山&quot; class=&quot;headerlink&quot; title=&quot;开门见山&quot;&gt;&lt;/a&gt;开门见山&lt;/h3&gt;
     
     </summary>
     
@@ -742,13 +736,13 @@
     <link href="http://blog.co1mugx.tk/2017/03/02/js-for/"/>
     <id>http://blog.co1mugx.tk/2017/03/02/js-for/</id>
     <published>2017-03-02T15:40:42.000Z</published>
-    <updated>2017-04-25T16:10:38.000Z</updated>
+    <updated>2017-08-18T17:11:43.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>准备面试，遇到一家以“工匠精神”为核心，“浪”为资本的公司，太喜欢…</p>
 </blockquote>
 <p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
-<p>觉得我不服！我要上！（你行你上）<br><a id="more"></a></p>
+<p>觉得我不服！我要上！<br><a id="more"></a></p>
 <h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</div></pre></td></tr></table></figure></p>
 <p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</div></pre></td></tr></table></figure></p>
 <h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</div></pre></td></tr></table></figure></p>
@@ -778,7 +772,7 @@
 &lt;p&gt;准备面试，遇到一家以“工匠精神”为核心，“浪”为资本的公司，太喜欢…&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;其实也是看到了&lt;a href=&quot;https://zhuanlan.zhihu.com/jbangit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;匠邦互联网 - 知乎专栏&lt;/a&gt;，其中一篇讲for的&lt;/p&gt;
-&lt;p&gt;觉得我不服！我要上！（你行你上）&lt;br&gt;
+&lt;p&gt;觉得我不服！我要上！&lt;br&gt;
     
     </summary>
     
@@ -1051,11 +1045,11 @@
   </entry>
   
   <entry>
-    <title>前端水深JS玄学 —— 尝试后端框架Hapi</title>
+    <title>看一眼后端框架Hapi</title>
     <link href="http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/"/>
     <id>http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/</id>
     <published>2016-12-08T17:37:38.000Z</published>
-    <updated>2016-12-09T08:17:49.000Z</updated>
+    <updated>2017-08-18T17:18:22.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Hapi?可我一点都happy不起来…</p>
@@ -1155,38 +1149,39 @@
   </entry>
   
   <entry>
-    <title>强迫症从娃娃抓起 - 编程猫体验</title>
-    <link href="http://blog.co1mugx.tk/2016/11/26/bian-cheng-mao/"/>
-    <id>http://blog.co1mugx.tk/2016/11/26/bian-cheng-mao/</id>
-    <published>2016-11-26T14:49:58.000Z</published>
-    <updated>2016-11-26T15:35:38.000Z</updated>
+    <title>扣肉小记（四）</title>
+    <link href="http://blog.co1mugx.tk/2016/11/25/Korou4/"/>
+    <id>http://blog.co1mugx.tk/2016/11/25/Korou4/</id>
+    <published>2016-11-25T09:01:32.000Z</published>
+    <updated>2017-04-20T06:40:57.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>不知道我写了这个之后，会不会加大我到这家公司的机会指数233333</p>
+<p>天气转凉…基本是条冻狗了<br>另外小嘀咕一句：有点想把“Rousy”重写了…</p>
 </blockquote>
-<h3 id="刚看到这个网站的时候"><a href="#刚看到这个网站的时候" class="headerlink" title="刚看到这个网站的时候"></a>刚看到这个网站的时候</h3><p>其实我是在逛CNODE的时候发现，这家公司在招人，正想找工作的我当然会点进去看一下啊<br>CNODE上面找的，毋庸置疑了就是<code>Node.Js</code>工程师了，然后我就点进官网看，第一眼看的时候我的反应是<br>“卧槽这什么卵…赛尔号么…”（不知道会不会被打死…）<br>然后我就拉到最下面有个加入我们（已经成习惯了，公司的招聘信息都会在footer），看到了有自己喜欢的工作，它是跳到拉钩网的。<br>后来发了简历之后发现，他们有一条要求：<strong>要通过他们的平台制作3个游戏</strong><br>一开始我是懵的，虽然我以前玩过<code>Egret</code>可是要我做游戏，害怕啊！<br>但是我还是去看了这个网站，发现这家网站做的其实是幼儿编程培训（没记错的话是7到15岁）<br>很新颖的题材，瞬间就喜欢了。（一瞬间想到了ios10的swift playground）<a id="more"></a></p>
-<h3 id="再了解这个网站的时候"><a href="#再了解这个网站的时候" class="headerlink" title="再了解这个网站的时候"></a>再了解这个网站的时候</h3><p>后来就想到了解一下这家公司吧。CNODE上面有一条要求是：要会打游戏，而且是老板要求的。<br>我就想…好神奇的公司，是不是公司内部炒鸡活跃，我好喜欢的就是能天天BB的公司（然后我看着别人BB<br>然后就去了解这家公司，发现两个创始人，都是从欧洲留学回来创业。厉害了，有种仰慕之心了。<br>接着就是，这家公司里面好活跃，而且好像每个人颜值超高，而且技术的一拨一拨的大牛（心里一直高潮了好么！）<br>接着再看到，下班后组队LOL…虽然这游戏不怎么玩了（娜美中单出火炮没人愿意跟我玩…），但是还是觉得挺有意思的。<br>还有就是，工作环境什么的都好棒，好自由。<br>于是作为美服无段！国服白银的我决定还是试试（因为S7了…）超想尝试融入这种乱七八糟的群体…</p>
-<h3 id="接触到这个网站之后"><a href="#接触到这个网站之后" class="headerlink" title="接触到这个网站之后"></a>接触到这个网站之后</h3><p><strong>全！程！高！潮！</strong><br><strong>为！什！么！我！出！生！那！么！早！</strong><br>教程很棒，编辑器也很棒。虽然说<code>Egret</code>也有一个不用编程就能写代码的游戏编辑器。<br>但怎么说，编程猫要给的一个思路更清晰。<br>比如最底下那个场景编辑器，分为场景（手机），背景和对象（雪碧？）<br>而且接触了一会就突然意识到一个知识点：<strong>编程猫这样的做法已经体现了“一个对象一个类”的想法了。</strong><br>虽然我不知道小朋友能不能意识到，但是算是解决我以前学习游戏的一个难点了。</p>
-<p>每一个操作对象都使用一个<code>class</code>，然后在这个<code>class</code>里定义这个对象的属性和方法<br>再通过母<code>class</code>来进行调用（通过那个“点击开始按钮”受到的启发）。<br>然后你切换其他的素材（角色）就又是一块空白的代码编辑器。</p>
-<p>然后有一个“接收广播”的设定，这不就是带参回调么！（啊啊啊啊兴奋啊！（全程高潮脸<br>每一个控制流也很清晰，而且变量和对象属性都变成了一个可以拉选的组件。<br><strong>更6的是控制流竟然也包含了<code>continue</code>和<code>break</code>！</strong><br>然后还有个<code>settimeout</code><br>真的好玩<br>不过我想写一个有物理引擎的游戏，发现边界控制控制不到，不知道是不是因为我变量不够还是BUG？</p>
-<h3 id="其实我是很认同“从小还是学编程”这个想法的"><a href="#其实我是很认同“从小还是学编程”这个想法的" class="headerlink" title="其实我是很认同“从小还是学编程”这个想法的"></a>其实我是很认同“从小还是学编程”这个想法的</h3><p>真的佩服两位BOSS想到了这个。仰慕大大。<br>还是觉得，小孩子的学习接受能力真的好很多，特别是启蒙那段时间（上幼儿园那个时候<br>基本上那个时候求知欲很强，而且学什么都很快（我幼儿园的时候要学英语，到了小学的时候英语简直逆天。<i style="color:#e0e0e0;">卧槽别提我高中…</i><br>看到ios10同期退出的那个swift playground的时候，我其实是好想下载来玩一下，但是这个软件最低要求是ios10，只能望而却步了。因为ios10太丑了，而且我还是觉得ios9已经很棒了。</p>
-<h3 id="不管怎么说，本来为了找工作实际上也学习了"><a href="#不管怎么说，本来为了找工作实际上也学习了" class="headerlink" title="不管怎么说，本来为了找工作实际上也学习了"></a>不管怎么说，本来为了找工作实际上也学习了</h3><p>这不就是初衷么，学无止境其实。其实自己本来就菜鸡，还是想去活跃的公司顺便提升一下自己。没想到会因为面试前的题而变得这么兴奋。<br>总之，认真做3个另外的工程吧，还是有必要想一下的。因为想用心做嘛，真的挺希望加入的。</p>
-<p><strong>另外…我可能会安利一些小朋友来玩编程猫了，我想看看一些思维活跃的孩子如果让他接触编程，能力会到哪里</strong></p>
+<p>　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）</p>
+<h3 id="最近干了个长得像个音乐播放器的微信小程序"><a href="#最近干了个长得像个音乐播放器的微信小程序" class="headerlink" title="最近干了个长得像个音乐播放器的微信小程序"></a>最近干了个长得像个音乐播放器的微信小程序</h3><a id="more"></a>
+<p>　　最近干什么，最近学的前端知识好多，每天都是百度和知乎（暂时不需要用到Google系列），然后就是写了一个微信小程序(weapp)<br>　　反正到现在来说，<code>weapp</code>还是挺好玩的，而且那个<code>wxml</code>和<code>wxss</code>就理解成<code>html</code>和<code>css</code>就好了。然后那个<code>js</code>是用的ES6，身边有个大神honn哥，有问题他还是很愿意解答的，谢谢老板罩着！<br>　　然后写了个什么，写了个音乐程序，有个不愿意透露ID的妹妹她自己有个项目，就是“据她口述的盗链音乐播放器”，不过她是用swift写的，而且长得稍微挺像网某云音乐，但链子好像不是某云的…然后我就想那我也来写一个好了<br>　　然后就去看了她的链子，发现她的链子好像不能用了，然后我就自己找了一个某度的链子，能用。反正这些东西以后都开源了！开源大法好！先上个图！<br>  <img src="https://github.com/ColMugX/GitBed/raw/master/blog/weapp-openradio.gif" alt=""><br>　　但是尴尬的是，这套链子，<strong>不支持在线播放</strong>！卧槽这tm就尴尬了。链子拿下来之后，本地播放是可以的，在线播放是播放不了的。然后我就尝试用浏览器去点，点开之后并不是一个<code>html5</code>的<code>audio</code>而是直接<code>download</code>，代码长这样。<br>  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"songLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span>,</div><div class="line">  <span class="attr">"showLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　而且其实我有想过先down到本地然后在调用播放，后来想了一下，既然是小程序而且是个云端程序，这么玩占用的存储会不会就大了好多…现在只能另辟蹊径了。（为什么我想到了鹅厂…）</p>
+<h3 id="暂时没想到什么写的，来听音乐吧！"><a href="#暂时没想到什么写的，来听音乐吧！" class="headerlink" title="暂时没想到什么写的，来听音乐吧！"></a>暂时没想到什么写的，来听音乐吧！</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=412493379&auto=0&height=32"></iframe>
+
+<p>　　最近一直在听这首，其实去年就听过了，第一次听觉得很感触，虽说这首歌是TFBOYS的吧！但是我向来都是喜欢好音乐，至于谁唱的，只不过是借用了他的声音来表达歌曲的意义而已。<strong>（除了周杰伦！）</strong> <strong>（除了初音未来！）</strong>（为什么分开讲，因为伦哥的地位无可替代！）<br>　　而且应该是我觉得的tfboys的歌里面唯一一首能听的，歌词真的…不行了…</p>
+<blockquote>
+<p>我不完美的梦 　你陪着我想<br>不完美的勇气 　你说更勇敢<br>不完美的泪　 　你笑着擦干<br>不完美的歌　 　你都会唱<br>我不完美心事 　你全放在心上<br>这不完美的我 　你总当作宝贝</p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;不知道我写了这个之后，会不会加大我到这家公司的机会指数233333&lt;/p&gt;
+&lt;p&gt;天气转凉…基本是条冻狗了&lt;br&gt;另外小嘀咕一句：有点想把“Rousy”重写了…&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;刚看到这个网站的时候&quot;&gt;&lt;a href=&quot;#刚看到这个网站的时候&quot; class=&quot;headerlink&quot; title=&quot;刚看到这个网站的时候&quot;&gt;&lt;/a&gt;刚看到这个网站的时候&lt;/h3&gt;&lt;p&gt;其实我是在逛CNODE的时候发现，这家公司在招人，正想找工作的我当然会点进去看一下啊&lt;br&gt;CNODE上面找的，毋庸置疑了就是&lt;code&gt;Node.Js&lt;/code&gt;工程师了，然后我就点进官网看，第一眼看的时候我的反应是&lt;br&gt;“卧槽这什么卵…赛尔号么…”（不知道会不会被打死…）&lt;br&gt;然后我就拉到最下面有个加入我们（已经成习惯了，公司的招聘信息都会在footer），看到了有自己喜欢的工作，它是跳到拉钩网的。&lt;br&gt;后来发了简历之后发现，他们有一条要求：&lt;strong&gt;要通过他们的平台制作3个游戏&lt;/strong&gt;&lt;br&gt;一开始我是懵的，虽然我以前玩过&lt;code&gt;Egret&lt;/code&gt;可是要我做游戏，害怕啊！&lt;br&gt;但是我还是去看了这个网站，发现这家网站做的其实是幼儿编程培训（没记错的话是7到15岁）&lt;br&gt;很新颖的题材，瞬间就喜欢了。（一瞬间想到了ios10的swift playground）
+&lt;p&gt;　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）&lt;/p&gt;
+&lt;h3 id=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;a href=&quot;#最近干了个长得像个音乐播放器的微信小程序&quot; class=&quot;headerlink&quot; title=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;/a&gt;最近干了个长得像个音乐播放器的微信小程序&lt;/h3&gt;
     
     </summary>
     
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
-    
-      <category term="编程猫" scheme="http://blog.co1mugx.tk/tags/%E7%BC%96%E7%A8%8B%E7%8C%AB/"/>
+      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
     
   </entry>
   
