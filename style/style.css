@@ -496,13 +496,15 @@ a {
   vertical-align: middle;
 }
 .header .table .connect .connect-inner {
+  box-sizing: border-box;
+  padding-top: 8px;
   display: flex;
   flex-direction: column;
 }
 .header .table .connect .connect-inner span a {
-  font-family: 'LedFont', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: 'LedFont', cursive, 'Microsoft YaHei', sans-serif;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 40px;
   color: #666;
   text-decoration: none;
 }
@@ -517,7 +519,7 @@ a {
 }
 .header #subtitle {
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .header .main-nav {
   flex: 3;
@@ -574,6 +576,144 @@ a {
   .header {
     height: inherit;
     display: block;
+  }
+}
+.mobile-header {
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  .mobile-header {
+    z-index: 50;
+    position: fixed;
+    top: -200px;
+    left: 0;
+    right: 0;
+    height: auto;
+    box-shadow: 0px 2px 2px #c4c4c4;
+    display: block;
+  }
+  .mobile-header .mobile-header-nav {
+    background-color: #666;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 48px;
+    height: 48px;
+  }
+  .mobile-header .mobile-header-nav .mobile-header-item {
+    flex: 0.5;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+  }
+  .mobile-header .mobile-header-nav .mobile-header-item.item-clicked .header-menu-line {
+    background-color: transparent;
+  }
+  .mobile-header .mobile-header-nav .mobile-header-item.item-clicked .header-menu-line:before {
+    top: 0;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .mobile-header .mobile-header-nav .mobile-header-item.item-clicked .header-menu-line:after {
+    top: 0;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  .mobile-header .mobile-header-nav .mobile-header-title {
+    flex: 3;
+    text-align: center;
+    margin: 0.2rem;
+    color: inherit;
+  }
+  .mobile-header .mobile-header-nav .mobile-header-title a {
+    font-family: 'LedFont', cursive, 'Microsoft YaHei', sans-serif;
+    text-decoration: none;
+    font-size: 32px;
+    color: inherit;
+    font-weight: 200;
+    line-height: 1;
+  }
+  .mobile-header .mobile-header-body .mobile-header-list {
+    background-color: #666;
+    opacity: 0.9;
+    box-sizing: border-box;
+    padding: 8px 0;
+  }
+  .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 8px 24px;
+  }
+  .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item .mobile-nav-tagcloud {
+    position: absolute;
+    overflow-x: auto;
+    top: 8px;
+    left: 24px;
+    right: 24px;
+    width: 80%;
+    transform: translateX(120%);
+    -ms-transform: translateX(120%);
+    -moz-transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+  }
+  .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item .mobile-nav-tagcloud .mobile-tagcloud-inner {
+    display: inline-block;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+  .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item .mobile-nav-tagcloud .mobile-tagcloud-inner a {
+    margin: 0 4px;
+  }
+  .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item .mobile-nav-tagcloud .mobile-tagcloud-inner a:before {
+    content: '#';
+  }
+  .header-menu-item {
+    position: relative;
+    padding: 0 12px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  .header-menu-item .header-menu-line {
+    position: absolute;
+    top: 50%;
+    background-color: #fff;
+    height: 1px;
+    width: 24px;
+  }
+  .header-menu-item .header-menu-line:before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    background-color: #fff;
+    height: 1px;
+    width: 24px;
+    transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    -webkit-transition: top 0.3s;
+  }
+  .header-menu-item .header-menu-line:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    background-color: #fff;
+    height: 1px;
+    width: 24px;
+    transition-property: top, transform;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
   }
 }
 .posts {
@@ -896,6 +1036,11 @@ blockquote p {
   margin: 24px auto;
   font-weight: 500;
 }
+@media screen and (max-width: 650px) {
+  .article-page {
+    text-align: center;
+  }
+}
 .article-page a {
   text-decoration: none;
   color: #666;
@@ -909,6 +1054,10 @@ blockquote p {
 .article-page a:hover {
   color: #000;
 }
+.article-page .next-title i,
+.article-page .prev-title i {
+  vertical-align: middle;
+}
 .article-page:before {
   content: '';
   display: table;
@@ -919,6 +1068,13 @@ blockquote p {
 .article-page .art-right {
   float: right;
 }
+@media screen and (max-width: 650px) {
+  .article-page .art-right {
+    float: none;
+    display: block;
+    margin-bottom: 16px;
+  }
+}
 .article-page .art-right:hover {
   transform: translateX(10%);
   -ms-transform: translateX(10%);
@@ -927,6 +1083,13 @@ blockquote p {
 }
 .article-page .art-left {
   float: left;
+}
+@media screen and (max-width: 650px) {
+  .article-page .art-left {
+    float: none;
+    display: block;
+    margin-top: 16px;
+  }
 }
 .article-page .art-left:hover {
   transform: translateX(-10%);
@@ -950,11 +1113,22 @@ blockquote p {
   flex-direction: row;
   align-items: center;
 }
+@media screen and (max-width: 650px) {
+  .footer .footer-wrapper {
+    flex-direction: column;
+  }
+}
 .footer .left {
   flex: 1;
   padding: 16px;
   border-right: 1px solid #ddd;
   border-image: -webkit-linear-gradient(#fff, #ddd, #fff) 0 10 0 0;
+}
+@media screen and (max-width: 650px) {
+  .footer .left {
+    border: none;
+    padding: 8px;
+  }
 }
 .footer .left .contact-icon {
   display: flex;
@@ -991,6 +1165,11 @@ blockquote p {
   flex: 2;
   display: block;
   padding: 16px;
+}
+@media screen and (max-width: 650px) {
+  .footer .right {
+    padding: 8px;
+  }
 }
 .footer .right .copyright {
   display: flex;
