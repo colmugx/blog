@@ -761,6 +761,16 @@ a {
   font-size: 14px;
   color: #666;
 }
+.post .post-header .post-time .post-category {
+  font-size: inherit;
+}
+.post .post-header .post-time .post-category a {
+  text-decoration: none;
+  color: #666;
+}
+.post .post-header .post-time .post-category:before {
+  content: ' · ';
+}
 .post .post-header .post-title {
   margin: 0;
   padding: 5px 0;

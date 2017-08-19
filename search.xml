@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[javascript的call()，bind()，apply()]]></title>
+      <title><![CDATA[JavaScript的call()，bind()，apply()]]></title>
       <url>/2017/08/14/js-call-apply-bind/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
@@ -54,10 +54,18 @@
 <p><strong>下一篇，讲Javascript的柯基化！</strong></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
+            <tag> JavaScript </tag>
+            
+            <tag> 实验室 </tag>
             
         </tags>
         
@@ -136,12 +144,16 @@
 <p>最后</p>
 <p style="font-size:24px;font-weight:500;text-align:center;">把Javascript当做指令式编程的人都是神经病！</p>]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
+            <tag> JavaScript </tag>
             
         </tags>
         
@@ -213,12 +225,14 @@
 <p>所以说，Vue是真TM的刺激……</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 实践尝试 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
             
             <tag> vue </tag>
             
@@ -249,12 +263,14 @@
 <h2 id="入口是解决了，那么如果发布怎么办？"><a href="#入口是解决了，那么如果发布怎么办？" class="headerlink" title="入口是解决了，那么如果发布怎么办？"></a>入口是解决了，那么如果发布怎么办？</h2><p>一切npm包都是靠<code>package.json</code>啊这个很早就有提到，不管发布还是管理，都要靠这个json文件。如果你的入口js文件写好了，入口js文件的install方法确定是妥的，那么在<code>package.json</code>中，<code>main</code>节点大胆写进去就行了。这样届时从npm下载的话，安装完，该怎么import怎么import，然后use，完事儿！</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 实践尝试 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
             
             <tag> vue </tag>
             
@@ -285,12 +301,14 @@
 <p>所以为什么库引用的时候用的是use，下篇再讲use的东西。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 实践尝试 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
             
             <tag> vue </tag>
             
@@ -342,12 +360,14 @@
 <p>撤下的话，是因为你在库上面撤回，所以要带版本号撤回。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 实践尝试 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
             
             <tag> vue </tag>
             
@@ -382,12 +402,14 @@
 <p>（另外拖了三个月的Syuanpi.hover应该找个时间一次性干了…这拖延症真是越来越厉害了。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 实践尝试 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
             
             <tag> vue </tag>
             
@@ -487,14 +509,18 @@
 <p>结束！</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
-            
             <tag> vue </tag>
+            
+            <tag> vuex </tag>
             
         </tags>
         
@@ -566,14 +592,18 @@
 <p>结束！</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
-            
             <tag> vue </tag>
+            
+            <tag> NetWork </tag>
             
         </tags>
         
@@ -599,12 +629,16 @@
 <p>而如果不是括号的话</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="regexp">/** this */</span></span>)</span>&#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
+            <tag> JavaScript </tag>
             
         </tags>
         
@@ -641,12 +675,16 @@
 <p>只要支持[Symbol.iterator]要什么找什么的：<code>for of</code></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
+            <tag> JavaScript </tag>
             
         </tags>
         
@@ -677,12 +715,18 @@
 <p>所以这篇的记录只是ES6中对象的遍历！</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
+            <tag> JavaScript </tag>
             
-            <tag> 实验室 </tag>
+            <tag> ES6 </tag>
             
         </tags>
         
@@ -711,12 +755,16 @@
 <p>所以也是可以的。结束！</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
+            <tag> JavaScript </tag>
             
         </tags>
         
@@ -754,12 +802,18 @@
 <p>结束。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
+            <tag> JavaScript </tag>
             
-            <tag> 实验室 </tag>
+            <tag> ES6 </tag>
             
         </tags>
         
@@ -787,12 +841,16 @@
 <p>然而，<strong>我在注册的过程中产生的满满的挫败感……</strong></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 日常思考 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> 吹水 </tag>
+            <tag> 面试 </tag>
             
         </tags>
         
@@ -808,10 +866,14 @@
 <h3 id="它是个什么东西…"><a href="#它是个什么东西…" class="headerlink" title="它是个什么东西…"></a>它是个什么东西…</h3><p>好了说回来我的东西~ Syuanpi意思很简单，我喜欢它日后可以炫得一批233。但是它并不炫，而是一些很基础很基础的动画用法。不过，一些稍微认真的网站不就要点轻转场就行了嘛。比如我觉得博客挺认真的，但是没有转场动画又觉得好干燥，所以我的大部分动画起始点都是基于在自己博客上面用。而且动画的过程速度和位置全靠目测！不会计算也是硬伤呀…用的是stylus，不知道为什么总觉得那个被那个绿色的长的 ∮ 撩到了，然后就这么用了。<br>认认真真做作业，不要搞什么大新闻。就像标题说的，针对自己脑洞的产物。不过由于是自己第一次比较成型的“自己的作业自己做”，我还是好高兴的。如果有人愿意给star就更好了，还没体验过被5个star砸死是什么感觉呢~（不贪心的好孩子~）<br>嗯！该讲说明书了！大份说明书在GitHub的头页README.md，所以就不讲了！</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 实践尝试 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 前端 </tag>
             
             <tag> 小作坊 </tag>
             
@@ -848,10 +910,14 @@
 <p>然后就移动光标来选择和操作。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 实验室 </tag>
             
             <tag> NodeJS </tag>
             
@@ -872,12 +938,14 @@
 <p>也没深入的学习，因为前端还没学好呢…先看一眼日后再挠个坑学习吧。（其实是对于菜鸟来说还是<code>Express</code>+<code>Typescript</code>更适合我…）</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 后端尝试 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 实验室 </tag>
             
             <tag> NodeJS </tag>
             
@@ -932,6 +1000,12 @@
 <p>终于，在同一个时空相遇了……</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -961,6 +1035,12 @@
 </blockquote>
 ]]></content>
       
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -990,8 +1070,6 @@
       
         
         <tags>
-            
-            <tag> 前端 </tag>
             
             <tag> 小作坊 </tag>
             
@@ -1023,8 +1101,6 @@
         
         <tags>
             
-            <tag> 实验室 </tag>
-            
             <tag> 微信小程序 </tag>
             
         </tags>
@@ -1046,6 +1122,12 @@
 <p>这是《从你全世界路过》里面最揪心那段插曲音乐，原版是羽泉的《开往春天的地铁》，片子制作方重新编曲了。<br>然后要感谢一下这曲子的作者（播放器里），网易的独立音乐人之一。因为现在那个曲还找不到原版，这大哥扒带然后重新编曲了，算remix吧大哥。<br>（小小吐槽一下：我曾经也是撸音乐的啊！QAQ）</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -1073,6 +1155,12 @@
 <p>然后按照提示输入各种各样的东西就行了……</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 后端尝试 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -1102,6 +1190,12 @@
 <p>　　<em>或许我以后可以讲点音乐故事？算了以后再说吧（btw，这部动漫很棒，剧场版的）</em></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -1124,6 +1218,12 @@
 <h3 id="好吧，其实我是边写着主题边玩着博客的"><a href="#好吧，其实我是边写着主题边玩着博客的" class="headerlink" title="好吧，其实我是边写着主题边玩着博客的"></a>好吧，其实我是边写着主题边玩着博客的</h3><p>　　博客主题的话，hexo theme 叫rousy的东西，好像是挺女孩子的名字。好吧我坦白…就是…<br>　　就是round 和 style 随便混合起来的一个词，挺喜欢Apple那一套圆角的。<br>　　主题的话应该是做的差不多了，毕竟还想要点duangduangduang的东西。</p>
 <h4 id="好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是"><a href="#好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是" class="headerlink" title="好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是"></a>好了今天份的就差不多这样了…应该还是会分享一些code的东西吧，我可是码狗啊！今天的音乐是</h4><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=39956017&auto=1&height=32"></iframe>]]></content>
       
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
         
         <tags>
             

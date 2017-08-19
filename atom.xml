@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-08-18T17:11:16.000Z</updated>
+  <updated>2017-08-19T15:47:29.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>javascript的call()，bind()，apply()</title>
+    <title>JavaScript的call()，bind()，apply()</title>
     <link href="http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/"/>
     <id>http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/</id>
     <published>2017-08-14T04:26:44.000Z</published>
-    <updated>2017-08-18T17:11:16.000Z</updated>
+    <updated>2017-08-19T15:47:29.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
@@ -84,8 +84,12 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://blog.co1mugx.tk/tags/JavaScript/"/>
+    
+      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
   </entry>
   
@@ -94,7 +98,7 @@
     <link href="http://blog.co1mugx.tk/2017/08/09/about-conditionals/"/>
     <id>http://blog.co1mugx.tk/2017/08/09/about-conditionals/</id>
     <published>2017-08-09T06:47:58.000Z</published>
-    <updated>2017-08-15T13:42:40.000Z</updated>
+    <updated>2017-08-19T15:50:49.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>记录这个不为什么，就是遇到SB，不想争执。</p>
@@ -175,10 +179,10 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+      <category term="JavaScript" scheme="http://blog.co1mugx.tk/tags/JavaScript/"/>
     
   </entry>
   
@@ -187,7 +191,7 @@
     <link href="http://blog.co1mugx.tk/2017/08/09/Bandix4/"/>
     <id>http://blog.co1mugx.tk/2017/08/09/Bandix4/</id>
     <published>2017-08-09T03:09:59.000Z</published>
-    <updated>2017-08-17T02:02:31.000Z</updated>
+    <updated>2017-08-19T15:51:45.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>我个人建议，如果你开发了一个组件或者牛逼了开发了组件库，建议封装成起来，要不要npm包随便你。</p>
@@ -263,10 +267,8 @@
     
     </summary>
     
+      <category term="实践尝试" scheme="http://blog.co1mugx.tk/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
     
@@ -279,7 +281,7 @@
     <link href="http://blog.co1mugx.tk/2017/08/04/Bandix3/"/>
     <id>http://blog.co1mugx.tk/2017/08/04/Bandix3/</id>
     <published>2017-08-03T16:13:39.000Z</published>
-    <updated>2017-08-17T02:02:26.000Z</updated>
+    <updated>2017-08-19T15:51:42.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>我不指望Bandix有多牛逼，跟Syuanpi一个态度，我只是想给自己做作业</p>
@@ -312,10 +314,8 @@
     
     </summary>
     
+      <category term="实践尝试" scheme="http://blog.co1mugx.tk/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
     
@@ -328,7 +328,7 @@
     <link href="http://blog.co1mugx.tk/2017/06/19/Bandix2/"/>
     <id>http://blog.co1mugx.tk/2017/06/19/Bandix2/</id>
     <published>2017-06-19T04:38:20.000Z</published>
-    <updated>2017-08-17T02:02:22.000Z</updated>
+    <updated>2017-08-19T15:51:38.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>如果没玩过Nintendo Switch的话，就千万不要去接触这个东西，这东西让人鬼迷心窍的！</p>
@@ -359,10 +359,8 @@
     
     </summary>
     
+      <category term="实践尝试" scheme="http://blog.co1mugx.tk/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
     
@@ -375,7 +373,7 @@
     <link href="http://blog.co1mugx.tk/2017/06/14/Bandix1/"/>
     <id>http://blog.co1mugx.tk/2017/06/14/Bandix1/</id>
     <published>2017-06-14T15:54:03.000Z</published>
-    <updated>2017-08-17T02:02:18.000Z</updated>
+    <updated>2017-08-19T15:51:35.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>这人怕是急于求成喔，做出来的东西肯定不怎样，算了Bandix必暴死。</p>
@@ -427,10 +425,8 @@
     
     </summary>
     
+      <category term="实践尝试" scheme="http://blog.co1mugx.tk/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
     
@@ -443,7 +439,7 @@
     <link href="http://blog.co1mugx.tk/2017/06/13/Bandix0/"/>
     <id>http://blog.co1mugx.tk/2017/06/13/Bandix0/</id>
     <published>2017-06-12T16:17:10.000Z</published>
-    <updated>2017-08-17T02:02:08.000Z</updated>
+    <updated>2017-08-19T15:51:30.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>说起来你可能不信，这是个被傻逼气到不行最后拍断大腿决定实现的Vue组件库。</p>
@@ -476,10 +472,8 @@
     
     </summary>
     
+      <category term="实践尝试" scheme="http://blog.co1mugx.tk/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
     
@@ -492,7 +486,7 @@
     <link href="http://blog.co1mugx.tk/2017/04/14/easyknow-vuex/"/>
     <id>http://blog.co1mugx.tk/2017/04/14/easyknow-vuex/</id>
     <published>2017-04-14T02:58:13.000Z</published>
-    <updated>2017-04-28T09:45:39.000Z</updated>
+    <updated>2017-08-19T15:51:56.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>项目用到了vuex，一开始的我完全是拒绝的…（一头撞死</p>
@@ -592,12 +586,12 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
+    
+      <category term="vuex" scheme="http://blog.co1mugx.tk/tags/vuex/"/>
     
   </entry>
   
@@ -606,7 +600,7 @@
     <link href="http://blog.co1mugx.tk/2017/04/07/axios-tutorial/"/>
     <id>http://blog.co1mugx.tk/2017/04/07/axios-tutorial/</id>
     <published>2017-04-07T07:20:16.000Z</published>
-    <updated>2017-05-10T08:29:53.000Z</updated>
+    <updated>2017-08-19T15:51:15.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>我没进传销！真是日了皮皮虾了…</p>
@@ -682,12 +676,12 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="vue" scheme="http://blog.co1mugx.tk/tags/vue/"/>
+    
+      <category term="NetWork" scheme="http://blog.co1mugx.tk/tags/NetWork/"/>
     
   </entry>
   
@@ -696,7 +690,7 @@
     <link href="http://blog.co1mugx.tk/2017/03/03/js-this/"/>
     <id>http://blog.co1mugx.tk/2017/03/03/js-this/</id>
     <published>2017-03-03T10:34:23.000Z</published>
-    <updated>2017-08-18T17:18:06.000Z</updated>
+    <updated>2017-08-19T15:53:03.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>一次被this支配之后的思考</p>
@@ -724,10 +718,10 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+      <category term="JavaScript" scheme="http://blog.co1mugx.tk/tags/JavaScript/"/>
     
   </entry>
   
@@ -736,7 +730,7 @@
     <link href="http://blog.co1mugx.tk/2017/03/02/js-for/"/>
     <id>http://blog.co1mugx.tk/2017/03/02/js-for/</id>
     <published>2017-03-02T15:40:42.000Z</published>
-    <updated>2017-08-18T17:11:43.000Z</updated>
+    <updated>2017-08-19T15:52:55.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>准备面试，遇到一家以“工匠精神”为核心，“浪”为资本的公司，太喜欢…</p>
@@ -776,10 +770,10 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+      <category term="JavaScript" scheme="http://blog.co1mugx.tk/tags/JavaScript/"/>
     
   </entry>
   
@@ -788,7 +782,7 @@
     <link href="http://blog.co1mugx.tk/2017/02/28/object-traversal/"/>
     <id>http://blog.co1mugx.tk/2017/02/28/object-traversal/</id>
     <published>2017-02-28T04:21:34.000Z</published>
-    <updated>2017-04-25T16:13:20.000Z</updated>
+    <updated>2017-08-19T15:54:22.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>花了几天时间都在探究ES6，为了实现对象遍历，一个头两个大。</p>
@@ -822,10 +816,12 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+      <category term="JavaScript" scheme="http://blog.co1mugx.tk/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="http://blog.co1mugx.tk/tags/ES6/"/>
     
   </entry>
   
@@ -834,7 +830,7 @@
     <link href="http://blog.co1mugx.tk/2017/02/22/js-extends/"/>
     <id>http://blog.co1mugx.tk/2017/02/22/js-extends/</id>
     <published>2017-02-22T13:52:24.000Z</published>
-    <updated>2017-04-21T08:55:54.000Z</updated>
+    <updated>2017-08-19T15:52:42.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>小爝（知乎用户）：js里面什么都是对象，所以你看单身狗学这个语言学的老快了。</p>
@@ -865,10 +861,10 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+      <category term="JavaScript" scheme="http://blog.co1mugx.tk/tags/JavaScript/"/>
     
   </entry>
   
@@ -877,7 +873,7 @@
     <link href="http://blog.co1mugx.tk/2017/02/17/async-await-first/"/>
     <id>http://blog.co1mugx.tk/2017/02/17/async-await-first/</id>
     <published>2017-02-17T12:38:33.000Z</published>
-    <updated>2017-03-13T09:22:13.000Z</updated>
+    <updated>2017-08-19T15:48:55.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p>
@@ -917,10 +913,12 @@
     
     </summary>
     
+      <category term="前端思考" scheme="http://blog.co1mugx.tk/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+      <category term="JavaScript" scheme="http://blog.co1mugx.tk/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="http://blog.co1mugx.tk/tags/ES6/"/>
     
   </entry>
   
@@ -929,7 +927,7 @@
     <link href="http://blog.co1mugx.tk/2017/02/16/zhihu-live-yi-xian/"/>
     <id>http://blog.co1mugx.tk/2017/02/16/zhihu-live-yi-xian/</id>
     <published>2017-02-16T06:24:37.000Z</published>
-    <updated>2017-02-16T06:59:27.000Z</updated>
+    <updated>2017-08-19T15:56:02.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>怎么感觉太久没写博客，本地的程序都回档了…</p>
@@ -959,10 +957,10 @@
     
     </summary>
     
+      <category term="日常思考" scheme="http://blog.co1mugx.tk/categories/%E6%97%A5%E5%B8%B8%E6%80%9D%E8%80%83/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="吹水" scheme="http://blog.co1mugx.tk/tags/%E5%90%B9%E6%B0%B4/"/>
+      <category term="面试" scheme="http://blog.co1mugx.tk/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -971,7 +969,7 @@
     <link href="http://blog.co1mugx.tk/2017/02/13/Syuanpi-css/"/>
     <id>http://blog.co1mugx.tk/2017/02/13/Syuanpi-css/</id>
     <published>2017-02-12T16:50:40.000Z</published>
-    <updated>2017-02-16T07:05:56.000Z</updated>
+    <updated>2017-08-19T15:54:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css" target="_blank" rel="external">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p>
 <p>说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！</p>
@@ -988,8 +986,8 @@
     
     </summary>
     
+      <category term="实践尝试" scheme="http://blog.co1mugx.tk/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
@@ -1004,7 +1002,7 @@
     <link href="http://blog.co1mugx.tk/2016/12/09/update-npm-packages/"/>
     <id>http://blog.co1mugx.tk/2016/12/09/update-npm-packages/</id>
     <published>2016-12-09T08:12:41.000Z</published>
-    <updated>2016-12-11T18:05:00.000Z</updated>
+    <updated>2017-08-19T15:55:07.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>工具比本体好玩系列……</p>
@@ -1037,8 +1035,8 @@
     
     </summary>
     
+      <category term="日常吐槽" scheme="http://blog.co1mugx.tk/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
     
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
@@ -1049,7 +1047,7 @@
     <link href="http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/"/>
     <id>http://blog.co1mugx.tk/2016/12/09/nodejs-hapi/</id>
     <published>2016-12-08T17:37:38.000Z</published>
-    <updated>2017-08-18T17:18:22.000Z</updated>
+    <updated>2017-08-19T15:53:54.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Hapi?可我一点都happy不起来…</p>
@@ -1071,10 +1069,8 @@
     
     </summary>
     
+      <category term="后端尝试" scheme="http://blog.co1mugx.tk/categories/%E5%90%8E%E7%AB%AF%E5%B0%9D%E8%AF%95/"/>
     
-      <category term="前端" scheme="http://blog.co1mugx.tk/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="实验室" scheme="http://blog.co1mugx.tk/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
       <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
     
@@ -1085,7 +1081,7 @@
     <link href="http://blog.co1mugx.tk/2016/12/02/Korou5/"/>
     <id>http://blog.co1mugx.tk/2016/12/02/Korou5/</id>
     <published>2016-12-02T09:45:28.000Z</published>
-    <updated>2016-12-04T07:18:58.000Z</updated>
+    <updated>2017-08-19T15:53:36.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>我早已不记得你的名字，但我记得我喜欢你。</p>
@@ -1141,6 +1137,8 @@
     
     </summary>
     
+      <category term="日常吐槽" scheme="http://blog.co1mugx.tk/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
+    
     
       <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
     
@@ -1153,7 +1151,7 @@
     <link href="http://blog.co1mugx.tk/2016/11/25/Korou4/"/>
     <id>http://blog.co1mugx.tk/2016/11/25/Korou4/</id>
     <published>2016-11-25T09:01:32.000Z</published>
-    <updated>2017-04-20T06:40:57.000Z</updated>
+    <updated>2017-08-19T15:53:33.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>天气转凉…基本是条冻狗了<br>另外小嘀咕一句：有点想把“Rousy”重写了…</p>
@@ -1179,6 +1177,8 @@
 &lt;h3 id=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;a href=&quot;#最近干了个长得像个音乐播放器的微信小程序&quot; class=&quot;headerlink&quot; title=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;/a&gt;最近干了个长得像个音乐播放器的微信小程序&lt;/h3&gt;
     
     </summary>
+    
+      <category term="日常吐槽" scheme="http://blog.co1mugx.tk/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
     
     
       <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
