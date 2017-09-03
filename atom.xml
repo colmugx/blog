@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-08-22T17:35:29.000Z</updated>
+  <updated>2017-08-24T14:01:46.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testTest</title>
+    <link href="http://blog.co1mugx.tk/2017/08/24/testTest/"/>
+    <id>http://blog.co1mugx.tk/2017/08/24/testTest/</id>
+    <published>2017-08-24T14:01:46.000Z</published>
+    <updated>2017-08-24T14:01:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>搞electron+vue+webpack2+TypeScript什么体验</title>
@@ -111,7 +125,7 @@
     <link href="http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/"/>
     <id>http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/</id>
     <published>2017-08-14T04:26:44.000Z</published>
-    <updated>2017-08-19T15:47:29.000Z</updated>
+    <updated>2017-09-03T04:38:26.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
@@ -151,7 +165,7 @@
 </blockquote>
 <p><del>顺便，请以上三家公司尽快给我打钱，谢谢合作。</del></p>
 <p><code>bind()</code>有点土匪的意思，它就是想抢走你老婆借用一晚的意思。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> bid = obj.getName	<span class="comment">// 这手还是不变</span></div><div class="line">bid.bind(obj)			<span class="comment">// 这样就做到了，把this指向回去，又变成一个可以自由操作的变量</span></div><div class="line">bid()					<span class="comment">// koala    （这样才会运行，因为刚刚只是抢过来了</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> bid = obj.getName	<span class="comment">// [Function: getName]          (这手还是不变</span></div><div class="line">bid = bid.bind(obj)		<span class="comment">// [Function: bound getName]    (这样就做到了，把this指向回去，又变成一个可以自由操作的变量</span></div><div class="line">bid()					<span class="comment">// koala        （这样才会运行，因为刚刚只是抢过来了</span></div></pre></td></tr></table></figure>
 <h2 id="call-和-apply-区别"><a href="#call-和-apply-区别" class="headerlink" title="call()和#apply()区别"></a>call()和#apply()区别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj)		<span class="comment">//koala</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> apy = obj.getName</div><div class="line">apy.apply(obj)		<span class="comment">//koala</span></div></pre></td></tr></table></figure>
 <p>说是这么说了，可是，他们并不是说就这么改变<code>this</code>方向然后就没什么用处了啊，可以借用<code>call()</code>和<code>apply()</code>传参数的。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'koala'</span>,</div><div class="line">    getName(param1, param2) &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">' params: '</span> + param1 + param2</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj, <span class="number">1</span>, <span class="number">2</span>)		<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure>
@@ -1106,76 +1120,6 @@
     
     
       <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扣肉小记（五）—— 你的名字。</title>
-    <link href="http://blog.co1mugx.tk/2016/12/02/Korou5/"/>
-    <id>http://blog.co1mugx.tk/2016/12/02/Korou5/</id>
-    <published>2016-12-02T09:45:28.000Z</published>
-    <updated>2017-08-19T15:53:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>我早已不记得你的名字，但我记得我喜欢你。</p>
-</blockquote>
-<h3 id="这是一篇不一样的“扣肉小记”"><a href="#这是一篇不一样的“扣肉小记”" class="headerlink" title="这是一篇不一样的“扣肉小记”"></a>这是一篇不一样的“扣肉小记”</h3><p>　　<strong><em>《你的名字。》，记不起“你的名字。”</em></strong><br>　　这次的音乐是这个：</p>
-<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=426881503&auto=0&height=32"></iframe><br>（一共8分钟）<br>　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。<br>　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。<br><span style="color:#a5a5a5">　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。</span> <a id="more"></a></p>
-<h4 id="一次未知的身体交换，换来未知的迷惑"><a href="#一次未知的身体交换，换来未知的迷惑" class="headerlink" title="一次未知的身体交换，换来未知的迷惑"></a>一次未知的身体交换，换来未知的迷惑</h4><p>　　已经不知道如何形容心情。<br>　　可能是因为三叶向往大城市，也有可能是神灵听到了三叶的呼声。他说他想变成东京的帅哥，结果在梦里真的成了。<br>　　但是那个梦又好像是真实的，就这么半梦半醒的状态下，跟东京另外一个帅哥泷交换了身体。<br>　　于是，就有了“一周有几天会交换身体，各自要过对方的生活而且不能被发现”的体验。</p>
-<blockquote>
-<p>- “你怎么打这么多份工啊！”<br>- “还不是因为你乱花钱！”</p>
-</blockquote>
-<p>　　就这么互相嫌弃，隔着两个世界小打小闹。为了不露馅，他们彼此在对方手机留下了日记。并通过笔来互相传达自己想说的话。<br>　　但是，虽说是半梦半醒，但梦毕竟是梦，而且梦一醒，就会逐渐淡忘梦里的内容。<br>　　就在一天，三叶帮泷喜欢的女孩子促成了一次约会，而泷带着三叶的身体去见了一次神明……</p>
-<blockquote>
-<p>- “他们现在一定在一起了吧”<br>  - “我真的是在做梦吗”</p>
-</blockquote>
-<p>　　就这么一次偶然的情况，梦醒了……这一醒，或许就要失去什么……<br>　　于是泷决定要去找三叶，三叶也想去找泷，就这样，一个人去了小镇，一个人去了城市。就在这个时候</p>
-<p>　　<strong>三叶遇到泷的时候，泷并不认识三叶！<br>  　　而泷去找三叶的时候，才知道小镇三年前就毁了！</strong></p>
-<h4 id="三年前我不认识你，三年后我遇不到你"><a href="#三年前我不认识你，三年后我遇不到你" class="headerlink" title="三年前我不认识你，三年后我遇不到你"></a>三年前我不认识你，三年后我遇不到你</h4><p>　　满脑子都是“不可能”的泷尝试翻看手机里三叶留下来的日记，才发现…</p>
-<p>　　<strong>那 根本不存在</strong></p>
-<p>　　翻查三年前小镇陨石事件的泷，在死亡花名册看到了“宫水三叶”的泷，不相信这一切都是真的。但是看到了自己的手绳。<br>　　这是一场“三年前三年后”的梦…<br>　　后来泷想起了自己放在神坛的“口嚼酒”，和一叶的提示“那是三叶的一半”。于是泷决定去神坛，为了挽救三叶。</p>
-<blockquote>
-<p>- “既然是三叶的一半，那喝一口是不是能看到更多？”</p>
-</blockquote>
-<p>　　之后，泷才知道，这场跨越三年的邂逅：是三年前的三叶跟自己交换了身体，并去找过自己。而不知情的自己只留下了头绳。</p>
-<h4 id="你-叫什么？"><a href="#你-叫什么？" class="headerlink" title="你 叫什么？"></a>你 叫什么？</h4><p>　　泷借着三叶的身体回到了陨石坠落的那一天。从一叶得知宫水家的女性都会有这样的梦。但每一代都不信陨石会坠落。<br>　　急着挽救小镇的三叶用尽各种方法，而且总有一种奇怪的感觉在驱使着她。<br>　　三叶借着泷的身体，看到了三年后的小镇：<strong>那是一片废墟。</strong><br>　　<br>　　总有一股奇怪的感觉，驱使着他们。而且他们都想到了同一个地方：神体</p>
-<blockquote>
-<p>- “互相留下自己的名字吧，我不想梦醒了，忘记了。”</p>
-</blockquote>
-<p>　　他们在湖中心，隔着三年时空相遇了。身体换回来了，他们的对话机会时间，只有黄昏。<br>　　于是，泷在三叶手上留下了“だすき”</p>
-<p>　　而三叶 <strong>只在泷手上留下了“み”（みつは）的“-”</strong></p>
-<blockquote>
-<p>- “只要记住你的名字，不管你在世界的哪个地方，我一定会去找你。”</p>
-</blockquote>
-<h4 id="我找了你五年，而你却等了我八年"><a href="#我找了你五年，而你却等了我八年" class="headerlink" title="我找了你五年，而你却等了我八年"></a>我找了你五年，而你却等了我八年</h4><blockquote>
-<p>- “真的不会忘记了，真的不会了！三叶！我记住了！みつは！”<br>　“等一下！你叫什么！你叫…什么… 我 为什么在这里…”</p>
-</blockquote>
-<p>　　为了“不知道”的泷找了“不知道”，一直找一直找，直到大学毕业。<br>　　三叶 为了泷 救了镇上的人，顺利读完高中大学，也毕业了，来到了东京。</p>
-<p>　　为了寻找自己的“不知道”的两个人，就算擦肩而过也不知道吧……</p>
-<p>　　但是他们彼此有感觉，他们知道，谁是他们要找的人。</p>
-<blockquote>
-<p>- “我 好像在哪里见过你？”<br>- “我也是”<br>– “君の名前は？”</p>
-</blockquote>
-<p>—— “我找了你五年，谢谢你等了我八年”</p>
-<p>终于，在同一个时空相遇了……</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;我早已不记得你的名字，但我记得我喜欢你。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;a href=&quot;#这是一篇不一样的“扣肉小记”&quot; class=&quot;headerlink&quot; title=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;/a&gt;这是一篇不一样的“扣肉小记”&lt;/h3&gt;&lt;p&gt;　　&lt;strong&gt;&lt;em&gt;《你的名字。》，记不起“你的名字。”&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;　　这次的音乐是这个：&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;298&quot; height=&quot;52&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=426881503&amp;auto=0&amp;height=32&quot;&gt;&lt;/iframe&gt;&lt;br&gt;（一共8分钟）&lt;br&gt;　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。&lt;br&gt;　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。&lt;br&gt;&lt;span style=&quot;color:#a5a5a5&quot;&gt;　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="日常吐槽" scheme="http://blog.co1mugx.tk/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
-    
-    
-      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
-    
-      <category term="看片子" scheme="http://blog.co1mugx.tk/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
     
   </entry>
   
