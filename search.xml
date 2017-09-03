@@ -3,14 +3,6 @@
   
     
     <entry>
-      <title><![CDATA[testTest]]></title>
-      <url>/2017/08/24/testTest/</url>
-      <content type="html"></content>
-      
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[搞electron+vue+webpack2+TypeScript什么体验]]></title>
       <url>/2017/08/22/do-markdown-hexo/</url>
       <content type="html"><![CDATA[<p>本来是想放弃的，后来歪打正着，成功运行。最后搞一个ts类型的启动器，不想再懵了。</p>
