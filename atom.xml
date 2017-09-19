@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.co1mugx.tk/"/>
-  <updated>2017-08-22T17:35:29.000Z</updated>
+  <updated>2017-09-19T06:59:49.000Z</updated>
   <id>http://blog.co1mugx.tk/</id>
   
   <author>
@@ -14,6 +14,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用桌面应用写hexo博客是什么体验？</title>
+    <link href="http://blog.co1mugx.tk/2017/09/19/what-the-feeling-about-hyper/"/>
+    <id>http://blog.co1mugx.tk/2017/09/19/what-the-feeling-about-hyper/</id>
+    <published>2017-09-19T05:02:01.000Z</published>
+    <updated>2017-09-19T06:59:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>稳的稳的，这次真是为了需求造轮子了。Hyper = Hexo + Typer. </p>
+</blockquote>
+<p>接触到hexo是因为，hexo可以是一个前端博客生成器，直接生成一个前端静态页面，做到可以上传到github“个人页面”作为博客网站。</p>
+<p>不过，毕竟是基于<code>node</code>的生成器，编写过程很geek。首先创建和预览甚至发布，依赖<code>terminal</code>和<code>node</code>。你要使用一个你喜欢的<code>markdown</code>编辑器，或者直接就在代码编辑器搞例如<code>vscode</code>。原来我也是用这个写博客。因为自带了<code>terminal</code>，直接创建了搞完直接上。后来生活逐渐好点，用的 iterm2 + zsh 之后，编辑器改用了<code>Typora</code>。然而关于这段的话，我上一篇<a href="http://blog.co1mugx.tk/2017/08/22/do-markdown-hexo/">搞electron+vue+webpack2+TypeScript什么体验</a> 已经讲得够多了，所以不赘述了。</p>
+<p>但是现在，可能生活会更好了…</p>
+<p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/1.png" alt=""></p>
+<a id="more"></a>
+<h2 id="为什么？"><a href="#为什么？" class="headerlink" title="为什么？"></a>为什么？</h2><p>这是个<code>electron</code> + <code>Typescript</code> + <code>vue</code>的产物。也就是首先它是桌面应用了，由于<code>electron</code>意味着它可能可以跨平台。不过我没有想过…所以现在是 MacOS 版本。</p>
+<p>为什么想起写这个，原因就两点</p>
+<ul>
+<li>原来的方式太过于繁琐，甚至感觉不到自己是在写博客。</li>
+<li>对计算机理解和操作都不是顺畅的人会带来很多麻烦。</li>
+</ul>
+<p>博客博客，文字记录自己的生活或者技术探讨。多少写手或者说喜欢分享的人，喜欢hexo又不会用没办法用。当分享被技术限制之后，那么写文章也就不是专注于文章了。（比如我写文章也一直很跳，跟性格有关吧）</p>
+<p>所以我才想要实现这么个东西，实际上在早之前就已经打算了，当时前端太菜。也不知道<code>electron</code>是什么东西。还是个<code>swift</code>新教徒的时候。有想过用MacOS 原生的方式去做这个东西，后来放弃了，原因还是因为技术上的问题。</p>
+<p>这次实现这个东西的时候，巧了，跟<a href="http://www.ahonn.me" target="_blank" rel="external">@Ahonn</a>几乎不约而同的想到了一起。他也说他很早就想做了，不过大神不是因为技术原因，而是开坑不填工期延后…</p>
+<p>不过他的实现方式是不同的，他想使用<code>cljs</code>去实现这个东西。我为了求稳，还有还是熟悉一下<code>TypeScript</code>作为脚本使用的感觉，用了这么套技术栈。</p>
+<p>Ahonn的项目地址是这个：<a href="https://github.com/ahonn/hexdit" target="_blank" rel="external">ahonn / hexdit</a>。利益相关的话：还是算关系挺好的校友吧…</p>
+<h2 id="怎么用？"><a href="#怎么用？" class="headerlink" title="怎么用？"></a>怎么用？</h2><p>不搞事情，不吹牛逼，这次为了 <del>装逼</del> 测试一下软件大概“正常使用”有没有什么问题。所以这次我这篇文章完完全全使用<code>Hyper</code>创建、编写、保存、修改，甚至我等下生成发布也直接用这个。</p>
+<p>确实，这才像在写博客。</p>
+<p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/2.png" alt=""></p>
+<p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/7.png" alt=""></p>
+<p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/9.png" alt=""></p>
+<p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/10.png" alt=""></p>
+<p>我甚至都不怕被你看！</p>
+<p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/5.png" alt=""></p>
+<p>（因为编辑器的样式还有预览的样式还没上，所以现在看起来还是很丑的，不过测试功能嘛，我等下还会用其他编辑器看）</p>
+<p>但不管怎么说！就是好看！<strong>简就是美！甚至还有点少女心！</strong></p>
+<p>在首屏直接载入<strong>整个博客程序文件夹</strong>之后，就会到达这个界面，左边是显示你当前博客程序里面的文章（名字我都不怕给你看，这名字最后会显示到网址上！），文章列表上面三个按钮分别是 “创建”，“预览”，“生成/发布”。每一个文章名称前面一个“绿色的勾”是提醒你，当前这篇文章是可见的。没错文章可以是隐藏的，这在<code>hexo</code>的文档上有提到，<code>source</code>文件夹中不会上传文件名前带’_’的文件。所以自然可以过滤“草稿”和“不想发布”的文章。所以隐藏的文章会显示一个红色的叉。</p>
+<p>点击想编辑的文章之后，其实会有动画回馈，但是不会常驻高亮。然后右边会跳出目前文章的内容以及一些编辑文章会用到的功能。实际上我应该做一个当前编辑文件高亮的！</p>
+<p>右边编辑区中第一个“笔样子”的图标我是放着玩的…一些测试的工作会挂在上面当starter。然后保存和删除这个应该能看懂。右边有个开关，这个开关就是作为<strong>“选择当前文章是否隐藏”</strong>的作用。当然如果是<code>off</code>状态的话就是显示了，默认也是显示的。最右边的“X”就是关闭当前编辑区咯。</p>
+<p>下面一整个编辑区，写文章可以用，不过<code>markdown</code>了，应该熟悉的是不会用到的吧，可能会用到两个功能：一个是全屏编辑，一个是分屏编辑。噢插入表格也可以有，<code>markdown</code>的表格真是蛋疼。</p>
+<h3 id="另外还给对hexo不熟悉的写手准备了一个大功能。"><a href="#另外还给对hexo不熟悉的写手准备了一个大功能。" class="headerlink" title="另外还给对hexo不熟悉的写手准备了一个大功能。"></a>另外还给对hexo不熟悉的写手准备了一个大功能。</h3><p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/3.png" alt=""></p>
+<p>那就是简易设置了！漂不漂亮我不敢说！反正我就喜欢清静的感觉，看看<code>Nlvi</code>！是不是还有一股禅意！</p>
+<p>截图的信息是我在做测试的时候，我当前导入的是当时用来测试主题功能的一个示例博客，官方提供的。毕竟不敢把自己的博客导入进去，万一弄瞎了不就真瞎了…</p>
+<p>就我遇到的很多情况看，还是会有刚接触前端或者刚接触hexo的人不知道hexo的配置文件应该是怎么弄的。虽然我在<a href="https://github.com/ColMugX/hexo-theme-Nlvi" target="_blank" rel="external">hexo-theme-Nlvi</a>里面写到：如果主题有使用问题的话，你可以提ISSUE，或者直接到知乎上锤我！</p>
+<p>但事实上，很多给我知乎发私信的同学，问的都基本不是主题使用的问题，反而是博客本身的使用问题。所以我重新整理了博客配置文件，并把一些比较重要的，必须要的功能作为一张设置界面出来，这样就方便使用了。只要这张填的满，按道理说博客的显示和发布就没问题了。</p>
+<p>而且这张设置界面就这么多内容，在地址设置下面也就多了一个“文章代码是否高亮”和“部署地址”。这样而已。然后就可以保存完事。</p>
+<p>由于还是在测试和进一步编写。所以一些难看的目前用不到的我都<code>display:none</code>了，所以看不到完整设置。</p>
+<p>初来乍到，第一次写这种软件，还是有很多问题的。如果你看到问题了还希望你能帮我指正。我也是想服务一下社区，给喜欢但是不会用的人一点帮助。</p>
+<h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>其实介绍文章按正常来说到上面就结束了。这也是为什么 “是什么 -&gt; 为什么 -&gt; 怎么做”反而是这种顺序。</p>
+<p>关于是什么，应该很多人都不愿意去关心了，这里是我想记录的一些心得和学习遇到的坑。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;稳的稳的，这次真是为了需求造轮子了。Hyper = Hexo + Typer. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;接触到hexo是因为，hexo可以是一个前端博客生成器，直接生成一个前端静态页面，做到可以上传到github“个人页面”作为博客网站。&lt;/p&gt;
+&lt;p&gt;不过，毕竟是基于&lt;code&gt;node&lt;/code&gt;的生成器，编写过程很geek。首先创建和预览甚至发布，依赖&lt;code&gt;terminal&lt;/code&gt;和&lt;code&gt;node&lt;/code&gt;。你要使用一个你喜欢的&lt;code&gt;markdown&lt;/code&gt;编辑器，或者直接就在代码编辑器搞例如&lt;code&gt;vscode&lt;/code&gt;。原来我也是用这个写博客。因为自带了&lt;code&gt;terminal&lt;/code&gt;，直接创建了搞完直接上。后来生活逐渐好点，用的 iterm2 + zsh 之后，编辑器改用了&lt;code&gt;Typora&lt;/code&gt;。然而关于这段的话，我上一篇&lt;a href=&quot;http://blog.co1mugx.tk/2017/08/22/do-markdown-hexo/&quot;&gt;搞electron+vue+webpack2+TypeScript什么体验&lt;/a&gt; 已经讲得够多了，所以不赘述了。&lt;/p&gt;
+&lt;p&gt;但是现在，可能生活会更好了…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/ColMugX/GitBed/raw/master/hyper/1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="实践尝试" scheme="http://blog.co1mugx.tk/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+    
+    
+      <category term="小作坊" scheme="http://blog.co1mugx.tk/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+    
+      <category term="electron" scheme="http://blog.co1mugx.tk/tags/electron/"/>
+    
+      <category term="TypeScript" scheme="http://blog.co1mugx.tk/tags/TypeScript/"/>
+    
+  </entry>
   
   <entry>
     <title>搞electron+vue+webpack2+TypeScript什么体验</title>
@@ -1106,76 +1181,6 @@
     
     
       <category term="NodeJS" scheme="http://blog.co1mugx.tk/tags/NodeJS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扣肉小记（五）—— 你的名字。</title>
-    <link href="http://blog.co1mugx.tk/2016/12/02/Korou5/"/>
-    <id>http://blog.co1mugx.tk/2016/12/02/Korou5/</id>
-    <published>2016-12-02T09:45:28.000Z</published>
-    <updated>2017-08-19T15:53:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>我早已不记得你的名字，但我记得我喜欢你。</p>
-</blockquote>
-<h3 id="这是一篇不一样的“扣肉小记”"><a href="#这是一篇不一样的“扣肉小记”" class="headerlink" title="这是一篇不一样的“扣肉小记”"></a>这是一篇不一样的“扣肉小记”</h3><p>　　<strong><em>《你的名字。》，记不起“你的名字。”</em></strong><br>　　这次的音乐是这个：</p>
-<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=426881503&auto=0&height=32"></iframe><br>（一共8分钟）<br>　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。<br>　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。<br><span style="color:#a5a5a5">　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。</span> <a id="more"></a></p>
-<h4 id="一次未知的身体交换，换来未知的迷惑"><a href="#一次未知的身体交换，换来未知的迷惑" class="headerlink" title="一次未知的身体交换，换来未知的迷惑"></a>一次未知的身体交换，换来未知的迷惑</h4><p>　　已经不知道如何形容心情。<br>　　可能是因为三叶向往大城市，也有可能是神灵听到了三叶的呼声。他说他想变成东京的帅哥，结果在梦里真的成了。<br>　　但是那个梦又好像是真实的，就这么半梦半醒的状态下，跟东京另外一个帅哥泷交换了身体。<br>　　于是，就有了“一周有几天会交换身体，各自要过对方的生活而且不能被发现”的体验。</p>
-<blockquote>
-<p>- “你怎么打这么多份工啊！”<br>- “还不是因为你乱花钱！”</p>
-</blockquote>
-<p>　　就这么互相嫌弃，隔着两个世界小打小闹。为了不露馅，他们彼此在对方手机留下了日记。并通过笔来互相传达自己想说的话。<br>　　但是，虽说是半梦半醒，但梦毕竟是梦，而且梦一醒，就会逐渐淡忘梦里的内容。<br>　　就在一天，三叶帮泷喜欢的女孩子促成了一次约会，而泷带着三叶的身体去见了一次神明……</p>
-<blockquote>
-<p>- “他们现在一定在一起了吧”<br>  - “我真的是在做梦吗”</p>
-</blockquote>
-<p>　　就这么一次偶然的情况，梦醒了……这一醒，或许就要失去什么……<br>　　于是泷决定要去找三叶，三叶也想去找泷，就这样，一个人去了小镇，一个人去了城市。就在这个时候</p>
-<p>　　<strong>三叶遇到泷的时候，泷并不认识三叶！<br>  　　而泷去找三叶的时候，才知道小镇三年前就毁了！</strong></p>
-<h4 id="三年前我不认识你，三年后我遇不到你"><a href="#三年前我不认识你，三年后我遇不到你" class="headerlink" title="三年前我不认识你，三年后我遇不到你"></a>三年前我不认识你，三年后我遇不到你</h4><p>　　满脑子都是“不可能”的泷尝试翻看手机里三叶留下来的日记，才发现…</p>
-<p>　　<strong>那 根本不存在</strong></p>
-<p>　　翻查三年前小镇陨石事件的泷，在死亡花名册看到了“宫水三叶”的泷，不相信这一切都是真的。但是看到了自己的手绳。<br>　　这是一场“三年前三年后”的梦…<br>　　后来泷想起了自己放在神坛的“口嚼酒”，和一叶的提示“那是三叶的一半”。于是泷决定去神坛，为了挽救三叶。</p>
-<blockquote>
-<p>- “既然是三叶的一半，那喝一口是不是能看到更多？”</p>
-</blockquote>
-<p>　　之后，泷才知道，这场跨越三年的邂逅：是三年前的三叶跟自己交换了身体，并去找过自己。而不知情的自己只留下了头绳。</p>
-<h4 id="你-叫什么？"><a href="#你-叫什么？" class="headerlink" title="你 叫什么？"></a>你 叫什么？</h4><p>　　泷借着三叶的身体回到了陨石坠落的那一天。从一叶得知宫水家的女性都会有这样的梦。但每一代都不信陨石会坠落。<br>　　急着挽救小镇的三叶用尽各种方法，而且总有一种奇怪的感觉在驱使着她。<br>　　三叶借着泷的身体，看到了三年后的小镇：<strong>那是一片废墟。</strong><br>　　<br>　　总有一股奇怪的感觉，驱使着他们。而且他们都想到了同一个地方：神体</p>
-<blockquote>
-<p>- “互相留下自己的名字吧，我不想梦醒了，忘记了。”</p>
-</blockquote>
-<p>　　他们在湖中心，隔着三年时空相遇了。身体换回来了，他们的对话机会时间，只有黄昏。<br>　　于是，泷在三叶手上留下了“だすき”</p>
-<p>　　而三叶 <strong>只在泷手上留下了“み”（みつは）的“-”</strong></p>
-<blockquote>
-<p>- “只要记住你的名字，不管你在世界的哪个地方，我一定会去找你。”</p>
-</blockquote>
-<h4 id="我找了你五年，而你却等了我八年"><a href="#我找了你五年，而你却等了我八年" class="headerlink" title="我找了你五年，而你却等了我八年"></a>我找了你五年，而你却等了我八年</h4><blockquote>
-<p>- “真的不会忘记了，真的不会了！三叶！我记住了！みつは！”<br>　“等一下！你叫什么！你叫…什么… 我 为什么在这里…”</p>
-</blockquote>
-<p>　　为了“不知道”的泷找了“不知道”，一直找一直找，直到大学毕业。<br>　　三叶 为了泷 救了镇上的人，顺利读完高中大学，也毕业了，来到了东京。</p>
-<p>　　为了寻找自己的“不知道”的两个人，就算擦肩而过也不知道吧……</p>
-<p>　　但是他们彼此有感觉，他们知道，谁是他们要找的人。</p>
-<blockquote>
-<p>- “我 好像在哪里见过你？”<br>- “我也是”<br>– “君の名前は？”</p>
-</blockquote>
-<p>—— “我找了你五年，谢谢你等了我八年”</p>
-<p>终于，在同一个时空相遇了……</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;我早已不记得你的名字，但我记得我喜欢你。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;a href=&quot;#这是一篇不一样的“扣肉小记”&quot; class=&quot;headerlink&quot; title=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;/a&gt;这是一篇不一样的“扣肉小记”&lt;/h3&gt;&lt;p&gt;　　&lt;strong&gt;&lt;em&gt;《你的名字。》，记不起“你的名字。”&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;　　这次的音乐是这个：&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;298&quot; height=&quot;52&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=426881503&amp;auto=0&amp;height=32&quot;&gt;&lt;/iframe&gt;&lt;br&gt;（一共8分钟）&lt;br&gt;　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。&lt;br&gt;　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。&lt;br&gt;&lt;span style=&quot;color:#a5a5a5&quot;&gt;　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="日常吐槽" scheme="http://blog.co1mugx.tk/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
-    
-    
-      <category term="扣肉小记" scheme="http://blog.co1mugx.tk/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
-    
-      <category term="看片子" scheme="http://blog.co1mugx.tk/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
     
   </entry>
   
