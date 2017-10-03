@@ -877,7 +877,13 @@ a {
   font-family: 'Optima', 'PingFang SC', 'Roboto', 'Noto SansCJK', 'Helvetica Neue', 'Helvetica', "微软雅黑", "YaHei-Consolas-Hybrid", sans-serif;
 }
 .post-content img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+}
+@media screen and (max-width: 650px) {
+  .post-content img {
+    max-width: 300px;
+  }
 }
 @media screen and (max-width: 650px) {
   .post-content {
