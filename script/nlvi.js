@@ -2,7 +2,7 @@
     "use strict";
 
     var Nlvi = {
-        tagcloud: function tagcloud() {
+        tagcloud: function () {
             $('#tags').click(function () {
                 $('#tagcloud').css({
                     'transform': 'translateY(0px)',
@@ -21,7 +21,7 @@
                 $('.inner-cloud').css('transform', 'translateX(-96%)');
             });
         },
-        mobileHeader: function mobileHeader() {
+        mobileHeader: function () {
             var that = this;
             $(window).scroll(function () {
                 if ($(window).scrollTop() > $('#header').height()) {
@@ -40,39 +40,39 @@
                 return that.openHeaderMenu();
             });
         },
-        closeHeaderMenu: function closeHeaderMenu() {
+        closeHeaderMenu: function () {
             $('#mobile-left').removeClass('item-clicked');
             $('.mobile-header').css('top', $('.mobile-header-nav').height() - $('.mobile-header').height());
         },
-        openHeaderMenu: function openHeaderMenu() {
+        openHeaderMenu: function () {
             $('#mobile-left').addClass('item-clicked');
             $('.mobile-header').css('top', '0');
         },
-        offAnimate: function offAnimate() {
+        offAnimate: function () {
             $('.syuanpi').removeClass('syuanpi');
         },
-        picPos: function picPos() {
+        picPos: function () {
             $('.post-content').each(function () {
                 $(this).find('img').each(function () {
                     $(this).parent('p').css('text-align', 'center');
                 });
             });
         },
-        onPicBox: function onPicBox() {
+        onPicBox: function () {
             $('.post-content').each(function () {
                 $(this).find('img').each(function () {
                     $(this).replaceWith("<a href='" + this.src + "' data-title='" + this.alt + "' data-lightbox='group'><img src='" + this.src + "' alt='" + this.alt + "'></a>");
                 });
             });
         },
-        smoothScroll: function smoothScroll() {
+        smoothScroll: function () {
             $('.toc-link').click(function () {
                 $('body').animate({
                     scrollTop: $($.attr(this, 'href')).offset().top - 200
                 });
             });
         },
-        onView: function onView() {
+        onView: function () {
             var title = document.title;
             var tme;
             document.addEventListener('visibilitychange', function () {
@@ -89,7 +89,7 @@
                 }
             });
         },
-        back2top: function back2top() {
+        back2top: function () {
             $(window).each(function () {
                 $(this).scroll(function () {
                     if ($(this).scrollTop() > 110) {
@@ -112,7 +112,7 @@
                 });
             });
         },
-        showComments: function showComments() {
+        showComments: function () {
             $('#com-switch').click(function () {
                 if ($('#post-comments').css('display') == 'none') {
                     $('#post-comments').css('display', 'block').addClass('syuanpi fallIn-light');
@@ -125,7 +125,7 @@
                 }
             });
         },
-        showReward: function showReward() {
+        showReward: function () {
             $('#reward-btn').click(function () {
                 if ($('#reward-wrapper').css('display') == 'none') {
                     $('#reward-wrapper').css('display', 'flex').addClass('syuanpi fallIn-light');
@@ -136,7 +136,7 @@
                 }
             });
         },
-        showToc: function showToc() {
+        showToc: function () {
             var $toclink = $('.toc-link');
             var $headerlink = $('.headerlink');
             var h = 30;
