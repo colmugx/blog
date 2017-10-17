@@ -3,6 +3,74 @@
   
     
     <entry>
+      <title><![CDATA[引用等于指针吗？]]></title>
+      <url>/2017/10/17/reference-equal-pointer/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>一篇思考文，关于JS的reference和Go的指针。（臆想型论文？）</p>
+</blockquote>
+<p>最近投入大量时间接触<code>Golang</code>，了解“指针”的时候，想起了以前学习C语言时对“指针”的疑问：指针是什么。</p>
+<p>以前还小不理解指针和野指针，只知道野指针会出现内存溢出或者值不正确的情况。而且网上大多讲指针的文章看起来都很难。就像现在的知乎：一句话能说清楚的东西恨不得从它的诞生还是写起。就连LOL赛评也是这副P样。</p>
+<p>以至于我后面对C语言没好感，对C++厌恶，对有“指针”的语言直接没兴趣。</p>
+<p>在看到Go的指针的时候，我已经想放弃了。但是想回来，毕竟上一次接触指针已经6年了，也许现在看就能理解出什么呢。（过程中接触的OC根本不能算经验，因为当时完全就是靠抄靠背来写iOS应用，最后还是嫌弃OC麻烦进阶无法理解去学习了swift）<br><a id="more"></a></p>
+<h2 id="Reference-Pointer"><a href="#Reference-Pointer" class="headerlink" title="Reference == Pointer?"></a>Reference == Pointer?</h2><p>以前看到什么内存地址啊，指向啊就已经乱了，满脑子都在想内存里面是什么样的，内存地址，寄存器又是什么东西。跟着官方教程走了一遍，了解到<strong>指针就是通过一个变量去指向一个有的变量或者说是对象，从而产生一种绑定。通过修改指针变量也可以达到修改本体的效果</strong>。</p>
+<p>这让我想到JS，因为每天都在操作对象，知道：如果你要建立一个新的变量，比如<code>a = 1</code>，我可以通过<code>var b = a</code>得到一个新的变量。但是如果是对象则不是。如果是<code>a = {};  var b = a</code>的话，b只是单纯指向了a，并没有复制a</p>
+<p>所以我立刻去搜索<em>关于JavaScript的指针</em>。得到这么一个结果 <a href="https://www.baidu.com/link?url=2Xxo3-ptdvabLARr0p-DcoBbeysd2lvRxH-jEevvWHBJ7pNBk-mkxGqaB6h8UTWVRi-2lc56zjWVMYPUgv6tfK&amp;wd=&amp;eqid=e1820c9600002f360000000659e5b92d" target="_blank" rel="external">JavaScript 的<em>指针</em>是什么? - 知乎</a></p>
+<blockquote>
+<p>JavaScript 里头什么时候有指针的概念？倒是有 reference （引用）的说法。 —— <a href="https://www.zhihu.com/people/sansmana" target="_blank" rel="external">陈木野</a></p>
+</blockquote>
+<p>关于this的总结，不单我自己，网络上已经大量的文章了。不管是详细解析，还是总结，都已经很多了。但是如果说：指针就是一种指向变量的话，那JavaScript就很多了，遍地都是。而这样的话，就跟reference有关系了。</p>
+<p>说起来也是邪门了，今天打算把《红宝书》拿出来翻一下，翻到了第四章4.1.2，看到了这么一句</p>
+<blockquote>
+<p>当使用 num1 的值来初始化 num2 时，num2 中也保存了值 5。但 num2<br>中的 5 与 num1 中的 5 是完全独立的，该值只是 num1 中 5 的一个副本。</p>
+<p>当从一个变量向另一个变量复制引用类型的值时，同样也会将存储在变量对象中的值复制一份放到<br>为新变量分配的空间中。不同的是，这个值的副本实际上是一个指针，而这个指针指向存储在堆中的一<br>个对象。复制操作结束后，两个变量实际上将引用同一个对象。</p>
+</blockquote>
+<p>于是我的想法 “引用是一种指针” 或许成立。（复习有好处的！）</p>
+<h2 id="Point-Reference"><a href="#Point-Reference" class="headerlink" title="Point == Reference"></a>Point == Reference</h2><p>如果反过来，还能成立吗？我觉得不行。</p>
+<p>C++，让我很崇拜很信仰的，却因不理解和学不会让我产生厌恶的语言，在这方面是两者皆有。由于根本不懂所以不参加讨论。</p>
+<p>Java，他也有reference，但是在<a href="https://www.baidu.com/link?url=bI4EsfOKw8lfPjTwX3_gY7pbn2LFMOwmFPmoalBBNr7lFCv9ZltHfuravfoA7uVHrNJtSUxm0Epjk-IW5Zr2z_&amp;wd=&amp;eqid=ee91ddc5000508bd0000000659e60253" target="_blank" rel="external">Java的<em>Reference</em>感觉很象C++的<em>指针</em>,但是区别是本质的 - f…_博客园</a> 提到：</p>
+<blockquote>
+<p>Java中你无法对这个地址进行任何数学运算，并且这个地址你不知道，是Java Runtime分配给你的，它随时还要调整这个地址（After GC,Memory要Compact，这时候一个Object Reference的地址就会改变）。</p>
+</blockquote>
+<p>我不是很理解，所以我也不敢评论什么。我只想关于Go和JS的东西。</p>
+<p>也许是心理隔阂，也许是真理。我怎么都想不出怎么让“指针是一种引用”成立。</p>
+<p>老是想内存内存，不如想成一个盒子，指针就是给盒子里的东西连了一条线。这样做就不用我找这个东西的时候去盒子里找，而是直接去找这条线？</p>
+<p>可是在JS中，引用也不能修改和做任何运算吗？</p>
+<h2 id="Reference-Pointer-1"><a href="#Reference-Pointer-1" class="headerlink" title="Reference === Pointer?"></a>Reference === Pointer?</h2><p>我不是语言专家，我一点都不敢保证。或者说我不懂。</p>
+<p>我不知道所谓的指针是什么东西，但是我知道<code>reference</code>是一个<code>object</code>，毕竟不知道哪篇文章写道：函数是JavaScript第一公民。但并不是很纯的函数式编程语言。</p>
+<p>其实思考到现在，我又有新的问题了：<strong>前端语言，或者说函数式编程语言，有没有内存，指针一说？</strong></p>
+<p>不过现在可以知道的是：</p>
+<p>​    在指令式编程中，数值就是数值，一切工作之后无非就是想得到一个值，过程中也在围绕着值。</p>
+<p>​    在函数式编程中，函数还是占主要地位，它需要以数学的方式去解决编程的问题。</p>
+<p>那我现在可不可以有一种新的理解：</p>
+<p>​    比如C语言这种，他定义指针是需要 <code>*</code> 这种东西，也就是<code>int *a = b</code>是用a指针指向b，我可以通过a来修改b。但是如果直接<code>int a = b</code>的话，我就相当于复制了这个变量了，没权修改b变量了。而如果<code>int a</code>是一个函数的话，那它最后也需要返回一个<code>int</code>返回值。所以它并没有“用函数搞事”的权利。</p>
+<p>​    而JS语言这种，我想用一个代码框来写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 还是根据红宝书的例子</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> b = a;	<span class="comment">// 一种复制，相互独立</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">a</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="keyword">var</span> y = x	<span class="comment">// 一种引用，实际上操作y的时候还是在操作x</span></div><div class="line"></div><div class="line"><span class="comment">//现在暂时借用一下以 _ 代替*</span></div><div class="line"><span class="keyword">var</span> o = &#123; <span class="attr">a</span>: <span class="number">5</span> &#125;</div><div class="line"><span class="keyword">var</span> _b = o.a	<span class="comment">// 达到继承的目的？</span></div><div class="line"></div><div class="line"><span class="comment">// var _b = int *b   在某种意义上？</span></div></pre></td></tr></table></figure>
+<p>在红宝书接下来有一句：</p>
+<blockquote>
+<p>换句话说，obj1和 obj2 都指向同一个对象。这样，当为 obj1 添加 name 属性后，可以通过 obj2 来访问这个属性，<br>因为这两个变量引用的都是同一个对象。</p>
+</blockquote>
+<p>按我的角度翻译一下，就是：<strong>我定义一个b出来，无非就是给a多了一个出口</strong></p>
+<p>所以综上所述，我认为，对我来说，或者对C系除外的语言来说，<strong>把“指针”说成“指向”，或许让人更好理解。</strong></p>
+<p>哼，计算机真是有趣。</p>
+<p>（最后感谢所有被引用的文章和作者，谢谢。）</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 编程议论 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[总有一天我会死在骚操作上…]]></title>
       <url>/2017/10/09/diary-vue-jsx/</url>
       <content type="html"><![CDATA[<p>得考虑去弄个图床，滥用github不太好。</p>
@@ -319,11 +387,16 @@
 <p>声明式编程是让你声明某些东西，把内容转化为数据，数据转化为数据。而很明显javascript并不隶属这一家族。而且，js好像连Object都是Function类型的吧！</p>
 <p>而且script，脚本语言+函数式语言，这才是我热爱并追随的地方。虽然我在JS是真的菜！</p>
 <p>最后</p>
-<p style="font-size:24px;font-weight:500;text-align:center;">把Javascript当做指令式编程的人都是神经病！</p>]]></content>
+<p style="font-size:24px;font-weight:500;text-align:center;">把Javascript当做指令式编程的人都是神经病！</p>
+
+
+
+<p>（最后感谢所有被引用的文章和作者，谢谢。）</p>
+]]></content>
       
         <categories>
             
-            <category> 前端思考 </category>
+            <category> 编程议论 </category>
             
         </categories>
         
