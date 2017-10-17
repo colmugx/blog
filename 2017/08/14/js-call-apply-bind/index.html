@@ -262,7 +262,7 @@
                 <blockquote>
 <p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
 </blockquote>
-<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/" target="_blank" rel="external">关于JavaScript的this</a></p>
+<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/">关于JavaScript的this</a></p>
 <p>还是上次的代码，修改一下</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()					<span class="comment">//undefined.</span></div></pre></td></tr></table></figure>
 <p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
@@ -321,11 +321,11 @@
         </div>
         <div class="copy-url">
             <span>地址 :</span>
-            <a href="http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/">http://blog.co1mugx.tk/2017/08/14/js-call-apply-bind/</a>
+            <a href="https://colmugx.github.io/PersonalBlog/2017/08/14/js-call-apply-bind/">https://colmugx.github.io/PersonalBlog/2017/08/14/js-call-apply-bind/</a>
         </div>
         <div class="copy-origin">
             <span>来源 :</span>
-            <a href="http://blog.co1mugx.tk">http://blog.co1mugx.tk</a>
+            <a href="https://colmugx.github.io/PersonalBlog">https://colmugx.github.io/PersonalBlog</a>
         </div>
         <div class="copy-license">
             
