@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[引用等于指针吗？]]></title>
-      <url>/2017/10/17/reference-equal-pointer/</url>
+      <url>/PersonalBlog/2017/10/17/reference-equal-pointer/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>一篇思考文，关于JS的reference和Go的指针。（臆想型论文？）</p>
 </blockquote>
@@ -72,7 +72,7 @@
     
     <entry>
       <title><![CDATA[总有一天我会死在骚操作上…]]></title>
-      <url>/2017/10/09/diary-vue-jsx/</url>
+      <url>/PersonalBlog/2017/10/09/diary-vue-jsx/</url>
       <content type="html"><![CDATA[<p>得考虑去弄个图床，滥用github不太好。</p>
 <p><img src="https://github.com/ColMugX/GitBed/raw/master/diary/vue-render1.png" alt=""></p>
 <p><img src="https://github.com/ColMugX/GitBed/raw/master/diary/vue-render2.png" alt=""></p>
@@ -98,7 +98,7 @@
     
     <entry>
       <title><![CDATA[使用桌面应用写hexo博客是什么体验？]]></title>
-      <url>/2017/09/19/what-the-feeling-about-hyper/</url>
+      <url>/PersonalBlog/2017/09/19/what-the-feeling-about-hyper/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>稳的稳的，这次真是为了需求造轮子了。Hyper = Hexo + Typer. </p>
 </blockquote>
@@ -165,7 +165,7 @@
     
     <entry>
       <title><![CDATA[搞electron+vue+webpack2+TypeScript什么体验]]></title>
-      <url>/2017/08/22/do-markdown-hexo/</url>
+      <url>/PersonalBlog/2017/08/22/do-markdown-hexo/</url>
       <content type="html"><![CDATA[<p>本来是想放弃的，后来歪打正着，成功运行。最后搞一个ts类型的启动器，不想再懵了。</p>
 <p><a href="https://github.com/ColMugX/vue-ts-electron-starter" target="_blank" rel="external">vue-ts-electron-starter</a></p>
 <p>想看看原项目<code>electron-vue</code>有没有这个打算，没有的话自己fork个分支出来。这个将就。</p>
@@ -249,11 +249,11 @@
     
     <entry>
       <title><![CDATA[JavaScript的call()，bind()，apply()]]></title>
-      <url>/2017/08/14/js-call-apply-bind/</url>
+      <url>/PersonalBlog/2017/08/14/js-call-apply-bind/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
 </blockquote>
-<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/" target="_blank" rel="external">关于JavaScript的this</a></p>
+<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/">关于JavaScript的this</a></p>
 <p>还是上次的代码，修改一下</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()					<span class="comment">//undefined.</span></div></pre></td></tr></table></figure>
 <p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
@@ -318,7 +318,7 @@
     
     <entry>
       <title><![CDATA[关于Javascript的条件判断]]></title>
-      <url>/2017/08/09/about-conditionals/</url>
+      <url>/PersonalBlog/2017/08/09/about-conditionals/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>记录这个不为什么，就是遇到SB，不想争执。</p>
 </blockquote>
@@ -411,7 +411,7 @@
     
     <entry>
       <title><![CDATA[从0到1的Bandix（四）- 组件通讯]]></title>
-      <url>/2017/08/09/Bandix4/</url>
+      <url>/PersonalBlog/2017/08/09/Bandix4/</url>
       <content type="html"><![CDATA[<p>组件化了，证明把一个页面若干项目都视为一个组件，然后像搭积木一样重新组合。组件化的目的最早就为了，同样的组件可以重复利用避免反复开发。但是如果同一页面那么交互起来肯定是最方便的，因为页面数据都在同一页面上。如果独立成组件之后，势必会有数据传入组件然后来回刷新的情况。（在这里我要操了小程序的设计）</p>
 <p>所以Bandix不例外的，肯定要组件通讯的，不然玩奶子。<br><a id="more"></a></p>
 <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>Bandix主要还是用了四种：</p>
@@ -490,7 +490,7 @@
     
     <entry>
       <title><![CDATA[从0到1的Bandix（三）- vue.use]]></title>
-      <url>/2017/08/04/Bandix3/</url>
+      <url>/PersonalBlog/2017/08/04/Bandix3/</url>
       <content type="html"><![CDATA[<p>其实，完整的函数是<code>Vue.use(plugin)</code>，在中文文档上是这么说的</p>
 <blockquote>
 <p>安装 Vue.js 插件。如果插件是一个对象，必须提供<code>install</code>方法。如果插件是一个函数，它会被作为 install 方法。install 方法将被作为 Vue 的参数调用。<br>当 install 方法被同一个插件多次调用，插件将只会被安装一次。</p>
@@ -525,7 +525,7 @@
     
     <entry>
       <title><![CDATA[从0到1的Bandix（二）- component & extend]]></title>
-      <url>/2017/06/19/Bandix2/</url>
+      <url>/PersonalBlog/2017/06/19/Bandix2/</url>
       <content type="html"><![CDATA[<p>在vue中，可能无论写一个什么，就算只是单纯的一个vue插件，也会用到<code>vue component</code>。因为你搞一个<code>*.vue</code>就已经是了啊（逃</p>
 <p>一切还是以探索为主，我只是想把看到的东西按照自己理解记录一下。关于这部分的内容，在<a href="https://cn.vuejs.org/v2/guide/components.html" target="_blank" rel="external">Vue组件</a>这里有中文文档，在<a href="https://cn.vuejs.org/v2/api/#Vue-extend-options" target="_blank" rel="external">Vue.extend</a>有关于extend的内容。</p>
 <p>现在大多数组件库的话，都是<code>Vue.use()</code>来使用，那么为什么use就能用了？到底是在u些什么鬼东西。<br><a id="more"></a></p>
@@ -560,7 +560,7 @@
     
     <entry>
       <title><![CDATA[从0到1的Bandix（一）- npm package]]></title>
-      <url>/2017/06/14/Bandix1/</url>
+      <url>/PersonalBlog/2017/06/14/Bandix1/</url>
       <content type="html"><![CDATA[<p>关于<code>npmjs.org</code>的内容本来是要到最后的。因为能到操作npm部分的话必然项目已经到了收官阶段。</p>
 <p>不过我不熟悉npm从上架到下架的过程，之前是打算让<code>Syuanpi.css</code>上架，但是觉得还是算了吧别给别人的市场添加垃圾。<strong>不过从今天这事之后我觉得完善这个东西意义重大！</strong></p>
 <p>所以说这次的旅程，开刀的还是<code>Syuanpi.css</code>。。。（这个东西肯定不是亲生的。</p>
@@ -616,7 +616,7 @@
     
     <entry>
       <title><![CDATA[从0到1的Bandix（零） - 想法记录]]></title>
-      <url>/2017/06/13/Bandix0/</url>
+      <url>/PersonalBlog/2017/06/13/Bandix0/</url>
       <content type="html"><![CDATA[<p>觉得既然决定要做了，那就至少得做出个样子（就像隔壁Syuanpi.css一样看起来很帅，实际上很糜烂…）</p>
 <a id="more"></a>
 <p>话说我开过的坑还少么！TickTick开出来，从白到红，从音乐到代码，从记事本到路由器，怕不是能溢出来？而且，Syuanpi.css一开始的想法就是让一些普通的网页动画比较好收拾，现在看来要添加一些比较有灵性的动画了。我是不指望有人看毕竟，animate.css在页面动画依然是大头。另外我想给Syuanpi.css开个针对vue的分支，也是为了方便收拾。<strong>叫Syuanpi.vue！</strong></p>
@@ -655,7 +655,7 @@
     
     <entry>
       <title><![CDATA[也许是第一个最好理解的Vuex入门]]></title>
-      <url>/2017/04/14/easyknow-vuex/</url>
+      <url>/PersonalBlog/2017/04/14/easyknow-vuex/</url>
       <content type="html"><![CDATA[<p>刚用vue不久，应该说还有大量的API还没用过还没熟悉过的时候，突然接受一个新内容，而且还是个很抽象的东西，说实话刚接触的时候完全不知道这东西有什么用…只听说过它能状态管理啊，什么全局控制啊。好牛逼啊666啊。</p>
 <p><strong>哦，然后呢？</strong></p>
 <p>后来稍微理解之后，决定写出来。浅入浅出的理解一下vuex。<a id="more"></a></p>
@@ -759,7 +759,7 @@
     
     <entry>
       <title><![CDATA[Vue2.0的网络请求 - Axios]]></title>
-      <url>/2017/04/07/axios-tutorial/</url>
+      <url>/PersonalBlog/2017/04/07/axios-tutorial/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>我没进传销！真是日了皮皮虾了…</p>
 </blockquote>
@@ -840,7 +840,7 @@
     
     <entry>
       <title><![CDATA[关于JavaScript的this]]></title>
-      <url>/2017/03/03/js-this/</url>
+      <url>/PersonalBlog/2017/03/03/js-this/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>一次被this支配之后的思考</p>
 </blockquote>
@@ -875,7 +875,7 @@
     
     <entry>
       <title><![CDATA[ES古往今来所有for的总结]]></title>
-      <url>/2017/03/02/js-for/</url>
+      <url>/PersonalBlog/2017/03/02/js-for/</url>
       <content type="html"><![CDATA[<p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
 <p>觉得我不服！我要上！<br><a id="more"></a></p>
 <h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</div></pre></td></tr></table></figure></p>
@@ -918,7 +918,7 @@
     
     <entry>
       <title><![CDATA[ES6对象遍历]]></title>
-      <url>/2017/02/28/object-traversal/</url>
+      <url>/PersonalBlog/2017/02/28/object-traversal/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>花了几天时间都在探究ES6，为了实现对象遍历，一个头两个大。</p>
 </blockquote>
@@ -960,7 +960,7 @@
     
     <entry>
       <title><![CDATA[来搞一手关于Javascript对象继承]]></title>
-      <url>/2017/02/22/js-extends/</url>
+      <url>/PersonalBlog/2017/02/22/js-extends/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>小爝（知乎用户）：js里面什么都是对象，所以你看单身狗学这个语言学的老快了。</p>
 </blockquote>
@@ -998,7 +998,7 @@
     
     <entry>
       <title><![CDATA[async-await 初尝试]]></title>
-      <url>/2017/02/17/async-await-first/</url>
+      <url>/PersonalBlog/2017/02/17/async-await-first/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p>
 </blockquote>
@@ -1047,7 +1047,7 @@
     
     <entry>
       <title><![CDATA[一次知乎live感受 - 一线大厂如何面试]]></title>
-      <url>/2017/02/16/zhihu-live-yi-xian/</url>
+      <url>/PersonalBlog/2017/02/16/zhihu-live-yi-xian/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>怎么感觉太久没写博客，本地的程序都回档了…</p>
 </blockquote>
@@ -1084,8 +1084,8 @@
     
     <entry>
       <title><![CDATA[自己造轮子！——Syuanpi.css]]></title>
-      <url>/2017/02/13/Syuanpi-css/</url>
-      <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css" target="_blank" rel="external">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p>
+      <url>/PersonalBlog/2017/02/13/Syuanpi-css/</url>
+      <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p>
 <p>说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！</p>
 <h3 id="为什么要出这东西…"><a href="#为什么要出这东西…" class="headerlink" title="为什么要出这东西…"></a>为什么要出这东西…</h3><a id="more"></a>
 <p>在知乎看了一段时间了认识了kpi这东西，觉得这东西好坑啊233，导致我现在觉得kpi的意思就是：有现有轮子不要用！不管怎样自己用的东西能做成轮子就给它做成轮子！然后再用自己的轮子！然后kpi就啪啪啪的往上走！不过这库子我的出发点还是想把我原来弄的一些基础的动画归类起来，加上自己比较会常用的操作封装起来，仅此而已。<br>在知乎学习的过程，就有一个关于没工作经验然后怎么面试的问题。就有提到关于自己开源自己的代码，不是不负责任的像托管作业一样把乱七八糟的东西放上去然后就说“噢！劳资也有开源”这样，至少要有一个给人一种便捷操作，要有头有尾，还要会写文档，不会写给个README也行。然后我也没经验，就听话这么做了…</p>
@@ -1113,7 +1113,7 @@
     
     <entry>
       <title><![CDATA[更新全局NPM的所有可更新包]]></title>
-      <url>/2016/12/09/update-npm-packages/</url>
+      <url>/PersonalBlog/2016/12/09/update-npm-packages/</url>
       <content type="html"><![CDATA[<p>今天在通过<code>vue-cli</code>创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。<br>然后发现，项目内更新就<code>npm update &lt;name&gt;</code>就更新了，全局好像不知道怎么弄。然后就自作聪明的<code>npm update -g vue-cli</code>（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”<br>事实证明是能用的！<code>vue-cli</code>更新好了。<br>但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了<br>于是查了一下，说不定日后还得用，做个记录。<a id="more"></a></p>
 <h3 id="通过npm的cli更新"><a href="#通过npm的cli更新" class="headerlink" title="通过npm的cli更新"></a>通过npm的cli更新</h3><p>后来在某个同性交流平台sf找到了，说<code>npm</code>在<code>2.6.1</code>之后有一个代码叫<code>npm install -g</code>。可以升级全部包。<br>然后我试了一下。</p>
 <blockquote>
@@ -1150,7 +1150,7 @@
     
     <entry>
       <title><![CDATA[看一眼后端框架Hapi]]></title>
-      <url>/2016/12/09/nodejs-hapi/</url>
+      <url>/PersonalBlog/2016/12/09/nodejs-hapi/</url>
       <content type="html"><![CDATA[<p>老规矩老套路：<a href="https://hapijs.com/" target="_blank" rel="external">链接在这</a></p>
 <h3 id="什么是Hapi"><a href="#什么是Hapi" class="headerlink" title="什么是Hapi"></a>什么是Hapi</h3><p>当<code>Node.js</code>用来做后端的时候，后端框架在我听说过的就三个：<code>Express</code>、<code>Koa</code>、<code>Hapi</code>。<br>超喜欢<code>Koa</code>，不过真的，能力有限，那些我没见过的语法我没了解过所以真的不懂，但据说是个超轻可玩性超高的框架，哎好可惜技不如人。例如那个<code>yield</code>，是个<code>python</code>的产物，但是我py真的不精，所以…我有一句妈卖批我现在就要讲。<a id="more"></a><br><code>Hapi</code>同样也是一个后端框架，而且它建立一个App很简单，就这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Hapi = <span class="built_in">require</span>(<span class="string">'hapi'</span>);</div><div class="line"><span class="comment">// Create a server with a host and port</span></div><div class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> Hapi.Server();</div><div class="line">server.connection(&#123; </div><div class="line">    host: <span class="string">'localhost'</span>, </div><div class="line">    port: <span class="number">8000</span> </div><div class="line">&#125;);</div><div class="line"><span class="comment">// Add the route</span></div><div class="line">server.route(&#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path:<span class="string">'/hello'</span>, </div><div class="line">    handler: <span class="function"><span class="keyword">function</span> (<span class="params">request, reply</span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> reply(<span class="string">'hello world'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// Start the server</span></div><div class="line">server.start(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">throw</span> err;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Server running at:'</span>, server.info.uri);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <h3 id="Hapi有哪些不一样"><a href="#Hapi有哪些不一样" class="headerlink" title="Hapi有哪些不一样"></a>Hapi有哪些不一样</h3><p>第一眼看起来是超直观，跟<code>Express</code>还是有很大区别的。<br>首先跟直观看到不同的就是，<code>Hapi</code>require之后没有<code>var app = hapi()</code>类似这样的东西，而是重新实例化了一个<code>server</code>，<br>然后用这个实例化出来的<code>server</code>定义接口啊，路由啊。然后通过<code>server.start</code>来启动服务。清新脱俗……<br>另外通过这篇<a href="http://ourjs.com/detail/5490db1c8a34fa320400000e" target="_blank" rel="external">Node.js 框架比较: Express vs. Koa vs. Hapi</a>可以看到，在REST中，<code>Hapi</code>是这么处理的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">server.route([</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path: <span class="string">'/api/items'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'POST'</span>,</div><div class="line">    path: <span class="string">'/api/items'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Post item'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'PUT'</span>,</div><div class="line">    path: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Put item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'DELETE'</span>,</div><div class="line">    path: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Delete item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path: <span class="string">'/'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Hello world'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">]);</div></pre></td></tr></table></figure></p>
@@ -1175,7 +1175,7 @@
     
     <entry>
       <title><![CDATA[扣肉小记（五）—— 你的名字。]]></title>
-      <url>/2016/12/02/Korou5/</url>
+      <url>/PersonalBlog/2016/12/02/Korou5/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>我早已不记得你的名字，但我记得我喜欢你。</p>
 </blockquote>
@@ -1239,7 +1239,7 @@
     
     <entry>
       <title><![CDATA[扣肉小记（四）]]></title>
-      <url>/2016/11/25/Korou4/</url>
+      <url>/PersonalBlog/2016/11/25/Korou4/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>天气转凉…基本是条冻狗了<br>另外小嘀咕一句：有点想把“Rousy”重写了…</p>
 </blockquote>
@@ -1272,7 +1272,7 @@
     
     <entry>
       <title><![CDATA[一次无聊的尝试 —— hexo-theme-blank]]></title>
-      <url>/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</url>
+      <url>/PersonalBlog/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>厉害咯我的Blank</p>
 </blockquote>
@@ -1299,7 +1299,7 @@
     
     <entry>
       <title><![CDATA[关于微信小程序]]></title>
-      <url>/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/</url>
+      <url>/PersonalBlog/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>向腾讯大佬低头！</p>
 </blockquote>
@@ -1329,7 +1329,7 @@
     
     <entry>
       <title><![CDATA[扣肉小记（三）]]></title>
-      <url>/2016/10/09/Korou3/</url>
+      <url>/PersonalBlog/2016/10/09/Korou3/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>怒踹马！你们的狗皇帝回来了！</p>
 </blockquote>
@@ -1359,7 +1359,7 @@
     
     <entry>
       <title><![CDATA[幕课网视频下载器NodeJS版]]></title>
-      <url>/2016/10/06/Imooc_Downloader/</url>
+      <url>/PersonalBlog/2016/10/06/Imooc_Downloader/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>不能让别人知道我也是会撸工具的（嘘..）</p>
 </blockquote>
@@ -1394,7 +1394,7 @@
     
     <entry>
       <title><![CDATA[扣肉小记（二）]]></title>
-      <url>/2016/10/04/Korou2/</url>
+      <url>/PersonalBlog/2016/10/04/Korou2/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>感觉自己跟一条热狗差不多了！</p>
 </blockquote>
@@ -1427,7 +1427,7 @@
     
     <entry>
       <title><![CDATA[扣肉小记（一）]]></title>
-      <url>/2016/10/03/Korou1/</url>
+      <url>/PersonalBlog/2016/10/03/Korou1/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>一个不正经的码狗生活。</p>
 </blockquote>

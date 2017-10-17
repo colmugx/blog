@@ -3,11 +3,11 @@
   <title>Co1MugX</title>
   
   <subtitle>箭头跳动是提醒你这有评论框！</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/PersonalBlog/atom.xml" rel="self"/>
   
-  <link href="/"/>
+  <link href="https://colmugx.github.io/"/>
   <updated>2017-10-17T14:22:18.853Z</updated>
-  <id>/</id>
+  <id>https://colmugx.github.io/</id>
   
   <author>
     <name>Co1MugX</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>引用等于指针吗？</title>
-    <link href="/2017/10/17/reference-equal-pointer/"/>
-    <id>/2017/10/17/reference-equal-pointer/</id>
+    <link href="https://colmugx.github.io/2017/10/17/reference-equal-pointer/"/>
+    <id>https://colmugx.github.io/2017/10/17/reference-equal-pointer/</id>
     <published>2017-10-17T07:33:38.000Z</published>
     <updated>2017-10-17T14:22:18.853Z</updated>
     
@@ -37,17 +37,17 @@
     
     </summary>
     
-      <category term="编程议论" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
+      <category term="编程议论" scheme="https://colmugx.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>总有一天我会死在骚操作上…</title>
-    <link href="/2017/10/09/diary-vue-jsx/"/>
-    <id>/2017/10/09/diary-vue-jsx/</id>
+    <link href="https://colmugx.github.io/2017/10/09/diary-vue-jsx/"/>
+    <id>https://colmugx.github.io/2017/10/09/diary-vue-jsx/</id>
     <published>2017-10-09T07:22:07.000Z</published>
     <updated>2017-10-09T07:37:57.498Z</updated>
     
@@ -64,19 +64,19 @@
     
     </summary>
     
-      <category term="毫无意义" scheme="/categories/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89/"/>
+      <category term="毫无意义" scheme="https://colmugx.github.io/categories/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>使用桌面应用写hexo博客是什么体验？</title>
-    <link href="/2017/09/19/what-the-feeling-about-hyper/"/>
-    <id>/2017/09/19/what-the-feeling-about-hyper/</id>
+    <link href="https://colmugx.github.io/2017/09/19/what-the-feeling-about-hyper/"/>
+    <id>https://colmugx.github.io/2017/09/19/what-the-feeling-about-hyper/</id>
     <published>2017-09-19T05:02:01.000Z</published>
     <updated>2017-09-19T06:59:49.000Z</updated>
     
@@ -94,21 +94,21 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="小作坊" scheme="/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+      <category term="小作坊" scheme="https://colmugx.github.io/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
-      <category term="electron" scheme="/tags/electron/"/>
+      <category term="electron" scheme="https://colmugx.github.io/tags/electron/"/>
     
-      <category term="TypeScript" scheme="/tags/TypeScript/"/>
+      <category term="TypeScript" scheme="https://colmugx.github.io/tags/TypeScript/"/>
     
   </entry>
   
   <entry>
     <title>搞electron+vue+webpack2+TypeScript什么体验</title>
-    <link href="/2017/08/22/do-markdown-hexo/"/>
-    <id>/2017/08/22/do-markdown-hexo/</id>
+    <link href="https://colmugx.github.io/2017/08/22/do-markdown-hexo/"/>
+    <id>https://colmugx.github.io/2017/08/22/do-markdown-hexo/</id>
     <published>2017-08-21T16:12:56.000Z</published>
     <updated>2017-08-22T17:35:29.000Z</updated>
     
@@ -125,30 +125,30 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="electron" scheme="/tags/electron/"/>
+      <category term="electron" scheme="https://colmugx.github.io/tags/electron/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript的call()，bind()，apply()</title>
-    <link href="/2017/08/14/js-call-apply-bind/"/>
-    <id>/2017/08/14/js-call-apply-bind/</id>
+    <link href="https://colmugx.github.io/2017/08/14/js-call-apply-bind/"/>
+    <id>https://colmugx.github.io/2017/08/14/js-call-apply-bind/</id>
     <published>2017-08-14T04:26:44.000Z</published>
     <updated>2017-09-03T04:41:45.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p></blockquote><p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/" target="_blank" rel="external">关于JavaScript的this</a></p><p>还是上次的代码，修改一下</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()<span class="comment">//undefined.</span></div></pre></td></tr></table></figure><p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.getName()<span class="comment">//koala</span></div></pre></td></tr></table></figure><a id="more"></a><p>因为有时候并没办法这么自由的随便调用，那如果要搞个变量出来用，怎么做？</p><h2 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h2><blockquote><p><strong>call</strong></p><ul><li>vi. 呼叫；拜访；叫牌</li><li>vt. 呼叫；称呼；召集</li><li>n. 电话；呼叫；要求；访问</li><li>n. (Call)人名；(瑞典、罗)卡尔；(英)考尔<br>以上来自有道翻译</li></ul></blockquote><p>有一手有道翻译就方便了，就是call（叫）它，把要用的方法call（叫）出来。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName<span class="comment">//先定义出来</span></div><div class="line">cal.call(obj)<span class="comment">//koala   （指向还给他，不动其他把它叫出来</span></div></pre></td></tr></table></figure><h2 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h2><blockquote><p><strong>apply</strong></p><ul><li>v.应用；使用；涂；敷</li><li>Web申请；适用；套用<br>以上来自bing词典，感谢微软爸爸</li></ul></blockquote><p>再来一手必应翻译简直就是，不谈了！</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> apy = obj.getName<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj)<span class="comment">//koala  （可以说不是指向还给他，这不是假装了，而是直接套用</span></div></pre></td></tr></table></figure><p>有人要问，那你这手跟<code>call()</code>不是一样的么，为什么要区分开来。这个问题<a href="/2017/08/14/js-call-apply-bind/#call-和-apply-区别">下面再讲</a></p><h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>是不是以为我要用百度翻译了？我偏不！</p><blockquote><p><strong>bind</strong></p><p><strong>n.</strong> 窘境；讨厌的事情；捆绑；植物的藤蔓<br><strong>v.</strong> 捆绑；约束；装订；（使）结合；使关系密切<br>以上来自沪江小d，我学日语就靠它</p></blockquote><p><del>顺便，请以上三家公司尽快给我打钱，谢谢合作。</del></p><p><code>bind()</code>有点土匪的意思，它就是想抢走你老婆借用一晚的意思。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> bid = obj.getName<span class="comment">// [Function: getName]          (这手还是不变</span></div><div class="line"></div><div class="line"><span class="comment">// 接着这样做，把this指向回去，变成一个可以自由操作的变量</span></div><div class="line">bid = bid.bind(obj)<span class="comment">// [Function: bound getName]</span></div><div class="line"></div><div class="line">bid()<span class="comment">// koala   （这样才会运行，因为刚刚只是抢过来了</span></div></pre></td></tr></table></figure><h2 id="call-和-apply-区别"><a href="#call-和-apply-区别" class="headerlink" title="call()和#apply()区别"></a>call()和#apply()区别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj)<span class="comment">//koala</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> apy = obj.getName</div><div class="line">apy.apply(obj)<span class="comment">//koala</span></div></pre></td></tr></table></figure><p>说是这么说了，可是，他们并不是说就这么改变<code>this</code>方向然后就没什么用处了啊，可以借用<code>call()</code>和<code>apply()</code>传参数的。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName(param1, param2) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">' params: '</span> + param1 + param2</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj, <span class="number">1</span>, <span class="number">2</span>)<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure><p>那么<code>apply()</code>就有区别了？哎！</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> apy = obj.getName<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj, [<span class="number">1</span>, <span class="number">2</span>])<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure><p><code>apply</code>后面接参数，只接受数组，<code>call</code>的话按顺序怼进去就行了。就这点区别。</p><p>暂时先这样，以后更深入的使用再深入的理解一下。现在大概就用到这些。</p><p><strong>下一篇，讲Javascript的柯基化！</strong></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p></blockquote><p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/">关于JavaScript的this</a></p><p>还是上次的代码，修改一下</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()<span class="comment">//undefined.</span></div></pre></td></tr></table></figure><p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.getName()<span class="comment">//koala</span></div></pre></td></tr></table></figure><a id="more"></a><p>因为有时候并没办法这么自由的随便调用，那如果要搞个变量出来用，怎么做？</p><h2 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h2><blockquote><p><strong>call</strong></p><ul><li>vi. 呼叫；拜访；叫牌</li><li>vt. 呼叫；称呼；召集</li><li>n. 电话；呼叫；要求；访问</li><li>n. (Call)人名；(瑞典、罗)卡尔；(英)考尔<br>以上来自有道翻译</li></ul></blockquote><p>有一手有道翻译就方便了，就是call（叫）它，把要用的方法call（叫）出来。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName<span class="comment">//先定义出来</span></div><div class="line">cal.call(obj)<span class="comment">//koala   （指向还给他，不动其他把它叫出来</span></div></pre></td></tr></table></figure><h2 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h2><blockquote><p><strong>apply</strong></p><ul><li>v.应用；使用；涂；敷</li><li>Web申请；适用；套用<br>以上来自bing词典，感谢微软爸爸</li></ul></blockquote><p>再来一手必应翻译简直就是，不谈了！</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> apy = obj.getName<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj)<span class="comment">//koala  （可以说不是指向还给他，这不是假装了，而是直接套用</span></div></pre></td></tr></table></figure><p>有人要问，那你这手跟<code>call()</code>不是一样的么，为什么要区分开来。这个问题<a href="/2017/08/14/js-call-apply-bind/#call-和-apply-区别">下面再讲</a></p><h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>是不是以为我要用百度翻译了？我偏不！</p><blockquote><p><strong>bind</strong></p><p><strong>n.</strong> 窘境；讨厌的事情；捆绑；植物的藤蔓<br><strong>v.</strong> 捆绑；约束；装订；（使）结合；使关系密切<br>以上来自沪江小d，我学日语就靠它</p></blockquote><p><del>顺便，请以上三家公司尽快给我打钱，谢谢合作。</del></p><p><code>bind()</code>有点土匪的意思，它就是想抢走你老婆借用一晚的意思。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> bid = obj.getName<span class="comment">// [Function: getName]          (这手还是不变</span></div><div class="line"></div><div class="line"><span class="comment">// 接着这样做，把this指向回去，变成一个可以自由操作的变量</span></div><div class="line">bid = bid.bind(obj)<span class="comment">// [Function: bound getName]</span></div><div class="line"></div><div class="line">bid()<span class="comment">// koala   （这样才会运行，因为刚刚只是抢过来了</span></div></pre></td></tr></table></figure><h2 id="call-和-apply-区别"><a href="#call-和-apply-区别" class="headerlink" title="call()和#apply()区别"></a>call()和#apply()区别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj)<span class="comment">//koala</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> apy = obj.getName</div><div class="line">apy.apply(obj)<span class="comment">//koala</span></div></pre></td></tr></table></figure><p>说是这么说了，可是，他们并不是说就这么改变<code>this</code>方向然后就没什么用处了啊，可以借用<code>call()</code>和<code>apply()</code>传参数的。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName(param1, param2) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">' params: '</span> + param1 + param2</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> cal = obj.getName</div><div class="line">cal.call(obj, <span class="number">1</span>, <span class="number">2</span>)<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure><p>那么<code>apply()</code>就有区别了？哎！</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> apy = obj.getName<span class="comment">//这手还是不变</span></div><div class="line">apy.apply(obj, [<span class="number">1</span>, <span class="number">2</span>])<span class="comment">//koala params: 12</span></div></pre></td></tr></table></figure><p><code>apply</code>后面接参数，只接受数组，<code>call</code>的话按顺序怼进去就行了。就这点区别。</p><p>暂时先这样，以后更深入的使用再深入的理解一下。现在大概就用到这些。</p><p><strong>下一篇，讲Javascript的柯基化！</strong></p>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt;联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;扩展阅读：&lt;a href=&quot;https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;关于JavaScript的this&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;扩展阅读：&lt;a href=&quot;https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/&quot;&gt;关于JavaScript的this&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;还是上次的代码，修改一下&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;panda&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name: &lt;span class=&quot;string&quot;&gt;&#39;koala&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    getName() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; test = obj.getName&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;test()					&lt;span class=&quot;comment&quot;&gt;//undefined.&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;（敲黑板！）复习一下！为什么就&lt;code&gt;undefined&lt;/code&gt;了！原因就是，&lt;code&gt;this&lt;/code&gt;指向不同了。那么直接运行是否可以&lt;/p&gt;
@@ -156,19 +156,19 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
-      <category term="实验室" scheme="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+      <category term="实验室" scheme="https://colmugx.github.io/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
     
   </entry>
   
   <entry>
     <title>关于Javascript的条件判断</title>
-    <link href="/2017/08/09/about-conditionals/"/>
-    <id>/2017/08/09/about-conditionals/</id>
+    <link href="https://colmugx.github.io/2017/08/09/about-conditionals/"/>
+    <id>https://colmugx.github.io/2017/08/09/about-conditionals/</id>
     <published>2017-08-09T06:47:58.000Z</published>
     <updated>2017-10-17T13:56:03.783Z</updated>
     
@@ -183,17 +183,17 @@
     
     </summary>
     
-      <category term="编程议论" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
+      <category term="编程议论" scheme="https://colmugx.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>从0到1的Bandix（四）- 组件通讯</title>
-    <link href="/2017/08/09/Bandix4/"/>
-    <id>/2017/08/09/Bandix4/</id>
+    <link href="https://colmugx.github.io/2017/08/09/Bandix4/"/>
+    <id>https://colmugx.github.io/2017/08/09/Bandix4/</id>
     <published>2017-08-09T03:09:59.000Z</published>
     <updated>2017-08-21T16:31:31.000Z</updated>
     
@@ -206,19 +206,19 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="Bandix" scheme="/tags/Bandix/"/>
+      <category term="Bandix" scheme="https://colmugx.github.io/tags/Bandix/"/>
     
   </entry>
   
   <entry>
     <title>从0到1的Bandix（三）- vue.use</title>
-    <link href="/2017/08/04/Bandix3/"/>
-    <id>/2017/08/04/Bandix3/</id>
+    <link href="https://colmugx.github.io/2017/08/04/Bandix3/"/>
+    <id>https://colmugx.github.io/2017/08/04/Bandix3/</id>
     <published>2017-08-03T16:13:39.000Z</published>
     <updated>2017-08-21T16:31:26.000Z</updated>
     
@@ -234,19 +234,19 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="Bandix" scheme="/tags/Bandix/"/>
+      <category term="Bandix" scheme="https://colmugx.github.io/tags/Bandix/"/>
     
   </entry>
   
   <entry>
     <title>从0到1的Bandix（二）- component &amp; extend</title>
-    <link href="/2017/06/19/Bandix2/"/>
-    <id>/2017/06/19/Bandix2/</id>
+    <link href="https://colmugx.github.io/2017/06/19/Bandix2/"/>
+    <id>https://colmugx.github.io/2017/06/19/Bandix2/</id>
     <published>2017-06-19T04:38:20.000Z</published>
     <updated>2017-08-21T16:31:19.000Z</updated>
     
@@ -260,19 +260,19 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="Bandix" scheme="/tags/Bandix/"/>
+      <category term="Bandix" scheme="https://colmugx.github.io/tags/Bandix/"/>
     
   </entry>
   
   <entry>
     <title>从0到1的Bandix（一）- npm package</title>
-    <link href="/2017/06/14/Bandix1/"/>
-    <id>/2017/06/14/Bandix1/</id>
+    <link href="https://colmugx.github.io/2017/06/14/Bandix1/"/>
+    <id>https://colmugx.github.io/2017/06/14/Bandix1/</id>
     <published>2017-06-14T15:54:03.000Z</published>
     <updated>2017-08-21T16:31:15.000Z</updated>
     
@@ -286,19 +286,19 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="Bandix" scheme="/tags/Bandix/"/>
+      <category term="Bandix" scheme="https://colmugx.github.io/tags/Bandix/"/>
     
   </entry>
   
   <entry>
     <title>从0到1的Bandix（零） - 想法记录</title>
-    <link href="/2017/06/13/Bandix0/"/>
-    <id>/2017/06/13/Bandix0/</id>
+    <link href="https://colmugx.github.io/2017/06/13/Bandix0/"/>
+    <id>https://colmugx.github.io/2017/06/13/Bandix0/</id>
     <published>2017-06-12T16:17:10.000Z</published>
     <updated>2017-08-21T16:31:11.000Z</updated>
     
@@ -310,19 +310,19 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="Bandix" scheme="/tags/Bandix/"/>
+      <category term="Bandix" scheme="https://colmugx.github.io/tags/Bandix/"/>
     
   </entry>
   
   <entry>
     <title>也许是第一个最好理解的Vuex入门</title>
-    <link href="/2017/04/14/easyknow-vuex/"/>
-    <id>/2017/04/14/easyknow-vuex/</id>
+    <link href="https://colmugx.github.io/2017/04/14/easyknow-vuex/"/>
+    <id>https://colmugx.github.io/2017/04/14/easyknow-vuex/</id>
     <published>2017-04-14T02:58:13.000Z</published>
     <updated>2017-08-21T16:31:40.000Z</updated>
     
@@ -336,19 +336,19 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
-      <category term="vuex" scheme="/tags/vuex/"/>
+      <category term="vuex" scheme="https://colmugx.github.io/tags/vuex/"/>
     
   </entry>
   
   <entry>
     <title>Vue2.0的网络请求 - Axios</title>
-    <link href="/2017/04/07/axios-tutorial/"/>
-    <id>/2017/04/07/axios-tutorial/</id>
+    <link href="https://colmugx.github.io/2017/04/07/axios-tutorial/"/>
+    <id>https://colmugx.github.io/2017/04/07/axios-tutorial/</id>
     <published>2017-04-07T07:20:16.000Z</published>
     <updated>2017-08-21T16:14:11.000Z</updated>
     
@@ -365,17 +365,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>关于JavaScript的this</title>
-    <link href="/2017/03/03/js-this/"/>
-    <id>/2017/03/03/js-this/</id>
+    <link href="https://colmugx.github.io/2017/03/03/js-this/"/>
+    <id>https://colmugx.github.io/2017/03/03/js-this/</id>
     <published>2017-03-03T10:34:23.000Z</published>
     <updated>2017-08-21T16:32:15.000Z</updated>
     
@@ -390,17 +390,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>ES古往今来所有for的总结</title>
-    <link href="/2017/03/02/js-for/"/>
-    <id>/2017/03/02/js-for/</id>
+    <link href="https://colmugx.github.io/2017/03/02/js-for/"/>
+    <id>https://colmugx.github.io/2017/03/02/js-for/</id>
     <published>2017-03-02T15:40:42.000Z</published>
     <updated>2017-08-21T16:32:00.000Z</updated>
     
@@ -413,17 +413,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>ES6对象遍历</title>
-    <link href="/2017/02/28/object-traversal/"/>
-    <id>/2017/02/28/object-traversal/</id>
+    <link href="https://colmugx.github.io/2017/02/28/object-traversal/"/>
+    <id>https://colmugx.github.io/2017/02/28/object-traversal/</id>
     <published>2017-02-28T04:21:34.000Z</published>
     <updated>2017-08-19T15:54:22.000Z</updated>
     
@@ -439,19 +439,19 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
-      <category term="ES6" scheme="/tags/ES6/"/>
+      <category term="ES6" scheme="https://colmugx.github.io/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>来搞一手关于Javascript对象继承</title>
-    <link href="/2017/02/22/js-extends/"/>
-    <id>/2017/02/22/js-extends/</id>
+    <link href="https://colmugx.github.io/2017/02/22/js-extends/"/>
+    <id>https://colmugx.github.io/2017/02/22/js-extends/</id>
     <published>2017-02-22T13:52:24.000Z</published>
     <updated>2017-08-19T15:52:42.000Z</updated>
     
@@ -466,17 +466,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>async-await 初尝试</title>
-    <link href="/2017/02/17/async-await-first/"/>
-    <id>/2017/02/17/async-await-first/</id>
+    <link href="https://colmugx.github.io/2017/02/17/async-await-first/"/>
+    <id>https://colmugx.github.io/2017/02/17/async-await-first/</id>
     <published>2017-02-17T12:38:33.000Z</published>
     <updated>2017-08-19T15:48:55.000Z</updated>
     
@@ -491,19 +491,19 @@
     
     </summary>
     
-      <category term="前端思考" scheme="/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/tags/JavaScript/"/>
     
-      <category term="ES6" scheme="/tags/ES6/"/>
+      <category term="ES6" scheme="https://colmugx.github.io/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>一次知乎live感受 - 一线大厂如何面试</title>
-    <link href="/2017/02/16/zhihu-live-yi-xian/"/>
-    <id>/2017/02/16/zhihu-live-yi-xian/</id>
+    <link href="https://colmugx.github.io/2017/02/16/zhihu-live-yi-xian/"/>
+    <id>https://colmugx.github.io/2017/02/16/zhihu-live-yi-xian/</id>
     <published>2017-02-16T06:24:37.000Z</published>
     <updated>2017-08-19T15:56:02.000Z</updated>
     
@@ -518,38 +518,38 @@
     
     </summary>
     
-      <category term="日常思考" scheme="/categories/%E6%97%A5%E5%B8%B8%E6%80%9D%E8%80%83/"/>
+      <category term="日常思考" scheme="https://colmugx.github.io/categories/%E6%97%A5%E5%B8%B8%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="面试" scheme="/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="https://colmugx.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>自己造轮子！——Syuanpi.css</title>
-    <link href="/2017/02/13/Syuanpi-css/"/>
-    <id>/2017/02/13/Syuanpi-css/</id>
+    <link href="https://colmugx.github.io/2017/02/13/Syuanpi-css/"/>
+    <id>https://colmugx.github.io/2017/02/13/Syuanpi-css/</id>
     <published>2017-02-12T16:50:40.000Z</published>
     <updated>2017-08-19T15:54:48.000Z</updated>
     
-    <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css" target="_blank" rel="external">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p><p>说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！</p><h3 id="为什么要出这东西…"><a href="#为什么要出这东西…" class="headerlink" title="为什么要出这东西…"></a>为什么要出这东西…</h3><a id="more"></a><p>在知乎看了一段时间了认识了kpi这东西，觉得这东西好坑啊233，导致我现在觉得kpi的意思就是：有现有轮子不要用！不管怎样自己用的东西能做成轮子就给它做成轮子！然后再用自己的轮子！然后kpi就啪啪啪的往上走！不过这库子我的出发点还是想把我原来弄的一些基础的动画归类起来，加上自己比较会常用的操作封装起来，仅此而已。<br>在知乎学习的过程，就有一个关于没工作经验然后怎么面试的问题。就有提到关于自己开源自己的代码，不是不负责任的像托管作业一样把乱七八糟的东西放上去然后就说“噢！劳资也有开源”这样，至少要有一个给人一种便捷操作，要有头有尾，还要会写文档，不会写给个README也行。然后我也没经验，就听话这么做了…</p><h3 id="它是个什么东西…"><a href="#它是个什么东西…" class="headerlink" title="它是个什么东西…"></a>它是个什么东西…</h3><p>好了说回来我的东西~ Syuanpi意思很简单，我喜欢它日后可以炫得一批233。但是它并不炫，而是一些很基础很基础的动画用法。不过，一些稍微认真的网站不就要点轻转场就行了嘛。比如我觉得博客挺认真的，但是没有转场动画又觉得好干燥，所以我的大部分动画起始点都是基于在自己博客上面用。而且动画的过程速度和位置全靠目测！不会计算也是硬伤呀…用的是stylus，不知道为什么总觉得那个被那个绿色的长的 ∮ 撩到了，然后就这么用了。<br>认认真真做作业，不要搞什么大新闻。就像标题说的，针对自己脑洞的产物。不过由于是自己第一次比较成型的“自己的作业自己做”，我还是好高兴的。如果有人愿意给star就更好了，还没体验过被5个star砸死是什么感觉呢~（不贪心的好孩子~）<br>嗯！该讲说明书了！大份说明书在GitHub的头页README.md，所以就不讲了！</p>]]></content>
+    <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p><p>说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！</p><h3 id="为什么要出这东西…"><a href="#为什么要出这东西…" class="headerlink" title="为什么要出这东西…"></a>为什么要出这东西…</h3><a id="more"></a><p>在知乎看了一段时间了认识了kpi这东西，觉得这东西好坑啊233，导致我现在觉得kpi的意思就是：有现有轮子不要用！不管怎样自己用的东西能做成轮子就给它做成轮子！然后再用自己的轮子！然后kpi就啪啪啪的往上走！不过这库子我的出发点还是想把我原来弄的一些基础的动画归类起来，加上自己比较会常用的操作封装起来，仅此而已。<br>在知乎学习的过程，就有一个关于没工作经验然后怎么面试的问题。就有提到关于自己开源自己的代码，不是不负责任的像托管作业一样把乱七八糟的东西放上去然后就说“噢！劳资也有开源”这样，至少要有一个给人一种便捷操作，要有头有尾，还要会写文档，不会写给个README也行。然后我也没经验，就听话这么做了…</p><h3 id="它是个什么东西…"><a href="#它是个什么东西…" class="headerlink" title="它是个什么东西…"></a>它是个什么东西…</h3><p>好了说回来我的东西~ Syuanpi意思很简单，我喜欢它日后可以炫得一批233。但是它并不炫，而是一些很基础很基础的动画用法。不过，一些稍微认真的网站不就要点轻转场就行了嘛。比如我觉得博客挺认真的，但是没有转场动画又觉得好干燥，所以我的大部分动画起始点都是基于在自己博客上面用。而且动画的过程速度和位置全靠目测！不会计算也是硬伤呀…用的是stylus，不知道为什么总觉得那个被那个绿色的长的 ∮ 撩到了，然后就这么用了。<br>认认真真做作业，不要搞什么大新闻。就像标题说的，针对自己脑洞的产物。不过由于是自己第一次比较成型的“自己的作业自己做”，我还是好高兴的。如果有人愿意给star就更好了，还没体验过被5个star砸死是什么感觉呢~（不贪心的好孩子~）<br>嗯！该讲说明书了！大份说明书在GitHub的头页README.md，所以就不讲了！</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。&lt;br&gt;这是demo的页面：&lt;a href=&quot;https://colmugx.github.io/Syuanpi.css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Syuanpi.css&lt;/a&gt;&lt;br&gt;这是GitHub的页面：&lt;a href=&quot;https://github.com/ColMugX/Syuanpi.css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ColMugX/Syuanpi.css: ✨A library of CSS animations.&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。&lt;br&gt;这是demo的页面：&lt;a href=&quot;https://colmugx.github.io/Syuanpi.css&quot;&gt;Syuanpi.css&lt;/a&gt;&lt;br&gt;这是GitHub的页面：&lt;a href=&quot;https://github.com/ColMugX/Syuanpi.css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ColMugX/Syuanpi.css: ✨A library of CSS animations.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！&lt;/p&gt;
 &lt;h3 id=&quot;为什么要出这东西…&quot;&gt;&lt;a href=&quot;#为什么要出这东西…&quot; class=&quot;headerlink&quot; title=&quot;为什么要出这东西…&quot;&gt;&lt;/a&gt;为什么要出这东西…&lt;/h3&gt;
     
     </summary>
     
-      <category term="实践尝试" scheme="/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="小作坊" scheme="/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
+      <category term="小作坊" scheme="https://colmugx.github.io/tags/%E5%B0%8F%E4%BD%9C%E5%9D%8A/"/>
     
-      <category term="Syuanpi" scheme="/tags/Syuanpi/"/>
+      <category term="Syuanpi" scheme="https://colmugx.github.io/tags/Syuanpi/"/>
     
-      <category term="CSS" scheme="/tags/CSS/"/>
+      <category term="CSS" scheme="https://colmugx.github.io/tags/CSS/"/>
     
   </entry>
   
