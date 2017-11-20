@@ -3,6 +3,93 @@
   
     
     <entry>
+      <title><![CDATA[你还在用Console.log()？]]></title>
+      <url>/PersonalBlog/2017/11/20/js-console/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>也许主题应该改为：你只会使用Console.log()？</p>
+</blockquote>
+<p>现在的前端虽说是越来越复杂，但是我怎么觉得现在前端的要求越来越低了？应该说现在的人，看个几遍vue，知道console.log()，知道var, {}, []，就敢出来找工作了。但是<code>console</code>就这么个方法？</p>
+<p>搞笑，你在你的浏览器输入<code>console</code>，自己看看有多少东西！所以为了高效调试我觉得有必要全了解一遍。</p>
+<h2 id="log-info-error-warn"><a href="#log-info-error-warn" class="headerlink" title="log(), info(), error(), warn()"></a>log(), info(), error(), warn()</h2><p>这几个放在一起讲</p>
+<blockquote>
+<p>log() 普通输出</p>
+</blockquote>
+<p>这是最普通，最常见，最没什么东西好讲的。输出的样式是普通样式。</p>
+<blockquote>
+<p>info() 提醒输出</p>
+</blockquote>
+<p>这是一个早期chrome才能看到的效果，现在的FireFox也能看到，是一个圆形中间一个叹号的标记。作提醒作用。chrome不是不会显示，是显示成普通样式。</p>
+<blockquote>
+<p>error() 错误输出</p>
+</blockquote>
+<p>这个应该跟<code>log()</code>同个使用数量级的，表示错误，大红颜色。chrome表现是一整行都是红色的，很显眼。用来显示错误信息。比如throw 错误之类的。如果一套都是<code>log()</code>的话肯定很难一眼看到错误。珍爱视力，路还长着…</p>
+<blockquote>
+<p>warn() 警告输出</p>
+</blockquote>
+<p>就是警告咯，可能用的比较少，但是工具类和一些库肯定会容易看到，原来跟<code>info()</code>平起平坐，现在应该是替代了。显示效果会显眼的黄色，chrome会有黄色背景。</p>
+<blockquote>
+<p>debug() 调试输出</p>
+</blockquote>
+<p>这个就是<code>log()</code>，用来输出调试信息的。不过现在的调试信息都在花式<code>log()</code>，也不需要用到这个了。</p>
+<h2 id="exception-debug"><a href="#exception-debug" class="headerlink" title="_exception(), debug()"></a>_exception(), debug()</h2><p>这组只有两个，因为这两个没卵用…为什么…</p>
+<blockquote>
+<p>_exception() 例外输出</p>
+</blockquote>
+<p>说白了就是用来输出错误的，那错误不能用<code>error()</code>吗？！</p>
+<blockquote>
+<p>debug() 调试输出</p>
+</blockquote>
+<p>早期可能还有区别，但是这就是一个<code>log()</code>，不过现在各前端都在花式<code>log()</code>调试信息，可能也有些人<code>debug()</code>都没听说过。</p>
+<h2 id="assert-…-clear-count"><a href="#assert-…-clear-count" class="headerlink" title="assert(…), clear(), count()"></a>assert(…), clear(), count()</h2><p>为什么第一个函数搞了三个点？</p>
+<blockquote>
+<p>assert() 断言输出：判断第一个参数是否为真，false的话抛出异常并且在控制台输出相应信息。——MDN</p>
+</blockquote>
+<p>从这里开始就要骚了，这是一个判断的方法，里面需要填写参数，然后得到返回值。如果值为真，就什么都不会发生，反之则以<code>error()</code>通知你。这是个多参数的，除了第一个参数之外，后面接的参数是被输出的对象也好，字符串也好，并且会拼接。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.assert(<span class="number">1</span>&gt;<span class="number">2</span>, <span class="string">"你这么骚的？"</span>)</div><div class="line"></div><div class="line">Assertion failed: 你这么骚的？ <span class="comment">// 假装这里是红字红色背景</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>clear() 清空控制台</p>
+</blockquote>
+<p>就是把控制台全清空，terminal里面的<code>clear</code></p>
+<blockquote>
+<p>count() 次数输出：以参数为标识记录调用的次数，调用时在控制台打印标识以及调用次数。——MDN</p>
+</blockquote>
+<p>并且MDN明确指出，这个不应该列入正常使用范围，因为这是非标准方法。这是这组里最骚的方法。用来输出本身被调用了几次…虽然如果测试循环的话，一般都直接log(i)的，直接看1234567不是更明确嘛。显示效果就是，每运行一次就会在控制台打印 n + 1。</p>
+<h2 id="dir-dirxml"><a href="#dir-dirxml" class="headerlink" title="dir(), dirxml()"></a>dir(), dirxml()</h2><p>这两个一起说是因为，有相同点和不同点。</p>
+<blockquote>
+<p>dir() 对象结构输出</p>
+<p>dirxml() 节点结构输出</p>
+</blockquote>
+<p>这两个都是输出一个树状结构，就是前面有个小三角。但不同点就是，<code>dir()</code>是把一个对象按照对象的形式呈现，当然用来输出节点就是把节点信息按object呈现。<code>dirxml()</code>是把节点呈现出来，就还是保留xml的样式呈现。都是非标准，偶尔用用还行？</p>
+<h2 id="group-groupCollapsed-groupEnd"><a href="#group-groupCollapsed-groupEnd" class="headerlink" title="group(), groupCollapsed(), groupEnd()"></a>group(), groupCollapsed(), groupEnd()</h2><p>这是上面那组的正房版。都是打印结构。我就不一行一行解释了有点累…</p>
+<p>第二跟第一都是打印树状结构，但是第一个会自动打开显示结构里面有什么结构（没问题的），第二个叫内联树状，默认不打开。</p>
+<p>而且只要你不结束，你可以一直联下去的，这样一个父节点可以一直续下去…直到通过<code>groupend()</code>来结束。</p>
+<h2 id="table-…"><a href="#table-…" class="headerlink" title="table(…)"></a>table(…)</h2><p>我必须强调！<strong>这是最棒的我最喜欢的console方法，没有之一！</strong></p>
+<blockquote>
+<p>table() 表格输出</p>
+</blockquote>
+<p>这个方法必须传入内容，内容的类型是array或者object，输出的样式是一个key:value的表格！如果你觉得输出成对象不方便检查的话，那就用<code>table()</code>吧！（当然在表格下方还是会return一次对象或者数组）</p>
+<p>而且不仅是key:value，<strong>你甚至还能多元数组！对象套对象！甚至是JSON！</strong></p>
+<h2 id="另外的技巧就是可以用占位符了"><a href="#另外的技巧就是可以用占位符了" class="headerlink" title="另外的技巧就是可以用占位符了"></a>另外的技巧就是可以用占位符了</h2><p>跟C语言的<code>printf()</code>没有区别，就是可以利用占位符然后再把参数接在后面。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">"%d年%d月%d日"</span>,<span class="number">2017</span>,<span class="number">11</span>,<span class="number">20</span>)</div></pre></td></tr></table></figure>
+<p>最后感谢MDN，也感谢AlphaGo！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[引用等于指针吗？]]></title>
       <url>/PersonalBlog/2017/10/17/reference-equal-pointer/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -152,8 +239,6 @@
         
         
         <tags>
-            
-            <tag> 小作坊 </tag>
             
             <tag> electron </tag>
             
@@ -309,8 +394,6 @@
         <tags>
             
             <tag> JavaScript </tag>
-            
-            <tag> 实验室 </tag>
             
         </tags>
         
@@ -1046,43 +1129,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[一次知乎live感受 - 一线大厂如何面试]]></title>
-      <url>/PersonalBlog/2017/02/16/zhihu-live-yi-xian/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>怎么感觉太久没写博客，本地的程序都回档了…</p>
-</blockquote>
-<p>就在昨天参加了知乎里，offer100举办的一次live叫《一线大厂如何面试前端工程师》，我想这应该对即将参加工作的我有很大帮助。<br>确实讲到了为什么一线大厂需要一二三四面，和面试大概需要问些什么，回答些什么。听完之后自己也做了思考，觉得现在的自己还是比别人差太多了。<br>以至于现在很迷茫，不知道怎么做。<a id="more"></a></p>
-<p>印象很深的一句话就是</p>
-<blockquote>
-<p>在简历上，有实践经历你写实践经历，没有你就写案例，连案例都没有的话，你只能写写心得。</p>
-</blockquote>
-<p>所以我在想，就我github这点东西，要死不死还没star，质量也不算高都是自己为了练习写着玩的。能不能算是案例… 而心得？又要怎样写呢？<br>难道要纸上谈兵，写一下我对vue，对react的看法和用法么？我要是能给大项目指指点点的话，也不至于连依靠这两个框架写点什么都写不出来吧。</p>
-<p>每每看到喜欢的工作都会自卑，甚至别人觉得我能胜任这份工作我都不敢提交简历……</p>
-<p>到底我踏入前端到底是不是对的，现在觉得自己有点邯郸学步了。而且也已经知道，<strong>网页设计和前端工程完全是两回事！</strong></p>
-<p>选择学习前端之前学的是iOS开发，读OC读得很认真，同时也喜欢js因为js很自由。到后来接触到nodejs之后才发现，原来js可以这么玩！</p>
-<p>而且通过js可以开发类似于<code>react native</code>这样的通过js翻译器来接近原生开发手机应用，而且跨平台；也可以像<code>ionic</code>一样，通过html+css+js进行封装制作成混合应用。也许当时最吸引我的点就是“可以跨平台”这点了吧。</p>
-<p>从第一次接触计算机语言开始，就觉得指令式的语言好难，小时候参加过奥数信息学的培训用的是<code>pascal</code>，到后来<code>java</code>入门，为了学习基础的算法通过<code>C</code>语言来入门。在学习java的时候基本上都是按照教程，来一句打一句，很多都不理解，一直到继承和对象就直接懵成狗。后来渐渐有所理解还真的是C语言学习中发现的。所以那个时候我也深信C语言是语言入门最好的语言。</p>
-<p>至于自己为什么说语言学习能力挺差的，就是我自己称之为“古老而传说的邪教语言”——<code>C++</code>。这是我接触的语言中，连入门都没办法理解的语言。去年尝试学习一下hello world，依然被拒之门外，现在害怕极了，不敢再靠近…（至于新邪教语言我想不用说出来都知道我会觉得是JavaScript，准确说是<code>ECMAScript 2015</code>，太多大牛把看起来简单的语言各种按CPP的套路妖魔化了。）</p>
-<p>到最后主讲人可能也是为了给主办方拉点流量和客户吧，建议在场的人注册100offer，于是我也去100offer的网站看了一下。噢！竟然还支持Github和LinkIn登陆接入，我想这个平台真的是为工程师而生的。</p>
-<p>然而，<strong>我在注册的过程中产生的满满的挫败感……</strong></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 日常思考 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 面试 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[自己造轮子！——Syuanpi.css]]></title>
       <url>/PersonalBlog/2017/02/13/Syuanpi-css/</url>
       <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p>
@@ -1100,8 +1146,6 @@
         
         
         <tags>
-            
-            <tag> 小作坊 </tag>
             
             <tag> Syuanpi </tag>
             
@@ -1274,7 +1318,7 @@
       <title><![CDATA[一次无聊的尝试 —— hexo-theme-blank]]></title>
       <url>/PersonalBlog/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</url>
       <content type="html"><![CDATA[<blockquote>
-<p>厉害咯我的Blank</p>
+<p>一次Hexo主题的尝试</p>
 </blockquote>
 <p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
 <h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p>
@@ -1288,12 +1332,6 @@
 <h3 id="新主题有没有什么新东西"><a href="#新主题有没有什么新东西" class="headerlink" title="新主题有没有什么新东西"></a>新主题有没有什么新东西</h3><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>
 ]]></content>
       
-        
-        <tags>
-            
-            <tag> 小作坊 </tag>
-            
-        </tags>
         
     </entry>
     
