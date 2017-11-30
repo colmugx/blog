@@ -473,6 +473,16 @@ a {
     width: 100%;
   }
 }
+.container.ispost {
+  width: 70%;
+  margin: 0 208px 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .container.ispost {
+    width: 100%;
+    margin: 0;
+  }
+}
 .main {
   margin: 24px auto;
 }
@@ -1291,7 +1301,7 @@ blockquote p {
   bottom: 0;
   height: 40%;
   width: 200px;
-  margin: auto 40px auto 0;
+  margin: auto 16px auto 0;
   border: none;
   line-height: 1.5rem;
   word-wrap: break-word;
@@ -1421,8 +1431,8 @@ blockquote p {
 .highlight table {
   position: relative;
 }
-.highlight pre {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.highlight pre * {
+  font-family: 'Hiragino Sans GB' !important;
 }
 .highlight .gutter {
   width: 10px;
