@@ -1,37 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title> 也许是第一个最好理解的Vuex入门 · Co1MugX </title>
-    <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="browsermode" content="application">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Co1MugX">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="msapplication-navbutton-color" content="#666666">
-<meta name= "format-detection" content="telephone=no" />
-<meta name="keywords" content="nlvi, Nlvi" />
-
-    <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
-    <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
-
-
-    <meta name="subtitle" content="箭头跳动是提醒你这有评论框！">
-
-
-    <meta name="description" content="Co1MugX Blog">
-
-
-
-    <meta name="keywords" content="vue, vuex, Nlvi" />
-
-<link rel="stylesheet" href="/PersonalBlog/style/style.css">
-<script src="/PersonalBlog/script/jquery.min.js"></script>
+  <link rel="stylesheet" href="/PersonalBlog/style/style.css">
 <script>
-    var CONFIG = {
+    var nCONFIG = {
         title: "Co1MugX",
         author: "Co1MugX",
+        theme: "banderole",
         lightbox: true,
         animate: true
     }
@@ -39,7 +14,7 @@
 
 
 
-    <link rel="stylesheet" href="/PersonalBlog/lightbox/css/lightbox.min.css">
+    <link rel="stylesheet" href="/PersonalBlog/script/lib/lightbox/css/lightbox.min.css">
 
 
 
@@ -54,212 +29,224 @@
 
 
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-98059014-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
 
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Co1MugX">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+<meta name="keywords" content="nlvi, Nlvi" />
 
+  <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+  <meta name="subtitle" content="箭头跳动是提醒你这有评论框！">
+
+
+  <meta name="description" content="Co1MugX Blog">
+
+
+
+  <meta name="keywords" content="vue, vuex, Nlvi" />
+
+  <title> 也许是第一个最好理解的Vuex入门 · Co1MugX </title>
 </head>
 <body>
-    <div class="progress">
-    <div class="progress-inner"></div>
+  <div class="progress">
+  <div class="progress-inner"></div>
 </div>
-    <div class="body">
-    <div class="tagcloud-mask"></div>  
+  <div class="tagcloud-mask"></div>  
 <div class="tagcloud" id="tagcloud">
-    <div class="tagcloud-inner">
-        <a href="/PersonalBlog/tags/Bandix/" style="font-size: 14px;">Bandix</a> <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
-    </div>
+  <div class="tagcloud-inner">
+    <a href="/PersonalBlog/tags/Bandix/" style="font-size: 14px;">Bandix</a> <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
 </div>
-    <header class="header" id="header">
-    <div class="title syuanpi tvIn">
-    <div class="table">
-        <div class="connect">
-            <div class="connect-inner">
-                <span><a href="/">Co1MugX</a></span>
-                
-                    <span id="subtitle">箭头跳动是提醒你这有评论框！</span>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    <nav class="main-nav syuanpi tvIn">
-<div class="table">
+  <div class="container">
 
-    <ul class="menu">
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn">
+    <span><a href="/">Co1MugX</a></span>
+    
+      <span id="subtitle">箭头跳动是提醒你这有评论框！</span>
+    
+  </div>
+</div>
+    <nav class="main-nav">
         
-        <li class="menu-item">
-            <a href="javascript:;" id="search">
-                <span>搜索</span>
-                
-                    <span class="menu-item-label">search</span>
-                
-            </a>
-        </li>
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/PersonalBlog/" id="article">
+        <span class="base-name">文章</span>
         
+          <span class="menu-item-label">article</span>
         
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/PersonalBlog/archives" id="archives">
+        <span class="base-name">归档</span>
         
-            <li class="menu-item">
+          <span class="menu-item-label">archives</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">标签</span>
+        
+          <span class="menu-item-label">tags</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/PersonalBlog/about" id="about">
+        <span class="base-name">关于</span>
+        
+          <span class="menu-item-label">about</span>
+        
+      </a>
+    </li>  
+  
+  </ul>
+  
+</nav>
+  </div>
+</header>
+<div class="mobile-header">
+  <div class="mobile-header-body">
+    <div class="mobile-header-list">
+      
+        
+            <div class="mobile-nav-item">
                 <a href="/PersonalBlog/">
                     <span>文章</span>
                     
                         <span class="menu-item-label">article</span>
                     
                 </a>
-            </li>
+            </div>
         
+      
         
-        
-            <li class="menu-item">
+            <div class="mobile-nav-item">
                 <a href="/PersonalBlog/archives">
                     <span>归档</span>
                     
                         <span class="menu-item-label">archives</span>
                     
                 </a>
-            </li>
+            </div>
         
+      
         
+          <div class="mobile-nav-item inner-cloud">
+            <div class="mobile-nav-tag">
+              <a href="javascript:;" id="mobile-tags">
+                <span>标签</span>
+                
+                    <span class="menu-item-label">tags</span>
+                
+              </a>
+            </div>
+            <div class="mobile-nav-tagcloud">
+              <div class="mobile-tagcloud-inner">
+                <a href="/PersonalBlog/tags/Bandix/" style="font-size: 14px;">Bandix</a> <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
+              </div>
+            </div>
+          </div>
         
-            <li class="menu-item">
-                <a href="javascript:;" id="tags">
-                    <span>标签</span>
-                    
-                        <span class="menu-item-label">tags</span>
-                    
-                </a>
-            </li>
+      
         
-        
-        
-            <li class="menu-item">
+            <div class="mobile-nav-item">
                 <a href="/PersonalBlog/about">
                     <span>关于</span>
                     
                         <span class="menu-item-label">about</span>
                     
                 </a>
-            </li>
-        
-        
-    </ul>
-
-</div>
-</nav>
-</header>
-<div class="mobile-header">
-    <div class="mobile-header-body">
-        <div class="mobile-header-list">
-            
-            
-                <div class="mobile-nav-item">
-                    <a href="/PersonalBlog/">
-                        <span>文章</span>
-                        
-                            <span class="menu-item-label">article</span>
-                        
-                    </a>
-                </div>
-            
-            
-            
-                <div class="mobile-nav-item">
-                    <a href="/PersonalBlog/archives">
-                        <span>归档</span>
-                        
-                            <span class="menu-item-label">archives</span>
-                        
-                    </a>
-                </div>
-            
-            
-            
-                <div class="mobile-nav-item inner-cloud">
-                    <div class="mobile-nav-tag">
-                        <a href="javascript:;" id="mobile-tags">
-                            <span>标签</span>
-                            
-                                <span class="menu-item-label">tags</span>
-                            
-                        </a>
-                    </div>
-                    <div class="mobile-nav-tagcloud">
-                        <div class="mobile-tagcloud-inner">
-                            <a href="/PersonalBlog/tags/Bandix/" style="font-size: 14px;">Bandix</a> <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
-                        </div>
-                    </div>
-                </div>
-            
-            
-            
-                <div class="mobile-nav-item">
-                    <a href="/PersonalBlog/about">
-                        <span>关于</span>
-                        
-                            <span class="menu-item-label">about</span>
-                        
-                    </a>
-                </div>
-            
-            
-        </div>
-    </div>
-    <div class="mobile-header-nav">
-        <div class="mobile-header-item" id="mobile-left">
-            <div class="header-menu-item">
-                <span class="header-menu-line"></span>
             </div>
-        </div>
-        <h1 class="mobile-header-title">
-            <a href="/">Co1MugX</a>
-        </h1>
-        <div class="mobile-header-item"></div>
+        
+      
     </div>
+  </div>
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <span class="header-menu-line"></span>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Co1MugX</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
 </div>
-
-    <div class="container  ispost  ">
-        <main class="main" id="main">
-            
+    <div class="container-inner">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
     
-    <article class="post">
-        <header class="post-header">
-            <div class="post-time syuanpi riseIn-light back-1">
-                <span>2017年4月14日</span>
-                
-                
-                    <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
-                
-                
-            </div>
-            <h1 class="post-title syuanpi riseIn-light back-2">
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2017-04-14</span>
+          
             
-                也许是第一个最好理解的Vuex入门
+              <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
             
-            </h1>
+          
+          
             
-                
-                    <div class="post-tags syuanpi riseIn-light back-3">
-                    
-                        <a href="/PersonalBlog/tags/vue/">vue</a>
-                    
-                        <a href="/PersonalBlog/tags/vuex/">vuex</a>
-                    
-                    </div>
-                
+              <div class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/PersonalBlog/tags/vue/">vue</a>
+              
+                <a href="/PersonalBlog/tags/vuex/">vuex</a>
+              
+              </div>
             
-        </header>
-        <div class="post-content syuanpi riseIn-light back-3">
-            
-                <p>刚用vue不久，应该说还有大量的API还没用过还没熟悉过的时候，突然接受一个新内容，而且还是个很抽象的东西，说实话刚接触的时候完全不知道这东西有什么用…只听说过它能状态管理啊，什么全局控制啊。好牛逼啊666啊。</p>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          也许是第一个最好理解的Vuex入门
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+      
+        <p>刚用vue不久，应该说还有大量的API还没用过还没熟悉过的时候，突然接受一个新内容，而且还是个很抽象的东西，说实话刚接触的时候完全不知道这东西有什么用…只听说过它能状态管理啊，什么全局控制啊。好牛逼啊666啊。</p>
 <p><strong>哦，然后呢？</strong></p>
 <p>后来稍微理解之后，决定写出来。浅入浅出的理解一下vuex。<a id="more"></a></p>
 <h2 id="what-s-vuex"><a href="#what-s-vuex" class="headerlink" title="what s vuex"></a>what s vuex</h2><p>官方文档：<a href="https://vuex.vuejs.org/zh-cn/" target="_blank" rel="external">Introduction · GitBook</a>，vue的内容都挺良心的，都是看似官方的中文文档…</p>
@@ -342,60 +329,59 @@
 <p><a href="https://vuex.vuejs.org/zh-cn/actions.html" target="_blank" rel="external">Actions · GitBook</a></p>
 <p>结束！</p>
 
-            
-        
-        </div>
-        
-            
-            
-    <hr class="copy-line">
-    <div class="post-copyright">
-        <div class="copy-author">
-            <span>作者 :</span>
-            <span>Co1MugX</span>
-        </div>
-        <div class="copy-url">
-            <span>地址 :</span>
-            <a href="https://colmugx.github.io/PersonalBlog/2017/04/14/easyknow-vuex/">https://colmugx.github.io/PersonalBlog/2017/04/14/easyknow-vuex/</a>
-        </div>
-        <div class="copy-origin">
-            <span>来源 :</span>
-            <a href="https://colmugx.github.io/PersonalBlog">https://colmugx.github.io/PersonalBlog</a>
-        </div>
-        <div class="copy-license">
-            
-            著作权归作者所有，转载请联系作者获得授权。
-        </div>
-    </div>
-
-        
-    </article>
+      
     
-        
-    <nav class="article-page">
-        
-            <a href="/PersonalBlog/2017/06/13/Bandix0/" id="art-left" class="art-right">
-                <span class="next-title">
-                    从0到1的Bandix（零） - 想法记录<i class="iconfont icon-right"></i> 
-                </span>
-            </a>
-        
-        
-            <a href="/PersonalBlog/2017/04/07/axios-tutorial/" id="art-right" class="art-left">
-                <span class="prev-title"> 
-                    <i class="iconfont icon-left"></i>Vue2.0的网络请求 - Axios
-                </span>
-            </a>
-        
-    </nav>
+    </div>
+    
+      
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>Co1MugX</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/PersonalBlog/2017/04/14/easyknow-vuex/">https://colmugx.github.io/PersonalBlog/2017/04/14/easyknow-vuex/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/PersonalBlog">https://colmugx.github.io/PersonalBlog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
 
-        
-    <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
-    <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
-        
-        
-        
-        
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+      <a href="/PersonalBlog/2017/06/13/Bandix0/" id="art-left" class="art-left">
+        <span class="next-title">
+          <i class="iconfont icon-left"></i>从0到1的Bandix（零） - 想法记录
+        </span>
+      </a>
+    
+    
+      <a href="/PersonalBlog/2017/04/07/axios-tutorial/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          Vue2.0的网络请求 - Axios<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
+  </nav>
+
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
 <!-- Disqus Comments -->
 <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
@@ -413,17 +399,28 @@
 </script>
 
 
-    </div>
+  </div>
 
     
+  <div class="post-toc">
+    <span class="title">文章目录</span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">也许是第一个最好理解的Vuex入门</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#what-s-vuex"><span class="toc-text">what s vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#State"><span class="toc-text">State</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutations"><span class="toc-text">Mutations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mutations-payload"><span class="toc-text">mutations payload</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tips"><span class="toc-text">Tips</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-mutations-amp-actions"><span class="toc-text">1. mutations & actions</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+  
 
 
-        </main>
-        <footer class="footer syuanpi fadeIn" id="footer">
-    <hr>
-    <div class="footer-wrapper">
-        <div class="left">
-            <div class="contact-icon">
+        </div>
+      </main>
+
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
     
     
     
@@ -453,9 +450,9 @@
         
     
 </div>
-        </div>
-        <div class="right">
-            <div class="copyright">
+    </div>
+    <div class="right">
+      <div class="copyright">
     <div class="info">
         <span>&copy;</span>
         <span>2016 ~ 2017</span>
@@ -474,73 +471,28 @@
     </div>
     
 </div>
-        </div>
     </div>
+  </div>
 </footer>
     </div>
-    <script src="/PersonalBlog/script/nlvi.js"></script>
-<script src="/PersonalBlog/script/search.js"></script>
+  </div>
+  <!-- <script src="/PersonalBlog/script/search.js"></script> -->
+<script src="/PersonalBlog/script/lib/jquery/jquery-3.2.1.min.js"></script>
 
-    <script src="/PersonalBlog/lightbox/js/lightbox.min.js"></script>
 
-<script>
-$(document).ready(function(){
-    document.body.addEventListener('touchstart', function () {});
-    $('.progress').hide();
-    $('.body').show();
-    Nlvi.tagcloud();
-    Nlvi.mobileHeader();
-    Nlvi.back2top();
-    Nlvi.smoothScroll();
-    Nlvi.onView();
-    Nlvi.showToc();
-    Nlvi.showComments();
-    Nlvi.showReward();
-    Nlvi.picPos();
+    <script src="/PersonalBlog/script/lib/lightbox/js/lightbox.min.js"></script>
 
-    !CONFIG.animate && Nlvi.offAnimate();
-    CONFIG.lightbox && Nlvi.onPicBox();
-})
-</script>
-    </div>
-    
-        
-    <div class="post-toc">
-        <span class="title">文章目录</span>
-        <div class="toc-inner syuanpi back-1 fallIn-light">
-            <li class="title-link"><a href="javascript:;" class="toTop">也许是第一个最好理解的Vuex入门</a></li>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#what-s-vuex"><span class="toc-text">what s vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#State"><span class="toc-text">State</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutations"><span class="toc-text">Mutations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mutations-payload"><span class="toc-text">mutations payload</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tips"><span class="toc-text">Tips</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-mutations-amp-actions"><span class="toc-text">1. mutations & actions</span></a></li></ol></li></ol>
-        </div>
-    </div>
 
-    
-    <div class="backtop syuanpi dead toTop" id="backtop">
+<script src="/PersonalBlog/script/src/base.js"></script>
+<script src="/PersonalBlog/script/src/utils.js"></script>
+<script src="/PersonalBlog/script/src/plugins.js"></script>
+<script src="/PersonalBlog/script/bootstarp.js"></script>
+
+
+<div class="backtop syuanpi dead toTop" id="backtop">
     <i class="iconfont icon-up"></i>
     <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
-    
-    <div class="search" id="search">
-        <div class="mask" id="mask"></div>
-        <div class="search-wrapper syuanpi">
-            <h1 id="search-header" class="syuanpi">搜索一下？</h1>
-            <div class="input">
-                <input type="text" id="local-search-input" results="0" name="">
-            </div>
-            <div id="local-search-result"></div>
-        </div>
-    </div>
-    <script>
-    var GREETING = {
-        morning: "我的博客里可没有早饭！",
-        noon: "记得午休吃饭，不着急看我的博客~",
-        after: "下午好，感谢查阅我的博客",
-        night: "您来我的博客看笑话当做休息嘛",
-        midnight: "我觉得大半夜就不要看啦"
-    }
-    $(document).ready(function(){
-        Nlvi.search();
-    });
-    </script>
 
 </body>
 </html>
