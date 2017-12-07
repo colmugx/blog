@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="stylesheet" href="/PersonalBlog/style/style.css">
+<script>
+    var nCONFIG = {
+        title: "Co1MugX",
+        author: "Co1MugX",
+        theme: "banderole",
+        lightbox: true,
+        animate: true
+    }
+</script>
+
+
+
+    <link rel="stylesheet" href="/PersonalBlog/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/PersonalBlog/syuanpi/syuanpi.min.css">
+
+
+
+
+    <link rel="icon" href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+
+
+
+
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Co1MugX">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+<meta name="keywords" content="nlvi, Nlvi" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+  <meta name="subtitle" content="箭头跳动是提醒你这有评论框！">
+
+
+  <meta name="description" content="Co1MugX Blog">
+
+
+
+  <meta name="keywords" content="JavaScript, Nlvi" />
+
+  <title> 扯扯柯里化 · Co1MugX </title>
+</head>
+<body>
+  <div class="progress">
+  <div class="progress-inner"></div>
+</div>
+  <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/PersonalBlog/tags/Bandix/" style="font-size: 14px;">Bandix</a> <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+  <div class="container">
+
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn">
+    <span><a href="/">Co1MugX</a></span>
+    
+      <span id="subtitle">箭头跳动是提醒你这有评论框！</span>
+    
+  </div>
+</div>
+    <nav class="main-nav">
+        
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/PersonalBlog/PersonalBlog" id="article">
+        <span class="base-name">文章</span>
+        
+          <span class="menu-item-label">article</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/PersonalBlog/archives" id="archives">
+        <span class="base-name">归档</span>
+        
+          <span class="menu-item-label">archives</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">标签</span>
+        
+          <span class="menu-item-label">tags</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/PersonalBlog/about" id="about">
+        <span class="base-name">关于</span>
+        
+          <span class="menu-item-label">about</span>
+        
+      </a>
+    </li>  
+  
+  </ul>
+  
+</nav>
+  </div>
+</header>
+<div class="mobile-header">
+  <div class="mobile-header-body">
+    <div class="mobile-header-list">
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/PersonalBlog/PersonalBlog">
+                    <span>文章</span>
+                    
+                        <span class="menu-item-label">article</span>
+                    
+                </a>
+            </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/PersonalBlog/archives">
+                    <span>归档</span>
+                    
+                        <span class="menu-item-label">archives</span>
+                    
+                </a>
+            </div>
+        
+      
+        
+          <div class="mobile-nav-item inner-cloud">
+            <div class="mobile-nav-tag">
+              <a href="javascript:;" id="mobile-tags">
+                <span>标签</span>
+                
+                    <span class="menu-item-label">tags</span>
+                
+              </a>
+            </div>
+            <div class="mobile-nav-tagcloud">
+              <div class="mobile-tagcloud-inner">
+                <a href="/PersonalBlog/tags/Bandix/" style="font-size: 14px;">Bandix</a> <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
+              </div>
+            </div>
+          </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/PersonalBlog/about">
+                    <span>关于</span>
+                    
+                        <span class="menu-item-label">about</span>
+                    
+                </a>
+            </div>
+        
+      
+    </div>
+  </div>
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <span class="header-menu-line"></span>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Co1MugX</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+</div>
+    <div class="container-inner">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2017-12-07</span>
+          
+          
+            
+              <div class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/PersonalBlog/tags/JavaScript/">JavaScript</a>
+              
+              </div>
+            
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          扯扯柯里化
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+      
+        <blockquote>
+<p>在我的博客打开开发者工具 -&gt; console，输入 Nlvi.tools.scroll 试试？</p>
+</blockquote>
+<p>开个玩笑，我自己也不知道这算不算柯里化（逃</p>
+<p>总之为什么这么写，我自己觉得这样容易理解，方便盲僧（理清）。</p>
+<p>还有最近关于“如何治理别人爱装逼的毛病”系列中刚写的一坨，新鲜的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> menuItem = <span class="function">(<span class="params">list</span>) =&gt;</span> </div><div class="line">      list.map(<span class="function">(<span class="params">&#123;title, color, icon, descs&#125;</span>) =&gt;</span> </div><div class="line">        &lt;menu-item title=&#123;title&#125; color=&#123;color&#125; icon=&#123;icon&#125;&gt;&#123;</div><div class="line">          descs.map(<span class="function"><span class="params">v</span> =&gt;</span> &lt;span&gt;&#123;v&#125;&lt;<span class="regexp">/span&gt;)&#125;&lt;/m</span>enu-item&gt;)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="柯里化是什么？"><a href="#柯里化是什么？" class="headerlink" title="柯里化是什么？"></a>柯里化是什么？</h2><p>好了讲柯里化，就是<strong>接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。柯里化属于函数式编程的内容</strong>。</p>
+<p>在这里有一个<a href="http://www.zhangxinxu.com/wordpress/2013/02/js-currying/" target="_blank" rel="external">张鑫旭博客</a>讲关于柯里化（柯南嗑药）的例子，很方便理解。当然我想讲点自己的东西，拿<code>Nlvi.tools.scroll</code>说一下吧</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span> (<span class="params">win</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">      fn &amp;&amp; fn(sct);</div><div class="line">    &#125;);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 实际上如果不作的话，这样就结束了</span></div><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">    fn&amp;&amp;fn(sct)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>所以函数柯里化看上去有一个特点，会嵌套函数。而且道理就跟柯里化的解释一样：用一些参数，剩下的函数作为返回值里的函数的参数。这样我在调用的时候怎么调用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</div><div class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure>
+<p>首先我给个变量（实际上ES6直接用<code>const</code>，毕竟固定量）引用这个方法，方法传入第一个参数。接着里面的函数返回值函数是接收一个函数变量。</p>
+<p>理一下，函数 - 的返回值 - 是个函数，这个函数接收一个 - 函数 - 的 - 变量。</p>
+<p>然后这个函数参数传进去之后，实际上就是传一个方法进去以便于我等下里面的逻辑走完之后可以把这个函数参数运行起来，行程一个特别做作的回调函数。（当然回调函数带的是当前滚动条的数据）</p>
+<p>为什么这么做呢？一点就是我觉得这样思路就清晰多了，而且在调用区域写起来干净。第二点就是参数复用。</p>
+<p>虽然这个例子看不出什么，但是难免会遇到一些情况，就是明明一个变量或者一个参数，我只要取一次然后调用一次之后，剩下的内容我只要在这个情况之上去处理就行。但是如果传统单函数的做法的话，就会使得这个局外参数也跟着在里面做一些乱七八糟的运动，比如跟着去递归，被扯着去多次判断，这样就会莫名其妙浪费了一堆性能。很简单我举个例子：4x100，明明你交接之后剩下的就接下来的人跑就行了，你非得交接之后跟着跑，边跑边喊加油？</p>
+<p>第三点就是延时</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> total = <span class="number">0</span></div><div class="line"><span class="comment">// normal</span></div><div class="line"><span class="keyword">var</span> nSum = <span class="function">(<span class="params">num</span>) =&gt;</span> &#123;</div><div class="line">  total += num</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//currying</span></div><div class="line"><span class="keyword">var</span> cSum = <span class="function">(<span class="params">fn</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">var</span> nums = []</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="built_in">arguments</span>.length) &#123;</div><div class="line">      <span class="keyword">return</span> fn.apply(<span class="literal">null</span>, nums)</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">Array</span>.prototype.push.apply(nums, <span class="built_in">arguments</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> sum = cSum(<span class="function">(<span class="params">x</span>) =&gt;</span> total += x)</div></pre></td></tr></table></figure>
+<p>如果是常规的话，那么肯定会立刻计算出结果，而柯里化之后，会把计算的步骤储存起来，然后一起计算。</p>
+<h2 id="柯里化误区"><a href="#柯里化误区" class="headerlink" title="柯里化误区"></a>柯里化误区</h2><p>在写这篇东西的时候，我关注到了一尊大神的博客 <a href="http://www.cnblogs.com/pengchen/p/5434705.html" target="_blank" rel="external">JavaScript函数柯里化的一些思考</a>，吓得我赶紧回看了自己的函数有没有“画蛇添足”的成分。嗯。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 拿下来继续学习一下</span></div><div class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</div><div class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure>
+<p>这里我想到的是，我只需要把<code>window</code>传到这个函数之后引用出一个新函数，然后我就可以带着这个函数跑了，如果是不嫌麻烦版本的话我需要则么做？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">    fn&amp;&amp;fn(sct)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">// and so</span></div><div class="line">tools.scroll(<span class="built_in">window</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;)</div></pre></td></tr></table></figure>
+<p>这样就会造成，我每次想监听滚动的时候，每用一次这个方法，我就要把<code>window</code>传进去一次。如果包一下的话，我就可以拿后面那个函数走就行了，也就是我的<code>window</code>只要传一次就畅通无阻。好比我玩Switch，我在外面突然想玩马车的时候，如果我的卡带在卡包里，那我换上就可以玩了，就不需要等回到家把卡带从包装盒里拿出来装到机器上。</p>
+<p>实际上到这里的话应该有所经验了，到这里还会不会觉得<code>apply(), call(), bind()</code>使用机会少之又少？这就是数学的魅力吧，可是我数学不好。</p>
+<h2 id="柯里化-lt-gt-闭包函数？"><a href="#柯里化-lt-gt-闭包函数？" class="headerlink" title="柯里化 &lt; - &gt; 闭包函数？"></a>柯里化 &lt; - &gt; 闭包函数？</h2><p>又是每期一问了，柯里化跟闭包函数是否也有关系？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 经典面试题</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</div><div class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">             setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">              <span class="built_in">console</span>.log(i);</div><div class="line">        &#125;,<span class="number">0</span>)</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>那么，柯里化函数和闭包函数应该怎么区分？还是的确有联系？</p>
+<p>最后感谢所有被引用的文章及其作者，感谢帮助学习。</p>
+
+      
+    
+    </div>
+    
+      
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>Co1MugX</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/PersonalBlog/2017/12/07/about-currying/">https://colmugx.github.io/PersonalBlog/2017/12/07/about-currying/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/PersonalBlog">https://colmugx.github.io/PersonalBlog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+    
+      <a href="/PersonalBlog/2017/11/20/js-console/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          你还在用Console.log()？<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
+  </nav>
+
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </div>
+
+    
+  <div class="post-toc">
+    <span class="title">文章目录</span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">扯扯柯里化</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#柯里化是什么？"><span class="toc-text">柯里化是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#柯里化误区"><span class="toc-text">柯里化误区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#柯里化-lt-gt-闭包函数？"><span class="toc-text">柯里化 < - > 闭包函数？</span></a></li></ol>
+    </div>
+  </div>
+
+  
+
+
+        </div>
+      </main>
+
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+            <a href="https://www.zhihu.com/people/colmugx" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+        
+        
+        
+    
+        
+            <a href="https://github.com/ColMugX" class="iconfont icon-github" title="github"></a>
+        
+        
+        
+        
+        
+        
+        
+    
+</div>
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2016 ~ 2017</span>
+        <span>❤</span>
+        <span>Co1MugX</span>
+    </div>
+    <div class="theme">
+        <span>
+            动力来源于
+            <a href="http://hexo.io/" target="_blank">Hexo </a>
+        </span>
+        <span>
+            主题
+            <a href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    
+</div>
+    </div>
+  </div>
+</footer>
+    </div>
+  </div>
+  <!-- <script src="/PersonalBlog/script/search.js"></script> -->
+<script src="/PersonalBlog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+    <script src="/PersonalBlog/script/lib/lightbox/js/lightbox.min.js"></script>
+
+
+<script src="/PersonalBlog/script/src/base.js"></script>
+<script src="/PersonalBlog/script/src/utils.js"></script>
+<script src="/PersonalBlog/script/src/plugins.js"></script>
+<script src="/PersonalBlog/script/bootstarp.js"></script>
+
+
+<div class="backtop syuanpi dead toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+</body>
+</html>
