@@ -3,13 +3,15 @@
 <head>
   <link rel="stylesheet" href="/PersonalBlog/style/style.css">
 <script>
-    var nCONFIG = {
-        title: "Co1MugX",
-        author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true
-    }
+  var nCONFIG = {
+    title: "Co1MugX",
+    author: "Co1MugX",
+    theme: "banderole",
+    lightbox: true,
+    animate: true,
+    baseUrl: /PersonalBlog/,
+    search: true
+  }
 </script>
 
 
@@ -77,7 +79,7 @@
   <div class="header-wrapper">
     <div class="logo">
   <div class="logo-inner syuanpi tvIn">
-    <span><a href="/">Co1MugX</a></span>
+    <span><a href="/PersonalBlog/">Co1MugX</a></span>
     
       <span id="subtitle">箭头跳动是提醒你这有评论框！</span>
     
@@ -86,6 +88,16 @@
     <nav class="main-nav">
         
   <ul class="main-nav-list syuanpi tvIn">
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="search">
+        <span>搜索</span>
+        
+          <span class="menu-item-label">search</span>
+        
+      </a>
+    </li>
+  
   
     
       
@@ -634,14 +646,13 @@
 </footer>
     </div>
   </div>
-  <!-- <script src="/PersonalBlog/script/search.js"></script> -->
-<script src="/PersonalBlog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/PersonalBlog/script/lib/jquery/jquery-3.2.1.min.js"></script>
 
 
     <script src="/PersonalBlog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
-<script src="/PersonalBlog/script/src/base.js"></script>
+<script src="/PersonalBlog/script/src/nlvi.js"></script>
 <script src="/PersonalBlog/script/src/utils.js"></script>
 <script src="/PersonalBlog/script/src/plugins.js"></script>
 <script src="/PersonalBlog/script/bootstarp.js"></script>
@@ -651,6 +662,26 @@
     <i class="iconfont icon-up"></i>
     <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
+
+  <div class="search" id="search">
+    <div class="mask" id="mask"></div>
+    <div class="search-wrapper syuanpi">
+      <h1 id="search-header" class="syuanpi">搜索一下？</h1>
+      <div class="input">
+        <input type="text" id="local-search-input" results="0" name="">
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+  <script>
+  var GREETING = {
+    morning: "我的博客里可没有早饭！",
+    noon: "记得午休吃饭，不着急看我的博客~",
+    after: "下午好，感谢查阅我的博客",
+    night: "您来我的博客看笑话当做休息嘛",
+    midnight: "我觉得大半夜就不要看啦"
+  }
+  </script>
 
 </body>
 </html>
