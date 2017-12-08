@@ -220,6 +220,10 @@
         <div class="post-time-wrapper">
           <span>2017-12-07</span>
           
+            
+              <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
+            
+          
           
             
               <div class="post-tags syuanpi riseIn-light back-3">
@@ -265,7 +269,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 拿下来继续学习一下</span></div><div class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</div><div class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure>
 <p>这里我想到的是，我只需要把<code>window</code>传到这个函数之后引用出一个新函数，然后我就可以带着这个函数跑了，如果是不嫌麻烦版本的话我需要则么做？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">    fn&amp;&amp;fn(sct)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">// and so</span></div><div class="line">tools.scroll(<span class="built_in">window</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;)</div></pre></td></tr></table></figure>
-<p>这样就会造成，我每次想监听滚动的时候，每用一次这个方法，我就要把<code>window</code>传进去一次。如果包一下的话，我就可以拿后面那个函数走就行了，也就是我的<code>window</code>只要传一次就畅通无阻。好比我玩Switch，我在外面突然想玩马车的时候，如果我的卡带在卡包里，那我换上就可以玩了，就不需要等回到家把卡带从包装盒里拿出来装到机器上。</p>
+<p>这样就会造成，我每次想监听滚动的时候，每用一次这个方法，我就要把<code>window</code>传进去一次。如果包一下的话，我就可以拿后面那个函数走就行了，也就是我的<code>window</code>只要传一次就畅通无阻。这也是另一个好处：分段计算。好比我玩Switch，我在外面突然想玩马车的时候，如果我的卡带在卡包里，那我换上就可以玩了，就不需要等回到家把卡带从包装盒里拿出来装到机器上。</p>
 <p>实际上到这里的话应该有所经验了，到这里还会不会觉得<code>apply(), call(), bind()</code>使用机会少之又少？这就是数学的魅力吧，可是我数学不好。</p>
 <h2 id="柯里化-lt-gt-闭包函数？"><a href="#柯里化-lt-gt-闭包函数？" class="headerlink" title="柯里化 &lt; - &gt; 闭包函数？"></a>柯里化 &lt; - &gt; 闭包函数？</h2><p>又是每期一问了，柯里化跟闭包函数是否也有关系？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 经典面试题</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</div><div class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">             setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">              <span class="built_in">console</span>.log(i);</div><div class="line">        &#125;,<span class="number">0</span>)</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>

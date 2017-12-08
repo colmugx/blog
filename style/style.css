@@ -692,7 +692,7 @@ h6 {
   padding: 16px;
   display: flex;
   align-items: center;
-  background-color: rgba(57,197,187,0.1);
+  border-top: 2px solid #39c5bb;
 }
 @media screen and (max-width: 650px) {
   .header {
