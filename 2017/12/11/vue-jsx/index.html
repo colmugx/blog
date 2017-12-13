@@ -272,6 +272,7 @@
 <p>我说我是做外包的肯定没人信，给你看看外包程序员瞎几把搞的热情！</p>
 </blockquote>
 <p>前排提醒：vue-jsx和react-jsx相差甚远，前者基本就是玩具生产链。很多想利用JS语言特性的骚套路基本上都不好实现，而且感觉奇奇怪怪的。所以你的生产环境，千万不要乱试vue-jsx这种搭配，够简单就无所谓了…</p>
+<a id="more"></a>
 <h2 id="开局搭环境"><a href="#开局搭环境" class="headerlink" title="开局搭环境"></a>开局搭环境</h2><p>要什么环境，<code>vue-cli</code>就行了，又不是什么大项目大团队需要约定<code>webpack</code>。</p>
 <h2 id="装插件"><a href="#装插件" class="headerlink" title="装插件"></a>装插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm install\</div><div class="line">  babel-plugin-syntax-jsx\</div><div class="line">  babel-plugin-transform-vue-jsx\</div><div class="line">  babel-helper-vue-jsx-merge-props\</div><div class="line">  babel-preset-env\</div><div class="line">  --save-dev</div></pre></td></tr></table></figure>
 <p><code>.babelrc</code>主要是这个</p>
