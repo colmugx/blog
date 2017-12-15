@@ -23,7 +23,7 @@
 </ol>
 <p>其实关于vue与jsx，tsx我是做了很多次尝试</p>
 <p>首先第一种，常规的就是一个<code>object</code>对象，然后通过<code>Vue.component()</code>方法构建。这种可以说是我现在看来最没坑的一种形式了。平常的话还是像<code>*.vue</code>里的<code>script</code>标签一样，直接<code>export</code>打头开写，<code>&lt;template /&gt;</code>渲染部分移入了<code>render()</code>函数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  render(<span class="comment">/* h / createElement */</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span> Hello World <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  render(<span class="comment">/* h / createElement */</span>) &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt; Hello World &lt;/h1&gt;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这种情况的结构与单文件的代码结构是相差无几的，不过换了种渲染方式而已，而且<code>render()</code>函数可以做一些与渲染相关的子方法，比如条件渲染之类的。所以总的来说：</p>
 <p>优点：</p>
 <ol>
@@ -40,10 +40,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">    &lt;h1&gt;Hello World&lt;/h1&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  @Component</div><div class="line">  export default class MainClass extends Vue &#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>乍一看你还以为这是<code>Angular</code>呢！Vue在这方面真的是取长补短的典范。对这种的话，就比传统的方式要好多了，首先全局变量或者<code>data()</code>函数返回值变得特别清晰；再者是原来<code>methods</code>存放的函数可以以<code>class</code>形式的函数来写，那<code>computeds</code>怎么办？直接用<code>get/set</code>关键词，太方便了有没有！</p>
 <p>好了关键的来了…</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Component</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MainClass</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</div><div class="line">  </div><div class="line">  get render() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span> Hello World <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// render or template not defind.</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Component</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MainClass</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</div><div class="line">  </div><div class="line">  get render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt; Hello World &lt;/h1&gt;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// render or template not defind.</span></div></pre></td></tr></table></figure>
 <p>这是什么鬼，可能是我操作不当，但是不加<code>get</code>的话不会注入createElement，但是这又是个<code>render()</code>函数，本来不需要加什么前缀的。但是不加有感觉会不会把<code>render()</code>函数识别成是传统写法中存在于<code>methods</code>的函数。</p>
 <p>官方在自动注入这方面有一个栗子的</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="string">'jsx-example'</span>, &#123;</div><div class="line">  render () &#123; <span class="comment">// h will be injected</span></div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"foo"</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">  &#125;,</div><div class="line">  myMethod: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">// h will not be injected</span></div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"foo"</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">  &#125;,</div><div class="line">  someOtherMethod: <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// h will not be injected</span></div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"foo"</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">@Component</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</div><div class="line">  get computed () &#123; <span class="comment">// h will be injected</span></div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"foo"</span>&gt;</span>bar<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="string">'jsx-example'</span>, &#123;</div><div class="line">  render () &#123; <span class="comment">// h will be injected</span></div><div class="line">    <span class="keyword">return</span> &lt;div id="foo"&gt;bar&lt;/div&gt;</div><div class="line">  &#125;,</div><div class="line">  myMethod: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">// h will not be injected</span></div><div class="line">    <span class="keyword">return</span> &lt;div id="foo"&gt;bar&lt;/div&gt;</div><div class="line">  &#125;,</div><div class="line">  someOtherMethod: <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// h will not be injected</span></div><div class="line">    <span class="keyword">return</span> &lt;div id="foo"&gt;bar&lt;/div&gt;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">@Component</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</div><div class="line">  get computed () &#123; <span class="comment">// h will be injected</span></div><div class="line">    <span class="keyword">return</span> &lt;div id="foo"&gt;bar&lt;/div&gt;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>其中<code>h</code>就是<code>createElement</code>的别称，而且在jsx的话一般都是不用写的。所以这个函数注入的就有点迷了，不过根据亲测，在<code>methods</code>定义的函数是有<code>h</code>的，可能最后也会在<code>render</code>函数里调用吧。</p>
 <p>后来我尝试两三个星期之后，我就放弃了classes形式的jsx写法，等过几天又有经历的时候再继续尝试。目前自己在用的两套写法：例如<code>Hyper</code>那种的classes形式的vue+ts，传统方式的jsx。</p>
 <p>还有就是，对于vue来说，有时候要时常关心<code>h</code>函数有没有被注入，这是一件挺不愉快的事情的。比如说你写了一个渲染函数，然后运行的时候发现惨了凉了函数刚好在渲染范围之外（比如把函数直接分离出去，并不存在于<code>render</code>函数中），这是不运行的，那怎么做？</p>
@@ -80,9 +80,9 @@
         
         <tags>
             
-            <tag> vue </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> vue </tag>
             
         </tags>
         
@@ -312,9 +312,9 @@
         
         <tags>
             
-            <tag> vue </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> vue </tag>
             
         </tags>
         
@@ -624,250 +624,6 @@
         <tags>
             
             <tag> JavaScript </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[从0到1的Bandix（四）- 组件通讯]]></title>
-      <url>/PersonalBlog/2017/08/09/Bandix4/</url>
-      <content type="html"><![CDATA[<p>组件化了，证明把一个页面若干项目都视为一个组件，然后像搭积木一样重新组合。组件化的目的最早就为了，同样的组件可以重复利用避免反复开发。但是如果同一页面那么交互起来肯定是最方便的，因为页面数据都在同一页面上。如果独立成组件之后，势必会有数据传入组件然后来回刷新的情况。（在这里我要操了小程序的设计）</p>
-<p>所以Bandix不例外的，肯定要组件通讯的，不然玩奶子。<br><a id="more"></a></p>
-<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>Bandix主要还是用了四种：</p>
-<ul>
-<li>emit &amp; on</li>
-<li>parent &amp; children</li>
-<li>refs</li>
-<li>props</li>
-</ul>
-<p>你要说没有参考前辈（<code>Mint-UI</code>，<code>VUX</code>）我是不信的，我自己不信的。最常用的是props，也是我觉得我用的最好的。<code>emit</code>的话我一开始只会用来建立方法通讯。后来是在阅读<code>element</code>源码才发现，原来<code>emit</code>可以带参数通讯！方便了好多。<code>parent&amp;children</code>是在<code>mint-ui</code>得到启示。（对就是<code>tabbar</code>）。</p>
-<p>顺便再吐槽一下：<del>elefe是不是打算不想理mint-ui了我提了pr竟然两个星期没人管</del>。</p>
-<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p><a href="https://cn.vuejs.org/v2/guide/components.html#Prop" target="_blank" rel="external">Prop</a></p>
-<p>按循序讲吧，本来想按照上面的List来跳的……</p>
-<p><code>prop</code>绝对是用得最爽而且是最方便的一种做法：给组件开孔。</p>
-<p>一般做法就是给一个数组就完事了</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">props: [<span class="string">'message'</span>] <span class="comment">// 建立一个叫message prop</span></div><div class="line"></div><div class="line"><span class="comment">// usage</span></div><div class="line">&lt;component message=<span class="string">""</span> /&gt;</div></pre></td></tr></table></figure>
-<p>这是最简单最基础的，通过message把新数据传入这个组件，完事。</p>
-<p>那有同学说，动态数据怎么办！那你就真滴麻瓜！</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;component v-bind:message=<span class="string">""</span> /&gt;</div></pre></td></tr></table></figure>
-<p>当然<code>prop</code>并不只这样。这样做仅是当<code>message: any</code>的时候。如果<code>message: string</code>的时候。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">props: &#123;</div><div class="line">  message: <span class="built_in">String</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>哎！别嘲笑<code>props</code>验证不行，不存在的！那又有同学说了，想要默认值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">props: &#123;</div><div class="line">  message: &#123;</div><div class="line">    type: <span class="built_in">String</span>,</div><div class="line">    <span class="keyword">default</span>: <span class="string">'co1mugx'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>还有內建验证方法。略！</p>
-<h2 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h2><p><a href="https://cn.vuejs.org/v2/guide/components.html#子组件索引" target="_blank" rel="external">子组件 Refs</a></p>
-<p>数据进得去出不来怎么搞。换一个<code>refs</code></p>
-<p><code>refs</code>的定位是，获取真实<code>dom</code>进行dom操作。我玩了一会，<code>refs</code>如果挂在本身是真实dom的情况下，获取的是真实dom。如果你挂在了虚拟dom下。获取到的是<code>vue component</code>。哎，你不信你去试一下！</p>
-<p>挂在真实dom可以干多少不可见人的事情不赘述。讲挂在虚拟dom的情况。如果能获取到整个<code>vue component</code>证明你在该实例建立的数据都可以使用到。不过我用最多的是通过在<code>method</code>来反馈一些父组件需要用到的数据（不懂得用emit的时候）。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment">* component.js</span></div><div class="line"><span class="comment">*/</span></div><div class="line"></div><div class="line">Vue.extends(&#123;</div><div class="line">  name: <span class="string">'component'</span></div><div class="line">  template: <span class="string">'&lt;span&gt;&lt;/span&gt;'</span>,</div><div class="line">  method: &#123;</div><div class="line">    getNum () &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;component ref=&quot;getAref&quot;&gt;&lt;/component&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">	var ref = this.$refs.getAref</div><div class="line">    console.log(ref.getNum)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>对，看起来巨蠢。这样子组件就搞得像窑子一样，什么都有。</p>
-<p>当然ref可以做很多事情不仅这种糟糕事情，比如你想获取真实dom的位置或者各种数据，可以嵌套ref取到这也不是不可以，自行做手效率转换吧！</p>
-<h2 id="emit-amp-on"><a href="#emit-amp-on" class="headerlink" title="emit &amp; on"></a>emit &amp; on</h2><p><a href="https://cn.vuejs.org/v2/api/#实例方法-事件" target="_blank" rel="external">实例方法/事件</a></p>
-<p>就是因为上面所述，我才发现了emit的另外一个用法，一开始我的用法是这样的</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"$emit('on-click')"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>当然没说你这么搞不对啊。这样做到了，从父组件跨入子组件运行方法。也就是说子组件这部分方法控制权交给了父组件。而且当我发现了<code>emit</code>可以带参数传输的时候，我发现了如果自组件一旦更新数据，父组件可以第一时间获取到。也不会像前面那么sb了。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Vue.extend(&#123;</div><div class="line">  watch: &#123;</div><div class="line">  	valChange(val) &#123;</div><div class="line">    	<span class="keyword">this</span>.$emit(<span class="string">'val-change'</span>, val)</div><div class="line">  	&#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">component</span> @<span class="attr">val-change</span>=<span class="string">"handleChange"</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">handleChange(val) &#123;</div><div class="line">  <span class="comment">// 这个时候就实时获取到valChange的数据了</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如果<code>emit</code>是触发器，那么<code>on</code>就是始作俑者了。只不过我的组件没那么复杂所以<code>on</code>基本上我是不需要用到。看文档看文档。</p>
-<h2 id="parent-amp-children"><a href="#parent-amp-children" class="headerlink" title="parent &amp; children"></a>parent &amp; children</h2><p><a href="https://cn.vuejs.org/v2/api/#parent" target="_blank" rel="external">parent</a></p>
-<p>限制最大最没什么几把用的设定。虽然是得到启示，但是我没用过。</p>
-<p>这设定是真的蠢到极致。</p>
-<blockquote>
-<p>同时使用 <code>$parent</code> 和 <code>$children</code> 有冲突 - 他们作为同一个入口 。更推荐用 props 和 events 实现父子组件通信</p>
-</blockquote>
-<p>其实就是，如果你想直接操作父组件的数据或者直接拿到父组件的东西，直接<code>$parent.data</code>就能取到了，或者给父组件某个数据赋值也是同理</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$parent.num = <span class="number">0</span> <span class="comment">// 为了避免破事，父组件data中要先有num这个字段</span></div></pre></td></tr></table></figure>
-<p>如果这种操作的话，意味着父组件会直接把这个组件当做<code>$children</code>了，也就是做这个操作的组件没有<code>$children</code>的资格了。但是父组件那么多<code>$children</code>这么操作也不合理。</p>
-<p>所以如果组件和组件是相互独立，非强耦合的情况下，我想只有傻逼会想到去用这个。而且子指使父的这种做法在中华文化里是要受到谴责的！不懂得什么叫孝顺和敬老！</p>
-<p>所以说孔子文化是很有深度且值得现代人思考的思想文化！还有《三字经》记载：</p>
-<blockquote>
-<p>养不教，父之过。教不严，师之惰。</p>
-</blockquote>
-<p>谁敢子教父的？没有这种操作！</p>
-<p>就算没有受过中华文化影响的西文代码界，也明确了子组件向来没有操作子组件的做法。因为父所管理的内容甚多，如果子组件操作父组件的操作打通之后，父组件有可能无法保证其他组件正常运行。</p>
-<p>所以说，Vue是真TM的刺激……</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 实践尝试 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> vue </tag>
-            
-            <tag> Bandix </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[从0到1的Bandix（三）- vue.use]]></title>
-      <url>/PersonalBlog/2017/08/04/Bandix3/</url>
-      <content type="html"><![CDATA[<p>其实，完整的函数是<code>Vue.use(plugin)</code>，在中文文档上是这么说的</p>
-<blockquote>
-<p>安装 Vue.js 插件。如果插件是一个对象，必须提供<code>install</code>方法。如果插件是一个函数，它会被作为 install 方法。install 方法将被作为 Vue 的参数调用。<br>当 install 方法被同一个插件多次调用，插件将只会被安装一次。</p>
-</blockquote>
-<p>所以实际上，我们使用一个库的时候，组件库本身是把自己当做一个插件插入到项目中，而不是一个什么大头鬼。<br><a id="more"></a></p>
-<h2 id="Vue-use"><a href="#Vue-use" class="headerlink" title="Vue use"></a>Vue use</h2><p>而且官方也提供了几个例子</p>
-<blockquote>
-<p>添加全局方法或者属性，如:<code>vue-custom-element</code><br>添加全局资源：指令/过滤器/过渡等，如<code>vue-touch</code><br>通过全局 mixin方法添加一些组件选项，如:<code>vuex</code><br>添加 Vue 实例方法，通过把它们添加到<code>Vue.prototype</code>上实现。<br>一个库，提供自己的 API，同时提供上面提到的一个或多个功能，如<code>vue-router</code></p>
-</blockquote>
-<p>要用<code>Vue.use()</code>的话，use的这个东西里面必须有一个公开的<code>install</code>方法，方法要两个参数，第一个就是<code>Vue</code>，第二个是个可选的<code>option</code></p>
-<p>所以，既然方法已经把Vue实例传进去了，那么就意味着，vue的全局函数都可以在这个方法里面调用，什么<code>component</code>, <code>extend</code>, <code>mixin</code>等。</p>
-<p>那么库的入口就好解决了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">install (Vue, option = &#123;&#125;) &#123;</div><div class="line">  <span class="comment">//有组件搞组件！</span></div><div class="line">  Vue.component(<span class="comment">/* xxx */</span>)</div><div class="line"></div><div class="line">  <span class="comment">//没组件造组件！</span></div><div class="line">  Vue.extend(&#123;&#125;)</div><div class="line"></div><div class="line">  <span class="comment">//都有搞混合</span></div><div class="line">  Vue.mixin(&#123;&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="入口是解决了，那么如果发布怎么办？"><a href="#入口是解决了，那么如果发布怎么办？" class="headerlink" title="入口是解决了，那么如果发布怎么办？"></a>入口是解决了，那么如果发布怎么办？</h2><p>一切npm包都是靠<code>package.json</code>啊这个很早就有提到，不管发布还是管理，都要靠这个json文件。如果你的入口js文件写好了，入口js文件的install方法确定是妥的，那么在<code>package.json</code>中，<code>main</code>节点大胆写进去就行了。这样届时从npm下载的话，安装完，该怎么import怎么import，然后use，完事儿！</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 实践尝试 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> vue </tag>
-            
-            <tag> Bandix </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[从0到1的Bandix（二）- component & extend]]></title>
-      <url>/PersonalBlog/2017/06/19/Bandix2/</url>
-      <content type="html"><![CDATA[<p>在vue中，可能无论写一个什么，就算只是单纯的一个vue插件，也会用到<code>vue component</code>。因为你搞一个<code>*.vue</code>就已经是了啊（逃</p>
-<p>一切还是以探索为主，我只是想把看到的东西按照自己理解记录一下。关于这部分的内容，在<a href="https://cn.vuejs.org/v2/guide/components.html" target="_blank" rel="external">Vue组件</a>这里有中文文档，在<a href="https://cn.vuejs.org/v2/api/#Vue-extend-options" target="_blank" rel="external">Vue.extend</a>有关于extend的内容。</p>
-<p>现在大多数组件库的话，都是<code>Vue.use()</code>来使用，那么为什么use就能用了？到底是在u些什么鬼东西。<br><a id="more"></a></p>
-<h2 id="Vue-component"><a href="#Vue-component" class="headerlink" title="Vue component"></a>Vue component</h2><p>简单来说，就是<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="comment">/* 组件名称 */</span>, <span class="comment">/* 组件内容 */</span>)</div></pre></td></tr></table></figure></p>
-<p>所以就算看一些组件库的话，在入口js文件看到最多的就是这玩意儿。这是一个全局引用组件的方法。一次引用了，在项目里哪个地方都能使用了。</p>
-<p>当然还有局部引用方法，这个就常见了，你在每个vue文件里，<code>&lt;script&gt;</code>区块里写的那个<code>components: {}</code>不就是这个作用！</p>
-<p>所以按照我的理解，<code>Vue.component</code>主要还是一个声明，一个注册组件的作用，毕竟你写组件的话都直接用<code>*.vue</code>了，搞这东西来写不是很蛋疼。</p>
-<h2 id="Vue-extend"><a href="#Vue-extend" class="headerlink" title="Vue extend"></a>Vue extend</h2><p>对没错我就是来蛋疼了…简单来说就是<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="comment">/* 组件名称 */</span>, Vue.extend())</div></pre></td></tr></table></figure></p>
-<p>当然没叫你这么写！</p>
-<p>所以<code>extend</code>来说，这就是一个类似于<code>*.vue</code>但可以不专门弄一个文件来写的，一个类构造器的东西。或者说是组件构造器吧，另一种写组件的姿势。它的后缀就可以不是vue了，而是一个纯js文件。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Vue.extend(&#123;</div><div class="line">  template: <span class="string">`&lt;h1&gt;Hello Bed&lt;/h1&gt;`</span>,</div><div class="line">  ... <span class="comment">//该干嘛干嘛还是跟&lt;script&gt;一样</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>这种我觉得，比较适合那种模板内容不多，但是逻辑或者功能又特别复杂的东西。比如插件之类的开发，因为就一个js文件，看起来也很舒服。而且它是以扩展的形式插入进去的，当然可以全局扩展也可以局部扩展，跟component是一样的。</p>
-<p>不过这种写法，让我觉得可以用<code>jsx</code>或者<code>typescript</code>来皮一下是怎么回事……不过<code>typescript</code>确实还是大多靠这种方式来实现，很好玩我很喜欢玩。不知道现在有没有更好的方法。而且<code>jsx</code>有官方插件可以用了，加上<code>render</code>函数。我怎么觉得有点变味……</p>
-<p>所以为什么库引用的时候用的是use，下篇再讲use的东西。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 实践尝试 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> vue </tag>
-            
-            <tag> Bandix </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[从0到1的Bandix（一）- npm package]]></title>
-      <url>/PersonalBlog/2017/06/14/Bandix1/</url>
-      <content type="html"><![CDATA[<p>关于<code>npmjs.org</code>的内容本来是要到最后的。因为能到操作npm部分的话必然项目已经到了收官阶段。</p>
-<p>不过我不熟悉npm从上架到下架的过程，之前是打算让<code>Syuanpi.css</code>上架，但是觉得还是算了吧别给别人的市场添加垃圾。<strong>不过从今天这事之后我觉得完善这个东西意义重大！</strong></p>
-<p>所以说这次的旅程，开刀的还是<code>Syuanpi.css</code>。。。（这个东西肯定不是亲生的。</p>
-<a id="more"></a>
-<h2 id="0-注册账号"><a href="#0-注册账号" class="headerlink" title="0. 注册账号"></a>0. 注册账号</h2><p>一开始我以为是要多NB的项目才能上架npm，把npm想作和app store 一样厉害的东西。后来看了一眼并不是的，这只是个node的打包平台（但不是nodejs家的，这段历史值得去了解一下）。而且他们也是有收费标准的，跟github一样，如果你的项目/包是私有的，你必须交月费/年费。不过我们的东西本身就是开源的，所以交钱？不存在的。</p>
-<p><a href="https://www.npmjs.com/" target="_blank" rel="external">NPM的主页</a>，点进去之后点sign up。剩下的应该很容易理解。像注册知乎一样。写个你要展示的名字，<code>username</code>是用在你个人主页的后缀上的，同时也是账号。注册完之后直接就能用了。什么验证都不要。</p>
-<h2 id="1-登录"><a href="#1-登录" class="headerlink" title="1. 登录"></a>1. 登录</h2><p>几个命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm adduser	<span class="comment">#添加一个账户</span></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm login	<span class="comment">#登录</span></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">logout</span>	<span class="comment">#登出</span></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm whoami	<span class="comment">#我是谁？指现在哪个用户登录着</span></div></pre></td></tr></table></figure>
-<p>首先添加用户<code>npm adduser</code>，需要输入三个字段：用户名，密码，公开的Email。如果没报错的话就是登录成功了，而且会告诉你登录了哪个域。</p>
-<p><strong>对了，为什么要强调域！这就是第一个大坑。</strong></p>
-<p>由于我们所处的网络环境，各种电波横七竖八。特别厉害。100M用不到2M。所以大部分用户都在阿里爸爸蹭口水喝。把源替换成taobao mirror。</p>
-<p>在之前的话，如果你是设置的永久的淘宝源，你是登录不上去的。要命的是，现在如果你忘记加临时源入口的话，你会发现，<strong>淘宝源也***的能登录进去</strong>。这谁敢登录啊，指不定有指向到什么鬼地方去了。所以为了日后方便，登录提交各种乱七八糟加上临时源。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm adduser --registry=<span class="string">"https://registry.npmjs.org"</span></div></pre></td></tr></table></figure>
-<p>以确保我确实是登录了npmjs的库。</p>
-<h2 id="2-npm库初始化"><a href="#2-npm库初始化" class="headerlink" title="2.npm库初始化"></a>2.npm库初始化</h2><p>一个命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
-<p>按照这个命令输入之后，给的信息一般都是必要信息了。也就是说依照这个命令所给的内容填完整，上架的准备就好了。</p>
-<p>内容列一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package name</div><div class="line">version</div><div class="line">description		//介绍</div><div class="line">entry point		//启动入口，这个很重要。</div><div class="line">test command	//用来测试的命令</div><div class="line">git repository	//git地址</div><div class="line">keywords		//关键词</div><div class="line">author			//作者</div><div class="line">license: (ISC)  //这个项目的协议</div></pre></td></tr></table></figure>
-<p>关于<code>package.json</code>的内容<a href="https://docs.npmjs.com/getting-started/using-a-package.json" target="_blank" rel="external">全在这里</a>。</p>
-<h2 id="3-上架和下架"><a href="#3-上架和下架" class="headerlink" title="3.上架和下架"></a>3.上架和下架</h2><p>几个命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm publish --registry=<span class="string">"https://registry.npmjs.org"</span></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm unpublish package@version --registry=<span class="string">"https://registry.npmjs.org"</span></div></pre></td></tr></table></figure>
-<p><strong>如果你不确定你用的是哪里的源，你还是加上吧以防万一。如果你很清楚我从装npm就没换过，那就后面那串就不要加上去了给键盘省点寿命……</strong></p>
-<p><code>npm publish</code>的话会根据你现在项目的version进行提交和更新（所以version不要随便填）。</p>
-<p><code>npm unpublish</code>需要声明你要撤下那个库，版本是多少。也就是像上面那样的写法。</p>
-<p><code>npm publish</code>之后，经过一段时间的编译和上传，然后你就可以在npm的个人页面上看到自己的库了。接下来就可以让别人通过<code>npm install syuanpi --save</code>安装来装b了。</p>
-<p>但是我这个人比较实诚，不会教你们装x，<strong>所以我把syuanpi给撤下来了！</strong></p>
-<p>所以怎么撤下，按照syuanpi.css的话。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm unpublish syuanpi@0.0.1</div></pre></td></tr></table></figure>
-<p>撤下的话，是因为你在库上面撤回，所以要带版本号撤回。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 实践尝试 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> vue </tag>
-            
-            <tag> Bandix </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[从0到1的Bandix（零） - 想法记录]]></title>
-      <url>/PersonalBlog/2017/06/13/Bandix0/</url>
-      <content type="html"><![CDATA[<p>觉得既然决定要做了，那就至少得做出个样子（就像隔壁Syuanpi.css一样看起来很帅，实际上很糜烂…）</p>
-<a id="more"></a>
-<p>话说我开过的坑还少么！TickTick开出来，从白到红，从音乐到代码，从记事本到路由器，怕不是能溢出来？而且，Syuanpi.css一开始的想法就是让一些普通的网页动画比较好收拾，现在看来要添加一些比较有灵性的动画了。我是不指望有人看毕竟，animate.css在页面动画依然是大头。另外我想给Syuanpi.css开个针对vue的分支，也是为了方便收拾。<strong>叫Syuanpi.vue！</strong></p>
-<p>我是觉得也没什么好记录的就随便讲讲。其实现在的组件库都挺不错的，而且很完善，就算是个人项目也是有几十甚至上百的维护者。不过，<strong>毕竟有买卖就有杀害！</strong>（逃</p>
-<p>但是问题就在这了，成熟的库都讲究一个“样式统一”。无论从颜色还是到长相，都有很统一或者很神似的统一性。而这在我们这个什么都干的团队就明显吃不下。因为杂七杂八的，什么互联网大旗，O2O称霸世界。称霸nmlgb！五个界面四种样式！真是让我想起了苹果手机和山寨手机。你想蹭风口又蹭不到，瞎几把做了一堆屎出来。然后还脾气很大？劳资脾气也很大！</p>
-<p>我并不是说主流组件库定制不高什么的。样式统一本来就是一件很重要的事情，一个设计你非得弄得大红大绿，以老土的样式强势吸引目光的，不是傻的就是传销，就这样！</p>
-<p>所以为了给自己续命我也是想到，为什么我不自己实现一个组件库？就光组件库就行了。组件之间有联动性又有独立性，而且样式灵活。我只负责提供简笔画，你们来上色。这不也挺好的？所以，Bandix的初步想法诞生了。<strong>当然目前还是受精卵。</strong></p>
-<p>为什么叫Bandix呢，这个名字其实也是个闪念（老罗你手机质量好点我就投靠你了，你这个Pro不行啊。），我是先想到了公司的名称，然后想到了邦迪<code>band-aid</code>，最后索性得出一个<code>Band-ix</code>。因为一开始会有这个念头也是因为公司，有个能轻松干活的东西再上架npm，死活都掌控在自己手上，稳不稳定还不是我们自己的。</p>
-<p>所以，我是希望他可以跟创可贴一样，想贴就贴有伤也贴。什么情况都能贴还不会很丑，能屈能伸。</p>
-<p>而且在没有什么定义的情况下，它是空的，但又不是空的。空亦非空。</p>
-<p>而且按照现在的计划，我是想整合一部分微商常见的组件。在部分界面内的组件统一样式，只允许传值不允许乱改。这样会稳定很多。</p>
-<p>说实话我是心疼了公司大哥大姐了，本来就我的锅。弄到他们要下来一起实现这个东西。不过大概摸清楚套路之后，组件有库的加持，日后的业务代码应该就根据情况编编逻辑就行了。（说实话我巨讨厌业务代码，为了照顾其他人，函数取名字不能用水果名字或者小动物名称！</p>
-<p>一开始在语言使用上的选择，我想用Typescript。后来想了一下，算了吧这东西是要给人用的！所以还是用<code>*.vue</code>。</p>
-<p>目前只是大致的规划了一下，并且稍微做了一点。这个主题的博客用来记录开发vue组件库会遇到的知识点和坑。就这样。</p>
-<p>库的定位还是跟<code>Syuanpi.css</code>一样，我只是想让它在项目或者玩具中更容易收拾一些。比起现有的各种组件库来说，还是算了吧。</p>
-<p>（要不要先上个首页卖波饼？算了吧我还是不擅长卖饼…能实现出70%我都觉得这次不亏了。</p>
-<p>（另外拖了三个月的Syuanpi.hover应该找个时间一次性干了…这拖延症真是越来越厉害了。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 实践尝试 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> vue </tag>
-            
-            <tag> Bandix </tag>
             
         </tags>
         
@@ -1317,31 +1073,6 @@
         <categories>
             
             <category> 日常吐槽 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> NodeJS </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[看一眼后端框架Hapi]]></title>
-      <url>/PersonalBlog/2016/12/09/nodejs-hapi/</url>
-      <content type="html"><![CDATA[<p>老规矩老套路：<a href="https://hapijs.com/" target="_blank" rel="external">链接在这</a></p>
-<h3 id="什么是Hapi"><a href="#什么是Hapi" class="headerlink" title="什么是Hapi"></a>什么是Hapi</h3><p>当<code>Node.js</code>用来做后端的时候，后端框架在我听说过的就三个：<code>Express</code>、<code>Koa</code>、<code>Hapi</code>。<br>超喜欢<code>Koa</code>，不过真的，能力有限，那些我没见过的语法我没了解过所以真的不懂，但据说是个超轻可玩性超高的框架，哎好可惜技不如人。例如那个<code>yield</code>，是个<code>python</code>的产物，但是我py真的不精，所以…我有一句妈卖批我现在就要讲。<a id="more"></a><br><code>Hapi</code>同样也是一个后端框架，而且它建立一个App很简单，就这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Hapi = <span class="built_in">require</span>(<span class="string">'hapi'</span>);</div><div class="line"><span class="comment">// Create a server with a host and port</span></div><div class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> Hapi.Server();</div><div class="line">server.connection(&#123; </div><div class="line">    host: <span class="string">'localhost'</span>, </div><div class="line">    port: <span class="number">8000</span> </div><div class="line">&#125;);</div><div class="line"><span class="comment">// Add the route</span></div><div class="line">server.route(&#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path:<span class="string">'/hello'</span>, </div><div class="line">    handler: <span class="function"><span class="keyword">function</span> (<span class="params">request, reply</span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> reply(<span class="string">'hello world'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// Start the server</span></div><div class="line">server.start(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">throw</span> err;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Server running at:'</span>, server.info.uri);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<h3 id="Hapi有哪些不一样"><a href="#Hapi有哪些不一样" class="headerlink" title="Hapi有哪些不一样"></a>Hapi有哪些不一样</h3><p>第一眼看起来是超直观，跟<code>Express</code>还是有很大区别的。<br>首先跟直观看到不同的就是，<code>Hapi</code>require之后没有<code>var app = hapi()</code>类似这样的东西，而是重新实例化了一个<code>server</code>，<br>然后用这个实例化出来的<code>server</code>定义接口啊，路由啊。然后通过<code>server.start</code>来启动服务。清新脱俗……<br>另外通过这篇<a href="http://ourjs.com/detail/5490db1c8a34fa320400000e" target="_blank" rel="external">Node.js 框架比较: Express vs. Koa vs. Hapi</a>可以看到，在REST中，<code>Hapi</code>是这么处理的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">server.route([</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path: <span class="string">'/api/items'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Get item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'POST'</span>,</div><div class="line">    path: <span class="string">'/api/items'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Post item'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'PUT'</span>,</div><div class="line">    path: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Put item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'DELETE'</span>,</div><div class="line">    path: <span class="string">'/api/items/&#123;id&#125;'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Delete item id: '</span> + request.params.id);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    method: <span class="string">'GET'</span>,</div><div class="line">    path: <span class="string">'/'</span>,</div><div class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">request, reply</span>) </span>&#123;</div><div class="line">      reply(<span class="string">'Hello world'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">]);</div></pre></td></tr></table></figure></p>
-<p>就特别喜欢这样的直观的东西，我记得在知乎看到过一个大手说过：代码是给人看的，顺便机器也看得懂而已。这样看起来就特别舒服不会有点怪怪的。所以我就喜欢上这个框架了。<br>不过，<strong>这个框架的文档实在太少了！</strong>脑子不怎么发达的人真是不知道怎么玩。另外，我怎么看不到社区……而且据说这个框架更适合大型的项目。<br>其实看了官方的英文教程之后，就想，现在就只要加入<code>&#39;use strict&#39;;</code>就可以使用es6么，不需要babel转成es5？我也不知道现在有多少浏览器已经会看es6了。</p>
-<p>也没深入的学习，因为前端还没学好呢…先看一眼日后再挠个坑学习吧。（其实是对于菜鸟来说还是<code>Express</code>+<code>Typescript</code>更适合我…）</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 后端尝试 </category>
             
         </categories>
         
