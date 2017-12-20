@@ -77,12 +77,16 @@
   <div class="progress">
   <div class="progress-inner"></div>
 </div>
-  <div class="tagcloud-mask"></div>  
+  
+  
+    <div class="tagcloud-mask"></div>  
 <div class="tagcloud" id="tagcloud">
   <div class="tagcloud-inner">
     <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
   </div>
-</div>
+</div>  
+  
+
   <div class="container">
 
     <header class="header" id="header">
@@ -247,6 +251,55 @@
     <header class="post-header">
       <div class="post-time syuanpi riseIn-light back-1">
         <div class="post-time-wrapper">
+          <span>2017-08-14</span>
+          
+            
+              <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
+            
+          
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          <a href="/PersonalBlog/2017/08/14/js-call-apply-bind/">JavaScript的call()，bind()，apply()</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        
+          <blockquote>
+<p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
+</blockquote>
+<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/">关于JavaScript的this</a></p>
+<p>还是上次的代码，修改一下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> test = obj.getName</div><div class="line">test()					<span class="comment">//undefined.</span></div></pre></td></tr></table></figure>
+<p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.getName()		<span class="comment">//koala</span></div></pre></td></tr></table></figure>
+        
+      
+    
+      <p class="content-link">
+        <a href="/PersonalBlog/2017/08/14/js-call-apply-bind/#more">
+          <span>继续阅读</span>
+        </a>
+      </p>
+    
+    </div>
+    
+  </article>
+  
+
+  
+    
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
           <span>2017-08-09</span>
           
             
@@ -264,11 +317,12 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-      
-        <blockquote>
+        
+          <blockquote>
 <p>记录这个不为什么，就是遇到SB，不想争执。</p>
 </blockquote>
 <p>撕逼文，小标题都会比较小，方便撕逼思路的连续性！<br>
+        
       
     
       <p class="content-link">
@@ -308,10 +362,11 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-      
-        <p>刚用vue不久，应该说还有大量的API还没用过还没熟悉过的时候，突然接受一个新内容，而且还是个很抽象的东西，说实话刚接触的时候完全不知道这东西有什么用…只听说过它能状态管理啊，什么全局控制啊。好牛逼啊666啊。</p>
+        
+          <p>刚用vue不久，应该说还有大量的API还没用过还没熟悉过的时候，突然接受一个新内容，而且还是个很抽象的东西，说实话刚接触的时候完全不知道这东西有什么用…只听说过它能状态管理啊，什么全局控制啊。好牛逼啊666啊。</p>
 <p><strong>哦，然后呢？</strong></p>
 <p>后来稍微理解之后，决定写出来。浅入浅出的理解一下vuex。
+        
       
     
       <p class="content-link">
@@ -351,13 +406,14 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-      
-        <blockquote>
+        
+          <blockquote>
 <p>我没进传销！真是日了皮皮虾了…</p>
 </blockquote>
 <p>由于Vue2.0之后，<code>vue-resource</code>也停止更新了，改为使用尤老师钦点的<code>axios</code>。<a href="https://github.com/mzabriskie/axios" target="_blank" rel="external">mzabriskie/axios: Promise based HTTP client for the browser and node.js</a></p>
 <p>那反正不管！他说不合适我不用，我就去学个新的。其实接触过微信小程序的话，稍加理解，这就是一个比较厉害点但是又有局限的<code>wx.request()</code></p>
 <h2 id="what-s-Axios"><a href="#what-s-Axios" class="headerlink" title="what s Axios"></a>what s Axios</h2>
+        
       
     
       <p class="content-link">
@@ -397,11 +453,12 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-      
-        <blockquote>
+        
+          <blockquote>
 <p>一次被this支配之后的思考</p>
 </blockquote>
 <h3 id="开门见山"><a href="#开门见山" class="headerlink" title="开门见山"></a>开门见山</h3>
+        
       
     
       <p class="content-link">
@@ -441,9 +498,10 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-      
-        <p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
+        
+          <p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
 <p>觉得我不服！我要上！<br>
+        
       
     
       <p class="content-link">
@@ -483,12 +541,13 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-      
-        <blockquote>
+        
+          <blockquote>
 <p>花了几天时间都在探究ES6，为了实现对象遍历，一个头两个大。</p>
 </blockquote>
 <p>最新超想玩《尼尔：机械纪元》，被那种机械元素迷得死死的，故把最近正在写的博客主题融入机械风。另外我打算这次主题换个姿势来写，想用各种新鲜没尝试过的结构。于是……</p>
 <h3 id="作死起源"><a href="#作死起源" class="headerlink" title="作死起源"></a>作死起源</h3>
+        
       
     
       <p class="content-link">
@@ -528,59 +587,16 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-      
-        <blockquote>
+        
+          <blockquote>
 <p>小爝（知乎用户）：js里面什么都是对象，所以你看单身狗学这个语言学的老快了。</p>
 </blockquote>
 <p>就前几天看到的答案，觉得对啊！js这种边缘OP的语言，你说它没对象它是可以有的，你说它是面向对象语言它不是。<br>所以来研究一手关于JavaScript的继承。研究过程用一下typescript（这个真有对象了）
+        
       
     
       <p class="content-link">
         <a href="/PersonalBlog/2017/02/22/js-extends/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
-    
-    </div>
-    
-  </article>
-  
-
-  
-    
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi riseIn-light back-1">
-        <div class="post-time-wrapper">
-          <span>2017-02-17</span>
-          
-            
-              <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
-            
-          
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi riseIn-light back-2">
-        
-          <a href="/PersonalBlog/2017/02/17/async-await-first/">async-await 初尝试</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi riseIn-light back-3">
-      
-      
-        <blockquote>
-<p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p>
-</blockquote>
-<p>想起去年第一个放在github的东西，就是获取课程然后下载课程视频的下载器。<br>然后今天，想到弄一个服务端版本。这样我可以无论作为移动端还是webapp端都能用到爬虫的数据了。所以就做了一次改造。<br>
-      
-    
-      <p class="content-link">
-        <a href="/PersonalBlog/2017/02/17/async-await-first/#more">
           <span>继续阅读</span>
         </a>
       </p>
@@ -674,6 +690,8 @@
 
 <script src="/PersonalBlog/script/src/nlvi.js"></script>
 <script src="/PersonalBlog/script/src/utils.js"></script>
+<script src="/PersonalBlog/script/scheme/banderole.js"></script>
+<script src="/PersonalBlog/script/scheme/balance.js"></script>
 <script src="/PersonalBlog/script/src/plugins.js"></script>
 <script src="/PersonalBlog/script/bootstarp.js"></script>
 
@@ -683,6 +701,8 @@
     <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 
+
+  
   <div class="search" id="search">
     <div class="mask" id="mask"></div>
     <div class="search-wrapper syuanpi">
@@ -702,6 +722,7 @@
     midnight: "我觉得大半夜就不要看啦"
   }
   </script>
+  
 
 </body>
 </html>

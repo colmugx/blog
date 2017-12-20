@@ -6,7 +6,7 @@
   <link href="/PersonalBlog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/PersonalBlog/"/>
-  <updated>2017-12-13T02:16:42.951Z</updated>
+  <updated>2017-12-20T07:04:35.838Z</updated>
   <id>https://colmugx.github.io/PersonalBlog/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>内容交换的奇怪思路</title>
+    <link href="https://colmugx.github.io/PersonalBlog/2017/12/20/exchange_number/"/>
+    <id>https://colmugx.github.io/PersonalBlog/2017/12/20/exchange_number/</id>
+    <published>2017-12-20T06:46:41.000Z</published>
+    <updated>2017-12-20T07:04:35.838Z</updated>
+    
+    <content type="html"><![CDATA[<p>想起以前很容易就会被问到一个问题</p><blockquote><p>如何把两个数值进行交换？</p></blockquote><p>教科书式的编程怎么做？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</div><div class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> k = i;</div><div class="line"></div><div class="line">i = j;</div><div class="line">j = k;</div><div class="line"></div><div class="line"><span class="comment">// 两个数值，把其中一个寄存起来，然后再两次赋值。</span></div></pre></td></tr></table></figure><p>以前去写代码的社团，当时我巨活跃，有个师兄就过来说：看你资质不错，我打算亲自培养你，先问你一个问题吧：你如何把两个数值进行交换？写不出代码没关系，我只是要听思路。</p><p>我：什么跟什么交换？</p><p>师兄：随便你。</p><p>于是我打开了<code>sublime text</code>写下这么些东西</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> j = <span class="number">2</span>;</div><div class="line"></div><div class="line">i += j;</div><div class="line">j = i - j;</div><div class="line">i -= j;</div></pre></td></tr></table></figure><p>然后师兄就懵了，你这个B不按套路出牌？</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;想起以前很容易就会被问到一个问题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如何把两个数值进行交换？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;教科书式的编程怎么做？&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>使用JSX的VUE应用开发体验</title>
@@ -37,9 +65,9 @@
       <category term="实践尝试" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
-    
       <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+    
+      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
     
   </entry>
   
@@ -148,9 +176,9 @@
       <category term="毫无意义" scheme="https://colmugx.github.io/PersonalBlog/categories/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89/"/>
     
     
-      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
-    
       <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+    
+      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
     
   </entry>
   
@@ -521,32 +549,6 @@
       <category term="扣肉小记" scheme="https://colmugx.github.io/PersonalBlog/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
     
       <category term="看片子" scheme="https://colmugx.github.io/PersonalBlog/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扣肉小记（四）</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2016/11/25/Korou4/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2016/11/25/Korou4/</id>
-    <published>2016-11-25T09:01:32.000Z</published>
-    <updated>2017-08-19T15:53:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>天气转凉…基本是条冻狗了<br>另外小嘀咕一句：有点想把“Rousy”重写了…</p></blockquote><p>　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）</p><h3 id="最近干了个长得像个音乐播放器的微信小程序"><a href="#最近干了个长得像个音乐播放器的微信小程序" class="headerlink" title="最近干了个长得像个音乐播放器的微信小程序"></a>最近干了个长得像个音乐播放器的微信小程序</h3><a id="more"></a><p>　　最近干什么，最近学的前端知识好多，每天都是百度和知乎（暂时不需要用到Google系列），然后就是写了一个微信小程序(weapp)<br>　　反正到现在来说，<code>weapp</code>还是挺好玩的，而且那个<code>wxml</code>和<code>wxss</code>就理解成<code>html</code>和<code>css</code>就好了。然后那个<code>js</code>是用的ES6，身边有个大神honn哥，有问题他还是很愿意解答的，谢谢老板罩着！<br>　　然后写了个什么，写了个音乐程序，有个不愿意透露ID的妹妹她自己有个项目，就是“据她口述的盗链音乐播放器”，不过她是用swift写的，而且长得稍微挺像网某云音乐，但链子好像不是某云的…然后我就想那我也来写一个好了<br>　　然后就去看了她的链子，发现她的链子好像不能用了，然后我就自己找了一个某度的链子，能用。反正这些东西以后都开源了！开源大法好！先上个图！<br>  <img src="https://github.com/ColMugX/GitBed/raw/master/blog/weapp-openradio.gif" alt=""><br>　　但是尴尬的是，这套链子，<strong>不支持在线播放</strong>！卧槽这tm就尴尬了。链子拿下来之后，本地播放是可以的，在线播放是播放不了的。然后我就尝试用浏览器去点，点开之后并不是一个<code>html5</code>的<code>audio</code>而是直接<code>download</code>，代码长这样。<br>  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"songLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span>,</div><div class="line">  <span class="attr">"showLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>　　而且其实我有想过先down到本地然后在调用播放，后来想了一下，既然是小程序而且是个云端程序，这么玩占用的存储会不会就大了好多…现在只能另辟蹊径了。（为什么我想到了鹅厂…）</p><h3 id="暂时没想到什么写的，来听音乐吧！"><a href="#暂时没想到什么写的，来听音乐吧！" class="headerlink" title="暂时没想到什么写的，来听音乐吧！"></a>暂时没想到什么写的，来听音乐吧！</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=412493379&auto=0&height=32"></iframe><p>　　最近一直在听这首，其实去年就听过了，第一次听觉得很感触，虽说这首歌是TFBOYS的吧！但是我向来都是喜欢好音乐，至于谁唱的，只不过是借用了他的声音来表达歌曲的意义而已。<strong>（除了周杰伦！）</strong> <strong>（除了初音未来！）</strong>（为什么分开讲，因为伦哥的地位无可替代！）<br>　　而且应该是我觉得的tfboys的歌里面唯一一首能听的，歌词真的…不行了…</p><blockquote><p>我不完美的梦 　你陪着我想<br>不完美的勇气 　你说更勇敢<br>不完美的泪　 　你笑着擦干<br>不完美的歌　 　你都会唱<br>我不完美心事 　你全放在心上<br>这不完美的我 　你总当作宝贝</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;天气转凉…基本是条冻狗了&lt;br&gt;另外小嘀咕一句：有点想把“Rousy”重写了…&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）&lt;/p&gt;
-&lt;h3 id=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;a href=&quot;#最近干了个长得像个音乐播放器的微信小程序&quot; class=&quot;headerlink&quot; title=&quot;最近干了个长得像个音乐播放器的微信小程序&quot;&gt;&lt;/a&gt;最近干了个长得像个音乐播放器的微信小程序&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="日常吐槽" scheme="https://colmugx.github.io/PersonalBlog/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
-    
-    
-      <category term="扣肉小记" scheme="https://colmugx.github.io/PersonalBlog/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
     
   </entry>
   

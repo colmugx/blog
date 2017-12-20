@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[内容交换的奇怪思路]]></title>
+      <url>/PersonalBlog/2017/12/20/exchange_number/</url>
+      <content type="html"><![CDATA[<p>想起以前很容易就会被问到一个问题</p>
+<blockquote>
+<p>如何把两个数值进行交换？</p>
+</blockquote>
+<p>教科书式的编程怎么做？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</div><div class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> k = i;</div><div class="line"></div><div class="line">i = j;</div><div class="line">j = k;</div><div class="line"></div><div class="line"><span class="comment">// 两个数值，把其中一个寄存起来，然后再两次赋值。</span></div></pre></td></tr></table></figure>
+<p>以前去写代码的社团，当时我巨活跃，有个师兄就过来说：看你资质不错，我打算亲自培养你，先问你一个问题吧：你如何把两个数值进行交换？写不出代码没关系，我只是要听思路。</p>
+<p>我：什么跟什么交换？</p>
+<p>师兄：随便你。</p>
+<p>于是我打开了<code>sublime text</code>写下这么些东西</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> j = <span class="number">2</span>;</div><div class="line"></div><div class="line">i += j;</div><div class="line">j = i - j;</div><div class="line">i -= j;</div></pre></td></tr></table></figure>
+<p>然后师兄就懵了，你这个B不按套路出牌？</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用JSX的VUE应用开发体验]]></title>
       <url>/PersonalBlog/2017/12/11/vue-jsx/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -80,9 +106,9 @@
         
         <tags>
             
-            <tag> vue </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> vue </tag>
             
         </tags>
         
@@ -312,9 +338,9 @@
         
         <tags>
             
-            <tag> vue </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> vue </tag>
             
         </tags>
         
