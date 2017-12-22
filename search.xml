@@ -3,7 +3,33 @@
   
     
     <entry>
-      <title><![CDATA[内容交换的奇怪思路]]></title>
+      <title><![CDATA[发现一个小现象]]></title>
+      <url>/PersonalBlog/2017/12/22/hexo-theme-select/</url>
+      <content type="html"><![CDATA[<p>这一个月总能在首页看到<code>Nlvi</code>被star的现象（可能我有点在意了吧）</p>
+<p>接着，我有点好奇，他们是喜欢 <code>Nlvi Paper</code>多一点呢？</p>
+<p>或者<code>Nlvi Color</code>呢？</p>
+<p>于是我就好奇的点进他们的<code>profile</code>或者<code>blog</code>查看。</p>
+<p>发现一个很有趣的现象</p>
+<p>他们几乎都在用<code>Even</code>！什么颜色都有！</p>
+<p>于是我有点失望的看了他们到底都<code>star</code>了些什么。</p>
+<p>结果更出乎我的意料</p>
+<p>他们几乎都是先star了<code>Nlvi</code>，然后star了<code>Even</code></p>
+<p>虽然<code>Nlvi Color</code>参考①了<code>Even</code>的阅读体验</p>
+<p>哎呀心娘娘啊！可能抄得不够好，还需努力！</p>
+<p><br><br>① 参考：cān kǎo，意为整个搬！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[冒泡排序的骚思路]]></title>
       <url>/PersonalBlog/2017/12/20/exchange_number/</url>
       <content type="html"><![CDATA[<p>想起以前很容易就会被问到一个问题</p>
 <blockquote>
@@ -19,6 +45,12 @@
 <p>然后师兄就懵了，你这个B不按套路出牌？</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 曲苑杂坛 </category>
+            
+        </categories>
+        
         
         <tags>
             
