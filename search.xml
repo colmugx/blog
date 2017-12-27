@@ -3,6 +3,100 @@
   
     
     <entry>
+      <title><![CDATA[我所认识的JavaScript]]></title>
+      <url>/PersonalBlog/2017/12/26/my-known-javascript/</url>
+      <content type="html"><![CDATA[<p>我虽然接触过很多语言，玩得也不深，直接把<code>C++</code>同系的全砍掉。但是我还是能说，<code>JavaScript</code>是我见过的最有意思的语言。</p>
+<p>随便打开一个chrome或者terminal打开<code>node</code>玩一会，随便定义一个变量常量函数。你会发现，后面跟着一个<code>undefined</code></p>
+<p><del>（图片收拾起来太麻烦了，所以此处无图）</del></p>
+<p>这个位置显示的量肯定是返回值，菜鸡不敢开讲V8，但我觉得就是。因为<code>JavaScript</code>会把一切东西都当做函数或者对象。当你构建一个变量的时候，在JS的角度它可能理解为一个新的<code>function</code>了，不过因为你作为人的目的只是想创建一个变量/常量，以人的角度来考虑这不是个函数，所以作为人的角度来说这个变量/常量不应该有返回值；而JS的角度是把这个内容当做函数了，但是因为不知道返回值是什么，又必须返回，所以返回<code>undefined</code></p>
+<p>所以对于JS中断流的操作可以直接用<code>return</code>而没有<code>return false</code>就解释的清楚了？我也不知道，可能继续学习的话会得到结果吧。</p>
+<p>所以这样的话可能另一个问题也有答案了：为什么不需要构造变量，直接创建一个字符串就有方法了？</p>
+<p>这看起来应该很有意思，他的“心理历程”可能是这样的：发现一个量，通过推断这个量应该是<code>string</code>类型，关于<code>string</code>的原型链，有，继承<code>string</code>原型链已定义的方法。</p>
+<p>原型链也是个有意思的东西，而且JS的内置方法/原型链也不是一成不变的，可以补充可以改写。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaScript链式方法]]></title>
+      <url>/PersonalBlog/2017/12/23/js-method-chaining/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>著名框架<code>jQuery</code>所使用的设计模式——“虾扯蛋”</p>
+</blockquote>
+<p>之前在知乎回答过一个问题：2018的前端应该学什么。</p>
+<p>我回答了：就算前端再复杂，jQuery依然是最流行的那个。</p>
+<p>这答案怎么样呢？废话！肯定没人点赞了！</p>
+<p>人性就是如此！一旦接受了更<del>装逼</del>新的思路，就会觉得以前见过的东西都太弱了！</p>
+<p>新项目想用什么就用什么，什么技术栈健全就用什么。可是老项目并没办法想干什么干什么，时间和精力不允许他去重构。金蝶还在卖VB呢，他们肯定也想过VB已经不行了。</p>
+<p>好了题外话，我还是很有兴趣实现一个塞进<code>nlvi</code>的类jq的。</p>
+<a id="more"></a>
+<h2 id="怎么来的链式操作"><a href="#怎么来的链式操作" class="headerlink" title="怎么来的链式操作"></a>怎么来的链式操作</h2><blockquote>
+<p>如果不用链式调用，jQuery没有性能可言 ——鲁迅</p>
+</blockquote>
+<p>鲁迅：我不是！我没有！别乱说啊！</p>
+<p>我记得有人测试过，<code>$(&#39;#ele&#39;)</code>会比<code>document.getElementById(&#39;ele&#39;)</code>慢很多。如果是按行操作dom而不是用专属的链式调用，效率会更差。</p>
+<p>但这次不是来讨论jQuery的效率的。链式方法也是一种设计模式，有必要了解一下。就算ES6常使用的<code>Promise</code>，也用到了链式调用。</p>
+<p><code>JavaScript</code>能够函数式编程，还是因为它是个“函数为第一公民”的语言，但它并没有<code>pure function</code>是因为它的设计其实是多范式的。而ES6把构造函数和<code>classes</code>加进去之后更是证明了这一点。</p>
+<h3 id="我用过的JavaScript"><a href="#我用过的JavaScript" class="headerlink" title="我用过的JavaScript"></a>我用过的JavaScript</h3><p>关于这部分，我觉得我想分享的东西有点超篇幅，所以移步到另外一篇分享吧：<a href="/PersonalBlog/2017/12/26/my-known-javascript/">我所认识的JavaScript</a></p>
+<p>大致上就是<code>JavaScript</code>之所以能这么玩是因为它会把任何东西都看做“函数”来看待，并且以它的理解就是：我能且只能掌控函数，函数必有返回值。并且每产生一个函数就会有一个“我”的含义：<code>function</code>会自然而然的产生<code>this</code>并指向自己。而链式操作就是利用了这点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果是浏览器的话，在没有对象的情况下，父级应该就是<code>window</code>了。而函数返回<code>this</code>相当于把自己返回到操作空间中，而操作空间属于父级。也就是说，只要是同一级别的函数，通过返回<code>this</code>把操作权交还到父级手中从而达到继续调用同级函数的技能。还不清楚？反正我不画图。</p>
+<h3 id="简单链式操作"><a href="#简单链式操作" class="headerlink" title="简单链式操作"></a>简单链式操作</h3><p>在此我们以著名歌唱家“雷军”举个例子。雷军可以说是目前最强悍的企业家了，写得了软件造得了手机，能唱一首好歌能吹一手好B。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 雷军（人为对象，构造成立）</span></div><div class="line"><span class="keyword">var</span> LeiJun = &#123;</div><div class="line">  hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hello, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thank: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thanks: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you very much, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 驱使对象雷军唱出《Are you ok》前三句</span></div><div class="line">leijun</div><div class="line">  .hello()</div><div class="line">  .thank()</div><div class="line">  .thanks()</div></pre></td></tr></table></figure>
+<p>如果按字面意思可能永远都理解不来，从而产生哲学三连：我是谁？我在哪？我在干什么？所以又有一句话得以解释：从哪里来，回哪里去。</p>
+<h2 id="为什么用链式操作"><a href="#为什么用链式操作" class="headerlink" title="为什么用链式操作"></a>为什么用链式操作</h2><p>所以作用很明显了，一种工厂流水线式的操作，流的形式完成任务。所以我要把这种设计模式归入函数式编程也是因为，函数式思想本来就是让数据经过所有“函数流”最后得到产物并返回。数据不变，不额外干涉操作。</p>
+<p>不同的是，常规FP中，不管是单函数单返回走流，还是柯里化，它都是一种“一进一出”的思想——出来的产物继续传入下一道“工序”进行加工，一直到最后一个加工函数为止。</p>
+<p>然而链式操作并不是这种哲学，它是一种“从第一次进入就买定离手”的操作——只要一开头传入参数，流不结束不会见到半成品。数据经过一层函数之后，可能经过加工处理结束后，又会被打包/压缩/处理到‘this’中并继续接下来的工作。</p>
+<p>链式操作相对于柯里化来说，起码它做到了：</p>
+<ul>
+<li>可阅读</li>
+<li>少占用</li>
+<li>减少代码重复性（都有）</li>
+<li>代码简洁（都有）</li>
+</ul>
+<p>柯里化最明显的优点就是阅读性差（？？？），假设有个方法叫<code>leijun</code>,那么调用方法的画风就大不相同</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">leijun()()()</div></pre></td></tr></table></figure>
+<p>鬼才知道他想唱的是“Are you ok”还是“Indian Mi Fans”呢……</p>
+<p>还有就是，因为流操作，让人很容易想到异步。JS也是患有懒癌很多年了，必须靠驱动工作。所以注定它是不能异步编程的。</p>
+<p>所以jQuery还是很强大的框架，在ES5什么都没有就靠三种规范的语法，已经要实现那么多东西了。让JS支持异步编程也就两种操作吧：函数内回调函数、链式操作函数。这框架两种都用上了。而说NodeJS速度快，一方面也是因为目前两个服务器框架都是异步（一堆回调函数）得到的结果吧。</p>
+<h2 id="不止JavaScript能用"><a href="#不止JavaScript能用" class="headerlink" title="不止JavaScript能用"></a>不止JavaScript能用</h2><p>实际上本质就是，把执行权交给函数之后，函数执行完自己的工作之后，还可以吧执行权重新交回父级手中，让父级自行处理接下来的工作。</p>
+<p>所以强化函数式编程的语言或者说能返回自身的语言应该都可以支持该模式，在这之后我只接触过<code>Golang</code>有这种操作，不过那当时哪来的Go啊…</p>
+<p>这个世界本来就先有的FP，因为概念不够清晰才出现了OOP。现在业务量复杂到OOP已经不好解决了，这个时候人们又想起了凉了的FP。2018年肯定是一个FP的年代（然后我要放弃FP看着它火了？不！这次看到希望不会撒手了！）</p>
+<p>在我在无脑吹FP的时候（懂得概念不懂得实践），我看到了swift的出现，JAVA8强化λ，go的出现，TypeScript的出现（乱入，它强调OOP）。</p>
+<p>我很喜欢结构体，枚举，剩下的靠函数式，从而淡化了类的存在，或者说我并不喜欢类的想法。</p>
+<p>所以盲目追从FP会陷入一个误区：<a href="http://www.sohu.com/a/111489713_166487" target="_blank" rel="external">王垠:编程宗派之我见<em>搜狐其它</em>搜狐网</a></p>
+<p>虽然都说王垠有点纸上谈兵，但我还是觉得是有点道理的。本来各种语言的出现就是为了完成那个时代的任务，而接近冷门的语言使用者怕被看不起就各种自卫活动。天天上升为宗教级别战争，是不是有点过了？</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[冒泡排序的骚思路]]></title>
       <url>/PersonalBlog/2017/12/20/exchange_number/</url>
       <content type="html"><![CDATA[<p>想起以前很容易就会被问到一个问题</p>
@@ -882,7 +976,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[ES古往今来所有for的总结]]></title>
+      <title><![CDATA[JavaScript所有for]]></title>
       <url>/PersonalBlog/2017/03/02/js-for/</url>
       <content type="html"><![CDATA[<p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
 <p>觉得我不服！我要上！<br><a id="more"></a></p>

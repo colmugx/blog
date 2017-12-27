@@ -59,7 +59,7 @@
   <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
 
 
-  <meta name="subtitle" content="喔噢，多酷的创意！">
+  <meta name="subtitle" content="SHOW YOUR FUNCTION NO BB.">
 
 
   <meta name="description" content="Co1MugX Blog">
@@ -69,7 +69,7 @@
   <title>
   ColMugX
   
-    | 喔噢，多酷的创意！
+    | SHOW YOUR FUNCTION NO BB.
   
 </title>
 </head>
@@ -88,7 +88,7 @@
   <div class="logo-inner syuanpi tvIn">
     <span><a href="/PersonalBlog/">ColMugX</a></span>
     
-      <span id="subtitle">喔噢，多酷的创意！</span>
+      <span id="subtitle">SHOW YOUR FUNCTION NO BB.</span>
     
   </div>
 </div>
@@ -159,7 +159,13 @@
 </nav>
     
     
-        
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+  
     
   </div>
 </header>
@@ -239,6 +245,102 @@
   
 
 <section class="posts">
+  
+    
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2017-12-26</span>
+          
+            
+              <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
+            
+          
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          <a href="/PersonalBlog/2017/12/26/my-known-javascript/">我所认识的JavaScript</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        
+          <p>我虽然接触过很多语言，玩得也不深，直接把<code>C++</code>同系的全砍掉。但是我还是能说，<code>JavaScript</code>是我见过的最有意思的语言。</p>
+<p>随便打开一个chrome或者terminal打开<code>node</code>玩一会，随便定义一个变量常量函数。你会发现，后面跟着一个<code>undefined</code></p>
+<p><del>（图片收拾起来太麻烦了，所以此处无图）</del></p>
+<p>这个位置显示的量肯定是返回值，菜鸡不敢开讲V8，但我觉得就是。因为<code>JavaScript</code>会把一切东西都当做函数或者对象。当你构建一个变量的时候，在JS的角度它可能理解为一个新的<code>function</code>了，不过因为你作为人的目的只是想创建一个变量/常量，以人的角度来考虑这不是个函数，所以作为人的角度来说这个变量/常量不应该有返回值；而JS的角度是把这个内容当做函数了，但是因为不知道返回值是什么，又必须返回，所以返回<code>undefined</code></p>
+<p>所以对于JS中断流的操作可以直接用<code>return</code>而没有<code>return false</code>就解释的清楚了？我也不知道，可能继续学习的话会得到结果吧。</p>
+<p>所以这样的话可能另一个问题也有答案了：为什么不需要构造变量，直接创建一个字符串就有方法了？</p>
+<p>这看起来应该很有意思，他的“心理历程”可能是这样的：发现一个量，通过推断这个量应该是<code>string</code>类型，关于<code>string</code>的原型链，有，继承<code>string</code>原型链已定义的方法。</p>
+<p>原型链也是个有意思的东西，而且JS的内置方法/原型链也不是一成不变的，可以补充可以改写。</p>
+
+        
+      
+    
+    </div>
+    
+  </article>
+  
+  
+
+  
+    
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2017-12-23</span>
+          
+            
+              <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
+            
+          
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          <a href="/PersonalBlog/2017/12/23/js-method-chaining/">JavaScript链式方法</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        
+          <blockquote>
+<p>著名框架<code>jQuery</code>所使用的设计模式——“虾扯蛋”</p>
+</blockquote>
+<p>之前在知乎回答过一个问题：2018的前端应该学什么。</p>
+<p>我回答了：就算前端再复杂，jQuery依然是最流行的那个。</p>
+<p>这答案怎么样呢？废话！肯定没人点赞了！</p>
+<p>人性就是如此！一旦接受了更<del>装逼</del>新的思路，就会觉得以前见过的东西都太弱了！</p>
+<p>新项目想用什么就用什么，什么技术栈健全就用什么。可是老项目并没办法想干什么干什么，时间和精力不允许他去重构。金蝶还在卖VB呢，他们肯定也想过VB已经不行了。</p>
+<p>好了题外话，我还是很有兴趣实现一个塞进<code>nlvi</code>的类jq的。</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/PersonalBlog/2017/12/23/js-method-chaining/#more">
+          <span>继续阅读</span>
+        </a>
+      </p>
+    
+    </div>
+    
+  </article>
+  
+  
+
   
     
   <article class="
@@ -513,103 +615,6 @@
 
         
       
-    
-    </div>
-    
-  </article>
-  
-  
-
-  
-    
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi riseIn-light back-1">
-        <div class="post-time-wrapper">
-          <span>2017-09-19</span>
-          
-            
-              <span class="post-category"><a href="/PersonalBlog/categories/实践尝试/">实践尝试</a></span>
-            
-          
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi riseIn-light back-2">
-        
-          <a href="/PersonalBlog/2017/09/19/what-the-feeling-about-hyper/">使用桌面应用写hexo博客是什么体验？</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi riseIn-light back-3">
-      
-        
-          <blockquote>
-<p>稳的稳的，这次真是为了需求造轮子了。Hyper = Hexo + Typer. </p>
-</blockquote>
-<p>接触到hexo是因为，hexo可以是一个前端博客生成器，直接生成一个前端静态页面，做到可以上传到github“个人页面”作为博客网站。</p>
-<p>不过，毕竟是基于<code>node</code>的生成器，编写过程很geek。首先创建和预览甚至发布，依赖<code>terminal</code>和<code>node</code>。你要使用一个你喜欢的<code>markdown</code>编辑器，或者直接就在代码编辑器搞例如<code>vscode</code>。原来我也是用这个写博客。因为自带了<code>terminal</code>，直接创建了搞完直接上。后来生活逐渐好点，用的 iterm2 + zsh 之后，编辑器改用了<code>Typora</code>。然而关于这段的话，我上一篇<a href="http://blog.co1mugx.tk/2017/08/22/do-markdown-hexo/" target="_blank" rel="external">搞electron+vue+webpack2+TypeScript什么体验</a> 已经讲得够多了，所以不赘述了。</p>
-<p>但是现在，可能生活会更好了…</p>
-<p><img src="https://github.com/ColMugX/GitBed/raw/master/hyper/1.png" alt=""></p>
-        
-      
-    
-      <p class="content-link">
-        <a href="/PersonalBlog/2017/09/19/what-the-feeling-about-hyper/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
-    
-    </div>
-    
-  </article>
-  
-  
-
-  
-    
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi riseIn-light back-1">
-        <div class="post-time-wrapper">
-          <span>2017-08-22</span>
-          
-            
-              <span class="post-category"><a href="/PersonalBlog/categories/实践尝试/">实践尝试</a></span>
-            
-          
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi riseIn-light back-2">
-        
-          <a href="/PersonalBlog/2017/08/22/do-markdown-hexo/">搞electron + vue + webpack2 + TypeScript什么体验</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi riseIn-light back-3">
-      
-        
-          <p>本来是想放弃的，后来歪打正着，成功运行。最后搞一个ts类型的启动器，不想再懵了。</p>
-<p><a href="https://github.com/ColMugX/vue-ts-electron-starter" target="_blank" rel="external">vue-ts-electron-starter</a></p>
-<p>想看看原项目<code>electron-vue</code>有没有这个打算，没有的话自己fork个分支出来。这个将就。</p>
-<p>这次搞这个项目目的就很明显了，想做一个Hexo博客的编辑器（没错就是我这个博客的核心）。Hexo的话，属于页面生成器类的博客系统。直接一套生成静态页面，然后随意访问。因为一整套静态页面故还是有人喜欢直接干一套SPA上去，体验也好。</p>
-<p>其实搞这个，我去年就想搞了。可是去年的话，明显前端的技术都不扎实更别说搞了，当时的想法是写一个Mac App（我swift应该还行，随便写写问题不大。不过可能现在的话问题就大了）。不过就一直拖拖拖，导致swift3.0都有苗头了我还是没想写。而且关于如何操作terminal命令，还是个问题。</p>
-<p>这次心就大了。搞了再说，搞一半不行了就让他荒了。以后想起来再搞，再搞的时候技术肯定又上涨。如果这波做成了，开源，我不管有没有人用，总有人喜欢用。<br>
-        
-      
-    
-      <p class="content-link">
-        <a href="/PersonalBlog/2017/08/22/do-markdown-hexo/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
     
     </div>
     

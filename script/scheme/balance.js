@@ -10,7 +10,7 @@ if (nCONFIG.theme == 'balance') {
       );
       $('#scrollpercent').html(scrollPercentRounded);
     })
-    $('.toTop').on('click', function () {
+    $('.toTop').on('click', function() {
       $('html, body').animate({
         scrollTop: 0
       });
@@ -43,5 +43,26 @@ if (nCONFIG.theme == 'balance') {
         Nlvi.tools.opreateClass('.main-nav', 'has_toc', 'remove');
       }
     })
+  }
+  
+  Nlvi.utils.tagcloud = function() {
+    function tagHide() {
+      $('#tagcloud').addClass('dead').one('webkitAnimationEnd AnimationEnd', function() {
+        $(this).hide();
+        Nlvi.tools.opreateClass('#tagcloud', 'show syuanpi bloom dead', 'remove');
+        Nlvi.tools.opreateClass('.menu-item', 'has_tag', 'remove');
+        Nlvi.tools.opreateClass('.main-nav', 'has_tag', 'remove');
+      });
+    }
+    $('#tags').on('click', function() {
+      if (Nlvi.tools.existClass('#tagcloud', 'show')) {
+        tagHide();
+      } else {
+        $('#tagcloud').show();
+        Nlvi.tools.opreateClass('#tagcloud', 'show syuanpi bloom');
+        Nlvi.tools.opreateClass('.menu-item', 'has_tag');
+        Nlvi.tools.opreateClass('.main-nav', 'has_tag');
+      }
+    });
   }
 }

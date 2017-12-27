@@ -68,7 +68,7 @@
 
   <meta name="keywords" content="JavaScript, Nlvi" />
 
-  <title> 你还在用Console.log()？ · ColMugX </title>
+  <title> JavaScript链式方法 · ColMugX </title>
 </head>
 <body>
   <div class="progress">
@@ -167,8 +167,8 @@
   <aside class="post-toc">
     <span class="title" id="toc-switch"><span>文章导航</span></span>
     <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">你还在用Console.log()？</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#log-info-error-warn"><span class="toc-text">log(), info(), error(), warn()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exception-debug"><span class="toc-text">_exception(), debug()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assert-…-clear-count"><span class="toc-text">assert(…), clear(), count()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dir-dirxml"><span class="toc-text">dir(), dirxml()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#group-groupCollapsed-groupEnd"><span class="toc-text">group(), groupCollapsed(), groupEnd()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#table-…"><span class="toc-text">table(…)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#另外的技巧就是可以用占位符了"><span class="toc-text">另外的技巧就是可以用占位符了</span></a></li></ol>
+      <li class="title-link"><a href="javascript:;" class="toTop">JavaScript链式方法</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#怎么来的链式操作"><span class="toc-text">怎么来的链式操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我用过的JavaScript"><span class="toc-text">我用过的JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单链式操作"><span class="toc-text">简单链式操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么用链式操作"><span class="toc-text">为什么用链式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不止JavaScript能用"><span class="toc-text">不止JavaScript能用</span></a></li></ol>
     </div>
   </aside>
 
@@ -257,7 +257,7 @@
     <header class="post-header">
       <div class="post-time syuanpi riseIn-light back-1">
         <div class="post-time-wrapper">
-          <span>2017-11-20</span>
+          <span>2017-12-23</span>
           
             
               <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
@@ -276,79 +276,58 @@
       </div>
       <h1 class="post-title syuanpi riseIn-light back-2">
         
-          你还在用Console.log()？
+          JavaScript链式方法
         
       </h1>
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
         <blockquote>
-<p>也许主题应该改为：你只会使用Console.log()？</p>
+<p>著名框架<code>jQuery</code>所使用的设计模式——“虾扯蛋”</p>
 </blockquote>
-<p>现在的前端虽说是越来越复杂，但是我怎么觉得现在前端的要求越来越低了？应该说现在的人，看个几遍vue，知道console.log()，知道var, {}, []，就敢出来找工作了。但是<code>console</code>就这么个方法？</p>
-<p>搞笑，你在你的浏览器输入<code>console</code>，自己看看有多少东西！所以为了高效调试我觉得有必要全了解一遍。<br><a id="more"></a></p>
-<h2 id="log-info-error-warn"><a href="#log-info-error-warn" class="headerlink" title="log(), info(), error(), warn()"></a>log(), info(), error(), warn()</h2><p>这几个放在一起讲</p>
-<blockquote>
-<p>log() 普通输出</p>
+<p>之前在知乎回答过一个问题：2018的前端应该学什么。</p>
+<p>我回答了：就算前端再复杂，jQuery依然是最流行的那个。</p>
+<p>这答案怎么样呢？废话！肯定没人点赞了！</p>
+<p>人性就是如此！一旦接受了更<del>装逼</del>新的思路，就会觉得以前见过的东西都太弱了！</p>
+<p>新项目想用什么就用什么，什么技术栈健全就用什么。可是老项目并没办法想干什么干什么，时间和精力不允许他去重构。金蝶还在卖VB呢，他们肯定也想过VB已经不行了。</p>
+<p>好了题外话，我还是很有兴趣实现一个塞进<code>nlvi</code>的类jq的。</p>
+<a id="more"></a>
+<h2 id="怎么来的链式操作"><a href="#怎么来的链式操作" class="headerlink" title="怎么来的链式操作"></a>怎么来的链式操作</h2><blockquote>
+<p>如果不用链式调用，jQuery没有性能可言 ——鲁迅</p>
 </blockquote>
-<p>这是最普通，最常见，最没什么东西好讲的。输出的样式是普通样式。</p>
-<blockquote>
-<p>info() 提醒输出</p>
-</blockquote>
-<p>这是一个早期chrome才能看到的效果，现在的FireFox也能看到，是一个圆形中间一个叹号的标记。作提醒作用。chrome不是不会显示，是显示成普通样式。</p>
-<blockquote>
-<p>error() 错误输出</p>
-</blockquote>
-<p>这个应该跟<code>log()</code>同个使用数量级的，表示错误，大红颜色。chrome表现是一整行都是红色的，很显眼。用来显示错误信息。比如throw 错误之类的。如果一套都是<code>log()</code>的话肯定很难一眼看到错误。珍爱视力，路还长着…</p>
-<blockquote>
-<p>warn() 警告输出</p>
-</blockquote>
-<p>就是警告咯，可能用的比较少，但是工具类和一些库肯定会容易看到，原来跟<code>info()</code>平起平坐，现在应该是替代了。显示效果会显眼的黄色，chrome会有黄色背景。</p>
-<blockquote>
-<p>debug() 调试输出</p>
-</blockquote>
-<p>这个就是<code>log()</code>，用来输出调试信息的。不过现在的调试信息都在花式<code>log()</code>，也不需要用到这个了。</p>
-<h2 id="exception-debug"><a href="#exception-debug" class="headerlink" title="_exception(), debug()"></a>_exception(), debug()</h2><p>这组只有两个，因为这两个没卵用…为什么…</p>
-<blockquote>
-<p>_exception() 例外输出</p>
-</blockquote>
-<p>说白了就是用来输出错误的，那错误不能用<code>error()</code>吗？！</p>
-<blockquote>
-<p>debug() 调试输出</p>
-</blockquote>
-<p>早期可能还有区别，但是这就是一个<code>log()</code>，不过现在各前端都在花式<code>log()</code>调试信息，可能也有些人<code>debug()</code>都没听说过。</p>
-<h2 id="assert-…-clear-count"><a href="#assert-…-clear-count" class="headerlink" title="assert(…), clear(), count()"></a>assert(…), clear(), count()</h2><p>为什么第一个函数搞了三个点？</p>
-<blockquote>
-<p>assert() 断言输出：判断第一个参数是否为真，false的话抛出异常并且在控制台输出相应信息。——MDN</p>
-</blockquote>
-<p>从这里开始就要骚了，这是一个判断的方法，里面需要填写参数，然后得到返回值。如果值为真，就什么都不会发生，反之则以<code>error()</code>通知你。这是个多参数的，除了第一个参数之外，后面接的参数是被输出的对象也好，字符串也好，并且会拼接。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.assert(<span class="number">1</span>&gt;<span class="number">2</span>, <span class="string">"你这么骚的？"</span>)</div><div class="line"></div><div class="line">Assertion failed: 你这么骚的？ <span class="comment">// 假装这里是红字红色背景</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>clear() 清空控制台</p>
-</blockquote>
-<p>就是把控制台全清空，terminal里面的<code>clear</code></p>
-<blockquote>
-<p>count() 次数输出：以参数为标识记录调用的次数，调用时在控制台打印标识以及调用次数。——MDN</p>
-</blockquote>
-<p>并且MDN明确指出，这个不应该列入正常使用范围，因为这是非标准方法。这是这组里最骚的方法。用来输出本身被调用了几次…虽然如果测试循环的话，一般都直接log(i)的，直接看1234567不是更明确嘛。显示效果就是，每运行一次就会在控制台打印 n + 1。</p>
-<h2 id="dir-dirxml"><a href="#dir-dirxml" class="headerlink" title="dir(), dirxml()"></a>dir(), dirxml()</h2><p>这两个一起说是因为，有相同点和不同点。</p>
-<blockquote>
-<p>dir() 对象结构输出</p>
-<p>dirxml() 节点结构输出</p>
-</blockquote>
-<p>这两个都是输出一个树状结构，就是前面有个小三角。但不同点就是，<code>dir()</code>是把一个对象按照对象的形式呈现，当然用来输出节点就是把节点信息按object呈现。<code>dirxml()</code>是把节点呈现出来，就还是保留xml的样式呈现。都是非标准，偶尔用用还行？</p>
-<h2 id="group-groupCollapsed-groupEnd"><a href="#group-groupCollapsed-groupEnd" class="headerlink" title="group(), groupCollapsed(), groupEnd()"></a>group(), groupCollapsed(), groupEnd()</h2><p>这是上面那组的正房版。都是打印结构。我就不一行一行解释了有点累…</p>
-<p>第二跟第一都是打印树状结构，但是第一个会自动打开显示结构里面有什么结构（没问题的），第二个叫内联树状，默认不打开。</p>
-<p>而且只要你不结束，你可以一直联下去的，这样一个父节点可以一直续下去…直到通过<code>groupend()</code>来结束。</p>
-<h2 id="table-…"><a href="#table-…" class="headerlink" title="table(…)"></a>table(…)</h2><p>我必须强调！<strong>这是最棒的我最喜欢的console方法，没有之一！</strong></p>
-<blockquote>
-<p>table() 表格输出</p>
-</blockquote>
-<p>这个方法必须传入内容，内容的类型是array或者object，输出的样式是一个key:value的表格！如果你觉得输出成对象不方便检查的话，那就用<code>table()</code>吧！（当然在表格下方还是会return一次对象或者数组）</p>
-<p>而且不仅是key:value，<strong>你甚至还能多元数组！对象套对象！甚至是JSON！</strong></p>
-<h2 id="另外的技巧就是可以用占位符了"><a href="#另外的技巧就是可以用占位符了" class="headerlink" title="另外的技巧就是可以用占位符了"></a>另外的技巧就是可以用占位符了</h2><p>跟C语言的<code>printf()</code>没有区别，就是可以利用占位符然后再把参数接在后面。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">"%d年%d月%d日"</span>,<span class="number">2017</span>,<span class="number">11</span>,<span class="number">20</span>)</div></pre></td></tr></table></figure>
-<p>最后感谢MDN，也感谢AlphaGo！</p>
+<p>鲁迅：我不是！我没有！别乱说啊！</p>
+<p>我记得有人测试过，<code>$(&#39;#ele&#39;)</code>会比<code>document.getElementById(&#39;ele&#39;)</code>慢很多。如果是按行操作dom而不是用专属的链式调用，效率会更差。</p>
+<p>但这次不是来讨论jQuery的效率的。链式方法也是一种设计模式，有必要了解一下。就算ES6常使用的<code>Promise</code>，也用到了链式调用。</p>
+<p><code>JavaScript</code>能够函数式编程，还是因为它是个“函数为第一公民”的语言，但它并没有<code>pure function</code>是因为它的设计其实是多范式的。而ES6把构造函数和<code>classes</code>加进去之后更是证明了这一点。</p>
+<h3 id="我用过的JavaScript"><a href="#我用过的JavaScript" class="headerlink" title="我用过的JavaScript"></a>我用过的JavaScript</h3><p>关于这部分，我觉得我想分享的东西有点超篇幅，所以移步到另外一篇分享吧：<a href="/PersonalBlog/2017/12/26/my-known-javascript/">我所认识的JavaScript</a></p>
+<p>大致上就是<code>JavaScript</code>之所以能这么玩是因为它会把任何东西都看做“函数”来看待，并且以它的理解就是：我能且只能掌控函数，函数必有返回值。并且每产生一个函数就会有一个“我”的含义：<code>function</code>会自然而然的产生<code>this</code>并指向自己。而链式操作就是利用了这点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果是浏览器的话，在没有对象的情况下，父级应该就是<code>window</code>了。而函数返回<code>this</code>相当于把自己返回到操作空间中，而操作空间属于父级。也就是说，只要是同一级别的函数，通过返回<code>this</code>把操作权交还到父级手中从而达到继续调用同级函数的技能。还不清楚？反正我不画图。</p>
+<h3 id="简单链式操作"><a href="#简单链式操作" class="headerlink" title="简单链式操作"></a>简单链式操作</h3><p>在此我们以著名歌唱家“雷军”举个例子。雷军可以说是目前最强悍的企业家了，写得了软件造得了手机，能唱一首好歌能吹一手好B。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 雷军（人为对象，构造成立）</span></div><div class="line"><span class="keyword">var</span> LeiJun = &#123;</div><div class="line">  hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hello, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thank: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thanks: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you very much, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 驱使对象雷军唱出《Are you ok》前三句</span></div><div class="line">leijun</div><div class="line">  .hello()</div><div class="line">  .thank()</div><div class="line">  .thanks()</div></pre></td></tr></table></figure>
+<p>如果按字面意思可能永远都理解不来，从而产生哲学三连：我是谁？我在哪？我在干什么？所以又有一句话得以解释：从哪里来，回哪里去。</p>
+<h2 id="为什么用链式操作"><a href="#为什么用链式操作" class="headerlink" title="为什么用链式操作"></a>为什么用链式操作</h2><p>所以作用很明显了，一种工厂流水线式的操作，流的形式完成任务。所以我要把这种设计模式归入函数式编程也是因为，函数式思想本来就是让数据经过所有“函数流”最后得到产物并返回。数据不变，不额外干涉操作。</p>
+<p>不同的是，常规FP中，不管是单函数单返回走流，还是柯里化，它都是一种“一进一出”的思想——出来的产物继续传入下一道“工序”进行加工，一直到最后一个加工函数为止。</p>
+<p>然而链式操作并不是这种哲学，它是一种“从第一次进入就买定离手”的操作——只要一开头传入参数，流不结束不会见到半成品。数据经过一层函数之后，可能经过加工处理结束后，又会被打包/压缩/处理到‘this’中并继续接下来的工作。</p>
+<p>链式操作相对于柯里化来说，起码它做到了：</p>
+<ul>
+<li>可阅读</li>
+<li>少占用</li>
+<li>减少代码重复性（都有）</li>
+<li>代码简洁（都有）</li>
+</ul>
+<p>柯里化最明显的优点就是阅读性差（？？？），假设有个方法叫<code>leijun</code>,那么调用方法的画风就大不相同</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">leijun()()()</div></pre></td></tr></table></figure>
+<p>鬼才知道他想唱的是“Are you ok”还是“Indian Mi Fans”呢……</p>
+<p>还有就是，因为流操作，让人很容易想到异步。JS也是患有懒癌很多年了，必须靠驱动工作。所以注定它是不能异步编程的。</p>
+<p>所以jQuery还是很强大的框架，在ES5什么都没有就靠三种规范的语法，已经要实现那么多东西了。让JS支持异步编程也就两种操作吧：函数内回调函数、链式操作函数。这框架两种都用上了。而说NodeJS速度快，一方面也是因为目前两个服务器框架都是异步（一堆回调函数）得到的结果吧。</p>
+<h2 id="不止JavaScript能用"><a href="#不止JavaScript能用" class="headerlink" title="不止JavaScript能用"></a>不止JavaScript能用</h2><p>实际上本质就是，把执行权交给函数之后，函数执行完自己的工作之后，还可以吧执行权重新交回父级手中，让父级自行处理接下来的工作。</p>
+<p>所以强化函数式编程的语言或者说能返回自身的语言应该都可以支持该模式，在这之后我只接触过<code>Golang</code>有这种操作，不过那当时哪来的Go啊…</p>
+<p>这个世界本来就先有的FP，因为概念不够清晰才出现了OOP。现在业务量复杂到OOP已经不好解决了，这个时候人们又想起了凉了的FP。2018年肯定是一个FP的年代（然后我要放弃FP看着它火了？不！这次看到希望不会撒手了！）</p>
+<p>在我在无脑吹FP的时候（懂得概念不懂得实践），我看到了swift的出现，JAVA8强化λ，go的出现，TypeScript的出现（乱入，它强调OOP）。</p>
+<p>我很喜欢结构体，枚举，剩下的靠函数式，从而淡化了类的存在，或者说我并不喜欢类的想法。</p>
+<p>所以盲目追从FP会陷入一个误区：<a href="http://www.sohu.com/a/111489713_166487" target="_blank" rel="external">王垠:编程宗派之我见<em>搜狐其它</em>搜狐网</a></p>
+<p>虽然都说王垠有点纸上谈兵，但我还是觉得是有点道理的。本来各种语言的出现就是为了完成那个时代的任务，而接近冷门的语言使用者怕被看不起就各种自卫活动。天天上升为宗教级别战争，是不是有点过了？</p>
 
       
     
@@ -364,7 +343,7 @@
     </div>
     <div class="copy-url">
       <span>地址 :</span>
-      <a href="https://colmugx.github.io/PersonalBlog/2017/11/20/js-console/">https://colmugx.github.io/PersonalBlog/2017/11/20/js-console/</a>
+      <a href="https://colmugx.github.io/PersonalBlog/2017/12/23/js-method-chaining/">https://colmugx.github.io/PersonalBlog/2017/12/23/js-method-chaining/</a>
     </div>
     <div class="copy-origin">
       <span>来源 :</span>
@@ -382,16 +361,16 @@
     
   <nav class="article-page">
     
-      <a href="/PersonalBlog/2017/12/07/about-currying/" id="art-left" class="art-left">
+      <a href="/PersonalBlog/2017/12/26/my-known-javascript/" id="art-left" class="art-left">
         <span class="next-title">
-          <i class="iconfont icon-left"></i>扯扯柯里化
+          <i class="iconfont icon-left"></i>我所认识的JavaScript
         </span>
       </a>
     
     
-      <a href="/PersonalBlog/2017/10/17/reference-equal-pointer/" id="art-right" class="art-right">
+      <a href="/PersonalBlog/2017/12/20/exchange_number/" id="art-right" class="art-right">
         <span class="prev-title"> 
-          引用等于指针吗？<i class="iconfont icon-right"></i>  
+          冒泡排序的骚思路<i class="iconfont icon-right"></i>  
         </span>
       </a>
     

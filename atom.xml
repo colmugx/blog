@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ColMugX</title>
   
-  <subtitle>喔噢，多酷的创意！</subtitle>
+  <subtitle>SHOW YOUR FUNCTION NO BB.</subtitle>
   <link href="/PersonalBlog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/PersonalBlog/"/>
-  <updated>2017-12-22T02:59:02.058Z</updated>
+  <updated>2017-12-26T10:00:48.330Z</updated>
   <id>https://colmugx.github.io/PersonalBlog/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我所认识的JavaScript</title>
+    <link href="https://colmugx.github.io/PersonalBlog/2017/12/26/my-known-javascript/"/>
+    <id>https://colmugx.github.io/PersonalBlog/2017/12/26/my-known-javascript/</id>
+    <published>2017-12-26T09:59:18.000Z</published>
+    <updated>2017-12-26T10:00:48.330Z</updated>
+    
+    <content type="html"><![CDATA[<p>我虽然接触过很多语言，玩得也不深，直接把<code>C++</code>同系的全砍掉。但是我还是能说，<code>JavaScript</code>是我见过的最有意思的语言。</p><p>随便打开一个chrome或者terminal打开<code>node</code>玩一会，随便定义一个变量常量函数。你会发现，后面跟着一个<code>undefined</code></p><p><del>（图片收拾起来太麻烦了，所以此处无图）</del></p><p>这个位置显示的量肯定是返回值，菜鸡不敢开讲V8，但我觉得就是。因为<code>JavaScript</code>会把一切东西都当做函数或者对象。当你构建一个变量的时候，在JS的角度它可能理解为一个新的<code>function</code>了，不过因为你作为人的目的只是想创建一个变量/常量，以人的角度来考虑这不是个函数，所以作为人的角度来说这个变量/常量不应该有返回值；而JS的角度是把这个内容当做函数了，但是因为不知道返回值是什么，又必须返回，所以返回<code>undefined</code></p><p>所以对于JS中断流的操作可以直接用<code>return</code>而没有<code>return false</code>就解释的清楚了？我也不知道，可能继续学习的话会得到结果吧。</p><p>所以这样的话可能另一个问题也有答案了：为什么不需要构造变量，直接创建一个字符串就有方法了？</p><p>这看起来应该很有意思，他的“心理历程”可能是这样的：发现一个量，通过推断这个量应该是<code>string</code>类型，关于<code>string</code>的原型链，有，继承<code>string</code>原型链已定义的方法。</p><p>原型链也是个有意思的东西，而且JS的内置方法/原型链也不是一成不变的，可以补充可以改写。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我虽然接触过很多语言，玩得也不深，直接把&lt;code&gt;C++&lt;/code&gt;同系的全砍掉。但是我还是能说，&lt;code&gt;JavaScript&lt;/code&gt;是我见过的最有意思的语言。&lt;/p&gt;
+&lt;p&gt;随便打开一个chrome或者terminal打开&lt;code&gt;node&lt;/code&gt;玩
+      
+    
+    </summary>
+    
+      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript链式方法</title>
+    <link href="https://colmugx.github.io/PersonalBlog/2017/12/23/js-method-chaining/"/>
+    <id>https://colmugx.github.io/PersonalBlog/2017/12/23/js-method-chaining/</id>
+    <published>2017-12-23T10:05:54.000Z</published>
+    <updated>2017-12-27T02:12:27.058Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>著名框架<code>jQuery</code>所使用的设计模式——“虾扯蛋”</p></blockquote><p>之前在知乎回答过一个问题：2018的前端应该学什么。</p><p>我回答了：就算前端再复杂，jQuery依然是最流行的那个。</p><p>这答案怎么样呢？废话！肯定没人点赞了！</p><p>人性就是如此！一旦接受了更<del>装逼</del>新的思路，就会觉得以前见过的东西都太弱了！</p><p>新项目想用什么就用什么，什么技术栈健全就用什么。可是老项目并没办法想干什么干什么，时间和精力不允许他去重构。金蝶还在卖VB呢，他们肯定也想过VB已经不行了。</p><p>好了题外话，我还是很有兴趣实现一个塞进<code>nlvi</code>的类jq的。</p><a id="more"></a><h2 id="怎么来的链式操作"><a href="#怎么来的链式操作" class="headerlink" title="怎么来的链式操作"></a>怎么来的链式操作</h2><blockquote><p>如果不用链式调用，jQuery没有性能可言 ——鲁迅</p></blockquote><p>鲁迅：我不是！我没有！别乱说啊！</p><p>我记得有人测试过，<code>$(&#39;#ele&#39;)</code>会比<code>document.getElementById(&#39;ele&#39;)</code>慢很多。如果是按行操作dom而不是用专属的链式调用，效率会更差。</p><p>但这次不是来讨论jQuery的效率的。链式方法也是一种设计模式，有必要了解一下。就算ES6常使用的<code>Promise</code>，也用到了链式调用。</p><p><code>JavaScript</code>能够函数式编程，还是因为它是个“函数为第一公民”的语言，但它并没有<code>pure function</code>是因为它的设计其实是多范式的。而ES6把构造函数和<code>classes</code>加进去之后更是证明了这一点。</p><h3 id="我用过的JavaScript"><a href="#我用过的JavaScript" class="headerlink" title="我用过的JavaScript"></a>我用过的JavaScript</h3><p>关于这部分，我觉得我想分享的东西有点超篇幅，所以移步到另外一篇分享吧：<a href="/PersonalBlog/2017/12/26/my-known-javascript/">我所认识的JavaScript</a></p><p>大致上就是<code>JavaScript</code>之所以能这么玩是因为它会把任何东西都看做“函数”来看待，并且以它的理解就是：我能且只能掌控函数，函数必有返回值。并且每产生一个函数就会有一个“我”的含义：<code>function</code>会自然而然的产生<code>this</code>并指向自己。而链式操作就是利用了这点。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>如果是浏览器的话，在没有对象的情况下，父级应该就是<code>window</code>了。而函数返回<code>this</code>相当于把自己返回到操作空间中，而操作空间属于父级。也就是说，只要是同一级别的函数，通过返回<code>this</code>把操作权交还到父级手中从而达到继续调用同级函数的技能。还不清楚？反正我不画图。</p><h3 id="简单链式操作"><a href="#简单链式操作" class="headerlink" title="简单链式操作"></a>简单链式操作</h3><p>在此我们以著名歌唱家“雷军”举个例子。雷军可以说是目前最强悍的企业家了，写得了软件造得了手机，能唱一首好歌能吹一手好B。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 雷军（人为对象，构造成立）</span></div><div class="line"><span class="keyword">var</span> LeiJun = &#123;</div><div class="line">  hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hello, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thank: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thanks: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you very much, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 驱使对象雷军唱出《Are you ok》前三句</span></div><div class="line">leijun</div><div class="line">  .hello()</div><div class="line">  .thank()</div><div class="line">  .thanks()</div></pre></td></tr></table></figure><p>如果按字面意思可能永远都理解不来，从而产生哲学三连：我是谁？我在哪？我在干什么？所以又有一句话得以解释：从哪里来，回哪里去。</p><h2 id="为什么用链式操作"><a href="#为什么用链式操作" class="headerlink" title="为什么用链式操作"></a>为什么用链式操作</h2><p>所以作用很明显了，一种工厂流水线式的操作，流的形式完成任务。所以我要把这种设计模式归入函数式编程也是因为，函数式思想本来就是让数据经过所有“函数流”最后得到产物并返回。数据不变，不额外干涉操作。</p><p>不同的是，常规FP中，不管是单函数单返回走流，还是柯里化，它都是一种“一进一出”的思想——出来的产物继续传入下一道“工序”进行加工，一直到最后一个加工函数为止。</p><p>然而链式操作并不是这种哲学，它是一种“从第一次进入就买定离手”的操作——只要一开头传入参数，流不结束不会见到半成品。数据经过一层函数之后，可能经过加工处理结束后，又会被打包/压缩/处理到‘this’中并继续接下来的工作。</p><p>链式操作相对于柯里化来说，起码它做到了：</p><ul><li>可阅读</li><li>少占用</li><li>减少代码重复性（都有）</li><li>代码简洁（都有）</li></ul><p>柯里化最明显的优点就是阅读性差（？？？），假设有个方法叫<code>leijun</code>,那么调用方法的画风就大不相同</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">leijun()()()</div></pre></td></tr></table></figure><p>鬼才知道他想唱的是“Are you ok”还是“Indian Mi Fans”呢……</p><p>还有就是，因为流操作，让人很容易想到异步。JS也是患有懒癌很多年了，必须靠驱动工作。所以注定它是不能异步编程的。</p><p>所以jQuery还是很强大的框架，在ES5什么都没有就靠三种规范的语法，已经要实现那么多东西了。让JS支持异步编程也就两种操作吧：函数内回调函数、链式操作函数。这框架两种都用上了。而说NodeJS速度快，一方面也是因为目前两个服务器框架都是异步（一堆回调函数）得到的结果吧。</p><h2 id="不止JavaScript能用"><a href="#不止JavaScript能用" class="headerlink" title="不止JavaScript能用"></a>不止JavaScript能用</h2><p>实际上本质就是，把执行权交给函数之后，函数执行完自己的工作之后，还可以吧执行权重新交回父级手中，让父级自行处理接下来的工作。</p><p>所以强化函数式编程的语言或者说能返回自身的语言应该都可以支持该模式，在这之后我只接触过<code>Golang</code>有这种操作，不过那当时哪来的Go啊…</p><p>这个世界本来就先有的FP，因为概念不够清晰才出现了OOP。现在业务量复杂到OOP已经不好解决了，这个时候人们又想起了凉了的FP。2018年肯定是一个FP的年代（然后我要放弃FP看着它火了？不！这次看到希望不会撒手了！）</p><p>在我在无脑吹FP的时候（懂得概念不懂得实践），我看到了swift的出现，JAVA8强化λ，go的出现，TypeScript的出现（乱入，它强调OOP）。</p><p>我很喜欢结构体，枚举，剩下的靠函数式，从而淡化了类的存在，或者说我并不喜欢类的想法。</p><p>所以盲目追从FP会陷入一个误区：<a href="http://www.sohu.com/a/111489713_166487" target="_blank" rel="external">王垠:编程宗派之我见<em>搜狐其它</em>搜狐网</a></p><p>虽然都说王垠有点纸上谈兵，但我还是觉得是有点道理的。本来各种语言的出现就是为了完成那个时代的任务，而接近冷门的语言使用者怕被看不起就各种自卫活动。天天上升为宗教级别战争，是不是有点过了？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;著名框架&lt;code&gt;jQuery&lt;/code&gt;所使用的设计模式——“虾扯蛋”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之前在知乎回答过一个问题：2018的前端应该学什么。&lt;/p&gt;
+&lt;p&gt;我回答了：就算前端再复杂，jQuery依然是最流行的那个。&lt;/p&gt;
+&lt;p&gt;这答案怎么样呢？废话！肯定没人点赞了！&lt;/p&gt;
+&lt;p&gt;人性就是如此！一旦接受了更&lt;del&gt;装逼&lt;/del&gt;新的思路，就会觉得以前见过的东西都太弱了！&lt;/p&gt;
+&lt;p&gt;新项目想用什么就用什么，什么技术栈健全就用什么。可是老项目并没办法想干什么干什么，时间和精力不允许他去重构。金蝶还在卖VB呢，他们肯定也想过VB已经不行了。&lt;/p&gt;
+&lt;p&gt;好了题外话，我还是很有兴趣实现一个塞进&lt;code&gt;nlvi&lt;/code&gt;的类jq的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>冒泡排序的骚思路</title>
@@ -376,11 +432,11 @@
   </entry>
   
   <entry>
-    <title>ES古往今来所有for的总结</title>
+    <title>JavaScript所有for</title>
     <link href="https://colmugx.github.io/PersonalBlog/2017/03/02/js-for/"/>
     <id>https://colmugx.github.io/PersonalBlog/2017/03/02/js-for/</id>
     <published>2017-03-02T15:40:42.000Z</published>
-    <updated>2017-08-21T16:32:00.000Z</updated>
+    <updated>2017-12-26T10:03:29.491Z</updated>
     
     <content type="html"><![CDATA[<p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p><p>觉得我不服！我要上！<br><a id="more"></a></p><h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</div></pre></td></tr></table></figure></p><p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</div></pre></td></tr></table></figure></p><h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</div></pre></td></tr></table></figure></p><p>不过<code>for in</code>的话，为什么说遍历对象比较多，其中一个除了好写<del>（打死吧这人）</del>，还有一点它只能用来遍历有key或者说是个index的东西，比如数组，它只能读到数组的index，那对象的话就直接读到键值咯。而且有一点的是，你读数组，<strong>读出来的index是个string不是number</strong>。这个要记得，因为js这种弱类型的东西，如果索引相加就变成字符串相加了……<strong>（我幼儿园就会20以内加减法了，1加2等于12)</strong></p><h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>这个方法就不是古老的方法了，JS(ES5)版本的时候的，针对数组的一个方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.forEach(<span class="function">(<span class="params">i</span>)=&gt;</span> &#123;&#125;)</div></pre></td></tr></table></figure></p><p>这种遍历的话，你遍历完直接能把数据处理掉最好，因为如果不是的话就麻烦了…它并不是一个开放的遍历，而是借用的闭包函数做的遍历。可以看成是<code>arr.func()</code>，它是一个数组方法，传进去一个<code>callback</code>，那就厉害了啊，闭包一个特点就是保护变量避免污染啊，变量保护是双向的啊…进得去出不来… （所以我的微信小程序openradio有用到计数器的时候不敢用这个，而且这个方法也是针对数组才能用的）</p><h3 id="for-of"><a href="#for-of" class="headerlink" title="for..of"></a>for..of</h3><p>这是ES6的新东西，它比<code>for in</code>遍历的更多，没有<code>for (;;)</code>复杂，对比<code>forEach</code>它是开放的不是闭包，也就是那些条件控制流什么的都可以操作。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr)</div></pre></td></tr></table></figure></p><p>可是不止，好像还可以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> <span class="string">'colmu'</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//'c'\n 'o'\n 'l'\n 'm'\n 'u'\n</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>不过它不能遍历对象！不能遍历对象！不能遍历对象！而且错误信息<code>TypeError: str[Symbol.iterator] is not a function</code>。所以这里我不行不BB了。</p><blockquote><p>所有实现了[Symbol.iterator]接口的对象都可以被遍历。</p></blockquote><h3 id="for-in-和-for-of-对比"><a href="#for-in-和-for-of-对比" class="headerlink" title="for in 和 for of 对比"></a>for in 和 for of 对比</h3><p>一个栗子就能锤到头皮发麻<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">// 0,1,2,3,4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//6,6,4,2,8</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><h3 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h3><p>光说区别不行，我要讲怎么用！</p><p><del>万能膏药<code>while</code></del> （不对走错片场…）</p><p>万能膏药<code>for (;;)</code>：这是怎样都能用的，不过就是长了点，但是定义细了多。</p><p>数组专利<code>forEach</code>：数组的方法，只能用在数组。</p><p>能用在数组的：<code>for</code>, <code>forEach</code>, <code>for in</code>, <code>for of</code></p><p>能用在找头的：<code>for in</code></p><p>只要支持[Symbol.iterator]要什么找什么的：<code>for of</code></p>]]></content>
     
@@ -501,56 +557,6 @@
       <category term="Syuanpi" scheme="https://colmugx.github.io/PersonalBlog/tags/Syuanpi/"/>
     
       <category term="CSS" scheme="https://colmugx.github.io/PersonalBlog/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更新全局NPM的所有可更新包</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2016/12/09/update-npm-packages/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2016/12/09/update-npm-packages/</id>
-    <published>2016-12-09T08:12:41.000Z</published>
-    <updated>2017-08-21T16:32:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天在通过<code>vue-cli</code>创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。<br>然后发现，项目内更新就<code>npm update &lt;name&gt;</code>就更新了，全局好像不知道怎么弄。然后就自作聪明的<code>npm update -g vue-cli</code>（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”<br>事实证明是能用的！<code>vue-cli</code>更新好了。<br>但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了<br>于是查了一下，说不定日后还得用，做个记录。<a id="more"></a></p><h3 id="通过npm的cli更新"><a href="#通过npm的cli更新" class="headerlink" title="通过npm的cli更新"></a>通过npm的cli更新</h3><p>后来在某个同性交流平台sf找到了，说<code>npm</code>在<code>2.6.1</code>之后有一个代码叫<code>npm install -g</code>。可以升级全部包。<br>然后我试了一下。</p><blockquote><p>eisdir EISDIR: illegal operation on a directory, read<br>npm ERR! eisdir This is most likely not a problem with npm itself<br>npm ERR! eisdir and is related to npm not being able to find a package.json in<br>npm ERR! eisdir a package you are trying to install.</p></blockquote><p><strong>？？？</strong>我有一句MMP*******</p><p>先查找npm 有多少包需要更新吧，命令是<code>npm -g outdated</code>，这个就正常了。<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Package</span>           Current        Wanted  Latest  Location</div><div class="line">cordova             <span class="number">5</span>.<span class="number">4</span>.<span class="number">1</span>         <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>   <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>  </div><div class="line">egret             MISSING         <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>   <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>  </div><div class="line">ionic       <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>-beta.<span class="number">23</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">0</span>-beta.<span class="number">3</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">14</span>  </div><div class="line">ios-sim             <span class="number">5</span>.<span class="number">0</span>.<span class="number">6</span>        <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  </div><div class="line">npm                <span class="number">3</span>.<span class="number">3</span>.<span class="number">12</span>         <span class="number">4</span>.<span class="number">0</span>.<span class="number">5</span>   <span class="number">4</span>.<span class="number">0</span>.<span class="number">3</span>  </div><div class="line">typescript          <span class="number">1</span>.<span class="number">8</span>.<span class="number">9</span>         <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>   <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>  </div><div class="line">typings             <span class="number">1</span>.<span class="number">3</span>.<span class="number">3</span>         <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>   <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>  </div><div class="line">webpack            <span class="number">1</span>.<span class="number">13</span>.<span class="number">3</span>        <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span>  <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span></div></pre></td></tr></table></figure></p><p>然后我又自作聪明了一下，<code>npm update -g</code><br>然后依然是卡了一下，然后就读条……<br>然后就全部更新完成。</p><h3 id="通过npm-check"><a href="#通过npm-check" class="headerlink" title="通过npm-check"></a>通过npm-check</h3><p>其实还看到了一种方法，是在终端里面的GUI工具，可以直观看到哪些需要更新然后可以顺便更新掉<br>当然需要安装，<code>npm-check</code></p><blockquote><p>npm install -g npm-check （mac宝宝们别忘记sudo）</p></blockquote><p>检查npm包的状态:</p><blockquote><p>npm-check -u -g</p></blockquote><p>然后就移动光标来选择和操作。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天在通过&lt;code&gt;vue-cli&lt;/code&gt;创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。&lt;br&gt;然后发现，项目内更新就&lt;code&gt;npm update &amp;lt;name&amp;gt;&lt;/code&gt;就更新了，全局好像不知道怎么弄。然后就自作聪明的&lt;code&gt;npm update -g vue-cli&lt;/code&gt;（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”&lt;br&gt;事实证明是能用的！&lt;code&gt;vue-cli&lt;/code&gt;更新好了。&lt;br&gt;但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了&lt;br&gt;于是查了一下，说不定日后还得用，做个记录。
-    
-    </summary>
-    
-      <category term="日常吐槽" scheme="https://colmugx.github.io/PersonalBlog/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
-    
-    
-      <category term="NodeJS" scheme="https://colmugx.github.io/PersonalBlog/tags/NodeJS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扣肉小记（五）—— 你的名字。</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2016/12/02/Korou5/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2016/12/02/Korou5/</id>
-    <published>2016-12-02T09:45:28.000Z</published>
-    <updated>2017-08-19T15:53:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>我早已不记得你的名字，但我记得我喜欢你。</p></blockquote><h3 id="这是一篇不一样的“扣肉小记”"><a href="#这是一篇不一样的“扣肉小记”" class="headerlink" title="这是一篇不一样的“扣肉小记”"></a>这是一篇不一样的“扣肉小记”</h3><p>　　<strong><em>《你的名字。》，记不起“你的名字。”</em></strong><br>　　这次的音乐是这个：</p><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=426881503&auto=0&height=32"></iframe><br>（一共8分钟）<br>　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。<br>　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。<br><span style="color:#a5a5a5">　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。</span> <a id="more"></a></p><h4 id="一次未知的身体交换，换来未知的迷惑"><a href="#一次未知的身体交换，换来未知的迷惑" class="headerlink" title="一次未知的身体交换，换来未知的迷惑"></a>一次未知的身体交换，换来未知的迷惑</h4><p>　　已经不知道如何形容心情。<br>　　可能是因为三叶向往大城市，也有可能是神灵听到了三叶的呼声。他说他想变成东京的帅哥，结果在梦里真的成了。<br>　　但是那个梦又好像是真实的，就这么半梦半醒的状态下，跟东京另外一个帅哥泷交换了身体。<br>　　于是，就有了“一周有几天会交换身体，各自要过对方的生活而且不能被发现”的体验。</p><blockquote><p>- “你怎么打这么多份工啊！”<br>- “还不是因为你乱花钱！”</p></blockquote><p>　　就这么互相嫌弃，隔着两个世界小打小闹。为了不露馅，他们彼此在对方手机留下了日记。并通过笔来互相传达自己想说的话。<br>　　但是，虽说是半梦半醒，但梦毕竟是梦，而且梦一醒，就会逐渐淡忘梦里的内容。<br>　　就在一天，三叶帮泷喜欢的女孩子促成了一次约会，而泷带着三叶的身体去见了一次神明……</p><blockquote><p>- “他们现在一定在一起了吧”<br>  - “我真的是在做梦吗”</p></blockquote><p>　　就这么一次偶然的情况，梦醒了……这一醒，或许就要失去什么……<br>　　于是泷决定要去找三叶，三叶也想去找泷，就这样，一个人去了小镇，一个人去了城市。就在这个时候</p><p>　　<strong>三叶遇到泷的时候，泷并不认识三叶！<br>  　　而泷去找三叶的时候，才知道小镇三年前就毁了！</strong></p><h4 id="三年前我不认识你，三年后我遇不到你"><a href="#三年前我不认识你，三年后我遇不到你" class="headerlink" title="三年前我不认识你，三年后我遇不到你"></a>三年前我不认识你，三年后我遇不到你</h4><p>　　满脑子都是“不可能”的泷尝试翻看手机里三叶留下来的日记，才发现…</p><p>　　<strong>那 根本不存在</strong></p><p>　　翻查三年前小镇陨石事件的泷，在死亡花名册看到了“宫水三叶”的泷，不相信这一切都是真的。但是看到了自己的手绳。<br>　　这是一场“三年前三年后”的梦…<br>　　后来泷想起了自己放在神坛的“口嚼酒”，和一叶的提示“那是三叶的一半”。于是泷决定去神坛，为了挽救三叶。</p><blockquote><p>- “既然是三叶的一半，那喝一口是不是能看到更多？”</p></blockquote><p>　　之后，泷才知道，这场跨越三年的邂逅：是三年前的三叶跟自己交换了身体，并去找过自己。而不知情的自己只留下了头绳。</p><h4 id="你-叫什么？"><a href="#你-叫什么？" class="headerlink" title="你 叫什么？"></a>你 叫什么？</h4><p>　　泷借着三叶的身体回到了陨石坠落的那一天。从一叶得知宫水家的女性都会有这样的梦。但每一代都不信陨石会坠落。<br>　　急着挽救小镇的三叶用尽各种方法，而且总有一种奇怪的感觉在驱使着她。<br>　　三叶借着泷的身体，看到了三年后的小镇：<strong>那是一片废墟。</strong><br>　　<br>　　总有一股奇怪的感觉，驱使着他们。而且他们都想到了同一个地方：神体</p><blockquote><p>- “互相留下自己的名字吧，我不想梦醒了，忘记了。”</p></blockquote><p>　　他们在湖中心，隔着三年时空相遇了。身体换回来了，他们的对话机会时间，只有黄昏。<br>　　于是，泷在三叶手上留下了“だすき”</p><p>　　而三叶 <strong>只在泷手上留下了“み”（みつは）的“-”</strong></p><blockquote><p>- “只要记住你的名字，不管你在世界的哪个地方，我一定会去找你。”</p></blockquote><h4 id="我找了你五年，而你却等了我八年"><a href="#我找了你五年，而你却等了我八年" class="headerlink" title="我找了你五年，而你却等了我八年"></a>我找了你五年，而你却等了我八年</h4><blockquote><p>- “真的不会忘记了，真的不会了！三叶！我记住了！みつは！”<br>　“等一下！你叫什么！你叫…什么… 我 为什么在这里…”</p></blockquote><p>　　为了“不知道”的泷找了“不知道”，一直找一直找，直到大学毕业。<br>　　三叶 为了泷 救了镇上的人，顺利读完高中大学，也毕业了，来到了东京。</p><p>　　为了寻找自己的“不知道”的两个人，就算擦肩而过也不知道吧……</p><p>　　但是他们彼此有感觉，他们知道，谁是他们要找的人。</p><blockquote><p>- “我 好像在哪里见过你？”<br>- “我也是”<br>– “君の名前は？”</p></blockquote><p>—— “我找了你五年，谢谢你等了我八年”</p><p>终于，在同一个时空相遇了……</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;我早已不记得你的名字，但我记得我喜欢你。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;a href=&quot;#这是一篇不一样的“扣肉小记”&quot; class=&quot;headerlink&quot; title=&quot;这是一篇不一样的“扣肉小记”&quot;&gt;&lt;/a&gt;这是一篇不一样的“扣肉小记”&lt;/h3&gt;&lt;p&gt;　　&lt;strong&gt;&lt;em&gt;《你的名字。》，记不起“你的名字。”&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;　　这次的音乐是这个：&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;298&quot; height=&quot;52&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=426881503&amp;auto=0&amp;height=32&quot;&gt;&lt;/iframe&gt;&lt;br&gt;（一共8分钟）&lt;br&gt;　　今天的小记不一样，今天的小记多了副标题，因为，今天看了场电影。&lt;br&gt;　　今天国内放映《你的名字》第一天，我去把今天的第一场刷了。&lt;br&gt;&lt;span style=&quot;color:#a5a5a5&quot;&gt;　　每次都用心写博客，甚至忘记了技术博客的本来含义。就为了以后翻看的时候不后悔。&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="日常吐槽" scheme="https://colmugx.github.io/PersonalBlog/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
-    
-    
-      <category term="扣肉小记" scheme="https://colmugx.github.io/PersonalBlog/tags/%E6%89%A3%E8%82%89%E5%B0%8F%E8%AE%B0/"/>
-    
-      <category term="看片子" scheme="https://colmugx.github.io/PersonalBlog/tags/%E7%9C%8B%E7%89%87%E5%AD%90/"/>
     
   </entry>
   

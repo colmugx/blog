@@ -739,6 +739,7 @@ body {
   text-align: center;
   width: 100%;
   margin-top: 16px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 .header .logo-inner {
   position: relative;
@@ -756,7 +757,8 @@ body {
   align-items: center;
   text-align: left;
 }
-.header .main-nav.has_toc {
+.header .main-nav.has_toc,
+.header .main-nav.has_tag {
   margin-top: 20%;
 }
 .header .main-nav-list {
@@ -766,7 +768,8 @@ body {
 .header .main-nav-list .menu-item {
   margin: 16px 0;
 }
-.header .main-nav-list .menu-item.has_toc {
+.header .main-nav-list .menu-item.has_toc,
+.header .main-nav-list .menu-item.has_tag {
   display: inline-block;
 }
 .header .main-nav-list .menu-item .menu-item-label {
@@ -1308,6 +1311,45 @@ body {
 .backtop i {
   font-size: 12px;
   font-weight: 100;
+}
+.tagcloud {
+  display: none;
+  z-index: 500;
+  width: 100%;
+  min-height: 120px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgba(255,255,255,0.9);
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  padding: 8px 0;
+  margin: 8px 0;
+}
+@media screen and (max-width: 650px) {
+  .tagcloud {
+    display: none;
+  }
+}
+.tagcloud .tagcloud-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  min-height: inherit;
+  width: 100%;
+  height: 100%;
+}
+.tagcloud .tagcloud-inner a {
+  width: 33.333333333333336%;
+  text-decoration: none;
+  color: #39c5bb;
+}
+.tagcloud .tagcloud-inner a:before {
+  content: '#';
+}
+.tagcloud .tagcloud-inner a:hover {
+  text-decoration: underline;
 }
 .post-toc .toc-inner {
   height: 100%;
