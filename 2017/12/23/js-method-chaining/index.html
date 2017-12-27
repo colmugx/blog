@@ -306,7 +306,10 @@
 <h3 id="简单链式操作"><a href="#简单链式操作" class="headerlink" title="简单链式操作"></a>简单链式操作</h3><p>在此我们以著名歌唱家“雷军”举个例子。雷军可以说是目前最强悍的企业家了，写得了软件造得了手机，能唱一首好歌能吹一手好B。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 雷军（人为对象，构造成立）</span></div><div class="line"><span class="keyword">var</span> LeiJun = &#123;</div><div class="line">  hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hello, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thank: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thanks: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you very much, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 驱使对象雷军唱出《Are you ok》前三句</span></div><div class="line">leijun</div><div class="line">  .hello()</div><div class="line">  .thank()</div><div class="line">  .thanks()</div></pre></td></tr></table></figure>
 <p>如果按字面意思可能永远都理解不来，从而产生哲学三连：我是谁？我在哪？我在干什么？所以又有一句话得以解释：从哪里来，回哪里去。</p>
-<h2 id="为什么用链式操作"><a href="#为什么用链式操作" class="headerlink" title="为什么用链式操作"></a>为什么用链式操作</h2><p>所以作用很明显了，一种工厂流水线式的操作，流的形式完成任务。所以我要把这种设计模式归入函数式编程也是因为，函数式思想本来就是让数据经过所有“函数流”最后得到产物并返回。数据不变，不额外干涉操作。</p>
+<h2 id="为什么用链式操作"><a href="#为什么用链式操作" class="headerlink" title="为什么用链式操作"></a>为什么用链式操作</h2><blockquote>
+<p>新手村的Monad？</p>
+</blockquote>
+<p>所以作用很明显了，一种工厂流水线式的操作，流的形式完成任务。所以我要把这种设计模式归入函数式编程也是因为，函数式思想本来就是让数据经过所有“函数流”最后得到产物并返回。数据不变，不额外干涉操作。</p>
 <p>不同的是，常规FP中，不管是单函数单返回走流，还是柯里化，它都是一种“一进一出”的思想——出来的产物继续传入下一道“工序”进行加工，一直到最后一个加工函数为止。</p>
 <p>然而链式操作并不是这种哲学，它是一种“从第一次进入就买定离手”的操作——只要一开头传入参数，流不结束不会见到半成品。数据经过一层函数之后，可能经过加工处理结束后，又会被打包/压缩/处理到‘this’中并继续接下来的工作。</p>
 <p>链式操作相对于柯里化来说，起码它做到了：</p>
@@ -319,15 +322,12 @@
 <p>柯里化最明显的优点就是阅读性差（？？？），假设有个方法叫<code>leijun</code>,那么调用方法的画风就大不相同</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">leijun()()()</div></pre></td></tr></table></figure>
 <p>鬼才知道他想唱的是“Are you ok”还是“Indian Mi Fans”呢……</p>
-<p>还有就是，因为流操作，让人很容易想到异步。JS也是患有懒癌很多年了，必须靠驱动工作。所以注定它是不能异步编程的。</p>
+<p>还有就是，因为流操作可以异步。JS也是患有懒癌很多年了，必须靠事件驱动才能工作，所以注定它是不能异步编程的。</p>
 <p>所以jQuery还是很强大的框架，在ES5什么都没有就靠三种规范的语法，已经要实现那么多东西了。让JS支持异步编程也就两种操作吧：函数内回调函数、链式操作函数。这框架两种都用上了。而说NodeJS速度快，一方面也是因为目前两个服务器框架都是异步（一堆回调函数）得到的结果吧。</p>
 <h2 id="不止JavaScript能用"><a href="#不止JavaScript能用" class="headerlink" title="不止JavaScript能用"></a>不止JavaScript能用</h2><p>实际上本质就是，把执行权交给函数之后，函数执行完自己的工作之后，还可以吧执行权重新交回父级手中，让父级自行处理接下来的工作。</p>
 <p>所以强化函数式编程的语言或者说能返回自身的语言应该都可以支持该模式，在这之后我只接触过<code>Golang</code>有这种操作，不过那当时哪来的Go啊…</p>
-<p>这个世界本来就先有的FP，因为概念不够清晰才出现了OOP。现在业务量复杂到OOP已经不好解决了，这个时候人们又想起了凉了的FP。2018年肯定是一个FP的年代（然后我要放弃FP看着它火了？不！这次看到希望不会撒手了！）</p>
-<p>在我在无脑吹FP的时候（懂得概念不懂得实践），我看到了swift的出现，JAVA8强化λ，go的出现，TypeScript的出现（乱入，它强调OOP）。</p>
-<p>我很喜欢结构体，枚举，剩下的靠函数式，从而淡化了类的存在，或者说我并不喜欢类的想法。</p>
-<p>所以盲目追从FP会陷入一个误区：<a href="http://www.sohu.com/a/111489713_166487" target="_blank" rel="external">王垠:编程宗派之我见<em>搜狐其它</em>搜狐网</a></p>
-<p>虽然都说王垠有点纸上谈兵，但我还是觉得是有点道理的。本来各种语言的出现就是为了完成那个时代的任务，而接近冷门的语言使用者怕被看不起就各种自卫活动。天天上升为宗教级别战争，是不是有点过了？</p>
+<p>这个世界本来就先有的FP，因为概念不够清晰才出现了OOP。现在业务量复杂到OOP已经不好解决了，这个时候人们又想起了凉了的FP。2018年如果前端继续发展下去，可能又会回到一个FP的年代（然后我要放弃FP看着它火了？不！这次看到希望不会撒手了！）</p>
+<p>在我在无脑吹FP的时候（懂得概念不懂得实践），我看到了swift的出现，JAVA8强化λ，go的出现，TypeScript的出现（乱入，它强调OOP）。前几天看到了<code>haskell-react</code>，以后还会有什么？</p>
 
       
     
@@ -360,12 +360,6 @@
   
     
   <nav class="article-page">
-    
-      <a href="/PersonalBlog/2017/12/26/my-known-javascript/" id="art-left" class="art-left">
-        <span class="next-title">
-          <i class="iconfont icon-left"></i>我所认识的JavaScript
-        </span>
-      </a>
     
     
       <a href="/PersonalBlog/2017/12/20/exchange_number/" id="art-right" class="art-right">
