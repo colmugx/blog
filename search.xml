@@ -3,6 +3,35 @@
   
     
     <entry>
+      <title><![CDATA[有意思的monad记录]]></title>
+      <url>/PersonalBlog/2017/12/27/funny-monad/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>看到monad我的第一反应竟然是莫纳德…</p>
+</blockquote>
+<p>最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad</p>
+<p>之前在知乎看到轮子哥说：学习haskell是好事，但最好就是学到monad就停下来，然后去学别的。对别的语言帮助很大。</p>
+<p>然后在知乎看了一些monad的答案，找了点关于monad的博客看，没看懂。英文的话更不可能了！直接看paper的话我会脆死的。</p>
+<p>后来偶然找到一篇文章：<a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a></p>
+<p>当然有中文版：<a href="http://jiyinyiyong.github.io/monads-in-pictures/" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a>，<br><a href="http://www.ruanyifeng.com/blog/2015/07/monad.html" target="_blank" rel="external">图解 Monad - 阮一峰的网络日志</a></p>
+<p>全程特别轻松，我以后写博客也要按照这个节奏来写！很有意思！<br>（那个抽东西的手直接戳爆了我的笑点…特别是解构传入胶水函数的时候）</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Functional Programming </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JavaScript链式方法]]></title>
       <url>/PersonalBlog/2017/12/23/js-method-chaining/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -478,6 +507,57 @@
             <tag> electron </tag>
             
             <tag> TypeScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[构建一个简单前端开发环境]]></title>
+      <url>/PersonalBlog/2017/08/31/create-fe-env/</url>
+      <content type="html"><![CDATA[<p>虽然<code>webpack</code>在如今这个时代已经众所周知了。但是有些时候只是想简单涂涂画画，没必要很工程化。而且配一个<code>webpack</code>在“玩具”看来肯定是麻烦的。</p>
+<p>这两天刚好想只写一点简单页面，不需要复杂的工程逻辑也不需要组件化（好吧实际上也组件化了），所以记录一下 <strong>一个简单页面开发环境是怎样的</strong><br><a id="more"></a></p>
+<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p>不想用<code>webpack</code>的时候，第一个先想到的就是<code>gulp</code>。所以构建开发环境的打包工具就用这个了，其他就肯定是插件了。所以<strong>我的</strong>列表大概就如下</p>
+<ul>
+<li>gulp</li>
+<li>gulp-autoprefixer</li>
+<li>gulp-babel (option)</li>
+<li>babel-core (option)</li>
+<li>gulp-browserify (option)</li>
+<li>gulp-concat (option)</li>
+<li>gulp-minify-css (option)</li>
+<li>gulp-nunjucks (option)</li>
+<li>gulp-rename (option)</li>
+<li>gulp-stylus (option)</li>
+</ul>
+<p>除了前三个，下面哪些都是可选的。接下来再讲讲为什么选这些东西。</p>
+<h2 id="关于HTML的处理"><a href="#关于HTML的处理" class="headerlink" title="关于HTML的处理"></a>关于HTML的处理</h2><p>模板的话我选择的是<code>nunjucks</code>，业界毒瘤<code>mozilla</code>的产品。这是一个极其强大又简单的模板。选择它是因为它的基本语法都跟我用的<code>swig</code>是一样的。不过<code>swig</code>已经停止维护很久了，但是我对一些操作又比较熟悉。所以选择了它。另外一点是，<code>njk</code>是很自由的，它并没有要求你的后缀是怎样的。所以我一直使用<code>*.html</code>来命名。</p>
+<p>所以自然需要用到<code>gulp-nunjucks</code>。最简单的处理方法是</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gulp.src(<span class="string">'template/index.html'</span>)</div><div class="line">      .pipe(nunjucks.compile(json))</div><div class="line">      .pipe(gulp.dest(<span class="string">'dist'</span>))</div></pre></td></tr></table></figure>
+<p>这里我还用到了<code>js-yaml</code>，因为我自己搞事的时候会更偏向用<code>yaml</code>来代替<code>json</code>。我觉得没有括号看起来确实要清晰一些。</p>
+<p>实际上如果你的动态的内容是<code>json</code>格式的话，这里就结束了。插件会直接自动的把内容填进去然后生成结束。不过我的话，就会多了一步：把<code>yml</code>读成<code>json</code>然后再推进去。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yaml.safeLoad(fs.readFileSync(<span class="string">'_config.yml'</span>, <span class="string">'utf8'</span>))</div></pre></td></tr></table></figure>
+<p>同步读出<code>yml</code>文件的内容进行翻译，然后再把得到的<code>json</code>传入模板进行合并。</p>
+<h2 id="关于CSS的处理"><a href="#关于CSS的处理" class="headerlink" title="关于CSS的处理"></a>关于CSS的处理</h2><p>我只愿意使用<code>stylus</code>，原因很简单就是不喜欢另外两个…<code>less</code>实现一个<code>mixin</code>很麻烦又不好理解，而且相对于<code>sass</code>和<code>stylus</code>少了函数的内容，所以<code>less</code>本质上还是在写<code>css</code>，没有更方便的做法。</p>
+<p>而不用<code>sass</code>的原因更扯淡了——<code>ruby</code>实现的产物不用，虽然还有一个<code>scss</code>，而且从功能或者“文法”与<code>stylus</code>接近的，至少一个思路。但<code>stylus</code>更像<code>javascript</code>，很多操作和定义你可以按照你的<code>javascript</code>感觉来走。</p>
+<p>然后就是兼容性补全，我直接用gulp的组件<code>gulp-autoprefixer</code>了，以简单为主，所以不考虑<code>postcss</code>。</p>
+<p>另外就是习惯问题了，我会习惯压缩掉，<code>gulp-minify-css</code>用来压缩，顺便用<code>gulp-rename</code>加上<code>.min</code>的后缀</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'style'</span>, () =&gt; &#123;</div><div class="line">  gulp.src(<span class="string">'styles/style.styl'</span>)</div><div class="line">      .pipe(concat(<span class="string">'style.styl'</span>))</div><div class="line">      .pipe(stylus())</div><div class="line">      .pipe(autoprefixer(&#123;</div><div class="line">        browsers: [</div><div class="line">          <span class="string">'last 2 version'</span>,</div><div class="line">          <span class="string">'iOS &gt;= 7'</span>,<span class="string">'Android &gt;= 4.0'</span></div><div class="line">        ],</div><div class="line">        cascade: <span class="literal">true</span></div><div class="line">      &#125;))</div><div class="line">      .pipe(rename(&#123;<span class="attr">suffix</span>: <span class="string">'.min'</span>&#125;))</div><div class="line">      .pipe(minicss())</div><div class="line">      .pipe(gulp.dest(<span class="string">'dist/style'</span>))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="关于JS的处理"><a href="#关于JS的处理" class="headerlink" title="关于JS的处理"></a>关于JS的处理</h2><p>我会有两种做法，一种用到<code>browserify</code>，不过既然用到这个东西的话为什么不用<code>webpack</code>呢…</p>
+<p>另一种是用<code>babel</code>，因为现在就算新司机也直接接触了ES6，习惯了的话，难免会写出一些非ES5语法的东西出来。虽然现在的现代浏览器基本都支持ES6（部分P/A+了），但是目前的话还是转一下比较保险。</p>
+<h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><p>附加题：用的是<code>browsersync</code>，它并不是<code>gulp</code>的插件，但是可以搭配使用。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 实践尝试 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
             
         </tags>
         

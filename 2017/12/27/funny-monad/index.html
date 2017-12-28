@@ -66,11 +66,9 @@
 
 
 
-  <title>
-  
-    归档 · ColMugX
-  
-</title>
+  <meta name="keywords" content="Functional Programming, Nlvi" />
+
+  <title> 有意思的monad记录 · ColMugX </title>
 </head>
 <body>
   <div class="progress">
@@ -164,6 +162,16 @@
     <a href="/PersonalBlog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/PersonalBlog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/PersonalBlog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/PersonalBlog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/PersonalBlog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/PersonalBlog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/PersonalBlog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/PersonalBlog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/PersonalBlog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/PersonalBlog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/PersonalBlog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/PersonalBlog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/PersonalBlog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/PersonalBlog/tags/看片子/" style="font-size: 14px;">看片子</a>
   </div>
 </div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">有意思的monad记录</a></li>
+      
+    </div>
+  </aside>
+
   
     
   </div>
@@ -242,63 +250,117 @@
         <div class="main-wrapper">
           
     
-    <div class="archive syuanpi riseIn-light" id="archive">
-        
-            <h1 class="archive-title">Total</h1>
-            <span class="archive-num">一共有 30 篇文章</span>
-        
-        <div class="archive-list">
-            <ul>
-        
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2017-12-27</span>
+          
             
-                
-                
-                
-                    
-                     
-                        <h2 class="archive-year"> 2016 </h2>
-                    
-                
+              <span class="post-category"><a href="/PersonalBlog/categories/前端思考/">前端思考</a></span>
             
+          
+          
             
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    12-09
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/PersonalBlog/2016/12/09/update-npm-packages/">更新全局NPM的所有可更新包</a>
-                </span>
-            </li>
-
-        
+              <aside class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/PersonalBlog/tags/Functional-Programming/">Functional Programming</a>
+              
+              </aside>
             
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    12-02
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/PersonalBlog/2016/12/02/Korou5/">扣肉小记（五）—— 你的名字。</a>
-                </span>
-            </li>
-
-        
-            </ul>
+          
         </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          有意思的monad记录
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        <blockquote>
+<p>看到monad我的第一反应竟然是莫纳德…</p>
+</blockquote>
+<p>最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad</p>
+<p>之前在知乎看到轮子哥说：学习haskell是好事，但最好就是学到monad就停下来，然后去学别的。对别的语言帮助很大。</p>
+<p>然后在知乎看了一些monad的答案，找了点关于monad的博客看，没看懂。英文的话更不可能了！直接看paper的话我会脆死的。</p>
+<p>后来偶然找到一篇文章：<a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a></p>
+<p>当然有中文版：<a href="http://jiyinyiyong.github.io/monads-in-pictures/" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a>，<br><a href="http://www.ruanyifeng.com/blog/2015/07/monad.html" target="_blank" rel="external">图解 Monad - 阮一峰的网络日志</a></p>
+<p>全程特别轻松，我以后写博客也要按照这个节奏来写！很有意思！<br>（那个抽东西的手直接戳爆了我的笑点…特别是解构传入胶水函数的时候）</p>
+
+      
+    
     </div>
     
-  <nav class="pagination">
-      <span class="page-number current">1</span>
+      
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>Co1MugX</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/PersonalBlog/2017/12/27/funny-monad/">https://colmugx.github.io/PersonalBlog/2017/12/27/funny-monad/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/PersonalBlog">https://colmugx.github.io/PersonalBlog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+    
+      <a href="/PersonalBlog/2017/12/23/js-method-chaining/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          JavaScript链式方法<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
   </nav>
 
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </div>
+
+
+  
+  
 
 
         </div>

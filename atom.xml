@@ -6,7 +6,7 @@
   <link href="/PersonalBlog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/PersonalBlog/"/>
-  <updated>2017-12-27T08:56:56.889Z</updated>
+  <updated>2017-12-28T10:34:03.474Z</updated>
   <id>https://colmugx.github.io/PersonalBlog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有意思的monad记录</title>
+    <link href="https://colmugx.github.io/PersonalBlog/2017/12/27/funny-monad/"/>
+    <id>https://colmugx.github.io/PersonalBlog/2017/12/27/funny-monad/</id>
+    <published>2017-12-27T15:24:58.000Z</published>
+    <updated>2017-12-28T10:34:03.474Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>看到monad我的第一反应竟然是莫纳德…</p></blockquote><p>最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad</p><p>之前在知乎看到轮子哥说：学习haskell是好事，但最好就是学到monad就停下来，然后去学别的。对别的语言帮助很大。</p><p>然后在知乎看了一些monad的答案，找了点关于monad的博客看，没看懂。英文的话更不可能了！直接看paper的话我会脆死的。</p><p>后来偶然找到一篇文章：<a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a></p><p>当然有中文版：<a href="http://jiyinyiyong.github.io/monads-in-pictures/" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a>，<br><a href="http://www.ruanyifeng.com/blog/2015/07/monad.html" target="_blank" rel="external">图解 Monad - 阮一峰的网络日志</a></p><p>全程特别轻松，我以后写博客也要按照这个节奏来写！很有意思！<br>（那个抽东西的手直接戳爆了我的笑点…特别是解构传入胶水函数的时候）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;看到monad我的第一反应竟然是莫纳德…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad&lt;/p&gt;
+&lt;p&gt;之前在知乎看到轮子哥说：学习haskell是好事，但最
+      
+    
+    </summary>
+    
+      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="Functional Programming" scheme="https://colmugx.github.io/PersonalBlog/tags/Functional-Programming/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript链式方法</title>
@@ -241,6 +270,29 @@
       <category term="electron" scheme="https://colmugx.github.io/PersonalBlog/tags/electron/"/>
     
       <category term="TypeScript" scheme="https://colmugx.github.io/PersonalBlog/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>构建一个简单前端开发环境</title>
+    <link href="https://colmugx.github.io/PersonalBlog/2017/08/31/create-fe-env/"/>
+    <id>https://colmugx.github.io/PersonalBlog/2017/08/31/create-fe-env/</id>
+    <published>2017-08-31T10:12:20.000Z</published>
+    <updated>2017-12-28T10:22:09.331Z</updated>
+    
+    <content type="html"><![CDATA[<p>虽然<code>webpack</code>在如今这个时代已经众所周知了。但是有些时候只是想简单涂涂画画，没必要很工程化。而且配一个<code>webpack</code>在“玩具”看来肯定是麻烦的。</p><p>这两天刚好想只写一点简单页面，不需要复杂的工程逻辑也不需要组件化（好吧实际上也组件化了），所以记录一下 <strong>一个简单页面开发环境是怎样的</strong><br><a id="more"></a></p><h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p>不想用<code>webpack</code>的时候，第一个先想到的就是<code>gulp</code>。所以构建开发环境的打包工具就用这个了，其他就肯定是插件了。所以<strong>我的</strong>列表大概就如下</p><ul><li>gulp</li><li>gulp-autoprefixer</li><li>gulp-babel (option)</li><li>babel-core (option)</li><li>gulp-browserify (option)</li><li>gulp-concat (option)</li><li>gulp-minify-css (option)</li><li>gulp-nunjucks (option)</li><li>gulp-rename (option)</li><li>gulp-stylus (option)</li></ul><p>除了前三个，下面哪些都是可选的。接下来再讲讲为什么选这些东西。</p><h2 id="关于HTML的处理"><a href="#关于HTML的处理" class="headerlink" title="关于HTML的处理"></a>关于HTML的处理</h2><p>模板的话我选择的是<code>nunjucks</code>，业界毒瘤<code>mozilla</code>的产品。这是一个极其强大又简单的模板。选择它是因为它的基本语法都跟我用的<code>swig</code>是一样的。不过<code>swig</code>已经停止维护很久了，但是我对一些操作又比较熟悉。所以选择了它。另外一点是，<code>njk</code>是很自由的，它并没有要求你的后缀是怎样的。所以我一直使用<code>*.html</code>来命名。</p><p>所以自然需要用到<code>gulp-nunjucks</code>。最简单的处理方法是</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gulp.src(<span class="string">'template/index.html'</span>)</div><div class="line">      .pipe(nunjucks.compile(json))</div><div class="line">      .pipe(gulp.dest(<span class="string">'dist'</span>))</div></pre></td></tr></table></figure><p>这里我还用到了<code>js-yaml</code>，因为我自己搞事的时候会更偏向用<code>yaml</code>来代替<code>json</code>。我觉得没有括号看起来确实要清晰一些。</p><p>实际上如果你的动态的内容是<code>json</code>格式的话，这里就结束了。插件会直接自动的把内容填进去然后生成结束。不过我的话，就会多了一步：把<code>yml</code>读成<code>json</code>然后再推进去。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yaml.safeLoad(fs.readFileSync(<span class="string">'_config.yml'</span>, <span class="string">'utf8'</span>))</div></pre></td></tr></table></figure><p>同步读出<code>yml</code>文件的内容进行翻译，然后再把得到的<code>json</code>传入模板进行合并。</p><h2 id="关于CSS的处理"><a href="#关于CSS的处理" class="headerlink" title="关于CSS的处理"></a>关于CSS的处理</h2><p>我只愿意使用<code>stylus</code>，原因很简单就是不喜欢另外两个…<code>less</code>实现一个<code>mixin</code>很麻烦又不好理解，而且相对于<code>sass</code>和<code>stylus</code>少了函数的内容，所以<code>less</code>本质上还是在写<code>css</code>，没有更方便的做法。</p><p>而不用<code>sass</code>的原因更扯淡了——<code>ruby</code>实现的产物不用，虽然还有一个<code>scss</code>，而且从功能或者“文法”与<code>stylus</code>接近的，至少一个思路。但<code>stylus</code>更像<code>javascript</code>，很多操作和定义你可以按照你的<code>javascript</code>感觉来走。</p><p>然后就是兼容性补全，我直接用gulp的组件<code>gulp-autoprefixer</code>了，以简单为主，所以不考虑<code>postcss</code>。</p><p>另外就是习惯问题了，我会习惯压缩掉，<code>gulp-minify-css</code>用来压缩，顺便用<code>gulp-rename</code>加上<code>.min</code>的后缀</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'style'</span>, () =&gt; &#123;</div><div class="line">  gulp.src(<span class="string">'styles/style.styl'</span>)</div><div class="line">      .pipe(concat(<span class="string">'style.styl'</span>))</div><div class="line">      .pipe(stylus())</div><div class="line">      .pipe(autoprefixer(&#123;</div><div class="line">        browsers: [</div><div class="line">          <span class="string">'last 2 version'</span>,</div><div class="line">          <span class="string">'iOS &gt;= 7'</span>,<span class="string">'Android &gt;= 4.0'</span></div><div class="line">        ],</div><div class="line">        cascade: <span class="literal">true</span></div><div class="line">      &#125;))</div><div class="line">      .pipe(rename(&#123;<span class="attr">suffix</span>: <span class="string">'.min'</span>&#125;))</div><div class="line">      .pipe(minicss())</div><div class="line">      .pipe(gulp.dest(<span class="string">'dist/style'</span>))</div><div class="line">&#125;)</div></pre></td></tr></table></figure><h2 id="关于JS的处理"><a href="#关于JS的处理" class="headerlink" title="关于JS的处理"></a>关于JS的处理</h2><p>我会有两种做法，一种用到<code>browserify</code>，不过既然用到这个东西的话为什么不用<code>webpack</code>呢…</p><p>另一种是用<code>babel</code>，因为现在就算新司机也直接接触了ES6，习惯了的话，难免会写出一些非ES5语法的东西出来。虽然现在的现代浏览器基本都支持ES6（部分P/A+了），但是目前的话还是转一下比较保险。</p><h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><p>附加题：用的是<code>browsersync</code>，它并不是<code>gulp</code>的插件，但是可以搭配使用。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;虽然&lt;code&gt;webpack&lt;/code&gt;在如今这个时代已经众所周知了。但是有些时候只是想简单涂涂画画，没必要很工程化。而且配一个&lt;code&gt;webpack&lt;/code&gt;在“玩具”看来肯定是麻烦的。&lt;/p&gt;
+&lt;p&gt;这两天刚好想只写一点简单页面，不需要复杂的工程逻辑也不需要组件化（好吧实际上也组件化了），所以记录一下 &lt;strong&gt;一个简单页面开发环境是怎样的&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="实践尝试" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+    
+    
+      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
     
   </entry>
   
@@ -505,54 +557,6 @@
       <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
     
       <category term="ES6" scheme="https://colmugx.github.io/PersonalBlog/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自己造轮子！——Syuanpi.css</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/02/13/Syuanpi-css/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/02/13/Syuanpi-css/</id>
-    <published>2017-02-12T16:50:40.000Z</published>
-    <updated>2017-11-20T10:07:53.454Z</updated>
-    
-    <content type="html"><![CDATA[<p>本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。<br>这是demo的页面：<a href="https://colmugx.github.io/Syuanpi.css">Syuanpi.css</a><br>这是GitHub的页面：<a href="https://github.com/ColMugX/Syuanpi.css" target="_blank" rel="external">ColMugX/Syuanpi.css: ✨A library of CSS animations.</a></p><p>说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！</p><h3 id="为什么要出这东西…"><a href="#为什么要出这东西…" class="headerlink" title="为什么要出这东西…"></a>为什么要出这东西…</h3><a id="more"></a><p>在知乎看了一段时间了认识了kpi这东西，觉得这东西好坑啊233，导致我现在觉得kpi的意思就是：有现有轮子不要用！不管怎样自己用的东西能做成轮子就给它做成轮子！然后再用自己的轮子！然后kpi就啪啪啪的往上走！不过这库子我的出发点还是想把我原来弄的一些基础的动画归类起来，加上自己比较会常用的操作封装起来，仅此而已。<br>在知乎学习的过程，就有一个关于没工作经验然后怎么面试的问题。就有提到关于自己开源自己的代码，不是不负责任的像托管作业一样把乱七八糟的东西放上去然后就说“噢！劳资也有开源”这样，至少要有一个给人一种便捷操作，要有头有尾，还要会写文档，不会写给个README也行。然后我也没经验，就听话这么做了…</p><h3 id="它是个什么东西…"><a href="#它是个什么东西…" class="headerlink" title="它是个什么东西…"></a>它是个什么东西…</h3><p>好了说回来我的东西~ Syuanpi意思很简单，我喜欢它日后可以炫得一批233。但是它并不炫，而是一些很基础很基础的动画用法。不过，一些稍微认真的网站不就要点轻转场就行了嘛。比如我觉得博客挺认真的，但是没有转场动画又觉得好干燥，所以我的大部分动画起始点都是基于在自己博客上面用。而且动画的过程速度和位置全靠目测！不会计算也是硬伤呀…用的是stylus，不知道为什么总觉得那个被那个绿色的长的 ∮ 撩到了，然后就这么用了。<br>认认真真做作业，不要搞什么大新闻。就像标题说的，针对自己脑洞的产物。不过由于是自己第一次比较成型的“自己的作业自己做”，我还是好高兴的。如果有人愿意给star就更好了，还没体验过被5个star砸死是什么感觉呢~（不贪心的好孩子~）<br>嗯！该讲说明书了！大份说明书在GitHub的头页README.md，所以就不讲了！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本来首发知乎，再说了现在这东西又不需要怎么用了，各种前端框架各种自动化，这些东西早就带得干干净净了。&lt;br&gt;这是demo的页面：&lt;a href=&quot;https://colmugx.github.io/Syuanpi.css&quot;&gt;Syuanpi.css&lt;/a&gt;&lt;br&gt;这是GitHub的页面：&lt;a href=&quot;https://github.com/ColMugX/Syuanpi.css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ColMugX/Syuanpi.css: ✨A library of CSS animations.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;说到CSS动画库，其实有一个很出名很好用，“就像喝水一样简单”的叫做Animate.css的开源库子。那些动画真的挺炫酷的。然后我就想起，我自己在玩Hexo主题的时候不是动画也是自己写么，那要不把用过的动画自己封装起来，然后再加点跟自己脑洞产物的动画，然后自己也做一个库试试？然后我就把Syuanpi.css弄出来了…作为练习产物，日后想到什么好玩的实现方式也是会一直加一直加~ 不过我要说实话：不排除把Animate.css出现的部分动画自己再实现一遍进自己库子！&lt;/p&gt;
-&lt;h3 id=&quot;为什么要出这东西…&quot;&gt;&lt;a href=&quot;#为什么要出这东西…&quot; class=&quot;headerlink&quot; title=&quot;为什么要出这东西…&quot;&gt;&lt;/a&gt;为什么要出这东西…&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="实践尝试" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
-    
-    
-      <category term="Syuanpi" scheme="https://colmugx.github.io/PersonalBlog/tags/Syuanpi/"/>
-    
-      <category term="CSS" scheme="https://colmugx.github.io/PersonalBlog/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更新全局NPM的所有可更新包</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2016/12/09/update-npm-packages/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2016/12/09/update-npm-packages/</id>
-    <published>2016-12-09T08:12:41.000Z</published>
-    <updated>2017-08-21T16:32:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天在通过<code>vue-cli</code>创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。<br>然后发现，项目内更新就<code>npm update &lt;name&gt;</code>就更新了，全局好像不知道怎么弄。然后就自作聪明的<code>npm update -g vue-cli</code>（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”<br>事实证明是能用的！<code>vue-cli</code>更新好了。<br>但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了<br>于是查了一下，说不定日后还得用，做个记录。<a id="more"></a></p><h3 id="通过npm的cli更新"><a href="#通过npm的cli更新" class="headerlink" title="通过npm的cli更新"></a>通过npm的cli更新</h3><p>后来在某个同性交流平台sf找到了，说<code>npm</code>在<code>2.6.1</code>之后有一个代码叫<code>npm install -g</code>。可以升级全部包。<br>然后我试了一下。</p><blockquote><p>eisdir EISDIR: illegal operation on a directory, read<br>npm ERR! eisdir This is most likely not a problem with npm itself<br>npm ERR! eisdir and is related to npm not being able to find a package.json in<br>npm ERR! eisdir a package you are trying to install.</p></blockquote><p><strong>？？？</strong>我有一句MMP*******</p><p>先查找npm 有多少包需要更新吧，命令是<code>npm -g outdated</code>，这个就正常了。<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Package</span>           Current        Wanted  Latest  Location</div><div class="line">cordova             <span class="number">5</span>.<span class="number">4</span>.<span class="number">1</span>         <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>   <span class="number">6</span>.<span class="number">4</span>.<span class="number">0</span>  </div><div class="line">egret             MISSING         <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>   <span class="number">1</span>.<span class="number">0</span>.<span class="number">1</span>  </div><div class="line">ionic       <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>-beta.<span class="number">23</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">0</span>-beta.<span class="number">3</span>  <span class="number">2</span>.<span class="number">1</span>.<span class="number">14</span>  </div><div class="line">ios-sim             <span class="number">5</span>.<span class="number">0</span>.<span class="number">6</span>        <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  <span class="number">5</span>.<span class="number">0</span>.<span class="number">12</span>  </div><div class="line">npm                <span class="number">3</span>.<span class="number">3</span>.<span class="number">12</span>         <span class="number">4</span>.<span class="number">0</span>.<span class="number">5</span>   <span class="number">4</span>.<span class="number">0</span>.<span class="number">3</span>  </div><div class="line">typescript          <span class="number">1</span>.<span class="number">8</span>.<span class="number">9</span>         <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>   <span class="number">2</span>.<span class="number">1</span>.<span class="number">4</span>  </div><div class="line">typings             <span class="number">1</span>.<span class="number">3</span>.<span class="number">3</span>         <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>   <span class="number">2</span>.<span class="number">0</span>.<span class="number">0</span>  </div><div class="line">webpack            <span class="number">1</span>.<span class="number">13</span>.<span class="number">3</span>        <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span>  <span class="number">1</span>.<span class="number">14</span>.<span class="number">0</span></div></pre></td></tr></table></figure></p><p>然后我又自作聪明了一下，<code>npm update -g</code><br>然后依然是卡了一下，然后就读条……<br>然后就全部更新完成。</p><h3 id="通过npm-check"><a href="#通过npm-check" class="headerlink" title="通过npm-check"></a>通过npm-check</h3><p>其实还看到了一种方法，是在终端里面的GUI工具，可以直观看到哪些需要更新然后可以顺便更新掉<br>当然需要安装，<code>npm-check</code></p><blockquote><p>npm install -g npm-check （mac宝宝们别忘记sudo）</p></blockquote><p>检查npm包的状态:</p><blockquote><p>npm-check -u -g</p></blockquote><p>然后就移动光标来选择和操作。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天在通过&lt;code&gt;vue-cli&lt;/code&gt;创建一个新工程的时候，那个提示说有新版本要更新。对于一个有“工具更新强迫症”的人自然有点受不了（除开python），所以就尝试更新。&lt;br&gt;然后发现，项目内更新就&lt;code&gt;npm update &amp;lt;name&amp;gt;&lt;/code&gt;就更新了，全局好像不知道怎么弄。然后就自作聪明的&lt;code&gt;npm update -g vue-cli&lt;/code&gt;（当然mac宝宝们有个sudo），然后发现卡了好久之后才开始读条，这个时候我就方了，“这个命令到底能不能用？”&lt;br&gt;事实证明是能用的！&lt;code&gt;vue-cli&lt;/code&gt;更新好了。&lt;br&gt;但是通过这个之后，我就想了，我电脑里还有没有其他没更新的包…然后我就想查出来一并更新了&lt;br&gt;于是查了一下，说不定日后还得用，做个记录。
-    
-    </summary>
-    
-      <category term="日常吐槽" scheme="https://colmugx.github.io/PersonalBlog/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/"/>
-    
-    
-      <category term="NodeJS" scheme="https://colmugx.github.io/PersonalBlog/tags/NodeJS/"/>
     
   </entry>
   
