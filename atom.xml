@@ -3,11 +3,11 @@
   <title>ColMugX</title>
   
   <subtitle>SHOW YOUR FUNCTION NO BB.</subtitle>
-  <link href="/PersonalBlog/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://colmugx.github.io/PersonalBlog/"/>
+  <link href="https://colmugx.github.io/blog/"/>
   <updated>2017-12-28T10:34:03.474Z</updated>
-  <id>https://colmugx.github.io/PersonalBlog/</id>
+  <id>https://colmugx.github.io/blog/</id>
   
   <author>
     <name>Co1MugX</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>有意思的monad记录</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/12/27/funny-monad/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/12/27/funny-monad/</id>
+    <link href="https://colmugx.github.io/blog/2017/12/27/funny-monad/"/>
+    <id>https://colmugx.github.io/blog/2017/12/27/funny-monad/</id>
     <published>2017-12-27T15:24:58.000Z</published>
     <updated>2017-12-28T10:34:03.474Z</updated>
     
@@ -38,17 +38,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="Functional Programming" scheme="https://colmugx.github.io/PersonalBlog/tags/Functional-Programming/"/>
+      <category term="Functional Programming" scheme="https://colmugx.github.io/blog/tags/Functional-Programming/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript链式方法</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/12/23/js-method-chaining/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/12/23/js-method-chaining/</id>
+    <link href="https://colmugx.github.io/blog/2017/12/23/js-method-chaining/"/>
+    <id>https://colmugx.github.io/blog/2017/12/23/js-method-chaining/</id>
     <published>2017-12-23T10:05:54.000Z</published>
     <updated>2017-12-27T08:56:56.889Z</updated>
     
@@ -68,17 +68,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>冒泡排序的骚思路</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/12/20/exchange_number/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/12/20/exchange_number/</id>
+    <link href="https://colmugx.github.io/blog/2017/12/20/exchange_number/"/>
+    <id>https://colmugx.github.io/blog/2017/12/20/exchange_number/</id>
     <published>2017-12-20T06:46:41.000Z</published>
     <updated>2017-12-22T02:59:02.058Z</updated>
     
@@ -98,17 +98,17 @@
     
     </summary>
     
-      <category term="曲苑杂坛" scheme="https://colmugx.github.io/PersonalBlog/categories/%E6%9B%B2%E8%8B%91%E6%9D%82%E5%9D%9B/"/>
+      <category term="曲苑杂坛" scheme="https://colmugx.github.io/blog/categories/%E6%9B%B2%E8%8B%91%E6%9D%82%E5%9D%9B/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>使用JSX的VUE应用开发体验</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/12/11/vue-jsx/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/12/11/vue-jsx/</id>
+    <link href="https://colmugx.github.io/blog/2017/12/11/vue-jsx/"/>
+    <id>https://colmugx.github.io/blog/2017/12/11/vue-jsx/</id>
     <published>2017-12-11T14:34:10.000Z</published>
     <updated>2017-12-13T02:16:42.951Z</updated>
     
@@ -123,23 +123,23 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/blog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
-      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>扯扯柯里化</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/12/07/about-currying/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/12/07/about-currying/</id>
+    <link href="https://colmugx.github.io/blog/2017/12/07/about-currying/"/>
+    <id>https://colmugx.github.io/blog/2017/12/07/about-currying/</id>
     <published>2017-12-07T13:17:31.000Z</published>
-    <updated>2017-12-08T02:04:37.320Z</updated>
+    <updated>2017-12-29T06:39:53.874Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>在我的博客打开开发者工具 -&gt; console，输入 Nlvi.tools.scroll 试试？</p></blockquote><p>开个玩笑，我自己也不知道这算不算柯里化（逃</p><p>总之为什么这么写，我自己觉得这样容易理解，方便盲僧（理清）。</p><p>还有最近关于“如何治理别人爱装逼的毛病”系列中刚写的一坨，新鲜的：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> menuItem = <span class="function">(<span class="params">list</span>) =&gt;</span> </div><div class="line">      list.map(<span class="function">(<span class="params">&#123;title, color, icon, descs&#125;</span>) =&gt;</span> </div><div class="line">        &lt;menu-item title=&#123;title&#125; color=&#123;color&#125; icon=&#123;icon&#125;&gt;&#123;</div><div class="line">          descs.map(<span class="function"><span class="params">v</span> =&gt;</span> &lt;span&gt;&#123;v&#125;&lt;<span class="regexp">/span&gt;)&#125;&lt;/m</span>enu-item&gt;)</div></pre></td></tr></table></figure><a id="more"></a><h2 id="柯里化是什么？"><a href="#柯里化是什么？" class="headerlink" title="柯里化是什么？"></a>柯里化是什么？</h2><p>好了讲柯里化，就是<strong>接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。柯里化属于函数式编程的内容</strong>。</p><p>在这里有一个<a href="http://www.zhangxinxu.com/wordpress/2013/02/js-currying/" target="_blank" rel="external">张鑫旭博客</a>讲关于柯里化（柯南嗑药）的例子，很方便理解。当然我想讲点自己的东西，拿<code>Nlvi.tools.scroll</code>说一下吧</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span> (<span class="params">win</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">      fn &amp;&amp; fn(sct);</div><div class="line">    &#125;);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 实际上如果不作的话，这样就结束了</span></div><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">    fn&amp;&amp;fn(sct)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>所以函数柯里化看上去有一个特点，会嵌套函数。而且道理就跟柯里化的解释一样：用一些参数，剩下的函数作为返回值里的函数的参数。这样我在调用的时候怎么调用：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</div><div class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure><p>首先我给个变量（实际上ES6直接用<code>const</code>，毕竟固定量）引用这个方法，方法传入第一个参数。接着里面的函数返回值函数是接收一个函数变量。</p><p>理一下，函数 - 的返回值 - 是个函数，这个函数接收一个 - 函数 - 的 - 变量。</p><p>然后这个函数参数传进去之后，实际上就是传一个方法进去以便于我等下里面的逻辑走完之后可以把这个函数参数运行起来，行程一个特别做作的回调函数。（当然回调函数带的是当前滚动条的数据）</p><p>为什么这么做呢？一点就是我觉得这样思路就清晰多了，而且在调用区域写起来干净。第二点就是参数复用。</p><p>虽然这个例子看不出什么，但是难免会遇到一些情况，就是明明一个变量或者一个参数，我只要取一次然后调用一次之后，剩下的内容我只要在这个情况之上去处理就行。但是如果传统单函数的做法的话，就会使得这个局外参数也跟着在里面做一些乱七八糟的运动，比如跟着去递归，被扯着去多次判断，这样就会莫名其妙浪费了一堆性能。很简单我举个例子：4x100，明明你交接之后剩下的就接下来的人跑就行了，你非得交接之后跟着跑，边跑边喊加油？</p><p>第三点就是延时</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> total = <span class="number">0</span></div><div class="line"><span class="comment">// normal</span></div><div class="line"><span class="keyword">var</span> nSum = <span class="function">(<span class="params">num</span>) =&gt;</span> &#123;</div><div class="line">  total += num</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//currying</span></div><div class="line"><span class="keyword">var</span> cSum = <span class="function">(<span class="params">fn</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">var</span> nums = []</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="built_in">arguments</span>.length) &#123;</div><div class="line">      <span class="keyword">return</span> fn.apply(<span class="literal">null</span>, nums)</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">Array</span>.prototype.push.apply(nums, <span class="built_in">arguments</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> sum = cSum(<span class="function">(<span class="params">x</span>) =&gt;</span> total += x)</div></pre></td></tr></table></figure><p>如果是常规的话，那么肯定会立刻计算出结果，而柯里化之后，会把计算的步骤储存起来，然后一起计算。</p><h2 id="柯里化误区"><a href="#柯里化误区" class="headerlink" title="柯里化误区"></a>柯里化误区</h2><p>在写这篇东西的时候，我关注到了一尊大神的博客 <a href="http://www.cnblogs.com/pengchen/p/5434705.html" target="_blank" rel="external">JavaScript函数柯里化的一些思考</a>，吓得我赶紧回看了自己的函数有没有“画蛇添足”的成分。嗯。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 拿下来继续学习一下</span></div><div class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</div><div class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure><p>这里我想到的是，我只需要把<code>window</code>传到这个函数之后引用出一个新函数，然后我就可以带着这个函数跑了，如果是不嫌麻烦版本的话我需要则么做？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">    fn&amp;&amp;fn(sct)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">// and so</span></div><div class="line">tools.scroll(<span class="built_in">window</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;)</div></pre></td></tr></table></figure><p>这样就会造成，我每次想监听滚动的时候，每用一次这个方法，我就要把<code>window</code>传进去一次。如果包一下的话，我就可以拿后面那个函数走就行了，也就是我的<code>window</code>只要传一次就畅通无阻。这也是另一个好处：分段计算。好比我玩Switch，我在外面突然想玩马车的时候，如果我的卡带在卡包里，那我换上就可以玩了，就不需要等回到家把卡带从包装盒里拿出来装到机器上。</p><p>实际上到这里的话应该有所经验了，到这里还会不会觉得<code>apply(), call(), bind()</code>使用机会少之又少？这就是数学的魅力吧，可是我数学不好。</p><h2 id="柯里化-lt-gt-闭包函数？"><a href="#柯里化-lt-gt-闭包函数？" class="headerlink" title="柯里化 &lt; - &gt; 闭包函数？"></a>柯里化 &lt; - &gt; 闭包函数？</h2><p>又是每期一问了，柯里化跟闭包函数是否也有关系？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 经典面试题</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</div><div class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">             setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">              <span class="built_in">console</span>.log(i);</div><div class="line">        &#125;,<span class="number">0</span>)</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>那么，柯里化函数和闭包函数应该怎么区分？还是的确有联系？</p><p>最后感谢所有被引用的文章及其作者，感谢帮助学习。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>在我的博客打开开发者工具 -&gt; console，输入 Nlvi.tools.scroll 试试？</p></blockquote><p>开个玩笑，我自己也不知道这算不算柯里化（逃</p><p>总之为什么这么写，我自己觉得这样容易理解，方便盲僧（理清）。</p><p>还有最近关于“如何治理别人爱装逼的毛病”系列中刚写的一坨，新鲜的：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> menuItem = <span class="function">(<span class="params">list</span>) =&gt;</span> </div><div class="line">      list.map(<span class="function">(<span class="params">&#123;title, color, icon, descs&#125;</span>) =&gt;</span> </div><div class="line">        &lt;menu-item title=&#123;title&#125; color=&#123;color&#125; icon=&#123;icon&#125;&gt;&#123;</div><div class="line">          descs.map(<span class="function"><span class="params">v</span> =&gt;</span> &lt;span&gt;&#123;v&#125;&lt;<span class="regexp">/span&gt;)&#125;&lt;/m</span>enu-item&gt;)</div></pre></td></tr></table></figure><a id="more"></a><h2 id="柯里化是什么？"><a href="#柯里化是什么？" class="headerlink" title="柯里化是什么？"></a>柯里化是什么？</h2><p>好了讲柯里化，就是<strong>接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。柯里化属于函数式编程的内容</strong>。</p><p>在这里有一个<a href="http://www.zhangxinxu.com/wordpress/2013/02/js-currying/" target="_blank" rel="external">张鑫旭博客</a>讲关于柯里化（柯南嗑药）的例子，很方便理解。当然我想讲点自己的东西，拿<code>Nlvi.tools.scroll</code>说一下吧</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span> (<span class="params">win</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">      fn &amp;&amp; fn(sct);</div><div class="line">    &#125;);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 实际上如果不作的话，这样就结束了</span></div><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">    fn&amp;&amp;fn(sct)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>所以函数柯里化看上去有一个特点，会嵌套函数。而且道理就跟柯里化的解释一样：用一些参数，剩下的函数作为返回值里的函数的参数。这样我在调用的时候怎么调用：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</div><div class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure><p>首先我给个变量（实际上ES6直接用<code>const</code>，毕竟固定量）引用这个方法，方法传入第一个参数。接着里面的函数返回值函数是接收一个函数变量。</p><p>理一下，函数 - 的返回值 - 是个函数，这个函数接收一个 - 函数 - 的 - 变量。</p><p>然后这个函数参数传进去之后，实际上就是传一个方法进去以便于我等下里面的逻辑走完之后可以把这个函数参数运行起来，行程一个特别做作的回调函数。（当然回调函数带的是当前滚动条的数据）</p><p>为什么这么做呢？一点就是我觉得这样思路就清晰多了，而且在调用区域写起来干净。第二点就是参数复用。</p><p>虽然这个例子看不出什么，但是难免会遇到一些情况，就是明明一个变量或者一个参数，我只要取一次然后调用一次之后，剩下的内容我只要在这个情况之上去处理就行。但是如果传统单函数的做法的话，就会使得这个局外参数也跟着在里面做一些乱七八糟的运动，比如跟着去递归，被扯着去多次判断，这样就会莫名其妙浪费了一堆性能。很简单我举个例子：4x100，明明你交接之后剩下的就接下来的人跑就行了，你非得交接之后跟着跑，边跑边喊加油？</p><p>第三点就是延时</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> total = <span class="number">0</span></div><div class="line"><span class="comment">// normal</span></div><div class="line"><span class="keyword">var</span> nSum = <span class="function">(<span class="params">num</span>) =&gt;</span> &#123;</div><div class="line">  total += num</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//currying</span></div><div class="line"><span class="keyword">var</span> cSum = <span class="function">(<span class="params">fn</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">var</span> nums = []</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="built_in">arguments</span>.length) &#123;</div><div class="line">      <span class="keyword">return</span> fn.apply(<span class="literal">null</span>, nums)</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">Array</span>.prototype.push.apply(nums, <span class="built_in">arguments</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> sum = cSum(<span class="function">(<span class="params">x</span>) =&gt;</span> total += x)</div></pre></td></tr></table></figure><p>如果是常规的话，那么肯定会立刻计算出结果，而柯里化之后，会把计算的步骤储存起来，然后一起计算。</p><h2 id="柯里化误区"><a href="#柯里化误区" class="headerlink" title="柯里化误区"></a>柯里化误区</h2><p>在写这篇东西的时候，我关注到了一尊大神的博客 <a href="http://www.cnblogs.com/pengchen/p/5434705.html" target="_blank" rel="external">JavaScript函数柯里化的一些思考</a>，吓得我赶紧回看了自己的函数有没有“画蛇添足”的成分。嗯。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 拿下来继续学习一下</span></div><div class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</div><div class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure><p>这里我想到的是，我只需要把<code>window</code>传到这个函数之后引用出一个新函数，然后我就可以带着这个函数跑了，如果是不嫌麻烦版本的话我需要则么做？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</div><div class="line">    fn&amp;&amp;fn(sct)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">// and so</span></div><div class="line">tools.scroll(<span class="built_in">window</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;)</div></pre></td></tr></table></figure><p>这样就会造成，我每次想监听滚动的时候，每用一次这个方法，我就要把<code>window</code>传进去一次。如果包一下的话，我就可以拿后面那个函数走就行了，也就是我的<code>window</code>只要传一次就畅通无阻。这也是另一个好处：分段计算。好比我玩Switch，我在外面突然想玩马车的时候，如果我的卡带在卡包里，那我换上就可以玩了，就不需要等回到家把卡带从包装盒里拿出来装到机器上。</p><p>实际上到这里的话应该有所经验了，到这里还会不会觉得<code>apply(), call(), bind()</code>使用机会少之又少？这就是数学的魅力吧，可是我数学不好。</p><h2 id="柯里化-lt-gt-闭包函数？"><a href="#柯里化-lt-gt-闭包函数？" class="headerlink" title="柯里化 &lt; - &gt; 闭包函数？"></a>柯里化 &lt; - &gt; 闭包函数？</h2><p>又是每期一问了，柯里化跟闭包函数是否也有关系？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 经典面试题</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</div><div class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">             setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">              <span class="built_in">console</span>.log(i);</div><div class="line">        &#125;,<span class="number">0</span>)</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>那么，柯里化函数和闭包函数应该怎么区分？还是的确有联系？</p><p>最后感谢所有被引用的文章及其作者，感谢帮助学习。</p>]]></content>
     
     <summary type="html">
     
@@ -153,17 +153,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>你还在用Console.log()？</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/11/20/js-console/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/11/20/js-console/</id>
+    <link href="https://colmugx.github.io/blog/2017/11/20/js-console/"/>
+    <id>https://colmugx.github.io/blog/2017/11/20/js-console/</id>
     <published>2017-11-20T10:06:13.000Z</published>
     <updated>2017-11-20T15:09:56.543Z</updated>
     
@@ -179,17 +179,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>引用等于指针吗？</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/10/17/reference-equal-pointer/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/10/17/reference-equal-pointer/</id>
+    <link href="https://colmugx.github.io/blog/2017/10/17/reference-equal-pointer/"/>
+    <id>https://colmugx.github.io/blog/2017/10/17/reference-equal-pointer/</id>
     <published>2017-10-17T07:33:38.000Z</published>
     <updated>2017-10-17T14:22:18.853Z</updated>
     
@@ -207,17 +207,17 @@
     
     </summary>
     
-      <category term="编程议论" scheme="https://colmugx.github.io/PersonalBlog/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
+      <category term="编程议论" scheme="https://colmugx.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>总有一天我会死在骚操作上…</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/10/09/diary-vue-jsx/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/10/09/diary-vue-jsx/</id>
+    <link href="https://colmugx.github.io/blog/2017/10/09/diary-vue-jsx/"/>
+    <id>https://colmugx.github.io/blog/2017/10/09/diary-vue-jsx/</id>
     <published>2017-10-09T07:22:07.000Z</published>
     <updated>2017-10-09T07:37:57.498Z</updated>
     
@@ -234,19 +234,19 @@
     
     </summary>
     
-      <category term="毫无意义" scheme="https://colmugx.github.io/PersonalBlog/categories/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89/"/>
+      <category term="毫无意义" scheme="https://colmugx.github.io/blog/categories/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
-      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>使用桌面应用写hexo博客是什么体验？</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/09/19/what-the-feeling-about-hyper/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/09/19/what-the-feeling-about-hyper/</id>
+    <link href="https://colmugx.github.io/blog/2017/09/19/what-the-feeling-about-hyper/"/>
+    <id>https://colmugx.github.io/blog/2017/09/19/what-the-feeling-about-hyper/</id>
     <published>2017-09-19T05:02:01.000Z</published>
     <updated>2017-11-20T10:08:01.059Z</updated>
     
@@ -264,19 +264,19 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/blog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="electron" scheme="https://colmugx.github.io/PersonalBlog/tags/electron/"/>
+      <category term="electron" scheme="https://colmugx.github.io/blog/tags/electron/"/>
     
-      <category term="TypeScript" scheme="https://colmugx.github.io/PersonalBlog/tags/TypeScript/"/>
+      <category term="TypeScript" scheme="https://colmugx.github.io/blog/tags/TypeScript/"/>
     
   </entry>
   
   <entry>
     <title>构建一个简单前端开发环境</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/08/31/create-fe-env/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/08/31/create-fe-env/</id>
+    <link href="https://colmugx.github.io/blog/2017/08/31/create-fe-env/"/>
+    <id>https://colmugx.github.io/blog/2017/08/31/create-fe-env/</id>
     <published>2017-08-31T10:12:20.000Z</published>
     <updated>2017-12-28T10:22:09.331Z</updated>
     
@@ -289,17 +289,17 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/blog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>搞electron + vue + webpack2 + TypeScript什么体验</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/08/22/do-markdown-hexo/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/08/22/do-markdown-hexo/</id>
+    <link href="https://colmugx.github.io/blog/2017/08/22/do-markdown-hexo/"/>
+    <id>https://colmugx.github.io/blog/2017/08/22/do-markdown-hexo/</id>
     <published>2017-08-21T16:12:56.000Z</published>
     <updated>2017-12-07T02:26:50.637Z</updated>
     
@@ -316,19 +316,19 @@
     
     </summary>
     
-      <category term="实践尝试" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+      <category term="实践尝试" scheme="https://colmugx.github.io/blog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
     
     
-      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
-      <category term="electron" scheme="https://colmugx.github.io/PersonalBlog/tags/electron/"/>
+      <category term="electron" scheme="https://colmugx.github.io/blog/tags/electron/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript的call()，bind()，apply()</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/08/14/js-call-apply-bind/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/08/14/js-call-apply-bind/</id>
+    <link href="https://colmugx.github.io/blog/2017/08/14/js-call-apply-bind/"/>
+    <id>https://colmugx.github.io/blog/2017/08/14/js-call-apply-bind/</id>
     <published>2017-08-14T04:26:44.000Z</published>
     <updated>2017-11-20T10:07:03.112Z</updated>
     
@@ -347,17 +347,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>关于Javascript的条件判断</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/08/09/about-conditionals/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/08/09/about-conditionals/</id>
+    <link href="https://colmugx.github.io/blog/2017/08/09/about-conditionals/"/>
+    <id>https://colmugx.github.io/blog/2017/08/09/about-conditionals/</id>
     <published>2017-08-09T06:47:58.000Z</published>
     <updated>2017-10-17T13:56:03.783Z</updated>
     
@@ -372,17 +372,17 @@
     
     </summary>
     
-      <category term="编程议论" scheme="https://colmugx.github.io/PersonalBlog/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
+      <category term="编程议论" scheme="https://colmugx.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>也许是第一个最好理解的Vuex入门</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/04/14/easyknow-vuex/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/04/14/easyknow-vuex/</id>
+    <link href="https://colmugx.github.io/blog/2017/04/14/easyknow-vuex/"/>
+    <id>https://colmugx.github.io/blog/2017/04/14/easyknow-vuex/</id>
     <published>2017-04-14T02:58:13.000Z</published>
     <updated>2017-08-21T16:31:40.000Z</updated>
     
@@ -396,19 +396,19 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
-      <category term="vuex" scheme="https://colmugx.github.io/PersonalBlog/tags/vuex/"/>
+      <category term="vuex" scheme="https://colmugx.github.io/blog/tags/vuex/"/>
     
   </entry>
   
   <entry>
     <title>Vue2.0的网络请求 - Axios</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/04/07/axios-tutorial/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/04/07/axios-tutorial/</id>
+    <link href="https://colmugx.github.io/blog/2017/04/07/axios-tutorial/"/>
+    <id>https://colmugx.github.io/blog/2017/04/07/axios-tutorial/</id>
     <published>2017-04-07T07:20:16.000Z</published>
     <updated>2017-08-21T16:14:11.000Z</updated>
     
@@ -425,17 +425,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="vue" scheme="https://colmugx.github.io/PersonalBlog/tags/vue/"/>
+      <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>关于JavaScript的this</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/</id>
+    <link href="https://colmugx.github.io/blog/2017/03/03/js-this/"/>
+    <id>https://colmugx.github.io/blog/2017/03/03/js-this/</id>
     <published>2017-03-03T10:34:23.000Z</published>
     <updated>2017-08-21T16:32:15.000Z</updated>
     
@@ -450,17 +450,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript所有for</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/03/02/js-for/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/03/02/js-for/</id>
+    <link href="https://colmugx.github.io/blog/2017/03/02/js-for/"/>
+    <id>https://colmugx.github.io/blog/2017/03/02/js-for/</id>
     <published>2017-03-02T15:40:42.000Z</published>
     <updated>2017-12-26T10:03:29.491Z</updated>
     
@@ -473,17 +473,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>ES6对象遍历</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/02/28/object-traversal/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/02/28/object-traversal/</id>
+    <link href="https://colmugx.github.io/blog/2017/02/28/object-traversal/"/>
+    <id>https://colmugx.github.io/blog/2017/02/28/object-traversal/</id>
     <published>2017-02-28T04:21:34.000Z</published>
     <updated>2017-08-19T15:54:22.000Z</updated>
     
@@ -499,19 +499,19 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
-      <category term="ES6" scheme="https://colmugx.github.io/PersonalBlog/tags/ES6/"/>
+      <category term="ES6" scheme="https://colmugx.github.io/blog/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>来搞一手关于Javascript对象继承</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/02/22/js-extends/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/02/22/js-extends/</id>
+    <link href="https://colmugx.github.io/blog/2017/02/22/js-extends/"/>
+    <id>https://colmugx.github.io/blog/2017/02/22/js-extends/</id>
     <published>2017-02-22T13:52:24.000Z</published>
     <updated>2017-08-19T15:52:42.000Z</updated>
     
@@ -526,17 +526,17 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>async-await 初尝试</title>
-    <link href="https://colmugx.github.io/PersonalBlog/2017/02/17/async-await-first/"/>
-    <id>https://colmugx.github.io/PersonalBlog/2017/02/17/async-await-first/</id>
+    <link href="https://colmugx.github.io/blog/2017/02/17/async-await-first/"/>
+    <id>https://colmugx.github.io/blog/2017/02/17/async-await-first/</id>
     <published>2017-02-17T12:38:33.000Z</published>
     <updated>2017-08-19T15:48:55.000Z</updated>
     
@@ -551,12 +551,12 @@
     
     </summary>
     
-      <category term="前端思考" scheme="https://colmugx.github.io/PersonalBlog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
     
     
-      <category term="JavaScript" scheme="https://colmugx.github.io/PersonalBlog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
-      <category term="ES6" scheme="https://colmugx.github.io/PersonalBlog/tags/ES6/"/>
+      <category term="ES6" scheme="https://colmugx.github.io/blog/tags/ES6/"/>
     
   </entry>
   
