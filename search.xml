@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[剑指Offer —— 替换空格]]></title>
+      <url>/blog/2018/01/04/replace-space/</url>
+      <content type="html"><![CDATA[<p>以后博客专职曲苑杂坛算了…</p>
+<p>刚刚看到一题</p>
+<blockquote>
+<p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
+</blockquote>
+<p>我想这什么腿？然后什么都没想，直接就</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span> str.replace(<span class="regexp">/\ /g</span>, <span class="string">'%20'</span>)</div></pre></td></tr></table></figure>
+<p>然后过了……虽然100多毫秒</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 曲苑杂坛 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[有意思的monad记录]]></title>
       <url>/blog/2017/12/27/funny-monad/</url>
       <content type="html"><![CDATA[<blockquote>

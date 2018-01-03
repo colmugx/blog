@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/blog/"/>
-  <updated>2018-01-01T14:11:05.380Z</updated>
+  <updated>2018-01-03T16:06:42.821Z</updated>
   <id>https://colmugx.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>剑指Offer —— 替换空格</title>
+    <link href="https://colmugx.github.io/blog/2018/01/04/replace-space/"/>
+    <id>https://colmugx.github.io/blog/2018/01/04/replace-space/</id>
+    <published>2018-01-03T16:03:46.000Z</published>
+    <updated>2018-01-03T16:06:42.821Z</updated>
+    
+    <content type="html"><![CDATA[<p>以后博客专职曲苑杂坛算了…</p><p>刚刚看到一题</p><blockquote><p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p></blockquote><p>我想这什么腿？然后什么都没想，直接就</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span> str.replace(<span class="regexp">/\ /g</span>, <span class="string">'%20'</span>)</div></pre></td></tr></table></figure><p>然后过了……虽然100多毫秒</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;以后博客专职曲苑杂坛算了…&lt;/p&gt;
+&lt;p&gt;刚刚看到一题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。&lt;/p&gt;
+&lt;/block
+      
+    
+    </summary>
+    
+      <category term="曲苑杂坛" scheme="https://colmugx.github.io/blog/categories/%E6%9B%B2%E8%8B%91%E6%9D%82%E5%9D%9B/"/>
+    
+    
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>有意思的monad记录</title>
@@ -530,33 +559,6 @@
     
     
       <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>async-await 初尝试</title>
-    <link href="https://colmugx.github.io/blog/2017/02/17/async-await-first/"/>
-    <id>https://colmugx.github.io/blog/2017/02/17/async-await-first/</id>
-    <published>2017-02-17T12:38:33.000Z</published>
-    <updated>2017-08-19T15:48:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p></blockquote><p>想起去年第一个放在github的东西，就是获取课程然后下载课程视频的下载器。<br>然后今天，想到弄一个服务端版本。这样我可以无论作为移动端还是webapp端都能用到爬虫的数据了。所以就做了一次改造。<br><a id="more"></a><br>github地址：<a href="https://github.com/ColMugX/ImoocDownloader/tree/server" target="_blank" rel="external">ColMugX/ImoocDownloader at server</a><br>地址跟ImoodDownloader一样，放在同一个项目里。多开了一个server版本分支。归类方便吧！</p><h3 id="ImoocDownloaderServer-请求样本"><a href="#ImoocDownloaderServer-请求样本" class="headerlink" title="ImoocDownloaderServer 请求样本"></a>ImoocDownloaderServer 请求样本</h3><p>请求之后样本大概是这样的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</div><div class="line">  <span class="string">"Info"</span>: &#123;</div><div class="line">    <span class="string">"title"</span>: <span class="string">"使用Struts2+Hibernate开发学生信息管理功能"</span>,</div><div class="line">    <span class="string">"author"</span>: <span class="string">"milanlover"</span>,</div><div class="line">    <span class="string">"job"</span>: <span class="string">"JAVA开发工程师"</span>,</div><div class="line">    <span class="string">"classTime"</span>: <span class="string">"2小时35分"</span>,</div><div class="line">    <span class="string">"classValue"</span>: <span class="string">"高级"</span>,</div><div class="line">    <span class="string">"classInfo"</span>: <span class="string">"简介：本课程通过学生信息管理功能的开发，来介绍Struts2和Hibernate的整合。主要内容包括：Struts2和Hibernate整合，用户登录模块和学生信息管理模块的设计和实现。通过本课程的学习，一定会使小伙伴们的Java Web开发技能更上一层楼。"</span>,</div><div class="line">    <span class="string">"classKn"</span>: <span class="string">"各位小伙伴，学习本课程前需要对\r\nStruts2和Hibernate的基础知识有所了解。"</span>,</div><div class="line">    <span class="string">"classWh"</span>: <span class="string">"1、掌握Struts2和Hibernate的整合开发\r\n2、能够使用Struts2+Hibernate独立开发信息管理类的项目，进行数据的增删改查。"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"Video"</span>: &#123; ... &#125;</div></pre></td></tr></table></figure></p><p>解析完采用json格式进行输出，这是app最好的数据来源方式有木有！所以这样就更方便做APP了。而且这估计也是我第一次正式后端入门吧。<br>至于imoocdownloader这个名字，随便吧毕竟不能算是很好的作品，所以不重新起名字了。</p><h3 id="小谈ES6和ES7"><a href="#小谈ES6和ES7" class="headerlink" title="小谈ES6和ES7"></a>小谈ES6和ES7</h3><p>node更新到了v7.4，毋容置疑ES2016也就是顺势ES7也得到支持了，对于js或者说nodejs这种全靠异步吃饭的服务端有时候也是个很大的问题。<br>js是很经典的函数式语言，至少我这么觉得。函数式编程自然逃不过回调地狱…再加上nodejs这种非阻塞多并发的操作方式有时候确实是一种难题。（我的爬虫小记项目中的宝可梦基本数据爬虫<strong>已经是车祸现场</strong>了。）</p><p>按道理说，并没有ES6和ES7这种称呼，ESX最多只延续到了ES5。因为从ES1~ES5实际上都是ECMA-262的版本。根据百度百科</p><blockquote><p>ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。</p></blockquote><p>而到了ES6并不是叫ES6了，ECMA开始使用年份来命名，比如<code>ECMAScript 2015</code>，和<code>ECMAScript 2016</code>。1到5只是因为编号太长加上该编号一直在迭代。实际上该标准里面有两个语言，但渐渐的由于微软各种不给看好和JavaScript实在名声太大，所以变成了ES-262的扛把子。到了es2015我觉得已经变成一种跟JavaScript关系不大的语言了。虽然还有种<strong>“如果es6取代了js，那么就把es6改名为js”</strong>的说法。不过也不是不可行~</p><p>而ES6增加的内容和改变的内容实在太多了。多了类型的定义方式不再需要下划线约定俗成；简单的括号函数取代闭包函数臃肿的写法（不过括号函数不存在this，以后有机会掰扯。以前不懂事以为反正都一样，之后在微信小程序吃尽苦头）；引入了类的定义再也不需要被es5使用者各种邪魔化（在es6之前我唯一懂的es5对类的定义写法就是<code>new object()</code>）。</p><p>其实看到了es6之后，我就在后悔为什么当时不好好使用typescript和使用ts，这样的话到es6普及时我也可以成为扛把子了（逃。</p><p>所以ES6和ES7的说法，应该是因为ES5被叫顺口了，再说ES2015确实太长，那么顺位下来叫ES6也行，反正都懂就行了。</p><p>而ES2016不比ES2015，TMD竟然就只加入了一个能用的特性：<code>async-await</code>。</p><h3 id="浅谈promise-和-async-await"><a href="#浅谈promise-和-async-await" class="headerlink" title="浅谈promise 和 async-await"></a>浅谈promise 和 async-await</h3><p><code>promise</code>是es6的特性，<code>async-await</code>是es7的特性。前者在es6的学习中被我直接忽视了…觉得用不到而且不知道怎么用。但是在async出现之后，意识到promise的作用，而且我认为他们才是天造地设，缺一不可。<br>es6时代的时候据说也是邪魔写法很多，使用promise解决同步问题，再到后面有Generator函数的说法。最后都并不理想。毕竟语言这东西，如果有原生支持肯定是再好不过了。就跟Android一样，如果原生安卓在这片大陆上能正常使用的话体验肯定比现在任何XUI舒服。</p><p>作为异步程序同步处理，async/await也有矫情的地方，后者只能出现在有前者的上下文中，单独不可使用。而await只能用在promise的函数上面，用在其他函数上也行只不过没作用，还是瞬发还是异步。</p><h3 id="为什么需要P-A-，我用在哪里了"><a href="#为什么需要P-A-，我用在哪里了" class="headerlink" title="为什么需要P/A+，我用在哪里了"></a>为什么需要P/A+，我用在哪里了</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> msgGet = <span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</div><div class="line">        request.get(url, <span class="function"><span class="keyword">function</span>(<span class="params">err, res, body</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span> (err) <span class="keyword">return</span> reject(err);</div><div class="line">                resolve(body);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>首先在查询那部分已经使用到了，因为异步的关系，文件内所有函数几乎都是在同一时间请求（高并发），所以这就导致可能有某种情况：<strong>劳资TMD等着第一个函数执行完得到个值用在第二个函数中计算，等第一的数据准备就绪的时候，第二的老人家竟然告诉我我早在1s前已经完成工作了。请问你拿什么在完成工作！</strong><br>所以就这样，在请求的数据还没到的时候，下面早早把空值传入下一步的操作中了，自然什么都没有，毕竟传值这工作比请求好完成。所以这就体现到需要同步解决的重要性了，“你必须要等你前面的人进去之后你再进去，不能插队！”</p><p>而且，虽然new了，这是一个Promise对象，但是它可以直接去到值，直接取出resolve。不过怎么说，看下面：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fi = <span class="keyword">await</span> msgGet(url);     <span class="comment">//得到msgGet(url)的值</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">await</span> msgGet(url)); <span class="comment">//输出Promise &#123;&lt;padding...&gt;&#125;</span></div></pre></td></tr></table></figure></p><p>通过变量定义之后，获取的值是可以进一步使用的，可以丢入下一个函数进行下一步工作。不需要<code>.then()</code>。但是如果要它直接打印出来就不可能了！因为上面已经说了，这是一个对象并不是一个可直接使用的数值。只有其他函数可以直接get到对象的内容，而没办法直接显示。需要像第二种的方式只能是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fi.then(<span class="function">(<span class="params">m</span>)=&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(m);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p><p>这样操作才能得到真正里面的东西。take it off。不过这样也就依然跌入回调地狱…<br>而到了视频地址解析那部分的时候，由于需要去请求视频地址，同样又出现了相同的情况。但是调用我是在查询的位置调用，在这里<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app.js</span></div><div class="line">    allMsg[<span class="string">'Info'</span>] = classData;</div><div class="line">    allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</div><div class="line">    allMsg[<span class="string">'vidic'</span>] = viDic;</div></pre></td></tr></table></figure></p><p>如果我不是把视频数据向前传，而是在里面直接调用操作的话。就第一次尝试那样：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> vidInfo = getVideoUrl(viDic);</div><div class="line">allMsg[<span class="string">'Info'</span>] = classData;</div><div class="line">allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</div><div class="line">allMsg[<span class="string">'video'</span>] = vidInfo;</div></pre></td></tr></table></figure></p><p>反正差不多吧我忘记了……到后面取值输出的时候就是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</div><div class="line">  <span class="string">"Info"</span>: &#123; ... &#125;</div><div class="line">  <span class="string">"video"</span>: &#123;<span class="built_in">Promise</span> &#123; &lt;padding...&gt; &#125; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>什么都取不到玩腿毛？<br>所以后来就抖了个小聪明，把整理完的视频信息往回传，在前面<code>.then()</code>操作之后取出真实数据再去请求，再得到数据再<code>.then()</code>一次，获得所有真实数据再反馈出来。得到现在要的所有数据。最后一步 send到express。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">msg.then(<span class="function">(<span class="params">data</span>)=&gt;</span> &#123;</div><div class="line">    <span class="keyword">var</span> s = &#123;&#125;;</div><div class="line">    <span class="keyword">if</span> (!data[<span class="string">'err'</span>]) &#123;</div><div class="line">        <span class="keyword">var</span> vidInfo = getVideoUrl(data[<span class="string">'vidic'</span>]);</div><div class="line">        vidInfo.then(<span class="function">(<span class="params">v</span>)=&gt;</span> &#123;</div><div class="line">            <span class="keyword">let</span> s = &#123;&#125;;</div><div class="line">            s[<span class="string">'code'</span>] = data[<span class="string">'code'</span>];</div><div class="line">            s[<span class="string">'classID'</span>] = id;</div><div class="line">            s[<span class="string">'Info'</span>] = data[<span class="string">'Info'</span>];</div><div class="line">            s[<span class="string">'Video'</span>] = v;</div><div class="line">            res.send(s);</div><div class="line">            <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'request finish'</span>)</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p><p>结束。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;想起去年第一个放在github的东西，就是获取课程然后下载课程视频的下载器。&lt;br&gt;然后今天，想到弄一个服务端版本。这样我可以无论作为移动端还是webapp端都能用到爬虫的数据了。所以就做了一次改造。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
-    
-    
-      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
-    
-      <category term="ES6" scheme="https://colmugx.github.io/blog/tags/ES6/"/>
     
   </entry>
   
