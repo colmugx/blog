@@ -2,6 +2,17 @@
 <html lang="zh-CN">
 <head>
   <link rel="stylesheet" href="/blog/style/style.css">
+<script>
+    var NlviConfig = {
+        title: "ColMugX",
+        author: "Co1MugX",
+        theme: "balance",
+        lightbox: true,
+        animate: true,
+        baseUrl: "/blog/",
+        search: true
+    }
+</script>
 
 
 
@@ -422,18 +433,7 @@
 </footer>
     </div>
   </div>
-  <script>
-  var CONFIG = {
-    title: "ColMugX",
-    author: "Co1MugX",
-    theme: "balance",
-    lightbox: true,
-    animate: true,
-    baseUrl: /blog/,
-    search: true
-  }
-</script>
-<script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
@@ -455,6 +455,28 @@
     <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 
+
+  <div class="search" id="search">
+    <div class="mask" id="mask"></div>
+    <div class="search-wrapper syuanpi">
+      <h2 id="search-header" class="syuanpi">搜索一下？</h2>
+      <div class="input">
+        <input type="text" id="local-search-input" results="0" name="">
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+  <script>
+  if (NlviConfig.theme === 'banderole') {
+    var GREETING = {
+      morning: "我的博客里可没有早饭！",
+      noon: "记得午休吃饭，不着急看我的博客~",
+      after: "下午好，感谢查阅我的博客",
+      night: "您来我的博客看笑话当做休息嘛",
+      midnight: "我觉得大半夜就不要看啦"
+    }
+  }
+  </script>
 
 </body>
 </html>
