@@ -681,7 +681,7 @@ body {
 .container .container-inner {
   margin-left: 300px;
   margin-top: 2%;
-  padding: 0 16px 0 24px;
+  padding: 0 16px;
 }
 @media screen and (max-width: 650px) {
   .container .container-inner {
@@ -692,6 +692,10 @@ body {
     margin-top: 66px;
     padding: 0 8px;
   }
+}
+.container .main {
+  max-width: 800px;
+  margin: 0 auto;
 }
 .header {
   position: fixed;

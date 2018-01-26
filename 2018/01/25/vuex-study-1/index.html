@@ -66,9 +66,9 @@
 
 
 
-  <meta name="keywords" content="vue, Nlvi" />
+  <meta name="keywords" content="vue, vuex, Nlvi" />
 
-  <title> 通过dva得到的思考 —— “滥用”VUEX · ColMugX </title>
+  <title> vuex源码理解（一） · ColMugX </title>
 </head>
 <body>
   <div class="progress">
@@ -167,8 +167,8 @@
   <aside class="post-toc">
     <span class="title" id="toc-switch"><span>文章导航</span></span>
     <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">通过dva得到的思考 —— “滥用”VUEX</a></li>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#dva是什么"><span class="toc-text">dva是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从dva得到了启示"><span class="toc-text">从dva得到了启示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对启示更清晰的思考"><span class="toc-text">对启示更清晰的思考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#针对vue的操作"><span class="toc-text">针对vue的操作</span></a></li></ol>
+      <li class="title-link"><a href="javascript:;" class="toTop">vuex源码理解（一）</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#由口而入"><span class="toc-text">由口而入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#辅助函数"><span class="toc-text">辅助函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizeNamespace"><span class="toc-text">normalizeNamespace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizeMap"><span class="toc-text">normalizeMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mapState-mapMutations-mapGetters-mapActions"><span class="toc-text">mapState, mapMutations, mapGetters, mapActions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li></ol></li></ol>
     </div>
   </aside>
 
@@ -257,7 +257,7 @@
     <header class="post-header">
       <div class="post-time syuanpi riseIn-light back-1">
         <div class="post-time-wrapper">
-          <span>2018-01-22</span>
+          <span>2018-01-25</span>
           
             
               <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
@@ -269,6 +269,8 @@
               
                 <a href="/blog/tags/vue/">vue</a>
               
+                <a href="/blog/tags/vuex/">vuex</a>
+              
               </aside>
             
           
@@ -276,41 +278,36 @@
       </div>
       <h1 class="post-title syuanpi riseIn-light back-2">
         
-          通过dva得到的思考 —— “滥用”VUEX
+          vuex源码理解（一）
         
       </h1>
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-        <p>首先这一手骚操作要感谢@ahonn，确实这几天学习dva，我自己都觉得自己有点烦了。但是老哥好耐心，真心感谢。</p>
-<p>直接上正题吧不磨磨唧唧的了！</p>
-<h3 id="dva是什么"><a href="#dva是什么" class="headerlink" title="dva是什么"></a>dva是什么</h3><p>这还用说吗，坦克啊！双命特性，大招是通过机甲自爆产生大范围爆炸，本体只有100血，可以反…啊！！！别打我啊！</p>
-<p>好吧可能阿里的工程师也喜欢玩守望先锋，而且我清晰记得dva这个框架就是守望大火的时候诞生的，而且还有一个协同工具叫路霸吧。（看来阿里的工程师都不喜欢当C…）</p>
-<a id="more"></a>
-<p><code>dva</code>是针对<code>react</code>的框架，实际上就是关于<code>redux</code>的一个封装。首先是让本来很难理解和使用的redux变得相对容易理解和操作。另外一个就是因为数据集中管理，并且推荐使用无状态组件，操作者只需要关心数据的走向。</p>
-<h3 id="从dva得到了启示"><a href="#从dva得到了启示" class="headerlink" title="从dva得到了启示"></a>从dva得到了启示</h3><p>毕竟阿里前端工程师，Ahonn是真的喜欢阿里的东西…最近跟他聊天也比较深入了解“为什么我们需要dva”。</p>
-<p>后来我一个闪念：<code>dva</code>会不会就是一个数据库模型，实际上redux对我们来说就是一个数据库，前端没有状态，不干涉数据，实际上就是我们常说的只关心增删改查？</p>
-<p>那么dva实际上还是对<code>redux</code>，<code>redux-saga</code>，<code>redux-thunk</code>的封装，但对于vue来说简直就是先天优势，因为对于vuex来说已经相当于redux + redux-saga了。从这里也直接萌生了一个想法：vuex + stateless component = 1/2 dva ？</p>
-<h3 id="对启示更清晰的思考"><a href="#对启示更清晰的思考" class="headerlink" title="对启示更清晰的思考"></a>对启示更清晰的思考</h3><p>首先现在的dva，把数据都封装在<code>model</code>中，一个<code>model</code>对应一个redux，<code>state</code>, <code>reducer</code>概念得以保留，引入<code>effect</code>和<code>subscriptions</code>概念。</p>
-<p>首先副作用的目的是，通过异步操作例如网络请求或者一些需要异同步配合的操作，然后去驱使<code>reducer</code>更新<code>state</code>，因为在流中，只有<code>reducer</code>有权利去动<code>state</code>。<code>subscriptions</code>就是一个订阅的概念，在我看来就是一个初始化，或者说是一个接受状态的概念。</p>
-<p>那么为什么说vuex有先天优势？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// dva model</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  namespace: <span class="string">"users"</span>,</div><div class="line">  state: &#123;&#125;,</div><div class="line">  reducers: &#123;&#125;,</div><div class="line">  effects: &#123;&#125;,</div><div class="line">  subscriptions: &#123;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// vuex</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  modules: &#123;</div><div class="line">    users: &#123;</div><div class="line">      namespaced: <span class="literal">true</span>,</div><div class="line">      state: &#123;&#125;,</div><div class="line">      mutations: &#123;&#125;,</div><div class="line">      actions: &#123;&#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>如果你要无限逼近dva是什么感觉？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// users.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  namespaced: <span class="literal">true</span>,</div><div class="line">  state: &#123;&#125;,</div><div class="line">  mutations: &#123;&#125;,</div><div class="line">  actions: &#123;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//store.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  modules: &#123;</div><div class="line">    users</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>由于 vue/vuex 对于规则还是相对宽松，但理是理法是法，约定俗成<code>mutations</code>是用来做同步的工作，可以用来操作<code>state</code>；<code>actions</code>用来做异步工作，通知<code>mutations</code>去操作<code>state</code>。所以这里是不是就有一种新的概念？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">state &lt;=&gt; state</div><div class="line">mutation &lt;=&gt; reducer</div><div class="line">action &lt;=&gt; effect</div><div class="line"></div><div class="line">_ &lt;=&gt; subscription</div></pre></td></tr></table></figure>
-<p>对没错，订阅怎么办？</p>
-<p>在dva的例子中，看一下示例的订阅是做了什么工作？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">subscriptions: &#123;</div><div class="line">  setup(&#123; dispatch, history &#125;) &#123;</div><div class="line">    <span class="keyword">return</span> history.listen(<span class="function">(<span class="params">&#123; pathname, query &#125;</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">if</span> (pathname === <span class="string">'/users'</span>) &#123;</div><div class="line">        dispatch(&#123; <span class="attr">type</span>: <span class="string">'fetch'</span>, <span class="attr">payload</span>: query &#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>所以关于这个简单订阅，我们完全可以直接用<code>vue-router</code>，而其中刚好有一个概念我们可以直接使用 —— 导航守卫</p>
-<h3 id="针对vue的操作"><a href="#针对vue的操作" class="headerlink" title="针对vue的操作"></a>针对vue的操作</h3><p>老样子，我们是怎么理解dva的<code>model</code>，就怎么理解vuex的<code>store</code>。首先<code>state</code>和<code>reducer</code>跟vuex的定义是完全对等的，不需要多理解。<code>effects</code>是使用<code>generator</code>函数来解决异同步问题的，那好办啊，都2018年了，我们直接用async/await就行了。而且我们之前关于api都是使用<code>promise</code>，而且用的也是<code>axios</code>，所以这部分可以说是无缝切换。</p>
-<p>那么关于订阅，直接使用<code>vue-router</code>的导航守卫对路由监控，另外在必要的时候还能使用<code>meta</code>。当然导航守卫并不是只能用在全局上，也可以注入到组件中，所以我们注入到页面组件即可。</p>
-<p>接下来就是无状态组件问题了，vue默认是状态组件，而且无状态组件也没有react来的方便。</p>
-<p>react想要无状态组件，无非就是一个函数就结束战斗了。vue也有一个概念叫函数式组件，也就是无状态，这种组件在使用上就已经不是很方便了。</p>
-<p>vue的函数式组件就必须使用<code>render</code>函数不能用<code>template</code>模板，一直到vue2.5才可以在<code>&lt;template functional&gt;</code>使用。但我尝试了一下，手感并不好，所以还是只能用 jsx + vue 这种搭配来操作。不过vue的无状态组件也不像react那么好理解，它依然是一个Object</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  functional: <span class="literal">true</span>， <span class="comment">// 你只不过是通过这个开关来切换组件状态</span></div><div class="line">  methods: &#123;</div><div class="line">    ...mapActions(<span class="string">'spacename'</span>, &#123;</div><div class="line">      add: <span class="string">'create'</span></div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;&#123;props.msg&#125;&lt;/h1&gt;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>而且在实际使用中，实际上因为vue的概念，你还是没办法在所有组件完全不使用无状态组件（已经除去表单组件）。不过也无伤大雅了。</p>
-<p>所以通过这个操作，也能近似的得到了dva的那种感觉。前端的工作只需要直观的反馈你的数据动向和状态，要那么复杂干什么？</p>
+        <p>看个代码代价很高，我边读边转笔，然后一个失手把手挑了个滴血不止…（笔头挑掉了一层手皮）</p>
+<p>vuex和dva的源码都想看，不然没办法知道相性在哪。</p>
+<h2 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h2><p>这都暴露干净了…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  Store,</div><div class="line">  install,</div><div class="line">  version: <span class="string">'__VERSION__'</span>,</div><div class="line">  mapState,</div><div class="line">  mapMutations,</div><div class="line">  mapGetters,</div><div class="line">  mapActions,</div><div class="line">  createNamespacedHelpers</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>install</code>肯定是Vue老套路，想把东西当插件用肯定要暴露这个方法。这个之前写组件经常需要碰到，弃之！</p>
+<p>这次就先读暴露出来的四个方法吧</p>
+<h2 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h2><h3 id="normalizeNamespace"><a href="#normalizeNamespace" class="headerlink" title="normalizeNamespace"></a>normalizeNamespace</h3><p>这个东西可能要先讲，因为你看到<code>mapState</code>的第一眼你就会看到他，虽然不重要。</p>
+<p>这应该是一个初始化或者标准化命名空间的方法，之前”尝试用dva的理解对处理数据”有遇到使用命名空间的情况。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(<span class="string">'spacename'</span>, &#123;</div><div class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>看一下实现方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeNamespace</span> (<span class="params">fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">namespace, map</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> namespace !== <span class="string">'string'</span>) &#123;</div><div class="line">      map = namespace</div><div class="line">      namespace = <span class="string">''</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (namespace.charAt(namespace.length - <span class="number">1</span>) !== <span class="string">'/'</span>) &#123;</div><div class="line">      namespace += <span class="string">'/'</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fn(namespace, map)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>映入眼帘就是一个柯里了，大致意思就是命名空间需要处理，如果进来的函数第一个不是空间名称那么肯定直接是对象了，因为我们也不是必须使用命名空间，比如最普通的这样的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(&#123;</div><div class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果有命名空间的话，就根据层数用<code>/</code>分开，比如<code>app/save</code></p>
+<h3 id="normalizeMap"><a href="#normalizeMap" class="headerlink" title="normalizeMap"></a>normalizeMap</h3><p>对不起还是不能讲到<code>mapState</code>，毕竟通用的函数理解完了之后，游戏也就结束了。（要不怎么说是辅助函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Normalize the map</span></div><div class="line"><span class="comment"> * normalizeMap([1, 2, 3]) =&gt; [ &#123; key: 1, val: 1 &#125;, &#123; key: 2, val: 2 &#125;, &#123; key: 3, val: 3 &#125; ]</span></div><div class="line"><span class="comment"> * normalizeMap(&#123;a: 1, b: 2, c: 3&#125;) =&gt; [ &#123; key: 'a', val: 1 &#125;, &#123; key: 'b', val: 2 &#125;, &#123; key: 'c', val: 3 &#125; ]</span></div><div class="line"><span class="comment"> * @param &#123;Array|Object&#125; map</span></div><div class="line"><span class="comment"> * @return &#123;Object&#125;</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeMap</span> (<span class="params">map</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(map)</div><div class="line">    ? map.map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: key &#125;))</div><div class="line">    : <span class="built_in">Object</span>.keys(map).map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: map[key] &#125;))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注释都直接告诉你了！对的实际上组件对<code>vuex</code>的访问可以有两种，对象或者数组。对象的情况上面已经有了，还有一种数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(<span class="string">'spacename'</span>, [</div><div class="line">    <span class="string">'count'</span></div><div class="line">  ])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种是，如果组件的参数跟vuex设定一样，那么就直接传入数组匹配，相当于<code>this.count</code>指向<code>this.$store.state.count</code></p>
+<h3 id="mapState-mapMutations-mapGetters-mapActions"><a href="#mapState-mapMutations-mapGetters-mapActions" class="headerlink" title="mapState, mapMutations, mapGetters, mapActions"></a>mapState, mapMutations, mapGetters, mapActions</h3><p>剩下的就真的是“拼装术”的事情了，通过暴露出去的辅助函数所接收到的数据进行转换并连接<code>vuex</code>。</p>
+<p>相当于<code>redux</code>本身只提供了状态管理，便捷操作需要接触各类型插件。而<code>vuex</code>作为<code>vue</code>专属状态管理，已经提供了最适合<code>vue</code>的操作。</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>由于辅助函数做的工作就是提供在组件中对<code>vuex</code>连接操作的工作，而函数中的转换结果都会是<code>this.$store</code>。在注入<code>vue</code>的环境中，<code>this</code>不出意外的话是指向<code>vue</code>原型上的，这也就意味着，<code>vuex</code>实际上也是作为插件附着在<code>vue</code>原型中。</p>
+<p>不过关于这一点，在一开始就有提到，<code>vuex</code>是通过暴露自己的安装函数让<code>vue</code>可以直接<code>use()</code>。而且我们在<code>main.js</code>绑定时也默认使用<code>store</code>这个key。</p>
+<p>这样的话，只要是能访问到<code>vue</code>的地方就可以访问到<code>$store</code>了，包括组件。<strong>从而可以做到不需要什么辅助函数也不需要<code>actions</code>直接对状态管理动手动脚。</strong>这不仅是react的使用者感觉到的诧异或者反感了吧。</p>
+<p>不过团队是知道这种情况的存在的，所以他们是<strong>推荐在组件中使用辅助函数，请不要直接操作</strong>。</p>
+<p>（不过这个注释最多也就说说而已，懂道理的人都会这么做；不懂道理的，只存留“我只要解决问题就行了”的某些人是不会这么做的。）</p>
 
       
     
@@ -326,7 +323,7 @@
     </div>
     <div class="copy-url">
       <span>地址 :</span>
-      <a href="https://colmugx.github.io/blog/2018/01/22/vuex-dva/">https://colmugx.github.io/blog/2018/01/22/vuex-dva/</a>
+      <a href="https://colmugx.github.io/blog/2018/01/25/vuex-study-1/">https://colmugx.github.io/blog/2018/01/25/vuex-study-1/</a>
     </div>
     <div class="copy-origin">
       <span>来源 :</span>
@@ -344,16 +341,10 @@
     
   <nav class="article-page">
     
-      <a href="/blog/2018/01/25/vuex-study-1/" id="art-left" class="art-left">
-        <span class="next-title">
-          <i class="iconfont icon-left"></i>vuex源码理解（一）
-        </span>
-      </a>
     
-    
-      <a href="/blog/2018/01/04/replace-space/" id="art-right" class="art-right">
+      <a href="/blog/2018/01/22/vuex-dva/" id="art-right" class="art-right">
         <span class="prev-title"> 
-          剑指Offer —— 替换空格<i class="iconfont icon-right"></i>  
+          通过dva得到的思考 —— “滥用”VUEX<i class="iconfont icon-right"></i>  
         </span>
       </a>
     

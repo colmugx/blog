@@ -254,6 +254,67 @@
     <header class="post-header">
       <div class="post-time syuanpi riseIn-light back-1">
         <div class="post-time-wrapper">
+          <span>2018-01-25</span>
+          
+            
+              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
+            
+          
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          <a href="/blog/2018/01/25/vuex-study-1/">vuex源码理解（一）</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        
+          <p>看个代码代价很高，我边读边转笔，然后一个失手把手挑了个滴血不止…（笔头挑掉了一层手皮）</p>
+<p>vuex和dva的源码都想看，不然没办法知道相性在哪。</p>
+<h2 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h2><p>这都暴露干净了…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  Store,</div><div class="line">  install,</div><div class="line">  version: <span class="string">'__VERSION__'</span>,</div><div class="line">  mapState,</div><div class="line">  mapMutations,</div><div class="line">  mapGetters,</div><div class="line">  mapActions,</div><div class="line">  createNamespacedHelpers</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>install</code>肯定是Vue老套路，想把东西当插件用肯定要暴露这个方法。这个之前写组件经常需要碰到，弃之！</p>
+<p>这次就先读暴露出来的四个方法吧</p>
+<h2 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h2><h3 id="normalizeNamespace"><a href="#normalizeNamespace" class="headerlink" title="normalizeNamespace"></a>normalizeNamespace</h3><p>这个东西可能要先讲，因为你看到<code>mapState</code>的第一眼你就会看到他，虽然不重要。</p>
+<p>这应该是一个初始化或者标准化命名空间的方法，之前”尝试用dva的理解对处理数据”有遇到使用命名空间的情况。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(<span class="string">'spacename'</span>, &#123;</div><div class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>看一下实现方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeNamespace</span> (<span class="params">fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">namespace, map</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> namespace !== <span class="string">'string'</span>) &#123;</div><div class="line">      map = namespace</div><div class="line">      namespace = <span class="string">''</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (namespace.charAt(namespace.length - <span class="number">1</span>) !== <span class="string">'/'</span>) &#123;</div><div class="line">      namespace += <span class="string">'/'</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fn(namespace, map)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>映入眼帘就是一个柯里了，大致意思就是命名空间需要处理，如果进来的函数第一个不是空间名称那么肯定直接是对象了，因为我们也不是必须使用命名空间，比如最普通的这样的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(&#123;</div><div class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果有命名空间的话，就根据层数用<code>/</code>分开，比如<code>app/save</code></p>
+<h3 id="normalizeMap"><a href="#normalizeMap" class="headerlink" title="normalizeMap"></a>normalizeMap</h3><p>对不起还是不能讲到<code>mapState</code>，毕竟通用的函数理解完了之后，游戏也就结束了。（要不怎么说是辅助函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Normalize the map</span></div><div class="line"><span class="comment"> * normalizeMap([1, 2, 3]) =&gt; [ &#123; key: 1, val: 1 &#125;, &#123; key: 2, val: 2 &#125;, &#123; key: 3, val: 3 &#125; ]</span></div><div class="line"><span class="comment"> * normalizeMap(&#123;a: 1, b: 2, c: 3&#125;) =&gt; [ &#123; key: 'a', val: 1 &#125;, &#123; key: 'b', val: 2 &#125;, &#123; key: 'c', val: 3 &#125; ]</span></div><div class="line"><span class="comment"> * @param &#123;Array|Object&#125; map</span></div><div class="line"><span class="comment"> * @return &#123;Object&#125;</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeMap</span> (<span class="params">map</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(map)</div><div class="line">    ? map.map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: key &#125;))</div><div class="line">    : <span class="built_in">Object</span>.keys(map).map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: map[key] &#125;))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注释都直接告诉你了！对的实际上组件对<code>vuex</code>的访问可以有两种，对象或者数组。对象的情况上面已经有了，还有一种数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(<span class="string">'spacename'</span>, [</div><div class="line">    <span class="string">'count'</span></div><div class="line">  ])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种是，如果组件的参数跟vuex设定一样，那么就直接传入数组匹配，相当于<code>this.count</code>指向<code>this.$store.state.count</code></p>
+<h3 id="mapState-mapMutations-mapGetters-mapActions"><a href="#mapState-mapMutations-mapGetters-mapActions" class="headerlink" title="mapState, mapMutations, mapGetters, mapActions"></a>mapState, mapMutations, mapGetters, mapActions</h3><p>剩下的就真的是“拼装术”的事情了，通过暴露出去的辅助函数所接收到的数据进行转换并连接<code>vuex</code>。</p>
+<p>相当于<code>redux</code>本身只提供了状态管理，便捷操作需要接触各类型插件。而<code>vuex</code>作为<code>vue</code>专属状态管理，已经提供了最适合<code>vue</code>的操作。</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>由于辅助函数做的工作就是提供在组件中对<code>vuex</code>连接操作的工作，而函数中的转换结果都会是<code>this.$store</code>。在注入<code>vue</code>的环境中，<code>this</code>不出意外的话是指向<code>vue</code>原型上的，这也就意味着，<code>vuex</code>实际上也是作为插件附着在<code>vue</code>原型中。</p>
+<p>不过关于这一点，在一开始就有提到，<code>vuex</code>是通过暴露自己的安装函数让<code>vue</code>可以直接<code>use()</code>。而且我们在<code>main.js</code>绑定时也默认使用<code>store</code>这个key。</p>
+<p>这样的话，只要是能访问到<code>vue</code>的地方就可以访问到<code>$store</code>了，包括组件。<strong>从而可以做到不需要什么辅助函数也不需要<code>actions</code>直接对状态管理动手动脚。</strong>这不仅是react的使用者感觉到的诧异或者反感了吧。</p>
+<p>不过团队是知道这种情况的存在的，所以他们是<strong>推荐在组件中使用辅助函数，请不要直接操作</strong>。</p>
+<p>（不过这个注释最多也就说说而已，懂道理的人都会这么做；不懂道理的，只存留“我只要解决问题就行了”的某些人是不会这么做的。）</p>
+
+        
+      
+    
+    </div>
+    
+  </article>
+  
+  
+
+  
+    
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
           <span>2018-01-22</span>
           
             
@@ -580,57 +641,10 @@
   
 
   
-    
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi riseIn-light back-1">
-        <div class="post-time-wrapper">
-          <span>2017-11-20</span>
-          
-            
-              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
-            
-          
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi riseIn-light back-2">
-        
-          <a href="/blog/2017/11/20/js-console/">你还在用Console.log()？</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi riseIn-light back-3">
-      
-        
-          <blockquote>
-<p>也许主题应该改为：你只会使用Console.log()？</p>
-</blockquote>
-<p>现在的前端虽说是越来越复杂，但是我怎么觉得现在前端的要求越来越低了？应该说现在的人，看个几遍vue，知道console.log()，知道var, {}, []，就敢出来找工作了。但是<code>console</code>就这么个方法？</p>
-<p>搞笑，你在你的浏览器输入<code>console</code>，自己看看有多少东西！所以为了高效调试我觉得有必要全了解一遍。<br>
-        
-      
-    
-      <p class="content-link">
-        <a href="/blog/2017/11/20/js-console/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
-    
-    </div>
-    
-  </article>
-  
-  
-
-  
 </section>
   
   <nav class="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/2/">下一页 ></a>
+      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/2/">下一页 ></a>
   </nav>
 
 
