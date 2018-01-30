@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="stylesheet" href="/blog/style/style.css">
+<script>
+    var NlviConfig = {
+        title: "ColMugX",
+        author: "Co1MugX",
+        theme: "balance",
+        lightbox: true,
+        animate: true,
+        baseUrl: "/blog/",
+        search: true
+    }
+</script>
+
+
+
+    <link rel="stylesheet" href="/blog/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/blog/syuanpi/syuanpi.min.css">
+
+
+
+
+    <link rel="icon" href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98059014-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ColMugX">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+<meta name="keywords" content="nlvi, Nlvi" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+  <meta name="subtitle" content="SHOW YOUR FUNCTION NO BB.">
+
+
+  <meta name="description" content="Co1MugX Blog">
+
+
+
+  <meta name="keywords" content="vue, vuex, Nlvi" />
+
+  <title> vuex源码理解（二） · ColMugX </title>
+</head>
+<body>
+  <div class="progress">
+  <div class="progress-inner"></div>
+</div>
+  
+  
+
+  <div class="container">
+
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn">
+    <span><a href="/blog/">ColMugX</a></span>
+    
+      <span id="subtitle">SHOW YOUR FUNCTION NO BB.</span>
+    
+  </div>
+</div>
+    <nav class="main-nav">
+        
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="search">
+        <span>搜索</span>
+        
+          <span class="menu-item-label">search</span>
+        
+      </a>
+    </li>
+  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/blog/" id="article">
+        <span class="base-name">文章</span>
+        
+          <span class="menu-item-label">article</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/blog/archives" id="archives">
+        <span class="base-name">归档</span>
+        
+          <span class="menu-item-label">archives</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">标签</span>
+        
+          <span class="menu-item-label">tags</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/blog/about" id="about">
+        <span class="base-name">关于</span>
+        
+          <span class="menu-item-label">about</span>
+        
+      </a>
+    </li>  
+  
+  </ul>
+  
+</nav>
+    
+    
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">vuex源码理解（二）</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一些简单的东西"><span class="toc-text">一些简单的东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始跳着理解"><span class="toc-text">开始跳着理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#store-与-操作绑定"><span class="toc-text">store 与 操作绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ModuleCollection"><span class="toc-text">ModuleCollection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#installModule"><span class="toc-text">installModule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resetStoreVM"><span class="toc-text">resetStoreVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#withCommit"><span class="toc-text">_withCommit()</span></a></li></ol></li></ol>
+    </div>
+  </aside>
+
+  
+    
+  </div>
+</header>
+<div class="mobile-header">
+  <div class="mobile-header-body">
+    <div class="mobile-header-list">
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/blog/">
+                    <span>文章</span>
+                    
+                        <span class="menu-item-label">article</span>
+                    
+                </a>
+            </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/blog/archives">
+                    <span>归档</span>
+                    
+                        <span class="menu-item-label">archives</span>
+                    
+                </a>
+            </div>
+        
+      
+        
+          <div class="mobile-nav-item inner-cloud">
+            <div class="mobile-nav-tag">
+              <a href="javascript:;" id="mobile-tags">
+                <span>标签</span>
+                
+                    <span class="menu-item-label">tags</span>
+                
+              </a>
+            </div>
+            <div class="mobile-nav-tagcloud">
+              <div class="mobile-tagcloud-inner">
+                <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+              </div>
+            </div>
+          </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/blog/about">
+                    <span>关于</span>
+                    
+                        <span class="menu-item-label">about</span>
+                    
+                </a>
+            </div>
+        
+      
+    </div>
+  </div>
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <span class="header-menu-line"></span>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">ColMugX</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+</div>
+    <div class="container-inner">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2018-01-30</span>
+          
+            
+              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
+            
+          
+          
+            
+              <aside class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/blog/tags/vue/">vue</a>
+              
+                <a href="/blog/tags/vuex/">vuex</a>
+              
+              </aside>
+            
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          vuex源码理解（二）
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        <p>继续，这次尝试逐行理解Store类的东西</p>
+<p>然后关于这次，一些“工具函数”都集中在<code>util.js</code>的这种做法，已经够我学的了。这是个很受用的做法。</p>
+<h2 id="一些简单的东西"><a href="#一些简单的东西" class="headerlink" title="一些简单的东西"></a>一些简单的东西</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span>) &#123;</div><div class="line">  assert(Vue, <span class="string">`must call Vue.use(Vuex) before creating a store instance.`</span>)</div><div class="line">  assert(<span class="keyword">typeof</span> <span class="built_in">Promise</span> !== <span class="string">'undefined'</span>, <span class="string">`vuex requires a Promise polyfill in this browser.`</span>)</div><div class="line">  assert(<span class="keyword">this</span> <span class="keyword">instanceof</span> Store, <span class="string">`Store must be called with the new operator.`</span>)</div><div class="line">&#125; <span class="comment">// 断言函数在util，如果不满足前面的情况，后面以error 排出来</span></div><div class="line"><span class="comment">// （实际上就是想看有没有在vue环境中和有没有正确安装）</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123;</div><div class="line">  plugins = [],</div><div class="line">  strict = <span class="literal">false</span></div><div class="line">&#125; = options <span class="comment">// 定义两个变量，在传入的对象中把这两个东西拿出来，字面意思</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 这里可能是会把整个vuex所有的内容都会规整到这些中</span></div><div class="line"><span class="comment">// store internal state  </span></div><div class="line"><span class="keyword">this</span>._committing = <span class="literal">false</span>  <span class="comment">// commit switch（ -&gt; mutations）</span></div><div class="line"><span class="keyword">this</span>._actions = <span class="built_in">Object</span>.create(<span class="literal">null</span>) <span class="comment">// actions</span></div><div class="line"><span class="keyword">this</span>._actionSubscribers = [] <span class="comment">// 应该像在dva中看到的订阅，没用过也没弄清楚应该怎么用</span></div><div class="line"><span class="keyword">this</span>._mutations = <span class="built_in">Object</span>.create(<span class="literal">null</span>) <span class="comment">// mutations</span></div><div class="line"><span class="keyword">this</span>._wrappedGetters = <span class="built_in">Object</span>.create(<span class="literal">null</span>) <span class="comment">// getters</span></div><div class="line"><span class="keyword">this</span>._modules = <span class="keyword">new</span> ModuleCollection(options) <span class="comment">// 分模块得到一个类</span></div><div class="line"><span class="keyword">this</span>._modulesNamespaceMap = <span class="built_in">Object</span>.create(<span class="literal">null</span>)  <span class="comment">// 命名空间，上一次有讲到</span></div><div class="line"><span class="keyword">this</span>._subscribers = [] <span class="comment">// 所有订阅者</span></div><div class="line"><span class="keyword">this</span>._watcherVM = <span class="keyword">new</span> Vue() <span class="comment">//watcher??应该跟vue的watcher有关？</span></div></pre></td></tr></table></figure>
+<h2 id="开始跳着理解"><a href="#开始跳着理解" class="headerlink" title="开始跳着理解"></a>开始跳着理解</h2><h3 id="store-与-操作绑定"><a href="#store-与-操作绑定" class="headerlink" title="store 与 操作绑定"></a>store 与 操作绑定</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bind commit and dispatch to self</span></div><div class="line"><span class="keyword">const</span> store = <span class="keyword">this</span> <span class="comment">// 把store 是指向 this 的</span></div><div class="line"><span class="keyword">const</span> &#123; dispatch, commit &#125; = <span class="keyword">this</span> <span class="comment">// 所以 &#123; dispatch, commit &#125; = store ?</span></div><div class="line"><span class="keyword">this</span>.dispatch = <span class="function"><span class="keyword">function</span> <span class="title">boundDispatch</span> (<span class="params">type, payload</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> dispatch.call(store, type, payload)</div><div class="line">&#125;</div><div class="line"><span class="keyword">this</span>.commit = <span class="function"><span class="keyword">function</span> <span class="title">boundCommit</span> (<span class="params">type, payload, options</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> commit.call(store, type, payload, options)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>虽然有注释，就是把 commit, dispatch 和store绑定到<code>this</code>上，然后<code>{ dispatch, commit } = store</code>了。接着class中的<code>dispatch</code>指向刚刚对象中<code>dispatch</code>的方法，通过<code>call</code>用法改变作用域调用。我们用到的<code>this.$store.dispatch</code>应该来源这里，下面同理</p>
+<h3 id="ModuleCollection"><a href="#ModuleCollection" class="headerlink" title="ModuleCollection"></a>ModuleCollection</h3><p>这里感觉很有意思，因为我这是第一次关注vuex的代码，我也不清楚命名空间等这些东西是什么时候加进去的，但我猜测应该是vue2.5之后的内容因为之前没在文档里见过这些东西。</p>
+<p>字面意思，模块收集器。由于现在复杂度的关系，这部分应该先处理一下。把从vue的vuex得到的options，直接传入这个类，然后再进入<code>register</code>方法，接下来的工作就是不断的尾递归（？）得到整棵树。因为现在还有命名空间什么的，所以还有关于命名空间的判断和结合。</p>
+<p>然后还有一些其他方法，比如热更什么的。</p>
+<h3 id="installModule"><a href="#installModule" class="headerlink" title="installModule"></a>installModule</h3><p>使用到的位置<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">installModule(<span class="keyword">this</span>, state, [], <span class="keyword">this</span>._modules.root)</div></pre></td></tr></table></figure></p>
+<p>Store开始初始化的其中第一个方法。</p>
+<p>这个方法，字面含义就是安装模块，猜测应该是把store相关的东西先配置下来。</p>
+<p>这里有一个点（函数太长了不浪费篇幅了）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> isRoot = !path.length</div></pre></td></tr></table></figure></p>
+<p>判断是否是根是通过<code>path</code>的长度来做的，如果没长度就是<code>/</code>了，很有意思，对于还没什么经验的我受益匪浅。</p>
+<p>这个函数，需要5个参数，<code>store</code>, <code>rootState</code>, <code>path</code>, <code>module</code>, <code>hot</code>。最后一个应该也跟更新有关系吧？</p>
+<p><code>this</code>在<code>class</code>中，所以指向是<code>class Store</code>的；<code>state</code>是<code>const state = this._modules.root.state</code>得到，而<code>_modules</code>就上面提到的定义了；因为还在根所以没有<code>path</code>，最后传入刚刚各种尾递归得到的树。</p>
+<p>接下来注册命名空间，也就是判断这次的store有没有用到命名空间，有就分成一张张网，摊开处理。</p>
+<p>接下来会遇到一个函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getNestedState</span> (<span class="params">state, path</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> path.length</div><div class="line">    ? path.reduce(<span class="function">(<span class="params">state, key</span>) =&gt;</span> state[key], state)</div><div class="line">    : state</div><div class="line">&#125; <span class="comment">// 如果不是根的话会被分配到这里，看需不需要拼凑state，就“三光属性”</span></div></pre></td></tr></table></figure></p>
+<p>非根注册应该是文档的<a href="https://vuex.vuejs.org/zh-cn/modules.html" target="_blank" rel="external">这里</a>吧，这里提到了模块可以只是局部注册，我们一般都直接在<code>main.js</code>完事儿了。</p>
+<p>然后就是三种操作的模块遍历注册，用到的方法存在<code>module.js</code>，实则还是用到了<code>util.js</code>的遍历方法（通过回调函数返回回去，再次赞叹）</p>
+<p>而注册的方法<code>registerMutation</code> &amp;&amp; <code>registerAction</code> &amp;&amp; <code>registerGetter</code> 就是我们用到的那些例如<code>store.commit(type, payload)</code>的方法。</p>
+<p>然<code>registerAction</code>的方法比其他的复杂得多，它要求<code>handler</code>传入<code>dispatch</code>, <code>commit</code>, <code>getter</code>, <code>state</code>等。显然他命中注定要干一些“脏乱差”的工作。由此也可以得到为什么<code>actions</code>的方法，第一个参数(type)可以传入<code>{dispatch, commit, state}</code>…的东西了。</p>
+<p>题外话：之前在某个论坛看到一个问题，问在vuex中的actions为什么可以取到state，不会造成什么乱七八糟的问题么？我也不知道，问题的答案先留着。不过因为可以得到state，所以我们可以通过现有的state来判断或者操作，这不是更方便了么？</p>
+<h3 id="resetStoreVM"><a href="#resetStoreVM" class="headerlink" title="resetStoreVM"></a>resetStoreVM</h3><p>当一切都准备好了之后，怼进实例。</p>
+<p>实际上前面也有提到，vuex是被vue当做专属插件进行安装的，在Vue实例环境中就可以通过<code>this.$store</code>摸到vuex。然后vuex就可以通过数据的改变来重新得到新的组件或者新的去促进生成得到新的dom。然后在上一篇有讲到那一堆辅助函数，实际上就是控制或者约束操作，但实质就是<code>Vue.$store.dispatch</code>等等等。</p>
+<p>先是从store拿到vm作为旧的vm以作备份（当然如果不存在就不存在备份了），然后让<code>Vue</code>把这段操作定义为静默操作。</p>
+<p>接着生成通过<code>new Vue</code>生成新的vm（假如有旧的也备份了，不会影响），恢复取消静默操作。（意思就是偷偷替换了vm）</p>
+<p>至此新的视图已经更新完成，没有出意外的话，存在的刚刚备份过的旧vm就可以干掉的，执行销毁</p>
+<h3 id="withCommit"><a href="#withCommit" class="headerlink" title="_withCommit()"></a>_withCommit()</h3><p>通篇是没有提到这个函数的，到这里提一下是因为，至此这个函数用了两次，最后一次是发生在刚刚<code>resetStoreVM</code>的最后，如果存在热更的情况下那里。篇幅不长，拿出来看一下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">_withCommit (fn) &#123;</div><div class="line">  <span class="keyword">const</span> committing = <span class="keyword">this</span>._committing</div><div class="line">  <span class="keyword">this</span>._committing = <span class="literal">true</span></div><div class="line">  fn()</div><div class="line">  <span class="keyword">this</span>._committing = committing</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>毕竟状态管理，如果谁都能理这个状态，还需要管理干什么。这里的理解可以套入<code>reducer</code>协助理解，<code>state</code>有且仅有<code>reducer</code>可以修改，而vuex的<code>mutations</code>也就是做这份工作的地方。然后<code>_withCommit</code>的话，是个代理来的。</p>
+<p>还是刚刚备份旧vm那个样子，先备份当前状态，然后把该状态转为<code>true</code>，据说是如果不暂时改变状态，严格<code>vuex</code>会认为这是非法操作，是禁止的。</p>
+<p>封印解除之后，执行一下回调（各种需要破例更新的数据），然后再固着。</p>
+<p>为什么这里需要备份状态换回去，而且这里是<code>boolean</code>，非黑即白的。实际上如果这个所谓的开关，在执行这里之前就是关闭的，那道理通过。如果在这之前，开关本来开着，这样你执行一次这里，就又把开关关回去的话，会影响到其他地方的正常工作，这不是一个“合格的秘书”。</p>
+<p>刚刚最后那里的操作<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">store._withCommit(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  oldVm._data.$$state = <span class="literal">null</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>就是假如这里是<code>hot</code>的话，就把旧vm的状态改成<code>null</code>，然后跟这个vm有关的watcher和计算都会被强行触发更新。通过这样让页面不刷新然后刷新dom。</p>
+<p>最后一个问题：为什么明明<code>this</code>指向的是本体(Store)，初始化的时候需要<code>const store = this</code></p>
+<p>回答：JavaScript那么牛逼的<code>this</code>，墙头草属性的，不找个需要固定的位置固定下来肯定会有机会被带偏的。</p>
+
+      
+    
+    </div>
+    
+      
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>Co1MugX</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/blog/2018/01/30/vuex-study-2/">https://colmugx.github.io/blog/2018/01/30/vuex-study-2/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/blog">https://colmugx.github.io/blog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+    
+      <a href="/blog/2018/01/25/vuex-study-1/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          vuex源码理解（一）<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
+  </nav>
+
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </div>
+
+
+  
+  
+
+
+        </div>
+      </main>
+
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+            <a href="https://www.zhihu.com/people/colmugx" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+        
+        
+        
+    
+        
+            <a href="https://github.com/ColMugX" class="iconfont icon-github" title="github"></a>
+        
+        
+        
+        
+        
+        
+        
+    
+</div>
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2016 ~ 2018</span>
+        <span>❤</span>
+        <span>Co1MugX</span>
+    </div>
+    <div class="theme">
+        <span>
+            动力来源于
+            <a href="http://hexo.io/" target="_blank">Hexo </a>
+        </span>
+        <span>
+            主题
+            <a href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    
+</div>
+    </div>
+  </div>
+</footer>
+    </div>
+  </div>
+  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+    <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+
+
+
+<script src="/blog/script/src/nlvi.js"></script>
+<script src="/blog/script/src/utils.js"></script>
+<script src="/blog/script/scheme/balance.js"></script>
+<script src="/blog/script/src/plugins.js"></script>
+<script src="/blog/script/bootstarp.js"></script>
+
+
+<div class="backtop syuanpi dead toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+
+  <div class="search" id="search">
+    <div class="mask" id="mask"></div>
+    <div class="search-wrapper syuanpi">
+      <h2 id="search-header" class="syuanpi">搜索一下？</h2>
+      <div class="input">
+        <input type="text" id="local-search-input" results="0" name="">
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+  <script>
+  if (NlviConfig.theme === 'banderole') {
+    var GREETING = {
+      morning: "我的博客里可没有早饭！",
+      noon: "记得午休吃饭，不着急看我的博客~",
+      after: "下午好，感谢查阅我的博客",
+      night: "您来我的博客看笑话当做休息嘛",
+      midnight: "我觉得大半夜就不要看啦"
+    }
+  }
+  </script>
+
+</body>
+</html>
