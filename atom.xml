@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/blog/"/>
-  <updated>2018-01-30T10:23:37.953Z</updated>
+  <updated>2018-02-13T03:41:58.627Z</updated>
   <id>https://colmugx.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>抛下不成熟，开始nvim</title>
+    <link href="https://colmugx.github.io/blog/2018/02/13/new-life-nvim/"/>
+    <id>https://colmugx.github.io/blog/2018/02/13/new-life-nvim/</id>
+    <published>2018-02-13T03:02:00.000Z</published>
+    <updated>2018-02-13T03:41:58.627Z</updated>
+    
+    <content type="html"><![CDATA[<p>想活得跟过去有些区别，活得更有效率该有的样子，而且我讨厌上一年的自己，不知道为什么会这么想。反正，放弃spacemacs开始使用vim了。</p><p>很简单，spacemacs有时候会卡一下，就像十年前的电脑，按了一长串需要等一下才会突突突突全显示出来。后来vscode + vim插件又出现了“不自觉按空格”的情况，就是写完按两下空格调插件。那既然这样的话，从零开始一个vim吧，把leader换成空格然后一些改不过来的习惯换过来就行了。</p><p>实际上，如果不是因为懒，早就该定制编辑器了。。不过我不会放弃vscode，因为还是有些残留。为什么不从零开始一个emacs？成本太高啊，又要vim模式又要改成leader键操作，而且逐渐能理解那个蚊香图是什么意思了。</p><h2 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h2><p>宿主用这个，原先很排斥在终端写东西（不能用鼠标），不过后来一手菜鸡操作<code>xj</code>, <code>xk</code>还有<code>wwwwwwww...</code>也能达到需求了，应该没问题了。<br><a id="more"></a><br>14px的<code>menlo nerd</code>，204x60 的<code>full-width top</code>，接近<code>40%</code>的透明度纯黑背景解决字体字符完整显示和启动时自动无边框全屏，还能看到窗后的情况。顺便把热键改成<code>cmd + return</code>（这操作懂得都懂…）</p><h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><p>oh-my-zsh一早就装了，用的<code>avit</code>主题，其他没动。对我来说<code>shell</code>就是<code>shell</code>。</p><h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><p>从刚开始尝试MacVim到后面把这东西干掉，终端vim更新到vim8.0之后，vim一直充当着“顺手改改”的任务。这次因为要半主力编辑器，也不能全靠手打了…</p><p>对ycm印象极差，虽然deoplete支持vim8，弄了一阵子能用但是一出问题麻烦极多；找到了vim-lsp但是资源稀缺，还不会自启服务器！一气之下编译一手<code>neovim</code>，完美。毕竟我要有这脾气我就去从零开始space + emacs了（主要还可以直接抄大佬的配置）。</p><p>至于其他插件，因为还没有实战过还不知道缺哪些东西。先配好的是肯定会用上的，看情况再说。</p><p>另外求一个vim插件，vim有没有像<code>mmm-mode</code>的插件，就是同一个文件可以不同设置高亮或者补全的？用<code>mmm-mode</code>可以在同一文件同时采用<code>emmet-mode</code>和<code>js2-mode</code>，也因为这样解决我<code>vue</code>高亮补全问题…</p><p>然后就是看情况把在<code>spacemacs</code>的片段搬到<code>vim</code>了。</p><h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><p>其实<code>iterm2</code>也可以胡乱分屏，但是考虑到大佬墙裂推荐。用！</p><p>看到了<code>i3</code>的影子，配置窗口前后颜色，调整了状态栏左右宽度和配色。毕竟还不熟，随意的改成了和vim主题相近的低调配色并加上时钟（着手做电量）。不过我的终端毕竟不是全屏的，顶栏和dock还是会常驻屏幕，所以一堆东西也没什么用。对了，这一套有颜色的主题颜色都采用了<code>one</code>，atom家那个。</p><p>然后剩下的就是通过使用寻找问题了，现在第一个问题就是vim的主题怎么把背景也至少<code>30%</code>的透明，改了主题文件发现一点用都没有。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;想活得跟过去有些区别，活得更有效率该有的样子，而且我讨厌上一年的自己，不知道为什么会这么想。反正，放弃spacemacs开始使用vim了。&lt;/p&gt;
+&lt;p&gt;很简单，spacemacs有时候会卡一下，就像十年前的电脑，按了一长串需要等一下才会突突突突全显示出来。后来vscode + vim插件又出现了“不自觉按空格”的情况，就是写完按两下空格调插件。那既然这样的话，从零开始一个vim吧，把leader换成空格然后一些改不过来的习惯换过来就行了。&lt;/p&gt;
+&lt;p&gt;实际上，如果不是因为懒，早就该定制编辑器了。。不过我不会放弃vscode，因为还是有些残留。为什么不从零开始一个emacs？成本太高啊，又要vim模式又要改成leader键操作，而且逐渐能理解那个蚊香图是什么意思了。&lt;/p&gt;
+&lt;h2 id=&quot;iterm2&quot;&gt;&lt;a href=&quot;#iterm2&quot; class=&quot;headerlink&quot; title=&quot;iterm2&quot;&gt;&lt;/a&gt;iterm2&lt;/h2&gt;&lt;p&gt;宿主用这个，原先很排斥在终端写东西（不能用鼠标），不过后来一手菜鸡操作&lt;code&gt;xj&lt;/code&gt;, &lt;code&gt;xk&lt;/code&gt;还有&lt;code&gt;wwwwwwww...&lt;/code&gt;也能达到需求了，应该没问题了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="玩具制造" scheme="https://colmugx.github.io/blog/categories/%E7%8E%A9%E5%85%B7%E5%88%B6%E9%80%A0/"/>
+    
+    
+      <category term="vim" scheme="https://colmugx.github.io/blog/tags/vim/"/>
+    
+  </entry>
   
   <entry>
     <title>vuex源码理解（二）</title>
@@ -538,31 +563,6 @@
     
     
       <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于JavaScript的this</title>
-    <link href="https://colmugx.github.io/blog/2017/03/03/js-this/"/>
-    <id>https://colmugx.github.io/blog/2017/03/03/js-this/</id>
-    <published>2017-03-03T10:34:23.000Z</published>
-    <updated>2017-08-21T16:32:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>一次被this支配之后的思考</p></blockquote><h3 id="开门见山"><a href="#开门见山" class="headerlink" title="开门见山"></a>开门见山</h3><a id="more"></a><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()())    <span class="comment">//undefined.</span></div></pre></td></tr></table></figure><p>题目这样，我第一次回答的是<code>koala</code>。现在想了一下，估计是满脑子想吃波星冰乐给冲昏了脑子。<br>如果我改下！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span>    <span class="comment">//this -&gt; that</span></div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> that.name <span class="comment">//this -&gt; that</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div><div class="line"></div><div class="line"><span class="comment">// 或者第二种，利用ES6</span></div><div class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></div><div class="line"><span class="keyword">let</span> obj = &#123;</div><div class="line">    name: <span class="string">'koala'</span>,</div><div class="line">    getName() &#123;</div><div class="line">        <span class="keyword">let</span> name = <span class="string">'koala'</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj.getName()()) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p><h3 id="解题想法"><a href="#解题想法" class="headerlink" title="解题想法"></a>解题想法</h3><p>我的理解，<code>this</code>其实跟其他语言的<code>self</code>应该是差不多。就是指代自己，比如说在一个<code>function</code>里面，那么<code>this</code>指向的就是这个func。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//do something.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>可能我讲的不清楚，就是<strong>this其实就是括号里的东西。</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">colmugx</span>(<span class="params"><span class="regexp">/** this */</span></span>) </span>&#123;</div><div class="line">    <span class="comment">//do somethings</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>当然这是我的理解，我觉得应该就是这样的，所以刚刚那样取到的this并不是this。</p><h3 id="浅谈this"><a href="#浅谈this" class="headerlink" title="浅谈this"></a>浅谈this</h3><p>只讲两种我懂的东西。</p><h4 id="跟着new走"><a href="#跟着new走" class="headerlink" title="跟着new走"></a>跟着new走</h4><p>就是用new来创建对象的话，那么<code>this</code>就会跟着这个new<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.name) <span class="comment">//koala</span></div></pre></td></tr></table></figure></p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    func() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Animal(<span class="string">'koala'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.func()) <span class="comment">//Animal &#123; name: 'koala' &#125;</span></div></pre></td></tr></table></figure><h4 id="ES6中括号函数的this"><a href="#ES6中括号函数的this" class="headerlink" title="ES6中括号函数的this"></a>ES6中括号函数的this</h4><p>括号函数的<code>this</code>，不存在的！</p><p>说是不存在，实际上并不是说真的不见了，而是它会绑定到上一层函数中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;<span class="comment">/** ,this */</span>)</div></pre></td></tr></table></figure></p><p>而如果不是括号的话</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func(<span class="function"><span class="keyword">function</span>(<span class="params"><span class="regexp">/** this */</span></span>)</span>&#123;</div><div class="line">    <span class="comment">//do somethings.</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;一次被this支配之后的思考&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;开门见山&quot;&gt;&lt;a href=&quot;#开门见山&quot; class=&quot;headerlink&quot; title=&quot;开门见山&quot;&gt;&lt;/a&gt;开门见山&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
-    
-    
-      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   

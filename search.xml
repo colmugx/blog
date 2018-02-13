@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[抛下不成熟，开始nvim]]></title>
+      <url>/blog/2018/02/13/new-life-nvim/</url>
+      <content type="html"><![CDATA[<p>想活得跟过去有些区别，活得更有效率该有的样子，而且我讨厌上一年的自己，不知道为什么会这么想。反正，放弃spacemacs开始使用vim了。</p>
+<p>很简单，spacemacs有时候会卡一下，就像十年前的电脑，按了一长串需要等一下才会突突突突全显示出来。后来vscode + vim插件又出现了“不自觉按空格”的情况，就是写完按两下空格调插件。那既然这样的话，从零开始一个vim吧，把leader换成空格然后一些改不过来的习惯换过来就行了。</p>
+<p>实际上，如果不是因为懒，早就该定制编辑器了。。不过我不会放弃vscode，因为还是有些残留。为什么不从零开始一个emacs？成本太高啊，又要vim模式又要改成leader键操作，而且逐渐能理解那个蚊香图是什么意思了。</p>
+<h2 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h2><p>宿主用这个，原先很排斥在终端写东西（不能用鼠标），不过后来一手菜鸡操作<code>xj</code>, <code>xk</code>还有<code>wwwwwwww...</code>也能达到需求了，应该没问题了。<br><a id="more"></a><br>14px的<code>menlo nerd</code>，204x60 的<code>full-width top</code>，接近<code>40%</code>的透明度纯黑背景解决字体字符完整显示和启动时自动无边框全屏，还能看到窗后的情况。顺便把热键改成<code>cmd + return</code>（这操作懂得都懂…）</p>
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><p>oh-my-zsh一早就装了，用的<code>avit</code>主题，其他没动。对我来说<code>shell</code>就是<code>shell</code>。</p>
+<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><p>从刚开始尝试MacVim到后面把这东西干掉，终端vim更新到vim8.0之后，vim一直充当着“顺手改改”的任务。这次因为要半主力编辑器，也不能全靠手打了…</p>
+<p>对ycm印象极差，虽然deoplete支持vim8，弄了一阵子能用但是一出问题麻烦极多；找到了vim-lsp但是资源稀缺，还不会自启服务器！一气之下编译一手<code>neovim</code>，完美。毕竟我要有这脾气我就去从零开始space + emacs了（主要还可以直接抄大佬的配置）。</p>
+<p>至于其他插件，因为还没有实战过还不知道缺哪些东西。先配好的是肯定会用上的，看情况再说。</p>
+<p>另外求一个vim插件，vim有没有像<code>mmm-mode</code>的插件，就是同一个文件可以不同设置高亮或者补全的？用<code>mmm-mode</code>可以在同一文件同时采用<code>emmet-mode</code>和<code>js2-mode</code>，也因为这样解决我<code>vue</code>高亮补全问题…</p>
+<p>然后就是看情况把在<code>spacemacs</code>的片段搬到<code>vim</code>了。</p>
+<h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><p>其实<code>iterm2</code>也可以胡乱分屏，但是考虑到大佬墙裂推荐。用！</p>
+<p>看到了<code>i3</code>的影子，配置窗口前后颜色，调整了状态栏左右宽度和配色。毕竟还不熟，随意的改成了和vim主题相近的低调配色并加上时钟（着手做电量）。不过我的终端毕竟不是全屏的，顶栏和dock还是会常驻屏幕，所以一堆东西也没什么用。对了，这一套有颜色的主题颜色都采用了<code>one</code>，atom家那个。</p>
+<p>然后剩下的就是通过使用寻找问题了，现在第一个问题就是vim的主题怎么把背景也至少<code>30%</code>的透明，改了主题文件发现一点用都没有。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 玩具制造 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[vuex源码理解（二）]]></title>
       <url>/blog/2018/01/30/vuex-study-2/</url>
       <content type="html"><![CDATA[<p>继续，这次尝试逐行理解Store类的东西</p>

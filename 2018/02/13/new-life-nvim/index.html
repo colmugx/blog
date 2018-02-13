@@ -66,12 +66,9 @@
 
 
 
-  <title>
-  ColMugX
-  
-    | SHOW YOUR FUNCTION NO BB.
-  
-</title>
+  <meta name="keywords" content="vim, Nlvi" />
+
+  <title> 抛下不成熟，开始nvim · ColMugX </title>
 </head>
 <body>
   <div class="progress">
@@ -165,6 +162,16 @@
     <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
   </div>
 </div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">抛下不成熟，开始nvim</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#iterm2"><span class="toc-text">iterm2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zsh"><span class="toc-text">zsh</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim"><span class="toc-text">vim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tmux"><span class="toc-text">tmux</span></a></li></ol>
+    </div>
+  </aside>
+
   
     
   </div>
@@ -242,157 +249,122 @@
       <main class="main" id="main">
         <div class="main-wrapper">
           
-  
-
-<section class="posts">
-  
     
   <article class="
   post
-  
+   is_post 
   ">
     <header class="post-header">
       <div class="post-time syuanpi riseIn-light back-1">
         <div class="post-time-wrapper">
-          <span>2016-10-06</span>
+          <span>2018-02-13</span>
           
             
-              <span class="post-category"><a href="/blog/categories/后端尝试/">后端尝试</a></span>
+              <span class="post-category"><a href="/blog/categories/玩具制造/">玩具制造</a></span>
             
           
+          
+            
+              <aside class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/blog/tags/vim/">vim</a>
+              
+              </aside>
+            
           
         </div>
       </div>
       <h1 class="post-title syuanpi riseIn-light back-2">
         
-          <a href="/blog/2016/10/06/Imooc_Downloader/">幕课网视频下载器NodeJS版</a>
+          抛下不成熟，开始nvim
         
       </h1>
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-        
-          <blockquote>
-<p>不能让别人知道我也是会撸工具的（嘘..）</p>
-</blockquote>
-<p>像我们这么清真的人，一般都是<a href="https://github.com/ColMugX/ImoocDownloader" target="_blank" rel="external">先上链接！</a></p>
-<p>其实这是个很早就完成的项目了（9月1日开学日…之前！）</p>
-<p><strong>写出来的项目就像嫁出去的女儿，谁说要维护了！我说着玩而已！</strong>
-        
+        <p>想活得跟过去有些区别，活得更有效率该有的样子，而且我讨厌上一年的自己，不知道为什么会这么想。反正，放弃spacemacs开始使用vim了。</p>
+<p>很简单，spacemacs有时候会卡一下，就像十年前的电脑，按了一长串需要等一下才会突突突突全显示出来。后来vscode + vim插件又出现了“不自觉按空格”的情况，就是写完按两下空格调插件。那既然这样的话，从零开始一个vim吧，把leader换成空格然后一些改不过来的习惯换过来就行了。</p>
+<p>实际上，如果不是因为懒，早就该定制编辑器了。。不过我不会放弃vscode，因为还是有些残留。为什么不从零开始一个emacs？成本太高啊，又要vim模式又要改成leader键操作，而且逐渐能理解那个蚊香图是什么意思了。</p>
+<h2 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h2><p>宿主用这个，原先很排斥在终端写东西（不能用鼠标），不过后来一手菜鸡操作<code>xj</code>, <code>xk</code>还有<code>wwwwwwww...</code>也能达到需求了，应该没问题了。<br><a id="more"></a><br>14px的<code>menlo nerd</code>，204x60 的<code>full-width top</code>，接近<code>40%</code>的透明度纯黑背景解决字体字符完整显示和启动时自动无边框全屏，还能看到窗后的情况。顺便把热键改成<code>cmd + return</code>（这操作懂得都懂…）</p>
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><p>oh-my-zsh一早就装了，用的<code>avit</code>主题，其他没动。对我来说<code>shell</code>就是<code>shell</code>。</p>
+<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><p>从刚开始尝试MacVim到后面把这东西干掉，终端vim更新到vim8.0之后，vim一直充当着“顺手改改”的任务。这次因为要半主力编辑器，也不能全靠手打了…</p>
+<p>对ycm印象极差，虽然deoplete支持vim8，弄了一阵子能用但是一出问题麻烦极多；找到了vim-lsp但是资源稀缺，还不会自启服务器！一气之下编译一手<code>neovim</code>，完美。毕竟我要有这脾气我就去从零开始space + emacs了（主要还可以直接抄大佬的配置）。</p>
+<p>至于其他插件，因为还没有实战过还不知道缺哪些东西。先配好的是肯定会用上的，看情况再说。</p>
+<p>另外求一个vim插件，vim有没有像<code>mmm-mode</code>的插件，就是同一个文件可以不同设置高亮或者补全的？用<code>mmm-mode</code>可以在同一文件同时采用<code>emmet-mode</code>和<code>js2-mode</code>，也因为这样解决我<code>vue</code>高亮补全问题…</p>
+<p>然后就是看情况把在<code>spacemacs</code>的片段搬到<code>vim</code>了。</p>
+<h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><p>其实<code>iterm2</code>也可以胡乱分屏，但是考虑到大佬墙裂推荐。用！</p>
+<p>看到了<code>i3</code>的影子，配置窗口前后颜色，调整了状态栏左右宽度和配色。毕竟还不熟，随意的改成了和vim主题相近的低调配色并加上时钟（着手做电量）。不过我的终端毕竟不是全屏的，顶栏和dock还是会常驻屏幕，所以一堆东西也没什么用。对了，这一套有颜色的主题颜色都采用了<code>one</code>，atom家那个。</p>
+<p>然后剩下的就是通过使用寻找问题了，现在第一个问题就是vim的主题怎么把背景也至少<code>30%</code>的透明，改了主题文件发现一点用都没有。</p>
+
       
-    
-      <p class="content-link">
-        <a href="/blog/2016/10/06/Imooc_Downloader/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
     
     </div>
     
-  </article>
-  
-  
-
-  
-    
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi riseIn-light back-1">
-        <div class="post-time-wrapper">
-          <span>2016-10-04</span>
-          
-            
-              <span class="post-category"><a href="/blog/categories/日常吐槽/">日常吐槽</a></span>
-            
-          
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi riseIn-light back-2">
-        
-          <a href="/blog/2016/10/04/Korou2/">扣肉小记（二）</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi riseIn-light back-3">
       
-        
-          <blockquote>
-<p>感觉自己跟一条热狗差不多了！</p>
-</blockquote>
-<h3 id="不知道为什么，今天天气特别热"><a href="#不知道为什么，今天天气特别热" class="headerlink" title="不知道为什么，今天天气特别热"></a>不知道为什么，今天天气特别热</h3><p>　　本来前几天已经闻到了秋天的气息，甚至闻到了快入冬的气息，结果今天又要开空调了！（摔！<br>　　热得精神不太好…加上自己身体的关系（只要一动脑身体会发热，头发热比较厉害）<br>　　总之就是很难过就对了（捡起来！再摔！
-        
       
-    
-      <p class="content-link">
-        <a href="/blog/2016/10/04/Korou2/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
-    
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>Co1MugX</span>
     </div>
-    
-  </article>
-  
-  
-
-  
-    
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi riseIn-light back-1">
-        <div class="post-time-wrapper">
-          <span>2016-10-03</span>
-          
-            
-              <span class="post-category"><a href="/blog/categories/日常吐槽/">日常吐槽</a></span>
-            
-          
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi riseIn-light back-2">
-        
-          <a href="/blog/2016/10/03/Korou1/">扣肉小记（一）</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi riseIn-light back-3">
-      
-        
-          <blockquote>
-<p>一个不正经的码狗生活。</p>
-</blockquote>
-<h3 id="为什么这么说呢？"><a href="#为什么这么说呢？" class="headerlink" title="为什么这么说呢？"></a>为什么这么说呢？</h3><p>　　实际上我真的是个coder，但是我不是那种天天在coding的人。特别是在不是工作鬼缠身的时候。<br>　　这种东西就是心血来潮嘛，突然feel到了然后就死命写一堆出来，然后，啊爽了，然后睡觉。就这样…</p>
-<p>　　每天无非就是<a href="http://www.bilibili.com/video/av4033926/" target="_blank" rel="external">吃吃饭，喝喝茶，看看电影，聊聊天，逛逛街，牵牵手，喝喝小酒，开开房</a>（啊不对..）</p>
-<p>　　一有新技术，码狗肯定是要接触学习一下，不然跟不上逼格注定被淘汰..虽然我也会看吧，但是不爱做读书笔记，所以，
-        
-      
-    
-      <p class="content-link">
-        <a href="/blog/2016/10/03/Korou1/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
-    
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/blog/2018/02/13/new-life-nvim/">https://colmugx.github.io/blog/2018/02/13/new-life-nvim/</a>
     </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/blog">https://colmugx.github.io/blog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
     
   </article>
   
-  
-
-  
-</section>
-  
-  <nav class="pagination">
-      <a class="extend prev" rel="prev" href="/blog/page/4/">< 上一页</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span>
+    
+  <nav class="article-page">
+    
+    
+      <a href="/blog/2018/01/30/vuex-study-2/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          vuex源码理解（二）<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
   </nav>
+
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </div>
+
+
+  
+  
 
 
         </div>
