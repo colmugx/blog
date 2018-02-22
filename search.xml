@@ -261,7 +261,7 @@
 <h2 id="2017"><a href="#2017" class="headerlink" title="-2017"></a>-2017</h2><blockquote>
 <p>好稚嫩；<br>所以你也算是入了前端的坑？<br>—— Ahonn</p>
 </blockquote>
-<p>我的新前端，从这开始的。</p>
+<p>我的新前端，从这开始的。<br><a id="more"></a></p>
 <h2 id="2017-1"><a href="#2017-1" class="headerlink" title="2017"></a>2017</h2><p>所以到这里才是关于今年的事情。</p>
 <h3 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h3><p>写了一个HEXO “KPA” 产物主题就是现在正在使用的 Nlvi ，第一个版本“语”。</p>
 <p>Nlvi的出生并不是纯洁的，它一开始只是想用来证明自己。拿着它去找工作。所以我除了提交到 hexo theme 并没有做其他的宣传。直到过了一整天，在项目看到第一个star的时候我才知道，我错了。我开始修正我的想法，毕竟nlvi也是love类型的。所以经历了一年的迭代，有了新的版本“彩”。</p>
