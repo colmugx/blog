@@ -277,7 +277,7 @@
 <p>我想不到，直接问能不能用<code>ES8</code>，说行，然后我就想到了<code>const p2 = await Promise</code>这种做法。</p>
 <p>可是，我记得我在若干天前才写了一篇关于「JS方法链式调用」。</p>
 <blockquote>
-<p>只要函数返回值是一个对象，就可以连着调用</p>
+<p>只要函数返回值是一个函数，就可以连着调用</p>
 </blockquote>
 <p>So,</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">p1.then(<span class="function">(<span class="params">&#123; p2 &#125;</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> p2</div><div class="line">&#125;).then(&#123; p3 &#125; =&gt; &#123;&#125;)</div></pre></td></tr></table></figure>
