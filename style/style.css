@@ -331,7 +331,7 @@ h6 {
   position: relative;
 }
 .highlight pre * {
-  font-family: 'Segoe UI', monospace, Consolas, Monaco, Menlo, sans-serif !important;
+  font-family: 'Segoe UI', monospace, Consolas, Monaco, Menlo, 'Microsoft YaHei', sans-serif !important;
 }
 .highlight .gutter {
   width: 10px;
@@ -346,6 +346,9 @@ h6 {
 }
 .highlight .code pre {
   padding: 0 8px;
+}
+.highlight .code .comment {
+  font-size: 14px;
 }
 .highlight .line {
   height: 22px;
@@ -906,7 +909,7 @@ body {
   margin-top: 16px;
   padding-top: 32px;
   position: relative;
-  font-weight: 400;
+  font-weight: 300;
   background-image: linear-gradient(180deg, #e1dede, #e1dede 50%, transparent 50%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
@@ -1070,7 +1073,7 @@ body {
 .post .post-content code {
   background-color: rgba(57,197,187,0.1);
   color: #2a6e69;
-  font-family: 'Segoe UI', monospace, Consolas, Monaco, Menlo, sans-serif;
+  font-family: 'Segoe UI', monospace, Consolas, Monaco, Menlo, 'Microsoft YaHei', sans-serif;
   margin: 0 4px;
   padding: 0 4px;
 }
