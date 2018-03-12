@@ -66,11 +66,9 @@
 
 
 
-  <title>
-  
-    归档 · ColMugX
-  
-</title>
+  <meta name="keywords" content="JavaScript, Vue, Nlvi" />
+
+  <title> 关于四轴的踩坑指南 · ColMugX </title>
 </head>
 <body>
   <div class="progress">
@@ -241,63 +239,142 @@
         <div class="main-wrapper">
           
     
-    <div class="archive syuanpi riseIn-light" id="archive">
-        
-            <h1 class="archive-title">Total</h1>
-            <span class="archive-num">一共有 38 篇文章</span>
-        
-        <div class="archive-list">
-            <ul>
-        
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2018-03-12</span>
+          
             
-                
-                
-                
-                    
-                     
-                        <h2 class="archive-year"> 2016 </h2>
-                    
-                
+              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
             
+          
+          
             
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    12-09
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/blog/2016/12/09/update-npm-packages/">更新全局NPM的所有可更新包</a>
-                </span>
-            </li>
-
-        
+              <aside class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/blog/tags/JavaScript/">JavaScript</a>
+              
+                <a href="/blog/tags/Vue/">Vue</a>
+              
+              </aside>
             
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    12-02
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/blog/2016/12/02/Korou5/">扣肉小记（五）—— 你的名字。</a>
-                </span>
-            </li>
-
-        
-            </ul>
+          
         </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          关于四轴的踩坑指南
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        <p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p>
+<p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和假工牌。</p>
+<p>总结一下印象深刻受苦的问题和答案，不过有一点想吐槽的…就<code>vue</code>和<code>react</code>之间的关系和选择，我看到了高一文理科分班的那种影子：人家都是哪科分高选哪科，我是选分低 + 主管臆想……<br><a id="more"></a></p>
+<h2 id="html5-css3"><a href="#html5-css3" class="headerlink" title="html5 css3"></a>html5 css3</h2><p>css3：圆角，变形，线性渐变，阴影。后两个没答，另外阴影我一直以为是<code>css2</code>的。</p>
+<p>html5: 算了挺多的…基本上用过的都说了一遍… 下次记得背一下（真的需要用到那么多？</p>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><p>其实最受苦的就是这个了，问我对哪个库比较熟悉的时候，基本上就已经可以出试室了。基本上说哪个都不行的：<code>vue</code>确实用得最多但是<strong>没！看！过！源！码！</strong>，<code>react</code>倒是瞟过但是<strong>从！没！使！用！过！</strong></p>
+<h3 id="created-和-mounted-区别，ajax会在哪里操作"><a href="#created-和-mounted-区别，ajax会在哪里操作" class="headerlink" title="created 和 mounted 区别，ajax会在哪里操作"></a>created 和 mounted 区别，ajax会在哪里操作</h3><blockquote>
+<p>放在 created，因为 mounted 的时候还没有渲染节点。</p>
+</blockquote>
+<p>虽然这个问题也有一些讨论，有些会在<code>created</code>就做了，有些是在<code>mounted</code>做。</p>
+<p>有问题吗？还真有。因为我想到的是：在<code>created</code>过程把数据获取之后，从虚拟dom转为真实dom的时候可以顺便把数据带进去。而不需要一整个组件都创建完整之后再去加载数据。毕竟到<code>mounted</code>的时候实例都建立完了，这个时候再刷新数据不是会引起刷新/重绘？不过这个问题不应该是我没看源码的问题，而是有些问题没了解透彻，或者说，文章看太少。</p>
+<p>恰好就坑这了，要的就是在<code>mounted</code>，因为这个时候已经有组件实例了，也就是<code>this.$el</code>已经有树了，如果<code>ajax</code>过来的内容是需要依赖<code>el</code>的话，那在<code>created</code>的时候还没有东西呢。</p>
+<p>但是我还是愿意保留意见，因为我觉得在<code>created</code>先请求到<code>mounted</code>的时候差不多刚好，要是<code>mounted</code>的时候没请求到数据就尴尬了。当然这个想法只是停留在<code>ajax</code>获取的是展示数据。</p>
+<p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="Vue生命周期图示"></p>
+<h3 id="深度-watcher"><a href="#深度-watcher" class="headerlink" title="深度 watcher"></a>深度 watcher</h3><p>去翻了一下文档，我发现翻车的是自己吧！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">c: &#123;</div><div class="line">  handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</div><div class="line">  deep: <span class="literal">true</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>只需要给对象加个<code>deep</code>就行了,而<code>a.b</code>这种情况应不属于深度watch，这只是需要监听的数据在比较深处而已…</p>
+<h3 id="vue-函数式组件"><a href="#vue-函数式组件" class="headerlink" title="vue 函数式组件"></a>vue 函数式组件</h3><p>这是一个补充问题，关于 什么时候可以使用函数式组件，我觉得确实没什么可以说的啊…</p>
+<p>如果只是充当渲染任务，不需要持久化不需要状态，采用函数式组件可以减少开销。</p>
+<p>总的来说，比较严重的问题还是出现在：表达能力有问题 + 理解框架不够深刻（但远不及原理） + 狗娘的英语表达。还有<code>css</code>过于依赖补全导致想口头表述语句的时候，单词中间那段想不起来所以说不出口导致的丢分。所以打算CSS部分关闭补全一段时间。</p>
+<p>这属于机会完全被自己毁了（还不是技术层面问题），所以烦躁和不甘又有什么用呢…</p>
+
+      
+    
     </div>
     
-  <nav class="pagination">
-      <span class="page-number current">1</span>
+      
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>Co1MugX</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/blog/2018/03/12/dji-interview/">https://colmugx.github.io/blog/2018/03/12/dji-interview/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/blog">https://colmugx.github.io/blog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+    
+      <a href="/blog/2018/02/28/promise-chaining/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          promise链式调用<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
   </nav>
 
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </div>
+
+
+  
+   
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">关于四轴的踩坑指南</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#html5-css3"><span class="toc-text">html5 css3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue"><span class="toc-text">Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#created-和-mounted-区别，ajax会在哪里操作"><span class="toc-text">created 和 mounted 区别，ajax会在哪里操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深度-watcher"><span class="toc-text">深度 watcher</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-函数式组件"><span class="toc-text">vue 函数式组件</span></a></li></ol></li></ol>
+    </div>
+  </aside>
+
+
+  
 
 
         </div>
