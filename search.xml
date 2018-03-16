@@ -3,6 +3,35 @@
   
     
     <entry>
+      <title><![CDATA[vue watch存在永动吗？]]></title>
+      <url>/blog/2018/03/16/vue-watcher/</url>
+      <content type="html"><![CDATA[<p>因为<code>watch</code>就是，数据只要没变化就不会触发，先后数据对比是一样的就没必要更新了。所以永动是不可能永动的，这辈子都不可能永动的。</p>
+<p>但是如果会遍历一个表，每跳一次就变一个值，那就会互相传递传到表的最后一个双方拿值结束。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  template: <span class="string">`&lt;h1&gt;&#123;&#123; watch1Data &#125;&#125;&lt;/h1&gt;`</span>,</div><div class="line">  data() &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      watch1Data: <span class="string">'first watched.'</span>,</div><div class="line">      watch2Data: <span class="string">'second watched.'</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  mounted() &#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.watch2Data = <span class="string">'data was be updated.'</span></div><div class="line">    &#125;, <span class="number">3000</span>)</div><div class="line">  &#125;,</div><div class="line">  watch: &#123;</div><div class="line">    <span class="comment">// 反过来写方便顺向思维</span></div><div class="line">    watch2Data(val) &#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'watch2Data was be watched'</span>)</div><div class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        <span class="keyword">this</span>.watch1Data = val</div><div class="line">      &#125;, <span class="number">3000</span>)</div><div class="line">    &#125;,</div><div class="line">    watch1Data(val) &#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'watch1Data was be watched'</span>)</div><div class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        <span class="keyword">this</span>.watch2Data = <span class="string">'watch1Data reload.'</span></div><div class="line">      &#125;, <span class="number">3000</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>所以运行结果，在控制台会输出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">watch2Data was be watched</div><div class="line">watch1Data was be watched</div><div class="line">watch2Data was be watched</div><div class="line">watch1Data was be watched</div></pre></td></tr></table></figure>
+<p>嫌麻烦，所以代码尝试都在<code>ahri</code>上进行了（目标是新手也能使用的 flux vue 库）</p>
+<p>主要还是大疆那次耿耿于怀，抽空实践了一下「如果watch了一个参加渲染的数据会发生什么？」</p>
+<p>所以我还是不知道面试这个问题是要问我什么？总的就感觉就是想问我原理又感觉这是在文档能找到的答案。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于四轴的踩坑指南]]></title>
       <url>/blog/2018/03/12/dji-interview/</url>
       <content type="html"><![CDATA[<p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p>
