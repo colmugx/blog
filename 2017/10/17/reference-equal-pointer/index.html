@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">引用等于指针吗？</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-Pointer"><span class="toc-text">Reference == Pointer?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Point-Reference"><span class="toc-text">Point == Reference</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-Pointer-1"><span class="toc-text">Reference === Pointer?</span></a></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -280,9 +294,9 @@
 <p>在看到Go的指针的时候，我已经想放弃了。但是想回来，毕竟上一次接触指针已经6年了，也许现在看就能理解出什么呢。（过程中接触的OC根本不能算经验，因为当时完全就是靠抄靠背来写iOS应用，最后还是嫌弃OC麻烦进阶无法理解去学习了swift）<br><a id="more"></a></p>
 <h2 id="Reference-Pointer"><a href="#Reference-Pointer" class="headerlink" title="Reference == Pointer?"></a>Reference == Pointer?</h2><p>以前看到什么内存地址啊，指向啊就已经乱了，满脑子都在想内存里面是什么样的，内存地址，寄存器又是什么东西。跟着官方教程走了一遍，了解到<strong>指针就是通过一个变量去指向一个有的变量或者说是对象，从而产生一种绑定。通过修改指针变量也可以达到修改本体的效果</strong>。</p>
 <p>这让我想到JS，因为每天都在操作对象，知道：如果你要建立一个新的变量，比如<code>a = 1</code>，我可以通过<code>var b = a</code>得到一个新的变量。但是如果是对象则不是。如果是<code>a = {};  var b = a</code>的话，b只是单纯指向了a，并没有复制a</p>
-<p>所以我立刻去搜索<em>关于JavaScript的指针</em>。得到这么一个结果 <a href="https://www.baidu.com/link?url=2Xxo3-ptdvabLARr0p-DcoBbeysd2lvRxH-jEevvWHBJ7pNBk-mkxGqaB6h8UTWVRi-2lc56zjWVMYPUgv6tfK&amp;wd=&amp;eqid=e1820c9600002f360000000659e5b92d" target="_blank" rel="external">JavaScript 的<em>指针</em>是什么? - 知乎</a></p>
+<p>所以我立刻去搜索<em>关于JavaScript的指针</em>。得到这么一个结果 <a href="https://www.baidu.com/link?url=2Xxo3-ptdvabLARr0p-DcoBbeysd2lvRxH-jEevvWHBJ7pNBk-mkxGqaB6h8UTWVRi-2lc56zjWVMYPUgv6tfK&amp;wd=&amp;eqid=e1820c9600002f360000000659e5b92d" target="_blank" rel="noopener">JavaScript 的<em>指针</em>是什么? - 知乎</a></p>
 <blockquote>
-<p>JavaScript 里头什么时候有指针的概念？倒是有 reference （引用）的说法。 —— <a href="https://www.zhihu.com/people/sansmana" target="_blank" rel="external">陈木野</a></p>
+<p>JavaScript 里头什么时候有指针的概念？倒是有 reference （引用）的说法。 —— <a href="https://www.zhihu.com/people/sansmana" target="_blank" rel="noopener">陈木野</a></p>
 </blockquote>
 <p>关于this的总结，不单我自己，网络上已经大量的文章了。不管是详细解析，还是总结，都已经很多了。但是如果说：指针就是一种指向变量的话，那JavaScript就很多了，遍地都是。而这样的话，就跟reference有关系了。</p>
 <p>说起来也是邪门了，今天打算把《红宝书》拿出来翻一下，翻到了第四章4.1.2，看到了这么一句</p>
@@ -293,7 +307,7 @@
 <p>于是我的想法 “引用是一种指针” 或许成立。（复习有好处的！）</p>
 <h2 id="Point-Reference"><a href="#Point-Reference" class="headerlink" title="Point == Reference"></a>Point == Reference</h2><p>如果反过来，还能成立吗？我觉得不行。</p>
 <p>C++，让我很崇拜很信仰的，却因不理解和学不会让我产生厌恶的语言，在这方面是两者皆有。由于根本不懂所以不参加讨论。</p>
-<p>Java，他也有reference，但是在<a href="https://www.baidu.com/link?url=bI4EsfOKw8lfPjTwX3_gY7pbn2LFMOwmFPmoalBBNr7lFCv9ZltHfuravfoA7uVHrNJtSUxm0Epjk-IW5Zr2z_&amp;wd=&amp;eqid=ee91ddc5000508bd0000000659e60253" target="_blank" rel="external">Java的<em>Reference</em>感觉很象C++的<em>指针</em>,但是区别是本质的 - f…_博客园</a> 提到：</p>
+<p>Java，他也有reference，但是在<a href="https://www.baidu.com/link?url=bI4EsfOKw8lfPjTwX3_gY7pbn2LFMOwmFPmoalBBNr7lFCv9ZltHfuravfoA7uVHrNJtSUxm0Epjk-IW5Zr2z_&amp;wd=&amp;eqid=ee91ddc5000508bd0000000659e60253" target="_blank" rel="noopener">Java的<em>Reference</em>感觉很象C++的<em>指针</em>,但是区别是本质的 - f…_博客园</a> 提到：</p>
 <blockquote>
 <p>Java中你无法对这个地址进行任何数学运算，并且这个地址你不知道，是Java Runtime分配给你的，它随时还要调整这个地址（After GC,Memory要Compact，这时候一个Object Reference的地址就会改变）。</p>
 </blockquote>
@@ -310,7 +324,7 @@
 <p>那我现在可不可以有一种新的理解：</p>
 <p>​    比如C语言这种，他定义指针是需要 <code>*</code> 这种东西，也就是<code>int *a = b</code>是用a指针指向b，我可以通过a来修改b。但是如果直接<code>int a = b</code>的话，我就相当于复制了这个变量了，没权修改b变量了。而如果<code>int a</code>是一个函数的话，那它最后也需要返回一个<code>int</code>返回值。所以它并没有“用函数搞事”的权利。</p>
 <p>​    而JS语言这种，我想用一个代码框来写：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 还是根据红宝书的例子</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> b = a;	<span class="comment">// 一种复制，相互独立</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> x = &#123;<span class="attr">a</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="keyword">var</span> y = x	<span class="comment">// 一种引用，实际上操作y的时候还是在操作x</span></div><div class="line"></div><div class="line"><span class="comment">//现在暂时借用一下以 _ 代替*</span></div><div class="line"><span class="keyword">var</span> o = &#123; <span class="attr">a</span>: <span class="number">5</span> &#125;</div><div class="line"><span class="keyword">var</span> _b = o.a	<span class="comment">// 达到继承的目的？</span></div><div class="line"></div><div class="line"><span class="comment">// var _b = int *b   在某种意义上？</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 还是根据红宝书的例子</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;	<span class="comment">// 一种复制，相互独立</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = &#123;<span class="attr">a</span>: <span class="number">5</span>&#125;</span><br><span class="line"><span class="keyword">var</span> y = x	<span class="comment">// 一种引用，实际上操作y的时候还是在操作x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//现在暂时借用一下以 _ 代替*</span></span><br><span class="line"><span class="keyword">var</span> o = &#123; <span class="attr">a</span>: <span class="number">5</span> &#125;</span><br><span class="line"><span class="keyword">var</span> _b = o.a	<span class="comment">// 达到继承的目的？</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// var _b = int *b   在某种意义上？</span></span><br></pre></td></tr></table></figure>
 <p>在红宝书接下来有一句：</p>
 <blockquote>
 <p>换句话说，obj1和 obj2 都指向同一个对象。这样，当为 obj1 添加 name 属性后，可以通过 obj2 来访问这个属性，<br>因为这两个变量引用的都是同一个对象。</p>
@@ -394,18 +408,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">引用等于指针吗？</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-Pointer"><span class="toc-text">Reference == Pointer?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Point-Reference"><span class="toc-text">Point == Reference</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-Pointer-1"><span class="toc-text">Reference === Pointer?</span></a></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -472,23 +474,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -508,17 +511,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

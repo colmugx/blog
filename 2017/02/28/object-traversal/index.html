@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">ES6对象遍历</a></li>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作死起源"><span class="toc-text">作死起源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#谈一下ES6对象扩展-–-遍历对象"><span class="toc-text">谈一下ES6对象扩展 – 遍历对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一种"><span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二种"><span class="toc-text">第二种</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三种"><span class="toc-text">第三种</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目的，我想执行"><span class="toc-text">目的，我想执行</span></a></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -278,18 +292,18 @@
 </blockquote>
 <p>最新超想玩《尼尔：机械纪元》，被那种机械元素迷得死死的，故把最近正在写的博客主题融入机械风。另外我打算这次主题换个姿势来写，想用各种新鲜没尝试过的结构。于是……</p>
 <h3 id="作死起源"><a href="#作死起源" class="headerlink" title="作死起源"></a>作死起源</h3><a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app.js</span></div><div class="line">App(&#123;</div><div class="line">  onLaunch: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  onShow: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  onHide: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;,</div><div class="line">  globalData: globalData</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line">App(&#123;</span><br><span class="line">  onLaunch: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  onShow: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  onHide: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  globalData: globalData</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>万恶之源就是微信小程序，通过执行App()传入一套<code>params</code>，然后能执行下面那些方法。这我就心底长毛了啊，我也想实现类似这样的执行方法。所以就搞。现在尝试了不知道多少种方法，成功率0%</p>
-<h3 id="谈一下ES6对象扩展-–-遍历对象"><a href="#谈一下ES6对象扩展-–-遍历对象" class="headerlink" title="谈一下ES6对象扩展 – 遍历对象"></a>谈一下ES6对象扩展 – 遍历对象</h3><p>先讲目的，我想这样然后<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">test(&#123;</div><div class="line">    first() &#123;</div><div class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'first 666'</span>)</div><div class="line">    &#125;,</div><div class="line">    second() &#123;</div><div class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'second 666'</span>)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="谈一下ES6对象扩展-–-遍历对象"><a href="#谈一下ES6对象扩展-–-遍历对象" class="headerlink" title="谈一下ES6对象扩展 – 遍历对象"></a>谈一下ES6对象扩展 – 遍历对象</h3><p>先讲目的，我想这样然后<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sliv = params</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">this</span>.sliv = sliv</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">test(&#123;</span><br><span class="line">    first() &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'first 666'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    second() &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'second 666'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>当然了无法执行，东西是读进去了，但是谁知道你想执行谁，就因为这个所以想到了对象遍历。好了</p>
-<h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><p><code>for in</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> params) &#123;</div><div class="line">        <span class="built_in">console</span>.log(i)      <span class="comment">//first, second</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><p><code>Object.keys()</code><br>我的处理方法是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">let</span> &#123;keys&#125; = <span class="built_in">Object</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> keys(sliv)) &#123;</div><div class="line">        <span class="built_in">console</span>.log(i)      <span class="comment">//first, second</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><p><code>for in</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sliv = params</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> params) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)      <span class="comment">//first, second</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.sliv = sliv</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><p><code>Object.keys()</code><br>我的处理方法是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sliv = params</span><br><span class="line">    <span class="keyword">let</span> &#123;keys&#125; = <span class="built_in">Object</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> keys(sliv)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)      <span class="comment">//first, second</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.sliv = sliv</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>结果跟第一种一样，下一个！</p>
-<h4 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h4><p><code>Object.getOwnPropertyNames()</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">let</span> a = <span class="built_in">Object</span>.getOwnPropertyNames(params)</div><div class="line">    <span class="built_in">console</span>.log(a)      <span class="comment">//[ 'first', 'second' ]</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;a.length;i++) &#123;</div><div class="line">        <span class="built_in">console</span>.log(a[i])    <span class="comment">//first, second</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h4 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h4><p><code>Object.getOwnPropertyNames()</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sliv = params</span><br><span class="line">    <span class="keyword">let</span> a = <span class="built_in">Object</span>.getOwnPropertyNames(params)</span><br><span class="line">    <span class="built_in">console</span>.log(a)      <span class="comment">//[ 'first', 'second' ]</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;a.length;i++) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a[i])    <span class="comment">//first, second</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.sliv = sliv</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>对象遍历讲完！</p>
-<h3 id="目的，我想执行"><a href="#目的，我想执行" class="headerlink" title="目的，我想执行"></a>目的，我想执行</h3><p>所以我想到的执行方法是这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    params.first()      <span class="comment">//first 666</span></div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>但是如果我这么执行的话<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sliv = params</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> params) &#123;</div><div class="line">        <span class="keyword">let</span> func = sliv.i   <span class="comment">//undefined</span></div><div class="line">        func()</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.sliv = sliv</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="目的，我想执行"><a href="#目的，我想执行" class="headerlink" title="目的，我想执行"></a>目的，我想执行</h3><p>所以我想到的执行方法是这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sliv = params</span><br><span class="line">    params.first()      <span class="comment">//first 666</span></span><br><span class="line">    <span class="keyword">this</span>.sliv = sliv</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>但是如果我这么执行的话<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = (<span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sliv = params</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> params) &#123;</span><br><span class="line">        <span class="keyword">let</span> func = sliv.i   <span class="comment">//undefined</span></span><br><span class="line">        func()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.sliv = sliv</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>亦或者<code>sliv.i()</code>都是失败告终，所以我就看了一下<code>typeof</code>，这first这些的类型均为<code>string</code>。</p>
 <p>于是挖个坑记录一下，是否有办法可以遍历完对象之后执行掉对象内函数，我甚至连<code>new Object</code>都用过了……</p>
 <p>所以这篇的记录只是ES6中对象的遍历！</p>
@@ -368,18 +382,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">ES6对象遍历</a></li>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作死起源"><span class="toc-text">作死起源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#谈一下ES6对象扩展-–-遍历对象"><span class="toc-text">谈一下ES6对象扩展 – 遍历对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一种"><span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二种"><span class="toc-text">第二种</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三种"><span class="toc-text">第三种</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目的，我想执行"><span class="toc-text">目的，我想执行</span></a></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -446,23 +448,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -482,17 +485,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

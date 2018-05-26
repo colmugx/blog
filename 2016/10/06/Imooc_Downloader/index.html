@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">幕课网视频下载器NodeJS版</a></li>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种方法安装（Install）"><span class="toc-text">三种方法安装（Install）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用（Usage）"><span class="toc-text">使用（Usage）</span></a></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -276,15 +290,15 @@
         <blockquote>
 <p>不能让别人知道我也是会撸工具的（嘘..）</p>
 </blockquote>
-<p>像我们这么清真的人，一般都是<a href="https://github.com/ColMugX/ImoocDownloader" target="_blank" rel="external">先上链接！</a></p>
+<p>像我们这么清真的人，一般都是<a href="https://github.com/ColMugX/ImoocDownloader" target="_blank" rel="noopener">先上链接！</a></p>
 <p>其实这是个很早就完成的项目了（9月1日开学日…之前！）</p>
 <p><strong>写出来的项目就像嫁出去的女儿，谁说要维护了！我说着玩而已！</strong> <a id="more"></a></p>
 <p>好吧讲一下，这东西其实就是一个视频下载器，通过nodejs的命令行进行全部<strong>盗链操作</strong>！</p>
 <p>实现过程真的完全粗暴，很粗暴的解决了幕课网（Imooc）的视频下载，输入想要下载的视频编号之后，全自动筛选出视频并下载，下载方式是列表内视频并行下载…</p>
 <p><del>P.S.没图！没代码！没食谱！（主题还没有写完，所以关于代码框的东西一概没有，慢慢等吧！）</del></p>
 <p>应该没问题了，写一下食谱吧。</p>
-<h4 id="三种方法安装（Install）"><a href="#三种方法安装（Install）" class="headerlink" title="三种方法安装（Install）"></a>三种方法安装（Install）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/ColMugX/ImoocDownloader.git ./ImoocDownloader</div><div class="line">Download ZIP</div><div class="line">Open in Desktop</div></pre></td></tr></table></figure>
-<h4 id="使用（Usage）"><a href="#使用（Usage）" class="headerlink" title="使用（Usage）"></a>使用（Usage）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ./ImoocDownloader</div><div class="line">npm install</div><div class="line">node app</div></pre></td></tr></table></figure>
+<h4 id="三种方法安装（Install）"><a href="#三种方法安装（Install）" class="headerlink" title="三种方法安装（Install）"></a>三种方法安装（Install）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/ColMugX/ImoocDownloader.git ./ImoocDownloader</span><br><span class="line">Download ZIP</span><br><span class="line">Open in Desktop</span><br></pre></td></tr></table></figure>
+<h4 id="使用（Usage）"><a href="#使用（Usage）" class="headerlink" title="使用（Usage）"></a>使用（Usage）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ./ImoocDownloader</span><br><span class="line">npm install</span><br><span class="line">node app</span><br></pre></td></tr></table></figure>
 <p>然后按照提示输入各种各样的东西就行了……</p>
 
       
@@ -361,18 +375,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">幕课网视频下载器NodeJS版</a></li>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#三种方法安装（Install）"><span class="toc-text">三种方法安装（Install）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用（Usage）"><span class="toc-text">使用（Usage）</span></a></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -439,23 +441,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -475,17 +478,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

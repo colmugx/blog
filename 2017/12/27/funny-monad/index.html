@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">有意思的monad记录</a></li>
+      
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -277,8 +291,8 @@
 <p>最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad</p>
 <p>之前在知乎看到轮子哥说：学习haskell是好事，但最好就是学到monad就停下来，然后去学别的。对别的语言帮助很大。</p>
 <p>然后在知乎看了一些monad的答案，找了点关于monad的博客看，没看懂。英文的话更不可能了！直接看paper的话我会脆死的。</p>
-<p>后来偶然找到一篇文章：<a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a></p>
-<p>当然有中文版：<a href="http://jiyinyiyong.github.io/monads-in-pictures/" target="_blank" rel="external">Functors, Applicatives, And Monads In Pictures - adit.io</a>，<br><a href="http://www.ruanyifeng.com/blog/2015/07/monad.html" target="_blank" rel="external">图解 Monad - 阮一峰的网络日志</a></p>
+<p>后来偶然找到一篇文章：<a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html" target="_blank" rel="noopener">Functors, Applicatives, And Monads In Pictures - adit.io</a></p>
+<p>当然有中文版：<a href="http://jiyinyiyong.github.io/monads-in-pictures/" target="_blank" rel="noopener">Functors, Applicatives, And Monads In Pictures - adit.io</a>，<br><a href="http://www.ruanyifeng.com/blog/2015/07/monad.html" target="_blank" rel="noopener">图解 Monad - 阮一峰的网络日志</a></p>
 <p>全程特别轻松，我以后写博客也要按照这个节奏来写！很有意思！<br>（那个抽东西的手直接戳爆了我的笑点…特别是解构传入胶水函数的时候）</p>
 <p>关于理解的话，挖个坑以后总结~</p>
 <p>但有一点是：我用 Vue-jsx 的时候，几乎全是Monad</p>
@@ -357,18 +371,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">有意思的monad记录</a></li>
-      
-    </div>
-  </aside>
-
-
   
 
 
@@ -435,23 +437,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -471,17 +474,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

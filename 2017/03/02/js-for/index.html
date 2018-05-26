@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">JavaScript所有for</a></li>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先讲for"><span class="toc-text">先讲for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in"><span class="toc-text">for..in</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forEach"><span class="toc-text">forEach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-of"><span class="toc-text">for..of</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in-和-for-of-对比"><span class="toc-text">for in 和 for of 对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#summary"><span class="toc-text">summary</span></a></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -271,22 +285,22 @@
     </header>
     <div class="post-content syuanpi riseIn-light back-3">
       
-        <p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="external">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
+        <p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="noopener">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
 <p>觉得我不服！我要上！<br><a id="more"></a></p>
-<h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</div></pre></td></tr></table></figure></p>
-<p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</div></pre></td></tr></table></figure></p>
-<h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</span><br></pre></td></tr></table></figure></p>
+<p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</span><br></pre></td></tr></table></figure></p>
+<h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>不过<code>for in</code>的话，为什么说遍历对象比较多，其中一个除了好写<del>（打死吧这人）</del>，还有一点它只能用来遍历有key或者说是个index的东西，比如数组，它只能读到数组的index，那对象的话就直接读到键值咯。而且有一点的是，你读数组，<strong>读出来的index是个string不是number</strong>。这个要记得，因为js这种弱类型的东西，如果索引相加就变成字符串相加了……<strong>（我幼儿园就会20以内加减法了，1加2等于12)</strong></p>
-<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>这个方法就不是古老的方法了，JS(ES5)版本的时候的，针对数组的一个方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.forEach(<span class="function">(<span class="params">i</span>)=&gt;</span> &#123;&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>这个方法就不是古老的方法了，JS(ES5)版本的时候的，针对数组的一个方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach(<span class="function">(<span class="params">i</span>)=&gt;</span> &#123;&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>这种遍历的话，你遍历完直接能把数据处理掉最好，因为如果不是的话就麻烦了…它并不是一个开放的遍历，而是借用的闭包函数做的遍历。可以看成是<code>arr.func()</code>，它是一个数组方法，传进去一个<code>callback</code>，那就厉害了啊，闭包一个特点就是保护变量避免污染啊，变量保护是双向的啊…进得去出不来… （所以我的微信小程序openradio有用到计数器的时候不敢用这个，而且这个方法也是针对数组才能用的）</p>
-<h3 id="for-of"><a href="#for-of" class="headerlink" title="for..of"></a>for..of</h3><p>这是ES6的新东西，它比<code>for in</code>遍历的更多，没有<code>for (;;)</code>复杂，对比<code>forEach</code>它是开放的不是闭包，也就是那些条件控制流什么的都可以操作。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr)</div></pre></td></tr></table></figure></p>
-<p>可是不止，好像还可以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> <span class="string">'colmu'</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//'c'\n 'o'\n 'l'\n 'm'\n 'u'\n</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="for-of"><a href="#for-of" class="headerlink" title="for..of"></a>for..of</h3><p>这是ES6的新东西，它比<code>for in</code>遍历的更多，没有<code>for (;;)</code>复杂，对比<code>forEach</code>它是开放的不是闭包，也就是那些条件控制流什么的都可以操作。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr)</span><br></pre></td></tr></table></figure></p>
+<p>可是不止，好像还可以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> <span class="string">'colmu'</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//'c'\n 'o'\n 'l'\n 'm'\n 'u'\n</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>不过它不能遍历对象！不能遍历对象！不能遍历对象！而且错误信息<code>TypeError: str[Symbol.iterator] is not a function</code>。所以这里我不行不BB了。</p>
 <blockquote>
 <p>所有实现了[Symbol.iterator]接口的对象都可以被遍历。</p>
 </blockquote>
-<h3 id="for-in-和-for-of-对比"><a href="#for-in-和-for-of-对比" class="headerlink" title="for in 和 for of 对比"></a>for in 和 for of 对比</h3><p>一个栗子就能锤到头皮发麻<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">// 0,1,2,3,4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</div><div class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//6,6,4,2,8</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="for-in-和-for-of-对比"><a href="#for-in-和-for-of-对比" class="headerlink" title="for in 和 for of 对比"></a>for in 和 for of 对比</h3><p>一个栗子就能锤到头皮发麻<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">// 0,1,2,3,4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//6,6,4,2,8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h3><p>光说区别不行，我要讲怎么用！</p>
 <p><del>万能膏药<code>while</code></del> （不对走错片场…）</p>
 <p>万能膏药<code>for (;;)</code>：这是怎样都能用的，不过就是长了点，但是定义细了多。</p>
@@ -369,18 +383,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">JavaScript所有for</a></li>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先讲for"><span class="toc-text">先讲for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in"><span class="toc-text">for..in</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forEach"><span class="toc-text">forEach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-of"><span class="toc-text">for..of</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in-和-for-of-对比"><span class="toc-text">for in 和 for of 对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#summary"><span class="toc-text">summary</span></a></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -447,23 +449,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -483,17 +486,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

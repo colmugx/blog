@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">JavaScript链式方法</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#怎么来的链式操作"><span class="toc-text">怎么来的链式操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我用过的JavaScript"><span class="toc-text">我用过的JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单链式操作"><span class="toc-text">简单链式操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么用链式操作"><span class="toc-text">为什么用链式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不止JavaScript能用"><span class="toc-text">不止JavaScript能用</span></a></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -290,10 +304,10 @@
 <p><code>JavaScript</code>能够函数式编程，还是因为它是个“函数为第一公民”的语言，但它并没有<code>pure function</code>是因为它的设计其实是多范式的。而ES6把构造函数和<code>classes</code>加进去之后更是证明了这一点。</p>
 <h3 id="我用过的JavaScript"><a href="#我用过的JavaScript" class="headerlink" title="我用过的JavaScript"></a>我用过的JavaScript</h3><p>关于这部分，我觉得我想分享的东西有点超篇幅，所以移步到另外一篇分享吧：<a href="/PersonalBlog/2017/12/26/my-known-javascript/">我所认识的JavaScript</a></p>
 <p>大致上就是<code>JavaScript</code>之所以能这么玩是因为它会把任何东西都看做“函数”来看待，并且以它的理解就是：我能且只能掌控函数，函数必有返回值。并且每产生一个函数就会有一个“我”的含义：<code>function</code>会自然而然的产生<code>this</code>并指向自己。而链式操作就是利用了这点。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果是浏览器的话，在没有对象的情况下，父级应该就是<code>window</code>了。而函数返回<code>this</code>相当于把自己返回到操作空间中，而操作空间属于父级。也就是说，只要是同一级别的函数，通过返回<code>this</code>把操作权交还到父级手中从而达到继续调用同级函数的技能。还不清楚？反正我不画图。</p>
 <h3 id="简单链式操作"><a href="#简单链式操作" class="headerlink" title="简单链式操作"></a>简单链式操作</h3><p>在此我们以著名歌唱家“雷军”举个例子。雷军可以说是目前最强悍的企业家了，写得了软件造得了手机，能唱一首好歌能吹一手好B。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 雷军（人为对象，构造成立）</span></div><div class="line"><span class="keyword">var</span> LeiJun = &#123;</div><div class="line">  hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hello, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thank: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  thanks: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you very much, '</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 驱使对象雷军唱出《Are you ok》前三句</span></div><div class="line">leijun</div><div class="line">  .hello()</div><div class="line">  .thank()</div><div class="line">  .thanks()</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 雷军（人为对象，构造成立）</span></span><br><span class="line"><span class="keyword">var</span> LeiJun = &#123;</span><br><span class="line">  hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello, '</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  thank: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you, '</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  thanks: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'thank you very much, '</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span> <span class="comment">// -&gt; LeiJun</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 驱使对象雷军唱出《Are you ok》前三句</span></span><br><span class="line">leijun</span><br><span class="line">  .hello()</span><br><span class="line">  .thank()</span><br><span class="line">  .thanks()</span><br></pre></td></tr></table></figure>
 <p>如果按字面意思可能永远都理解不来，从而产生哲学三连：我是谁？我在哪？我在干什么？所以又有一句话得以解释：从哪里来，回哪里去。</p>
 <h2 id="为什么用链式操作"><a href="#为什么用链式操作" class="headerlink" title="为什么用链式操作"></a>为什么用链式操作</h2><blockquote>
 <p>新手村的Monad？</p>
@@ -309,7 +323,7 @@
 <li>代码简洁（都有）</li>
 </ul>
 <p>柯里化最明显的优点就是阅读性差（？？？），假设有个方法叫<code>leijun</code>,那么调用方法的画风就大不相同</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">leijun()()()</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leijun()()()</span><br></pre></td></tr></table></figure>
 <p>鬼才知道他想唱的是“Are you ok”还是“Indian Mi Fans”呢……</p>
 <p>还有就是，因为流操作可以异步。JS也是患有懒癌很多年了，必须靠事件驱动才能工作，所以注定它是不能异步编程的。</p>
 <p>所以jQuery还是很强大的框架，在ES5什么都没有就靠三种规范的语法，已经要实现那么多东西了。让JS支持异步编程也就两种操作吧：函数内回调函数、链式操作函数。这框架两种都用上了。而说NodeJS速度快，一方面也是因为目前两个服务器框架都是异步（一堆回调函数）得到的结果吧。</p>
@@ -392,18 +406,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">JavaScript链式方法</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#怎么来的链式操作"><span class="toc-text">怎么来的链式操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我用过的JavaScript"><span class="toc-text">我用过的JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单链式操作"><span class="toc-text">简单链式操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么用链式操作"><span class="toc-text">为什么用链式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不止JavaScript能用"><span class="toc-text">不止JavaScript能用</span></a></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -470,23 +472,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -506,17 +509,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

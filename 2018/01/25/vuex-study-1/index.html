@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">vuex源码理解（一）</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#由口而入"><span class="toc-text">由口而入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#辅助函数"><span class="toc-text">辅助函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizeNamespace"><span class="toc-text">normalizeNamespace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizeMap"><span class="toc-text">normalizeMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mapState-mapMutations-mapGetters-mapActions"><span class="toc-text">mapState, mapMutations, mapGetters, mapActions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li></ol></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -275,21 +289,21 @@
       
         <p>看个代码代价很高，我边读边转笔，然后一个失手把手挑了个滴血不止…（笔头挑掉了一层手皮）</p>
 <p>vuex和dva的源码都想看，不然没办法知道相性在哪。</p>
-<h2 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h2><p>这都暴露干净了…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  Store,</div><div class="line">  install,</div><div class="line">  version: <span class="string">'__VERSION__'</span>,</div><div class="line">  mapState,</div><div class="line">  mapMutations,</div><div class="line">  mapGetters,</div><div class="line">  mapActions,</div><div class="line">  createNamespacedHelpers</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h2><p>这都暴露干净了…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  Store,</span><br><span class="line">  install,</span><br><span class="line">  version: <span class="string">'__VERSION__'</span>,</span><br><span class="line">  mapState,</span><br><span class="line">  mapMutations,</span><br><span class="line">  mapGetters,</span><br><span class="line">  mapActions,</span><br><span class="line">  createNamespacedHelpers</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><code>install</code>肯定是Vue老套路，想把东西当插件用肯定要暴露这个方法。这个之前写组件经常需要碰到，弃之！</p>
 <p>这次就先读暴露出来的四个方法吧</p>
 <a id="more"></a>
 <h2 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h2><h3 id="normalizeNamespace"><a href="#normalizeNamespace" class="headerlink" title="normalizeNamespace"></a>normalizeNamespace</h3><p>这个东西可能要先讲，因为你看到<code>mapState</code>的第一眼你就会看到他，虽然不重要。</p>
 <p>这应该是一个初始化或者标准化命名空间的方法，之前”尝试用dva的理解对处理数据”有遇到使用命名空间的情况。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(<span class="string">'spacename'</span>, &#123;</div><div class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>看一下实现方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeNamespace</span> (<span class="params">fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">namespace, map</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> namespace !== <span class="string">'string'</span>) &#123;</div><div class="line">      map = namespace</div><div class="line">      namespace = <span class="string">''</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (namespace.charAt(namespace.length - <span class="number">1</span>) !== <span class="string">'/'</span>) &#123;</div><div class="line">      namespace += <span class="string">'/'</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fn(namespace, map)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  ...mapState(<span class="string">'spacename'</span>, &#123;</span><br><span class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看一下实现方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeNamespace</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">namespace, map</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> namespace !== <span class="string">'string'</span>) &#123;</span><br><span class="line">      map = namespace</span><br><span class="line">      namespace = <span class="string">''</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (namespace.charAt(namespace.length - <span class="number">1</span>) !== <span class="string">'/'</span>) &#123;</span><br><span class="line">      namespace += <span class="string">'/'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fn(namespace, map)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>映入眼帘就是一个柯里了，大致意思就是命名空间需要处理，如果进来的函数第一个不是空间名称那么肯定直接是对象了，因为我们也不是必须使用命名空间，比如最普通的这样的</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(&#123;</div><div class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  ...mapState(&#123;</span><br><span class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count </span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果有命名空间的话，就根据层数用<code>/</code>分开，比如<code>app/save</code></p>
 <h3 id="normalizeMap"><a href="#normalizeMap" class="headerlink" title="normalizeMap"></a>normalizeMap</h3><p>对不起还是不能讲到<code>mapState</code>，毕竟通用的函数理解完了之后，游戏也就结束了。（要不怎么说是辅助函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Normalize the map</span></div><div class="line"><span class="comment"> * normalizeMap([1, 2, 3]) =&gt; [ &#123; key: 1, val: 1 &#125;, &#123; key: 2, val: 2 &#125;, &#123; key: 3, val: 3 &#125; ]</span></div><div class="line"><span class="comment"> * normalizeMap(&#123;a: 1, b: 2, c: 3&#125;) =&gt; [ &#123; key: 'a', val: 1 &#125;, &#123; key: 'b', val: 2 &#125;, &#123; key: 'c', val: 3 &#125; ]</span></div><div class="line"><span class="comment"> * @param &#123;Array|Object&#125; map</span></div><div class="line"><span class="comment"> * @return &#123;Object&#125;</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeMap</span> (<span class="params">map</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(map)</div><div class="line">    ? map.map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: key &#125;))</div><div class="line">    : <span class="built_in">Object</span>.keys(map).map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: map[key] &#125;))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Normalize the map</span></span><br><span class="line"><span class="comment"> * normalizeMap([1, 2, 3]) =&gt; [ &#123; key: 1, val: 1 &#125;, &#123; key: 2, val: 2 &#125;, &#123; key: 3, val: 3 &#125; ]</span></span><br><span class="line"><span class="comment"> * normalizeMap(&#123;a: 1, b: 2, c: 3&#125;) =&gt; [ &#123; key: 'a', val: 1 &#125;, &#123; key: 'b', val: 2 &#125;, &#123; key: 'c', val: 3 &#125; ]</span></span><br><span class="line"><span class="comment"> * @param &#123;Array|Object&#125; map</span></span><br><span class="line"><span class="comment"> * @return &#123;Object&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeMap</span> (<span class="params">map</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(map)</span><br><span class="line">    ? map.map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: key &#125;))</span><br><span class="line">    : <span class="built_in">Object</span>.keys(map).map(<span class="function"><span class="params">key</span> =&gt;</span> (&#123; key, <span class="attr">val</span>: map[key] &#125;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注释都直接告诉你了！对的实际上组件对<code>vuex</code>的访问可以有两种，对象或者数组。对象的情况上面已经有了，还有一种数组。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">computed: &#123;</div><div class="line">  ...mapState(<span class="string">'spacename'</span>, [</div><div class="line">    <span class="string">'count'</span></div><div class="line">  ])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  ...mapState(<span class="string">'spacename'</span>, [</span><br><span class="line">    <span class="string">'count'</span></span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种是，如果组件的参数跟vuex设定一样，那么就直接传入数组匹配，相当于<code>this.count</code>指向<code>this.$store.state.count</code></p>
 <h3 id="mapState-mapMutations-mapGetters-mapActions"><a href="#mapState-mapMutations-mapGetters-mapActions" class="headerlink" title="mapState, mapMutations, mapGetters, mapActions"></a>mapState, mapMutations, mapGetters, mapActions</h3><p>剩下的就真的是“拼装术”的事情了，通过暴露出去的辅助函数所接收到的数据进行转换并连接<code>vuex</code>。</p>
 <p>相当于<code>redux</code>本身只提供了状态管理，便捷操作需要接触各类型插件。而<code>vuex</code>作为<code>vue</code>专属状态管理，已经提供了最适合<code>vue</code>的操作。</p>
@@ -373,18 +387,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">vuex源码理解（一）</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#由口而入"><span class="toc-text">由口而入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#辅助函数"><span class="toc-text">辅助函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizeNamespace"><span class="toc-text">normalizeNamespace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizeMap"><span class="toc-text">normalizeMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mapState-mapMutations-mapGetters-mapActions"><span class="toc-text">mapState, mapMutations, mapGetters, mapActions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li></ol></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -451,23 +453,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -487,17 +490,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

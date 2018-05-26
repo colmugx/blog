@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">关于四轴的踩坑指南</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#html5-css3"><span class="toc-text">html5 css3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue"><span class="toc-text">Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#created-和-mounted-区别，ajax会在哪里操作"><span class="toc-text">created 和 mounted 区别，ajax会在哪里操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深度-watcher"><span class="toc-text">深度 watcher</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-函数式组件"><span class="toc-text">vue 函数式组件</span></a></li></ol></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -287,7 +301,7 @@
 <p>恰好就坑这了，要的就是在<code>mounted</code>，因为这个时候已经有组件实例了，也就是<code>this.$el</code>已经有树了，如果<code>ajax</code>过来的内容是需要依赖<code>el</code>的话，那在<code>created</code>的时候还没有东西呢。</p>
 <p>但是我还是愿意保留意见，因为我觉得在<code>created</code>先请求到<code>mounted</code>的时候差不多刚好，要是<code>mounted</code>的时候没请求到数据就尴尬了。当然这个想法只是停留在<code>ajax</code>获取的是展示数据。</p>
 <p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="Vue生命周期图示"></p>
-<h3 id="深度-watcher"><a href="#深度-watcher" class="headerlink" title="深度 watcher"></a>深度 watcher</h3><p>去翻了一下文档，我发现翻车的是自己吧！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">c: &#123;</div><div class="line">  handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</div><div class="line">  deep: <span class="literal">true</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<h3 id="深度-watcher"><a href="#深度-watcher" class="headerlink" title="深度 watcher"></a>深度 watcher</h3><p>去翻了一下文档，我发现翻车的是自己吧！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c: &#123;</span><br><span class="line">  handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">  deep: <span class="literal">true</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
 <p>只需要给对象加个<code>deep</code>就行了,而<code>a.b</code>这种情况应不属于深度watch，这只是需要监听的数据在比较深处而已…</p>
 <h3 id="vue-函数式组件"><a href="#vue-函数式组件" class="headerlink" title="vue 函数式组件"></a>vue 函数式组件</h3><p>这是一个补充问题，关于 什么时候可以使用函数式组件，我觉得确实没什么可以说的啊…</p>
 <p>如果只是充当渲染任务，不需要持久化不需要状态，采用函数式组件可以减少开销。</p>
@@ -368,18 +382,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">关于四轴的踩坑指南</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#html5-css3"><span class="toc-text">html5 css3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue"><span class="toc-text">Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#created-和-mounted-区别，ajax会在哪里操作"><span class="toc-text">created 和 mounted 区别，ajax会在哪里操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深度-watcher"><span class="toc-text">深度 watcher</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-函数式组件"><span class="toc-text">vue 函数式组件</span></a></li></ol></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -446,23 +448,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -482,17 +485,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">你还在用Console.log()？</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#log-info-error-warn"><span class="toc-text">log(), info(), error(), warn()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exception-debug"><span class="toc-text">_exception(), debug()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assert-…-clear-count"><span class="toc-text">assert(…), clear(), count()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dir-dirxml"><span class="toc-text">dir(), dirxml()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#group-groupCollapsed-groupEnd"><span class="toc-text">group(), groupCollapsed(), groupEnd()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#table-…"><span class="toc-text">table(…)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#另外的技巧就是可以用占位符了"><span class="toc-text">另外的技巧就是可以用占位符了</span></a></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -311,7 +325,7 @@
 <p>assert() 断言输出：判断第一个参数是否为真，false的话抛出异常并且在控制台输出相应信息。——MDN</p>
 </blockquote>
 <p>从这里开始就要骚了，这是一个判断的方法，里面需要填写参数，然后得到返回值。如果值为真，就什么都不会发生，反之则以<code>error()</code>通知你。这是个多参数的，除了第一个参数之外，后面接的参数是被输出的对象也好，字符串也好，并且会拼接。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.assert(<span class="number">1</span>&gt;<span class="number">2</span>, <span class="string">"你这么骚的？"</span>)</div><div class="line"></div><div class="line">Assertion failed: 你这么骚的？ <span class="comment">// 假装这里是红字红色背景</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.assert(<span class="number">1</span>&gt;<span class="number">2</span>, <span class="string">"你这么骚的？"</span>)</span><br><span class="line"></span><br><span class="line">Assertion failed: 你这么骚的？ <span class="comment">// 假装这里是红字红色背景</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>clear() 清空控制台</p>
 </blockquote>
@@ -336,7 +350,7 @@
 <p>这个方法必须传入内容，内容的类型是array或者object，输出的样式是一个key:value的表格！如果你觉得输出成对象不方便检查的话，那就用<code>table()</code>吧！（当然在表格下方还是会return一次对象或者数组）</p>
 <p>而且不仅是key:value，<strong>你甚至还能多元数组！对象套对象！甚至是JSON！</strong></p>
 <h2 id="另外的技巧就是可以用占位符了"><a href="#另外的技巧就是可以用占位符了" class="headerlink" title="另外的技巧就是可以用占位符了"></a>另外的技巧就是可以用占位符了</h2><p>跟C语言的<code>printf()</code>没有区别，就是可以利用占位符然后再把参数接在后面。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">"%d年%d月%d日"</span>,<span class="number">2017</span>,<span class="number">11</span>,<span class="number">20</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"%d年%d月%d日"</span>,<span class="number">2017</span>,<span class="number">11</span>,<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
 <p>最后感谢MDN，也感谢AlphaGo！</p>
 
       
@@ -413,18 +427,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">你还在用Console.log()？</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#log-info-error-warn"><span class="toc-text">log(), info(), error(), warn()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exception-debug"><span class="toc-text">_exception(), debug()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assert-…-clear-count"><span class="toc-text">assert(…), clear(), count()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dir-dirxml"><span class="toc-text">dir(), dirxml()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#group-groupCollapsed-groupEnd"><span class="toc-text">group(), groupCollapsed(), groupEnd()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#table-…"><span class="toc-text">table(…)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#另外的技巧就是可以用占位符了"><span class="toc-text">另外的技巧就是可以用占位符了</span></a></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -491,23 +493,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -527,17 +530,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

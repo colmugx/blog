@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">关于微信小程序</a></li>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#说说这大佬又想干什么！"><span class="toc-text">说说这大佬又想干什么！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这东西大概怎么写怎么用"><span class="toc-text">这东西大概怎么写怎么用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#另外最近在学Vue-js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。"><span class="toc-text">另外最近在学Vue.js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。</span></a></li></ol></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -271,8 +285,8 @@
 <p>向腾讯大佬低头！</p>
 </blockquote>
 <p><strong>说在前面，你们这下可不能说我这博客天天吹水不讲东西了！</strong></p>
-<h3 id="说说这大佬又想干什么！"><a href="#说说这大佬又想干什么！" class="headerlink" title="说说这大佬又想干什么！"></a>说说这大佬又想干什么！</h3><p>怎么说，腾讯微信真的是野心挺大的，要把微信做成一个应用平台<br>谁还能想的起来微信当时只是定位为一个低流语音信息的即时通讯工具啊！<br>小程序怎么定义呢，就是一个在微信启动的App<br>不过归根到底还是个Web App<br>那这么说来其实也可以说是一个以微信做壳的App了，相对于隔壁那个叫Ionic的东西来说。<br>不过怎么说，这小程序应该也是依托公众号来实现的吧，我看它文档都是在公众号里面。<br>先上地址：<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474887501214" target="_blank" rel="external">下载链接</a><br>这开发工具原来就是一个chrome开发者工具，可能是因为加了小程序这么个东西，现在也有开发功能了<br>刚刚试用了一下，效！率！贼！差！（默默打开了Atom）<a id="more"></a></p>
-<h3 id="这东西大概怎么写怎么用"><a href="#这东西大概怎么写怎么用" class="headerlink" title="这东西大概怎么写怎么用"></a>这东西大概怎么写怎么用</h3><p>我粗略看了一下啊，这东西跟隔壁那些什么<code>angular</code>啊，还有<code>vue</code>啊什么都有点差不多，就是前后绑定然后做逻辑。<br>大概结构就是（不会用树形，随便看一下）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- /</div><div class="line"> - pages</div><div class="line">     - index</div><div class="line">         index.js</div><div class="line">         index.wxml</div><div class="line">         index.wxss</div><div class="line">     - logs</div><div class="line">         logs.js</div><div class="line">         logs.json</div><div class="line">         logs.wxml</div><div class="line">         logs.wxss</div><div class="line"> - utils</div><div class="line">     util.js</div><div class="line"> app.js</div><div class="line"> app.json</div><div class="line"> app.wxss</div></pre></td></tr></table></figure></p>
+<h3 id="说说这大佬又想干什么！"><a href="#说说这大佬又想干什么！" class="headerlink" title="说说这大佬又想干什么！"></a>说说这大佬又想干什么！</h3><p>怎么说，腾讯微信真的是野心挺大的，要把微信做成一个应用平台<br>谁还能想的起来微信当时只是定位为一个低流语音信息的即时通讯工具啊！<br>小程序怎么定义呢，就是一个在微信启动的App<br>不过归根到底还是个Web App<br>那这么说来其实也可以说是一个以微信做壳的App了，相对于隔壁那个叫Ionic的东西来说。<br>不过怎么说，这小程序应该也是依托公众号来实现的吧，我看它文档都是在公众号里面。<br>先上地址：<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474887501214" target="_blank" rel="noopener">下载链接</a><br>这开发工具原来就是一个chrome开发者工具，可能是因为加了小程序这么个东西，现在也有开发功能了<br>刚刚试用了一下，效！率！贼！差！（默默打开了Atom）<a id="more"></a></p>
+<h3 id="这东西大概怎么写怎么用"><a href="#这东西大概怎么写怎么用" class="headerlink" title="这东西大概怎么写怎么用"></a>这东西大概怎么写怎么用</h3><p>我粗略看了一下啊，这东西跟隔壁那些什么<code>angular</code>啊，还有<code>vue</code>啊什么都有点差不多，就是前后绑定然后做逻辑。<br>大概结构就是（不会用树形，随便看一下）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- /</span><br><span class="line"> - pages</span><br><span class="line">     - index</span><br><span class="line">         index.js</span><br><span class="line">         index.wxml</span><br><span class="line">         index.wxss</span><br><span class="line">     - logs</span><br><span class="line">         logs.js</span><br><span class="line">         logs.json</span><br><span class="line">         logs.wxml</span><br><span class="line">         logs.wxss</span><br><span class="line"> - utils</span><br><span class="line">     util.js</span><br><span class="line"> app.js</span><br><span class="line"> app.json</span><br><span class="line"> app.wxss</span><br></pre></td></tr></table></figure></p>
 <p><strong>这结果tm似曾相识啊！</strong><br>好了这就是个Web App，那讲一下那些文件干嘛的呗。<br>说到底还是个老biao子，js就不用说了（哎等下这东西好像还是得依托<code>NodeJs</code>啊，顺便说下我特别不喜欢<code>PHP</code>…）</p>
 <p><code>wxml</code>:是个什么，wxml其实就是xml了，只是有点特殊的xml，可以理解成就是我们做ionic那个html吧<br><code>wxss</code>:卧槽了就是这个wxss！卧槽！挑白了说就是个CSS！不过在像素定义有点不同。引用一下</p>
 <blockquote>
@@ -358,18 +372,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">关于微信小程序</a></li>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#说说这大佬又想干什么！"><span class="toc-text">说说这大佬又想干什么！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这东西大概怎么写怎么用"><span class="toc-text">这东西大概怎么写怎么用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#另外最近在学Vue-js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。"><span class="toc-text">另外最近在学Vue.js，估计跟玩小程序应该也会有点联系吧，就这样了剩下的日后再说。</span></a></li></ol></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -436,23 +438,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -472,17 +475,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

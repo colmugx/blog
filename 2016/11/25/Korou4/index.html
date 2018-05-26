@@ -6,11 +6,14 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
-        theme: "banderole",
-        lightbox: true,
-        animate: true,
         baseUrl: "/blog/",
-        search: true
+        theme: {
+            scheme: "balance",
+            lightbox: true,
+            animate: true,
+            search: true,
+            pjax: true
+        }
     }
 </script>
 
@@ -75,13 +78,6 @@
   <div class="progress-inner"></div>
 </div>
   
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
-  </div>
-</div>  
   
 
   <div class="container">
@@ -163,6 +159,24 @@
 </nav>
     
     
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">扣肉小记（四）</a></li>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#最近干了个长得像个音乐播放器的微信小程序"><span class="toc-text">最近干了个长得像个音乐播放器的微信小程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#暂时没想到什么写的，来听音乐吧！"><span class="toc-text">暂时没想到什么写的，来听音乐吧！</span></a></li></ol>
+    </div>
+  </aside>
+
+  
+    
   </div>
 </header>
 <div class="mobile-header">
@@ -234,7 +248,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner">
+    <div class="container-inner syuanpi">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -276,7 +290,7 @@
 </blockquote>
 <p>　　好久没有写过扣肉系列的故事了，“扣肉”系列有两个特点，第一个是有分段，每一段前面有缩进！（Markdown不支持缩进一开始我还想了各种各样的办法）第二个就是每一篇后面都有个音乐啦！（反正不想看就翻到最后听音乐啊）</p>
 <h3 id="最近干了个长得像个音乐播放器的微信小程序"><a href="#最近干了个长得像个音乐播放器的微信小程序" class="headerlink" title="最近干了个长得像个音乐播放器的微信小程序"></a>最近干了个长得像个音乐播放器的微信小程序</h3><a id="more"></a>
-<p>　　最近干什么，最近学的前端知识好多，每天都是百度和知乎（暂时不需要用到Google系列），然后就是写了一个微信小程序(weapp)<br>　　反正到现在来说，<code>weapp</code>还是挺好玩的，而且那个<code>wxml</code>和<code>wxss</code>就理解成<code>html</code>和<code>css</code>就好了。然后那个<code>js</code>是用的ES6，身边有个大神honn哥，有问题他还是很愿意解答的，谢谢老板罩着！<br>　　然后写了个什么，写了个音乐程序，有个不愿意透露ID的妹妹她自己有个项目，就是“据她口述的盗链音乐播放器”，不过她是用swift写的，而且长得稍微挺像网某云音乐，但链子好像不是某云的…然后我就想那我也来写一个好了<br>　　然后就去看了她的链子，发现她的链子好像不能用了，然后我就自己找了一个某度的链子，能用。反正这些东西以后都开源了！开源大法好！先上个图！<br>  <img src="https://github.com/ColMugX/GitBed/raw/master/blog/weapp-openradio.gif" alt=""><br>　　但是尴尬的是，这套链子，<strong>不支持在线播放</strong>！卧槽这tm就尴尬了。链子拿下来之后，本地播放是可以的，在线播放是播放不了的。然后我就尝试用浏览器去点，点开之后并不是一个<code>html5</code>的<code>audio</code>而是直接<code>download</code>，代码长这样。<br>  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"songLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span>,</div><div class="line">  <span class="attr">"showLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　最近干什么，最近学的前端知识好多，每天都是百度和知乎（暂时不需要用到Google系列），然后就是写了一个微信小程序(weapp)<br>　　反正到现在来说，<code>weapp</code>还是挺好玩的，而且那个<code>wxml</code>和<code>wxss</code>就理解成<code>html</code>和<code>css</code>就好了。然后那个<code>js</code>是用的ES6，身边有个大神honn哥，有问题他还是很愿意解答的，谢谢老板罩着！<br>　　然后写了个什么，写了个音乐程序，有个不愿意透露ID的妹妹她自己有个项目，就是“据她口述的盗链音乐播放器”，不过她是用swift写的，而且长得稍微挺像网某云音乐，但链子好像不是某云的…然后我就想那我也来写一个好了<br>　　然后就去看了她的链子，发现她的链子好像不能用了，然后我就自己找了一个某度的链子，能用。反正这些东西以后都开源了！开源大法好！先上个图！<br>  <img src="https://github.com/ColMugX/GitBed/raw/master/blog/weapp-openradio.gif" alt=""><br>　　但是尴尬的是，这套链子，<strong>不支持在线播放</strong>！卧槽这tm就尴尬了。链子拿下来之后，本地播放是可以的，在线播放是播放不了的。然后我就尝试用浏览器去点，点开之后并不是一个<code>html5</code>的<code>audio</code>而是直接<code>download</code>，代码长这样。<br>  <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"songLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span>,</span><br><span class="line">  <span class="attr">"showLink"</span>: <span class="string">"http://yinyueshiting.baidu.com/data2/music/187ccc63d230408fdf39c51e37828e24/266958159/266322598252000128.mp3?xcode=814f6cb1684cf12a84b505fb6b038464"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>　　而且其实我有想过先down到本地然后在调用播放，后来想了一下，既然是小程序而且是个云端程序，这么玩占用的存储会不会就大了好多…现在只能另辟蹊径了。（为什么我想到了鹅厂…）</p>
 <h3 id="暂时没想到什么写的，来听音乐吧！"><a href="#暂时没想到什么写的，来听音乐吧！" class="headerlink" title="暂时没想到什么写的，来听音乐吧！"></a>暂时没想到什么写的，来听音乐吧！</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=412493379&auto=0&height=32"></iframe>
 
@@ -359,18 +373,6 @@
 
 
   
-   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fallIn-light">
-      <li class="title-link"><a href="javascript:;" class="toTop">扣肉小记（四）</a></li>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#最近干了个长得像个音乐播放器的微信小程序"><span class="toc-text">最近干了个长得像个音乐播放器的微信小程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#暂时没想到什么写的，来听音乐吧！"><span class="toc-text">暂时没想到什么写的，来听音乐吧！</span></a></li></ol>
-    </div>
-  </aside>
-
-
   
 
 
@@ -437,23 +439,24 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
+
+
+
     <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
-<script src="/blog/script/src/utils.js"></script>
-<script src="/blog/script/scheme/balance.js"></script>
-<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -473,17 +476,6 @@
       <div id="local-search-result"></div>
     </div>
   </div>
-  <script>
-  if (NlviConfig.theme === 'banderole') {
-    var GREETING = {
-      morning: "我的博客里可没有早饭！",
-      noon: "记得午休吃饭，不着急看我的博客~",
-      after: "下午好，感谢查阅我的博客",
-      night: "您来我的博客看笑话当做休息嘛",
-      midnight: "我觉得大半夜就不要看啦"
-    }
-  }
-  </script>
 
 </body>
 </html>

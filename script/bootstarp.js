@@ -1,20 +1,22 @@
-$(document).ready(function(){
+~function(){
   document.body.addEventListener('touchstart', function () {});
-  Nlvi.boot();
 
-  Nlvi.utils.titleStatus();
-  Nlvi.utils.mobileHeader();
-  Nlvi.utils.back2top();
-  Nlvi.utils.tagcloud();
-  Nlvi.utils.showToc();
-  Nlvi.utils.switchToc();
+  // Nlvi.boot();
+  // NlviConfig.pjax&&Nlvi.utils.pjax();
 
-  NlviConfig.search&&Nlvi.utils.search();
+  // Nlvi.utils.titleStatus();
+  // Nlvi.utils.mobileHeader();
+  // Nlvi.utils.back2top();
+  // Nlvi.utils.tagcloud();
+  // Nlvi.utils.showToc();
+  // Nlvi.utils.switchToc();
 
-  var plugins = Nlvi.plugins;
-  if (plugins) {
-    for (var i in plugins) {
-      plugins[i]();
-    }
-  }
-});
+  // NlviConfig.search&&Nlvi.utils.search();
+
+  // var plugins = Nlvi.plugins;
+  // if (plugins) {
+  //   for (var i in plugins) {
+  //     plugins[i]();
+  //   }
+  // }
+}();

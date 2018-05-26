@@ -276,5 +276,15 @@ Nlvi.utils = {
     } else if (hour >= 1 && hour < 8) {
       $header.html(GREETING.midnight);
     }
-  }
+  },
+
+  pjax: function() {
+    $(document).pjax('a', 'body', {fragment: 'body'});
+    $(document).on('pjax:start', function() {
+      $('body').addClass('syuanpi fadeOut');
+    })
+    $(document).on('pjax:end', function() {
+      $('body').removeClass('fadeOut').addClass('fadeIn');
+    })
+  },
 };
