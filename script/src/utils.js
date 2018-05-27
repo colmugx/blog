@@ -52,12 +52,12 @@ Nlvi.utils = {
           Nlvi.tools.opreateClass(this, 'active', 'remove');
         }
       });
-      
+
       for (var i = 0; i < $toclink.length; i++) {
         var isLastOne = i + 1 === $toclink.length,
           currentTop = headerlinkTop[i],
           nextTop = isLastOne ? Infinity : headerlinkTop[i + 1];
-        
+
         if (currentTop < sct + 200 && sct + 200 <= nextTop) {
           Nlvi.tools.opreateClass($toclink[i], 'active', 'add');
         } else {
@@ -221,7 +221,7 @@ Nlvi.utils = {
         Nlvi.tools.opreateClass('#backtop', 'bloom', 'remove');
       }
       var scrollPercentRounded = Math.floor(
-        sct 
+        sct
         / ($(document).height() - $(this).height())
         * 100
       );
@@ -276,15 +276,5 @@ Nlvi.utils = {
     } else if (hour >= 1 && hour < 8) {
       $header.html(GREETING.midnight);
     }
-  },
-
-  pjax: function() {
-    $(document).pjax('a', 'body', {fragment: 'body'});
-    $(document).on('pjax:start', function() {
-      $('body').addClass('syuanpi fadeOut');
-    })
-    $(document).on('pjax:end', function() {
-      $('body').removeClass('fadeOut').addClass('fadeIn');
-    })
-  },
+  }
 };

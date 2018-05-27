@@ -6,14 +6,11 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
+        theme: "balance",
+        lightbox: true,
+        animate: true,
         baseUrl: "/blog/",
-        theme: {
-            scheme: "balance",
-            lightbox: true,
-            animate: true,
-            search: true,
-            pjax: true
-        }
+        search: true
     }
 </script>
 
@@ -248,7 +245,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner syuanpi">
+    <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -438,24 +435,23 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
-
-
-
-    <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
+<script src="/blog/script/src/utils.js"></script>
+<script src="/blog/script/scheme/balance.js"></script>
+<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -475,6 +471,17 @@
       <div id="local-search-result"></div>
     </div>
   </div>
+  <script>
+  if (NlviConfig.theme === 'banderole') {
+    var GREETING = {
+      morning: "我的博客里可没有早饭！",
+      noon: "记得午休吃饭，不着急看我的博客~",
+      after: "下午好，感谢查阅我的博客",
+      night: "您来我的博客看笑话当做休息嘛",
+      midnight: "我觉得大半夜就不要看啦"
+    }
+  }
+  </script>
 
 </body>
 </html>

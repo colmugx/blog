@@ -4,7 +4,7 @@ if (Nlvi.base.isBalance()) {
     var scrollTop = Nlvi.tools.scroll(window);
     scrollTop(function(sct) {
       var scrollPercentRounded = Math.floor(
-        sct 
+        sct
         / ($(document).height() - $(this).height())
         * 100
       );
@@ -44,7 +44,7 @@ if (Nlvi.base.isBalance()) {
       }
     })
   }
-  
+
   Nlvi.utils.tagcloud = function() {
     function tagHide() {
       $('#tagcloud').addClass('dead').one('webkitAnimationEnd AnimationEnd', function() {

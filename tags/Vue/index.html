@@ -6,14 +6,11 @@
     var NlviConfig = {
         title: "ColMugX",
         author: "Co1MugX",
+        theme: "balance",
+        lightbox: true,
+        animate: true,
         baseUrl: "/blog/",
-        theme: {
-            scheme: "balance",
-            lightbox: true,
-            animate: true,
-            search: true,
-            pjax: true
-        }
+        search: true
     }
 </script>
 
@@ -71,7 +68,7 @@
 
   <title>
   
-    vue · ColMugX
+    Vue · ColMugX
   
 </title>
 </head>
@@ -240,7 +237,7 @@
     <div class="mobile-header-item"></div>
   </div>
 </div>
-    <div class="container-inner syuanpi">
+    <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
@@ -248,7 +245,7 @@
     <div class="archive syuanpi riseIn-light" id="archive">
         
             <h2 class="archive-title"> 正在查看 </h2>
-            <span class="archive-name"> — vue</span>
+            <span class="archive-name"> — Vue</span>
         
         <div class="archive-list">
             <ul>
@@ -258,11 +255,11 @@
             <li class="archive-post">
                 <span class="archive-post-time">
                 
-                    2018-01-30
+                    2018-03-16
                 
                 </span>
                 <span class="archive-post-link">
-                    <a href="/blog/2018/01/30/vuex-study-2/">vuex源码理解（二）</a>
+                    <a href="/blog/2018/03/16/vue-watcher/">vue watch存在永动吗？</a>
                 </span>
             </li>
 
@@ -272,11 +269,11 @@
             <li class="archive-post">
                 <span class="archive-post-time">
                 
-                    2018-01-25
+                    2018-03-12
                 
                 </span>
                 <span class="archive-post-link">
-                    <a href="/blog/2018/01/25/vuex-study-1/">vuex源码理解（一）</a>
+                    <a href="/blog/2018/03/12/dji-interview/">关于四轴的踩坑指南</a>
                 </span>
             </li>
 
@@ -286,67 +283,11 @@
             <li class="archive-post">
                 <span class="archive-post-time">
                 
-                    2018-01-22
+                    2018-02-16
                 
                 </span>
                 <span class="archive-post-link">
-                    <a href="/blog/2018/01/22/vuex-dva/">通过dva得到的思考 —— “滥用”VUEX</a>
-                </span>
-            </li>
-
-        
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    2017-12-11
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/blog/2017/12/11/vue-jsx/">使用JSX的VUE应用开发体验</a>
-                </span>
-            </li>
-
-        
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    2017-10-09
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/blog/2017/10/09/diary-vue-jsx/">总有一天我会死在骚操作上…</a>
-                </span>
-            </li>
-
-        
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    2017-08-22
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/blog/2017/08/22/do-markdown-hexo/">搞electron + vue + webpack2 + TypeScript什么体验</a>
-                </span>
-            </li>
-
-        
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    2017-04-07
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/blog/2017/04/07/axios-tutorial/">Vue2.0的网络请求 - Axios</a>
+                    <a href="/blog/2018/02/16/vue-functional/">Vue函数式组件</a>
                 </span>
             </li>
 
@@ -424,24 +365,23 @@
 </footer>
     </div>
   </div>
-  <script src="/blog/script/lib/jquery/jquery.min.js"></script>
+  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
 
 
     <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
 
 
 
-    <script src="/blog/script/lib/pjax/jquery.pjax.js"></script>
-
-
-
-    <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 
 
 <script src="/blog/script/src/nlvi.js"></script>
+<script src="/blog/script/src/utils.js"></script>
+<script src="/blog/script/scheme/balance.js"></script>
+<script src="/blog/script/src/plugins.js"></script>
 <script src="/blog/script/bootstarp.js"></script>
 
 
@@ -461,6 +401,72 @@
       <div id="local-search-result"></div>
     </div>
   </div>
+  <script>
+  if (NlviConfig.theme === 'banderole') {
+    var GREETING = {
+      morning: "我的博客里可没有早饭！",
+      noon: "记得午休吃饭，不着急看我的博客~",
+      after: "下午好，感谢查阅我的博客",
+      night: "您来我的博客看笑话当做休息嘛",
+      midnight: "我觉得大半夜就不要看啦"
+    }
+  }
+  </script>
+
+</body>
+</html>
+  </div>
+  </div>
+</footer>
+    </div>
+  </div>
+  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+    <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});</script>
+    <script async src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<script src="/blog/script/src/nlvi.js"></script>
+<script src="/blog/script/src/utils.js"></script>
+<script src="/blog/script/scheme/balance.js"></script>
+<script src="/blog/script/src/plugins.js"></script>
+<script src="/blog/script/bootstarp.js"></script>
+
+
+<div class="backtop syuanpi dead toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+
+  <div class="search" id="search">
+    <div class="mask" id="mask"></div>
+    <div class="search-wrapper syuanpi">
+      <h2 id="search-header" class="syuanpi">搜索一下？</h2>
+      <div class="input">
+        <input type="text" id="local-search-input" results="0" name="">
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+  <script>
+  if (NlviConfig.theme === 'banderole') {
+    var GREETING = {
+      morning: "我的博客里可没有早饭！",
+      noon: "记得午休吃饭，不着急看我的博客~",
+      after: "下午好，感谢查阅我的博客",
+      night: "您来我的博客看笑话当做休息嘛",
+      midnight: "我觉得大半夜就不要看啦"
+    }
+  }
+  </script>
 
 </body>
 </html>
