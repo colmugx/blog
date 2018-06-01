@@ -95,21 +95,21 @@ Nlvi.utils = {
     $search.click(function () {
       $('.search').show();
       if ($('.search-wrapper').hasClass('syuanpi')) {
-        $('.search-wrapper').addClass('bloom');
+        $('.search-wrapper').addClass('clarity');
       }
     });
     $mask.click(function () {
       if ($('.search-wrapper').hasClass('syuanpi')) {
-        $('.search-wrapper').removeClass('bloom').addClass('dead').one('webkitAnimationEnd AnimationEnd', function() {
-          $(this).removeClass('dead');
+        $('.search-wrapper').removeClass('clarity').addClass('melt').one('webkitAnimationEnd AnimationEnd', function() {
+          $(this).removeClass('melt');
           $('.search').hide();
         });
       } else $('.search').hide();
     });
     $header.click(function () {
       if ($('.search-wrapper').hasClass('syuanpi')) {
-        $('.search-wrapper').removeClass('bloom').addClass('dead').one('webkitAnimationEnd AnimationEnd', function() {
-          $(this).removeClass('dead');
+        $('.search-wrapper').removeClass('clarity').addClass('melt').one('webkitAnimationEnd AnimationEnd', function() {
+          $(this).removeClass('melt');
           $('.search').hide();
         });
       } else $('.search').hide();
@@ -140,7 +140,7 @@ Nlvi.utils = {
             $result.addClass('slide');
             $header.removeClass('fadeIn').addClass('fadeOut');
             $result.show();
-            var str = '<ul class=\"search-result-list syuanpi back-1 riseIn-light\">';
+            var str = '<ul class=\"search-result-list syuanpi back-1 fadeInUp\">';
             var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
             $result.html('');
             if (this.value.trim().length <= 0) {
@@ -213,11 +213,11 @@ Nlvi.utils = {
     var scrollTop = Nlvi.tools.scroll(window);
     scrollTop(function(sct) {
       if (sct > 110) {
-        Nlvi.tools.opreateClass('#backtop', 'bloom', 'add');
-        Nlvi.tools.opreateClass('#backtop', 'dead', 'remove');
+        Nlvi.tools.opreateClass('#backtop', 'clarity', 'add');
+        Nlvi.tools.opreateClass('#backtop', 'melt', 'remove');
       } else {
-        Nlvi.tools.opreateClass('#backtop', 'dead', 'add');
-        Nlvi.tools.opreateClass('#backtop', 'bloom', 'remove');
+        Nlvi.tools.opreateClass('#backtop', 'melt', 'add');
+        Nlvi.tools.opreateClass('#backtop', 'clarity', 'remove');
       }
       var scrollPercentRounded = Math.floor(
         sct
@@ -235,20 +235,20 @@ Nlvi.utils = {
 
   switchToc: function() {
     function tocHide() {
-      $('.toc-inner').addClass('riseOut-light').one('webkitAnimationEnd AnimationEnd', function() {
+      $('.toc-inner').addClass('fadeOutRight').one('webkitAnimationEnd AnimationEnd', function() {
         $(this).hide();
       });
     }
     $('.toc-inner').one('webkitAnimationEnd AnimationEnd', function() {
-      Nlvi.tools.opreateClass('.toc-inner', 'fallIn-light', 'remove');
+      Nlvi.tools.opreateClass('.toc-inner', 'fadeInRight', 'remove');
       Nlvi.tools.opreateClass('#toc-switch', 'not-toc');
     });
     tocHide();
     $('#toc-switch').on('click', function() {
       if (Nlvi.tools.existClass(this, 'not-toc')) {
         Nlvi.tools.opreateClass(this, 'not-toc', 'remove');
-        Nlvi.tools.opreateClass('.toc-inner', 'riseOut-light', 'remove');
-        Nlvi.tools.opreateClass('.toc-inner', 'fallIn-light');
+        Nlvi.tools.opreateClass('.toc-inner', 'fadeOutRight', 'remove');
+        Nlvi.tools.opreateClass('.toc-inner', 'fadeInRight');
         $('.toc-inner').show();
         Nlvi.tools.opreateClass('.container-inner', 'has_toc');
       } else {

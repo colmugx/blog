@@ -38,12 +38,12 @@
       showComments: function() {
         $('#com-switch').click(function() {
           if ($('#post-comments').css('display') == 'none') {
-            $('#post-comments').css('display', 'block').addClass('syuanpi fallIn-light');
+            $('#post-comments').css('display', 'block').addClass('syuanpi fadeInDown');
             $(this).removeClass('syuanpi').css('transform', 'rotate(180deg)');
           } else {
             $(this).addClass('syuanpi').css('transform', '');
-            $('#post-comments').removeClass('fallIn-light').addClass('riseOut-light').one('webkitAnimationEnd AnimationEnd', function() {
-              $(this).removeClass('syuanpi riseOut-light').css('display', 'none');
+            $('#post-comments').removeClass('fadeInDown').addClass('fadeOutUp').one('webkitAnimationEnd AnimationEnd', function() {
+              $(this).removeClass('syuanpi fadeOutUp').css('display', 'none');
             });
           }
         });
