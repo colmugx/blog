@@ -1200,19 +1200,14 @@ h6 {
   bottom: 32px;
   right: 32px;
   color: #39c5bb;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 650px) {
   .backtop {
     display: none;
   }
-}
-.backtop:hover {
-  -webkit-animation-name: float-in;
-  animation-name: float-in;
-  -webkit-animation-duration: 2.33s;
-  animation-duration: 2.33s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
 }
 .backtop i {
   font-size: 24px;
@@ -1551,10 +1546,10 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.75);
+  background-color: rgba(0,0,0,0.75);
 }
 .search .search-wrapper {
-  background: transparent;
+  background-color: transparent;
   width: 100%;
   max-width: 100%;
   position: absolute;
@@ -1587,7 +1582,7 @@ h6 {
   height: 60px;
   outline: none;
   border: none;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
   font-size: 32px;
