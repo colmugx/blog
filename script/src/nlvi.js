@@ -49,7 +49,18 @@
     return base;
   }
 
+  nlvi.prototype.expect = function(ele) {
+    var fns = {
+      isDisplay: function() {
+        return $(ele).css('display') === 'none'
+      },
+    }
+    return fns;
+  }
+
   nlvi.prototype.boot = function() {
+    var tool = this.tools;
+    var expect = this.expect;
     var boot = {
       smoothScroll: function() {
         $('.toc-link').on('click', function() {
@@ -68,13 +79,14 @@
       },
       showComments: function() {
         $('#com-switch').on('click', function() {
-          if ($('#post-comments').css('display') == 'none') {
+          if (expect('#post-comments').isDisplay()) {
             $('#post-comments').css('display', 'block').addClass('syuanpi fadeInDown');
             $(this).removeClass('syuanpi').css('transform', 'rotate(180deg)');
           } else {
             $(this).addClass('syuanpi').css('transform', '');
-            $('#post-comments').removeClass('fadeInDown').addClass('fadeOutUp').one('webkitAnimationEnd AnimationEnd', function() {
-              $(this).removeClass('syuanpi fadeOutUp').css('display', 'none');
+            tool('opreateClass')('#post-comments', 'fadeInDown', 'remove');
+            tool('animationEnd')('#post-comments', 'fadeOutUp', function() {
+              $(this).css('display', 'none');
             });
           }
         });
@@ -87,6 +99,7 @@
 
   nlvi.prototype.universal = function() {
     var tool = this.tools;
+    var config = this.config
     var utils = {
       mobileHeader: function() {
         function resetMobileMenu() {
@@ -172,7 +185,7 @@
         });
         $mask.on('click', function () {
           if ($('.search-wrapper').hasClass('syuanpi')) {
-            tool('opreateClass')('.search-wrapper', 'clarity', 'remove')
+            tool('opreateClass')('.search-wrapper', 'clarity', 'remove');
             tool('animationEnd')('.search-wrapper', 'melt', function() {
               $('.search').hide();
             });
@@ -180,15 +193,15 @@
         });
         $header.on('click', function () {
           if ($('.search-wrapper').hasClass('syuanpi')) {
-            $('.search-wrapper').removeClass('clarity').addClass('melt').one('webkitAnimationEnd AnimationEnd', function() {
-              $(this).removeClass('melt');
+            tool('opreateClass')('.search-wrapper', 'clarity', 'remove');
+            tool('animationEnd')('.search-wrapper', 'melt', function() {
               $('.search').hide();
             });
           } else $('.search').hide();
         });
 
         $.ajax({
-          url: NlviConfig.baseUrl + 'search.xml',
+          url: config.baseUrl + 'search.xml',
           dataType: 'xml',
           success: function (xmlResponse) {
             var searchData = $('entry', xmlResponse).map(function () {
@@ -200,7 +213,8 @@
             }).get();
 
             $input.on('input', function (e) {
-              if (e.target.value.length = 0 || e.target.value == '') {
+              console.log(e)
+              if (!e.target.value.length) {
                 $header.removeClass('slide');
                 $input.removeClass('slide');
                 $result.removeClass('slide');
@@ -284,8 +298,22 @@
     return utils;
   }
 
+  nlvi.prototype.pjax = function() {
+    var tool = this.tools;
+    var _this = this;
+    $(document).pjax('a', '.container', { fragment: '.container' });
+    $(document).on('pjax:start', function () {
+      tool('animationEnd')('.container', 'syuanpi melt');
+    });
+    $(document).on('pjax:complete', function () {
+      tool('animationEnd')('.container', 'syuanpi clarity');
+      _this.bootstrap()
+    });
+  }
+
   nlvi.prototype.bootstrap = function() {
     var config = this.config;
+    var theme = config.theme;
     var utils = {};
     switch (true) {
       case this.base().isBalance():
@@ -296,13 +324,14 @@
         break;
     }
     this.boot();
+    theme.pjax && this.pjax();
     utils.titleStatus();
     utils.mobileHeader();
     utils.showToc();
     utils.back2top();
     utils.tagcloud();
     utils.switchToc();
-    config.search && utils.search();
+    theme.search && utils.search();
   }
 
   window.nlvi = nlvi;

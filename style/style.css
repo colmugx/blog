@@ -1566,6 +1566,9 @@ h6 {
   color: #fff;
   font-weight: 100;
   font-size: 3.6rem;
+  transition: transform 0.25s ease-out;
+  -moz-transition: transform 0.25s ease-out;
+  -webkit-transition: transform 0.25s ease-out;
 }
 @media screen and (max-width: 800px) {
   .search .search-wrapper #search-header {
@@ -1588,6 +1591,9 @@ h6 {
   font-size: 32px;
   padding: 8px;
   font-weight: 100;
+  transition: transform 0.25s ease-out;
+  -moz-transition: transform 0.25s ease-out;
+  -webkit-transition: transform 0.25s ease-out;
 }
 @media screen and (max-width: 800px) {
   .search .search-wrapper input {

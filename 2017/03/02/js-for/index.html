@@ -4,15 +4,16 @@
   <link rel="stylesheet" href="/blog/style/style.css">
 <script>
   var nlviconfig = {
-    title: "ColMugX",
-    author: "Co1MugX",
+    title: "Colmugx",
+    author: "colmugx",
     baseUrl: "/blog/",
     theme: {
       scheme: "banderole",
       lightbox: true,
       animate: true,
       search: true,
-      friends: false
+      friends: false,
+      pjax: false,
     }
   }
 </script>
@@ -53,7 +54,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="browsermode" content="application">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="ColMugX">
+<meta name="apple-mobile-web-app-title" content="Colmugx">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="msapplication-navbutton-color" content="#666666">
 <meta name= "format-detection" content="telephone=no" />
@@ -63,7 +64,7 @@
   <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
 
 
-  <meta name="subtitle" content="SHOW YOUR FUNCTION NO BB.">
+  <meta name="subtitle" content="我的代码，没有风格">
 
 
   <meta name="description" content="Co1MugX Blog">
@@ -72,7 +73,7 @@
 
   <meta name="keywords" content="JavaScript, Nlvi" />
 
-  <title> JavaScript所有for · ColMugX </title>
+  <title> JavaScript所有for · Colmugx </title>
 </head>
 <body>
   <div class="progress">
@@ -83,7 +84,7 @@
     <div class="tagcloud-mask"></div>  
 <div class="tagcloud" id="tagcloud">
   <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a>
   </div>
 </div>  
   
@@ -94,9 +95,9 @@
   <div class="header-wrapper">
     <div class="logo">
   <div class="logo-inner syuanpi tvIn">
-    <span><a href="/blog/">ColMugX</a></span>
+    <span><a href="/blog/">Colmugx</a></span>
     
-      <span id="subtitle">SHOW YOUR FUNCTION NO BB.</span>
+      <span id="subtitle">我的代码，没有风格</span>
     
   </div>
 </div>
@@ -207,7 +208,7 @@
             </div>
             <div class="mobile-nav-tagcloud">
               <div class="mobile-tagcloud-inner">
-                <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+                <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a>
               </div>
             </div>
           </div>
@@ -233,7 +234,7 @@
       </div>
     </div>
     <h1 class="mobile-header-title">
-      <a href="/">ColMugX</a>
+      <a href="/">Colmugx</a>
     </h1>
     <div class="mobile-header-item"></div>
   </div>
@@ -249,7 +250,7 @@
    is_post 
   ">
     <header class="post-header">
-      <div class="post-time syuanpi fadeInUp back-1">
+      <div class="post-time syuanpi fadeInUpShort back-1">
         <div class="post-time-wrapper">
           <span>2017-03-02</span>
           
@@ -259,7 +260,7 @@
           
           
             
-              <aside class="post-tags syuanpi fadeInUp back-3">
+              <aside class="post-tags syuanpi fadeInUpShort back-3">
               
                 <a href="/blog/tags/JavaScript/">JavaScript</a>
               
@@ -268,17 +269,15 @@
           
         </div>
       </div>
-      <h1 class="post-title syuanpi fadeInUp back-2">
+      <h1 class="post-title syuanpi fadeInUpShort back-2">
         
           JavaScript所有for
         
       </h1>
     </header>
-    <div class="post-content syuanpi fadeInUp back-3">
+    <div class="post-content syuanpi fadeInUpShort back-3">
       
-        <p>其实也是看到了<a href="https://zhuanlan.zhihu.com/jbangit" target="_blank" rel="noopener">匠邦互联网 - 知乎专栏</a>，其中一篇讲for的</p>
-<p>觉得我不服！我要上！<br><a id="more"></a></p>
-<h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</span><br></pre></td></tr></table></figure></p>
+        <h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</span><br></pre></td></tr></table></figure></p>
 <p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</span><br></pre></td></tr></table></figure></p>
 <h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>不过<code>for in</code>的话，为什么说遍历对象比较多，其中一个除了好写<del>（打死吧这人）</del>，还有一点它只能用来遍历有key或者说是个index的东西，比如数组，它只能读到数组的index，那对象的话就直接读到键值咯。而且有一点的是，你读数组，<strong>读出来的index是个string不是number</strong>。这个要记得，因为js这种弱类型的东西，如果索引相加就变成字符串相加了……<strong>（我幼儿园就会20以内加减法了，1加2等于12)</strong></p>
@@ -310,7 +309,7 @@
   <div class="post-copyright">
     <div class="copy-author">
       <span>作者 :</span>
-      <span>Co1MugX</span>
+      <span>colmugx</span>
     </div>
     <div class="copy-url">
       <span>地址 :</span>
@@ -339,9 +338,9 @@
       </a>
     
     
-      <a href="/blog/2017/02/28/object-traversal/" id="art-right" class="art-right">
+      <a href="/blog/2017/02/22/js-extends/" id="art-right" class="art-right">
         <span class="prev-title"> 
-          ES6对象遍历<i class="iconfont icon-right"></i>  
+          来搞一手关于Javascript对象继承<i class="iconfont icon-right"></i>  
         </span>
       </a>
     
@@ -374,16 +373,17 @@
 
 
   
-   
+  
     
   
   <aside class="post-toc">
     <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fadeInDown">
+    <div class="toc-inner syuanpi back-1" style="display:none;">
       <li class="title-link"><a href="javascript:;" class="toTop">JavaScript所有for</a></li>
       <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先讲for"><span class="toc-text">先讲for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in"><span class="toc-text">for..in</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forEach"><span class="toc-text">forEach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-of"><span class="toc-text">for..of</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-in-和-for-of-对比"><span class="toc-text">for in 和 for of 对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#summary"><span class="toc-text">summary</span></a></li></ol>
     </div>
   </aside>
+
 
 
   
@@ -433,7 +433,7 @@
         <span>&copy;</span>
         <span>2016 ~ 2018</span>
         <span>❤</span>
-        <span>Co1MugX</span>
+        <span>colmugx</span>
     </div>
     <div class="theme">
         <span>
@@ -463,6 +463,8 @@
 
 
 
+
+
 <script src="/blog/script/src/nlvi.js"></script>
 
   <script src="/blog/script/scheme/banderole.js"></script>
@@ -486,6 +488,7 @@
       <div id="local-search-result"></div>
     </div>
   </div>
+
 
 </body>
 </html>

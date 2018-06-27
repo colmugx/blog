@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ColMugX</title>
+  <title>Colmugx</title>
   
-  <subtitle>SHOW YOUR FUNCTION NO BB.</subtitle>
+  <subtitle>我的代码，没有风格</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/blog/"/>
@@ -10,7 +10,7 @@
   <id>https://colmugx.github.io/blog/</id>
   
   <author>
-    <name>Co1MugX</name>
+    <name>colmugx</name>
     
   </author>
   
@@ -478,35 +478,6 @@
   </entry>
   
   <entry>
-    <title>总有一天我会死在骚操作上…</title>
-    <link href="https://colmugx.github.io/blog/2017/10/09/diary-vue-jsx/"/>
-    <id>https://colmugx.github.io/blog/2017/10/09/diary-vue-jsx/</id>
-    <published>2017-10-09T07:22:07.000Z</published>
-    <updated>2017-10-09T07:37:57.498Z</updated>
-    
-    <content type="html"><![CDATA[<p>得考虑去弄个图床，滥用github不太好。</p><p><img src="https://github.com/ColMugX/GitBed/raw/master/diary/vue-render1.png" alt=""></p><p><img src="https://github.com/ColMugX/GitBed/raw/master/diary/vue-render2.png" alt=""></p><p><img src="https://github.com/ColMugX/GitBed/raw/master/diary/vue-render3.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;得考虑去弄个图床，滥用github不太好。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/ColMugX/GitBed/raw/master/diary/vue-render1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https
-      
-    
-    </summary>
-    
-      <category term="毫无意义" scheme="https://colmugx.github.io/blog/categories/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89/"/>
-    
-    
-      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
-    
-      <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
     <title>使用桌面应用写hexo博客是什么体验？</title>
     <link href="https://colmugx.github.io/blog/2017/09/19/what-the-feeling-about-hyper/"/>
     <id>https://colmugx.github.io/blog/2017/09/19/what-the-feeling-about-hyper/</id>
@@ -562,6 +533,35 @@
       <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
       <category term="electron" scheme="https://colmugx.github.io/blog/tags/electron/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript的call，bind，apply</title>
+    <link href="https://colmugx.github.io/blog/2017/08/14/js-call-apply-bind/"/>
+    <id>https://colmugx.github.io/blog/2017/08/14/js-call-apply-bind/</id>
+    <published>2017-08-14T04:26:44.000Z</published>
+    <updated>2018-06-27T01:49:36.554Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p></blockquote><p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/">关于JavaScript的this</a></p><p>还是上次的代码，修改一下</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> test = obj.getName</span><br><span class="line">test()<span class="comment">//undefined.</span></span><br></pre></td></tr></table></figure><p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.getName()<span class="comment">//koala</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>因为有时候并没办法这么自由的随便调用，那如果要搞个变量出来用，怎么做？</p><h2 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h2><blockquote><p><strong>call</strong></p><ul><li>vi. 呼叫；拜访；叫牌</li><li>vt. 呼叫；称呼；召集</li><li>n. 电话；呼叫；要求；访问</li><li>n. (Call)人名；(瑞典、罗)卡尔；(英)考尔<br>以上来自有道翻译</li></ul></blockquote><p>有一手有道翻译就方便了，就是call（叫）它，把要用的方法call（叫）出来。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> cal = obj.getName<span class="comment">//先定义出来</span></span><br><span class="line">cal.call(obj)<span class="comment">//koala   （指向还给他，不动其他把它叫出来</span></span><br></pre></td></tr></table></figure><h2 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h2><blockquote><p><strong>apply</strong></p><ul><li>v.应用；使用；涂；敷</li><li>Web申请；适用；套用<br>以上来自bing词典，感谢微软爸爸</li></ul></blockquote><p>再来一手必应翻译简直就是，不谈了！</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> apy = obj.getName<span class="comment">//这手还是不变</span></span><br><span class="line">apy.apply(obj)<span class="comment">//koala  （可以说不是指向还给他，这不是假装了，而是直接套用</span></span><br></pre></td></tr></table></figure><p>有人要问，那你这手跟<code>call()</code>不是一样的么，为什么要区分开来。这个问题<a href="/2017/08/14/js-call-apply-bind/#call-和-apply-区别">下面再讲</a></p><h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>是不是以为我要用百度翻译了？我偏不！</p><blockquote><p><strong>bind</strong></p><p><strong>n.</strong> 窘境；讨厌的事情；捆绑；植物的藤蔓<br><strong>v.</strong> 捆绑；约束；装订；（使）结合；使关系密切<br>以上来自沪江小d，我学日语就靠它</p></blockquote><p><del>顺便，请以上三家公司尽快给我打钱，谢谢合作。</del></p><p><code>bind()</code>有点土匪的意思，它就是想抢走你老婆借用一晚的意思。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> bid = obj.getName<span class="comment">// [Function: getName]          (这手还是不变</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 接着这样做，把this指向回去，变成一个可以自由操作的变量</span></span><br><span class="line">bid = bid.bind(obj)<span class="comment">// [Function: bound getName]</span></span><br><span class="line"></span><br><span class="line">bid()<span class="comment">// koala   （这样才会运行，因为刚刚只是抢过来了</span></span><br></pre></td></tr></table></figure><h2 id="call-和-apply-区别"><a href="#call-和-apply-区别" class="headerlink" title="call()和#apply()区别"></a>call()和#apply()区别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> cal = obj.getName</span><br><span class="line">cal.call(obj)<span class="comment">//koala</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> apy = obj.getName</span><br><span class="line">apy.apply(obj)<span class="comment">//koala</span></span><br></pre></td></tr></table></figure><p>说是这么说了，可是，他们并不是说就这么改变<code>this</code>方向然后就没什么用处了啊，可以借用<code>call()</code>和<code>apply()</code>传参数的。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName(param1, param2) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">' params: '</span> + param1 + param2</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> cal = obj.getName</span><br><span class="line">cal.call(obj, <span class="number">1</span>, <span class="number">2</span>)<span class="comment">//koala params: 12</span></span><br></pre></td></tr></table></figure><p>那么<code>apply()</code>就有区别了？哎！</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> apy = obj.getName<span class="comment">//这手还是不变</span></span><br><span class="line">apy.apply(obj, [<span class="number">1</span>, <span class="number">2</span>])<span class="comment">//koala params: 12</span></span><br></pre></td></tr></table></figure><p><code>apply</code>后面接参数，只接受数组，<code>call</code>的话按顺序怼进去就行了。就这点区别。</p><p>暂时先这样，以后更深入的使用再深入的理解一下。现在大概就用到这些。</p><p><strong>下一篇，讲Javascript的柯基化！</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;扩展阅读：&lt;a href=&quot;https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/&quot;&gt;关于JavaScript的this&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;还是上次的代码，修改一下&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;panda&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    name: &lt;span class=&quot;string&quot;&gt;&#39;koala&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    getName() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; test = obj.getName&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;test()					&lt;span class=&quot;comment&quot;&gt;//undefined.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;（敲黑板！）复习一下！为什么就&lt;code&gt;undefined&lt;/code&gt;了！原因就是，&lt;code&gt;this&lt;/code&gt;指向不同了。那么直接运行是否可以&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;panda&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    name: &lt;span class=&quot;string&quot;&gt;&#39;koala&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    getName() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj.getName()		&lt;span class=&quot;comment&quot;&gt;//koala&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   

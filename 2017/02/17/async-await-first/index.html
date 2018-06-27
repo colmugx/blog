@@ -4,15 +4,16 @@
   <link rel="stylesheet" href="/blog/style/style.css">
 <script>
   var nlviconfig = {
-    title: "ColMugX",
-    author: "Co1MugX",
+    title: "Colmugx",
+    author: "colmugx",
     baseUrl: "/blog/",
     theme: {
       scheme: "banderole",
       lightbox: true,
       animate: true,
       search: true,
-      friends: false
+      friends: false,
+      pjax: false,
     }
   }
 </script>
@@ -53,7 +54,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="browsermode" content="application">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="ColMugX">
+<meta name="apple-mobile-web-app-title" content="Colmugx">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="msapplication-navbutton-color" content="#666666">
 <meta name= "format-detection" content="telephone=no" />
@@ -63,7 +64,7 @@
   <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
 
 
-  <meta name="subtitle" content="SHOW YOUR FUNCTION NO BB.">
+  <meta name="subtitle" content="我的代码，没有风格">
 
 
   <meta name="description" content="Co1MugX Blog">
@@ -72,7 +73,7 @@
 
   <meta name="keywords" content="JavaScript, ES6, Nlvi" />
 
-  <title> async-await 初尝试 · ColMugX </title>
+  <title> async-await 初尝试 · Colmugx </title>
 </head>
 <body>
   <div class="progress">
@@ -83,7 +84,7 @@
     <div class="tagcloud-mask"></div>  
 <div class="tagcloud" id="tagcloud">
   <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a>
   </div>
 </div>  
   
@@ -94,9 +95,9 @@
   <div class="header-wrapper">
     <div class="logo">
   <div class="logo-inner syuanpi tvIn">
-    <span><a href="/blog/">ColMugX</a></span>
+    <span><a href="/blog/">Colmugx</a></span>
     
-      <span id="subtitle">SHOW YOUR FUNCTION NO BB.</span>
+      <span id="subtitle">我的代码，没有风格</span>
     
   </div>
 </div>
@@ -207,7 +208,7 @@
             </div>
             <div class="mobile-nav-tagcloud">
               <div class="mobile-tagcloud-inner">
-                <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/小作坊/" style="font-size: 14px;">小作坊</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a> <a href="/blog/tags/看片子/" style="font-size: 14px;">看片子</a>
+                <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a>
               </div>
             </div>
           </div>
@@ -233,7 +234,7 @@
       </div>
     </div>
     <h1 class="mobile-header-title">
-      <a href="/">ColMugX</a>
+      <a href="/">Colmugx</a>
     </h1>
     <div class="mobile-header-item"></div>
   </div>
@@ -249,7 +250,7 @@
    is_post 
   ">
     <header class="post-header">
-      <div class="post-time syuanpi fadeInUp back-1">
+      <div class="post-time syuanpi fadeInUpShort back-1">
         <div class="post-time-wrapper">
           <span>2017-02-17</span>
           
@@ -259,7 +260,7 @@
           
           
             
-              <aside class="post-tags syuanpi fadeInUp back-3">
+              <aside class="post-tags syuanpi fadeInUpShort back-3">
               
                 <a href="/blog/tags/JavaScript/">JavaScript</a>
               
@@ -270,13 +271,13 @@
           
         </div>
       </div>
-      <h1 class="post-title syuanpi fadeInUp back-2">
+      <h1 class="post-title syuanpi fadeInUpShort back-2">
         
           async-await 初尝试
         
       </h1>
     </header>
-    <div class="post-content syuanpi fadeInUp back-3">
+    <div class="post-content syuanpi fadeInUpShort back-3">
       
         <blockquote>
 <p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p>
@@ -316,7 +317,7 @@
   <div class="post-copyright">
     <div class="copy-author">
       <span>作者 :</span>
-      <span>Co1MugX</span>
+      <span>colmugx</span>
     </div>
     <div class="copy-url">
       <span>地址 :</span>
@@ -380,16 +381,17 @@
 
 
   
-   
+  
     
   
   <aside class="post-toc">
     <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1 fadeInDown">
+    <div class="toc-inner syuanpi back-1" style="display:none;">
       <li class="title-link"><a href="javascript:;" class="toTop">async-await 初尝试</a></li>
       <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ImoocDownloaderServer-请求样本"><span class="toc-text">ImoocDownloaderServer 请求样本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小谈ES6和ES7"><span class="toc-text">小谈ES6和ES7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浅谈promise-和-async-await"><span class="toc-text">浅谈promise 和 async-await</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么需要P-A-，我用在哪里了"><span class="toc-text">为什么需要P/A+，我用在哪里了</span></a></li></ol>
     </div>
   </aside>
+
 
 
   
@@ -439,7 +441,7 @@
         <span>&copy;</span>
         <span>2016 ~ 2018</span>
         <span>❤</span>
-        <span>Co1MugX</span>
+        <span>colmugx</span>
     </div>
     <div class="theme">
         <span>
@@ -469,6 +471,8 @@
 
 
 
+
+
 <script src="/blog/script/src/nlvi.js"></script>
 
   <script src="/blog/script/scheme/banderole.js"></script>
@@ -492,6 +496,7 @@
       <div id="local-search-result"></div>
     </div>
   </div>
+
 
 </body>
 </html>
