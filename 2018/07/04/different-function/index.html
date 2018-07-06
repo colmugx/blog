@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="stylesheet" href="/blog/style/style.css">
+<script>
+  var nlviconfig = {
+    title: "Colmugx",
+    author: "colmugx",
+    baseUrl: "/blog/",
+    theme: {
+      scheme: "banderole",
+      lightbox: true,
+      animate: true,
+      search: true,
+      friends: false,
+      pjax: false,
+      lazy: true
+    }
+  }
+</script>
+
+
+
+
+    <link rel="stylesheet" href="/blog/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/blog/syuanpi/syuanpi.min.css">
+
+
+
+
+    <link rel="icon" href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98059014-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Colmugx">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+<meta name="keywords" content="nlvi, Nlvi" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
+
+
+  <meta name="subtitle" content="我的代码，没有风格">
+
+
+  <meta name="description" content="Co1MugX Blog">
+
+
+
+  <meta name="keywords" content="JavaScript, Nlvi" />
+
+  <title> 我就写个方法，这么麻烦？ · Colmugx </title>
+</head>
+<body>
+  <div class="progress">
+  <div class="progress-inner"></div>
+</div>
+  
+  
+    <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a>
+  </div>
+</div>  
+  
+
+  <div class="container">
+
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn">
+    <span><a href="/blog/">Colmugx</a></span>
+    
+      <span id="subtitle">我的代码，没有风格</span>
+    
+  </div>
+</div>
+    <nav class="main-nav">
+        
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="search">
+        <span>搜索</span>
+        
+          <span class="menu-item-label">search</span>
+        
+      </a>
+    </li>
+  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/blog/" id="article">
+        <span class="base-name">文章</span>
+        
+          <span class="menu-item-label">article</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/blog/archives" id="archives">
+        <span class="base-name">归档</span>
+        
+          <span class="menu-item-label">archives</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">标签</span>
+        
+          <span class="menu-item-label">tags</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/blog/about" id="about">
+        <span class="base-name">关于</span>
+        
+          <span class="menu-item-label">about</span>
+        
+      </a>
+    </li>  
+  
+  </ul>
+  
+</nav>
+    
+    
+  </div>
+</header>
+<div class="mobile-header">
+  <div class="mobile-header-body">
+    <div class="mobile-header-list">
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/blog/">
+                    <span>文章</span>
+                    
+                        <span class="menu-item-label">article</span>
+                    
+                </a>
+            </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/blog/archives">
+                    <span>归档</span>
+                    
+                        <span class="menu-item-label">archives</span>
+                    
+                </a>
+            </div>
+        
+      
+        
+          <div class="mobile-nav-item inner-cloud">
+            <div class="mobile-nav-tag">
+              <a href="javascript:;" id="mobile-tags">
+                <span>标签</span>
+                
+                    <span class="menu-item-label">tags</span>
+                
+              </a>
+            </div>
+            <div class="mobile-nav-tagcloud">
+              <div class="mobile-tagcloud-inner">
+                <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a> <a href="/blog/tags/扣肉小记/" style="font-size: 14px;">扣肉小记</a>
+              </div>
+            </div>
+          </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/blog/about">
+                    <span>关于</span>
+                    
+                        <span class="menu-item-label">about</span>
+                    
+                </a>
+            </div>
+        
+      
+    </div>
+  </div>
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <span class="header-menu-line"></span>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Colmugx</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+</div>
+    <div class="container-inner">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInUpShort back-1">
+        <div class="post-time-wrapper">
+          <span>2018-07-04</span>
+          
+            
+              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
+            
+          
+          
+            
+              <aside class="post-tags syuanpi fadeInUpShort back-3">
+              
+                <a href="/blog/tags/JavaScript/">JavaScript</a>
+              
+              </aside>
+            
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInUpShort back-2">
+        
+          我就写个方法，这么麻烦？
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInUpShort back-3">
+      
+        <p>最近想到一个问题：为什么JavaScript定义一个函数有那么多种形式，是历史残留还是为了装逼？研究了一下发现还是有区别的。</p>
+<p>JavaScript中定义一个方法主要可以分成两种形式：</p>
+<ul>
+<li>函数声明</li>
+<li>函数表达式</li>
+</ul>
+<a id="more"></a>
+<h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><p>声明体是最普通的，其他语言也相近的一种方式。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<p>不过，毕竟是「函数就是爸爸」的JavaScript！它有一个特性：函数提升。</p>
+<blockquote>
+<p>函数提升：把所有函数提升到当前作用域上，从而做到了可以“未声明先调用”。</p>
+</blockquote>
+<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><p>这可能是目前用的最多的声明方式，因为可以搭配箭头函数假装自己用的是函数式编程。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数版本</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<p>但正是因为这是函数表达式，所以并没有变量提升的能力。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">funcA(<span class="number">1</span>) <span class="comment">// ReferenceError: funcA is not defined</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function"><span class="params">a</span> =&gt;</span> a</span><br></pre></td></tr></table></figure></p>
+<p>燃鹅，这才刚刚开始……</p>
+<h3 id="匿名-amp-具名"><a href="#匿名-amp-具名" class="headerlink" title="匿名 &amp; 具名"></a>匿名 &amp; 具名</h3><p>匿名就是上面那种，具名就是给函数本体再起一个名字。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span> <span class="title">funcName</span>(<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样有什么区别？后面那个名字又不能用！答案还是有区别的。</p>
+<p>首先有一个函数名推断，比如上面这个函数，那么<code>func.name</code>会返回<code>funcName</code>。如果匿名函数的话<code>[fn].name</code>会返回<code>&#39;&#39;</code>。其次这个名字可以在函数内部使用。当然了指代的就是自己了。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span> <span class="title">funcName</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a &lt; <span class="number">0</span> ? b : funcName(a+<span class="number">1</span>-b, a)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func(<span class="number">431</span>, <span class="number">151</span>) <span class="comment">// 281</span></span><br><span class="line">funcName(<span class="number">431</span>, <span class="number">151</span>) <span class="comment">// ReferenceError: funcName is not defined</span></span><br><span class="line"><span class="built_in">console</span>.log(func.name) <span class="comment">// funcName</span></span><br><span class="line"><span class="keyword">typeof</span> funcName === <span class="string">'function'</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure></p>
+<p>所以这种方式最适合递归函数了。</p>
+<h3 id="函数表达式依然是个常-变量"><a href="#函数表达式依然是个常-变量" class="headerlink" title="函数表达式依然是个常/变量"></a>函数表达式依然是个常/变量</h3><p>把它当做一个“方程”来看吧，关键词已经决定了这个“量”会以什么形式存在，比如<code>var</code>和<code>let</code>是变量，<code>const</code>是常量，并且<code>let</code>还有作用域范围。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> funcA = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'A'</span>)</span><br><span class="line">funcA() <span class="comment">// A</span></span><br><span class="line">funcA = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'AA'</span>) <span class="comment">// TypeError: Assignment to constant variable.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> funcB = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'B'</span>)</span><br><span class="line">funcB() <span class="comment">// B</span></span><br><span class="line">funcB = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'BB'</span>)</span><br><span class="line">funcB() <span class="comment">// BB</span></span><br></pre></td></tr></table></figure></p>
+<p>题外话：那么就有个老生常谈的问题了，函数表达式按道理来讲是“灵活的”，那么下面这个函数会是什么结果？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funcB</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'B'</span>)</span><br><span class="line">&#125;</span><br><span class="line">funcB() <span class="comment">// BB</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funcB</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'BB'</span>)</span><br><span class="line">&#125;</span><br><span class="line">funcB() <span class="comment">// BB</span></span><br></pre></td></tr></table></figure></p>
+<p>为什么？还是那句话：JavaScript世界中，函数是你爹！</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>又到了大家最最喜欢的箭头函数环节，现在还有谁是不愿意写箭头函数的？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="params">a</span> =&gt;</span> b =&gt; a + b</span><br><span class="line">func(<span class="number">1</span>)(<span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<p>在这篇文章：<a href="/blog/2017/03/03/js-this/">《关于JavaScript的this》</a>已经被安排的明明白白了。</p>
+<p>实际上现在看这篇文章也有点问题，年轻的时候牛批吹多了。总结箭头函数两个特点就是：</p>
+<ul>
+<li>不会创造上下文（自身无this）</li>
+<li>必然是个匿名函数</li>
+<li>没有 <code>arguments</code></li>
+</ul>
+<p>不是两个吗？怎么变成三个了？此时你可能会回去检查刚刚那句话，然后我现在悄悄告诉你，（第三点是送的）。</p>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><h3 id="new-Function"><a href="#new-Function" class="headerlink" title="new Function"></a>new Function</h3><p>这是一个不知道哪里可以用得上但是就是可以用的方式：通过对象创建<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'return a + b'</span>)</span><br><span class="line">func(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="函数参数初始值"><a href="#函数参数初始值" class="headerlink" title="函数参数初始值"></a>函数参数初始值</h3><p>可能有一定需求，但可能没有<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a = <span class="number">1</span>, b = <span class="number">2</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func() <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<p>可能我们更常用的有这些<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> funcA = <span class="function">(<span class="params">obj = &#123;&#125;</span>) =&gt;</span> obj</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> funcB = <span class="function">(<span class="params">arr = []</span>) =&gt;</span> arr</span><br></pre></td></tr></table></figure></p>
+<p>但JavaScript毕竟是「函数是第一公民」的语言，有机会会写到很多高阶函数。所以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function">(<span class="params">fn = (</span>) =&gt;</span> <span class="string">'💉💧🐮🍺'</span>) =&gt; fn.call(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure></p>
+<p>凭什么函数作为参数就不能有初始值呢？当然是可以的呀！</p>
+
+      
+    
+    </div>
+    
+      
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>colmugx</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/blog/2018/07/04/different-function/">https://colmugx.github.io/blog/2018/07/04/different-function/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/blog">https://colmugx.github.io/blog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+    
+      <a href="/blog/2018/03/16/vue-watcher/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          vue watch存在永动吗？<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
+  </nav>
+
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </div>
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1" style="display:none;">
+      <li class="title-link"><a href="javascript:;" class="toTop">我就写个方法，这么麻烦？</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数声明"><span class="toc-text">函数声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数表达式"><span class="toc-text">函数表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#匿名-amp-具名"><span class="toc-text">匿名 &amp; 具名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式依然是个常-变量"><span class="toc-text">函数表达式依然是个常/变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#箭头函数"><span class="toc-text">箭头函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other"><span class="toc-text">Other</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Function"><span class="toc-text">new Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数参数初始值"><span class="toc-text">函数参数初始值</span></a></li></ol></li></ol>
+    </div>
+  </aside>
+
+
+
+  
+
+
+        </div>
+      </main>
+
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+            <a href="https://www.zhihu.com/people/colmugx" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+        
+        
+        
+    
+        
+            <a href="https://github.com/ColMugX" class="iconfont icon-github" title="github"></a>
+        
+        
+        
+        
+        
+        
+        
+    
+</div>
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2016 ~ 2018</span>
+        <span>❤</span>
+        <span>colmugx</span>
+    </div>
+    <div class="theme">
+        <span>
+            动力来源于
+            <a href="http://hexo.io/" target="_blank">Hexo </a>
+        </span>
+        <span>
+            主题
+            <a href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    
+</div>
+
+    </div>
+  </div>
+</footer>
+    </div>
+  </div>
+  <script src="/blog/script/lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+  <script src="/blog/script/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+
+
+  <script src="/blog/script/lib/lazyload/lazyload.min.js"></script>
+
+
+
+
+
+
+<script src="/blog/script/src/nlvi.js"></script>
+
+  <script src="/blog/script/scheme/banderole.js"></script>
+
+<script src="/blog/script/bootstarp.js"></script>
+
+
+<div class="backtop syuanpi melt toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+
+  <div class="search" id="search">
+    <div class="mask" id="mask"></div>
+    <div class="search-wrapper syuanpi">
+      <h2 id="search-header" class="syuanpi">搜索一下？</h2>
+      <div class="input">
+        <input type="text" id="local-search-input" results="0" name="">
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+
+
+</body>
+</html>

@@ -218,7 +218,7 @@ template {
   background-color: rgba(57,197,187,0.2);
 }
 body {
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   background-color: #fff;
@@ -974,11 +974,11 @@ h6 {
 }
 .post .post-content {
   color: #49545f;
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   padding-bottom: 8px;
 }
 .post .post-content h1 {
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   font-weight: inherit;
   margin: 16px 0;
 }
@@ -986,7 +986,7 @@ h6 {
   content: '∮ ';
 }
 .post .post-content h2 {
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   font-weight: inherit;
   margin: 16px 0;
 }
@@ -994,7 +994,7 @@ h6 {
   content: '∮ ';
 }
 .post .post-content h3 {
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   font-weight: inherit;
   margin: 16px 0;
 }
@@ -1002,7 +1002,7 @@ h6 {
   content: '∮ ';
 }
 .post .post-content h4 {
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   font-weight: inherit;
   margin: 16px 0;
 }
@@ -1010,7 +1010,7 @@ h6 {
   content: '∮ ';
 }
 .post .post-content h5 {
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   font-weight: inherit;
   margin: 16px 0;
 }
@@ -1018,7 +1018,7 @@ h6 {
   content: '∮ ';
 }
 .post .post-content h6 {
-  font-family: 'Optima' , 'PingFang SC' , 'Roboto' , 'Noto SansCJK' , 'Helvetica Neue' , 'Helvetica' , "Microsoft YaHei" , "YaHei-Consolas-Hybrid" , sans-serif;
+  font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   font-weight: inherit;
   margin: 16px 0;
 }
