@@ -3,6 +3,72 @@
   
     
     <entry>
+      <title><![CDATA[记在NPM抢空包名的经历]]></title>
+      <url>/blog/2018/07/12/kill-parentless-on-npm/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>强烈谴责某些大厂，前端或者说 JavaScript 是一个极其依赖社区环境的语言，你们在招人之前能不能先调查一下准新人有没有在社区为非作歹？</p>
+</blockquote>
+<p>年前想搞定<code>React</code>的时候想了个骚操作：尝试用<code>React</code>的思路去做<code>Vue</code>的事情。又诞生了「Vue生态统一可以聚合」的骚想法，开始产生做<code>Ahri</code>的念头。想着那得搞个 npm 包吧，孤儿上线了。</p>
+<p>为了保护大厂的名声我就不说这个是鹅厂CDC的前端工程师了。翻过他的Twitter，语言极其幼稚。嘛，在 npm 拿《英雄联盟》英雄名字抢注包名的做法都很弱智了，还“大义凛然”的在描述里写着：<code>League of Legends hero.</code></p>
+<p>关于第一次遇到它的时候，我就想算了，重新找合适的名字吧，但后来因为其他原因就搁置了。现在重新回坑，依然遇到这个问题，这次我不忍了，我打算找 npm 肛他！</p>
+<a id="more"></a>
+<h2 id="寻找入口"><a href="#寻找入口" class="headerlink" title="寻找入口"></a>寻找入口</h2><p>首先看了<code>profile</code>页，发现没有举报入口。（从这里进了Twitter，让人感觉这是一个为了装逼而活着的人。</p>
+<p>看看 npm 本身页面有没有什么入口，比如“联系我们”之类的邮箱总有吧，最后在最下面找到了<code>Reporting Abuse</code>。</p>
+<p>不得不说 npm 连“因为名字打起来”的可能都想到了，那“因为孤儿操作”应该也会列入其中吧，果不其然。在骚扰举报一栏找到了控空包的情况：如果有用户注册无用空包，或者利用包进行乱七八糟的活动，可能有两种措施：ban 了这个用户；清除这些东西。</p>
+<p>我一看到可以 ban 了他我就可兴奋了，于是，发邮件走起。</p>
+<h2 id="采取行动"><a href="#采取行动" class="headerlink" title="采取行动"></a>采取行动</h2><p>操起我400分的4级水平英语，就开始写。</p>
+<blockquote>
+<p>hi,<br>here a profile page: xxxxxx.</p>
+<p>this account keep a lot of empty packages which name as a role name in a game, it cause difficulty for me.</p>
+<p>I NEED HELP! THANK YOU!</p>
+</blockquote>
+<p>过了一会收到回信：</p>
+<blockquote>
+<p>Our support hours are Monday through Friday, 9:00AM - 6:00PM PST, excluding US holidays.</p>
+<p>Your request is being reviewed by our support staff and we’ll be responding soon.</p>
+<p>To add additional comments, reply to this email.</p>
+</blockquote>
+<p>噢，没在工作时间还行。过了几秒又收到一封邮件：</p>
+<blockquote>
+<p>Hey there,</p>
+<p>Thank you for reaching out. We hope you’re having a great week thus far, and are looking forward to responding to your request.</p>
+<p>The npm support staff will be off on Wednesday, July 4th in observance of Independence Day. Due to this, you may experience some delay in expected reply times.</p>
+<p>Thanks for your patience.</p>
+</blockquote>
+<p>狗屎还带放假的？美国员工真的舒服啊，不加班，节假日放满。像我们这种997节假日还放不满的简直受到了6把无尽的暴击。</p>
+<p>等了几天发现不对，没理我，再按照第一封发了一次，这次过了半天多才回。这次差点就怕我气到了，大概的意思就是你上次的 ticket 还没解决，如果你没问题了我们就关了。。。美国人上班都这么摸的？</p>
+<p>又过了半天收到一封邮件，这次是技术客服（邮件是有人名的大佬）发来的：</p>
+<blockquote>
+<p>Thanks for reaching out.</p>
+<p>I was not able to find an account associated with (我发信的邮箱). Was there a specific one of these user’s package names you are interested in for a project?</p>
+<p>If so, we may assist you with a transfer request or granting access to that package, depending on the package and contents.</p>
+</blockquote>
+<p>有点着急，看了第一句之后，下面没仔细看，就有点想搞他，我就回信了。信的内容大概是这样：谢谢你的回复。这是我的项目名字（发了<code>Ahri</code>的GitHub Repo），这是我的 npm 账号（意识到发信的账号不对）。我对<code>Ahri</code>有兴趣，但他是个空的而且被占用了，我没办法使用，对吧？还有这个 B 恶意占用了大量的空包（跟上孤儿账号），他是不是同时违反了规则，是不是应该有所动作？</p>
+<p>第二天（有时差），收到了回信，说包名已经转移到我的账号上：</p>
+<blockquote>
+<p>Thanks for getting back to me with that information.</p>
+<p>It’s all yours now, but you won’t be able to re-use any version numbers used by the previous author. In fact, I’d suggest publishing your first update as a major release, i.e., v1.0.0. Please publish an update to the package as soon as possible with your code.</p>
+</blockquote>
+<p>我上了我的 npm 看了一眼，惊了..这就拿到了..</p>
+<p>但并没有解放其他的空包和 <strong>ban 了他</strong>，这点我有点失望。总之，要到想要的包，这才是想要的结果。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 曲苑杂坛 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> colmugx </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[我就写个方法，这么麻烦？]]></title>
       <url>/blog/2018/07/04/different-function/</url>
       <content type="html"><![CDATA[<p>最近想到一个问题：为什么JavaScript定义一个函数有那么多种形式，是历史残留还是为了装逼？研究了一下发现还是有区别的。</p>
@@ -18,7 +84,7 @@
 <p>函数提升：把所有函数提升到当前作用域上，从而做到了可以“未声明先调用”。</p>
 </blockquote>
 <h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><p>这可能是目前用的最多的声明方式，因为可以搭配箭头函数假装自己用的是函数式编程。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数版本</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
-<p>但正是因为这是函数表达式，所以并没有变量提升的能力。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">funcA(<span class="number">1</span>) <span class="comment">// ReferenceError: funcA is not defined</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function"><span class="params">a</span> =&gt;</span> a</span><br></pre></td></tr></table></figure></p>
+<p>但变量受作用域影响，所以<code>const</code>和<code>let</code>并没有变量提升的能力。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">funcA(<span class="number">1</span>) <span class="comment">// ReferenceError: funcA is not defined</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function"><span class="params">a</span> =&gt;</span> a</span><br></pre></td></tr></table></figure></p>
 <p>燃鹅，这才刚刚开始……</p>
 <h3 id="匿名-amp-具名"><a href="#匿名-amp-具名" class="headerlink" title="匿名 &amp; 具名"></a>匿名 &amp; 具名</h3><p>匿名就是上面那种，具名就是给函数本体再起一个名字。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span> <span class="title">funcName</span>(<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这样有什么区别？后面那个名字又不能用！答案还是有区别的。</p>
@@ -450,7 +516,7 @@
         
         <tags>
             
-            <tag> 扣肉小记 </tag>
+            <tag> colmugx </tag>
             
         </tags>
         
@@ -991,7 +1057,7 @@
 <li>入口必须是<code>.ts</code></li>
 </ul>
 <p>这点说起来很坑，TS的话，只要有<code>allowjs</code>就可以调用JS文件，运行是没问题的。但是反过来就不行了，毕竟超类能认，但JS根本不知道TS是个什么鬼，所以无法编译</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Module build failed: Error: Could not find file: <span class="string">'...*.ts'</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">Module build failed: Error: Could not find file: <span class="string">'...*.vue'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Module build failed: Error: Could not find file: <span class="string">'...*.ts'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">Module build failed: Error: Could not find file: <span class="string">'...*.vue'</span></span><br></pre></td></tr></table></figure>
 <p>所以必须是TS入口</p>
 <ul>
 <li>建议关于<code>script</code>部分分开写。</li>
@@ -1018,7 +1084,7 @@
         
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
             <tag> electron </tag>
             
