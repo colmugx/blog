@@ -76,9 +76,9 @@
         $('.post-content').each(function() {
           $(this).find('img').each(function() {
             $(this).parent('p').css('text-align', 'center');
-            var img = "<img src='" + this.src;
+            var imgHead = "<img src='" + this.src;
             if (theme.lazy) {
-              img = "<img class='lazy' data-src='" + this.src;
+              imgHead = "<img class='lazy' data-src='" + this.src;
             }
             $(this).replaceWith("<a href='" + this.src + "' data-title='" + this.alt + "' data-lightbox='group'>" + imgHead + "' alt='" + this.alt + "'></a>");
           });
@@ -106,6 +106,7 @@
 
   nlvi.prototype.universal = function() {
     var tool = this.tools;
+    var expect = this.expect;
     var config = this.config;
     var utils = {
       mobileHeader: function() {
@@ -160,7 +161,6 @@
           }
         });
       },
-
       titleStatus: function() {
         var title = document.title;
         var tme;
@@ -178,7 +178,18 @@
           }
         });
       },
-
+      showReward: function () {
+        $('#reward-btn').click(function () {
+          if (expect('#reward-wrapper').isDisplay()) {
+            $('#reward-wrapper').css('display', 'flex');
+            tool('animationEnd')('#reward-wrapper', 'clarity');
+          } else {
+            tool('animationEnd')('#reward-wrapper', 'melt', function() {
+              $(this).hide();
+            })
+          }
+        });
+      },
       search: function() {
         var $search = $('#search');
         var $mask = $('#mask');
@@ -212,7 +223,6 @@
             $('.search').hide();
           }
         );
-
         $.ajax({
           url: config.baseUrl + 'search.xml',
           dataType: 'xml',
@@ -335,14 +345,19 @@
     }
     this.boot();
     utils.titleStatus();
-    utils.mobileHeader();
     utils.showToc();
     utils.back2top();
     utils.tagcloud();
     utils.switchToc();
+    theme.reward && utils.showReward();
     theme.pjax && this.pjax();
     theme.search && utils.search();
-    theme.lazy && $('img.lazy').lazylaod();
+    theme.lazy && $('img.lazy').lazyload();
+
+    $(document).ready(function() {
+      $('.container').show();
+      utils.mobileHeader();
+    });
   }
 
   window.nlvi = nlvi;
