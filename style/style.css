@@ -261,53 +261,56 @@ h6 {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-mail:before {
-  content: "\e694";
+.icon-people:before {
+  content: "\e651";
 }
-.icon-alipay:before {
-  content: "\e695";
-}
-.icon-facebook:before {
-  content: "\e696";
-}
-.icon-linkedin:before {
-  content: "\e697";
-}
-.icon-ins:before {
-  content: "\e698";
-}
-.icon-zhihu:before {
-  content: "\e69a";
-}
-.icon-twitter:before {
-  content: "\e69b";
-}
-.icon-weibo:before {
-  content: "\e69e";
-}
-.icon-moments:before {
-  content: "\e6a0";
-}
-.icon-right:after {
+.icon-enter:before {
   content: "\e78b";
 }
 .icon-up:before {
   content: "\e7a8";
 }
-.icon-left:before {
+.icon-back:before {
   content: "\e833";
 }
-.icon-github:before {
-  content: "\e6ed";
-}
-.icon-more:before {
+.icon-down:before {
   content: "\e652";
 }
-.icon-visit:before {
+.icon-yanjing:before {
   content: "\e637";
 }
-.icon-people:before {
-  content: "\e651";
+.icon-social-facebook:before {
+  content: "\e608";
+}
+.icon-social-github:before {
+  content: "\e60a";
+}
+.icon-social-linkedin:before {
+  content: "\e60c";
+}
+.icon-social-instagram:before {
+  content: "\e60d";
+}
+.icon-social-slack:before {
+  content: "\e613";
+}
+.icon-social-twitter:before {
+  content: "\e616";
+}
+.icon-social-weibo:before {
+  content: "\e621";
+}
+.icon-social-douban:before {
+  content: "\e623";
+}
+.icon-youxiang:before {
+  content: "\e694";
+}
+.icon-zhifubao:before {
+  content: "\e695";
+}
+.icon-zhihu:before {
+  content: "\e69a";
 }
 .highlight {
   position: relative;
@@ -670,6 +673,26 @@ h6 {
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
 }
+.friends {
+  margin-top: 40px;
+  color: #49545f;
+  font-weight: 300;
+}
+.friends .friends-inner {
+  display: flex;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.friends .friends-inner a {
+  text-decoration: none;
+  color: #39c5bb;
+}
+.friends .friends-inner a:before {
+  content: '@';
+}
 .about {
   color: #49545f;
   font-weight: 300;
@@ -855,26 +878,29 @@ h6 {
   color: inherit;
   font-size: 26px;
 }
-.footer .left .icon-github:hover {
+.footer .left .icon-social-github:hover {
   color: #24292e;
 }
-.footer .left .icon-weibo:hover {
+.footer .left .icon-social-weibo:hover {
   color: #e6162d;
 }
-.footer .left .icon-twitter:hover {
+.footer .left .icon-social-twitter:hover {
   color: #1ab2e8;
+}
+.footer .left .icon-social-linkedin:hover {
+  color: #5290bc;
+}
+.footer .left .icon-social-facebook:hover {
+  color: #4e69a2;
+}
+.footer .left .icon-social-instagram:hover {
+  color: #d10869;
+}
+.footer .left .icon-social-douban:hover {
+  color: #0cb527;
 }
 .footer .left .icon-zhihu:hover {
   color: #0767c8;
-}
-.footer .left .icon-linkedin:hover {
-  color: #5290bc;
-}
-.footer .left .icon-facebook:hover {
-  color: #4e69a2;
-}
-.footer .left .icon-ins:hover {
-  color: #d10869;
 }
 .footer .right {
   flex: 2;
@@ -1148,9 +1174,6 @@ h6 {
   border-left: 1px solid #eae7e7;
   padding: 4px 8px;
 }
-.archive .archive-list .archive-post:hover:before {
-  right: 0;
-}
 .archive .archive-list .archive-post:hover:after {
   opacity: 1;
 }
@@ -1159,20 +1182,6 @@ h6 {
 }
 .archive .archive-list .archive-post:hover .archive-post-link {
   color: #377d78;
-}
-.archive .archive-list .archive-post:before {
-  content: '';
-  background-color: rgba(156,226,221,0.3);
-  border-radius: 0 6px 6px 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  z-index: -1;
 }
 .archive .archive-list .archive-post:after {
   content: '';

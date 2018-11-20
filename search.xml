@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[一位赌狗前端的自我修养]]></title>
+      <url>/blog/2018/11/19/gamble-fn/</url>
+      <content type="html"><![CDATA[<p>这两个月工作巨多，直到今天才有时间写点骚东西。</p>
+<p>可是要写点什么比较好呢？这时候看到了隔壁桌面上放着一张福彩，我脑子里有画面了。（所以这位赌狗不是我，我不买彩票）</p>
+<p>为了方便以后支持更多的彩票，直接搞个类</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Gamble &#123;</span><br><span class="line">    <span class="keyword">static</span> dualColor(red: <span class="built_in">number</span> = <span class="number">6</span>, blue: <span class="built_in">number</span> = <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> reds: [<span class="built_in">number</span>, <span class="built_in">number</span>] = [<span class="number">1</span>, <span class="number">33</span>];</span><br><span class="line">        <span class="keyword">const</span> blues: [<span class="built_in">number</span>, <span class="built_in">number</span>] = [<span class="number">1</span>, <span class="number">16</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> [<span class="keyword">this</span>.randomVal(reds, red), <span class="keyword">this</span>.randomVal(blues, blue)];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> randomVal(</span><br><span class="line">        fromto: <span class="built_in">number</span>[],</span><br><span class="line">        total: <span class="built_in">number</span>,</span><br><span class="line">        temp: <span class="built_in">number</span>[] = [],</span><br><span class="line">    ): <span class="built_in">number</span>[] &#123;</span><br><span class="line">        <span class="keyword">const</span> [head, ...body] = (!temp.length</span><br><span class="line">            ? [...Array(fromto[<span class="number">1</span>]).keys()]</span><br><span class="line">                  .map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>)</span><br><span class="line">                  .splice(fromto[<span class="number">0</span>] - <span class="number">1</span>)</span><br><span class="line">            : fromto</span><br><span class="line">        ).sort(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">Math</span>.random() - <span class="number">0.5</span>);</span><br><span class="line">        <span class="keyword">return</span> !total</span><br><span class="line">            ? temp</span><br><span class="line">            : <span class="keyword">this</span>.randomVal(body, total - <span class="number">1</span>, temp.concat(head));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 曲苑杂坛 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> TypeScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[记在NPM抢空包名的经历]]></title>
       <url>/blog/2018/07/12/kill-parentless-on-npm/</url>
       <content type="html"><![CDATA[<blockquote>
