@@ -8,10 +8,10 @@
     author: "colmugx",
     baseUrl: "/blog/",
     theme: {
-      scheme: "banderole",
+      scheme: "balance",
       lightbox: true,
       animate: true,
-      search: true,
+      search: false,
       friends: true,
       reward: false,
       pjax: false,
@@ -85,13 +85,6 @@
 </div>
 
   
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
-  </div>
-</div>
-  
 
   <div class="container" style="display:none;">
 
@@ -108,15 +101,6 @@
     <nav class="main-nav">
   
   <ul class="main-nav-list syuanpi tvIn">
-  
-    <li class="menu-item">
-      <a href="javascript:;" id="search">
-        <span>搜索</span>
-        
-          <span class="menu-item-label">search</span>
-        
-      </a>
-    </li>
   
   
     
@@ -147,18 +131,6 @@
       
     
     <li class="menu-item">
-      <a href="javascript:;" id="tags">
-        <span class="base-name">标签</span>
-        
-          <span class="menu-item-label">tags</span>
-        
-      </a>
-    </li>
-  
-    
-      
-    
-    <li class="menu-item">
       <a href="/blog/about" id="about">
         <span class="base-name">关于</span>
         
@@ -172,6 +144,25 @@
 </nav>
 
     
+    
+      <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
+  </div>
+</div>
+
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1" style="display:none;">
+      <li class="title-link"><a href="javascript:;" class="toTop">来搞一手关于Javascript对象继承</a></li>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先看一下关于typescript的继承"><span class="toc-text">先看一下关于typescript的继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#该研究JavaScript的继承了"><span class="toc-text">该研究JavaScript的继承了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于JavaScript的其他继承"><span class="toc-text">关于JavaScript的其他继承</span></a></li></ol>
+    </div>
+  </aside>
+
+
+  
     
   </div>
 </header>
@@ -199,24 +190,6 @@
                     
                 </a>
             </div>
-        
-      
-        
-          <div class="mobile-nav-item inner-cloud">
-            <div class="mobile-nav-tag">
-              <a href="javascript:;" id="mobile-tags">
-                <span>标签</span>
-                
-                    <span class="menu-item-label">tags</span>
-                
-              </a>
-            </div>
-            <div class="mobile-nav-tagcloud">
-              <div class="mobile-tagcloud-inner">
-                <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
-              </div>
-            </div>
-          </div>
         
       
         
@@ -380,19 +353,6 @@
 
   
   
-    
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1" style="display:none;">
-      <li class="title-link"><a href="javascript:;" class="toTop">来搞一手关于Javascript对象继承</a></li>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先看一下关于typescript的继承"><span class="toc-text">先看一下关于typescript的继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#该研究JavaScript的继承了"><span class="toc-text">该研究JavaScript的继承了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于JavaScript的其他继承"><span class="toc-text">关于JavaScript的其他继承</span></a></li></ol>
-    </div>
-  </aside>
-
-
-
-  
 
 
         </div>
@@ -441,7 +401,7 @@
       <div class="copyright">
     <div class="info">
         <span>&copy;</span>
-        <span>2016 ~ 2018</span>
+        <span>2016 ~ 2019</span>
         <span>❤</span>
         <span>colmugx</span>
     </div>
@@ -478,10 +438,10 @@
 
 
 
+  <script src="/blog/script/scheme/balance.js"></script>
 
-<script src="/blog/script/src/nlvi.js"></script>
 
-  <script src="/blog/script/scheme/banderole.js"></script>
+
 
 <script src="/blog/script/bootstarp.js"></script>
 
@@ -491,17 +451,6 @@
     <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
 </div>
 
-
-  <div class="search" id="search">
-    <div class="mask" id="mask"></div>
-    <div class="search-wrapper syuanpi">
-      <h2 id="search-header" class="syuanpi">搜索一下？</h2>
-      <div class="input">
-        <input type="text" id="local-search-input" results="0" name="">
-      </div>
-      <div id="local-search-result"></div>
-    </div>
-  </div>
 
 
 </body>

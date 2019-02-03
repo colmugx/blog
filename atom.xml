@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/blog/"/>
-  <updated>2018-11-20T07:14:35.081Z</updated>
+  <updated>2019-02-03T10:54:56.914Z</updated>
   <id>https://colmugx.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>这是一个失败者的总结</title>
+    <link href="https://colmugx.github.io/blog/2019/01/03/my-2018/"/>
+    <id>https://colmugx.github.io/blog/2019/01/03/my-2018/</id>
+    <published>2019-01-03T09:43:06.000Z</published>
+    <updated>2019-02-03T10:54:56.914Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这个年终总结的时间是错误的，真正完成的那天远晚于当天。</p></blockquote><p>我本来还是跟去年一样已经不想写了，但坐着也无事，总结一下今年的事情。</p><p>这篇文章诞生于支离破碎的主题中，因为博客主题正在改造，很长时间没更新也是因为改动太大完全收拾不开..</p><h2 id="一事无成"><a href="#一事无成" class="headerlink" title="一事无成"></a>一事无成</h2><a id="more"></a><p>今年打算完成的内容可以说没有一件完成了：<code>TFD(The Fking Design)</code>，和以此为基础的<code>Nlvi-禅</code>、<code>syuanpi</code>、<code>Sona</code>。以及胡乱开坑的双兔<code>Bunny</code>、<code>Rabbit</code>。还有两个移动应用…… <code>Rabbit</code>可以说已经在公司偷偷用上了。</p><p><code>TFD</code> 还是有出的，按照规范出一个<code>Sketch</code>，只不过设计这东西实在太费时间了，可以想象一下，你7点打开<code>Sketch</code>，开一个新组件，调整两条线条，感觉也就过了半小时，抬头，12点了…还有大量内容停留在脑子里没实现，这东西还是要尽快，毕竟如果你没天天去回想的话是会忘记的，比如<code>syuanpi</code>的新效果…</p><p>前段时间把<code>syuanpi.css</code>的主页改成新风格，调整了时间栅格和一些过渡不自然，但是很多想法并没有实现。纠结于<code>WAAPI</code>的 JS 版本更是开了个头完全没实现…估计弃坑，正在尝试<code>React</code>版本的场景动画。</p><p>新的<code>Nlvi</code>在写了..还是会改布局改风格，逻辑代码部分也会改，现用的搜索和标签云会改掉，归档页打算用瀑布流，场景动画暂时不会去想吧，毕竟之前尝试过结合<code>pjax</code>的场景动画，拉闸了…</p><p>主要还是换了个新环境，还以为能跟以前一样浪，实际精力真实跟不上，白天跟孤儿斗智斗勇晚上真的抬不开眼了，连 Switch 都不是很愿意拿。</p><p>还是想吐槽自己，今年 GitHub 格子实在太空了…</p><h2 id="讲点有意思的"><a href="#讲点有意思的" class="headerlink" title="讲点有意思的"></a>讲点有意思的</h2><p>还是有高兴事的</p><p>今年换了新环境，所以现在半个战场转移到这边了，用爱发电（不算KPI）做了几个工具：CLI 和 VSC 插件都有，甚至改了一个超小的状态管理库。而且原本用的是<code>vue</code>技术栈，今年刚好一个机会提出转<code>react</code>，然后整个团队在年底全部转完了。这我还是挺高兴的，<code>react</code>真是一个可以依照思路从头写到尾的框架，<del>而且 vim 也能很好找到支持和补全了（装b更顺利了）。</del></p><p>买了个 kindle，看完了很多书很多小说，可以说充实了通勤时间，<del>多次公交坐过站，</del>看非技术和小说还是很上瘾的，但是看技术类真的很容易犯困…所以今年应该调整书籍策略，不要在路上看过于硬核的书，容易犯困又没成效。后来为了支持老罗买了一个坚果Pro2S，在此劝诫能看到这篇文章的人，别买垃圾屏幕的手机，我现在回想起我眼睛废掉的原因大概率是用锤子低背光在车上看东西…这手机挺好的，就是背光不要调低，屏闪真的很伤眼。飞行员视力从今年开始已经不存在了…</p><p>说是这么说，在车上还是看完了《Haskell 趣学指南》，看的时候比较兴奋，下车到电脑边实践半小时，断断续续看完。Haskell 确实对今年写代码的思路提升了很多，可以说入门就得到了效果，但还是要多玩，很多核心的思想还没掌握到。</p><p>很重要的一点，终于意识到<code>TypeScript</code>的优势了，其实回想起一年前或者两年前的自己，根本不能算上一个程序员，「胶水工程师」都算不上。<code>TS0.5</code>时代就接触到TS，到今天才认识，惭愧不惭愧。</p><h2 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h2><ul><li><p>好好活着，特别现实的想法</p></li><li><p>少跟孤儿争论一些有的没的</p></li><li><p>少嫌队友菜，各种意义上的队友…或许太硬核的技术是不必要的</p></li><li><p>精准打击，不要再做机器学习了！</p></li><li><p>调整看书策略，总是犯困也不是个事</p></li><li><p><code>TFD</code>好好做完，还有几个坑依次填完</p></li><li><p>一些操作还是抽象出工具吧，不要再拿手速自己骗自己了…</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这个年终总结的时间是错误的，真正完成的那天远晚于当天。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我本来还是跟去年一样已经不想写了，但坐着也无事，总结一下今年的事情。&lt;/p&gt;
+&lt;p&gt;这篇文章诞生于支离破碎的主题中，因为博客主题正在改造，很长时间没更新也是因为改动太大完全收拾不开..&lt;/p&gt;
+&lt;h2 id=&quot;一事无成&quot;&gt;&lt;a href=&quot;#一事无成&quot; class=&quot;headerlink&quot; title=&quot;一事无成&quot;&gt;&lt;/a&gt;一事无成&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="colmugx" scheme="https://colmugx.github.io/blog/tags/colmugx/"/>
+    
+  </entry>
   
   <entry>
     <title>一位赌狗前端的自我修养</title>
@@ -525,34 +550,6 @@
     </summary>
     
       <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
-    
-    
-      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>引用等于指针吗？</title>
-    <link href="https://colmugx.github.io/blog/2017/10/17/reference-equal-pointer/"/>
-    <id>https://colmugx.github.io/blog/2017/10/17/reference-equal-pointer/</id>
-    <published>2017-10-17T07:33:38.000Z</published>
-    <updated>2017-10-17T14:22:18.853Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>一篇思考文，关于JS的reference和Go的指针。（臆想型论文？）</p></blockquote><p>最近投入大量时间接触<code>Golang</code>，了解“指针”的时候，想起了以前学习C语言时对“指针”的疑问：指针是什么。</p><p>以前还小不理解指针和野指针，只知道野指针会出现内存溢出或者值不正确的情况。而且网上大多讲指针的文章看起来都很难。就像现在的知乎：一句话能说清楚的东西恨不得从它的诞生还是写起。就连LOL赛评也是这副P样。</p><p>以至于我后面对C语言没好感，对C++厌恶，对有“指针”的语言直接没兴趣。</p><p>在看到Go的指针的时候，我已经想放弃了。但是想回来，毕竟上一次接触指针已经6年了，也许现在看就能理解出什么呢。（过程中接触的OC根本不能算经验，因为当时完全就是靠抄靠背来写iOS应用，最后还是嫌弃OC麻烦进阶无法理解去学习了swift）<br><a id="more"></a></p><h2 id="Reference-Pointer"><a href="#Reference-Pointer" class="headerlink" title="Reference == Pointer?"></a>Reference == Pointer?</h2><p>以前看到什么内存地址啊，指向啊就已经乱了，满脑子都在想内存里面是什么样的，内存地址，寄存器又是什么东西。跟着官方教程走了一遍，了解到<strong>指针就是通过一个变量去指向一个有的变量或者说是对象，从而产生一种绑定。通过修改指针变量也可以达到修改本体的效果</strong>。</p><p>这让我想到JS，因为每天都在操作对象，知道：如果你要建立一个新的变量，比如<code>a = 1</code>，我可以通过<code>var b = a</code>得到一个新的变量。但是如果是对象则不是。如果是<code>a = {};  var b = a</code>的话，b只是单纯指向了a，并没有复制a</p><p>所以我立刻去搜索<em>关于JavaScript的指针</em>。得到这么一个结果 <a href="https://www.baidu.com/link?url=2Xxo3-ptdvabLARr0p-DcoBbeysd2lvRxH-jEevvWHBJ7pNBk-mkxGqaB6h8UTWVRi-2lc56zjWVMYPUgv6tfK&amp;wd=&amp;eqid=e1820c9600002f360000000659e5b92d" target="_blank" rel="noopener">JavaScript 的<em>指针</em>是什么? - 知乎</a></p><blockquote><p>JavaScript 里头什么时候有指针的概念？倒是有 reference （引用）的说法。 —— <a href="https://www.zhihu.com/people/sansmana" target="_blank" rel="noopener">陈木野</a></p></blockquote><p>关于this的总结，不单我自己，网络上已经大量的文章了。不管是详细解析，还是总结，都已经很多了。但是如果说：指针就是一种指向变量的话，那JavaScript就很多了，遍地都是。而这样的话，就跟reference有关系了。</p><p>说起来也是邪门了，今天打算把《红宝书》拿出来翻一下，翻到了第四章4.1.2，看到了这么一句</p><blockquote><p>当使用 num1 的值来初始化 num2 时，num2 中也保存了值 5。但 num2<br>中的 5 与 num1 中的 5 是完全独立的，该值只是 num1 中 5 的一个副本。</p><p>当从一个变量向另一个变量复制引用类型的值时，同样也会将存储在变量对象中的值复制一份放到<br>为新变量分配的空间中。不同的是，这个值的副本实际上是一个指针，而这个指针指向存储在堆中的一<br>个对象。复制操作结束后，两个变量实际上将引用同一个对象。</p></blockquote><p>于是我的想法 “引用是一种指针” 或许成立。（复习有好处的！）</p><h2 id="Point-Reference"><a href="#Point-Reference" class="headerlink" title="Point == Reference"></a>Point == Reference</h2><p>如果反过来，还能成立吗？我觉得不行。</p><p>C++，让我很崇拜很信仰的，却因不理解和学不会让我产生厌恶的语言，在这方面是两者皆有。由于根本不懂所以不参加讨论。</p><p>Java，他也有reference，但是在<a href="https://www.baidu.com/link?url=bI4EsfOKw8lfPjTwX3_gY7pbn2LFMOwmFPmoalBBNr7lFCv9ZltHfuravfoA7uVHrNJtSUxm0Epjk-IW5Zr2z_&amp;wd=&amp;eqid=ee91ddc5000508bd0000000659e60253" target="_blank" rel="noopener">Java的<em>Reference</em>感觉很象C++的<em>指针</em>,但是区别是本质的 - f…_博客园</a> 提到：</p><blockquote><p>Java中你无法对这个地址进行任何数学运算，并且这个地址你不知道，是Java Runtime分配给你的，它随时还要调整这个地址（After GC,Memory要Compact，这时候一个Object Reference的地址就会改变）。</p></blockquote><p>我不是很理解，所以我也不敢评论什么。我只想关于Go和JS的东西。</p><p>也许是心理隔阂，也许是真理。我怎么都想不出怎么让“指针是一种引用”成立。</p><p>老是想内存内存，不如想成一个盒子，指针就是给盒子里的东西连了一条线。这样做就不用我找这个东西的时候去盒子里找，而是直接去找这条线？</p><p>可是在JS中，引用也不能修改和做任何运算吗？</p><h2 id="Reference-Pointer-1"><a href="#Reference-Pointer-1" class="headerlink" title="Reference === Pointer?"></a>Reference === Pointer?</h2><p>我不是语言专家，我一点都不敢保证。或者说我不懂。</p><p>我不知道所谓的指针是什么东西，但是我知道<code>reference</code>是一个<code>object</code>，毕竟不知道哪篇文章写道：函数是JavaScript第一公民。但并不是很纯的函数式编程语言。</p><p>其实思考到现在，我又有新的问题了：<strong>前端语言，或者说函数式编程语言，有没有内存，指针一说？</strong></p><p>不过现在可以知道的是：</p><p>​    在指令式编程中，数值就是数值，一切工作之后无非就是想得到一个值，过程中也在围绕着值。</p><p>​    在函数式编程中，函数还是占主要地位，它需要以数学的方式去解决编程的问题。</p><p>那我现在可不可以有一种新的理解：</p><p>​    比如C语言这种，他定义指针是需要 <code>*</code> 这种东西，也就是<code>int *a = b</code>是用a指针指向b，我可以通过a来修改b。但是如果直接<code>int a = b</code>的话，我就相当于复制了这个变量了，没权修改b变量了。而如果<code>int a</code>是一个函数的话，那它最后也需要返回一个<code>int</code>返回值。所以它并没有“用函数搞事”的权利。</p><p>​    而JS语言这种，我想用一个代码框来写：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 还是根据红宝书的例子</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;<span class="comment">// 一种复制，相互独立</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = &#123;<span class="attr">a</span>: <span class="number">5</span>&#125;</span><br><span class="line"><span class="keyword">var</span> y = x<span class="comment">// 一种引用，实际上操作y的时候还是在操作x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//现在暂时借用一下以 _ 代替*</span></span><br><span class="line"><span class="keyword">var</span> o = &#123; <span class="attr">a</span>: <span class="number">5</span> &#125;</span><br><span class="line"><span class="keyword">var</span> _b = o.a<span class="comment">// 达到继承的目的？</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// var _b = int *b   在某种意义上？</span></span><br></pre></td></tr></table></figure><p>在红宝书接下来有一句：</p><blockquote><p>换句话说，obj1和 obj2 都指向同一个对象。这样，当为 obj1 添加 name 属性后，可以通过 obj2 来访问这个属性，<br>因为这两个变量引用的都是同一个对象。</p></blockquote><p>按我的角度翻译一下，就是：<strong>我定义一个b出来，无非就是给a多了一个出口</strong></p><p>所以综上所述，我认为，对我来说，或者对C系除外的语言来说，<strong>把“指针”说成“指向”，或许让人更好理解。</strong></p><p>哼，计算机真是有趣。</p><p>（最后感谢所有被引用的文章和作者，谢谢。）</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;一篇思考文，关于JS的reference和Go的指针。（臆想型论文？）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;最近投入大量时间接触&lt;code&gt;Golang&lt;/code&gt;，了解“指针”的时候，想起了以前学习C语言时对“指针”的疑问：指针是什么。&lt;/p&gt;
-&lt;p&gt;以前还小不理解指针和野指针，只知道野指针会出现内存溢出或者值不正确的情况。而且网上大多讲指针的文章看起来都很难。就像现在的知乎：一句话能说清楚的东西恨不得从它的诞生还是写起。就连LOL赛评也是这副P样。&lt;/p&gt;
-&lt;p&gt;以至于我后面对C语言没好感，对C++厌恶，对有“指针”的语言直接没兴趣。&lt;/p&gt;
-&lt;p&gt;在看到Go的指针的时候，我已经想放弃了。但是想回来，毕竟上一次接触指针已经6年了，也许现在看就能理解出什么呢。（过程中接触的OC根本不能算经验，因为当时完全就是靠抄靠背来写iOS应用，最后还是嫌弃OC麻烦进阶无法理解去学习了swift）&lt;br&gt;
-    
-    </summary>
-    
-      <category term="编程议论" scheme="https://colmugx.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
     
     
       <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
