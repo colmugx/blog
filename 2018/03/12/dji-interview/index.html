@@ -258,18 +258,16 @@
     <div class="post-content syuanpi fadeInUpShort back-3">
       
         <p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p>
-<p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和假工牌。</p>
+<p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和工牌套子。</p>
 <p>总结一下印象深刻受苦的问题和答案，不过有一点想吐槽的…就<code>vue</code>和<code>react</code>之间的关系和选择，我看到了高一文理科分班的那种影子：人家都是哪科分高选哪科，我是选分低 + 主管臆想……<br><a id="more"></a></p>
 <h2 id="html5-css3"><a href="#html5-css3" class="headerlink" title="html5 css3"></a>html5 css3</h2><p>css3：圆角，变形，线性渐变，阴影。后两个没答，另外阴影我一直以为是<code>css2</code>的。</p>
 <p>html5: 算了挺多的…基本上用过的都说了一遍… 下次记得背一下（真的需要用到那么多？</p>
-<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><p>其实最受苦的就是这个了，问我对哪个库比较熟悉的时候，基本上就已经可以出试室了。基本上说哪个都不行的：<code>vue</code>确实用得最多但是<strong>没！看！过！源！码！</strong>，<code>react</code>倒是瞟过但是<strong>从！没！使！用！过！</strong></p>
-<h3 id="created-和-mounted-区别，ajax会在哪里操作"><a href="#created-和-mounted-区别，ajax会在哪里操作" class="headerlink" title="created 和 mounted 区别，ajax会在哪里操作"></a>created 和 mounted 区别，ajax会在哪里操作</h3><blockquote>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h3 id="created-和-mounted-区别，ajax会在哪里操作"><a href="#created-和-mounted-区别，ajax会在哪里操作" class="headerlink" title="created 和 mounted 区别，ajax会在哪里操作"></a>created 和 mounted 区别，ajax会在哪里操作</h3><blockquote>
 <p>放在 created，因为 mounted 的时候还没有渲染节点。</p>
 </blockquote>
 <p>虽然这个问题也有一些讨论，有些会在<code>created</code>就做了，有些是在<code>mounted</code>做。</p>
 <p>有问题吗？还真有。因为我想到的是：在<code>created</code>过程把数据获取之后，从虚拟dom转为真实dom的时候可以顺便把数据带进去。而不需要一整个组件都创建完整之后再去加载数据。毕竟到<code>mounted</code>的时候实例都建立完了，这个时候再刷新数据不是会引起刷新/重绘？不过这个问题不应该是我没看源码的问题，而是有些问题没了解透彻，或者说，文章看太少。</p>
 <p>恰好就坑这了，要的就是在<code>mounted</code>，因为这个时候已经有组件实例了，也就是<code>this.$el</code>已经有树了，如果<code>ajax</code>过来的内容是需要依赖<code>el</code>的话，那在<code>created</code>的时候还没有东西呢。</p>
-<p>但是我还是愿意保留意见，因为我觉得在<code>created</code>先请求到<code>mounted</code>的时候差不多刚好，要是<code>mounted</code>的时候没请求到数据就尴尬了。当然这个想法只是停留在<code>ajax</code>获取的是展示数据。</p>
 <p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="Vue生命周期图示"></p>
 <h3 id="深度-watcher"><a href="#深度-watcher" class="headerlink" title="深度 watcher"></a>深度 watcher</h3><p>去翻了一下文档，我发现翻车的是自己吧！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c: &#123;</span><br><span class="line">  handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">  deep: <span class="literal">true</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
 <p>只需要给对象加个<code>deep</code>就行了,而<code>a.b</code>这种情况应不属于深度watch，这只是需要监听的数据在比较深处而已…</p>
@@ -311,9 +309,9 @@
     
   <nav class="article-page">
     
-      <a href="/blog/2018/03/16/vue-watcher/" id="art-left" class="art-left">
+      <a href="/blog/2018/07/04/different-function/" id="art-left" class="art-left">
         <span class="next-title">
-          <i class="iconfont icon-left"></i>vue watch存在永动吗？
+          <i class="iconfont icon-left"></i>我就写个方法，这么麻烦？
         </span>
       </a>
     
