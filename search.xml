@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title><![CDATA[看过 Redux 之后，我写了一个不负责任的状态管理]]></title>
+      <url>/blog/2019/03/02/about-redux/</url>
+      <content type="html"><![CDATA[<p>我们现在小程序需要使用状态管理，但因为项目体量实在很小又没必要使用 redux 或者 mobx。所以我打算不负责任的写一个。</p>
+<h2 id="createStore"><a href="#createStore" class="headerlink" title="createStore"></a>createStore</h2><p>Redux 最核心的部分，提供基础的功能。<code>createStore</code>接受三个参数：<code>reducer</code>, <code>initialState</code>, <code>enhancer</code>。前两个比较好理解，<code>enhancer</code>主要用在接受中间件中。返回产物我们主要使用三个方法：<code>getState</code>, <code>dispatch</code>, <code>subscribe</code>。</p>
+<ul>
+<li><code>getState</code>：获取当前 state 值</li>
+<li><code>subscribe</code>：接受监听，存入 <code>listeners</code> 池中</li>
+<li><code>dispatch</code>：处理 <code>reducer</code> 操作，触发 <code>listeners</code> 方法<a id="more"></a>
+所有我们需要的东西都了解清楚了，其他的功能和边缘保护先不考虑，这也是为什么说是不负责任的状态管理(逃</li>
+</ul>
+<h2 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">store</span>(<span class="params">state</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> currentState = state || &#123;&#125;</span><br><span class="line">  <span class="keyword">let</span> listeners = []</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123; getState, dispatch, subscribe &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getState</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> currentState</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">subscribe</span>(<span class="params">listener</span>) </span>&#123;</span><br><span class="line">    listeners.push(listener)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">dispatch</span>(<span class="params">action</span>) </span>&#123;</span><br><span class="line">    action.call(<span class="keyword">this</span>, currentState)</span><br><span class="line">    listeners.forEach(<span class="function"><span class="params">f</span> =&gt;</span> f.call(<span class="literal">null</span>))</span><br><span class="line">    <span class="keyword">return</span> currentState</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里修改了一些：订阅没有返回取消订阅操作。原因是懒。。<code>dispatch</code> 并不是接受一个纯函数进行数据更新，而是直接由业务修改状态然后通知更新，所以这其实不能算是一个 redux 产物，并且这很不可控。所以这更像是为了利用<code>react-redux</code>或者<code>taro-redux</code>而产生的一种状态保存方式。</p>
+<p>原因还是业务比较简单，就是为了存几个不是很关键的数据但不想使用小程序的 <code>storage</code> 去管理而产生的方法。现在不仅满足业务，压缩后也只有 <code>270b</code> 左右，省点空间给小程序代码，有点赚的实际上。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[这是一个失败者的总结]]></title>
       <url>/blog/2019/01/03/my-2018/</url>
       <content type="html"><![CDATA[<blockquote>
