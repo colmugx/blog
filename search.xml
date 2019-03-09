@@ -3,6 +3,49 @@
   
     
     <entry>
+      <title><![CDATA[Redux —— combineReducers]]></title>
+      <url>/blog/2019/03/08/combinereducers/</url>
+      <content type="html"><![CDATA[<p>事出有因，写 <code>rabbit</code> 的时候，一条单测出了问题</p>
+<blockquote>
+<p>Reducer _object returned undefined during initialization.</p>
+</blockquote>
+<p>想来必然是 <code>reducer</code> 缺少默认的 <code>state</code> 所致，<del>但是我的单测是从 <code>dva</code> 直接拿过来改改就用的，应该不会出现问题，所以一定是哪里出了差错。后面发现了，虽然 <code>dva</code> 可以接受 <code>reducers</code> 是空对象，但应用运行起来有一样问题。</del></p>
+<p>主要是这个问题无伤大雅，<code>model</code> 不会出现只有 <code>reducers</code> 这种情况。我也给出了解决：构建 <code>reducer</code> 给一个默认 <code>state</code> 顶着（但我认为一个 <code>model</code> 应该强制存在 <code>state</code>）</p>
+<p>显然这次并不想讲这个，而是想理解 <code>combineReducers</code><br><a id="more"></a><br><code>combineReducers</code> 一共有 4 个方法：</p>
+<ul>
+<li><code>getUndefinedStateErrorMessage</code></li>
+<li><code>getUnexpectedStateShapeWarningMessage</code></li>
+<li><code>assertReducerShape</code></li>
+<li>(主要方法) <code>combineReducers</code></li>
+</ul>
+<h2 id="getUndefinedStateErrorMessage"><a href="#getUndefinedStateErrorMessage" class="headerlink" title="getUndefinedStateErrorMessage"></a>getUndefinedStateErrorMessage</h2><p>很明显，这是一个生成错误信息的方法。主要是限制 <code>reducer</code> 必须返回 <code>state</code></p>
+<h2 id="getUnexpectedStateShapeWarningMessage"><a href="#getUnexpectedStateShapeWarningMessage" class="headerlink" title="getUnexpectedStateShapeWarningMessage"></a>getUnexpectedStateShapeWarningMessage</h2><h2 id="assertReducerShape"><a href="#assertReducerShape" class="headerlink" title="assertReducerShape"></a>assertReducerShape</h2><p>这是一个检查 <code>reducer</code> 是否合规的方法。</p>
+<p>首先接受一个集合所有 <code>reducer</code> 的对象进行遍历，每一个抽出来检验，做一次运行尝试，看是否能得到 <code>state</code>。如果得到的 <code>state</code> 为  <code>undefined</code> 则该 <code>reducer</code> 是非法的。</p>
+<p>文中开头提到的问题正是由这里报出，因为我们给出的 <code>reducers</code> 为空对象，且 <code>state</code> 为 <code>undefined</code>，所以自然会报错。<code>dva</code> 的单测只检查 <code>model</code> 的合理性，且 <code>state</code> 允许任何内容和 <code>reducers</code> 允许空对象，并没有考虑一个 <code>model</code> 同时不存在这两者的情况，不过显然没意义，所以目前是不清楚 <code>dva</code> 团队是没想到还是也觉得无所谓。</p>
+<h2 id="combineReducers"><a href="#combineReducers" class="headerlink" title="combineReducers"></a>combineReducers</h2><p>这是这组方法中的核心，该方法也作为默认方法导出。这组方法的目的是把一群 <code>reducer</code> 合并为一个方法供 <code>createStore</code> 使用。</p>
+<p>上来是两组变量：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 提取对象中所有字段名，一个 key 对应一个 reducer 方法</span></span><br><span class="line"><span class="keyword">const</span> reducerKeys = <span class="built_in">Object</span>.keys(reducers)</span><br><span class="line"><span class="comment">// 由下面可得，该变量用来暂存基本合理（reducer 是一个方法）的 reducer 方法。</span></span><br><span class="line"><span class="keyword">const</span> finalReducers = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> reducers[key] === <span class="string">'function'</span>) &#123;</span><br><span class="line">  finalReducers[key] = reducers[key]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 如果在非生产环境中，还会提示仅有 key 没有方法的值以方便我们修改调试</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 再把初步验证过的 reducer 取出</span></span><br><span class="line"><span class="keyword">const</span> finalReducerKeys = <span class="built_in">Object</span>.keys(finalReducers)</span><br><span class="line"></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> shapeAssertionError</span><br><span class="line"><span class="comment">// 放入刚刚用来验证 reducer 合规的方法进行第二次验证，并做错误处理</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  assertReducerShape(finalReducers)</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  shapeAssertionError = e</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接着是返回一个新的 <code>reducer</code>，并对所有传入的合规的 <code>reducer</code> 进行 diff。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个对比记录变量以及新 state</span></span><br><span class="line"><span class="keyword">let</span> hasChanged = <span class="literal">false</span></span><br><span class="line"><span class="keyword">const</span> nextState = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历刚刚验证完的 reducer key 数组</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; finalReducerKeys.length; i++) &#123;</span><br><span class="line">  <span class="keyword">const</span> key = finalReducerKeys[i]</span><br><span class="line">  <span class="keyword">const</span> reducer = finalReducers[key]</span><br><span class="line">  <span class="comment">// 获取当前 state</span></span><br><span class="line">  <span class="keyword">const</span> previousStateForKey = state[key]</span><br><span class="line">  <span class="comment">// 通过执行 reducer 得到新的 state</span></span><br><span class="line">  <span class="keyword">const</span> nextStateForKey = reducer(previousStateForKey, action)</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> nextStateForKey === <span class="string">'undefined'</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> errorMessage = getUndefinedStateErrorMessage(key, action)</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(errorMessage)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 并将新 reducer 产物绑定到 nextState，key 不变。（方便对比）</span></span><br><span class="line">  nextState[key] = nextStateForKey</span><br><span class="line">  <span class="comment">// 右式第一个 hasChanged 表达：如果已经为 true 那么就肯定 true，没必要再去对比验证</span></span><br><span class="line">  hasChanged = hasChanged || nextStateForKey !== previousStateForKey</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 返回：有改变的返回新的，无改变返回原 state。</span></span><br><span class="line"><span class="keyword">return</span> hasChanged ? nextState : state</span><br></pre></td></tr></table></figure>
+<p>所以这组方法目的就是把所有复杂的 <code>reducer</code> 和 <code>state</code> 组成新的状态树，统一管理。业务开发时可以根据需求拆分多个 <code>reducer</code> 和 <code>state</code>，便于开发和组织。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Redux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[看过 Redux 之后，我写了一个不负责任的状态管理]]></title>
       <url>/blog/2019/03/02/about-redux/</url>
       <content type="html"><![CDATA[<p>我们现在小程序需要使用状态管理，但因为项目体量实在很小又没必要使用 redux 或者 mobx。所以我打算不负责任的写一个。</p>
@@ -247,39 +290,6 @@
             <tag> JavaScript </tag>
             
             <tag> ES6 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Vue函数式组件]]></title>
-      <url>/blog/2018/02/16/vue-functional/</url>
-      <content type="html"><![CDATA[<p><a href="https://cn.vuejs.org/v2/guide/render-function.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6" target="_blank" rel="noopener">函数式组件</a></p>
-<p><code>vue</code>与<code>jsx</code>的配合一直都是后妈带儿子，所以就算文档也只是大面积讲述渲染函数的来龙去脉。但实际上真实开发的话是没有人直接<code>return CreateElement</code>来怼的（小组件暴力渲染还是会有的，但比较成型的组件肯定会想到<code>jsx</code>或者干脆<code>template</code>了）。</p>
-<p>函数式组件，不多讲了这是个很常见的组件方式。不过因为<code>vue</code>的「特殊结构」，有点不太一样而已。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  functional: <span class="literal">true</span>,</span><br><span class="line">  render(h, ctx) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>作为无状态三宝<code>props</code>, <code>context</code>, <code>data</code>，当然<code>React</code>没有最后一个和第二个可选，但肯定不会少了<code>props</code>，毕竟无状态组件要求纯函数，单向数据一进一出。不过对于<code>vue</code>来说，一切内容都包入<code>context</code>，第一个参数必须传入渲染函数。</p>
-<p>So，<code>context</code>一共有这么些东西：</p>
-<blockquote>
-<p>props：提供 props 的对象<br>children: VNode 子节点的数组<br>slots: slots 对象<br>data：传递给组件的 data 对象<br>parent：对父组件的引用<br>listeners: (2.3.0+) 一个包含了组件上所注册的 v-on 侦听器的对象。这只是一个指向 data.on 的别名。<br>injections: (2.3.0+) 如果使用了 inject 选项，则该对象包含了应当被注入的属性。</p>
-</blockquote>
-<p>至于<code>props</code>和<code>parent</code>已经不用解释了，主要是<code>children</code>, <code>data</code>, <code>listeners</code></p>
-<p>实际上<code>data</code>问题最大，而文档说的最少的就是这个。文档只是一句”传递给组件的 data 对象“带过，这什么鬼？</p>
-<p>实际上打印过一次<code>children</code>就知道了，一个节点需要tag标签，data数据，children子节点等。而<code>data</code>就是放在标签后的一系数据，比如<code>attr</code>。</p>
-<p>如果还是不清楚的话，再打印一次，会发现，<code>data.attrs</code>是不是有<code>props</code>的内容？<code>data.on</code>是不是可以用在<code>listeners</code>？</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 实践尝试 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Vue </tag>
             
         </tags>
         

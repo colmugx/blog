@@ -151,7 +151,7 @@
       <div class="tagcloud-mask"></div>  
 <div class="tagcloud" id="tagcloud">
   <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
   </div>
 </div>
   
@@ -216,6 +216,56 @@
   
 
 <section class="posts">
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInUpShort back-1">
+        <div class="post-time-wrapper">
+          <span>2019-03-08</span>
+          
+            
+              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
+            
+          
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInUpShort back-2">
+        
+          <a href="/blog/2019/03/08/combinereducers/">Redux —— combineReducers</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInUpShort back-3">
+      
+        
+          <p>事出有因，写 <code>rabbit</code> 的时候，一条单测出了问题</p>
+<blockquote>
+<p>Reducer _object returned undefined during initialization.</p>
+</blockquote>
+<p>想来必然是 <code>reducer</code> 缺少默认的 <code>state</code> 所致，<del>但是我的单测是从 <code>dva</code> 直接拿过来改改就用的，应该不会出现问题，所以一定是哪里出了差错。后面发现了，虽然 <code>dva</code> 可以接受 <code>reducers</code> 是空对象，但应用运行起来有一样问题。</del></p>
+<p>主要是这个问题无伤大雅，<code>model</code> 不会出现只有 <code>reducers</code> 这种情况。我也给出了解决：构建 <code>reducer</code> 给一个默认 <code>state</code> 顶着（但我认为一个 <code>model</code> 应该强制存在 <code>state</code>）</p>
+<p>显然这次并不想讲这个，而是想理解 <code>combineReducers</code><br>
+        
+      
+    
+      <p class="content-link">
+        <a href="/blog/2019/03/08/combinereducers/#more">
+          <span>继续阅读</span>
+        </a>
+      </p>
+    
+    </div>
+    
+  </article>
+  
+  
+
   
     
   
@@ -490,52 +540,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p1.then(<span class="function">(<span class="params">&#123; p2 &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> p2</span><br><span class="line">&#125;).then(&#123; p3 &#125; =&gt; &#123;&#125;)</span><br></pre></td></tr></table></figure>
         
       
-    
-    </div>
-    
-  </article>
-  
-  
-
-  
-    
-  
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi fadeInUpShort back-1">
-        <div class="post-time-wrapper">
-          <span>2018-02-16</span>
-          
-            
-              <span class="post-category"><a href="/blog/categories/实践尝试/">实践尝试</a></span>
-            
-          
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi fadeInUpShort back-2">
-        
-          <a href="/blog/2018/02/16/vue-functional/">Vue函数式组件</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi fadeInUpShort back-3">
-      
-        
-          <p><a href="https://cn.vuejs.org/v2/guide/render-function.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6" target="_blank" rel="noopener">函数式组件</a></p>
-<p><code>vue</code>与<code>jsx</code>的配合一直都是后妈带儿子，所以就算文档也只是大面积讲述渲染函数的来龙去脉。但实际上真实开发的话是没有人直接<code>return CreateElement</code>来怼的（小组件暴力渲染还是会有的，但比较成型的组件肯定会想到<code>jsx</code>或者干脆<code>template</code>了）。</p>
-<p>函数式组件，不多讲了这是个很常见的组件方式。不过因为<code>vue</code>的「特殊结构」，有点不太一样而已。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  functional: <span class="literal">true</span>,</span><br><span class="line">  render(h, ctx) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-        
-      
-    
-      <p class="content-link">
-        <a href="/blog/2018/02/16/vue-functional/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
     
     </div>
     
