@@ -19,7 +19,7 @@
 <li>(主要方法) <code>combineReducers</code></li>
 </ul>
 <h2 id="getUndefinedStateErrorMessage"><a href="#getUndefinedStateErrorMessage" class="headerlink" title="getUndefinedStateErrorMessage"></a>getUndefinedStateErrorMessage</h2><p>很明显，这是一个生成错误信息的方法。主要是限制 <code>reducer</code> 必须返回 <code>state</code></p>
-<h2 id="getUnexpectedStateShapeWarningMessage"><a href="#getUnexpectedStateShapeWarningMessage" class="headerlink" title="getUnexpectedStateShapeWarningMessage"></a>getUnexpectedStateShapeWarningMessage</h2><h2 id="assertReducerShape"><a href="#assertReducerShape" class="headerlink" title="assertReducerShape"></a>assertReducerShape</h2><p>这是一个检查 <code>reducer</code> 是否合规的方法。</p>
+<h2 id="assertReducerShape"><a href="#assertReducerShape" class="headerlink" title="assertReducerShape"></a>assertReducerShape</h2><p>这是一个检查 <code>reducer</code> 是否合规的方法。</p>
 <p>首先接受一个集合所有 <code>reducer</code> 的对象进行遍历，每一个抽出来检验，做一次运行尝试，看是否能得到 <code>state</code>。如果得到的 <code>state</code> 为  <code>undefined</code> 则该 <code>reducer</code> 是非法的。</p>
 <p>文中开头提到的问题正是由这里报出，因为我们给出的 <code>reducers</code> 为空对象，且 <code>state</code> 为 <code>undefined</code>，所以自然会报错。<code>dva</code> 的单测只检查 <code>model</code> 的合理性，且 <code>state</code> 允许任何内容和 <code>reducers</code> 允许空对象，并没有考虑一个 <code>model</code> 同时不存在这两者的情况，不过显然没意义，所以目前是不清楚 <code>dva</code> 团队是没想到还是也觉得无所谓。</p>
 <h2 id="combineReducers"><a href="#combineReducers" class="headerlink" title="combineReducers"></a>combineReducers</h2><p>这是这组方法中的核心，该方法也作为默认方法导出。这组方法的目的是把一群 <code>reducer</code> 合并为一个方法供 <code>createStore</code> 使用。</p>

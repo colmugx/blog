@@ -8,7 +8,7 @@
     author: "colmugx",
     baseUrl: "/blog/",
     theme: {
-      scheme: "balance",
+      scheme: "banderole",
       lightbox: true,
       animate: true,
       search: false,
@@ -85,6 +85,13 @@
 </div>
 
   
+    <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
+  </div>
+</div>
+  
 
   <div class="container" style="display:none;">
 
@@ -144,25 +151,6 @@
 </nav>
 
     
-    
-      <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
-  </div>
-</div>
-
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1" style="display:none;">
-      <li class="title-link"><a href="javascript:;" class="toTop">Redux —— combineReducers</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#getUndefinedStateErrorMessage"><span class="toc-text">getUndefinedStateErrorMessage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#getUnexpectedStateShapeWarningMessage"><span class="toc-text">getUnexpectedStateShapeWarningMessage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assertReducerShape"><span class="toc-text">assertReducerShape</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#combineReducers"><span class="toc-text">combineReducers</span></a></li></ol>
-    </div>
-  </aside>
-
-
-  
     
   </div>
 </header>
@@ -269,7 +257,7 @@
 <li>(主要方法) <code>combineReducers</code></li>
 </ul>
 <h2 id="getUndefinedStateErrorMessage"><a href="#getUndefinedStateErrorMessage" class="headerlink" title="getUndefinedStateErrorMessage"></a>getUndefinedStateErrorMessage</h2><p>很明显，这是一个生成错误信息的方法。主要是限制 <code>reducer</code> 必须返回 <code>state</code></p>
-<h2 id="getUnexpectedStateShapeWarningMessage"><a href="#getUnexpectedStateShapeWarningMessage" class="headerlink" title="getUnexpectedStateShapeWarningMessage"></a>getUnexpectedStateShapeWarningMessage</h2><h2 id="assertReducerShape"><a href="#assertReducerShape" class="headerlink" title="assertReducerShape"></a>assertReducerShape</h2><p>这是一个检查 <code>reducer</code> 是否合规的方法。</p>
+<h2 id="assertReducerShape"><a href="#assertReducerShape" class="headerlink" title="assertReducerShape"></a>assertReducerShape</h2><p>这是一个检查 <code>reducer</code> 是否合规的方法。</p>
 <p>首先接受一个集合所有 <code>reducer</code> 的对象进行遍历，每一个抽出来检验，做一次运行尝试，看是否能得到 <code>state</code>。如果得到的 <code>state</code> 为  <code>undefined</code> 则该 <code>reducer</code> 是非法的。</p>
 <p>文中开头提到的问题正是由这里报出，因为我们给出的 <code>reducers</code> 为空对象，且 <code>state</code> 为 <code>undefined</code>，所以自然会报错。<code>dva</code> 的单测只检查 <code>model</code> 的合理性，且 <code>state</code> 允许任何内容和 <code>reducers</code> 允许空对象，并没有考虑一个 <code>model</code> 同时不存在这两者的情况，不过显然没意义，所以目前是不清楚 <code>dva</code> 团队是没想到还是也觉得无所谓。</p>
 <h2 id="combineReducers"><a href="#combineReducers" class="headerlink" title="combineReducers"></a>combineReducers</h2><p>这是这组方法中的核心，该方法也作为默认方法导出。这组方法的目的是把一群 <code>reducer</code> 合并为一个方法供 <code>createStore</code> 使用。</p>
@@ -351,6 +339,19 @@
 
 
   
+  
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1" style="display:none;">
+      <li class="title-link"><a href="javascript:;" class="toTop">Redux —— combineReducers</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#getUndefinedStateErrorMessage"><span class="toc-text">getUndefinedStateErrorMessage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assertReducerShape"><span class="toc-text">assertReducerShape</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#combineReducers"><span class="toc-text">combineReducers</span></a></li></ol>
+    </div>
+  </aside>
+
+
+
   
 
 
@@ -437,7 +438,7 @@
 
 
 
-  <script src="/blog/script/scheme/balance.js"></script>
+  <script src="/blog/script/scheme/banderole.js"></script>
 
 
 
