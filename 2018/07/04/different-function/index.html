@@ -53,6 +53,7 @@
 
 
 
+
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -62,7 +63,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="msapplication-navbutton-color" content="#666666">
 <meta name= "format-detection" content="telephone=no" />
-<meta name="keywords" content="nlvi, Nlvi" />
 
   <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
   <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
@@ -75,74 +75,44 @@
 
 
 
-  <meta name="keywords" content="JavaScript, Nlvi" />
+  <meta name="keywords" content="JavaScript, nlvi" />
+
 
   <title> 我就写个方法，这么麻烦？ · Colmugx </title>
 </head>
 <body>
-  <div class="progress">
-  <div class="progress-inner"></div>
-</div>
-
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
-  </div>
-</div>
-  
-
   <div class="container" style="display:none;">
-
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
   <div class="logo-inner syuanpi tvIn">
-    <span><a href="/blog/">Colmugx</a></span>
+    <h1><a href="/blog/">Colmugx</a></h1>
     
       <span id="subtitle">新版Nlvi啊，在做了</span>
     
   </div>
 </div>
+
     <nav class="main-nav">
   
   <ul class="main-nav-list syuanpi tvIn">
   
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/" id="article">
-        <span class="base-name">文章</span>
-        
-          <span class="menu-item-label">article</span>
-        
+        <span class="base-name">ARTICLE</span>
       </a>
     </li>
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/archives" id="archives">
-        <span class="base-name">归档</span>
-        
-          <span class="menu-item-label">archives</span>
-        
+        <span class="base-name">ARCHIVES</span>
       </a>
     </li>
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/about" id="about">
-        <span class="base-name">关于</span>
-        
-          <span class="menu-item-label">about</span>
-        
+        <span class="base-name">ABOUT</span>
       </a>
     </li>
   
@@ -161,7 +131,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/">
-                    <span>文章</span>
+                    <span>ARTICLE</span>
                     
                         <span class="menu-item-label">article</span>
                     
@@ -172,7 +142,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/archives">
-                    <span>归档</span>
+                    <span>ARCHIVES</span>
                     
                         <span class="menu-item-label">archives</span>
                     
@@ -183,7 +153,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/about">
-                    <span>关于</span>
+                    <span>ABOUT</span>
                     
                         <span class="menu-item-label">about</span>
                     
@@ -235,11 +205,11 @@
           
         </div>
       </div>
-      <h1 class="post-title syuanpi fadeInUpShort back-2">
+      <h2 class="post-title syuanpi fadeInUpShort back-2">
         
           我就写个方法，这么麻烦？
         
-      </h1>
+      </h2>
     </header>
     <div class="post-content syuanpi fadeInUpShort back-3">
       
@@ -250,12 +220,12 @@
 <li>函数表达式</li>
 </ul>
 <a id="more"></a>
-<h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><p>声明体是最普通的，其他语言也相近的一种方式。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><p>声明体是最普通的，其他语言也相近的一种方式。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
 <p>不过，毕竟是「函数就是爸爸」的JavaScript！它有一个特性：函数提升。</p>
 <blockquote>
 <p>函数提升：把所有函数提升到当前作用域上，从而做到了可以“未声明先调用”。</p>
 </blockquote>
-<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><p>这可能是目前用的最多的声明方式，因为可以搭配箭头函数假装自己用的是函数式编程。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数版本</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h3><p>这可能是目前用的最多的声明方式，因为可以搭配箭头函数假装自己用的是函数式编程。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数版本</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
 <p>但变量受作用域影响，所以<code>const</code>和<code>let</code>并没有变量提升的能力。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">funcA(<span class="number">1</span>) <span class="comment">// ReferenceError: funcA is not defined</span></span><br><span class="line"><span class="keyword">const</span> funcA = <span class="function"><span class="params">a</span> =&gt;</span> a</span><br></pre></td></tr></table></figure></p>
 <p>燃鹅，这才刚刚开始……</p>
 <h3 id="匿名-amp-具名"><a href="#匿名-amp-具名" class="headerlink" title="匿名 &amp; 具名"></a>匿名 &amp; 具名</h3><p>匿名就是上面那种，具名就是给函数本体再起一个名字。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="keyword">function</span> <span class="title">funcName</span>(<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
@@ -277,7 +247,7 @@
 <h3 id="计算属性函数名"><a href="#计算属性函数名" class="headerlink" title="计算属性函数名"></a>计算属性函数名</h3><p>这个应该是在“对象”的环境中存在，毕竟对象可以指代很多种只要是对象的情况。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> object = &#123;</span><br><span class="line">  [<span class="string">'a'</span> + <span class="string">'b'</span>](a, b) &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">object.ab(<span class="number">1</span>, <span class="number">3</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
 <p>这就实现了“函数名可以暂时不知道是什么”的情况，通过计算来得到这个函数。</p>
-<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><h3 id="new-Function"><a href="#new-Function" class="headerlink" title="new Function"></a>new Function</h3><p>这是一个不知道哪里可以用得上但是就是可以用的方式：通过对象创建<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'return a + b'</span>)</span><br><span class="line">func(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><h3 id="new-Function"><a href="#new-Function" class="headerlink" title="new Function"></a>new Function</h3><p>这是一个不知道哪里可以用得上但是就是可以用的方式：通过对象创建<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'return a + b'</span>)</span><br><span class="line">func(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="函数参数初始值"><a href="#函数参数初始值" class="headerlink" title="函数参数初始值"></a>函数参数初始值</h3><p>可能有一定需求，但可能没有<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a = <span class="number">1</span>, b = <span class="number">2</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func() <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
 <p>可能我们更常用的有这些<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> funcA = <span class="function">(<span class="params">obj = &#123;&#125;</span>) =&gt;</span> obj</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> funcB = <span class="function">(<span class="params">arr = []</span>) =&gt;</span> arr</span><br></pre></td></tr></table></figure></p>
 <p>但JavaScript毕竟是「函数是第一公民」的语言，有机会会写到很多高阶函数。所以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> func = <span class="function">(<span class="params">fn = (</span>) =&gt;</span> <span class="string">'💉💧🐮🍺'</span>) =&gt; fn.call(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure></p>
@@ -368,7 +338,7 @@
     <span class="title" id="toc-switch"><span>文章导航</span></span>
     <div class="toc-inner syuanpi back-1" style="display:none;">
       <li class="title-link"><a href="javascript:;" class="toTop">我就写个方法，这么麻烦？</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数声明"><span class="toc-text">函数声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数表达式"><span class="toc-text">函数表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#匿名-amp-具名"><span class="toc-text">匿名 &amp; 具名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式依然是个常-变量"><span class="toc-text">函数表达式依然是个常/变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#箭头函数"><span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算属性函数名"><span class="toc-text">计算属性函数名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other"><span class="toc-text">Other</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Function"><span class="toc-text">new Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数参数初始值"><span class="toc-text">函数参数初始值</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#函数声明"><span class="toc-text">函数声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式"><span class="toc-text">函数表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匿名-amp-具名"><span class="toc-text">匿名 &amp; 具名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式依然是个常-变量"><span class="toc-text">函数表达式依然是个常/变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#箭头函数"><span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算属性函数名"><span class="toc-text">计算属性函数名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other"><span class="toc-text">Other</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Function"><span class="toc-text">new Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数参数初始值"><span class="toc-text">函数参数初始值</span></a></li></ol>
     </div>
   </aside>
 

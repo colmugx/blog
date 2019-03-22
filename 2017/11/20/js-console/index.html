@@ -53,6 +53,7 @@
 
 
 
+
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -62,7 +63,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="msapplication-navbutton-color" content="#666666">
 <meta name= "format-detection" content="telephone=no" />
-<meta name="keywords" content="nlvi, Nlvi" />
 
   <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
   <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
@@ -75,74 +75,44 @@
 
 
 
-  <meta name="keywords" content="JavaScript, Nlvi" />
+  <meta name="keywords" content="JavaScript, nlvi" />
+
 
   <title> 你还在用Console.log()？ · Colmugx </title>
 </head>
 <body>
-  <div class="progress">
-  <div class="progress-inner"></div>
-</div>
-
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
-  </div>
-</div>
-  
-
   <div class="container" style="display:none;">
-
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
   <div class="logo-inner syuanpi tvIn">
-    <span><a href="/blog/">Colmugx</a></span>
+    <h1><a href="/blog/">Colmugx</a></h1>
     
       <span id="subtitle">新版Nlvi啊，在做了</span>
     
   </div>
 </div>
+
     <nav class="main-nav">
   
   <ul class="main-nav-list syuanpi tvIn">
   
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/" id="article">
-        <span class="base-name">文章</span>
-        
-          <span class="menu-item-label">article</span>
-        
+        <span class="base-name">ARTICLE</span>
       </a>
     </li>
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/archives" id="archives">
-        <span class="base-name">归档</span>
-        
-          <span class="menu-item-label">archives</span>
-        
+        <span class="base-name">ARCHIVES</span>
       </a>
     </li>
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/about" id="about">
-        <span class="base-name">关于</span>
-        
-          <span class="menu-item-label">about</span>
-        
+        <span class="base-name">ABOUT</span>
       </a>
     </li>
   
@@ -161,7 +131,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/">
-                    <span>文章</span>
+                    <span>ARTICLE</span>
                     
                         <span class="menu-item-label">article</span>
                     
@@ -172,7 +142,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/archives">
-                    <span>归档</span>
+                    <span>ARCHIVES</span>
                     
                         <span class="menu-item-label">archives</span>
                     
@@ -183,7 +153,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/about">
-                    <span>关于</span>
+                    <span>ABOUT</span>
                     
                         <span class="menu-item-label">about</span>
                     
@@ -235,11 +205,11 @@
           
         </div>
       </div>
-      <h1 class="post-title syuanpi fadeInUpShort back-2">
+      <h2 class="post-title syuanpi fadeInUpShort back-2">
         
           你还在用Console.log()？
         
-      </h1>
+      </h2>
     </header>
     <div class="post-content syuanpi fadeInUpShort back-3">
       
@@ -248,7 +218,7 @@
 </blockquote>
 <p>现在的前端虽说是越来越复杂，但是我怎么觉得现在前端的要求越来越低了？应该说现在的人，看个几遍vue，知道console.log()，知道var, {}, []，就敢出来找工作了。但是<code>console</code>就这么个方法？</p>
 <p>搞笑，你在你的浏览器输入<code>console</code>，自己看看有多少东西！所以为了高效调试我觉得有必要全了解一遍。<br><a id="more"></a></p>
-<h2 id="log-info-error-warn"><a href="#log-info-error-warn" class="headerlink" title="log(), info(), error(), warn()"></a>log(), info(), error(), warn()</h2><p>这几个放在一起讲</p>
+<h3 id="log-info-error-warn"><a href="#log-info-error-warn" class="headerlink" title="log(), info(), error(), warn()"></a>log(), info(), error(), warn()</h3><p>这几个放在一起讲</p>
 <blockquote>
 <p>log() 普通输出</p>
 </blockquote>
@@ -269,7 +239,7 @@
 <p>debug() 调试输出</p>
 </blockquote>
 <p>这个就是<code>log()</code>，用来输出调试信息的。不过现在的调试信息都在花式<code>log()</code>，也不需要用到这个了。</p>
-<h2 id="exception-debug"><a href="#exception-debug" class="headerlink" title="_exception(), debug()"></a>_exception(), debug()</h2><p>这组只有两个，因为这两个没卵用…为什么…</p>
+<h3 id="exception-debug"><a href="#exception-debug" class="headerlink" title="_exception(), debug()"></a>_exception(), debug()</h3><p>这组只有两个，因为这两个没卵用…为什么…</p>
 <blockquote>
 <p>_exception() 例外输出</p>
 </blockquote>
@@ -278,7 +248,7 @@
 <p>debug() 调试输出</p>
 </blockquote>
 <p>早期可能还有区别，但是这就是一个<code>log()</code>，不过现在各前端都在花式<code>log()</code>调试信息，可能也有些人<code>debug()</code>都没听说过。</p>
-<h2 id="assert-…-clear-count"><a href="#assert-…-clear-count" class="headerlink" title="assert(…), clear(), count()"></a>assert(…), clear(), count()</h2><p>为什么第一个函数搞了三个点？</p>
+<h3 id="assert-…-clear-count"><a href="#assert-…-clear-count" class="headerlink" title="assert(…), clear(), count()"></a>assert(…), clear(), count()</h3><p>为什么第一个函数搞了三个点？</p>
 <blockquote>
 <p>assert() 断言输出：判断第一个参数是否为真，false的话抛出异常并且在控制台输出相应信息。——MDN</p>
 </blockquote>
@@ -292,22 +262,22 @@
 <p>count() 次数输出：以参数为标识记录调用的次数，调用时在控制台打印标识以及调用次数。——MDN</p>
 </blockquote>
 <p>并且MDN明确指出，这个不应该列入正常使用范围，因为这是非标准方法。这是这组里最骚的方法。用来输出本身被调用了几次…虽然如果测试循环的话，一般都直接log(i)的，直接看1234567不是更明确嘛。显示效果就是，每运行一次就会在控制台打印 n + 1。</p>
-<h2 id="dir-dirxml"><a href="#dir-dirxml" class="headerlink" title="dir(), dirxml()"></a>dir(), dirxml()</h2><p>这两个一起说是因为，有相同点和不同点。</p>
+<h3 id="dir-dirxml"><a href="#dir-dirxml" class="headerlink" title="dir(), dirxml()"></a>dir(), dirxml()</h3><p>这两个一起说是因为，有相同点和不同点。</p>
 <blockquote>
 <p>dir() 对象结构输出</p>
 <p>dirxml() 节点结构输出</p>
 </blockquote>
 <p>这两个都是输出一个树状结构，就是前面有个小三角。但不同点就是，<code>dir()</code>是把一个对象按照对象的形式呈现，当然用来输出节点就是把节点信息按object呈现。<code>dirxml()</code>是把节点呈现出来，就还是保留xml的样式呈现。都是非标准，偶尔用用还行？</p>
-<h2 id="group-groupCollapsed-groupEnd"><a href="#group-groupCollapsed-groupEnd" class="headerlink" title="group(), groupCollapsed(), groupEnd()"></a>group(), groupCollapsed(), groupEnd()</h2><p>这是上面那组的正房版。都是打印结构。我就不一行一行解释了有点累…</p>
+<h3 id="group-groupCollapsed-groupEnd"><a href="#group-groupCollapsed-groupEnd" class="headerlink" title="group(), groupCollapsed(), groupEnd()"></a>group(), groupCollapsed(), groupEnd()</h3><p>这是上面那组的正房版。都是打印结构。我就不一行一行解释了有点累…</p>
 <p>第二跟第一都是打印树状结构，但是第一个会自动打开显示结构里面有什么结构（没问题的），第二个叫内联树状，默认不打开。</p>
 <p>而且只要你不结束，你可以一直联下去的，这样一个父节点可以一直续下去…直到通过<code>groupend()</code>来结束。</p>
-<h2 id="table-…"><a href="#table-…" class="headerlink" title="table(…)"></a>table(…)</h2><p>我必须强调！<strong>这是最棒的我最喜欢的console方法，没有之一！</strong></p>
+<h3 id="table-…"><a href="#table-…" class="headerlink" title="table(…)"></a>table(…)</h3><p>我必须强调！<strong>这是最棒的我最喜欢的console方法，没有之一！</strong></p>
 <blockquote>
 <p>table() 表格输出</p>
 </blockquote>
 <p>这个方法必须传入内容，内容的类型是array或者object，输出的样式是一个key:value的表格！如果你觉得输出成对象不方便检查的话，那就用<code>table()</code>吧！（当然在表格下方还是会return一次对象或者数组）</p>
 <p>而且不仅是key:value，<strong>你甚至还能多元数组！对象套对象！甚至是JSON！</strong></p>
-<h2 id="另外的技巧就是可以用占位符了"><a href="#另外的技巧就是可以用占位符了" class="headerlink" title="另外的技巧就是可以用占位符了"></a>另外的技巧就是可以用占位符了</h2><p>跟C语言的<code>printf()</code>没有区别，就是可以利用占位符然后再把参数接在后面。</p>
+<h3 id="另外的技巧就是可以用占位符了"><a href="#另外的技巧就是可以用占位符了" class="headerlink" title="另外的技巧就是可以用占位符了"></a>另外的技巧就是可以用占位符了</h3><p>跟C语言的<code>printf()</code>没有区别，就是可以利用占位符然后再把参数接在后面。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"%d年%d月%d日"</span>,<span class="number">2017</span>,<span class="number">11</span>,<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
 <p>最后感谢MDN，也感谢AlphaGo！</p>
 
@@ -396,7 +366,7 @@
     <span class="title" id="toc-switch"><span>文章导航</span></span>
     <div class="toc-inner syuanpi back-1" style="display:none;">
       <li class="title-link"><a href="javascript:;" class="toTop">你还在用Console.log()？</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#log-info-error-warn"><span class="toc-text">log(), info(), error(), warn()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exception-debug"><span class="toc-text">_exception(), debug()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assert-…-clear-count"><span class="toc-text">assert(…), clear(), count()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dir-dirxml"><span class="toc-text">dir(), dirxml()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#group-groupCollapsed-groupEnd"><span class="toc-text">group(), groupCollapsed(), groupEnd()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#table-…"><span class="toc-text">table(…)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#另外的技巧就是可以用占位符了"><span class="toc-text">另外的技巧就是可以用占位符了</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#log-info-error-warn"><span class="toc-text">log(), info(), error(), warn()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exception-debug"><span class="toc-text">_exception(), debug()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#assert-…-clear-count"><span class="toc-text">assert(…), clear(), count()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dir-dirxml"><span class="toc-text">dir(), dirxml()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#group-groupCollapsed-groupEnd"><span class="toc-text">group(), groupCollapsed(), groupEnd()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#table-…"><span class="toc-text">table(…)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#另外的技巧就是可以用占位符了"><span class="toc-text">另外的技巧就是可以用占位符了</span></a></li></ol>
     </div>
   </aside>
 

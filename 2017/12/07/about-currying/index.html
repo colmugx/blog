@@ -53,6 +53,7 @@
 
 
 
+
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -62,7 +63,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="msapplication-navbutton-color" content="#666666">
 <meta name= "format-detection" content="telephone=no" />
-<meta name="keywords" content="nlvi, Nlvi" />
 
   <link rel="apple-touch-icon"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
   <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="https://avatars2.githubusercontent.com/u/21327913?v=3&s=466">
@@ -75,74 +75,44 @@
 
 
 
-  <meta name="keywords" content="JavaScript, Nlvi" />
+  <meta name="keywords" content="JavaScript, nlvi" />
+
 
   <title> 扯扯柯里化 · Colmugx </title>
 </head>
 <body>
-  <div class="progress">
-  <div class="progress-inner"></div>
-</div>
-
-  
-    <div class="tagcloud-mask"></div>  
-<div class="tagcloud" id="tagcloud">
-  <div class="tagcloud-inner">
-    <a href="/blog/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/blog/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/blog/tags/Functional-Programming/" style="font-size: 14px;">Functional Programming</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/blog/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/Syuanpi/" style="font-size: 14px;">Syuanpi</a> <a href="/blog/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/blog/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/blog/tags/colmugx/" style="font-size: 14px;">colmugx</a> <a href="/blog/tags/electron/" style="font-size: 14px;">electron</a> <a href="/blog/tags/vim/" style="font-size: 14px;">vim</a> <a href="/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/blog/tags/vuex/" style="font-size: 14px;">vuex</a> <a href="/blog/tags/微信小程序/" style="font-size: 14px;">微信小程序</a>
-  </div>
-</div>
-  
-
   <div class="container" style="display:none;">
-
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
   <div class="logo-inner syuanpi tvIn">
-    <span><a href="/blog/">Colmugx</a></span>
+    <h1><a href="/blog/">Colmugx</a></h1>
     
       <span id="subtitle">新版Nlvi啊，在做了</span>
     
   </div>
 </div>
+
     <nav class="main-nav">
   
   <ul class="main-nav-list syuanpi tvIn">
   
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/" id="article">
-        <span class="base-name">文章</span>
-        
-          <span class="menu-item-label">article</span>
-        
+        <span class="base-name">ARTICLE</span>
       </a>
     </li>
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/archives" id="archives">
-        <span class="base-name">归档</span>
-        
-          <span class="menu-item-label">archives</span>
-        
+        <span class="base-name">ARCHIVES</span>
       </a>
     </li>
   
-    
-      
-    
     <li class="menu-item">
       <a href="/blog/about" id="about">
-        <span class="base-name">关于</span>
-        
-          <span class="menu-item-label">about</span>
-        
+        <span class="base-name">ABOUT</span>
       </a>
     </li>
   
@@ -161,7 +131,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/">
-                    <span>文章</span>
+                    <span>ARTICLE</span>
                     
                         <span class="menu-item-label">article</span>
                     
@@ -172,7 +142,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/archives">
-                    <span>归档</span>
+                    <span>ARCHIVES</span>
                     
                         <span class="menu-item-label">archives</span>
                     
@@ -183,7 +153,7 @@
         
             <div class="mobile-nav-item">
                 <a href="/blog/about">
-                    <span>关于</span>
+                    <span>ABOUT</span>
                     
                         <span class="menu-item-label">about</span>
                     
@@ -235,11 +205,11 @@
           
         </div>
       </div>
-      <h1 class="post-title syuanpi fadeInUpShort back-2">
+      <h2 class="post-title syuanpi fadeInUpShort back-2">
         
           扯扯柯里化
         
-      </h1>
+      </h2>
     </header>
     <div class="post-content syuanpi fadeInUpShort back-3">
       
@@ -249,9 +219,9 @@
 <p>开个玩笑，我自己也不知道这算不算柯里化（逃</p>
 <p>总之为什么这么写，我自己觉得这样容易理解，方便盲僧（理清）。</p>
 <p>还有最近关于“如何治理别人爱装逼的毛病”系列中刚写的一坨，新鲜的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> menuItem = <span class="function">(<span class="params">list</span>) =&gt;</span> </span><br><span class="line">      list.map(<span class="function">(<span class="params">&#123;title, color, icon, descs&#125;</span>) =&gt;</span> </span><br><span class="line">        &lt;menu-item title=&#123;title&#125; color=&#123;color&#125; icon=&#123;icon&#125;&gt;&#123;</span><br><span class="line">          descs.map(<span class="function"><span class="params">v</span> =&gt;</span> &lt;span&gt;&#123;v&#125;&lt;<span class="regexp">/span&gt;)&#125;&lt;/m</span>enu-item&gt;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> menuItem = <span class="function">(<span class="params">list</span>) =&gt;</span></span><br><span class="line">      list.map(<span class="function">(<span class="params">&#123;title, color, icon, descs&#125;</span>) =&gt;</span></span><br><span class="line">        &lt;menu-item title=&#123;title&#125; color=&#123;color&#125; icon=&#123;icon&#125;&gt;&#123;</span><br><span class="line">          descs.map(<span class="function"><span class="params">v</span> =&gt;</span> &lt;span&gt;&#123;v&#125;&lt;<span class="regexp">/span&gt;)&#125;&lt;/m</span>enu-item&gt;)</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="柯里化是什么？"><a href="#柯里化是什么？" class="headerlink" title="柯里化是什么？"></a>柯里化是什么？</h2><p>好了讲柯里化，就是<strong>接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。柯里化属于函数式编程的内容</strong>。</p>
+<h3 id="柯里化是什么？"><a href="#柯里化是什么？" class="headerlink" title="柯里化是什么？"></a>柯里化是什么？</h3><p>好了讲柯里化，就是<strong>接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。柯里化属于函数式编程的内容</strong>。</p>
 <p>在这里有一个<a href="http://www.zhangxinxu.com/wordpress/2013/02/js-currying/" target="_blank" rel="noopener">张鑫旭博客</a>讲关于柯里化（柯南嗑药）的例子，很方便理解。当然我想讲点自己的东西，拿<code>Nlvi.tools.scroll</code>说一下吧</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">tools.scroll = <span class="function"><span class="keyword">function</span> (<span class="params">win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> sct = $(win).scrollTop();</span><br><span class="line">      fn &amp;&amp; fn(sct);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 实际上如果不作的话，这样就结束了</span></span><br><span class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</span><br><span class="line">    fn&amp;&amp;fn(sct)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>所以函数柯里化看上去有一个特点，会嵌套函数。而且道理就跟柯里化的解释一样：用一些参数，剩下的函数作为返回值里的函数的参数。这样我在调用的时候怎么调用：</p>
@@ -264,13 +234,13 @@
 <p>第三点就是延时</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> total = <span class="number">0</span></span><br><span class="line"><span class="comment">// normal</span></span><br><span class="line"><span class="keyword">var</span> nSum = <span class="function">(<span class="params">num</span>) =&gt;</span> &#123;</span><br><span class="line">  total += num</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//currying</span></span><br><span class="line"><span class="keyword">var</span> cSum = <span class="function">(<span class="params">fn</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> nums = []</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">arguments</span>.length) &#123;</span><br><span class="line">      <span class="keyword">return</span> fn.apply(<span class="literal">null</span>, nums)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">Array</span>.prototype.push.apply(nums, <span class="built_in">arguments</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = cSum(<span class="function">(<span class="params">x</span>) =&gt;</span> total += x)</span><br></pre></td></tr></table></figure>
 <p>如果是常规的话，那么肯定会立刻计算出结果，而柯里化之后，会把计算的步骤储存起来，然后一起计算。</p>
-<h2 id="柯里化误区"><a href="#柯里化误区" class="headerlink" title="柯里化误区"></a>柯里化误区</h2><p>在写这篇东西的时候，我关注到了一尊大神的博客 <a href="http://www.cnblogs.com/pengchen/p/5434705.html" target="_blank" rel="noopener">JavaScript函数柯里化的一些思考</a>，吓得我赶紧回看了自己的函数有没有“画蛇添足”的成分。嗯。</p>
+<h3 id="柯里化误区"><a href="#柯里化误区" class="headerlink" title="柯里化误区"></a>柯里化误区</h3><p>在写这篇东西的时候，我关注到了一尊大神的博客 <a href="http://www.cnblogs.com/pengchen/p/5434705.html" target="_blank" rel="noopener">JavaScript函数柯里化的一些思考</a>，吓得我赶紧回看了自己的函数有没有“画蛇添足”的成分。嗯。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 拿下来继续学习一下</span></span><br><span class="line"><span class="keyword">var</span> scrollTop = Nlvi.tools.scroll(<span class="built_in">window</span>);</span><br><span class="line">scrollTop(<span class="function"><span class="keyword">function</span>(<span class="params">sct</span>) </span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
 <p>这里我想到的是，我只需要把<code>window</code>传到这个函数之后引用出一个新函数，然后我就可以带着这个函数跑了，如果是不嫌麻烦版本的话我需要则么做？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tools.scroll = <span class="function"><span class="keyword">function</span>(<span class="params">win, fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> $(win).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> sct = $(win).scrollTop();</span><br><span class="line">    fn&amp;&amp;fn(sct)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// and so</span></span><br><span class="line">tools.scroll(<span class="built_in">window</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
 <p>这样就会造成，我每次想监听滚动的时候，每用一次这个方法，我就要把<code>window</code>传进去一次。如果包一下的话，我就可以拿后面那个函数走就行了，也就是我的<code>window</code>只要传一次就畅通无阻。这也是另一个好处：分段计算。好比我玩Switch，我在外面突然想玩马车的时候，如果我的卡带在卡包里，那我换上就可以玩了，就不需要等回到家把卡带从包装盒里拿出来装到机器上。</p>
 <p>实际上到这里的话应该有所经验了，到这里还会不会觉得<code>apply(), call(), bind()</code>使用机会少之又少？这就是数学的魅力吧，可是我数学不好。</p>
-<h2 id="柯里化-lt-gt-闭包函数？"><a href="#柯里化-lt-gt-闭包函数？" class="headerlink" title="柯里化 &lt; - &gt; 闭包函数？"></a>柯里化 &lt; - &gt; 闭包函数？</h2><p>又是每期一问了，柯里化跟闭包函数是否也有关系？</p>
+<h3 id="柯里化-lt-gt-闭包函数？"><a href="#柯里化-lt-gt-闭包函数？" class="headerlink" title="柯里化 &lt; - &gt; 闭包函数？"></a>柯里化 &lt; - &gt; 闭包函数？</h3><p>又是每期一问了，柯里化跟闭包函数是否也有关系？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 经典面试题</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</span><br><span class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">             setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">              <span class="built_in">console</span>.log(i);</span><br><span class="line">        &#125;,<span class="number">0</span>)</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>那么，柯里化函数和闭包函数应该怎么区分？还是的确有联系？</p>
 <p>最后感谢所有被引用的文章及其作者，感谢帮助学习。</p>
@@ -360,7 +330,7 @@
     <span class="title" id="toc-switch"><span>文章导航</span></span>
     <div class="toc-inner syuanpi back-1" style="display:none;">
       <li class="title-link"><a href="javascript:;" class="toTop">扯扯柯里化</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#柯里化是什么？"><span class="toc-text">柯里化是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#柯里化误区"><span class="toc-text">柯里化误区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#柯里化-lt-gt-闭包函数？"><span class="toc-text">柯里化 &lt; - &gt; 闭包函数？</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#柯里化是什么？"><span class="toc-text">柯里化是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#柯里化误区"><span class="toc-text">柯里化误区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#柯里化-lt-gt-闭包函数？"><span class="toc-text">柯里化 &lt; - &gt; 闭包函数？</span></a></li></ol>
     </div>
   </aside>
 
