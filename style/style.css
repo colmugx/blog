@@ -995,13 +995,13 @@ h6 {
 .post .post-header .post-time {
   padding-left: 8px;
   font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-  color: #c0c0c0;
+  color: #999;
 }
 .post .post-header .post-time .post-category {
   font-size: 14px;
 }
 .post .post-header .post-time .post-category a {
-  color: #c0c0c0;
+  color: #999;
 }
 .post .post-header .post-time .post-category:before {
   content: ' | ';
@@ -1244,7 +1244,7 @@ h6 {
 }
 .archive .archive-list .archive-post .archive-post-time {
   font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-  color: #c0c0c0;
+  color: #999;
 }
 .archive .archive-list .archive-post .archive-post-link {
   line-height: 1.8;
