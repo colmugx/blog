@@ -481,7 +481,7 @@ h6 {
 }
 .copy-line {
   border: none;
-  border-bottom: 2px dashed rgba(86,208,255,0.75);
+  border-bottom: 2px dashed #80dbff;
   height: 16px;
 }
 .post-copyright .copy-author,
@@ -712,7 +712,7 @@ h6 {
 }
 .container .container-inner {
   width: 100%;
-  margin-top: 2%;
+  margin-top: 32px;
 }
 .container .container-inner.has_toc {
   padding-left: 8px;
@@ -755,6 +755,7 @@ h6 {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  background-color: #f6fcff;
 }
 @media screen and (max-width: 650px) {
   .header {
@@ -842,7 +843,7 @@ h6 {
 }
 .header .main-nav-list .menu-item a:hover {
   text-shadow: 1px 1px 0px #d6d6d6;
-  color: rgba(86,208,255,0.75);
+  color: #80dbff;
 }
 .header-scroll {
   padding: 8px 0;
@@ -967,10 +968,11 @@ h6 {
   margin: 4px 4px;
 }
 .post {
-  margin-top: 16px;
-  padding-top: 32px;
+  margin-top: 24px;
+  padding: 16px;
   position: relative;
   font-weight: 400;
+  border-bottom: 1px solid #f8f8f8;
 }
 @media screen and (max-width: 650px) {
   .post {
@@ -978,23 +980,19 @@ h6 {
     padding: 0 8px;
   }
 }
-.post:first-child {
-  padding-top: 0;
-}
 .post:last-child,
 .post.is_post {
   background-image: none;
 }
 .post .post-header {
   margin-bottom: 16px;
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
 }
 .post .post-header a {
   text-decoration: none;
   color: #383838;
 }
 .post .post-header .post-time {
-  padding-left: 8px;
-  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   color: #999;
 }
 .post .post-header .post-time .post-category {
@@ -1007,10 +1005,19 @@ h6 {
   content: ' | ';
 }
 .post .post-header .post-title {
+  position: relative;
   width: 100%;
-  margin: 8px 0;
-  margin-bottom: 16px;
-  font-weight: inherit;
+  margin-top: 0;
+  padding: 4px 0 12px;
+}
+.post .post-header .post-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 24px;
+  height: 3px;
+  background-color: #56d0ff;
 }
 .post .post-tags {
   display: inline;
@@ -1118,9 +1125,9 @@ h6 {
   right: 50%;
   background-color: #56d0ff;
   height: 2px;
-  transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  -webkit-transition: all 0.15s linear;
+  transition: all 280ms ease;
+  -moz-transition: all 280ms ease;
+  -webkit-transition: all 280ms ease;
 }
 .post .post-content .content-link a:hover:after {
   left: 0;
@@ -1150,7 +1157,7 @@ h6 {
 }
 .post .post-content code {
   background-color: rgba(86,208,255,0.1);
-  color: rgba(32,78,95,0.875);
+  color: #406d7f;
   font-family: 'Segoe UI', monospace, Consolas, Monaco, Menlo, 'Microsoft YaHei', sans-serif;
   margin: 0 4px;
   padding: 0 4px;
@@ -1445,7 +1452,7 @@ h6 {
   left: 0;
   right: 100%;
   cursor: pointer;
-  background: rgba(86,208,255,0.75);
+  background: #80dbff;
   transition-property: right;
   animation: lane-right 0.35s linear both;
 }
