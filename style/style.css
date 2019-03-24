@@ -209,13 +209,13 @@ template {
   background-color: rgba(192,192,192,0.1);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(253,153,153,0.5);
+  background-color: rgba(110,213,253,0.5);
 }
 ::selection {
-  background-color: rgba(253,153,153,0.2);
+  background-color: rgba(110,213,253,0.2);
 }
 ::-webkit-selection {
-  background-color: rgba(253,153,153,0.2);
+  background-color: rgba(110,213,253,0.2);
 }
 body {
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
@@ -481,7 +481,7 @@ h6 {
 }
 .copy-line {
   border: none;
-  border-bottom: 2px dashed #bd7272;
+  border-bottom: 2px dashed #529fbd;
 }
 .post-copyright .copy-author,
 .post-copyright .copy-url,
@@ -503,7 +503,7 @@ h6 {
 .post-copyright .copy-url a:hover,
 .post-copyright .copy-origin a:hover,
 .post-copyright .copy-license a:hover {
-  color: #fd9999;
+  color: #6ed5fd;
 }
 .post-reward {
   width: 100%;
@@ -528,7 +528,7 @@ h6 {
   -webkit-transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in;
 }
 .post-reward .reward-btn:hover {
-  background-color: #fd9999;
+  background-color: #6ed5fd;
   box-shadow: 0 1px 1px #d5d5d5;
 }
 .post-reward .reward-wrapper {
@@ -560,7 +560,7 @@ h6 {
 }
 .mobile-header .mobile-header-nav {
   background-color: #fff;
-  color: #fd9999;
+  color: #6ed5fd;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -615,7 +615,7 @@ h6 {
 }
 .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item a {
   text-decoration: none;
-  color: #fd9999;
+  color: #6ed5fd;
 }
 .mobile-header .mobile-header-body .mobile-header-list .mobile-nav-item .mobile-nav-tagcloud {
   position: absolute;
@@ -649,7 +649,7 @@ h6 {
 .mobile-header .header-menu-item .header-menu-line {
   position: absolute;
   top: 50%;
-  background-color: #fd9999;
+  background-color: #6ed5fd;
   height: 1px;
   width: 24px;
 }
@@ -657,7 +657,7 @@ h6 {
   content: '';
   position: absolute;
   top: -6px;
-  background-color: #fd9999;
+  background-color: #6ed5fd;
   height: 1px;
   width: 24px;
   transition: transform 0.3s;
@@ -671,7 +671,7 @@ h6 {
   content: '';
   position: absolute;
   top: 6px;
-  background-color: #fd9999;
+  background-color: #6ed5fd;
   height: 1px;
   width: 24px;
   transition-property: top, transform;
@@ -694,7 +694,7 @@ h6 {
 }
 .friends .friends-inner a {
   text-decoration: none;
-  color: #fd9999;
+  color: #6ed5fd;
 }
 .friends .friends-inner a:before {
   content: '@';
@@ -757,7 +757,7 @@ h6 {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  background-color: #fef9f9;
+  background-color: #f7fcfe;
 }
 @media screen and (max-width: 650px) {
   .header {
@@ -845,11 +845,11 @@ h6 {
 }
 .header .main-nav-list .menu-item a:hover {
   text-shadow: 1px 1px 0px #d6d6d6;
-  color: #bd7272;
+  color: #529fbd;
 }
 .header-scroll {
   padding: 8px 0;
-  box-shadow: -4px -1px 8px #fecccc;
+  box-shadow: -4px -1px 8px #b6eafe;
 }
 .header-scroll #subtitle {
   opacity: 0 !important;
@@ -864,8 +864,8 @@ h6 {
   border: none;
   height: 1px;
   max-width: 900px;
-  background-color: #fd9999;
-  background-image: -webkit-linear-gradient(0deg, #fff, #fecccc, #fff);
+  background-color: #6ed5fd;
+  background-image: -webkit-linear-gradient(0deg, #fff, #b6eafe, #fff);
 }
 .footer .footer-wrapper {
   display: flex;
@@ -887,8 +887,8 @@ h6 {
 .footer .left {
   flex: 1;
   padding: 16px;
-  border-right: 1px solid #fecccc;
-  border-image: -webkit-linear-gradient(#fff, #fecccc, #fff) 0 10 0 0;
+  border-right: 1px solid #b6eafe;
+  border-image: -webkit-linear-gradient(#fff, #b6eafe, #fff) 0 10 0 0;
 }
 @media screen and (max-width: 650px) {
   .footer .left {
@@ -953,7 +953,7 @@ h6 {
 .footer .right .copyright a {
   font-family: Arial;
   text-decoration: none;
-  color: #fd9999;
+  color: #6ed5fd;
 }
 .footer .right .copyright a:hover {
   color: $theme-color-highlight;
@@ -985,7 +985,7 @@ h6 {
   width: 0;
   height: 0;
   border: 12px solid transparent;
-  border-bottom: 12px solid rgba(253,153,153,0.5);
+  border-bottom: 12px solid rgba(110,213,253,0.5);
   transform-origin: 63% 86%;
   transform: rotate(135deg);
   -ms-transform: rotate(135deg);
@@ -1036,13 +1036,13 @@ h6 {
   bottom: 0;
   width: 24px;
   height: 3px;
-  background-color: #fd9999;
+  background-color: #6ed5fd;
 }
 .post .post-tags {
   margin: 12px 0;
   padding-left: 8px;
   font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-  color: #fdb2b2;
+  color: #92dffd;
 }
 .post .post-tags a {
   position: relative;
@@ -1058,55 +1058,25 @@ h6 {
   color: #383838;
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
   padding-bottom: 8px;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f0f0f0;
 }
 .post .post-content h1 {
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
-  font-weight: inherit;
-  margin: 16px 0;
-}
-.post .post-content h1:before {
-  content: '∮ ';
 }
 .post .post-content h2 {
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
-  font-weight: inherit;
-  margin: 16px 0;
-}
-.post .post-content h2:before {
-  content: '∮ ';
 }
 .post .post-content h3 {
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
-  font-weight: inherit;
-  margin: 16px 0;
-}
-.post .post-content h3:before {
-  content: '∮ ';
 }
 .post .post-content h4 {
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
-  font-weight: inherit;
-  margin: 16px 0;
-}
-.post .post-content h4:before {
-  content: '∮ ';
 }
 .post .post-content h5 {
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
-  font-weight: inherit;
-  margin: 16px 0;
-}
-.post .post-content h5:before {
-  content: '∮ ';
 }
 .post .post-content h6 {
   font-family: 'Helvetica' , 'Hiragino Sans GB' , 'Roboto' , 'Noto SansCJK' , 'Heiti TC' , 'Heiti SC' , sans-serif;
-  font-weight: inherit;
-  margin: 16px 0;
-}
-.post .post-content h6:before {
-  content: '∮ ';
 }
 .post .post-content table {
   min-width: 50%;
@@ -1120,7 +1090,7 @@ h6 {
   font-weight: 500;
 }
 .post .post-content table tr:nth-child(2n) {
-  background: rgba(253,153,153,0.06);
+  background: rgba(110,213,253,0.06);
 }
 .post .post-content table th,
 .post .post-content table td {
@@ -1132,7 +1102,7 @@ h6 {
 }
 .post .post-content .content-link a {
   position: relative;
-  color: #bd7272;
+  color: #529fbd;
   font-size: 18px;
   text-decoration: none;
 }
@@ -1145,7 +1115,7 @@ h6 {
   bottom: -4px;
   left: 50%;
   right: 50%;
-  background-color: #fd9999;
+  background-color: #6ed5fd;
   height: 2px;
   transition: all 280ms ease;
   -moz-transition: all 280ms ease;
@@ -1163,12 +1133,8 @@ h6 {
   font-weight: 600;
 }
 .post .post-content a {
-  color: #fd9999;
+  color: #6ed5fd;
   text-decoration: none;
-  margin: 0 4px;
-}
-.post .post-content a:hover {
-  text-decoration: underline;
 }
 .post .post-content i {
   font-weight: 300;
@@ -1178,8 +1144,8 @@ h6 {
   display: inline;
 }
 .post .post-content code {
-  background-color: rgba(253,153,153,0.1);
-  color: #5e3939;
+  background-color: rgba(110,213,253,0.1);
+  color: #294f5e;
   font-family: 'Segoe UI', monospace, Consolas, Monaco, Menlo, 'Microsoft YaHei', sans-serif;
   margin: 0 4px;
   padding: 0 4px;
@@ -1188,9 +1154,9 @@ h6 {
   position: relative;
   margin: 8px 16px;
   padding: 2px 8px;
-  background-color: rgba(253,153,153,0.1);
-  border-left: 4px solid #fd9999;
-  color: #9a6868;
+  background-color: rgba(110,213,253,0.1);
+  border-left: 4px solid #6ed5fd;
+  color: #53869a;
 }
 .post .post-content blockquote:before {
   content: '';
@@ -1212,7 +1178,7 @@ h6 {
   line-height: 2;
 }
 #com-switch {
-  color: #fd9999;
+  color: #6ed5fd;
 }
 #disqus_thread a {
   color: #383838;
@@ -1224,20 +1190,16 @@ h6 {
   display: inline-block;
   margin: 0;
   font-family: inherit;
-  font-weight: 400;
-  color: #fd9999;
 }
 .archive .archive-num {
   margin: 8px;
-  font-weight: 300;
 }
 .archive .archive-name {
   font-size: 16px;
-  font-weight: 300;
 }
 .archive .archive-list .archive-year {
   font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-  font-weight: 400;
+  color: #6ed5fd;
 }
 .archive .archive-list ul {
   list-style: none;
@@ -1245,31 +1207,11 @@ h6 {
 }
 .archive .archive-list .archive-post {
   position: relative;
-  border-left: 1px solid #eae7e7;
+  border-left: 1px solid #f0f0f0;
   padding: 4px 8px;
 }
-.archive .archive-list .archive-post:hover:after {
-  opacity: 1;
-}
-.archive .archive-list .archive-post:hover .archive-post-time {
-  padding-left: 16px;
-}
 .archive .archive-list .archive-post:hover .archive-post-link {
-  color: #996767;
-}
-.archive .archive-list .archive-post:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #fecccc;
-  transition: all 0.3s linear 0.1s;
-  -moz-transition: all 0.3s linear 0.1s;
-  -webkit-transition: all 0.3s linear 0.1s;
+  color: #53869a;
 }
 .archive .archive-list .archive-post .archive-post-time {
   font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
@@ -1277,10 +1219,10 @@ h6 {
 }
 .archive .archive-list .archive-post .archive-post-link {
   line-height: 1.8;
-  color: #fd9999;
+  color: #6ed5fd;
 }
-.archive .archive-list .archive-post .archive-post-link a {
-  margin: 0 8px;
+.archive .archive-list .archive-post a {
+  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -1291,7 +1233,7 @@ h6 {
   position: fixed;
   bottom: 32px;
   right: 32px;
-  color: #fd9999;
+  color: #6ed5fd;
   user-select: none;
   -webkit-user-select: none;
   cursor: pointer;
@@ -1331,7 +1273,7 @@ h6 {
   float: right;
 }
 .pagination .extend.next:hover {
-  color: #fd9999;
+  color: #6ed5fd;
   transform: translateX(10%);
   -ms-transform: translateX(10%);
   -moz-transform: translateX(10%);
@@ -1341,7 +1283,7 @@ h6 {
   float: left;
 }
 .pagination .extend.prev:hover {
-  color: #fd9999;
+  color: #6ed5fd;
   transform: translateX(-10%);
   -ms-transform: translateX(-10%);
   -moz-transform: translateX(-10%);
@@ -1373,11 +1315,7 @@ h6 {
   }
 }
 .article-page a:hover {
-  color: #fd9999;
-}
-.article-page .next-title i,
-.article-page .prev-title i {
-  vertical-align: middle;
+  color: #6ed5fd;
 }
 .article-page:before {
   content: '';
@@ -1388,6 +1326,9 @@ h6 {
 }
 .article-page .art-right {
   float: right;
+  transition: all 280ms ease;
+  -moz-transition: all 280ms ease;
+  -webkit-transition: all 280ms ease;
 }
 @media screen and (max-width: 650px) {
   .article-page .art-right {
@@ -1404,6 +1345,9 @@ h6 {
 }
 .article-page .art-left {
   float: left;
+  transition: all 280ms ease;
+  -moz-transition: all 280ms ease;
+  -webkit-transition: all 280ms ease;
 }
 @media screen and (max-width: 650px) {
   .article-page .art-left {
@@ -1482,7 +1426,7 @@ h6 {
   left: 0;
   right: 100%;
   cursor: pointer;
-  background: #bd7272;
+  background: #529fbd;
   transition-property: right;
   animation: lane-right 0.35s linear both;
 }
@@ -1497,7 +1441,7 @@ h6 {
   font-size: 14px;
 }
 .post-toc .title-link a.active {
-  border-left: 2px solid #fd9999;
+  border-left: 2px solid #6ed5fd;
 }
 .post-toc .toc {
   margin: 0;
@@ -1514,7 +1458,7 @@ h6 {
   font-size: 14px;
 }
 .post-toc .toc .toc-item .toc-link.active {
-  border-left: 2px solid #fd9999;
+  border-left: 2px solid #6ed5fd;
 }
 @media screen and (max-width: 650px) {
   .post-toc {
@@ -1573,7 +1517,7 @@ h6 {
   text-align: center;
   box-sizing: border-box;
   background-color: rgba(255,255,255,0.9);
-  box-shadow: 0px 2px 6px #fecccc;
+  box-shadow: 0px 2px 6px #b6eafe;
   transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -1614,7 +1558,7 @@ h6 {
 .tagcloud-inner a {
   flex: 0 0 20%;
   text-decoration: none;
-  color: #fd9999;
+  color: #6ed5fd;
 }
 .tagcloud-inner a:before {
   content: '#';
