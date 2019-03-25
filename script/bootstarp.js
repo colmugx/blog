@@ -1,4 +1,4 @@
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', function() {
   document.body.addEventListener('touchstart', function () {});
   var app = new Nlvi(nlviconfig);
   app.showToc();
@@ -6,8 +6,8 @@ $(document).ready(function(){
   app.switchToc();
   app.titleStatus();
   app.init();
-  window.nlviconfig.theme.scheme === "banderole" && app.pushHeader();
-  $(document).ready(function() {
-    $('.container').show();
-  });
+  app.pushHeader();
+});
+$(document).ready(function() {
+  $('.container').show();
 });
