@@ -673,7 +673,6 @@ h6 {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  background-color: #f7fcfe;
 }
 @media screen and (max-width: 650px) {
   .header {
