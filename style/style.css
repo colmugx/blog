@@ -1348,6 +1348,12 @@ body.under {
 .tagcloud .tagcloud-postlist .tagcloud-post:hover {
   color: #fdb2b2;
 }
+.tagcloud .tagcloud-postlist .tagcloud-posttime {
+  color: #999;
+}
+.tagcloud .tagcloud-postlist .tagcloud-posttime:after {
+  content: ' · ';
+}
 .post-toc .toc-inner {
   height: 100%;
   max-height: 460px;
