@@ -18,6 +18,7 @@
 <li>去掉以前的标签云，重写一个</li>
 <li>去掉以前的搜索框，重写一个</li>
 <li>变动部分不成熟动画，改动动画曲线</li>
+<li><strong>加入渐变色的设定！(Maybe)</strong></li>
 </ul>
 ]]></content>
       
@@ -31,6 +32,30 @@
         <tags>
             
             <tag> colmugx </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[做不完的题目]]></title>
+      <url>/blog/2019/03/23/last-test-questions/</url>
+      <content type="html"><![CDATA[<p>又在「杂乱的工作台上」完成文章……</p>
+<p>没错又错过一个非常好的机会。与其说是因为时间不够做不完，还不如说是因为陷入斐波那契思考导致做不完。</p>
+<p>不留遗憾，把它搞完。题源就不说了。<br><a id="more"></a></p>
+<h3 id="1-现有-a-b-c-d-四个接口，找出最快的那个。异步用-setTimeout-模拟"><a href="#1-现有-a-b-c-d-四个接口，找出最快的那个。异步用-setTimeout-模拟" class="headerlink" title="1. 现有 /a, /b, /c, /d 四个接口，找出最快的那个。异步用 setTimeout 模拟"></a>1. 现有 /a, /b, /c, /d 四个接口，找出最快的那个。异步用 setTimeout 模拟</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> requests: <span class="built_in">Promise</span>&lt;<span class="built_in">string</span>&gt;[]</span><br><span class="line">  = [<span class="string">'/a'</span>, <span class="string">'/b'</span>, <span class="string">'/c'</span>, <span class="string">'/d'</span>]</span><br><span class="line">  .map(<span class="function"><span class="params">v</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> time = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      resolve(<span class="string">`<span class="subst">$&#123;v&#125;</span> spent <span class="subst">$&#123;time&#125;</span>`</span>)</span><br><span class="line">    &#125;, time);</span><br><span class="line">  &#125;))</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.race(requests).then(<span class="built_in">console</span>.log)</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端思考 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> TypeScript </tag>
             
         </tags>
         

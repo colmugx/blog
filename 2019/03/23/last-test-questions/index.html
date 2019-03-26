@@ -75,12 +75,10 @@
 
 
 
+  <meta name="keywords" content="TypeScript, nlvi" />
 
-  <title>
-  
-    归档 · Colmugx 's Blog
-  
-</title>
+
+  <title> 做不完的题目 · Colmugx 's Blog </title>
 </head>
 <body>
   <div class="container" style="display:none;">
@@ -161,172 +159,135 @@
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInUpShort back-1">
+        <div class="post-time-wrapper">
+          <time>2019-03-23</time>
+          
+            
+              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
+            
+          
+        </div>
+      </div>
+      <h2 class="post-title syuanpi fadeInUpShort back-2">
+        
+          做不完的题目
+        
+      </h2>
+    </header>
+    <div class="post-content syuanpi fadeInUpShort back-3">
+      
+        <p>又在「杂乱的工作台上」完成文章……</p>
+<p>没错又错过一个非常好的机会。与其说是因为时间不够做不完，还不如说是因为陷入斐波那契思考导致做不完。</p>
+<p>不留遗憾，把它搞完。题源就不说了。<br><a id="more"></a></p>
+<h3 id="1-现有-a-b-c-d-四个接口，找出最快的那个。异步用-setTimeout-模拟"><a href="#1-现有-a-b-c-d-四个接口，找出最快的那个。异步用-setTimeout-模拟" class="headerlink" title="1. 现有 /a, /b, /c, /d 四个接口，找出最快的那个。异步用 setTimeout 模拟"></a>1. 现有 /a, /b, /c, /d 四个接口，找出最快的那个。异步用 setTimeout 模拟</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> requests: <span class="built_in">Promise</span>&lt;<span class="built_in">string</span>&gt;[]</span><br><span class="line">  = [<span class="string">'/a'</span>, <span class="string">'/b'</span>, <span class="string">'/c'</span>, <span class="string">'/d'</span>]</span><br><span class="line">  .map(<span class="function"><span class="params">v</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> time = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      resolve(<span class="string">`<span class="subst">$&#123;v&#125;</span> spent <span class="subst">$&#123;time&#125;</span>`</span>)</span><br><span class="line">    &#125;, time);</span><br><span class="line">  &#125;))</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.race(requests).then(<span class="built_in">console</span>.log)</span><br></pre></td></tr></table></figure>
+
+      
     
-      <h1 class="archive-title">Total</h1>
-      <span class="archive-num">一共有 32 篇文章</span>
+    </div>
     
-    <div class="archive-list">
-      <ul>
-        
-          
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2017 </h2>
-              
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/08/22/do-markdown-hexo/">
-              <span class="archive-post-time">
-              
-                08-22
-              
-              </span>
-              <span class="archive-post-link">
-                搞electron + vue + webpack2 + TypeScript什么体验
-              </span>
-            </a>
-          </li>
-        
-          
-            
-            
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/08/14/js-call-apply-bind/">
-              <span class="archive-post-time">
-              
-                08-14
-              
-              </span>
-              <span class="archive-post-link">
-                JavaScript的call，bind，apply
-              </span>
-            </a>
-          </li>
-        
-          
-            
-            
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/08/09/about-conditionals/">
-              <span class="archive-post-time">
-              
-                08-09
-              
-              </span>
-              <span class="archive-post-link">
-                关于Javascript的条件判断
-              </span>
-            </a>
-          </li>
-        
-          
-            
-            
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/03/03/js-this/">
-              <span class="archive-post-time">
-              
-                03-03
-              
-              </span>
-              <span class="archive-post-link">
-                关于JavaScript的this
-              </span>
-            </a>
-          </li>
-        
-          
-            
-            
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/03/02/js-for/">
-              <span class="archive-post-time">
-              
-                03-02
-              
-              </span>
-              <span class="archive-post-link">
-                JavaScript所有for
-              </span>
-            </a>
-          </li>
-        
-          
-            
-            
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/02/22/js-extends/">
-              <span class="archive-post-time">
-              
-                02-22
-              
-              </span>
-              <span class="archive-post-link">
-                来搞一手关于Javascript对象继承
-              </span>
-            </a>
-          </li>
-        
-          
-            
-            
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/02/17/async-await-first/">
-              <span class="archive-post-time">
-              
-                02-17
-              
-              </span>
-              <span class="archive-post-link">
-                async-await 初尝试
-              </span>
-            </a>
-          </li>
-        
-          
-            
-            
-            
-          
-          <li class="archive-post">
-            <a href="/blog/2017/02/13/Syuanpi-css/">
-              <span class="archive-post-time">
-              
-                02-13
-              
-              </span>
-              <span class="archive-post-link">
-                自己造轮子！——Syuanpi.css
-              </span>
-            </a>
-          </li>
-        
-      </ul>
+      <div class="post-tags syuanpi fadeInUpShort back-3">
+      
+        <a href="/blog/tags/TypeScript/">TypeScript</a>
+      
+      </div>
+    
+    
+      
+
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>colmugx</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/blog/2019/03/23/last-test-questions/">https://colmugx.github.io/blog/2019/03/23/last-test-questions/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/blog">https://colmugx.github.io/blog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
     </div>
   </div>
+
+    
+  </article>
   
-  <nav class="pagination">
-      <a class="extend prev" rel="prev" href="/blog/archives/2017/">上一页</a><a class="page-number" href="/blog/archives/2017/">1</a><span class="page-number current">2</span>
+    
+  <nav class="article-page">
+    
+      <a href="/blog/2019/03/25/bye-nlvi/" id="art-left" class="art-left">
+        <span class="next-title">
+          <i class="iconfont icon-back"></i>最后的 Nlvi
+        </span>
+      </a>
+    
+    
+      <a href="/blog/2019/03/08/combinereducers/" id="art-right" class="art-right">
+        <span class="prev-title">
+          Redux —— combineReducers<i class="iconfont icon-enter"></i>
+        </span>
+      </a>
+    
   </nav>
 
 
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+
+  </div>
+
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1" style="display:none;">
+      <li class="title-link"><a href="javascript:;" class="toTop">做不完的题目</a></li>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-现有-a-b-c-d-四个接口，找出最快的那个。异步用-setTimeout-模拟"><span class="toc-text">1. 现有 /a, /b, /c, /d 四个接口，找出最快的那个。异步用 setTimeout 模拟</span></a></li></ol>
+    </div>
+  </aside>
+
+
+
+  
 
 
         </div>
