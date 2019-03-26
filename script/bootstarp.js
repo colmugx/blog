@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   app.titleStatus();
   app.init();
   app.pushHeader();
+  app.tagcloud();
 });
 $(document).ready(function() {
   $('.container').show();

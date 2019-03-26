@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[最后的 Nlvi]]></title>
+      <url>/blog/2019/03/25/bye-nlvi/</url>
+      <content type="html"><![CDATA[<p><code>Nlvi</code> 可以说起源于正准备上班和刚上班工作不饱和(大雾。为了练习自己对语义化 HTML 理解和 CSS 的渐进式学习而诞生的，到现在已经 2 年了。</p>
+<p>那个时候还用 iPad 画草图然后慢慢写起来，而且当时编程能力确实还挺弱，hexo 很多都弄不清楚。现在对 hexo 就熟悉很多了，设计稿也从随便画画变成了用 sketch，但也是杀鸡用牛刀。</p>
+<p>过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想维护了。</p>
+<p>为什么？因为一旦工作太忙没时间，又想到这个东西，好累啊……</p>
+<p>但，我的意思是，<strong>我不想维护 hexo 版本的 Nlvi 了</strong>，我的意思是，诶嘿嘿嘿嘿嘿！<br><a id="more"></a></p>
+<p>所以 2.0 到 3.0 大概的改动会是：</p>
+<ul>
+<li>根据我对统一风格的想法，(又)变动部分设计风格</li>
+<li>根据我对统一风格的想法，调整部分部件展示形式</li>
+<li>根据我对统一风格的想法，对颜色变量重新管理</li>
+<li>去掉以前的标签云，重写一个</li>
+<li>去掉以前的搜索框，重写一个</li>
+<li>变动部分不成熟动画，改动动画曲线</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常吐槽 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> colmugx </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Redux —— combineReducers]]></title>
       <url>/blog/2019/03/08/combinereducers/</url>
       <content type="html"><![CDATA[<p>事出有因，写 <code>rabbit</code> 的时候，一条单测出了问题</p>
