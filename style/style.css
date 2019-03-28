@@ -1453,6 +1453,7 @@ body.under {
   border-radius: 12px;
   padding: 8px 16px;
   color: #fd9999;
+  font-weight: bold;
   border: 1px solid;
   border-color: transparent #fd9999 transparent #fd9999;
   transition: all 280ms cubic-bezier(0.8, 0, 0.2, 1);

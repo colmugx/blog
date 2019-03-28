@@ -75,12 +75,10 @@
 
 
 
+  <meta name="keywords" content="JavaScript, nlvi" />
 
-  <title>
-  
-    vim · Colmugx 's Blog
-  
-</title>
+
+  <title> 我今天给 let 安排了 · Colmugx 's Blog </title>
 </head>
 <body>
   <div class="container" style="display:none;">
@@ -161,37 +159,170 @@
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
-    
-      <h2 class="archive-title"> 正在查看 </h2>
-      <span class="archive-name"> — vim</span>
-    
-    <div class="archive-list">
-      <ul>
-        
+  
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInUpShort back-1">
+        <div class="post-time-wrapper">
+          <time>2019-03-27</time>
           
-          <li class="archive-post">
-            <a href="/blog/2018/02/13/new-life-nvim/">
-              <span class="archive-post-time">
-              
-                2018-02-13
-              
-              </span>
-              <span class="archive-post-link">
-                抛下不成熟，开始nvim
-              </span>
-            </a>
-          </li>
+            
+              <span class="post-category"><a href="/blog/categories/编程议论/">编程议论</a></span>
+            
+          
+        </div>
+      </div>
+      <h2 class="post-title syuanpi fadeInUpShort back-2">
         
-      </ul>
+          我今天给 let 安排了
+        
+      </h2>
+    </header>
+    <div class="post-content syuanpi fadeInUpShort back-3">
+      
+        <h4 id="Round-1"><a href="#Round-1" class="headerlink" title="Round 1"></a>Round 1</h4><blockquote>
+<p>- 我现在把所有东西都注释掉，改成这样<br>function a() {<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
+<p>- 那就应该 undefined 了，反正后面不执行</p>
+</blockquote>
+<p>自信的不行，出了门掏出全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p>
+<blockquote>
+<p>inner is not defined</p>
+</blockquote>
+<p>确实是不执行，但好像不是 <code>undefined</code> 啊╭(*ﾟДﾟ*)╮</p>
+<h4 id="Round-2"><a href="#Round-2" class="headerlink" title="Round 2"></a>Round 2</h4><blockquote>
+<p>- 如果改成这样呢<br>function a() {<br>  function inner() {}<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
+<p>- 返回方法</p>
+</blockquote>
+<p>自信的不行，同样用全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p>
+<blockquote>
+<p>Identifier ‘inner’ has already been declared</p>
+</blockquote>
+<p>(ﾟДﾟ≡ﾟдﾟ)!? 你在返回你🐴呢？<br><a id="more"></a></p>
+<h3 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h3><p>原本我以为只有 <code>var</code> 会变量提升，实际上错了，<code>var/let/const</code>都会。</p>
+<p><code>var</code> 和 <code>let</code> 在某种时候是相似的，他们都会提升，但 <code>let</code> 少了初始化的过程。MDN 对 <code>let</code> 死区是这么解释的</p>
+<blockquote>
+<p>在 ECMAScript 2015 中，let 绑定不受变量提升的约束，这意味着 let  声明不会被提升到当前执行上下文的顶部。在块中的变量初始化之前，引用它将会导致 ReferenceError（而使用 var 声明变量则恰恰相反，该变量的值是 undefined ）。这个变量处于从块开始到 let 初始化处理的”暂存死区“之中。 —— MDN</p>
+</blockquote>
+<p>暂存死区又有这么个说法，用一个代码块解释一下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  a = <span class="string">'caonima'</span> <span class="comment">// 下面有 let，a 直接被该块锁定，这里报错</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> a <span class="comment">// 到这里才完成初始化，变量开始正常使用，但变量早已提升</span></span><br><span class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// 这里不是 caonima 而是 undefined</span></span><br><span class="line"></span><br><span class="line">  a = <span class="string">'woshinidie'</span></span><br><span class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// woshinidie</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/getify/You-Dont-Know-JS/issues/767" target="_blank" rel="noopener">You-Dont-Know-JS#767</a> 讨论了这个问题, creeperyang 总结了四点</p>
+<blockquote>
+<ol>
+<li>Hoisting includes both declare and initialize.</li>
+<li>Only initialized variable can be used in a scope.</li>
+<li>var do both declare and initialize, the two cannot be split for var.</li>
+<li>let do firstly declare in the top of the scope, and do initialize when encounter the let xxx statements.<br>—— @creeperyang</li>
+</ol>
+</blockquote>
+<p>另外，方应杭在知乎专栏的文章<a href="https://zhuanlan.zhihu.com/p/28140450" target="_blank" rel="noopener">《我用了两个月的时间才理解 let》</a>也总结出</p>
+<blockquote>
+<ol>
+<li>let 的「创建」过程被提升了，但是初始化没有提升。</li>
+<li>var 的「创建」和「初始化」都被提升了。</li>
+<li>function 的「创建」「初始化」和「赋值」都被提升了。<br>—— <a href="https://www.zhihu.com/people/zhihusucks" target="_blank" rel="noopener">@方应杭</a></li>
+</ol>
+</blockquote>
+<p>理论上 <code>const</code> 应该是 <code>let</code> 的不可修改版本，所以应该是类似的。但也仅限提升原理相同，因为 <code>const</code> 只能初始化时赋值一次。</p>
+<p>不过，阮一峰的《ECMAScript 6 入门》是什么意思？在 let 有单独一小节讲 <a href="http://es6.ruanyifeng.com/#docs/let#%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87" target="_blank" rel="noopener">不存在变量提升</a>，虽然后面解释了暂时性死区，但……</p>
+<p>总结：被安排明白了。根据 @Ahonn 所说，这个问题在高程有讲过，书读少了读少了</p>
+<p>（最后感谢所有被引用的文章和作者，谢谢。）</p>
+
+      
+    
+    </div>
+    
+      <div class="post-tags syuanpi fadeInUpShort back-3">
+      
+        <a href="/blog/tags/JavaScript/">JavaScript</a>
+      
+      </div>
+    
+    
+      
+
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作者 :</span>
+      <span>colmugx</span>
+    </div>
+    <div class="copy-url">
+      <span>地址 :</span>
+      <a href="https://colmugx.github.io/blog/2019/03/27/you-dont-know-let/">https://colmugx.github.io/blog/2019/03/27/you-dont-know-let/</a>
+    </div>
+    <div class="copy-origin">
+      <span>来源 :</span>
+      <a href="https://colmugx.github.io/blog">https://colmugx.github.io/blog</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
     </div>
   </div>
+
+    
+  </article>
   
-  <nav class="pagination">
-      <span class="page-number current">1</span>
+    
+  <nav class="article-page">
+    
+    
+      <a href="/blog/2019/03/25/bye-nlvi/" id="art-right" class="art-right">
+        <span class="prev-title">
+          最后的 Nlvi<i class="iconfont icon-enter"></i>
+        </span>
+      </a>
+    
   </nav>
 
 
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+<!-- Disqus Comments -->
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'co1mugxs-blog';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+
+  </div>
+
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章导航</span></span>
+    <div class="toc-inner syuanpi back-1" style="display:none;">
+      <li class="title-link"><a href="javascript:;" class="toTop">我今天给 let 安排了</a></li>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-1"><span class="toc-text">Round 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-2"><span class="toc-text">Round 2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why"><span class="toc-text">Why?</span></a>
+    </div>
+  </aside>
+
+
+
+  
 
 
         </div>

@@ -174,6 +174,65 @@
     <header class="post-header">
       <div class="post-time syuanpi fadeInUpShort back-1">
         <div class="post-time-wrapper">
+          <time>2017-08-14</time>
+          
+            
+              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
+            
+          
+        </div>
+      </div>
+      <h2 class="post-title syuanpi fadeInUpShort back-2">
+        
+          <a href="/blog/2017/08/14/js-call-apply-bind/">JavaScript的call，bind，apply</a>
+        
+      </h2>
+    </header>
+    <div class="post-content syuanpi fadeInUpShort back-3">
+      
+        
+          <blockquote>
+<p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
+</blockquote>
+<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/">关于JavaScript的this</a></p>
+<p>还是上次的代码，修改一下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> test = obj.getName</span><br><span class="line">test()					<span class="comment">//undefined.</span></span><br></pre></td></tr></table></figure>
+<p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.getName()		<span class="comment">//koala</span></span><br></pre></td></tr></table></figure>
+        
+      
+    
+      <p class="content-link">
+        <a href="/blog/2017/08/14/js-call-apply-bind/#more">
+          <span>继续阅读</span>
+        </a>
+      </p>
+    
+    </div>
+    
+      <div class="post-tags syuanpi fadeInUpShort back-3">
+      
+        <a href="/blog/tags/JavaScript/">JavaScript</a>
+      
+      </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInUpShort back-1">
+        <div class="post-time-wrapper">
           <time>2017-08-09</time>
           
             
@@ -539,62 +598,10 @@
   
 
   
-    
-  
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi fadeInUpShort back-1">
-        <div class="post-time-wrapper">
-          <time>2016-10-28</time>
-          
-        </div>
-      </div>
-      <h2 class="post-title syuanpi fadeInUpShort back-2">
-        
-          <a href="/blog/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">关于微信小程序</a>
-        
-      </h2>
-    </header>
-    <div class="post-content syuanpi fadeInUpShort back-3">
-      
-        
-          <blockquote>
-<p>向腾讯大佬低头！</p>
-</blockquote>
-<p><strong>说在前面，你们这下可不能说我这博客天天吹水不讲东西了！</strong></p>
-<h3 id="说说这大佬又想干什么！"><a href="#说说这大佬又想干什么！" class="headerlink" title="说说这大佬又想干什么！"></a>说说这大佬又想干什么！</h3><p>怎么说，腾讯微信真的是野心挺大的，要把微信做成一个应用平台<br>谁还能想的起来微信当时只是定位为一个低流语音信息的即时通讯工具啊！<br>小程序怎么定义呢，就是一个在微信启动的App<br>不过归根到底还是个Web App<br>那这么说来其实也可以说是一个以微信做壳的App了，相对于隔壁那个叫Ionic的东西来说。<br>不过怎么说，这小程序应该也是依托公众号来实现的吧，我看它文档都是在公众号里面。<br>先上地址：<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474887501214" target="_blank" rel="noopener">下载链接</a><br>这开发工具原来就是一个chrome开发者工具，可能是因为加了小程序这么个东西，现在也有开发功能了<br>刚刚试用了一下，效！率！贼！差！（默默打开了Atom）
-        
-      
-    
-      <p class="content-link">
-        <a href="/blog/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
-    
-    </div>
-    
-      <div class="post-tags syuanpi fadeInUpShort back-3">
-      
-        <a href="/blog/tags/weapp/">weapp</a>
-      
-      </div>
-    
-    
-  </article>
-  
-  
-    
-  
-
-  
 </section>
   
   <nav class="pagination">
-      <a class="extend prev" rel="prev" href="/blog/page/3/">上一页</a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="page-number current">4</span>
+      <a class="extend prev" rel="prev" href="/blog/page/3/">上一页</a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/5/">下一页<i class="iconfont icon-enter"></i></a>
   </nav>
 
 
@@ -669,6 +676,10 @@
   <div class="tagcloud-taglist">
   
     <div class="tagcloud-tag">
+      <button>JavaScript</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>Syuanpi</button>
     </div>
   
@@ -677,19 +688,15 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>JavaScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Redux</button>
+      <button>Vue</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Vue</button>
+      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -723,30 +730,6 @@
   </div>
   
     <div class="tagcloud-postlist active">
-      <h2>Syuanpi</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/02/13/Syuanpi-css/">
-            <time class="tagcloud-posttime">2017 / 02 / 13</time>
-            <span>自己造轮子！——Syuanpi.css</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>CSS</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/02/13/Syuanpi-css/">
-            <time class="tagcloud-posttime">2017 / 02 / 13</time>
-            <span>自己造轮子！——Syuanpi.css</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -771,16 +754,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/07/04/different-function/">
-            <time class="tagcloud-posttime">2018 / 07 / 04</time>
-            <span>我就写个方法，这么麻烦？</span>
+          <a href="2018/03/12/dji-interview/">
+            <time class="tagcloud-posttime">2018 / 03 / 12</time>
+            <span>关于四轴的踩坑指南</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/03/12/dji-interview/">
-            <time class="tagcloud-posttime">2018 / 03 / 12</time>
-            <span>关于四轴的踩坑指南</span>
+          <a href="2018/07/04/different-function/">
+            <time class="tagcloud-posttime">2018 / 07 / 04</time>
+            <span>我就写个方法，这么麻烦？</span>
           </a>
         </div>
       
@@ -834,13 +817,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -855,6 +831,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/12/11/vue-jsx/">
             <time class="tagcloud-posttime">2017 / 12 / 11</time>
             <span>使用JSX的VUE应用开发体验</span>
@@ -862,9 +845,40 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2019/03/27/you-dont-know-let/">
+            <time class="tagcloud-posttime">2019 / 03 / 27</time>
+            <span>我今天给 let 安排了</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/02/17/async-await-first/">
             <time class="tagcloud-posttime">2017 / 02 / 17</time>
             <span>async-await 初尝试</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>Syuanpi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/02/13/Syuanpi-css/">
+            <time class="tagcloud-posttime">2017 / 02 / 13</time>
+            <span>自己造轮子！——Syuanpi.css</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>CSS</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/02/13/Syuanpi-css/">
+            <time class="tagcloud-posttime">2017 / 02 / 13</time>
+            <span>自己造轮子！——Syuanpi.css</span>
           </a>
         </div>
       
@@ -890,18 +904,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>Vue</h2>
       
         <div class="tagcloud-post">
@@ -915,6 +917,18 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
           </a>
         </div>
       
@@ -1005,16 +1019,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       

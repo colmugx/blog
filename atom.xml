@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/blog/"/>
-  <updated>2019-03-26T15:50:16.352Z</updated>
+  <updated>2019-03-28T07:50:32.729Z</updated>
   <id>https://colmugx.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我今天给 let 安排了</title>
+    <link href="https://colmugx.github.io/blog/2019/03/27/you-dont-know-let/"/>
+    <id>https://colmugx.github.io/blog/2019/03/27/you-dont-know-let/</id>
+    <published>2019-03-27T10:13:29.000Z</published>
+    <updated>2019-03-28T07:50:32.729Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Round-1"><a href="#Round-1" class="headerlink" title="Round 1"></a>Round 1</h4><blockquote><p>- 我现在把所有东西都注释掉，改成这样<br>function a() {<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p><p>- 那就应该 undefined 了，反正后面不执行</p></blockquote><p>自信的不行，出了门掏出全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p><blockquote><p>inner is not defined</p></blockquote><p>确实是不执行，但好像不是 <code>undefined</code> 啊╭(*ﾟДﾟ*)╮</p><h4 id="Round-2"><a href="#Round-2" class="headerlink" title="Round 2"></a>Round 2</h4><blockquote><p>- 如果改成这样呢<br>function a() {<br>  function inner() {}<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p><p>- 返回方法</p></blockquote><p>自信的不行，同样用全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p><blockquote><p>Identifier ‘inner’ has already been declared</p></blockquote><p>(ﾟДﾟ≡ﾟдﾟ)!? 你在返回你🐴呢？<br><a id="more"></a></p><h3 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h3><p>原本我以为只有 <code>var</code> 会变量提升，实际上错了，<code>var/let/const</code>都会。</p><p><code>var</code> 和 <code>let</code> 在某种时候是相似的，他们都会提升，但 <code>let</code> 少了初始化的过程。MDN 对 <code>let</code> 死区是这么解释的</p><blockquote><p>在 ECMAScript 2015 中，let 绑定不受变量提升的约束，这意味着 let  声明不会被提升到当前执行上下文的顶部。在块中的变量初始化之前，引用它将会导致 ReferenceError（而使用 var 声明变量则恰恰相反，该变量的值是 undefined ）。这个变量处于从块开始到 let 初始化处理的”暂存死区“之中。 —— MDN</p></blockquote><p>暂存死区又有这么个说法，用一个代码块解释一下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  a = <span class="string">'caonima'</span> <span class="comment">// 下面有 let，a 直接被该块锁定，这里报错</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> a <span class="comment">// 到这里才完成初始化，变量开始正常使用，但变量早已提升</span></span><br><span class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// 这里不是 caonima 而是 undefined</span></span><br><span class="line"></span><br><span class="line">  a = <span class="string">'woshinidie'</span></span><br><span class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// woshinidie</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/getify/You-Dont-Know-JS/issues/767" target="_blank" rel="noopener">You-Dont-Know-JS#767</a> 讨论了这个问题, creeperyang 总结了四点</p><blockquote><ol><li>Hoisting includes both declare and initialize.</li><li>Only initialized variable can be used in a scope.</li><li>var do both declare and initialize, the two cannot be split for var.</li><li>let do firstly declare in the top of the scope, and do initialize when encounter the let xxx statements.<br>—— @creeperyang</li></ol></blockquote><p>另外，方应杭在知乎专栏的文章<a href="https://zhuanlan.zhihu.com/p/28140450" target="_blank" rel="noopener">《我用了两个月的时间才理解 let》</a>也总结出</p><blockquote><ol><li>let 的「创建」过程被提升了，但是初始化没有提升。</li><li>var 的「创建」和「初始化」都被提升了。</li><li>function 的「创建」「初始化」和「赋值」都被提升了。<br>—— <a href="https://www.zhihu.com/people/zhihusucks" target="_blank" rel="noopener">@方应杭</a></li></ol></blockquote><p>理论上 <code>const</code> 应该是 <code>let</code> 的不可修改版本，所以应该是类似的。但也仅限提升原理相同，因为 <code>const</code> 只能初始化时赋值一次。</p><p>不过，阮一峰的《ECMAScript 6 入门》是什么意思？在 let 有单独一小节讲 <a href="http://es6.ruanyifeng.com/#docs/let#%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87" target="_blank" rel="noopener">不存在变量提升</a>，虽然后面解释了暂时性死区，但……</p><p>总结：被安排明白了。根据 @Ahonn 所说，这个问题在高程有讲过，书读少了读少了</p><p>（最后感谢所有被引用的文章和作者，谢谢。）</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Round-1&quot;&gt;&lt;a href=&quot;#Round-1&quot; class=&quot;headerlink&quot; title=&quot;Round 1&quot;&gt;&lt;/a&gt;Round 1&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;- 我现在把所有东西都注释掉，改成这样&lt;br&gt;function a() {&lt;br&gt;  return inner;&lt;br&gt;  let inner;&lt;br&gt;}&lt;br&gt;返回什么？&lt;/p&gt;
+&lt;p&gt;- 那就应该 undefined 了，反正后面不执行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自信的不行，出了门掏出全世界最牛逼的千元机&lt;strong&gt;坚果 Pro 2S&lt;/strong&gt;，验证了一下。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;inner is not defined&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;确实是不执行，但好像不是 &lt;code&gt;undefined&lt;/code&gt; 啊╭(*ﾟДﾟ*)╮&lt;/p&gt;
+&lt;h4 id=&quot;Round-2&quot;&gt;&lt;a href=&quot;#Round-2&quot; class=&quot;headerlink&quot; title=&quot;Round 2&quot;&gt;&lt;/a&gt;Round 2&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;- 如果改成这样呢&lt;br&gt;function a() {&lt;br&gt;  function inner() {}&lt;br&gt;  return inner;&lt;br&gt;  let inner;&lt;br&gt;}&lt;br&gt;返回什么？&lt;/p&gt;
+&lt;p&gt;- 返回方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自信的不行，同样用全世界最牛逼的千元机&lt;strong&gt;坚果 Pro 2S&lt;/strong&gt;，验证了一下。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Identifier ‘inner’ has already been declared&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(ﾟДﾟ≡ﾟдﾟ)!? 你在返回你🐴呢？&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程议论" scheme="https://colmugx.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E8%AE%AE%E8%AE%BA/"/>
+    
+    
+      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>最后的 Nlvi</title>
@@ -524,32 +563,6 @@
 &lt;p&gt;总之为什么这么写，我自己觉得这样容易理解，方便盲僧（理清）。&lt;/p&gt;
 &lt;p&gt;还有最近关于“如何治理别人爱装逼的毛病”系列中刚写的一坨，新鲜的：&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; menuItem = &lt;span class=&quot;function&quot;&gt;(&lt;span class=&quot;params&quot;&gt;list&lt;/span&gt;) =&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      list.map(&lt;span class=&quot;function&quot;&gt;(&lt;span class=&quot;params&quot;&gt;&amp;#123;title, color, icon, descs&amp;#125;&lt;/span&gt;) =&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;lt;menu-item title=&amp;#123;title&amp;#125; color=&amp;#123;color&amp;#125; icon=&amp;#123;icon&amp;#125;&amp;gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          descs.map(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;v&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;lt;span&amp;gt;&amp;#123;v&amp;#125;&amp;lt;&lt;span class=&quot;regexp&quot;&gt;/span&amp;gt;)&amp;#125;&amp;lt;/m&lt;/span&gt;enu-item&amp;gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="前端思考" scheme="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/"/>
-    
-    
-      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你还在用Console.log()？</title>
-    <link href="https://colmugx.github.io/blog/2017/11/20/js-console/"/>
-    <id>https://colmugx.github.io/blog/2017/11/20/js-console/</id>
-    <published>2017-11-20T10:06:13.000Z</published>
-    <updated>2019-03-22T16:07:34.681Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>也许主题应该改为：你只会使用Console.log()？</p></blockquote><p>现在的前端虽说是越来越复杂，但是我怎么觉得现在前端的要求越来越低了？应该说现在的人，看个几遍vue，知道console.log()，知道var, {}, []，就敢出来找工作了。但是<code>console</code>就这么个方法？</p><p>搞笑，你在你的浏览器输入<code>console</code>，自己看看有多少东西！所以为了高效调试我觉得有必要全了解一遍。<br><a id="more"></a></p><h3 id="log-info-error-warn"><a href="#log-info-error-warn" class="headerlink" title="log(), info(), error(), warn()"></a>log(), info(), error(), warn()</h3><p>这几个放在一起讲</p><blockquote><p>log() 普通输出</p></blockquote><p>这是最普通，最常见，最没什么东西好讲的。输出的样式是普通样式。</p><blockquote><p>info() 提醒输出</p></blockquote><p>这是一个早期chrome才能看到的效果，现在的FireFox也能看到，是一个圆形中间一个叹号的标记。作提醒作用。chrome不是不会显示，是显示成普通样式。</p><blockquote><p>error() 错误输出</p></blockquote><p>这个应该跟<code>log()</code>同个使用数量级的，表示错误，大红颜色。chrome表现是一整行都是红色的，很显眼。用来显示错误信息。比如throw 错误之类的。如果一套都是<code>log()</code>的话肯定很难一眼看到错误。珍爱视力，路还长着…</p><blockquote><p>warn() 警告输出</p></blockquote><p>就是警告咯，可能用的比较少，但是工具类和一些库肯定会容易看到，原来跟<code>info()</code>平起平坐，现在应该是替代了。显示效果会显眼的黄色，chrome会有黄色背景。</p><blockquote><p>debug() 调试输出</p></blockquote><p>这个就是<code>log()</code>，用来输出调试信息的。不过现在的调试信息都在花式<code>log()</code>，也不需要用到这个了。</p><h3 id="exception-debug"><a href="#exception-debug" class="headerlink" title="_exception(), debug()"></a>_exception(), debug()</h3><p>这组只有两个，因为这两个没卵用…为什么…</p><blockquote><p>_exception() 例外输出</p></blockquote><p>说白了就是用来输出错误的，那错误不能用<code>error()</code>吗？！</p><blockquote><p>debug() 调试输出</p></blockquote><p>早期可能还有区别，但是这就是一个<code>log()</code>，不过现在各前端都在花式<code>log()</code>调试信息，可能也有些人<code>debug()</code>都没听说过。</p><h3 id="assert-…-clear-count"><a href="#assert-…-clear-count" class="headerlink" title="assert(…), clear(), count()"></a>assert(…), clear(), count()</h3><p>为什么第一个函数搞了三个点？</p><blockquote><p>assert() 断言输出：判断第一个参数是否为真，false的话抛出异常并且在控制台输出相应信息。——MDN</p></blockquote><p>从这里开始就要骚了，这是一个判断的方法，里面需要填写参数，然后得到返回值。如果值为真，就什么都不会发生，反之则以<code>error()</code>通知你。这是个多参数的，除了第一个参数之外，后面接的参数是被输出的对象也好，字符串也好，并且会拼接。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.assert(<span class="number">1</span>&gt;<span class="number">2</span>, <span class="string">"你这么骚的？"</span>)</span><br><span class="line"></span><br><span class="line">Assertion failed: 你这么骚的？ <span class="comment">// 假装这里是红字红色背景</span></span><br></pre></td></tr></table></figure><blockquote><p>clear() 清空控制台</p></blockquote><p>就是把控制台全清空，terminal里面的<code>clear</code></p><blockquote><p>count() 次数输出：以参数为标识记录调用的次数，调用时在控制台打印标识以及调用次数。——MDN</p></blockquote><p>并且MDN明确指出，这个不应该列入正常使用范围，因为这是非标准方法。这是这组里最骚的方法。用来输出本身被调用了几次…虽然如果测试循环的话，一般都直接log(i)的，直接看1234567不是更明确嘛。显示效果就是，每运行一次就会在控制台打印 n + 1。</p><h3 id="dir-dirxml"><a href="#dir-dirxml" class="headerlink" title="dir(), dirxml()"></a>dir(), dirxml()</h3><p>这两个一起说是因为，有相同点和不同点。</p><blockquote><p>dir() 对象结构输出</p><p>dirxml() 节点结构输出</p></blockquote><p>这两个都是输出一个树状结构，就是前面有个小三角。但不同点就是，<code>dir()</code>是把一个对象按照对象的形式呈现，当然用来输出节点就是把节点信息按object呈现。<code>dirxml()</code>是把节点呈现出来，就还是保留xml的样式呈现。都是非标准，偶尔用用还行？</p><h3 id="group-groupCollapsed-groupEnd"><a href="#group-groupCollapsed-groupEnd" class="headerlink" title="group(), groupCollapsed(), groupEnd()"></a>group(), groupCollapsed(), groupEnd()</h3><p>这是上面那组的正房版。都是打印结构。我就不一行一行解释了有点累…</p><p>第二跟第一都是打印树状结构，但是第一个会自动打开显示结构里面有什么结构（没问题的），第二个叫内联树状，默认不打开。</p><p>而且只要你不结束，你可以一直联下去的，这样一个父节点可以一直续下去…直到通过<code>groupend()</code>来结束。</p><h3 id="table-…"><a href="#table-…" class="headerlink" title="table(…)"></a>table(…)</h3><p>我必须强调！<strong>这是最棒的我最喜欢的console方法，没有之一！</strong></p><blockquote><p>table() 表格输出</p></blockquote><p>这个方法必须传入内容，内容的类型是array或者object，输出的样式是一个key:value的表格！如果你觉得输出成对象不方便检查的话，那就用<code>table()</code>吧！（当然在表格下方还是会return一次对象或者数组）</p><p>而且不仅是key:value，<strong>你甚至还能多元数组！对象套对象！甚至是JSON！</strong></p><h3 id="另外的技巧就是可以用占位符了"><a href="#另外的技巧就是可以用占位符了" class="headerlink" title="另外的技巧就是可以用占位符了"></a>另外的技巧就是可以用占位符了</h3><p>跟C语言的<code>printf()</code>没有区别，就是可以利用占位符然后再把参数接在后面。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"%d年%d月%d日"</span>,<span class="number">2017</span>,<span class="number">11</span>,<span class="number">20</span>)</span><br></pre></td></tr></table></figure><p>最后感谢MDN，也感谢AlphaGo！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;也许主题应该改为：你只会使用Console.log()？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;现在的前端虽说是越来越复杂，但是我怎么觉得现在前端的要求越来越低了？应该说现在的人，看个几遍vue，知道console.log()，知道var, {}, []，就敢出来找工作了。但是&lt;code&gt;console&lt;/code&gt;就这么个方法？&lt;/p&gt;
-&lt;p&gt;搞笑，你在你的浏览器输入&lt;code&gt;console&lt;/code&gt;，自己看看有多少东西！所以为了高效调试我觉得有必要全了解一遍。&lt;br&gt;
     
     </summary>
     

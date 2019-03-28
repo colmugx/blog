@@ -174,6 +174,75 @@
     <header class="post-header">
       <div class="post-time syuanpi fadeInUpShort back-1">
         <div class="post-time-wrapper">
+          <time>2019-03-27</time>
+          
+            
+              <span class="post-category"><a href="/blog/categories/编程议论/">编程议论</a></span>
+            
+          
+        </div>
+      </div>
+      <h2 class="post-title syuanpi fadeInUpShort back-2">
+        
+          <a href="/blog/2019/03/27/you-dont-know-let/">我今天给 let 安排了</a>
+        
+      </h2>
+    </header>
+    <div class="post-content syuanpi fadeInUpShort back-3">
+      
+        
+          <h4 id="Round-1"><a href="#Round-1" class="headerlink" title="Round 1"></a>Round 1</h4><blockquote>
+<p>- 我现在把所有东西都注释掉，改成这样<br>function a() {<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
+<p>- 那就应该 undefined 了，反正后面不执行</p>
+</blockquote>
+<p>自信的不行，出了门掏出全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p>
+<blockquote>
+<p>inner is not defined</p>
+</blockquote>
+<p>确实是不执行，但好像不是 <code>undefined</code> 啊╭(*ﾟДﾟ*)╮</p>
+<h4 id="Round-2"><a href="#Round-2" class="headerlink" title="Round 2"></a>Round 2</h4><blockquote>
+<p>- 如果改成这样呢<br>function a() {<br>  function inner() {}<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
+<p>- 返回方法</p>
+</blockquote>
+<p>自信的不行，同样用全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p>
+<blockquote>
+<p>Identifier ‘inner’ has already been declared</p>
+</blockquote>
+<p>(ﾟДﾟ≡ﾟдﾟ)!? 你在返回你🐴呢？<br>
+        
+      
+    
+      <p class="content-link">
+        <a href="/blog/2019/03/27/you-dont-know-let/#more">
+          <span>继续阅读</span>
+        </a>
+      </p>
+    
+    </div>
+    
+      <div class="post-tags syuanpi fadeInUpShort back-3">
+      
+        <a href="/blog/tags/JavaScript/">JavaScript</a>
+      
+      </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInUpShort back-1">
+        <div class="post-time-wrapper">
           <time>2019-03-25</time>
           
             
@@ -554,66 +623,10 @@
   
 
   
-    
-  
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi fadeInUpShort back-1">
-        <div class="post-time-wrapper">
-          <time>2018-03-12</time>
-          
-            
-              <span class="post-category"><a href="/blog/categories/前端思考/">前端思考</a></span>
-            
-          
-        </div>
-      </div>
-      <h2 class="post-title syuanpi fadeInUpShort back-2">
-        
-          <a href="/blog/2018/03/12/dji-interview/">关于四轴的踩坑指南</a>
-        
-      </h2>
-    </header>
-    <div class="post-content syuanpi fadeInUpShort back-3">
-      
-        
-          <p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p>
-<p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和工牌套子。</p>
-<p>总结一下印象深刻受苦的问题和答案，不过有一点想吐槽的…就<code>vue</code>和<code>react</code>之间的关系和选择，我看到了高一文理科分班的那种影子：人家都是哪科分高选哪科，我是选分低 + 主管臆想……<br>
-        
-      
-    
-      <p class="content-link">
-        <a href="/blog/2018/03/12/dji-interview/#more">
-          <span>继续阅读</span>
-        </a>
-      </p>
-    
-    </div>
-    
-      <div class="post-tags syuanpi fadeInUpShort back-3">
-      
-        <a href="/blog/tags/JavaScript/">JavaScript</a>
-      
-        <a href="/blog/tags/Vue/">Vue</a>
-      
-      </div>
-    
-    
-  </article>
-  
-  
-    
-  
-
-  
 </section>
   
   <nav class="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/2/">下一页<i class="iconfont icon-enter"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/2/">下一页<i class="iconfont icon-enter"></i></a>
   </nav>
 
 
@@ -688,6 +701,10 @@
   <div class="tagcloud-taglist">
   
     <div class="tagcloud-tag">
+      <button>JavaScript</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>Syuanpi</button>
     </div>
   
@@ -696,19 +713,15 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>JavaScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Redux</button>
+      <button>Vue</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Vue</button>
+      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -742,30 +755,6 @@
   </div>
   
     <div class="tagcloud-postlist active">
-      <h2>Syuanpi</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/02/13/Syuanpi-css/">
-            <time class="tagcloud-posttime">2017 / 02 / 13</time>
-            <span>自己造轮子！——Syuanpi.css</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>CSS</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/02/13/Syuanpi-css/">
-            <time class="tagcloud-posttime">2017 / 02 / 13</time>
-            <span>自己造轮子！——Syuanpi.css</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -790,16 +779,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/07/04/different-function/">
-            <time class="tagcloud-posttime">2018 / 07 / 04</time>
-            <span>我就写个方法，这么麻烦？</span>
+          <a href="2018/03/12/dji-interview/">
+            <time class="tagcloud-posttime">2018 / 03 / 12</time>
+            <span>关于四轴的踩坑指南</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/03/12/dji-interview/">
-            <time class="tagcloud-posttime">2018 / 03 / 12</time>
-            <span>关于四轴的踩坑指南</span>
+          <a href="2018/07/04/different-function/">
+            <time class="tagcloud-posttime">2018 / 07 / 04</time>
+            <span>我就写个方法，这么麻烦？</span>
           </a>
         </div>
       
@@ -853,13 +842,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -874,6 +856,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/12/11/vue-jsx/">
             <time class="tagcloud-posttime">2017 / 12 / 11</time>
             <span>使用JSX的VUE应用开发体验</span>
@@ -881,9 +870,40 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2019/03/27/you-dont-know-let/">
+            <time class="tagcloud-posttime">2019 / 03 / 27</time>
+            <span>我今天给 let 安排了</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/02/17/async-await-first/">
             <time class="tagcloud-posttime">2017 / 02 / 17</time>
             <span>async-await 初尝试</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>Syuanpi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/02/13/Syuanpi-css/">
+            <time class="tagcloud-posttime">2017 / 02 / 13</time>
+            <span>自己造轮子！——Syuanpi.css</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>CSS</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/02/13/Syuanpi-css/">
+            <time class="tagcloud-posttime">2017 / 02 / 13</time>
+            <span>自己造轮子！——Syuanpi.css</span>
           </a>
         </div>
       
@@ -909,18 +929,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>Vue</h2>
       
         <div class="tagcloud-post">
@@ -934,6 +942,18 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
           </a>
         </div>
       
@@ -1024,16 +1044,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
