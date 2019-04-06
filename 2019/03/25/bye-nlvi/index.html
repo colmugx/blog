@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -140,26 +140,17 @@
       </a>
     </li>
   
+  
+    
+      <li class="menu-item">
+        <a href="javascript:;" id="switch-toc">文章导航</a>
+      </li>
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1" style="display:none;">
-      <li class="title-link"><a href="javascript:;" class="toTop">最后的 Nlvi</a></li>
-      
-    </div>
-  </aside>
-
-
-
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -174,6 +165,21 @@
   </div>
 </div>
 
+
+  
+  
+  <aside class="post-toc">
+    <div class="title" id="toc-switch"><span>文章导航</span></div>
+    <div class="toc-inner syuanpi back-1">
+      
+    </div>
+  </aside>
+
+
+
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
@@ -185,7 +191,7 @@
    is_post 
   ">
     <header class="post-header">
-      <div class="post-time syuanpi fadeInUpShort back-1">
+      <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
           <time>2019-03-25</time>
           
@@ -195,17 +201,17 @@
           
         </div>
       </div>
-      <h2 class="post-title syuanpi fadeInUpShort back-2">
+      <h2 class="post-title syuanpi fadeInRightShort back-2">
         
           最后的 Nlvi
         
       </h2>
     </header>
-    <div class="post-content syuanpi fadeInUpShort back-3">
+    <div class="post-content syuanpi fadeInRightShort back-3">
       
         <p><code>Nlvi</code> 可以说起源于正准备上班和刚上班工作不饱和(大雾。为了练习自己对语义化 HTML 理解和 CSS 的渐进式学习而诞生的，到现在已经 2 年了。</p>
 <p>那个时候还用 iPad 画草图然后慢慢写起来，而且当时编程能力确实还挺弱，hexo 很多都弄不清楚。现在对 hexo 就熟悉很多了，设计稿也从随便画画变成了用 sketch，但也是杀鸡用牛刀。</p>
-<p>过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想维护了。</p>
+<p>过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想迭代了。</p>
 <p>为什么？因为一旦工作太忙没时间，又想到这个东西，好累啊……</p>
 <p>但，我的意思是，<strong>我不想维护 hexo 版本的 Nlvi 了</strong>，我的意思是，诶嘿嘿嘿嘿嘿！<br><a id="more"></a></p>
 <p>所以 2.0 到 3.0 大概的改动会是：</p>
@@ -223,7 +229,7 @@
     
     </div>
     
-      <div class="post-tags syuanpi fadeInUpShort back-3">
+      <div class="post-tags syuanpi fadeInRightShort back-3">
       
         <a href="/blog/tags/colmugx/">colmugx</a>
       
@@ -410,11 +416,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -515,16 +521,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -543,6 +549,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -553,13 +566,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -668,18 +674,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -706,6 +700,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -721,16 +727,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -798,14 +804,22 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
+<script>
+setTimeout(function() {
+  $("#header").addClass("show_toc");
+}, 1000);
+</script>
+
 
 
 </body>

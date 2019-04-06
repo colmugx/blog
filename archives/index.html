@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -142,15 +142,13 @@
       </a>
     </li>
   
+  
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -165,175 +163,248 @@
   </div>
 </div>
 
+
+  
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  <div class="archive syuanpi fadeInRightShort" id="archive">
     
-      <h1 class="archive-title">Total</h1>
+      <aside class="archive-title">Total</aside>
       <span class="archive-num">一共有 33 篇文章</span>
     
-    <div class="archive-list">
-      <ul>
+      
+      
         
           
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2019 </h2>
-              
-            
           
-          <li class="archive-post">
-            <a href="/blog/2019/03/27/you-dont-know-let/">
-              <span class="archive-post-time">
-              
-                03-27
-              
-              </span>
-              <span class="archive-post-link">
-                我今天给 let 安排了
-              </span>
+            
+            
+            <div class="archive-group">
+            <time class="archive-year"> 2019 </time>
+            <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <h4 id="Round-1"><a href="#Round-1" class="headerlink" title="Round 1"></a>Round 1</h4><blockquote>
+<p>- 我现在把所有东西都注释掉，改成这样<br>function a() {<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
+<p>- 那就应该 undefined 了，反正后面不执行</p>
+</blockquote>
+<p>自信的不行，出了门掏出全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p>
+<blockquote>
+<p>inner is not defined</p>
+</blockquote>
+<p>确实是不执行，但好像不是 <code>undefined</code> 啊╭(*ﾟДﾟ*)╮</p>
+<h4 id="Round-2"><a href="#Round-2" class="headerlink" title="Round 2"></a>Round 2</h4><blockquote>
+<p>- 如果改成这样呢<br>function a() {<br>  function inner() {}<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
+<p>- 返回方法</p>
+</blockquote>
+<p>自信的不行，同样用全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p>
+<blockquote>
+<p>Identifier ‘inner’ has already been declared</p>
+</blockquote>
+<p>(ﾟДﾟ≡ﾟдﾟ)!? 你在返回你🐴呢？<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2019-03-27
+            </time>
+            <a class="archive-post-link" href="/blog/2019/03/27/you-dont-know-let/">
+              我今天给 let 安排了
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2019/03/25/bye-nlvi/">
-              <span class="archive-post-time">
-              
-                03-25
-              
-              </span>
-              <span class="archive-post-link">
-                最后的 Nlvi
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p><code>Nlvi</code> 可以说起源于正准备上班和刚上班工作不饱和(大雾。为了练习自己对语义化 HTML 理解和 CSS 的渐进式学习而诞生的，到现在已经 2 年了。</p>
+<p>那个时候还用 iPad 画草图然后慢慢写起来，而且当时编程能力确实还挺弱，hexo 很多都弄不清楚。现在对 hexo 就熟悉很多了，设计稿也从随便画画变成了用 sketch，但也是杀鸡用牛刀。</p>
+<p>过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想迭代了。</p>
+<p>为什么？因为一旦工作太忙没时间，又想到这个东西，好累啊……</p>
+<p>但，我的意思是，<strong>我不想维护 hexo 版本的 Nlvi 了</strong>，我的意思是，诶嘿嘿嘿嘿嘿！<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2019-03-25
+            </time>
+            <a class="archive-post-link" href="/blog/2019/03/25/bye-nlvi/">
+              最后的 Nlvi
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2019/03/23/last-test-questions/">
-              <span class="archive-post-time">
-              
-                03-23
-              
-              </span>
-              <span class="archive-post-link">
-                做不完的题目
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>又在「杂乱的工作台上」完成文章……</p>
+<p>没错又错过一个非常好的机会。与其说是因为时间不够做不完，还不如说是因为陷入斐波那契思考导致做不完。</p>
+<p>不留遗憾，把它搞完。题源就不说了。<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2019-03-23
+            </time>
+            <a class="archive-post-link" href="/blog/2019/03/23/last-test-questions/">
+              做不完的题目
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2019/03/08/combinereducers/">
-              <span class="archive-post-time">
-              
-                03-08
-              
-              </span>
-              <span class="archive-post-link">
-                Redux —— combineReducers
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>事出有因，写 <code>rabbit</code> 的时候，一条单测出了问题</p>
+<blockquote>
+<p>Reducer _object returned undefined during initialization.</p>
+</blockquote>
+<p>想来必然是 <code>reducer</code> 缺少默认的 <code>state</code> 所致，<del>但是我的单测是从 <code>dva</code> 直接拿过来改改就用的，应该不会出现问题，所以一定是哪里出了差错。后面发现了，虽然 <code>dva</code> 可以接受 <code>reducers</code> 是空对象，但应用运行起来有一样问题。</del></p>
+<p>主要是这个问题无伤大雅，<code>model</code> 不会出现只有 <code>reducers</code> 这种情况。我也给出了解决：构建 <code>reducer</code> 给一个默认 <code>state</code> 顶着（但我认为一个 <code>model</code> 应该强制存在 <code>state</code>）</p>
+<p>显然这次并不想讲这个，而是想理解 <code>combineReducers</code><br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2019-03-08
+            </time>
+            <a class="archive-post-link" href="/blog/2019/03/08/combinereducers/">
+              Redux —— combineReducers
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2019/03/02/about-redux/">
-              <span class="archive-post-time">
-              
-                03-02
-              
-              </span>
-              <span class="archive-post-link">
-                看过 Redux 之后，我写了一个不负责任的状态管理
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>我们现在小程序需要使用状态管理，但因为项目体量实在很小又没必要使用 redux 或者 mobx。所以我打算不负责任的写一个。</p>
+<h3 id="createStore"><a href="#createStore" class="headerlink" title="createStore"></a>createStore</h3><p>Redux 最核心的部分，提供基础的功能。<code>createStore</code>接受三个参数：<code>reducer</code>, <code>initialState</code>, <code>enhancer</code>。前两个比较好理解，<code>enhancer</code>主要用在接受中间件中。返回产物我们主要使用三个方法：<code>getState</code>, <code>dispatch</code>, <code>subscribe</code>。</p>
+<ul>
+<li><code>getState</code>：获取当前 state 值</li>
+<li><code>subscribe</code>：接受监听，存入 <code>listeners</code> 池中</li>
+<li><code>dispatch</code>：处理 <code>reducer</code> 操作，触发 <code>listeners</code> 方法
+            
+          </li></ul></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2019-03-02
+            </time>
+            <a class="archive-post-link" href="/blog/2019/03/02/about-redux/">
+              看过 Redux 之后，我写了一个不负责任的状态管理
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2018 </h2>
-              
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/11/19/gamble-fn/">
-              <span class="archive-post-time">
-              
-                11-19
-              
-              </span>
-              <span class="archive-post-link">
-                一位赌狗前端的自我修养
-              </span>
+            
+              </div>
+            
+            
+            <div class="archive-group">
+            <time class="archive-year"> 2018 </time>
+            <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>这两个月工作巨多，直到今天才有时间写点骚东西。</p>
+<p>可是要写点什么比较好呢？这时候看到了隔壁桌面上放着一张福彩，我脑子里有画面了。（所以这位赌狗不是我，我不买彩票）</p>
+<p>为了方便以后支持更多的彩票，直接搞个类</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Gamble &#123;</span><br><span class="line">    <span class="keyword">static</span> dualColor(red: <span class="built_in">number</span> = <span class="number">6</span>, blue: <span class="built_in">number</span> = <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> reds: [<span class="built_in">number</span>, <span class="built_in">number</span>] = [<span class="number">1</span>, <span class="number">33</span>];</span><br><span class="line">        <span class="keyword">const</span> blues: [<span class="built_in">number</span>, <span class="built_in">number</span>] = [<span class="number">1</span>, <span class="number">16</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> [<span class="keyword">this</span>.randomVal(reds, red), <span class="keyword">this</span>.randomVal(blues, blue)];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> randomVal(</span><br><span class="line">        fromto: <span class="built_in">number</span>[],</span><br><span class="line">        total: <span class="built_in">number</span>,</span><br><span class="line">        temp: <span class="built_in">number</span>[] = [],</span><br><span class="line">    ): <span class="built_in">number</span>[] &#123;</span><br><span class="line">        <span class="keyword">const</span> [head, ...body] = (!temp.length</span><br><span class="line">            ? [...Array(fromto[<span class="number">1</span>]).keys()]</span><br><span class="line">                  .map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>)</span><br><span class="line">                  .splice(fromto[<span class="number">0</span>] - <span class="number">1</span>)</span><br><span class="line">            : fromto</span><br><span class="line">        ).sort(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">Math</span>.random() - <span class="number">0.5</span>);</span><br><span class="line">        <span class="keyword">return</span> !total</span><br><span class="line">            ? temp</span><br><span class="line">            : <span class="keyword">this</span>.randomVal(body, total - <span class="number">1</span>, temp.concat(head));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-11-19
+            </time>
+            <a class="archive-post-link" href="/blog/2018/11/19/gamble-fn/">
+              一位赌狗前端的自我修养
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/07/12/kill-parentless-on-npm/">
-              <span class="archive-post-time">
-              
-                07-12
-              
-              </span>
-              <span class="archive-post-link">
-                记在NPM抢空包名的经历
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>强烈谴责某些大厂，前端或者说 JavaScript 是一个极其依赖社区环境的语言，你们在招人之前能不能先调查一下准新人有没有在社区为非作歹？</p>
+</blockquote>
+<p>年前想搞定<code>React</code>的时候想了个骚操作：尝试用<code>React</code>的思路去做<code>Vue</code>的事情。又诞生了「Vue生态统一可以聚合」的骚想法，开始产生做<code>Ahri</code>的念头。想着那得搞个 npm 包吧，孤儿上线了。</p>
+<p>嘛，在 npm 拿《英雄联盟》英雄名字抢注包名的做法都很弱智了，还“大义凛然”的在描述里写着：<code>League of Legends hero.</code></p>
+<p>关于第一次遇到它的时候，我就想算了，重新找合适的名字吧，但后来因为其他原因就搁置了。现在重新回坑，依然遇到这个问题，这次我不忍了，我打算找 npm 肛他！</p>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-07-12
+            </time>
+            <a class="archive-post-link" href="/blog/2018/07/12/kill-parentless-on-npm/">
+              记在NPM抢空包名的经历
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/07/04/different-function/">
-              <span class="archive-post-time">
-              
-                07-04
-              
-              </span>
-              <span class="archive-post-link">
-                我就写个方法，这么麻烦？
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>最近想到一个问题：为什么JavaScript定义一个函数有那么多种形式，是历史残留还是为了装逼？研究了一下发现还是有区别的。</p>
+<p>JavaScript中定义一个方法主要可以分成两种形式：</p>
+<ul>
+<li>函数声明</li>
+<li>函数表达式</li>
+</ul>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-07-04
+            </time>
+            <a class="archive-post-link" href="/blog/2018/07/04/different-function/">
+              我就写个方法，这么麻烦？
             </a>
-          </li>
+          </div>
+        </div>
+      
+      
         
-      </ul>
-    </div>
+      
   </div>
   
   <nav class="pagination">
@@ -344,7 +415,7 @@
 
 
         </div>
-      </main>
+      </div></div></div></main>
       <footer class="footer syuanpi fadeIn" id="footer">
   <hr>
   <div class="footer-wrapper">
@@ -445,11 +516,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -550,16 +621,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -578,6 +649,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -588,13 +666,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -703,18 +774,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -741,6 +800,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -756,16 +827,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -833,14 +904,16 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
 
 
 </body>

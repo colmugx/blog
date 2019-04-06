@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -142,15 +142,13 @@
       </a>
     </li>
   
+  
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -165,80 +163,107 @@
   </div>
 </div>
 
+
+  
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  <div class="archive syuanpi fadeInRightShort" id="archive">
     
-      <h1 class="archive-title">Total</h1>
+      <aside class="archive-title">Total</aside>
       <span class="archive-num">一共有 33 篇文章</span>
     
-    <div class="archive-list">
-      <ul>
+      
+      
         
           
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2017 </h2>
-              
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/08/22/do-markdown-hexo/">
-              <span class="archive-post-time">
-              
-                08-22
-              
-              </span>
-              <span class="archive-post-link">
-                搞electron + vue + webpack2 + TypeScript什么体验
-              </span>
+            
+            
+            <div class="archive-group">
+            <time class="archive-year"> 2017 </time>
+            <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>本来是想放弃的，后来歪打正着，成功运行。最后搞一个ts类型的启动器，不想再懵了。</p>
+<p><a href="https://github.com/ColMugX/vue-ts-electron-starter" target="_blank" rel="noopener">vue-ts-electron-starter</a></p>
+<p>想看看原项目<code>electron-vue</code>有没有这个打算，没有的话自己fork个分支出来。这个将就。</p>
+<p>这次搞这个项目目的就很明显了，想做一个Hexo博客的编辑器（没错就是我这个博客的核心）。Hexo的话，属于页面生成器类的博客系统。直接一套生成静态页面，然后随意访问。因为一整套静态页面故还是有人喜欢直接干一套SPA上去，体验也好。</p>
+<p>其实搞这个，我去年就想搞了。可是去年的话，明显前端的技术都不扎实更别说搞了，当时的想法是写一个Mac App（我swift应该还行，随便写写问题不大。不过可能现在的话问题就大了）。不过就一直拖拖拖，导致swift3.0都有苗头了我还是没想写。而且关于如何操作terminal命令，还是个问题。</p>
+<p>这次心就大了。搞了再说，搞一半不行了就让他荒了。以后想起来再搞，再搞的时候技术肯定又上涨。如果这波做成了，开源，我不管有没有人用，总有人喜欢用。<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-08-22
+            </time>
+            <a class="archive-post-link" href="/blog/2017/08/22/do-markdown-hexo/">
+              搞electron + vue + webpack2 + TypeScript什么体验
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/08/14/js-call-apply-bind/">
-              <span class="archive-post-time">
-              
-                08-14
-              
-              </span>
-              <span class="archive-post-link">
-                JavaScript的call，bind，apply
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>联动水文，大约半年前记录了Javascript的this。顺水推舟理一下call()，bind()，apply()</p>
+</blockquote>
+<p>扩展阅读：<a href="https://colmugx.github.io/PersonalBlog/2017/03/03/js-this/">关于JavaScript的this</a></p>
+<p>还是上次的代码，修改一下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> test = obj.getName</span><br><span class="line">test()					<span class="comment">//undefined.</span></span><br></pre></td></tr></table></figure>
+<p>（敲黑板！）复习一下！为什么就<code>undefined</code>了！原因就是，<code>this</code>指向不同了。那么直接运行是否可以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'panda'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name: <span class="string">'koala'</span>,</span><br><span class="line">    getName() &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.getName()		<span class="comment">//koala</span></span><br></pre></td></tr></table></figure>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-08-14
+            </time>
+            <a class="archive-post-link" href="/blog/2017/08/14/js-call-apply-bind/">
+              JavaScript的call，bind，apply
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/08/09/about-conditionals/">
-              <span class="archive-post-time">
-              
-                08-09
-              
-              </span>
-              <span class="archive-post-link">
-                关于Javascript的条件判断
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>记录这个不为什么，就是遇到SB，不想争执。</p>
+</blockquote>
+<p>撕逼文，小标题都会比较小，方便撕逼思路的连续性！<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-08-09
+            </time>
+            <a class="archive-post-link" href="/blog/2017/08/09/about-conditionals/">
+              关于Javascript的条件判断
             </a>
-          </li>
+          </div>
+        </div>
+      
+      
         
-      </ul>
-    </div>
+      
   </div>
   
   <nav class="pagination">
@@ -249,7 +274,7 @@
 
 
         </div>
-      </main>
+      </div></div></main>
       <footer class="footer syuanpi fadeIn" id="footer">
   <hr>
   <div class="footer-wrapper">
@@ -350,11 +375,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -455,16 +480,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -483,6 +508,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -493,13 +525,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -608,18 +633,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -646,6 +659,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -661,16 +686,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -738,14 +763,16 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
 
 
 </body>

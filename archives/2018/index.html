@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -142,15 +142,13 @@
       </a>
     </li>
   
+  
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -165,170 +163,227 @@
   </div>
 </div>
 
+
+  
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  <div class="archive syuanpi fadeInRightShort" id="archive">
     
-      <h1 class="archive-title">Total</h1>
+      <aside class="archive-title">Total</aside>
       <span class="archive-num">一共有 33 篇文章</span>
     
-    <div class="archive-list">
-      <ul>
+      
+      
         
           
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2018 </h2>
-              
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/11/19/gamble-fn/">
-              <span class="archive-post-time">
-              
-                11-19
-              
-              </span>
-              <span class="archive-post-link">
-                一位赌狗前端的自我修养
-              </span>
+            
+            
+            <div class="archive-group">
+            <time class="archive-year"> 2018 </time>
+            <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>这两个月工作巨多，直到今天才有时间写点骚东西。</p>
+<p>可是要写点什么比较好呢？这时候看到了隔壁桌面上放着一张福彩，我脑子里有画面了。（所以这位赌狗不是我，我不买彩票）</p>
+<p>为了方便以后支持更多的彩票，直接搞个类</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Gamble &#123;</span><br><span class="line">    <span class="keyword">static</span> dualColor(red: <span class="built_in">number</span> = <span class="number">6</span>, blue: <span class="built_in">number</span> = <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> reds: [<span class="built_in">number</span>, <span class="built_in">number</span>] = [<span class="number">1</span>, <span class="number">33</span>];</span><br><span class="line">        <span class="keyword">const</span> blues: [<span class="built_in">number</span>, <span class="built_in">number</span>] = [<span class="number">1</span>, <span class="number">16</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> [<span class="keyword">this</span>.randomVal(reds, red), <span class="keyword">this</span>.randomVal(blues, blue)];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> randomVal(</span><br><span class="line">        fromto: <span class="built_in">number</span>[],</span><br><span class="line">        total: <span class="built_in">number</span>,</span><br><span class="line">        temp: <span class="built_in">number</span>[] = [],</span><br><span class="line">    ): <span class="built_in">number</span>[] &#123;</span><br><span class="line">        <span class="keyword">const</span> [head, ...body] = (!temp.length</span><br><span class="line">            ? [...Array(fromto[<span class="number">1</span>]).keys()]</span><br><span class="line">                  .map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>)</span><br><span class="line">                  .splice(fromto[<span class="number">0</span>] - <span class="number">1</span>)</span><br><span class="line">            : fromto</span><br><span class="line">        ).sort(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">Math</span>.random() - <span class="number">0.5</span>);</span><br><span class="line">        <span class="keyword">return</span> !total</span><br><span class="line">            ? temp</span><br><span class="line">            : <span class="keyword">this</span>.randomVal(body, total - <span class="number">1</span>, temp.concat(head));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-11-19
+            </time>
+            <a class="archive-post-link" href="/blog/2018/11/19/gamble-fn/">
+              一位赌狗前端的自我修养
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/07/12/kill-parentless-on-npm/">
-              <span class="archive-post-time">
-              
-                07-12
-              
-              </span>
-              <span class="archive-post-link">
-                记在NPM抢空包名的经历
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>强烈谴责某些大厂，前端或者说 JavaScript 是一个极其依赖社区环境的语言，你们在招人之前能不能先调查一下准新人有没有在社区为非作歹？</p>
+</blockquote>
+<p>年前想搞定<code>React</code>的时候想了个骚操作：尝试用<code>React</code>的思路去做<code>Vue</code>的事情。又诞生了「Vue生态统一可以聚合」的骚想法，开始产生做<code>Ahri</code>的念头。想着那得搞个 npm 包吧，孤儿上线了。</p>
+<p>嘛，在 npm 拿《英雄联盟》英雄名字抢注包名的做法都很弱智了，还“大义凛然”的在描述里写着：<code>League of Legends hero.</code></p>
+<p>关于第一次遇到它的时候，我就想算了，重新找合适的名字吧，但后来因为其他原因就搁置了。现在重新回坑，依然遇到这个问题，这次我不忍了，我打算找 npm 肛他！</p>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-07-12
+            </time>
+            <a class="archive-post-link" href="/blog/2018/07/12/kill-parentless-on-npm/">
+              记在NPM抢空包名的经历
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/07/04/different-function/">
-              <span class="archive-post-time">
-              
-                07-04
-              
-              </span>
-              <span class="archive-post-link">
-                我就写个方法，这么麻烦？
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>最近想到一个问题：为什么JavaScript定义一个函数有那么多种形式，是历史残留还是为了装逼？研究了一下发现还是有区别的。</p>
+<p>JavaScript中定义一个方法主要可以分成两种形式：</p>
+<ul>
+<li>函数声明</li>
+<li>函数表达式</li>
+</ul>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-07-04
+            </time>
+            <a class="archive-post-link" href="/blog/2018/07/04/different-function/">
+              我就写个方法，这么麻烦？
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/03/12/dji-interview/">
-              <span class="archive-post-time">
-              
-                03-12
-              
-              </span>
-              <span class="archive-post-link">
-                关于四轴的踩坑指南
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p>
+<p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和工牌套子。</p>
+<p>总结一下印象深刻受苦的问题和答案，不过有一点想吐槽的…就<code>vue</code>和<code>react</code>之间的关系和选择，我看到了高一文理科分班的那种影子：人家都是哪科分高选哪科，我是选分低 + 主管臆想……<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-03-12
+            </time>
+            <a class="archive-post-link" href="/blog/2018/03/12/dji-interview/">
+              关于四轴的踩坑指南
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/02/28/promise-chaining/">
-              <span class="archive-post-time">
-              
-                02-28
-              
-              </span>
-              <span class="archive-post-link">
-                promise链式调用
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>学会了却不会活用是真的菜…</p>
+<p>前几天面试，提到了回调地狱用<code>promise</code>，然后抛出个衍生问题：<code>promise</code>也会嵌套，怎么解决<code>promise</code>的回调地狱。</p>
+<p>我想不到，直接问能不能用<code>ES8</code>，说行，然后我就想到了<code>const p2 = await Promise</code>这种做法。</p>
+<p>可是，我记得我在若干天前才写了一篇关于「JS方法链式调用」。</p>
+<blockquote>
+<p>只要函数返回值是一个函数，就可以连着调用</p>
+</blockquote>
+<p>So,</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p1.then(<span class="function">(<span class="params">&#123; p2 &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> p2</span><br><span class="line">&#125;).then(&#123; p3 &#125; =&gt; &#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-02-28
+            </time>
+            <a class="archive-post-link" href="/blog/2018/02/28/promise-chaining/">
+              promise链式调用
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/02/13/new-life-nvim/">
-              <span class="archive-post-time">
-              
-                02-13
-              
-              </span>
-              <span class="archive-post-link">
-                抛下不成熟，开始nvim
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>想活得跟过去有些区别，活得更有效率该有的样子，而且我讨厌上一年的自己，不知道为什么会这么想。反正，放弃spacemacs开始使用vim了。</p>
+<p>很简单，spacemacs有时候会卡一下，就像十年前的电脑，按了一长串需要等一下才会突突突突全显示出来。后来vscode + vim插件又出现了“不自觉按空格”的情况，就是写完按两下空格调插件。那既然这样的话，从零开始一个vim吧，把leader换成空格然后一些改不过来的习惯换过来就行了。</p>
+<p>实际上，如果不是因为懒，早就该定制编辑器了。。不过我不会放弃vscode，因为还是有些残留。为什么不从零开始一个emacs？成本太高啊，又要vim模式又要改成leader键操作，而且逐渐能理解那个蚊香图是什么意思了。</p>
+<h3 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h3><p>宿主用这个，原先很排斥在终端写东西（不能用鼠标），不过后来一手菜鸡操作<code>xj</code>, <code>xk</code>还有<code>wwwwwwww...</code>也能达到需求了，应该没问题了。<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-02-13
+            </time>
+            <a class="archive-post-link" href="/blog/2018/02/13/new-life-nvim/">
+              抛下不成熟，开始nvim
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/01/30/vuex-study-2/">
-              <span class="archive-post-time">
-              
-                01-30
-              
-              </span>
-              <span class="archive-post-link">
-                vuex源码理解（二）
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>继续，这次尝试逐行理解Store类的东西</p>
+<p>然后关于这次，一些“工具函数”都集中在<code>util.js</code>的这种做法，已经够我学的了。这是个很受用的做法。</p>
+<h3 id="一些简单的东西"><a href="#一些简单的东西" class="headerlink" title="一些简单的东西"></a>一些简单的东西</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span>) &#123;</span><br><span class="line">  assert(Vue, <span class="string">`must call Vue.use(Vuex) before creating a store instance.`</span>)</span><br><span class="line">  assert(<span class="keyword">typeof</span> <span class="built_in">Promise</span> !== <span class="string">'undefined'</span>, <span class="string">`vuex requires a Promise polyfill in this browser.`</span>)</span><br><span class="line">  assert(<span class="keyword">this</span> <span class="keyword">instanceof</span> Store, <span class="string">`Store must be called with the new operator.`</span>)</span><br><span class="line">&#125; <span class="comment">// 断言函数在util，如果不满足前面的情况，后面以error 排出来</span></span><br><span class="line"><span class="comment">// （实际上就是想看有没有在vue环境中和有没有正确安装）</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">  plugins = [],</span><br><span class="line">  strict = <span class="literal">false</span></span><br><span class="line">&#125; = options <span class="comment">// 定义两个变量，在传入的对象中把这两个东西拿出来，字面意思</span></span><br></pre></td></tr></table></figure>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-01-30
+            </time>
+            <a class="archive-post-link" href="/blog/2018/01/30/vuex-study-2/">
+              vuex源码理解（二）
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/01/25/vuex-study-1/">
-              <span class="archive-post-time">
-              
-                01-25
-              
-              </span>
-              <span class="archive-post-link">
-                vuex源码理解（一）
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>看个代码代价很高，我边读边转笔，然后一个失手把手挑了个滴血不止…（笔头挑掉了一层手皮）</p>
+<p>vuex和dva的源码都想看，不然没办法知道相性在哪。</p>
+<h3 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h3><p>这都暴露干净了…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  Store,</span><br><span class="line">  install,</span><br><span class="line">  version: <span class="string">'__VERSION__'</span>,</span><br><span class="line">  mapState,</span><br><span class="line">  mapMutations,</span><br><span class="line">  mapGetters,</span><br><span class="line">  mapActions,</span><br><span class="line">  createNamespacedHelpers</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>install</code>肯定是Vue老套路，想把东西当插件用肯定要暴露这个方法。这个之前写组件经常需要碰到，弃之！</p>
+<p>这次就先读暴露出来的四个方法吧</p>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-01-25
+            </time>
+            <a class="archive-post-link" href="/blog/2018/01/25/vuex-study-1/">
+              vuex源码理解（一）
             </a>
-          </li>
+          </div>
+        </div>
+      
+      
         
-      </ul>
-    </div>
+      
   </div>
   
   <nav class="pagination">
@@ -339,7 +394,7 @@
 
 
         </div>
-      </main>
+      </div></div></main>
       <footer class="footer syuanpi fadeIn" id="footer">
   <hr>
   <div class="footer-wrapper">
@@ -440,11 +495,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -545,16 +600,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -573,6 +628,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -583,13 +645,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -698,18 +753,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -736,6 +779,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -751,16 +806,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -828,14 +883,16 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
 
 
 </body>

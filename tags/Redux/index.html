@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -142,15 +142,13 @@
       </a>
     </li>
   
+  
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -165,35 +163,48 @@
   </div>
 </div>
 
+
+  
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  <div class="archive syuanpi fadeInRightShort" id="archive">
     
-      <h2 class="archive-title"> 正在查看 </h2>
-      <span class="archive-name"> — Redux</span>
-    
-    <div class="archive-list">
-      <ul>
+      
+      
         
           
-          <li class="archive-post">
-            <a href="/blog/2019/03/08/combinereducers/">
-              <span class="archive-post-time">
-              
-                2019-03-08
-              
-              </span>
-              <span class="archive-post-link">
-                Redux —— combineReducers
-              </span>
-            </a>
-          </li>
         
-      </ul>
-    </div>
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>事出有因，写 <code>rabbit</code> 的时候，一条单测出了问题</p>
+<blockquote>
+<p>Reducer _object returned undefined during initialization.</p>
+</blockquote>
+<p>想来必然是 <code>reducer</code> 缺少默认的 <code>state</code> 所致，<del>但是我的单测是从 <code>dva</code> 直接拿过来改改就用的，应该不会出现问题，所以一定是哪里出了差错。后面发现了，虽然 <code>dva</code> 可以接受 <code>reducers</code> 是空对象，但应用运行起来有一样问题。</del></p>
+<p>主要是这个问题无伤大雅，<code>model</code> 不会出现只有 <code>reducers</code> 这种情况。我也给出了解决：构建 <code>reducer</code> 给一个默认 <code>state</code> 顶着（但我认为一个 <code>model</code> 应该强制存在 <code>state</code>）</p>
+<p>显然这次并不想讲这个，而是想理解 <code>combineReducers</code><br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2019-03-08
+            </time>
+            <a class="archive-post-link" href="/blog/2019/03/08/combinereducers/">
+              Redux —— combineReducers
+            </a>
+          </div>
+        </div>
+      
+      
+        
+      
   </div>
   
   <nav class="pagination">
@@ -305,11 +316,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -410,16 +421,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -438,6 +449,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -448,13 +466,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -563,18 +574,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -601,6 +600,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -616,16 +627,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -693,14 +704,16 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
 
 
 </body>

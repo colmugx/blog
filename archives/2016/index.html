@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -142,15 +142,13 @@
       </a>
     </li>
   
+  
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -165,62 +163,80 @@
   </div>
 </div>
 
+
+  
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  <div class="archive syuanpi fadeInRightShort" id="archive">
     
-      <h1 class="archive-title">Total</h1>
+      <aside class="archive-title">Total</aside>
       <span class="archive-num">一共有 33 篇文章</span>
     
-    <div class="archive-list">
-      <ul>
+      
+      
         
           
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2016 </h2>
-              
-            
           
-          <li class="archive-post">
-            <a href="/blog/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/">
-              <span class="archive-post-time">
-              
-                11-02
-              
-              </span>
-              <span class="archive-post-link">
-                一次无聊的尝试 —— hexo-theme-blank
-              </span>
+            
+            
+            <div class="archive-group">
+            <time class="archive-year"> 2016 </time>
+            <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>一次Hexo主题的尝试</p>
+</blockquote>
+<p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
+<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/Image/Blank-violet.jpg" alt="Blank-紫罗兰">
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2016-11-02
+            </time>
+            <a class="archive-post-link" href="/blog/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/">
+              一次无聊的尝试 —— hexo-theme-blank
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-              <span class="archive-post-time">
-              
-                10-28
-              
-              </span>
-              <span class="archive-post-link">
-                关于微信小程序
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>向腾讯大佬低头！</p>
+</blockquote>
+<p><strong>说在前面，你们这下可不能说我这博客天天吹水不讲东西了！</strong></p>
+<h3 id="说说这大佬又想干什么！"><a href="#说说这大佬又想干什么！" class="headerlink" title="说说这大佬又想干什么！"></a>说说这大佬又想干什么！</h3><p>怎么说，腾讯微信真的是野心挺大的，要把微信做成一个应用平台<br>谁还能想的起来微信当时只是定位为一个低流语音信息的即时通讯工具啊！<br>小程序怎么定义呢，就是一个在微信启动的App<br>不过归根到底还是个Web App<br>那这么说来其实也可以说是一个以微信做壳的App了，相对于隔壁那个叫Ionic的东西来说。<br>不过怎么说，这小程序应该也是依托公众号来实现的吧，我看它文档都是在公众号里面。<br>先上地址：<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474887501214" target="_blank" rel="noopener">下载链接</a><br>这开发工具原来就是一个chrome开发者工具，可能是因为加了小程序这么个东西，现在也有开发功能了<br>刚刚试用了一下，效！率！贼！差！（默默打开了Atom）
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2016-10-28
+            </time>
+            <a class="archive-post-link" href="/blog/2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+              关于微信小程序
             </a>
-          </li>
+          </div>
+        </div>
+      
+      
         
-      </ul>
-    </div>
+      
   </div>
   
   <nav class="pagination">
@@ -231,7 +247,7 @@
 
 
         </div>
-      </main>
+      </div></div></main>
       <footer class="footer syuanpi fadeIn" id="footer">
   <hr>
   <div class="footer-wrapper">
@@ -332,11 +348,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -437,16 +453,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -465,6 +481,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -475,13 +498,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -590,18 +606,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -628,6 +632,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -643,16 +659,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -720,14 +736,16 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
 
 
 </body>

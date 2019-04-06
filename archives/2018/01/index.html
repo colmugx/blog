@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -142,15 +142,13 @@
       </a>
     </li>
   
+  
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -165,98 +163,130 @@
   </div>
 </div>
 
+
+  
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  <div class="archive syuanpi fadeInRightShort" id="archive">
     
-      <h1 class="archive-title">Total</h1>
+      <aside class="archive-title">Total</aside>
       <span class="archive-num">一共有 33 篇文章</span>
     
-    <div class="archive-list">
-      <ul>
+      
+      
         
           
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2018 </h2>
-              
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/01/30/vuex-study-2/">
-              <span class="archive-post-time">
-              
-                01-30
-              
-              </span>
-              <span class="archive-post-link">
-                vuex源码理解（二）
-              </span>
+            
+            
+            <div class="archive-group">
+            <time class="archive-year"> 2018 </time>
+            <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>继续，这次尝试逐行理解Store类的东西</p>
+<p>然后关于这次，一些“工具函数”都集中在<code>util.js</code>的这种做法，已经够我学的了。这是个很受用的做法。</p>
+<h3 id="一些简单的东西"><a href="#一些简单的东西" class="headerlink" title="一些简单的东西"></a>一些简单的东西</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span>) &#123;</span><br><span class="line">  assert(Vue, <span class="string">`must call Vue.use(Vuex) before creating a store instance.`</span>)</span><br><span class="line">  assert(<span class="keyword">typeof</span> <span class="built_in">Promise</span> !== <span class="string">'undefined'</span>, <span class="string">`vuex requires a Promise polyfill in this browser.`</span>)</span><br><span class="line">  assert(<span class="keyword">this</span> <span class="keyword">instanceof</span> Store, <span class="string">`Store must be called with the new operator.`</span>)</span><br><span class="line">&#125; <span class="comment">// 断言函数在util，如果不满足前面的情况，后面以error 排出来</span></span><br><span class="line"><span class="comment">// （实际上就是想看有没有在vue环境中和有没有正确安装）</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">  plugins = [],</span><br><span class="line">  strict = <span class="literal">false</span></span><br><span class="line">&#125; = options <span class="comment">// 定义两个变量，在传入的对象中把这两个东西拿出来，字面意思</span></span><br></pre></td></tr></table></figure>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-01-30
+            </time>
+            <a class="archive-post-link" href="/blog/2018/01/30/vuex-study-2/">
+              vuex源码理解（二）
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/01/25/vuex-study-1/">
-              <span class="archive-post-time">
-              
-                01-25
-              
-              </span>
-              <span class="archive-post-link">
-                vuex源码理解（一）
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>看个代码代价很高，我边读边转笔，然后一个失手把手挑了个滴血不止…（笔头挑掉了一层手皮）</p>
+<p>vuex和dva的源码都想看，不然没办法知道相性在哪。</p>
+<h3 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h3><p>这都暴露干净了…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  Store,</span><br><span class="line">  install,</span><br><span class="line">  version: <span class="string">'__VERSION__'</span>,</span><br><span class="line">  mapState,</span><br><span class="line">  mapMutations,</span><br><span class="line">  mapGetters,</span><br><span class="line">  mapActions,</span><br><span class="line">  createNamespacedHelpers</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>install</code>肯定是Vue老套路，想把东西当插件用肯定要暴露这个方法。这个之前写组件经常需要碰到，弃之！</p>
+<p>这次就先读暴露出来的四个方法吧</p>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-01-25
+            </time>
+            <a class="archive-post-link" href="/blog/2018/01/25/vuex-study-1/">
+              vuex源码理解（一）
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/01/22/vuex-dva/">
-              <span class="archive-post-time">
-              
-                01-22
-              
-              </span>
-              <span class="archive-post-link">
-                通过dva得到的思考 —— “滥用”VUEX
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>首先这一手骚操作要感谢@ahonn，确实这几天学习dva，我自己都觉得自己有点烦了。但是老哥好耐心，真心感谢。</p>
+<p>直接上正题吧不磨磨唧唧的了！</p>
+<h3 id="dva是什么"><a href="#dva是什么" class="headerlink" title="dva是什么"></a>dva是什么</h3><p>这还用说吗，坦克啊！双命特性，大招是通过机甲自爆产生大范围爆炸，本体只有100血，可以反…啊！！！别打我啊！</p>
+<p>好吧可能阿里的工程师也喜欢玩守望先锋，而且我清晰记得dva这个框架就是守望大火的时候诞生的，而且还有一个协同工具叫路霸吧。（看来阿里的工程师都不喜欢当C…）</p>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-01-22
+            </time>
+            <a class="archive-post-link" href="/blog/2018/01/22/vuex-dva/">
+              通过dva得到的思考 —— “滥用”VUEX
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2018/01/04/replace-space/">
-              <span class="archive-post-time">
-              
-                01-04
-              
-              </span>
-              <span class="archive-post-link">
-                剑指Offer —— 替换空格
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>以后博客专职曲苑杂坛算了…</p>
+<p>刚刚看到一题</p>
+<blockquote>
+<p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
+</blockquote>
+<p>我想这什么腿？然后什么都没想，直接就</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> str.replace(<span class="regexp">/\ /g</span>, <span class="string">'%20'</span>)</span><br></pre></td></tr></table></figure>
+<p>然后过了……虽然100多毫秒</p>
+
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-01-04
+            </time>
+            <a class="archive-post-link" href="/blog/2018/01/04/replace-space/">
+              剑指Offer —— 替换空格
             </a>
-          </li>
+          </div>
+        </div>
+      
+      
         
-      </ul>
-    </div>
+      
   </div>
   
   <nav class="pagination">
@@ -267,7 +297,7 @@
 
 
         </div>
-      </main>
+      </div></div></main>
       <footer class="footer syuanpi fadeIn" id="footer">
   <hr>
   <div class="footer-wrapper">
@@ -368,11 +398,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -473,16 +503,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -501,6 +531,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -511,13 +548,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -626,18 +656,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -664,6 +682,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -679,16 +709,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -756,14 +786,16 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
 
 
 </body>

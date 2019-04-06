@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -140,26 +140,17 @@
       </a>
     </li>
   
+  
+    
+      <li class="menu-item">
+        <a href="javascript:;" id="switch-toc">文章导航</a>
+      </li>
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1" style="display:none;">
-      <li class="title-link"><a href="javascript:;" class="toTop">我今天给 let 安排了</a></li>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-1"><span class="toc-text">Round 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-2"><span class="toc-text">Round 2</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#Why"><span class="toc-text">Why?</span></a>
-    </li></div>
-  </aside>
-
-
-
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -174,6 +165,21 @@
   </div>
 </div>
 
+
+  
+  
+  <aside class="post-toc">
+    <div class="title" id="toc-switch"><span>文章导航</span></div>
+    <div class="toc-inner syuanpi back-1">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-1"><span class="toc-text">Round 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-2"><span class="toc-text">Round 2</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#Why"><span class="toc-text">Why?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Title"><span class="toc-text">Title</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Title-1"><span class="toc-text">Title</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Title-2"><span class="toc-text">Title</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Title-3"><span class="toc-text">Title</span></a></li></ol></li></ol>
+    </li></ol></li></div>
+  </aside>
+
+
+
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
@@ -185,7 +191,7 @@
    is_post 
   ">
     <header class="post-header">
-      <div class="post-time syuanpi fadeInUpShort back-1">
+      <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
           <time>2019-03-27</time>
           
@@ -195,13 +201,13 @@
           
         </div>
       </div>
-      <h2 class="post-title syuanpi fadeInUpShort back-2">
+      <h2 class="post-title syuanpi fadeInRightShort back-2">
         
           我今天给 let 安排了
         
       </h2>
     </header>
-    <div class="post-content syuanpi fadeInUpShort back-3">
+    <div class="post-content syuanpi fadeInRightShort back-3">
       
         <h4 id="Round-1"><a href="#Round-1" class="headerlink" title="Round 1"></a>Round 1</h4><blockquote>
 <p>- 我现在把所有东西都注释掉，改成这样<br>function a() {<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
@@ -248,12 +254,12 @@
 <p>不过，阮一峰的《ECMAScript 6 入门》是什么意思？在 let 有单独一小节讲 <a href="http://es6.ruanyifeng.com/#docs/let#%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87" target="_blank" rel="noopener">不存在变量提升</a>，虽然后面解释了暂时性死区，但……</p>
 <p>总结：被安排明白了。根据 @Ahonn 所说，这个问题在高程有讲过，书读少了读少了</p>
 <p>（最后感谢所有被引用的文章和作者，谢谢。）</p>
-
+<h2 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h2><h3 id="Title-1"><a href="#Title-1" class="headerlink" title="Title"></a>Title</h3><h4 id="Title-2"><a href="#Title-2" class="headerlink" title="Title"></a>Title</h4><h5 id="Title-3"><a href="#Title-3" class="headerlink" title="Title"></a>Title</h5>
       
     
     </div>
     
-      <div class="post-tags syuanpi fadeInUpShort back-3">
+      <div class="post-tags syuanpi fadeInRightShort back-3">
       
         <a href="/blog/tags/JavaScript/">JavaScript</a>
       
@@ -434,11 +440,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -539,16 +545,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -567,6 +573,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -577,13 +590,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -692,18 +698,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -730,6 +724,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -745,16 +751,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -822,14 +828,22 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
+<script>
+setTimeout(function() {
+  $("#header").addClass("show_toc");
+}, 1000);
+</script>
+
 
 
 </body>

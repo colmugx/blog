@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -142,15 +142,13 @@
       </a>
     </li>
   
+  
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -165,116 +163,172 @@
   </div>
 </div>
 
+
+  
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
           
     
-  <div class="archive syuanpi fadeInUp" id="archive">
+  <div class="archive syuanpi fadeInRightShort" id="archive">
     
-      <h1 class="archive-title">Total</h1>
+      <aside class="archive-title">Total</aside>
       <span class="archive-num">一共有 33 篇文章</span>
     
-    <div class="archive-list">
-      <ul>
+      
+      
         
           
-            
-            
-            
-              
-              
-                <h2 class="archive-year"> 2017 </h2>
-              
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/12/27/funny-monad/">
-              <span class="archive-post-time">
-              
-                12-27
-              
-              </span>
-              <span class="archive-post-link">
-                有意思的monad记录
-              </span>
+            
+            
+            <div class="archive-group">
+            <time class="archive-year"> 2017 </time>
+            <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>看到monad我的第一反应竟然是莫纳德…</p>
+</blockquote>
+<p>最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad</p>
+<p>之前在知乎看到轮子哥说：学习haskell是好事，但最好就是学到monad就停下来，然后去学别的。对别的语言帮助很大。</p>
+<p>然后在知乎看了一些monad的答案，找了点关于monad的博客看，没看懂。英文的话更不可能了！直接看paper的话我会脆死的。</p>
+<p>后来偶然找到一篇文章：<a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html" target="_blank" rel="noopener">Functors, Applicatives, And Monads In Pictures - adit.io</a></p>
+<p>当然有中文版：<a href="http://jiyinyiyong.github.io/monads-in-pictures/" target="_blank" rel="noopener">Functors, Applicatives, And Monads In Pictures - adit.io</a>，<br><a href="http://www.ruanyifeng.com/blog/2015/07/monad.html" target="_blank" rel="noopener">图解 Monad - 阮一峰的网络日志</a></p>
+<p>全程特别轻松，我以后写博客也要按照这个节奏来写！很有意思！<br>（那个抽东西的手直接戳爆了我的笑点…特别是解构传入胶水函数的时候）</p>
+<p>关于理解的话，挖个坑以后总结~</p>
+<p>但有一点是：我用 Vue-jsx 的时候，几乎全是Monad</p>
+
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-12-27
+            </time>
+            <a class="archive-post-link" href="/blog/2017/12/27/funny-monad/">
+              有意思的monad记录
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/12/23/js-method-chaining/">
-              <span class="archive-post-time">
-              
-                12-23
-              
-              </span>
-              <span class="archive-post-link">
-                JavaScript链式方法
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>著名框架<code>jQuery</code>所使用的设计模式——“虾扯蛋”</p>
+</blockquote>
+<p>之前在知乎回答过一个问题：2018的前端应该学什么。</p>
+<p>我回答了：就算前端再复杂，jQuery依然是最流行的那个。</p>
+<p>这答案怎么样呢？废话！肯定没人点赞了！</p>
+<p>人性就是如此！一旦接受了更<del>装逼</del>新的思路，就会觉得以前见过的东西都太弱了！</p>
+<p>新项目想用什么就用什么，什么技术栈健全就用什么。可是老项目并没办法想干什么干什么，时间和精力不允许他去重构。金蝶还在卖VB呢，他们肯定也想过VB已经不行了。</p>
+<p>好了题外话，我还是很有兴趣实现一个塞进<code>nlvi</code>的类jq的。</p>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-12-23
+            </time>
+            <a class="archive-post-link" href="/blog/2017/12/23/js-method-chaining/">
+              JavaScript链式方法
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/12/20/exchange_number/">
-              <span class="archive-post-time">
-              
-                12-20
-              
-              </span>
-              <span class="archive-post-link">
-                冒泡排序的骚思路
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>想起以前很容易就会被问到一个问题</p>
+<blockquote>
+<p>如何把两个数值进行交换？</p>
+</blockquote>
+<p>教科书式的编程怎么做？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> k = i;</span><br><span class="line"></span><br><span class="line">i = j;</span><br><span class="line">j = k;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 两个数值，把其中一个寄存起来，然后再两次赋值。</span></span><br></pre></td></tr></table></figure>
+<p>以前去写代码的社团，当时我巨活跃，有个师兄就过来说：看你资质不错，我打算亲自培养你，先问你一个问题吧：你如何把两个数值进行交换？写不出代码没关系，我只是要听思路。</p>
+<p>我：什么跟什么交换？</p>
+<p>师兄：随便你。</p>
+<p>于是我打开了<code>sublime text</code>写下这么些东西</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> j = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">i += j;</span><br><span class="line">j = i - j;</span><br><span class="line">i -= j;</span><br></pre></td></tr></table></figure>
+<p>然后师兄就懵了，你这个B不按套路出牌？</p>
+
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-12-20
+            </time>
+            <a class="archive-post-link" href="/blog/2017/12/20/exchange_number/">
+              冒泡排序的骚思路
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/12/11/vue-jsx/">
-              <span class="archive-post-time">
-              
-                12-11
-              
-              </span>
-              <span class="archive-post-link">
-                使用JSX的VUE应用开发体验
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>我说我是做外包的肯定没人信，给你看看外包程序员瞎几把搞的热情！</p>
+</blockquote>
+<p>前排提醒：vue-jsx和react-jsx相差甚远，前者基本就是玩具生产链。很多想利用JS语言特性的骚套路基本上都不好实现，而且感觉奇奇怪怪的。所以你的生产环境，千万不要乱试vue-jsx这种搭配，够简单就无所谓了…</p>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-12-11
+            </time>
+            <a class="archive-post-link" href="/blog/2017/12/11/vue-jsx/">
+              使用JSX的VUE应用开发体验
             </a>
-          </li>
+          </div>
+        </div>
+      
         
           
-            
-            
-            
           
-          <li class="archive-post">
-            <a href="/blog/2017/12/07/about-currying/">
-              <span class="archive-post-time">
-              
-                12-07
-              
-              </span>
-              <span class="archive-post-link">
-                扯扯柯里化
-              </span>
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>在我的博客打开开发者工具 -&gt; console，输入 Nlvi.tools.scroll 试试？</p>
+</blockquote>
+<p>开个玩笑，我自己也不知道这算不算柯里化（逃</p>
+<p>总之为什么这么写，我自己觉得这样容易理解，方便盲僧（理清）。</p>
+<p>还有最近关于“如何治理别人爱装逼的毛病”系列中刚写的一坨，新鲜的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> menuItem = <span class="function">(<span class="params">list</span>) =&gt;</span></span><br><span class="line">      list.map(<span class="function">(<span class="params">&#123;title, color, icon, descs&#125;</span>) =&gt;</span></span><br><span class="line">        &lt;menu-item title=&#123;title&#125; color=&#123;color&#125; icon=&#123;icon&#125;&gt;&#123;</span><br><span class="line">          descs.map(<span class="function"><span class="params">v</span> =&gt;</span> &lt;span&gt;&#123;v&#125;&lt;<span class="regexp">/span&gt;)&#125;&lt;/m</span>enu-item&gt;)</span><br></pre></td></tr></table></figure>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-12-07
+            </time>
+            <a class="archive-post-link" href="/blog/2017/12/07/about-currying/">
+              扯扯柯里化
             </a>
-          </li>
+          </div>
+        </div>
+      
+      
         
-      </ul>
-    </div>
+      
   </div>
   
   <nav class="pagination">
@@ -285,7 +339,7 @@
 
 
         </div>
-      </main>
+      </div></div></main>
       <footer class="footer syuanpi fadeIn" id="footer">
   <hr>
   <div class="footer-wrapper">
@@ -386,11 +440,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -491,16 +545,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -519,6 +573,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -529,13 +590,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -644,18 +698,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -682,6 +724,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -697,16 +751,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -774,14 +828,16 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
 
 
 </body>

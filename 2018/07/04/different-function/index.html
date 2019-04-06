@@ -14,7 +14,7 @@
       search: true,
       friends: true,
       reward: false,
-      pjax: false,
+      pjax: true,
       lazy: true
     }
   }
@@ -140,26 +140,17 @@
       </a>
     </li>
   
+  
+    
+      <li class="menu-item">
+        <a href="javascript:;" id="switch-toc">文章导航</a>
+      </li>
+    
+  
   </ul>
   
 </nav>
 
-    
-    
-      
-  
-  <aside class="post-toc">
-    <span class="title" id="toc-switch"><span>文章导航</span></span>
-    <div class="toc-inner syuanpi back-1" style="display:none;">
-      <li class="title-link"><a href="javascript:;" class="toTop">我就写个方法，这么麻烦？</a></li>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#函数声明"><span class="toc-text">函数声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式"><span class="toc-text">函数表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匿名-amp-具名"><span class="toc-text">匿名 &amp; 具名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式依然是个常-变量"><span class="toc-text">函数表达式依然是个常/变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#箭头函数"><span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算属性函数名"><span class="toc-text">计算属性函数名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other"><span class="toc-text">Other</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Function"><span class="toc-text">new Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数参数初始值"><span class="toc-text">函数参数初始值</span></a></li></ol>
-    </div>
-  </aside>
-
-
-
-  
-    
   </div>
 </header>
 <div class="mobile-header" id="mobile-header">
@@ -174,6 +165,21 @@
   </div>
 </div>
 
+
+  
+  
+  <aside class="post-toc">
+    <div class="title" id="toc-switch"><span>文章导航</span></div>
+    <div class="toc-inner syuanpi back-1">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#函数声明"><span class="toc-text">函数声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式"><span class="toc-text">函数表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匿名-amp-具名"><span class="toc-text">匿名 &amp; 具名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数表达式依然是个常-变量"><span class="toc-text">函数表达式依然是个常/变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#箭头函数"><span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算属性函数名"><span class="toc-text">计算属性函数名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other"><span class="toc-text">Other</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Function"><span class="toc-text">new Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数参数初始值"><span class="toc-text">函数参数初始值</span></a></li></ol>
+    </div>
+  </aside>
+
+
+
+
+
+
     <div class="container-inner">
       <main class="main" id="main">
         <div class="main-wrapper">
@@ -185,7 +191,7 @@
    is_post 
   ">
     <header class="post-header">
-      <div class="post-time syuanpi fadeInUpShort back-1">
+      <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
           <time>2018-07-04</time>
           
@@ -195,13 +201,13 @@
           
         </div>
       </div>
-      <h2 class="post-title syuanpi fadeInUpShort back-2">
+      <h2 class="post-title syuanpi fadeInRightShort back-2">
         
           我就写个方法，这么麻烦？
         
       </h2>
     </header>
-    <div class="post-content syuanpi fadeInUpShort back-3">
+    <div class="post-content syuanpi fadeInRightShort back-3">
       
         <p>最近想到一个问题：为什么JavaScript定义一个函数有那么多种形式，是历史残留还是为了装逼？研究了一下发现还是有区别的。</p>
 <p>JavaScript中定义一个方法主要可以分成两种形式：</p>
@@ -247,7 +253,7 @@
     
     </div>
     
-      <div class="post-tags syuanpi fadeInUpShort back-3">
+      <div class="post-tags syuanpi fadeInRightShort back-3">
       
         <a href="/blog/tags/JavaScript/">JavaScript</a>
       
@@ -434,11 +440,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>weapp</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>weapp</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -539,16 +545,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/02/22/js-extends/">
+            <time class="tagcloud-posttime">2017 / 02 / 22</time>
+            <span>来搞一手关于Javascript对象继承</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/02/22/js-extends/">
-            <time class="tagcloud-posttime">2017 / 02 / 22</time>
-            <span>来搞一手关于Javascript对象继承</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -567,6 +573,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/02/28/promise-chaining/">
+            <time class="tagcloud-posttime">2018 / 02 / 28</time>
+            <span>promise链式调用</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/10/17/reference-equal-pointer/">
             <time class="tagcloud-posttime">2017 / 10 / 17</time>
             <span>引用等于指针吗？</span>
@@ -577,13 +590,6 @@
           <a href="2018/01/04/replace-space/">
             <time class="tagcloud-posttime">2018 / 01 / 04</time>
             <span>剑指Offer —— 替换空格</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/02/28/promise-chaining/">
-            <time class="tagcloud-posttime">2018 / 02 / 28</time>
-            <span>promise链式调用</span>
           </a>
         </div>
       
@@ -692,18 +698,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -730,6 +724,18 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -745,16 +751,16 @@
       <h2>vue</h2>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -822,14 +828,22 @@
 
 
 
+  <script src="/blog/script/lib/pjax/pjax.js"></script>
+
 
 
   <script src="/blog/script/scheme/balance.js"></script>
 
 
-
-
 <script src="/blog/script/bootstarp.js"></script>
+
+
+<script>
+setTimeout(function() {
+  $("#header").addClass("show_toc");
+}, 1000);
+</script>
+
 
 
 </body>
