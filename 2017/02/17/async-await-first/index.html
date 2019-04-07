@@ -15,7 +15,8 @@
       friends: true,
       reward: false,
       pjax: true,
-      lazy: true
+      lazy: true,
+      toc: true
     }
   }
 </script>
@@ -169,8 +170,8 @@
   
   
   <aside class="post-toc">
-    <div class="title" id="toc-switch"><span>文章导航</span></div>
-    <div class="toc-inner syuanpi back-1">
+    <div class="title"><span>文章导航</span></div>
+    <div class="toc-inner">
       <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ImoocDownloaderServer-请求样本"><span class="toc-text">ImoocDownloaderServer 请求样本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小谈ES6和ES7"><span class="toc-text">小谈ES6和ES7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浅谈promise-和-async-await"><span class="toc-text">浅谈promise 和 async-await</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么需要P-A-，我用在哪里了"><span class="toc-text">为什么需要P/A+，我用在哪里了</span></a></li></ol>
     </div>
   </aside>
@@ -477,16 +478,16 @@
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
-          <a href="2017/08/09/about-conditionals/">
-            <time class="tagcloud-posttime">2017 / 08 / 09</time>
-            <span>关于Javascript的条件判断</span>
+          <a href="2017/12/07/about-currying/">
+            <time class="tagcloud-posttime">2017 / 12 / 07</time>
+            <span>扯扯柯里化</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/07/about-currying/">
-            <time class="tagcloud-posttime">2017 / 12 / 07</time>
-            <span>扯扯柯里化</span>
+          <a href="2017/08/09/about-conditionals/">
+            <time class="tagcloud-posttime">2017 / 08 / 09</time>
+            <span>关于Javascript的条件判断</span>
           </a>
         </div>
       
@@ -498,16 +499,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/07/04/different-function/">
-            <time class="tagcloud-posttime">2018 / 07 / 04</time>
-            <span>我就写个方法，这么麻烦？</span>
+          <a href="2018/03/12/dji-interview/">
+            <time class="tagcloud-posttime">2018 / 03 / 12</time>
+            <span>关于四轴的踩坑指南</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/03/12/dji-interview/">
-            <time class="tagcloud-posttime">2018 / 03 / 12</time>
-            <span>关于四轴的踩坑指南</span>
+          <a href="2018/07/04/different-function/">
+            <time class="tagcloud-posttime">2018 / 07 / 04</time>
+            <span>我就写个方法，这么麻烦？</span>
           </a>
         </div>
       
@@ -827,9 +828,11 @@
 
 
 <script>
-setTimeout(function() {
-  $("#header").addClass("show_toc");
-}, 1000);
+if (nlviconfig.theme.scheme === 'balance' && nlviconfig.theme.toc) {
+  setTimeout(function() {
+    $("#header").addClass("show_toc");
+  }, 1000);
+}
 </script>
 
 

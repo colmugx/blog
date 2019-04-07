@@ -1511,7 +1511,10 @@ body.under {
 }
 .post-toc .toc-item {
   list-style: none;
-  padding-left: 16px;
+  padding-left: 8px;
+}
+.post-toc .toc-link {
+  word-break: break-all;
 }
 .post-toc .toc-link.active:before {
   content: '\e78b';

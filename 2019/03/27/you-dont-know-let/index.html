@@ -15,7 +15,8 @@
       friends: true,
       reward: false,
       pjax: true,
-      lazy: true
+      lazy: true,
+      toc: true
     }
   }
 </script>
@@ -169,10 +170,10 @@
   
   
   <aside class="post-toc">
-    <div class="title" id="toc-switch"><span>文章导航</span></div>
-    <div class="toc-inner syuanpi back-1">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-1"><span class="toc-text">Round 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-2"><span class="toc-text">Round 2</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#Why"><span class="toc-text">Why?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Title"><span class="toc-text">Title</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Title-1"><span class="toc-text">Title</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Title-2"><span class="toc-text">Title</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Title-3"><span class="toc-text">Title</span></a></li></ol></li></ol>
-    </li></ol></li></div>
+    <div class="title"><span>文章导航</span></div>
+    <div class="toc-inner">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-1"><span class="toc-text">Round 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Round-2"><span class="toc-text">Round 2</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#Why"><span class="toc-text">Why?</span></a>
+    </li></div>
   </aside>
 
 
@@ -254,7 +255,7 @@
 <p>不过，阮一峰的《ECMAScript 6 入门》是什么意思？在 let 有单独一小节讲 <a href="http://es6.ruanyifeng.com/#docs/let#%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87" target="_blank" rel="noopener">不存在变量提升</a>，虽然后面解释了暂时性死区，但……</p>
 <p>总结：被安排明白了。根据 @Ahonn 所说，这个问题在高程有讲过，书读少了读少了</p>
 <p>（最后感谢所有被引用的文章和作者，谢谢。）</p>
-<h2 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h2><h3 id="Title-1"><a href="#Title-1" class="headerlink" title="Title"></a>Title</h3><h4 id="Title-2"><a href="#Title-2" class="headerlink" title="Title"></a>Title</h4><h5 id="Title-3"><a href="#Title-3" class="headerlink" title="Title"></a>Title</h5>
+
       
     
     </div>
@@ -489,16 +490,16 @@
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
-          <a href="2017/08/09/about-conditionals/">
-            <time class="tagcloud-posttime">2017 / 08 / 09</time>
-            <span>关于Javascript的条件判断</span>
+          <a href="2017/12/07/about-currying/">
+            <time class="tagcloud-posttime">2017 / 12 / 07</time>
+            <span>扯扯柯里化</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/07/about-currying/">
-            <time class="tagcloud-posttime">2017 / 12 / 07</time>
-            <span>扯扯柯里化</span>
+          <a href="2017/08/09/about-conditionals/">
+            <time class="tagcloud-posttime">2017 / 08 / 09</time>
+            <span>关于Javascript的条件判断</span>
           </a>
         </div>
       
@@ -510,16 +511,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/07/04/different-function/">
-            <time class="tagcloud-posttime">2018 / 07 / 04</time>
-            <span>我就写个方法，这么麻烦？</span>
+          <a href="2018/03/12/dji-interview/">
+            <time class="tagcloud-posttime">2018 / 03 / 12</time>
+            <span>关于四轴的踩坑指南</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/03/12/dji-interview/">
-            <time class="tagcloud-posttime">2018 / 03 / 12</time>
-            <span>关于四轴的踩坑指南</span>
+          <a href="2018/07/04/different-function/">
+            <time class="tagcloud-posttime">2018 / 07 / 04</time>
+            <span>我就写个方法，这么麻烦？</span>
           </a>
         </div>
       
@@ -839,9 +840,11 @@
 
 
 <script>
-setTimeout(function() {
-  $("#header").addClass("show_toc");
-}, 1000);
+if (nlviconfig.theme.scheme === 'balance' && nlviconfig.theme.toc) {
+  setTimeout(function() {
+    $("#header").addClass("show_toc");
+  }, 1000);
+}
 </script>
 
 
