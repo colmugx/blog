@@ -1496,6 +1496,7 @@ body.under {
   color: #fdb2b2;
 }
 .search #search-result .search-result-list .search-keyword {
+  padding: 0 4px;
   color: #fd9999;
 }
 .post-toc {
