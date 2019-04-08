@@ -407,13 +407,64 @@
           </div>
         </div>
       
+        
+          
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p>
+<p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和工牌套子。</p>
+<p>总结一下印象深刻受苦的问题和答案，不过有一点想吐槽的…就<code>vue</code>和<code>react</code>之间的关系和选择，我看到了高一文理科分班的那种影子：人家都是哪科分高选哪科，我是选分低 + 主管臆想……<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-03-12
+            </time>
+            <a class="archive-post-link" href="/blog/2018/03/12/dji-interview/">
+              关于四轴的踩坑指南
+            </a>
+          </div>
+        </div>
+      
+        
+          
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>学会了却不会活用是真的菜…</p>
+<p>前几天面试，提到了回调地狱用<code>promise</code>，然后抛出个衍生问题：<code>promise</code>也会嵌套，怎么解决<code>promise</code>的回调地狱。</p>
+<p>我想不到，直接问能不能用<code>ES8</code>，说行，然后我就想到了<code>const p2 = await Promise</code>这种做法。</p>
+<p>可是，我记得我在若干天前才写了一篇关于「JS方法链式调用」。</p>
+<blockquote>
+<p>只要函数返回值是一个函数，就可以连着调用</p>
+</blockquote>
+<p>So,</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p1.then(<span class="function">(<span class="params">&#123; p2 &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> p2</span><br><span class="line">&#125;).then(&#123; p3 &#125; =&gt; &#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-02-28
+            </time>
+            <a class="archive-post-link" href="/blog/2018/02/28/promise-chaining/">
+              promise链式调用
+            </a>
+          </div>
+        </div>
+      
       
         
       
   </div>
   
   <nav class="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/blog/archives/page/2/">2</a><a class="page-number" href="/blog/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/archives/page/5/">5</a><a class="extend next" rel="next" href="/blog/archives/page/2/">下一页<i class="iconfont icon-enter"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/blog/archives/page/2/">2</a><a class="page-number" href="/blog/archives/page/3/">3</a><a class="page-number" href="/blog/archives/page/4/">4</a><a class="extend next" rel="next" href="/blog/archives/page/2/">下一页<i class="iconfont icon-enter"></i></a>
   </nav>
 
 
@@ -489,19 +540,19 @@
   <div class="tagcloud-taglist">
   
     <div class="tagcloud-tag">
-      <button>JavaScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
-      <button>colmugx</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>Syuanpi</button>
     </div>
   
     <div class="tagcloud-tag">
       <button>CSS</button>
+    </div>
+  
+    <div class="tagcloud-tag">
+      <button>JavaScript</button>
+    </div>
+  
+    <div class="tagcloud-tag">
+      <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -543,6 +594,30 @@
   </div>
   
     <div class="tagcloud-postlist active">
+      <h2>Syuanpi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/02/13/Syuanpi-css/">
+            <time class="tagcloud-posttime">2017 / 02 / 13</time>
+            <span>自己造轮子！——Syuanpi.css</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>CSS</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/02/13/Syuanpi-css/">
+            <time class="tagcloud-posttime">2017 / 02 / 13</time>
+            <span>自己造轮子！——Syuanpi.css</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -567,16 +642,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/03/12/dji-interview/">
-            <time class="tagcloud-posttime">2018 / 03 / 12</time>
-            <span>关于四轴的踩坑指南</span>
+          <a href="2018/07/04/different-function/">
+            <time class="tagcloud-posttime">2018 / 07 / 04</time>
+            <span>我就写个方法，这么麻烦？</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/07/04/different-function/">
-            <time class="tagcloud-posttime">2018 / 07 / 04</time>
-            <span>我就写个方法，这么麻烦？</span>
+          <a href="2018/03/12/dji-interview/">
+            <time class="tagcloud-posttime">2018 / 03 / 12</time>
+            <span>关于四轴的踩坑指南</span>
           </a>
         </div>
       
@@ -595,6 +670,13 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2017/11/20/js-console/">
+            <time class="tagcloud-posttime">2017 / 11 / 20</time>
+            <span>你还在用Console.log()？</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/02/22/js-extends/">
             <time class="tagcloud-posttime">2017 / 02 / 22</time>
             <span>来搞一手关于Javascript对象继承</span>
@@ -602,9 +684,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/12/23/js-method-chaining/">
-            <time class="tagcloud-posttime">2017 / 12 / 23</time>
-            <span>JavaScript链式方法</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -616,16 +698,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/11/20/js-console/">
-            <time class="tagcloud-posttime">2017 / 11 / 20</time>
-            <span>你还在用Console.log()？</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/10/17/reference-equal-pointer/">
-            <time class="tagcloud-posttime">2017 / 10 / 17</time>
-            <span>引用等于指针吗？</span>
+          <a href="2017/12/23/js-method-chaining/">
+            <time class="tagcloud-posttime">2017 / 12 / 23</time>
+            <span>JavaScript链式方法</span>
           </a>
         </div>
       
@@ -637,9 +712,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/10/17/reference-equal-pointer/">
+            <time class="tagcloud-posttime">2017 / 10 / 17</time>
+            <span>引用等于指针吗？</span>
           </a>
         </div>
       
@@ -687,30 +762,6 @@
           <a href="2018/07/12/kill-parentless-on-npm/">
             <time class="tagcloud-posttime">2018 / 07 / 12</time>
             <span>记在NPM抢空包名的经历</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>Syuanpi</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/02/13/Syuanpi-css/">
-            <time class="tagcloud-posttime">2017 / 02 / 13</time>
-            <span>自己造轮子！——Syuanpi.css</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>CSS</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/02/13/Syuanpi-css/">
-            <time class="tagcloud-posttime">2017 / 02 / 13</time>
-            <span>自己造轮子！——Syuanpi.css</span>
           </a>
         </div>
       
