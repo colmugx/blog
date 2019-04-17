@@ -40,7 +40,7 @@
       friends: true,
       reward: false,
       pjax: true,
-      lazy: true,
+      lazy: false,
       toc: true
     }
   }
@@ -181,7 +181,7 @@
   <div class="archive syuanpi fadeInRightShort" id="archive">
     
       <aside class="archive-title">Total</aside>
-      <span class="archive-num">一共有 33 篇文章</span>
+      <span class="archive-num">一共有 34 篇文章</span>
     
       
       
@@ -193,6 +193,32 @@
             <div class="archive-group">
             <time class="archive-year"> 2017 </time>
             <div class="archive-list">
+          
+          
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <blockquote>
+<p>在我的博客打开开发者工具 -&gt; console，输入 Nlvi.tools.scroll 试试？</p>
+</blockquote>
+<p>开个玩笑，我自己也不知道这算不算柯里化（逃</p>
+<p>总之为什么这么写，我自己觉得这样容易理解，方便盲僧（理清）。</p>
+<p>还有最近关于“如何治理别人爱装逼的毛病”系列中刚写的一坨，新鲜的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> menuItem = <span class="function">(<span class="params">list</span>) =&gt;</span></span><br><span class="line">      list.map(<span class="function">(<span class="params">&#123;title, color, icon, descs&#125;</span>) =&gt;</span></span><br><span class="line">        &lt;menu-item title=&#123;title&#125; color=&#123;color&#125; icon=&#123;icon&#125;&gt;&#123;</span><br><span class="line">          descs.map(<span class="function"><span class="params">v</span> =&gt;</span> &lt;span&gt;&#123;v&#125;&lt;<span class="regexp">/span&gt;)&#125;&lt;/m</span>enu-item&gt;)</span><br></pre></td></tr></table></figure>
+            
+          </div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-12-07
+            </time>
+            <a class="archive-post-link" href="/blog/2017/12/07/about-currying/">
+              扯扯柯里化
+            </a>
+          </div>
+        </div>
+      
+        
+          
           
           
         <div class="archive-post">
@@ -408,29 +434,6 @@
           </div>
         </div>
       
-        
-          
-          
-          
-        <div class="archive-post">
-          <div class="archive-post-content">
-            
-              <blockquote>
-<p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p>
-</blockquote>
-<p>想起去年第一个放在github的东西，就是获取课程然后下载课程视频的下载器。<br>然后今天，想到弄一个服务端版本。这样我可以无论作为移动端还是webapp端都能用到爬虫的数据了。所以就做了一次改造。<br>
-            
-          </p></div>
-          <div class="archive-post-info">
-            <time class="archive-post-time">
-              2017-02-17
-            </time>
-            <a class="archive-post-link" href="/blog/2017/02/17/async-await-first/">
-              async-await 初尝试
-            </a>
-          </div>
-        </div>
-      
       
         
       
@@ -525,6 +528,10 @@
     </div>
   
     <div class="tagcloud-tag">
+      <button>nlvi</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>colmugx</button>
     </div>
   
@@ -533,7 +540,7 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>Vue</button>
+      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -554,10 +561,6 @@
   
     <div class="tagcloud-tag">
       <button>vim</button>
-    </div>
-  
-    <div class="tagcloud-tag">
-      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -636,13 +639,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/08/14/js-call-apply-bind/">
-            <time class="tagcloud-posttime">2017 / 08 / 14</time>
-            <span>JavaScript的call，bind，apply</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/11/20/js-console/">
             <time class="tagcloud-posttime">2017 / 11 / 20</time>
             <span>你还在用Console.log()？</span>
@@ -657,6 +653,20 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2017/08/14/js-call-apply-bind/">
+            <time class="tagcloud-posttime">2017 / 08 / 14</time>
+            <span>JavaScript的call，bind，apply</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/03/js-this/">
+            <time class="tagcloud-posttime">2017 / 03 / 03</time>
+            <span>关于JavaScript的this</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/03/02/js-for/">
             <time class="tagcloud-posttime">2017 / 03 / 02</time>
             <span>JavaScript所有for</span>
@@ -667,13 +677,6 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/03/03/js-this/">
-            <time class="tagcloud-posttime">2017 / 03 / 03</time>
-            <span>关于JavaScript的this</span>
           </a>
         </div>
       
@@ -722,6 +725,25 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>nlvi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/04/17/about-nlvi-pwa/">
+            <time class="tagcloud-posttime">2019 / 04 / 17</time>
+            <span>关于 Nlvi 「添加到桌面」</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/25/bye-nlvi/">
+            <time class="tagcloud-posttime">2019 / 03 / 25</time>
+            <span>最后的 Nlvi</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -753,7 +775,7 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Vue</h2>
+      <h2>vue</h2>
       
         <div class="tagcloud-post">
           <a href="2018/03/12/dji-interview/">
@@ -766,6 +788,34 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/30/vuex-study-2/">
+            <time class="tagcloud-posttime">2018 / 01 / 30</time>
+            <span>vuex源码理解（二）</span>
           </a>
         </div>
       
@@ -853,39 +903,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>vue</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/30/vuex-study-2/">
-            <time class="tagcloud-posttime">2018 / 01 / 30</time>
-            <span>vuex源码理解（二）</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -928,8 +945,6 @@
 
 
 
-
-  <script src="/blog/script/lib/layzr/layzr.js"></script>
 
 
 

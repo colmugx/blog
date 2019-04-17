@@ -23,7 +23,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript, nlvi">
+  <meta name="keywords" content="nlvi, nlvi">
 
 
 <link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
@@ -83,7 +83,7 @@
 
 
 
-  <title> 冒泡排序的骚思路 · Colmugx 's Blog </title>
+  <title> 关于 Nlvi 「添加到桌面」 · Colmugx 's Blog </title>
 </head>
 <body>
   <div class="container" style="display:none;">
@@ -176,7 +176,7 @@
   <aside class="post-toc">
     <div class="title"><span>文章导航</span></div>
     <div class="toc-inner">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#meta"><span class="toc-text">meta</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#apple-touch-startup-image"><span class="toc-text">apple-touch-startup-image</span></a></li></ol>
     </div>
   </aside>
 
@@ -198,34 +198,40 @@
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
-          <time>2017-12-20</time>
+          <time>2019-04-17</time>
           
             
-              <span class="post-category"><a href="/blog/categories/曲苑杂坛/">曲苑杂坛</a></span>
+              <span class="post-category"><a href="/blog/categories/实践尝试/">实践尝试</a></span>
             
           
         </div>
       </div>
       <h2 class="post-title syuanpi fadeInRightShort back-2">
         
-          冒泡排序的骚思路
+          关于 Nlvi 「添加到桌面」
         
       </h2>
     </header>
     <div class="post-content syuanpi fadeInRightShort back-3">
       
-        <p>想起以前很容易就会被问到一个问题</p>
-<blockquote>
-<p>如何把两个数值进行交换？</p>
-</blockquote>
-<p>教科书式的编程怎么做？</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> k = i;</span><br><span class="line"></span><br><span class="line">i = j;</span><br><span class="line">j = k;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 两个数值，把其中一个寄存起来，然后再两次赋值。</span></span><br></pre></td></tr></table></figure>
-<p>以前去写代码的社团，当时我巨活跃，有个师兄就过来说：看你资质不错，我打算亲自培养你，先问你一个问题吧：你如何把两个数值进行交换？写不出代码没关系，我只是要听思路。</p>
-<p>我：什么跟什么交换？</p>
-<p>师兄：随便你。</p>
-<p>于是我打开了<code>sublime text</code>写下这么些东西</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> j = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">i += j;</span><br><span class="line">j = i - j;</span><br><span class="line">i -= j;</span><br></pre></td></tr></table></figure>
-<p>然后师兄就懵了，你这个B不按套路出牌？</p>
+        <p>其实这个功能早在 2.x 版本就加入了，那时候对 PWA 并没有什么概念。<del>好想换 iPad Mini (new)</del></p>
+<p><img src="/blog/Image/nlvi-ios-desktop.gif" alt="nlvi-ios-desktop"></p>
+<p>目前 3.x 只改了启动图，适配了 iPad 横屏和 iPhone 全面屏（普通屏和plus后续加）。之前看到苹果对 PWA 持拒绝态度我是震惊的，你 tm 早就给 safari 加入了这个功能，也有相关<code>meta</code>配置（包括”识别为<code>WebApp</code>“），然后你告诉我这东西不是 PWA？</p>
+<p>本来确实想支持 PWA 的，想到除了要 <code>manifest.json</code>，还要搞定对应生成 <code>service worker</code>，使用不是很友好，所以取消计划。这部分添加功能就是一个尝试的甜点，所以也没有拿出来说。目前 3.x 开启 <code>pjax</code> 然后添加到桌面，阅读体验还是挺好的。</p>
+<p>所以这次打算讲讲「苹果式网页应用安装」，其实挺简单的。<br><a id="more"></a></p>
+<h3 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h3><p>这里没有列出所有关于 safari 支持的 meta，只针对这个功能部分。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-touch-fullscreen"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-title"</span> <span class="attr">content</span>=<span class="string">"Colmugx's Blog"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-status-bar-style"</span> <span class="attr">content</span>=<span class="string">"default"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon"</span>  <span class="attr">sizes</span>=<span class="string">"72x72"</span>  <span class="attr">href</span>=<span class="string">"icon.ico"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon-precomposed"</span>  <span class="attr">sizes</span>=<span class="string">"72x72"</span>  <span class="attr">href</span>=<span class="string">"icon.ico"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">media</span>=<span class="string">"(device-width: 375px)"</span> <span class="attr">href</span>=<span class="string">"apple-launch-1125x2436.png"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">media</span>=<span class="string">"(orientation: landscape)"</span> <span class="attr">href</span>=<span class="string">"apple-touch-startup-image-2048x1496.png"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>从上到下分别是：</p>
+<ul>
+<li>添加到主屏幕后，是否全屏显示</li>
+<li>是否显示 safari 菜单</li>
+<li>应用默认名称（在添加的时候可以修改）</li>
+<li>打开时，顶上状态栏应该呈现什么颜色（白色，黑色，透明）</li>
+<li>设置 icon (72x72, 114x114)，图标在「书签」也可适用</li>
+<li>设置启动画面（这里只设置了手机与平板横置）</li>
+</ul>
+<h3 id="apple-touch-startup-image"><a href="#apple-touch-startup-image" class="headerlink" title="apple-touch-startup-image"></a>apple-touch-startup-image</h3><p>其他的没什么坑点，只是<code>apple-touch-startup-image</code>会复杂一些。它分成很多分辨率，设置不清楚的话就不会显示。而且它不能像图标一样设置<code>size</code>。只能用<code>media</code>一行一行写。</p>
+<p>比如 iPad，设置倒是不需要跟手机一样那么多图片，只需要准备一张垂直一张水平。垂直 <code>768x1024</code>，水平<code>748x1024</code>，水平图也需要摆成垂直的，也就是<code>1024x748</code>，当然内容也是横直，相当于顺时针 90°。接着就考虑一下屏幕用的是二倍图还是三倍图了。</p>
+<p>参考文章：<a href="https://medium.com/appscope/adding-custom-ios-splash-screens-to-your-progressive-web-app-41a9b18bdca3" target="_blank" rel="noopener">Adding Custom iOS Splash Screens To Your Progressive Web App</a></p>
 
       
     
@@ -233,7 +239,7 @@
     
       <div class="post-tags syuanpi fadeInRightShort back-3">
       
-        <a href="/blog/tags/JavaScript/">JavaScript</a>
+        <a href="/blog/tags/nlvi/">nlvi</a>
       
       </div>
     
@@ -249,7 +255,7 @@
     </div>
     <div class="copy-url">
       <span>地址 :</span>
-      <a href="https://colmugx.github.io/blog/2017/12/20/exchange_number/">https://colmugx.github.io/blog/2017/12/20/exchange_number/</a>
+      <a href="https://colmugx.github.io/blog/2019/04/17/about-nlvi-pwa/">https://colmugx.github.io/blog/2019/04/17/about-nlvi-pwa/</a>
     </div>
     <div class="copy-origin">
       <span>来源 :</span>
@@ -267,16 +273,10 @@
     
   <nav class="article-page">
     
-      <a href="/blog/2017/12/23/js-method-chaining/" id="art-left" class="art-left">
-        <span class="next-title">
-          <i class="iconfont icon-back"></i>JavaScript链式方法
-        </span>
-      </a>
     
-    
-      <a href="/blog/2017/12/11/vue-jsx/" id="art-right" class="art-right">
+      <a href="/blog/2019/03/27/you-dont-know-let/" id="art-right" class="art-right">
         <span class="prev-title">
-          使用JSX的VUE应用开发体验<i class="iconfont icon-enter"></i>
+          我今天给 let 安排了<i class="iconfont icon-enter"></i>
         </span>
       </a>
     

@@ -40,7 +40,7 @@
       friends: true,
       reward: false,
       pjax: true,
-      lazy: true,
+      lazy: false,
       toc: true
     }
   }
@@ -211,14 +211,14 @@
         <blockquote>
 <p>一次Hexo主题的尝试</p>
 </blockquote>
-<p><strong>我先说好啊！Blank不是SKT T1的打野！</strong><br><strong><a href="/blank.html">主题演示页面点击这里</a></strong></p>
-<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p>
-<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><img src="/Image/Blank-gray.jpg" alt="Blank-深空灰"></p>
-<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><img src="/Image/Blank-pink.jpg" alt="Blank-樱语粉"></p>
-<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><img src="/Image/Blank-green.jpg" alt="Blank-璐璐绿"></p>
-<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><img src="/Image/Blank-blue.jpg" alt="Blank-编不下去的蓝色"></p>
-<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><img src="/Image/Blank-red.jpg" alt="Blank-红红火火"></p>
-<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><img src="/Image/Blank-orange.jpg" alt="Blank-橙子一样的颜色"><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
+<p><strong>我先说好啊！Blank不是SKT T1的打野！</strong></p>
+<h3 id="科技以换色为本！"><a href="#科技以换色为本！" class="headerlink" title="科技以换色为本！"></a>科技以换色为本！</h3><h4 id="紫色"><a href="#紫色" class="headerlink" title="紫色"></a>紫色</h4><p><img src="/blog/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p>
+<h4 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h4><p><img src="/blog/Image/Blank-gray.jpg" alt="Blank-深空灰"></p>
+<h4 id="粉色"><a href="#粉色" class="headerlink" title="粉色"></a>粉色</h4><p><img src="/blog/Image/Blank-pink.jpg" alt="Blank-樱语粉"></p>
+<h4 id="绿色"><a href="#绿色" class="headerlink" title="绿色"></a>绿色</h4><p><img src="/blog/Image/Blank-green.jpg" alt="Blank-璐璐绿"></p>
+<h4 id="蓝色"><a href="#蓝色" class="headerlink" title="蓝色"></a>蓝色</h4><p><img src="/blog/Image/Blank-blue.jpg" alt="Blank-编不下去的蓝色"></p>
+<h4 id="红色"><a href="#红色" class="headerlink" title="红色"></a>红色</h4><p><img src="/blog/Image/Blank-red.jpg" alt="Blank-红红火火"></p>
+<h4 id="橙色"><a href="#橙色" class="headerlink" title="橙色"></a>橙色</h4><p><img src="/blog/Image/Blank-orange.jpg" alt="Blank-橙子一样的颜色"><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p>
 <h3 id="这个主题从写法上，比Rousy改善很多"><a href="#这个主题从写法上，比Rousy改善很多" class="headerlink" title="这个主题从写法上，比Rousy改善很多"></a>这个主题从写法上，比Rousy改善很多</h3><p>怎么来说，Rousy的话，是根据css然后全搬入stylus的，管理性能略差<br>但是Blank的话，我好像不知不觉用了stylus的用法，所以看起来应该…还是不简洁…<br>当然Blank只是半成品，至今只出生后第3天。（都是中午和大半夜，白天有课上）</p>
 <h3 id="新主题有没有什么新东西"><a href="#新主题有没有什么新东西" class="headerlink" title="新主题有没有什么新东西"></a>新主题有没有什么新东西</h3><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>
 
@@ -387,6 +387,10 @@
     </div>
   
     <div class="tagcloud-tag">
+      <button>nlvi</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>colmugx</button>
     </div>
   
@@ -395,7 +399,7 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>Vue</button>
+      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -416,10 +420,6 @@
   
     <div class="tagcloud-tag">
       <button>vim</button>
-    </div>
-  
-    <div class="tagcloud-tag">
-      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -498,13 +498,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/08/14/js-call-apply-bind/">
-            <time class="tagcloud-posttime">2017 / 08 / 14</time>
-            <span>JavaScript的call，bind，apply</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/11/20/js-console/">
             <time class="tagcloud-posttime">2017 / 11 / 20</time>
             <span>你还在用Console.log()？</span>
@@ -519,6 +512,20 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2017/08/14/js-call-apply-bind/">
+            <time class="tagcloud-posttime">2017 / 08 / 14</time>
+            <span>JavaScript的call，bind，apply</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/03/js-this/">
+            <time class="tagcloud-posttime">2017 / 03 / 03</time>
+            <span>关于JavaScript的this</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/03/02/js-for/">
             <time class="tagcloud-posttime">2017 / 03 / 02</time>
             <span>JavaScript所有for</span>
@@ -529,13 +536,6 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/03/03/js-this/">
-            <time class="tagcloud-posttime">2017 / 03 / 03</time>
-            <span>关于JavaScript的this</span>
           </a>
         </div>
       
@@ -584,6 +584,25 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>nlvi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/04/17/about-nlvi-pwa/">
+            <time class="tagcloud-posttime">2019 / 04 / 17</time>
+            <span>关于 Nlvi 「添加到桌面」</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/25/bye-nlvi/">
+            <time class="tagcloud-posttime">2019 / 03 / 25</time>
+            <span>最后的 Nlvi</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -615,7 +634,7 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Vue</h2>
+      <h2>vue</h2>
       
         <div class="tagcloud-post">
           <a href="2018/03/12/dji-interview/">
@@ -628,6 +647,34 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/30/vuex-study-2/">
+            <time class="tagcloud-posttime">2018 / 01 / 30</time>
+            <span>vuex源码理解（二）</span>
           </a>
         </div>
       
@@ -715,39 +762,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>vue</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/30/vuex-study-2/">
-            <time class="tagcloud-posttime">2018 / 01 / 30</time>
-            <span>vuex源码理解（二）</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -790,8 +804,6 @@
 
 
 
-
-  <script src="/blog/script/lib/layzr/layzr.js"></script>
 
 
 

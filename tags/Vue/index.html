@@ -40,7 +40,7 @@
       friends: true,
       reward: false,
       pjax: true,
-      lazy: true,
+      lazy: false,
       toc: true
     }
   }
@@ -188,6 +188,27 @@
         <div class="archive-post">
           <div class="archive-post-content">
             
+              <p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p>
+<p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和工牌套子。</p>
+<p>总结一下印象深刻受苦的问题和答案，不过有一点想吐槽的…就<code>vue</code>和<code>react</code>之间的关系和选择，我看到了高一文理科分班的那种影子：人家都是哪科分高选哪科，我是选分低 + 主管臆想……<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2018-03-12
+            </time>
+            <a class="archive-post-link" href="/blog/2018/03/12/dji-interview/">
+              关于四轴的踩坑指南
+            </a>
+          </div>
+        </div>
+      
+        
+          
+        
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
               <p>继续，这次尝试逐行理解Store类的东西</p>
 <p>然后关于这次，一些“工具函数”都集中在<code>util.js</code>的这种做法，已经够我学的了。这是个很受用的做法。</p>
 <h3 id="一些简单的东西"><a href="#一些简单的东西" class="headerlink" title="一些简单的东西"></a>一些简单的东西</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span>) &#123;</span><br><span class="line">  assert(Vue, <span class="string">`must call Vue.use(Vuex) before creating a store instance.`</span>)</span><br><span class="line">  assert(<span class="keyword">typeof</span> <span class="built_in">Promise</span> !== <span class="string">'undefined'</span>, <span class="string">`vuex requires a Promise polyfill in this browser.`</span>)</span><br><span class="line">  assert(<span class="keyword">this</span> <span class="keyword">instanceof</span> Store, <span class="string">`Store must be called with the new operator.`</span>)</span><br><span class="line">&#125; <span class="comment">// 断言函数在util，如果不满足前面的情况，后面以error 排出来</span></span><br><span class="line"><span class="comment">// （实际上就是想看有没有在vue环境中和有没有正确安装）</span></span><br></pre></td></tr></table></figure>
@@ -267,6 +288,30 @@
             </time>
             <a class="archive-post-link" href="/blog/2017/12/11/vue-jsx/">
               使用JSX的VUE应用开发体验
+            </a>
+          </div>
+        </div>
+      
+        
+          
+        
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
+              <p>本来是想放弃的，后来歪打正着，成功运行。最后搞一个ts类型的启动器，不想再懵了。</p>
+<p><a href="https://github.com/ColMugX/vue-ts-electron-starter" target="_blank" rel="noopener">vue-ts-electron-starter</a></p>
+<p>想看看原项目<code>electron-vue</code>有没有这个打算，没有的话自己fork个分支出来。这个将就。</p>
+<p>这次搞这个项目目的就很明显了，想做一个Hexo博客的编辑器（没错就是我这个博客的核心）。Hexo的话，属于页面生成器类的博客系统。直接一套生成静态页面，然后随意访问。因为一整套静态页面故还是有人喜欢直接干一套SPA上去，体验也好。</p>
+<p>其实搞这个，我去年就想搞了。可是去年的话，明显前端的技术都不扎实更别说搞了，当时的想法是写一个Mac App（我swift应该还行，随便写写问题不大。不过可能现在的话问题就大了）。不过就一直拖拖拖，导致swift3.0都有苗头了我还是没想写。而且关于如何操作terminal命令，还是个问题。</p>
+<p>这次心就大了。搞了再说，搞一半不行了就让他荒了。以后想起来再搞，再搞的时候技术肯定又上涨。如果这波做成了，开源，我不管有没有人用，总有人喜欢用。<br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2017-08-22
+            </time>
+            <a class="archive-post-link" href="/blog/2017/08/22/do-markdown-hexo/">
+              搞electron + vue + webpack2 + TypeScript什么体验
             </a>
           </div>
         </div>
@@ -365,6 +410,10 @@
     </div>
   
     <div class="tagcloud-tag">
+      <button>nlvi</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>colmugx</button>
     </div>
   
@@ -373,7 +422,7 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>Vue</button>
+      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -394,10 +443,6 @@
   
     <div class="tagcloud-tag">
       <button>vim</button>
-    </div>
-  
-    <div class="tagcloud-tag">
-      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -476,13 +521,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/08/14/js-call-apply-bind/">
-            <time class="tagcloud-posttime">2017 / 08 / 14</time>
-            <span>JavaScript的call，bind，apply</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/11/20/js-console/">
             <time class="tagcloud-posttime">2017 / 11 / 20</time>
             <span>你还在用Console.log()？</span>
@@ -497,6 +535,20 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2017/08/14/js-call-apply-bind/">
+            <time class="tagcloud-posttime">2017 / 08 / 14</time>
+            <span>JavaScript的call，bind，apply</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/03/js-this/">
+            <time class="tagcloud-posttime">2017 / 03 / 03</time>
+            <span>关于JavaScript的this</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/03/02/js-for/">
             <time class="tagcloud-posttime">2017 / 03 / 02</time>
             <span>JavaScript所有for</span>
@@ -507,13 +559,6 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/03/03/js-this/">
-            <time class="tagcloud-posttime">2017 / 03 / 03</time>
-            <span>关于JavaScript的this</span>
           </a>
         </div>
       
@@ -562,6 +607,25 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>nlvi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/04/17/about-nlvi-pwa/">
+            <time class="tagcloud-posttime">2019 / 04 / 17</time>
+            <span>关于 Nlvi 「添加到桌面」</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/25/bye-nlvi/">
+            <time class="tagcloud-posttime">2019 / 03 / 25</time>
+            <span>最后的 Nlvi</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -593,7 +657,7 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Vue</h2>
+      <h2>vue</h2>
       
         <div class="tagcloud-post">
           <a href="2018/03/12/dji-interview/">
@@ -606,6 +670,34 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/30/vuex-study-2/">
+            <time class="tagcloud-posttime">2018 / 01 / 30</time>
+            <span>vuex源码理解（二）</span>
           </a>
         </div>
       
@@ -693,39 +785,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>vue</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/30/vuex-study-2/">
-            <time class="tagcloud-posttime">2018 / 01 / 30</time>
-            <span>vuex源码理解（二）</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -768,8 +827,6 @@
 
 
 
-
-  <script src="/blog/script/lib/layzr/layzr.js"></script>
 
 
 

@@ -40,7 +40,7 @@
       friends: true,
       reward: false,
       pjax: true,
-      lazy: true,
+      lazy: false,
       toc: true
     }
   }
@@ -191,6 +191,60 @@
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
+          <time>2019-04-17</time>
+          
+            
+              <span class="post-category"><a href="/blog/categories/实践尝试/">实践尝试</a></span>
+            
+          
+        </div>
+      </div>
+      <h2 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/blog/2019/04/17/about-nlvi-pwa/">关于 Nlvi 「添加到桌面」</a>
+        
+      </h2>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>其实这个功能早在 2.x 版本就加入了，那时候对 PWA 并没有什么概念。<del>好想换 iPad Mini (new)</del></p>
+<p><img src="/blog/Image/nlvi-ios-desktop.gif" alt="nlvi-ios-desktop"></p>
+<p>目前 3.x 只改了启动图，适配了 iPad 横屏和 iPhone 全面屏（普通屏和plus后续加）。之前看到苹果对 PWA 持拒绝态度我是震惊的，你 tm 早就给 safari 加入了这个功能，也有相关<code>meta</code>配置（包括”识别为<code>WebApp</code>“），然后你告诉我这东西不是 PWA？</p>
+<p>本来确实想支持 PWA 的，想到除了要 <code>manifest.json</code>，还要搞定对应生成 <code>service worker</code>，使用不是很友好，所以取消计划。这部分添加功能就是一个尝试的甜点，所以也没有拿出来说。目前 3.x 开启 <code>pjax</code> 然后添加到桌面，阅读体验还是挺好的。</p>
+<p>所以这次打算讲讲「苹果式网页应用安装」，其实挺简单的。<br>
+        
+      
+    
+      </p><p class="content-link">
+        <a href="/blog/2019/04/17/about-nlvi-pwa/#more">
+          <span>继续阅读</span>
+        </a>
+      </p>
+    
+    </div>
+    
+      <div class="post-tags syuanpi fadeInRightShort back-3">
+      
+        <a href="/blog/tags/nlvi/">nlvi</a>
+      
+      </div>
+    
+    
+  </article>
+  
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
           <time>2019-03-27</time>
           
             
@@ -292,6 +346,8 @@
     </div>
     
       <div class="post-tags syuanpi fadeInRightShort back-3">
+      
+        <a href="/blog/tags/nlvi/">nlvi</a>
       
         <a href="/blog/tags/colmugx/">colmugx</a>
       
@@ -668,60 +724,7 @@
       
         <a href="/blog/tags/JavaScript/">JavaScript</a>
       
-        <a href="/blog/tags/Vue/">Vue</a>
-      
-      </div>
-    
-    
-  </article>
-  
-  
-
-  
-    
-  
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi fadeInRightShort back-1">
-        <div class="post-time-wrapper">
-          <time>2018-02-28</time>
-          
-            
-              <span class="post-category"><a href="/blog/categories/曲苑杂坛/">曲苑杂坛</a></span>
-            
-          
-        </div>
-      </div>
-      <h2 class="post-title syuanpi fadeInRightShort back-2">
-        
-          <a href="/blog/2018/02/28/promise-chaining/">promise链式调用</a>
-        
-      </h2>
-    </header>
-    <div class="post-content syuanpi fadeInRightShort back-3">
-      
-        
-          <p>学会了却不会活用是真的菜…</p>
-<p>前几天面试，提到了回调地狱用<code>promise</code>，然后抛出个衍生问题：<code>promise</code>也会嵌套，怎么解决<code>promise</code>的回调地狱。</p>
-<p>我想不到，直接问能不能用<code>ES8</code>，说行，然后我就想到了<code>const p2 = await Promise</code>这种做法。</p>
-<p>可是，我记得我在若干天前才写了一篇关于「JS方法链式调用」。</p>
-<blockquote>
-<p>只要函数返回值是一个函数，就可以连着调用</p>
-</blockquote>
-<p>So,</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p1.then(<span class="function">(<span class="params">&#123; p2 &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> p2</span><br><span class="line">&#125;).then(&#123; p3 &#125; =&gt; &#123;&#125;)</span><br></pre></td></tr></table></figure>
-
-        
-      
-    
-    </div>
-    
-      <div class="post-tags syuanpi fadeInRightShort back-3">
-      
-        <a href="/blog/tags/JavaScript/">JavaScript</a>
+        <a href="/blog/tags/vue/">vue</a>
       
       </div>
     
@@ -821,6 +824,10 @@
     </div>
   
     <div class="tagcloud-tag">
+      <button>nlvi</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>colmugx</button>
     </div>
   
@@ -829,7 +836,7 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>Vue</button>
+      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -850,10 +857,6 @@
   
     <div class="tagcloud-tag">
       <button>vim</button>
-    </div>
-  
-    <div class="tagcloud-tag">
-      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -932,13 +935,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/08/14/js-call-apply-bind/">
-            <time class="tagcloud-posttime">2017 / 08 / 14</time>
-            <span>JavaScript的call，bind，apply</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/11/20/js-console/">
             <time class="tagcloud-posttime">2017 / 11 / 20</time>
             <span>你还在用Console.log()？</span>
@@ -953,6 +949,20 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2017/08/14/js-call-apply-bind/">
+            <time class="tagcloud-posttime">2017 / 08 / 14</time>
+            <span>JavaScript的call，bind，apply</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/03/js-this/">
+            <time class="tagcloud-posttime">2017 / 03 / 03</time>
+            <span>关于JavaScript的this</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/03/02/js-for/">
             <time class="tagcloud-posttime">2017 / 03 / 02</time>
             <span>JavaScript所有for</span>
@@ -963,13 +973,6 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/03/03/js-this/">
-            <time class="tagcloud-posttime">2017 / 03 / 03</time>
-            <span>关于JavaScript的this</span>
           </a>
         </div>
       
@@ -1018,6 +1021,25 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>nlvi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/04/17/about-nlvi-pwa/">
+            <time class="tagcloud-posttime">2019 / 04 / 17</time>
+            <span>关于 Nlvi 「添加到桌面」</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/25/bye-nlvi/">
+            <time class="tagcloud-posttime">2019 / 03 / 25</time>
+            <span>最后的 Nlvi</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -1049,7 +1071,7 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Vue</h2>
+      <h2>vue</h2>
       
         <div class="tagcloud-post">
           <a href="2018/03/12/dji-interview/">
@@ -1062,6 +1084,34 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/30/vuex-study-2/">
+            <time class="tagcloud-posttime">2018 / 01 / 30</time>
+            <span>vuex源码理解（二）</span>
           </a>
         </div>
       
@@ -1149,39 +1199,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>vue</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/30/vuex-study-2/">
-            <time class="tagcloud-posttime">2018 / 01 / 30</time>
-            <span>vuex源码理解（二）</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -1224,8 +1241,6 @@
 
 
 
-
-  <script src="/blog/script/lib/layzr/layzr.js"></script>
 
 
 

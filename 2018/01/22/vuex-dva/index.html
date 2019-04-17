@@ -42,7 +42,7 @@
       friends: true,
       reward: false,
       pjax: true,
-      lazy: true,
+      lazy: false,
       toc: true
     }
   }
@@ -240,7 +240,7 @@
 <p>接下来就是无状态组件问题了，vue默认是状态组件，而且无状态组件也没有react来的方便。</p>
 <p>react想要无状态组件，无非就是一个函数就结束战斗了。vue也有一个概念叫函数式组件，也就是无状态，这种组件在使用上就已经不是很方便了。</p>
 <p>vue的函数式组件就必须使用<code>render</code>函数不能用<code>template</code>模板，一直到vue2.5才可以在<code>&lt;template functional&gt;</code>使用。但我尝试了一下，手感并不好，所以还是只能用 jsx + vue 这种搭配来操作。不过vue的无状态组件也不像react那么好理解，它依然是一个Object</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  functional: <span class="literal">true</span>， <span class="comment">// 你只不过是通过这个开关来切换组件状态</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...mapActions(<span class="string">'spacename'</span>, &#123;</span><br><span class="line">      add: <span class="string">'create'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;h1&gt;&#123;props.msg&#125;&lt;/h1&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  functional: <span class="literal">true</span>， <span class="comment">// 你只不过是通过这个开关来切换组件状态</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...mapActions(<span class="string">'spacename'</span>, &#123;</span><br><span class="line">      add: <span class="string">'create'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;props.msg&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>而且在实际使用中，实际上因为vue的概念，你还是没办法在所有组件完全不使用无状态组件（已经除去表单组件）。不过也无伤大雅了。</p>
 <p>所以通过这个操作，也能近似的得到了dva的那种感觉。前端的工作只需要直观的反馈你的数据动向和状态，要那么复杂干什么？</p>
 
@@ -415,6 +415,10 @@
     </div>
   
     <div class="tagcloud-tag">
+      <button>nlvi</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>colmugx</button>
     </div>
   
@@ -423,7 +427,7 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>Vue</button>
+      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -444,10 +448,6 @@
   
     <div class="tagcloud-tag">
       <button>vim</button>
-    </div>
-  
-    <div class="tagcloud-tag">
-      <button>vue</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -526,13 +526,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/08/14/js-call-apply-bind/">
-            <time class="tagcloud-posttime">2017 / 08 / 14</time>
-            <span>JavaScript的call，bind，apply</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/11/20/js-console/">
             <time class="tagcloud-posttime">2017 / 11 / 20</time>
             <span>你还在用Console.log()？</span>
@@ -547,6 +540,20 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2017/08/14/js-call-apply-bind/">
+            <time class="tagcloud-posttime">2017 / 08 / 14</time>
+            <span>JavaScript的call，bind，apply</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/03/js-this/">
+            <time class="tagcloud-posttime">2017 / 03 / 03</time>
+            <span>关于JavaScript的this</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/03/02/js-for/">
             <time class="tagcloud-posttime">2017 / 03 / 02</time>
             <span>JavaScript所有for</span>
@@ -557,13 +564,6 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/03/03/js-this/">
-            <time class="tagcloud-posttime">2017 / 03 / 03</time>
-            <span>关于JavaScript的this</span>
           </a>
         </div>
       
@@ -612,6 +612,25 @@
     </div>
   
     <div class="tagcloud-postlist ">
+      <h2>nlvi</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/04/17/about-nlvi-pwa/">
+            <time class="tagcloud-posttime">2019 / 04 / 17</time>
+            <span>关于 Nlvi 「添加到桌面」</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/25/bye-nlvi/">
+            <time class="tagcloud-posttime">2019 / 03 / 25</time>
+            <span>最后的 Nlvi</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -643,7 +662,7 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Vue</h2>
+      <h2>vue</h2>
       
         <div class="tagcloud-post">
           <a href="2018/03/12/dji-interview/">
@@ -656,6 +675,34 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/11/vue-jsx/">
+            <time class="tagcloud-posttime">2017 / 12 / 11</time>
+            <span>使用JSX的VUE应用开发体验</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2018/01/30/vuex-study-2/">
+            <time class="tagcloud-posttime">2018 / 01 / 30</time>
+            <span>vuex源码理解（二）</span>
           </a>
         </div>
       
@@ -743,39 +790,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>vue</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/11/vue-jsx/">
-            <time class="tagcloud-posttime">2017 / 12 / 11</time>
-            <span>使用JSX的VUE应用开发体验</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/30/vuex-study-2/">
-            <time class="tagcloud-posttime">2018 / 01 / 30</time>
-            <span>vuex源码理解（二）</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -818,8 +832,6 @@
 
 
 
-
-  <script src="/blog/script/lib/layzr/layzr.js"></script>
 
 
 
