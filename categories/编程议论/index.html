@@ -189,6 +189,36 @@
         <div class="archive-post">
           <div class="archive-post-content">
             
+              <blockquote>
+<p>听说 Vue3 数据绑定要切换到 Proxy，为什么？</p>
+</blockquote>
+<p>这就是这篇文章的原因，来源于某个牛逼公司的面试。<del>我真的应该学会怎么清楚表达观点…</del></p>
+<p><code>defineProperty</code> 和 <code>Proxy</code> 使用方式和效果看起来是差不多的，但如果翻译成中文的话，一个是定义属性，一个是代理，并且 MDN 上描述有所不同。</p>
+<blockquote>
+<p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。 —— MDN</p>
+</blockquote>
+<blockquote>
+<p>Proxy 对象用于定义基本操作的自定义行为（如属性查找，赋值，枚举，函数调用等）。  —— MDN</p>
+</blockquote>
+<h3 id="defineProperty"><a href="#defineProperty" class="headerlink" title="defineProperty"></a>defineProperty</h3><p>这是一个 <code>ES5</code> 的方法。一个 <code>defineProperty</code> 需要三个参数，都是 <code>require</code><br>
+            
+          </p></div>
+          <div class="archive-post-info">
+            <time class="archive-post-time">
+              2019-04-20
+            </time>
+            <a class="archive-post-link" href="/blog/2019/04/20/why-vue-proxy/">
+              defineProperty? Proxy?
+            </a>
+          </div>
+        </div>
+      
+        
+          
+        
+        <div class="archive-post">
+          <div class="archive-post-content">
+            
               <h4 id="Round-1"><a href="#Round-1" class="headerlink" title="Round 1"></a>Round 1</h4><blockquote>
 <p>- 我现在把所有东西都注释掉，改成这样<br>function a() {<br>  return inner;<br>  let inner;<br>}<br>返回什么？</p>
 <p>- 那就应该 undefined 了，反正后面不执行</p>
@@ -360,15 +390,15 @@
     </div>
   
     <div class="tagcloud-tag">
+      <button>Redux</button>
+    </div>
+  
+    <div class="tagcloud-tag">
       <button>nlvi</button>
     </div>
   
     <div class="tagcloud-tag">
       <button>colmugx</button>
-    </div>
-  
-    <div class="tagcloud-tag">
-      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -380,11 +410,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>Functional Programming</button>
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
+      <button>Functional Programming</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -429,16 +459,16 @@
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
-          <a href="2017/12/07/about-currying/">
-            <time class="tagcloud-posttime">2017 / 12 / 07</time>
-            <span>扯扯柯里化</span>
+          <a href="2017/08/09/about-conditionals/">
+            <time class="tagcloud-posttime">2017 / 08 / 09</time>
+            <span>关于Javascript的条件判断</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/08/09/about-conditionals/">
-            <time class="tagcloud-posttime">2017 / 08 / 09</time>
-            <span>关于Javascript的条件判断</span>
+          <a href="2017/12/07/about-currying/">
+            <time class="tagcloud-posttime">2017 / 12 / 07</time>
+            <span>扯扯柯里化</span>
           </a>
         </div>
       
@@ -450,13 +480,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/07/04/different-function/">
-            <time class="tagcloud-posttime">2018 / 07 / 04</time>
-            <span>我就写个方法，这么麻烦？</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2018/03/12/dji-interview/">
             <time class="tagcloud-posttime">2018 / 03 / 12</time>
             <span>关于四轴的踩坑指南</span>
@@ -464,9 +487,23 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/07/04/different-function/">
+            <time class="tagcloud-posttime">2018 / 07 / 04</time>
+            <span>我就写个方法，这么麻烦？</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2017/12/20/exchange_number/">
             <time class="tagcloud-posttime">2017 / 12 / 20</time>
             <span>冒泡排序的骚思路</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/08/14/js-call-apply-bind/">
+            <time class="tagcloud-posttime">2017 / 08 / 14</time>
+            <span>JavaScript的call，bind，apply</span>
           </a>
         </div>
       
@@ -485,9 +522,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/08/14/js-call-apply-bind/">
-            <time class="tagcloud-posttime">2017 / 08 / 14</time>
-            <span>JavaScript的call，bind，apply</span>
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -499,30 +536,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/23/js-method-chaining/">
-            <time class="tagcloud-posttime">2017 / 12 / 23</time>
-            <span>JavaScript链式方法</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2018/02/28/promise-chaining/">
             <time class="tagcloud-posttime">2018 / 02 / 28</time>
             <span>promise链式调用</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2017/10/17/reference-equal-pointer/">
-            <time class="tagcloud-posttime">2017 / 10 / 17</time>
-            <span>引用等于指针吗？</span>
           </a>
         </div>
       
@@ -541,6 +557,20 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2017/10/17/reference-equal-pointer/">
+            <time class="tagcloud-posttime">2017 / 10 / 17</time>
+            <span>引用等于指针吗？</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/23/js-method-chaining/">
+            <time class="tagcloud-posttime">2017 / 12 / 23</time>
+            <span>JavaScript链式方法</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2019/03/27/you-dont-know-let/">
             <time class="tagcloud-posttime">2019 / 03 / 27</time>
             <span>我今天给 let 安排了</span>
@@ -551,6 +581,25 @@
           <a href="2017/02/17/async-await-first/">
             <time class="tagcloud-posttime">2017 / 02 / 17</time>
             <span>async-await 初尝试</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2019/04/20/why-vue-proxy/">
+            <time class="tagcloud-posttime">2019 / 04 / 20</time>
+            <span>defineProperty? Proxy?</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
           </a>
         </div>
       
@@ -595,18 +644,6 @@
     </div>
   
     <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
       <h2>vue</h2>
       
         <div class="tagcloud-post">
@@ -620,13 +657,6 @@
           <a href="2017/08/22/do-markdown-hexo/">
             <time class="tagcloud-posttime">2017 / 08 / 22</time>
             <span>搞electron + vue + webpack2 + TypeScript什么体验</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -645,9 +675,23 @@
         </div>
       
         <div class="tagcloud-post">
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
           <a href="2018/01/30/vuex-study-2/">
             <time class="tagcloud-posttime">2018 / 01 / 30</time>
             <span>vuex源码理解（二）</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2019/04/20/why-vue-proxy/">
+            <time class="tagcloud-posttime">2019 / 04 / 20</time>
+            <span>defineProperty? Proxy?</span>
           </a>
         </div>
       
@@ -667,18 +711,6 @@
           <a href="2017/09/19/what-the-feeling-about-hyper/">
             <time class="tagcloud-posttime">2017 / 09 / 19</time>
             <span>使用桌面应用写hexo博客是什么体验？</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>Functional Programming</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/27/funny-monad/">
-            <time class="tagcloud-posttime">2017 / 12 / 27</time>
-            <span>有意思的monad记录</span>
           </a>
         </div>
       
@@ -705,6 +737,18 @@
           <a href="2017/09/19/what-the-feeling-about-hyper/">
             <time class="tagcloud-posttime">2017 / 09 / 19</time>
             <span>使用桌面应用写hexo博客是什么体验？</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist ">
+      <h2>Functional Programming</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/27/funny-monad/">
+            <time class="tagcloud-posttime">2017 / 12 / 27</time>
+            <span>有意思的monad记录</span>
           </a>
         </div>
       
