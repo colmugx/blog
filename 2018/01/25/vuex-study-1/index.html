@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="browsermode" content="application">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,24 +29,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
 <link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
 <link rel="stylesheet" href="/blog/style/style.css">
-<script>
-  var nlviconfig = {
-    title: "Colmugx 's Blog",
-    author: "colmugx",
-    baseUrl: "/blog/",
-    theme: {
-      scheme: "balance",
-      lightbox: true,
-      animate: true,
-      search: true,
-      friends: true,
-      reward: false,
-      pjax: true,
-      lazy: false,
-      toc: true
-    }
-  }
-</script>
+<script>var nlviconfig={title:"Colmugx 's Blog",author:"colmugx",baseUrl:"/blog/",theme:{scheme:"balance",lightbox:!0,animate:!0,search:!0,friends:!0,reward:!1,pjax:!0,lazy:!1,toc:!0}}</script>
 
 
 
@@ -66,15 +49,9 @@
 
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-98059014-1');
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-98059014-1")</script>
 
 
 
@@ -86,7 +63,7 @@
   <title> vuex源码理解（一） · Colmugx 's Blog </title>
 </head>
 <body>
-  <div class="container" style="display:none;">
+  <div class="container" style="display:none">
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
@@ -191,10 +168,7 @@
           
     
   
-  <article class="
-  post
-   is_post 
-  ">
+  <article class="post is_post">
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
@@ -216,14 +190,14 @@
       
         <p>看个代码代价很高，我边读边转笔，然后一个失手把手挑了个滴血不止…（笔头挑掉了一层手皮）</p>
 <p>vuex和dva的源码都想看，不然没办法知道相性在哪。</p>
-<h3 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h3><p>这都暴露干净了…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  Store,</span><br><span class="line">  install,</span><br><span class="line">  version: <span class="string">'__VERSION__'</span>,</span><br><span class="line">  mapState,</span><br><span class="line">  mapMutations,</span><br><span class="line">  mapGetters,</span><br><span class="line">  mapActions,</span><br><span class="line">  createNamespacedHelpers</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="由口而入"><a href="#由口而入" class="headerlink" title="由口而入"></a>由口而入</h3><p>这都暴露干净了…<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  Store,</span><br><span class="line">  install,</span><br><span class="line">  version: <span class="string">'__VERSION__'</span>,</span><br><span class="line">  mapState,</span><br><span class="line">  mapMutations,</span><br><span class="line">  mapGetters,</span><br><span class="line">  mapActions,</span><br><span class="line">  createNamespacedHelpers</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
 <p><code>install</code>肯定是Vue老套路，想把东西当插件用肯定要暴露这个方法。这个之前写组件经常需要碰到，弃之！</p>
 <p>这次就先读暴露出来的四个方法吧</p>
 <a id="more"></a>
 <h3 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h3><h3 id="normalizeNamespace"><a href="#normalizeNamespace" class="headerlink" title="normalizeNamespace"></a>normalizeNamespace</h3><p>这个东西可能要先讲，因为你看到<code>mapState</code>的第一眼你就会看到他，虽然不重要。</p>
 <p>这应该是一个初始化或者标准化命名空间的方法，之前”尝试用dva的理解对处理数据”有遇到使用命名空间的情况。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  ...mapState(<span class="string">'spacename'</span>, &#123;</span><br><span class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>看一下实现方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeNamespace</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">namespace, map</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> namespace !== <span class="string">'string'</span>) &#123;</span><br><span class="line">      map = namespace</span><br><span class="line">      namespace = <span class="string">''</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (namespace.charAt(namespace.length - <span class="number">1</span>) !== <span class="string">'/'</span>) &#123;</span><br><span class="line">      namespace += <span class="string">'/'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fn(namespace, map)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>看一下实现方法<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalizeNamespace</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">namespace, map</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> namespace !== <span class="string">'string'</span>) &#123;</span><br><span class="line">      map = namespace</span><br><span class="line">      namespace = <span class="string">''</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (namespace.charAt(namespace.length - <span class="number">1</span>) !== <span class="string">'/'</span>) &#123;</span><br><span class="line">      namespace += <span class="string">'/'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fn(namespace, map)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
 <p>映入眼帘就是一个柯里了，大致意思就是命名空间需要处理，如果进来的函数第一个不是空间名称那么肯定直接是对象了，因为我们也不是必须使用命名空间，比如最普通的这样的</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  ...mapState(&#123;</span><br><span class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果有命名空间的话，就根据层数用<code>/</code>分开，比如<code>app/save</code></p>
@@ -299,26 +273,16 @@
 
 
     
-  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
-  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg)"></i>
+  <div class="post-comments" id="post-comments" style="display:block;margin:auto 16px">
     
     
     
-<!-- Disqus Comments -->
+
 <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<script type="text/javascript">
-    var disqus_shortname = 'co1mugxs-blog';
-
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+<script type="text/javascript">var disqus_shortname="co1mugxs-blog";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 
 
     
@@ -417,11 +381,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>colmugx</button>
+      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Redux</button>
+      <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -433,15 +397,15 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>Functional Programming</button>
     </div>
   
     <div class="tagcloud-tag">
       <button>weapp</button>
+    </div>
+  
+    <div class="tagcloud-tag">
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -466,7 +430,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>CSS</h2>
       
         <div class="tagcloud-post">
@@ -478,7 +442,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -531,13 +495,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/11/20/js-console/">
-            <time class="tagcloud-posttime">2017 / 11 / 20</time>
-            <span>你还在用Console.log()？</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/02/22/js-extends/">
             <time class="tagcloud-posttime">2017 / 02 / 22</time>
             <span>来搞一手关于Javascript对象继承</span>
@@ -545,9 +502,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/11/20/js-console/">
+            <time class="tagcloud-posttime">2017 / 11 / 20</time>
+            <span>你还在用Console.log()？</span>
           </a>
         </div>
       
@@ -555,6 +512,13 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -616,7 +580,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>nlvi</h2>
       
         <div class="tagcloud-post">
@@ -635,7 +599,19 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -654,19 +630,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vue</h2>
       
         <div class="tagcloud-post">
@@ -691,16 +655,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -720,7 +684,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>electron</h2>
       
         <div class="tagcloud-post">
@@ -739,7 +703,31 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Functional Programming</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/27/funny-monad/">
+            <time class="tagcloud-posttime">2017 / 12 / 27</time>
+            <span>有意思的monad记录</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -765,31 +753,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Functional Programming</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/27/funny-monad/">
-            <time class="tagcloud-posttime">2017 / 12 / 27</time>
-            <span>有意思的monad记录</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -801,7 +765,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -825,7 +789,7 @@
   </div>
   <div class="backtop syuanpi melt toTop" id="backtop">
     <i class="iconfont icon-up"></i>
-    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+    <span style="text-align:center;font-family:Georgia"><span style="font-family:Georgia" id="scrollpercent">1</span>%</span>
 </div>
 
   <div class="search" id="search">
@@ -857,19 +821,7 @@
 <script src="/blog/script/bootstarp.js"></script>
 
 
-<script>
-if (nlviconfig.theme.toc) {
-  setTimeout(function() {
-    if (nlviconfig.theme.scheme === 'balance') {
-      $("#header").addClass("show_toc");
-    } else if (nlviconfig.theme.scheme === 'banderole') {
-      $(".container-inner").addClass("has_toc");
-      $(".post-toc .title").addClass("show");
-      $(".toc-inner").addClass("show");
-    }
-  }, 1000);
-}
-</script>
+<script>nlviconfig.theme.toc&&setTimeout(function(){"balance"===nlviconfig.theme.scheme?$("#header").addClass("show_toc"):"banderole"===nlviconfig.theme.scheme&&($(".container-inner").addClass("has_toc"),$(".post-toc .title").addClass("show"),$(".toc-inner").addClass("show"))},1e3)</script>
 
 
 

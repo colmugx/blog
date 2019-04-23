@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="browsermode" content="application">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,24 +29,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
 <link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
 <link rel="stylesheet" href="/blog/style/style.css">
-<script>
-  var nlviconfig = {
-    title: "Colmugx 's Blog",
-    author: "colmugx",
-    baseUrl: "/blog/",
-    theme: {
-      scheme: "balance",
-      lightbox: true,
-      animate: true,
-      search: true,
-      friends: true,
-      reward: false,
-      pjax: true,
-      lazy: false,
-      toc: true
-    }
-  }
-</script>
+<script>var nlviconfig={title:"Colmugx 's Blog",author:"colmugx",baseUrl:"/blog/",theme:{scheme:"balance",lightbox:!0,animate:!0,search:!0,friends:!0,reward:!1,pjax:!0,lazy:!1,toc:!0}}</script>
 
 
 
@@ -66,15 +49,9 @@
 
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-98059014-1');
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-98059014-1")</script>
 
 
 
@@ -86,7 +63,7 @@
   <title> 来搞一手关于Javascript对象继承 · Colmugx 's Blog </title>
 </head>
 <body>
-  <div class="container" style="display:none;">
+  <div class="container" style="display:none">
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
@@ -191,10 +168,7 @@
           
     
   
-  <article class="
-  post
-   is_post 
-  ">
+  <article class="post is_post">
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
@@ -218,19 +192,19 @@
 <p>小爝（知乎用户）：js里面什么都是对象，所以你看单身狗学这个语言学的老快了。</p>
 </blockquote>
 <p>就前几天看到的答案，觉得对啊！js这种边缘OP的语言，你说它没对象它是可以有的，你说它是面向对象语言它不是。<br>所以来研究一手关于JavaScript的继承。研究过程用一下typescript（这个真有对象了）<a id="more"></a></p>
-<h3 id="先看一下关于typescript的继承"><a href="#先看一下关于typescript的继承" class="headerlink" title="先看一下关于typescript的继承"></a>先看一下关于typescript的继承</h3><p>看一下ts的类<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Parent &#123;</span><br><span class="line">    name: <span class="built_in">string</span></span><br><span class="line">    age: <span class="built_in">number</span></span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">msg:<span class="built_in">string</span>, age:<span class="built_in">number</span></span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    sayHello() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;this.name&#125;</span>,now is <span class="subst">$&#123;this.age&#125;</span>`</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后来一手调用，全程感觉像在用<code>java</code><br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>)</span><br><span class="line">par.sayHello()      <span class="comment">//hello mike,now is 16</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="先看一下关于typescript的继承"><a href="#先看一下关于typescript的继承" class="headerlink" title="先看一下关于typescript的继承"></a>先看一下关于typescript的继承</h3><p>看一下ts的类<br></p><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Parent &#123;</span><br><span class="line">    name: <span class="built_in">string</span></span><br><span class="line">    age: <span class="built_in">number</span></span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">msg:<span class="built_in">string</span>, age:<span class="built_in">number</span></span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    sayHello() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;this.name&#125;</span>,now is <span class="subst">$&#123;this.age&#125;</span>`</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<p>然后来一手调用，全程感觉像在用<code>java</code><br></p><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>)</span><br><span class="line">par.sayHello()      <span class="comment">//hello mike,now is 16</span></span><br></pre></td></tr></table></figure><p></p>
 <p><strong>答案我在terminal验证过的没问题！！</strong></p>
-<p>接下来尝试一下如果我走继承会是什么样，来一手继承<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Parent &#123;</span><br><span class="line">    name: <span class="built_in">string</span></span><br><span class="line">    age: <span class="built_in">number</span></span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">msg:<span class="built_in">string</span>, age:<span class="built_in">number</span></span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    sayHello() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;this.name&#125;</span>,now is <span class="subst">$&#123;this.age&#125;</span>`</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Now extends.</span></span><br><span class="line"><span class="keyword">class</span> Son <span class="keyword">extends</span> Parent &#123;</span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">msg, age</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>(msg, age);</span><br><span class="line">    &#125;</span><br><span class="line">    sayHello() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`hello I'm Son. next is my Parent's say`</span>)</span><br><span class="line">        <span class="keyword">super</span>.sayHello()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>来手调用验证结果<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>)</span><br><span class="line">sapi.sayHello()  <span class="comment">//hello I'm Son. next is my Parent's say\n hello peanut,now is 10</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="该研究JavaScript的继承了"><a href="#该研究JavaScript的继承了" class="headerlink" title="该研究JavaScript的继承了"></a>该研究JavaScript的继承了</h3><p>先来看一下第一个例子翻译成ES5(JavaScript)是什么样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> Parent;</span><br><span class="line">&#125;());</span><br><span class="line"><span class="keyword">var</span> par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>);</span><br><span class="line">par.sayHello();</span><br></pre></td></tr></table></figure></p>
+<p>接下来尝试一下如果我走继承会是什么样，来一手继承<br></p><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Parent &#123;</span><br><span class="line">    name: <span class="built_in">string</span></span><br><span class="line">    age: <span class="built_in">number</span></span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">msg:<span class="built_in">string</span>, age:<span class="built_in">number</span></span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    sayHello() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;this.name&#125;</span>,now is <span class="subst">$&#123;this.age&#125;</span>`</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Now extends.</span></span><br><span class="line"><span class="keyword">class</span> Son <span class="keyword">extends</span> Parent &#123;</span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">msg, age</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>(msg, age);</span><br><span class="line">    &#125;</span><br><span class="line">    sayHello() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`hello I'm Son. next is my Parent's say`</span>)</span><br><span class="line">        <span class="keyword">super</span>.sayHello()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<p>来手调用验证结果<br></p><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>)</span><br><span class="line">sapi.sayHello()  <span class="comment">//hello I'm Son. next is my Parent's say\n hello peanut,now is 10</span></span><br></pre></td></tr></table></figure><p></p>
+<h3 id="该研究JavaScript的继承了"><a href="#该研究JavaScript的继承了" class="headerlink" title="该研究JavaScript的继承了"></a>该研究JavaScript的继承了</h3><p>先来看一下第一个例子翻译成ES5(JavaScript)是什么样的<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> Parent;</span><br><span class="line">&#125;());</span><br><span class="line"><span class="keyword">var</span> par = <span class="keyword">new</span> Parent(<span class="string">"mike"</span>, <span class="number">16</span>);</span><br><span class="line">par.sayHello();</span><br></pre></td></tr></table></figure><p></p>
 <p>首先是建立了个函数，函数内再嵌套一层函数，然后通过内部的<code>prototype</code>添加一个方法，最后返回整个父函数。<br>燃鹅在这个函数内部已经做了一次叫“原型链继承”的事情了。就是从父级，或者说从其他原型来指向到继承的实例来达到元素一并继承，这样我要实现后面的实例的时候就要连带前面的也一并执行了。</p>
-<p>然后第二个例子，多了个继承<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> __extends = (<span class="keyword">this</span> &amp;&amp; <span class="keyword">this</span>.__extends) || <span class="function"><span class="keyword">function</span> (<span class="params">d, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> p <span class="keyword">in</span> b) <span class="keyword">if</span> (b.hasOwnProperty(p)) d[p] = b[p];</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__</span>(<span class="params"></span>) </span>&#123; <span class="keyword">this</span>.constructor = d; &#125;</span><br><span class="line">    d.prototype = b === <span class="literal">null</span> ? <span class="built_in">Object</span>.create(b) : (__.prototype = b.prototype, <span class="keyword">new</span> __());</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> Parent;</span><br><span class="line">&#125;());</span><br><span class="line"><span class="keyword">var</span> Son = (<span class="function"><span class="keyword">function</span> (<span class="params">_super</span>) </span>&#123;</span><br><span class="line">    __extends(Son, _super);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">msg, age</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> _super.call(<span class="keyword">this</span>, msg, age) || <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Son.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"hello I'm Son. next is my Parent's say"</span>);</span><br><span class="line">        _super.prototype.sayHello.call(<span class="keyword">this</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> Son;</span><br><span class="line">&#125;(Parent));</span><br><span class="line"><span class="keyword">var</span> sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>);</span><br><span class="line">sapi.sayHello();</span><br></pre></td></tr></table></figure></p>
+<p>然后第二个例子，多了个继承<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> __extends = (<span class="keyword">this</span> &amp;&amp; <span class="keyword">this</span>.__extends) || <span class="function"><span class="keyword">function</span> (<span class="params">d, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> p <span class="keyword">in</span> b) <span class="keyword">if</span> (b.hasOwnProperty(p)) d[p] = b[p];</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__</span>(<span class="params"></span>) </span>&#123; <span class="keyword">this</span>.constructor = d; &#125;</span><br><span class="line">    d.prototype = b === <span class="literal">null</span> ? <span class="built_in">Object</span>.create(b) : (__.prototype = b.prototype, <span class="keyword">new</span> __());</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> Parent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">msg, age</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.name = msg;</span><br><span class="line">    &#125;</span><br><span class="line">    Parent.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">"hello "</span> + <span class="keyword">this</span>.name + <span class="string">",now is "</span> + <span class="keyword">this</span>.age);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> Parent;</span><br><span class="line">&#125;());</span><br><span class="line"><span class="keyword">var</span> Son = (<span class="function"><span class="keyword">function</span> (<span class="params">_super</span>) </span>&#123;</span><br><span class="line">    __extends(Son, _super);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">msg, age</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> _super.call(<span class="keyword">this</span>, msg, age) || <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Son.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"hello I'm Son. next is my Parent's say"</span>);</span><br><span class="line">        _super.prototype.sayHello.call(<span class="keyword">this</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> Son;</span><br><span class="line">&#125;(Parent));</span><br><span class="line"><span class="keyword">var</span> sapi = <span class="keyword">new</span> Son(<span class="string">'peanut'</span>, <span class="number">10</span>);</span><br><span class="line">sapi.sayHello();</span><br></pre></td></tr></table></figure><p></p>
 <p>有点厉害，我先坐下来……</p>
 <p>先是构造了个链子，然后（那个是闭包污染处理嘛…）…… 说不清了……</p>
 <p>反正看子类，很明显在“Son类”结束前，有一个<code>(Parent)</code>，虽说ts对于类的处理都是一个大个的及时运行函数，但是”parent”运行时并没有带参数，而”Son”带了它的爹，如果我的理解的是对的的话，就是”Son”在运行的时候把”Parent”带着运行一次起到“继承”的效果。最后还是照原型链的理解。</p>
-<h3 id="关于JavaScript的其他继承"><a href="#关于JavaScript的其他继承" class="headerlink" title="关于JavaScript的其他继承"></a>关于JavaScript的其他继承</h3><p>还是因为我的爬虫小记中的现世界宝可梦数量及其名字的项目中，用到了<code>.call(this)</code>这个函数句。所以在想，是否可以使用构造函数走一波继承？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'this is a'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    a.call(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后调用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b()     <span class="comment">//this is a</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="关于JavaScript的其他继承"><a href="#关于JavaScript的其他继承" class="headerlink" title="关于JavaScript的其他继承"></a>关于JavaScript的其他继承</h3><p>还是因为我的爬虫小记中的现世界宝可梦数量及其名字的项目中，用到了<code>.call(this)</code>这个函数句。所以在想，是否可以使用构造函数走一波继承？<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'this is a'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    a.call(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<p>然后调用<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b()     <span class="comment">//this is a</span></span><br></pre></td></tr></table></figure><p></p>
 <p>所以也是可以的。结束！</p>
 
       
@@ -290,26 +264,16 @@
 
 
     
-  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
-  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg)"></i>
+  <div class="post-comments" id="post-comments" style="display:block;margin:auto 16px">
     
     
     
-<!-- Disqus Comments -->
+
 <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<script type="text/javascript">
-    var disqus_shortname = 'co1mugxs-blog';
-
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+<script type="text/javascript">var disqus_shortname="co1mugxs-blog";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 
 
     
@@ -408,11 +372,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>colmugx</button>
+      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Redux</button>
+      <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -424,15 +388,15 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>Functional Programming</button>
     </div>
   
     <div class="tagcloud-tag">
       <button>weapp</button>
+    </div>
+  
+    <div class="tagcloud-tag">
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -457,7 +421,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>CSS</h2>
       
         <div class="tagcloud-post">
@@ -469,7 +433,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -522,13 +486,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/11/20/js-console/">
-            <time class="tagcloud-posttime">2017 / 11 / 20</time>
-            <span>你还在用Console.log()？</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/02/22/js-extends/">
             <time class="tagcloud-posttime">2017 / 02 / 22</time>
             <span>来搞一手关于Javascript对象继承</span>
@@ -536,9 +493,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/11/20/js-console/">
+            <time class="tagcloud-posttime">2017 / 11 / 20</time>
+            <span>你还在用Console.log()？</span>
           </a>
         </div>
       
@@ -546,6 +503,13 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -607,7 +571,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>nlvi</h2>
       
         <div class="tagcloud-post">
@@ -626,7 +590,19 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -645,19 +621,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vue</h2>
       
         <div class="tagcloud-post">
@@ -682,16 +646,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -711,7 +675,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>electron</h2>
       
         <div class="tagcloud-post">
@@ -730,7 +694,31 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Functional Programming</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/27/funny-monad/">
+            <time class="tagcloud-posttime">2017 / 12 / 27</time>
+            <span>有意思的monad记录</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -756,31 +744,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Functional Programming</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/27/funny-monad/">
-            <time class="tagcloud-posttime">2017 / 12 / 27</time>
-            <span>有意思的monad记录</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -792,7 +756,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -816,7 +780,7 @@
   </div>
   <div class="backtop syuanpi melt toTop" id="backtop">
     <i class="iconfont icon-up"></i>
-    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+    <span style="text-align:center;font-family:Georgia"><span style="font-family:Georgia" id="scrollpercent">1</span>%</span>
 </div>
 
   <div class="search" id="search">
@@ -848,19 +812,7 @@
 <script src="/blog/script/bootstarp.js"></script>
 
 
-<script>
-if (nlviconfig.theme.toc) {
-  setTimeout(function() {
-    if (nlviconfig.theme.scheme === 'balance') {
-      $("#header").addClass("show_toc");
-    } else if (nlviconfig.theme.scheme === 'banderole') {
-      $(".container-inner").addClass("has_toc");
-      $(".post-toc .title").addClass("show");
-      $(".toc-inner").addClass("show");
-    }
-  }, 1000);
-}
-</script>
+<script>nlviconfig.theme.toc&&setTimeout(function(){"balance"===nlviconfig.theme.scheme?$("#header").addClass("show_toc"):"banderole"===nlviconfig.theme.scheme&&($(".container-inner").addClass("has_toc"),$(".post-toc .title").addClass("show"),$(".toc-inner").addClass("show"))},1e3)</script>
 
 
 

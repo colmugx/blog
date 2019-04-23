@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="browsermode" content="application">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,24 +29,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
 <link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
 <link rel="stylesheet" href="/blog/style/style.css">
-<script>
-  var nlviconfig = {
-    title: "Colmugx 's Blog",
-    author: "colmugx",
-    baseUrl: "/blog/",
-    theme: {
-      scheme: "balance",
-      lightbox: true,
-      animate: true,
-      search: true,
-      friends: true,
-      reward: false,
-      pjax: true,
-      lazy: false,
-      toc: true
-    }
-  }
-</script>
+<script>var nlviconfig={title:"Colmugx 's Blog",author:"colmugx",baseUrl:"/blog/",theme:{scheme:"balance",lightbox:!0,animate:!0,search:!0,friends:!0,reward:!1,pjax:!0,lazy:!1,toc:!0}}</script>
 
 
 
@@ -66,15 +49,9 @@
 
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-98059014-1');
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-98059014-1")</script>
 
 
 
@@ -86,7 +63,7 @@
   <title> async-await 初尝试 · Colmugx 's Blog </title>
 </head>
 <body>
-  <div class="container" style="display:none;">
+  <div class="container" style="display:none">
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
@@ -191,10 +168,7 @@
           
     
   
-  <article class="
-  post
-   is_post 
-  ">
+  <article class="post is_post">
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
@@ -218,7 +192,7 @@
 <p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p>
 </blockquote>
 <p>想起去年第一个放在github的东西，就是获取课程然后下载课程视频的下载器。<br>然后今天，想到弄一个服务端版本。这样我可以无论作为移动端还是webapp端都能用到爬虫的数据了。所以就做了一次改造。<br><a id="more"></a><br>github地址：<a href="https://github.com/ColMugX/ImoocDownloader/tree/server" target="_blank" rel="noopener">ColMugX/ImoocDownloader at server</a><br>地址跟ImoodDownloader一样，放在同一个项目里。多开了一个server版本分支。归类方便吧！</p>
-<h3 id="ImoocDownloaderServer-请求样本"><a href="#ImoocDownloaderServer-请求样本" class="headerlink" title="ImoocDownloaderServer 请求样本"></a>ImoocDownloaderServer 请求样本</h3><p>请求之后样本大概是这样的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</span><br><span class="line">  <span class="string">"Info"</span>: &#123;</span><br><span class="line">    <span class="string">"title"</span>: <span class="string">"使用Struts2+Hibernate开发学生信息管理功能"</span>,</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"milanlover"</span>,</span><br><span class="line">    <span class="string">"job"</span>: <span class="string">"JAVA开发工程师"</span>,</span><br><span class="line">    <span class="string">"classTime"</span>: <span class="string">"2小时35分"</span>,</span><br><span class="line">    <span class="string">"classValue"</span>: <span class="string">"高级"</span>,</span><br><span class="line">    <span class="string">"classInfo"</span>: <span class="string">"简介：本课程通过学生信息管理功能的开发，来介绍Struts2和Hibernate的整合。主要内容包括：Struts2和Hibernate整合，用户登录模块和学生信息管理模块的设计和实现。通过本课程的学习，一定会使小伙伴们的Java Web开发技能更上一层楼。"</span>,</span><br><span class="line">    <span class="string">"classKn"</span>: <span class="string">"各位小伙伴，学习本课程前需要对\r\nStruts2和Hibernate的基础知识有所了解。"</span>,</span><br><span class="line">    <span class="string">"classWh"</span>: <span class="string">"1、掌握Struts2和Hibernate的整合开发\r\n2、能够使用Struts2+Hibernate独立开发信息管理类的项目，进行数据的增删改查。"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"Video"</span>: &#123; ... &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="ImoocDownloaderServer-请求样本"><a href="#ImoocDownloaderServer-请求样本" class="headerlink" title="ImoocDownloaderServer 请求样本"></a>ImoocDownloaderServer 请求样本</h3><p>请求之后样本大概是这样的：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</span><br><span class="line">  <span class="string">"Info"</span>: &#123;</span><br><span class="line">    <span class="string">"title"</span>: <span class="string">"使用Struts2+Hibernate开发学生信息管理功能"</span>,</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"milanlover"</span>,</span><br><span class="line">    <span class="string">"job"</span>: <span class="string">"JAVA开发工程师"</span>,</span><br><span class="line">    <span class="string">"classTime"</span>: <span class="string">"2小时35分"</span>,</span><br><span class="line">    <span class="string">"classValue"</span>: <span class="string">"高级"</span>,</span><br><span class="line">    <span class="string">"classInfo"</span>: <span class="string">"简介：本课程通过学生信息管理功能的开发，来介绍Struts2和Hibernate的整合。主要内容包括：Struts2和Hibernate整合，用户登录模块和学生信息管理模块的设计和实现。通过本课程的学习，一定会使小伙伴们的Java Web开发技能更上一层楼。"</span>,</span><br><span class="line">    <span class="string">"classKn"</span>: <span class="string">"各位小伙伴，学习本课程前需要对\r\nStruts2和Hibernate的基础知识有所了解。"</span>,</span><br><span class="line">    <span class="string">"classWh"</span>: <span class="string">"1、掌握Struts2和Hibernate的整合开发\r\n2、能够使用Struts2+Hibernate独立开发信息管理类的项目，进行数据的增删改查。"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"Video"</span>: &#123; ... &#125;</span><br></pre></td></tr></table></figure><p></p>
 <p>解析完采用json格式进行输出，这是app最好的数据来源方式有木有！所以这样就更方便做APP了。而且这估计也是我第一次正式后端入门吧。<br>至于imoocdownloader这个名字，随便吧毕竟不能算是很好的作品，所以不重新起名字了。</p>
 <h3 id="小谈ES6和ES7"><a href="#小谈ES6和ES7" class="headerlink" title="小谈ES6和ES7"></a>小谈ES6和ES7</h3><p>node更新到了v7.4，毋容置疑ES2016也就是顺势ES7也得到支持了，对于js或者说nodejs这种全靠异步吃饭的服务端有时候也是个很大的问题。<br>js是很经典的函数式语言，至少我这么觉得。函数式编程自然逃不过回调地狱…再加上nodejs这种非阻塞多并发的操作方式有时候确实是一种难题。（我的爬虫小记项目中的宝可梦基本数据爬虫<strong>已经是车祸现场</strong>了。）</p>
 <p>按道理说，并没有ES6和ES7这种称呼，ESX最多只延续到了ES5。因为从ES1~ES5实际上都是ECMA-262的版本。根据百度百科</p>
@@ -234,12 +208,12 @@
 <p>作为异步程序同步处理，async/await也有矫情的地方，后者只能出现在有前者的上下文中，单独不可使用。而await只能用在promise的函数上面，用在其他函数上也行只不过没作用，还是瞬发还是异步。</p>
 <h3 id="为什么需要P-A-，我用在哪里了"><a href="#为什么需要P-A-，我用在哪里了" class="headerlink" title="为什么需要P/A+，我用在哪里了"></a>为什么需要P/A+，我用在哪里了</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msgGet = <span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">        request.get(url, <span class="function"><span class="keyword">function</span>(<span class="params">err, res, body</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) <span class="keyword">return</span> reject(err);</span><br><span class="line">                resolve(body);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>首先在查询那部分已经使用到了，因为异步的关系，文件内所有函数几乎都是在同一时间请求（高并发），所以这就导致可能有某种情况：<strong>劳资TMD等着第一个函数执行完得到个值用在第二个函数中计算，等第一的数据准备就绪的时候，第二的老人家竟然告诉我我早在1s前已经完成工作了。请问你拿什么在完成工作！</strong><br>所以就这样，在请求的数据还没到的时候，下面早早把空值传入下一步的操作中了，自然什么都没有，毕竟传值这工作比请求好完成。所以这就体现到需要同步解决的重要性了，“你必须要等你前面的人进去之后你再进去，不能插队！”</p>
-<p>而且，虽然new了，这是一个Promise对象，但是它可以直接去到值，直接取出resolve。不过怎么说，看下面：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fi = <span class="keyword">await</span> msgGet(url);     <span class="comment">//得到msgGet(url)的值</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">await</span> msgGet(url)); <span class="comment">//输出Promise &#123;&lt;padding...&gt;&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>通过变量定义之后，获取的值是可以进一步使用的，可以丢入下一个函数进行下一步工作。不需要<code>.then()</code>。但是如果要它直接打印出来就不可能了！因为上面已经说了，这是一个对象并不是一个可直接使用的数值。只有其他函数可以直接get到对象的内容，而没办法直接显示。需要像第二种的方式只能是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fi.then(<span class="function">(<span class="params">m</span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(m);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>这样操作才能得到真正里面的东西。take it off。不过这样也就依然跌入回调地狱…<br>而到了视频地址解析那部分的时候，由于需要去请求视频地址，同样又出现了相同的情况。但是调用我是在查询的位置调用，在这里<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line">    allMsg[<span class="string">'Info'</span>] = classData;</span><br><span class="line">    allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</span><br><span class="line">    allMsg[<span class="string">'vidic'</span>] = viDic;</span><br></pre></td></tr></table></figure></p>
-<p>如果我不是把视频数据向前传，而是在里面直接调用操作的话。就第一次尝试那样：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vidInfo = getVideoUrl(viDic);</span><br><span class="line">allMsg[<span class="string">'Info'</span>] = classData;</span><br><span class="line">allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</span><br><span class="line">allMsg[<span class="string">'video'</span>] = vidInfo;</span><br></pre></td></tr></table></figure></p>
-<p>反正差不多吧我忘记了……到后面取值输出的时候就是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</span><br><span class="line">  <span class="string">"Info"</span>: &#123; ... &#125;</span><br><span class="line">  <span class="string">"video"</span>: &#123;<span class="built_in">Promise</span> &#123; &lt;padding...&gt; &#125; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>什么都取不到玩腿毛？<br>所以后来就抖了个小聪明，把整理完的视频信息往回传，在前面<code>.then()</code>操作之后取出真实数据再去请求，再得到数据再<code>.then()</code>一次，获得所有真实数据再反馈出来。得到现在要的所有数据。最后一步 send到express。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">msg.then(<span class="function">(<span class="params">data</span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> s = &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span> (!data[<span class="string">'err'</span>]) &#123;</span><br><span class="line">        <span class="keyword">var</span> vidInfo = getVideoUrl(data[<span class="string">'vidic'</span>]);</span><br><span class="line">        vidInfo.then(<span class="function">(<span class="params">v</span>)=&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> s = &#123;&#125;;</span><br><span class="line">            s[<span class="string">'code'</span>] = data[<span class="string">'code'</span>];</span><br><span class="line">            s[<span class="string">'classID'</span>] = id;</span><br><span class="line">            s[<span class="string">'Info'</span>] = data[<span class="string">'Info'</span>];</span><br><span class="line">            s[<span class="string">'Video'</span>] = v;</span><br><span class="line">            res.send(s);</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'request finish'</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>而且，虽然new了，这是一个Promise对象，但是它可以直接去到值，直接取出resolve。不过怎么说，看下面：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fi = <span class="keyword">await</span> msgGet(url);     <span class="comment">//得到msgGet(url)的值</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">await</span> msgGet(url)); <span class="comment">//输出Promise &#123;&lt;padding...&gt;&#125;</span></span><br></pre></td></tr></table></figure><p></p>
+<p>通过变量定义之后，获取的值是可以进一步使用的，可以丢入下一个函数进行下一步工作。不需要<code>.then()</code>。但是如果要它直接打印出来就不可能了！因为上面已经说了，这是一个对象并不是一个可直接使用的数值。只有其他函数可以直接get到对象的内容，而没办法直接显示。需要像第二种的方式只能是：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fi.then(<span class="function">(<span class="params">m</span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(m);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p></p>
+<p>这样操作才能得到真正里面的东西。take it off。不过这样也就依然跌入回调地狱…<br>而到了视频地址解析那部分的时候，由于需要去请求视频地址，同样又出现了相同的情况。但是调用我是在查询的位置调用，在这里<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line">    allMsg[<span class="string">'Info'</span>] = classData;</span><br><span class="line">    allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</span><br><span class="line">    allMsg[<span class="string">'vidic'</span>] = viDic;</span><br></pre></td></tr></table></figure><p></p>
+<p>如果我不是把视频数据向前传，而是在里面直接调用操作的话。就第一次尝试那样：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vidInfo = getVideoUrl(viDic);</span><br><span class="line">allMsg[<span class="string">'Info'</span>] = classData;</span><br><span class="line">allMsg[<span class="string">'code'</span>] = <span class="number">200</span>;</span><br><span class="line">allMsg[<span class="string">'video'</span>] = vidInfo;</span><br></pre></td></tr></table></figure><p></p>
+<p>反正差不多吧我忘记了……到后面取值输出的时候就是这样的<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">200</span>,</span><br><span class="line">  <span class="string">"Info"</span>: &#123; ... &#125;</span><br><span class="line">  <span class="string">"video"</span>: &#123;<span class="built_in">Promise</span> &#123; &lt;padding...&gt; &#125; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<p>什么都取不到玩腿毛？<br>所以后来就抖了个小聪明，把整理完的视频信息往回传，在前面<code>.then()</code>操作之后取出真实数据再去请求，再得到数据再<code>.then()</code>一次，获得所有真实数据再反馈出来。得到现在要的所有数据。最后一步 send到express。<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">msg.then(<span class="function">(<span class="params">data</span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> s = &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span> (!data[<span class="string">'err'</span>]) &#123;</span><br><span class="line">        <span class="keyword">var</span> vidInfo = getVideoUrl(data[<span class="string">'vidic'</span>]);</span><br><span class="line">        vidInfo.then(<span class="function">(<span class="params">v</span>)=&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> s = &#123;&#125;;</span><br><span class="line">            s[<span class="string">'code'</span>] = data[<span class="string">'code'</span>];</span><br><span class="line">            s[<span class="string">'classID'</span>] = id;</span><br><span class="line">            s[<span class="string">'Info'</span>] = data[<span class="string">'Info'</span>];</span><br><span class="line">            s[<span class="string">'Video'</span>] = v;</span><br><span class="line">            res.send(s);</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'request finish'</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p></p>
 <p>结束。</p>
 
       
@@ -299,26 +273,16 @@
 
 
     
-  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
-  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg)"></i>
+  <div class="post-comments" id="post-comments" style="display:block;margin:auto 16px">
     
     
     
-<!-- Disqus Comments -->
+
 <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<script type="text/javascript">
-    var disqus_shortname = 'co1mugxs-blog';
-
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+<script type="text/javascript">var disqus_shortname="co1mugxs-blog";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 
 
     
@@ -417,11 +381,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>colmugx</button>
+      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Redux</button>
+      <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -433,15 +397,15 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>Functional Programming</button>
     </div>
   
     <div class="tagcloud-tag">
       <button>weapp</button>
+    </div>
+  
+    <div class="tagcloud-tag">
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -466,7 +430,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>CSS</h2>
       
         <div class="tagcloud-post">
@@ -478,7 +442,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -531,13 +495,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/11/20/js-console/">
-            <time class="tagcloud-posttime">2017 / 11 / 20</time>
-            <span>你还在用Console.log()？</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/02/22/js-extends/">
             <time class="tagcloud-posttime">2017 / 02 / 22</time>
             <span>来搞一手关于Javascript对象继承</span>
@@ -545,9 +502,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/11/20/js-console/">
+            <time class="tagcloud-posttime">2017 / 11 / 20</time>
+            <span>你还在用Console.log()？</span>
           </a>
         </div>
       
@@ -555,6 +512,13 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -616,7 +580,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>nlvi</h2>
       
         <div class="tagcloud-post">
@@ -635,7 +599,19 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -654,19 +630,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vue</h2>
       
         <div class="tagcloud-post">
@@ -691,16 +655,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -720,7 +684,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>electron</h2>
       
         <div class="tagcloud-post">
@@ -739,7 +703,31 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Functional Programming</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/27/funny-monad/">
+            <time class="tagcloud-posttime">2017 / 12 / 27</time>
+            <span>有意思的monad记录</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -765,31 +753,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Functional Programming</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/27/funny-monad/">
-            <time class="tagcloud-posttime">2017 / 12 / 27</time>
-            <span>有意思的monad记录</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -801,7 +765,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -825,7 +789,7 @@
   </div>
   <div class="backtop syuanpi melt toTop" id="backtop">
     <i class="iconfont icon-up"></i>
-    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+    <span style="text-align:center;font-family:Georgia"><span style="font-family:Georgia" id="scrollpercent">1</span>%</span>
 </div>
 
   <div class="search" id="search">
@@ -857,19 +821,7 @@
 <script src="/blog/script/bootstarp.js"></script>
 
 
-<script>
-if (nlviconfig.theme.toc) {
-  setTimeout(function() {
-    if (nlviconfig.theme.scheme === 'balance') {
-      $("#header").addClass("show_toc");
-    } else if (nlviconfig.theme.scheme === 'banderole') {
-      $(".container-inner").addClass("has_toc");
-      $(".post-toc .title").addClass("show");
-      $(".toc-inner").addClass("show");
-    }
-  }, 1000);
-}
-</script>
+<script>nlviconfig.theme.toc&&setTimeout(function(){"balance"===nlviconfig.theme.scheme?$("#header").addClass("show_toc"):"banderole"===nlviconfig.theme.scheme&&($(".container-inner").addClass("has_toc"),$(".post-toc .title").addClass("show"),$(".toc-inner").addClass("show"))},1e3)</script>
 
 
 

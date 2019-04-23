@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="browsermode" content="application">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,24 +29,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
 <link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
 <link rel="stylesheet" href="/blog/style/style.css">
-<script>
-  var nlviconfig = {
-    title: "Colmugx 's Blog",
-    author: "colmugx",
-    baseUrl: "/blog/",
-    theme: {
-      scheme: "balance",
-      lightbox: true,
-      animate: true,
-      search: true,
-      friends: true,
-      reward: false,
-      pjax: true,
-      lazy: false,
-      toc: true
-    }
-  }
-</script>
+<script>var nlviconfig={title:"Colmugx 's Blog",author:"colmugx",baseUrl:"/blog/",theme:{scheme:"balance",lightbox:!0,animate:!0,search:!0,friends:!0,reward:!1,pjax:!0,lazy:!1,toc:!0}}</script>
 
 
 
@@ -66,15 +49,9 @@
 
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-98059014-1');
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-98059014-1")</script>
 
 
 
@@ -86,7 +63,7 @@
   <title> 关于四轴的踩坑指南 · Colmugx 's Blog </title>
 </head>
 <body>
-  <div class="container" style="display:none;">
+  <div class="container" style="display:none">
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
@@ -191,10 +168,7 @@
           
     
   
-  <article class="
-  post
-   is_post 
-  ">
+  <article class="post is_post">
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
@@ -226,7 +200,7 @@
 <p>有问题吗？还真有。因为我想到的是：在<code>created</code>过程把数据获取之后，从虚拟dom转为真实dom的时候可以顺便把数据带进去。而不需要一整个组件都创建完整之后再去加载数据。毕竟到<code>mounted</code>的时候实例都建立完了，这个时候再刷新数据不是会引起刷新/重绘？不过这个问题不应该是我没看源码的问题，而是有些问题没了解透彻，或者说，文章看太少。</p>
 <p>恰好就坑这了，要的就是在<code>mounted</code>，因为这个时候已经有组件实例了，也就是<code>this.$el</code>已经有树了，如果<code>ajax</code>过来的内容是需要依赖<code>el</code>的话，那在<code>created</code>的时候还没有东西呢。</p>
 <p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="Vue生命周期图示"></p>
-<h3 id="深度-watcher"><a href="#深度-watcher" class="headerlink" title="深度 watcher"></a>深度 watcher</h3><p>去翻了一下文档，我发现翻车的是自己吧！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c: &#123;</span><br><span class="line">  handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">  deep: <span class="literal">true</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<h3 id="深度-watcher"><a href="#深度-watcher" class="headerlink" title="深度 watcher"></a>深度 watcher</h3><p>去翻了一下文档，我发现翻车的是自己吧！<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c: &#123;</span><br><span class="line">  handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">  deep: <span class="literal">true</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><p></p>
 <p>只需要给对象加个<code>deep</code>就行了,而<code>a.b</code>这种情况应不属于深度watch，这只是需要监听的数据在比较深处而已…</p>
 <h3 id="vue-函数式组件"><a href="#vue-函数式组件" class="headerlink" title="vue 函数式组件"></a>vue 函数式组件</h3><p>这是一个补充问题，关于 什么时候可以使用函数式组件，我觉得确实没什么可以说的啊…</p>
 <p>如果只是充当渲染任务，不需要持久化不需要状态，采用函数式组件可以减少开销。</p>
@@ -292,26 +266,16 @@
 
 
     
-  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
-  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg)"></i>
+  <div class="post-comments" id="post-comments" style="display:block;margin:auto 16px">
     
     
     
-<!-- Disqus Comments -->
+
 <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<script type="text/javascript">
-    var disqus_shortname = 'co1mugxs-blog';
-
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+<script type="text/javascript">var disqus_shortname="co1mugxs-blog";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 
 
     
@@ -410,11 +374,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>colmugx</button>
+      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Redux</button>
+      <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -426,15 +390,15 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>Functional Programming</button>
     </div>
   
     <div class="tagcloud-tag">
       <button>weapp</button>
+    </div>
+  
+    <div class="tagcloud-tag">
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -459,7 +423,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>CSS</h2>
       
         <div class="tagcloud-post">
@@ -471,7 +435,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -524,13 +488,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/11/20/js-console/">
-            <time class="tagcloud-posttime">2017 / 11 / 20</time>
-            <span>你还在用Console.log()？</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/02/22/js-extends/">
             <time class="tagcloud-posttime">2017 / 02 / 22</time>
             <span>来搞一手关于Javascript对象继承</span>
@@ -538,9 +495,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/11/20/js-console/">
+            <time class="tagcloud-posttime">2017 / 11 / 20</time>
+            <span>你还在用Console.log()？</span>
           </a>
         </div>
       
@@ -548,6 +505,13 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -609,7 +573,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>nlvi</h2>
       
         <div class="tagcloud-post">
@@ -628,7 +592,19 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -647,19 +623,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vue</h2>
       
         <div class="tagcloud-post">
@@ -684,16 +648,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -713,7 +677,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>electron</h2>
       
         <div class="tagcloud-post">
@@ -732,7 +696,31 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Functional Programming</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/27/funny-monad/">
+            <time class="tagcloud-posttime">2017 / 12 / 27</time>
+            <span>有意思的monad记录</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -758,31 +746,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Functional Programming</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/27/funny-monad/">
-            <time class="tagcloud-posttime">2017 / 12 / 27</time>
-            <span>有意思的monad记录</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -794,7 +758,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -818,7 +782,7 @@
   </div>
   <div class="backtop syuanpi melt toTop" id="backtop">
     <i class="iconfont icon-up"></i>
-    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+    <span style="text-align:center;font-family:Georgia"><span style="font-family:Georgia" id="scrollpercent">1</span>%</span>
 </div>
 
   <div class="search" id="search">
@@ -850,19 +814,7 @@
 <script src="/blog/script/bootstarp.js"></script>
 
 
-<script>
-if (nlviconfig.theme.toc) {
-  setTimeout(function() {
-    if (nlviconfig.theme.scheme === 'balance') {
-      $("#header").addClass("show_toc");
-    } else if (nlviconfig.theme.scheme === 'banderole') {
-      $(".container-inner").addClass("has_toc");
-      $(".post-toc .title").addClass("show");
-      $(".toc-inner").addClass("show");
-    }
-  }, 1000);
-}
-</script>
+<script>nlviconfig.theme.toc&&setTimeout(function(){"balance"===nlviconfig.theme.scheme?$("#header").addClass("show_toc"):"banderole"===nlviconfig.theme.scheme&&($(".container-inner").addClass("has_toc"),$(".post-toc .title").addClass("show"),$(".toc-inner").addClass("show"))},1e3)</script>
 
 
 

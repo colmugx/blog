@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="browsermode" content="application">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,24 +29,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
 <link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
 <link rel="stylesheet" href="/blog/style/style.css">
-<script>
-  var nlviconfig = {
-    title: "Colmugx 's Blog",
-    author: "colmugx",
-    baseUrl: "/blog/",
-    theme: {
-      scheme: "balance",
-      lightbox: true,
-      animate: true,
-      search: true,
-      friends: true,
-      reward: false,
-      pjax: true,
-      lazy: false,
-      toc: true
-    }
-  }
-</script>
+<script>var nlviconfig={title:"Colmugx 's Blog",author:"colmugx",baseUrl:"/blog/",theme:{scheme:"balance",lightbox:!0,animate:!0,search:!0,friends:!0,reward:!1,pjax:!0,lazy:!1,toc:!0}}</script>
 
 
 
@@ -66,15 +49,9 @@
 
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-98059014-1');
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98059014-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-98059014-1")</script>
 
 
 
@@ -86,7 +63,7 @@
   <title> JavaScript所有for · Colmugx 's Blog </title>
 </head>
 <body>
-  <div class="container" style="display:none;">
+  <div class="container" style="display:none">
     <header class="header" id="header">
   <div class="header-wrapper">
     <div class="logo">
@@ -191,10 +168,7 @@
           
     
   
-  <article class="
-  post
-   is_post 
-  ">
+  <article class="post is_post">
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
         <div class="post-time-wrapper">
@@ -214,19 +188,19 @@
     </header>
     <div class="post-content syuanpi fadeInRightShort back-3">
       
-        <h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</span><br></pre></td></tr></table></figure></p>
-<p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</span><br></pre></td></tr></table></figure></p>
-<h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="先讲for"><a href="#先讲for" class="headerlink" title="先讲for"></a>先讲for</h3><p>我觉得这应该是最古老而且实用性最强的for了，就是三段式定义。<code>for (;;)</code><br>想到当年考java编程基础的时候（一门学科），有一道手写题要用到循环，我抬手就是<code>for (var ...)</code>…<br><a id="more"></a><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;i&lt;len;i++)</span><br></pre></td></tr></table></figure><p></p>
+<p>其中不管怎样，常规for必须要两个;，因为就是这样，里面有三段式嘛。第一个是定义自走变量，第二个是条件，第三个是自加或自减。实际上for应该是这样的<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i;<span class="keyword">let</span> len;i&lt;len;++i)</span><br></pre></td></tr></table></figure><p></p>
+<h3 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h3><p>这个在上次总结对象遍历已经提到了，它好像也就遍历对象用得多一点。<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> sth) &#123;&#125;</span><br></pre></td></tr></table></figure><p></p>
 <p>不过<code>for in</code>的话，为什么说遍历对象比较多，其中一个除了好写<del>（打死吧这人）</del>，还有一点它只能用来遍历有key或者说是个index的东西，比如数组，它只能读到数组的index，那对象的话就直接读到键值咯。而且有一点的是，你读数组，<strong>读出来的index是个string不是number</strong>。这个要记得，因为js这种弱类型的东西，如果索引相加就变成字符串相加了……<strong>（我幼儿园就会20以内加减法了，1加2等于12)</strong></p>
-<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>这个方法就不是古老的方法了，JS(ES5)版本的时候的，针对数组的一个方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach(<span class="function">(<span class="params">i</span>)=&gt;</span> &#123;&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>这个方法就不是古老的方法了，JS(ES5)版本的时候的，针对数组的一个方法<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach(<span class="function">(<span class="params">i</span>)=&gt;</span> &#123;&#125;)</span><br></pre></td></tr></table></figure><p></p>
 <p>这种遍历的话，你遍历完直接能把数据处理掉最好，因为如果不是的话就麻烦了…它并不是一个开放的遍历，而是借用的闭包函数做的遍历。可以看成是<code>arr.func()</code>，它是一个数组方法，传进去一个<code>callback</code>，那就厉害了啊，闭包一个特点就是保护变量避免污染啊，变量保护是双向的啊…进得去出不来… （所以我的微信小程序openradio有用到计数器的时候不敢用这个，而且这个方法也是针对数组才能用的）</p>
-<h3 id="for-of"><a href="#for-of" class="headerlink" title="for..of"></a>for..of</h3><p>这是ES6的新东西，它比<code>for in</code>遍历的更多，没有<code>for (;;)</code>复杂，对比<code>forEach</code>它是开放的不是闭包，也就是那些条件控制流什么的都可以操作。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr)</span><br></pre></td></tr></table></figure></p>
-<p>可是不止，好像还可以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> <span class="string">'colmu'</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//'c'\n 'o'\n 'l'\n 'm'\n 'u'\n</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="for-of"><a href="#for-of" class="headerlink" title="for..of"></a>for..of</h3><p>这是ES6的新东西，它比<code>for in</code>遍历的更多，没有<code>for (;;)</code>复杂，对比<code>forEach</code>它是开放的不是闭包，也就是那些条件控制流什么的都可以操作。<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr)</span><br></pre></td></tr></table></figure><p></p>
+<p>可是不止，好像还可以<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> <span class="string">'colmu'</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//'c'\n 'o'\n 'l'\n 'm'\n 'u'\n</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
 <p>不过它不能遍历对象！不能遍历对象！不能遍历对象！而且错误信息<code>TypeError: str[Symbol.iterator] is not a function</code>。所以这里我不行不BB了。</p>
 <blockquote>
 <p>所有实现了[Symbol.iterator]接口的对象都可以被遍历。</p>
 </blockquote>
-<h3 id="for-in-和-for-of-对比"><a href="#for-in-和-for-of-对比" class="headerlink" title="for in 和 for of 对比"></a>for in 和 for of 对比</h3><p>一个栗子就能锤到头皮发麻<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">// 0,1,2,3,4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="for-in-和-for-of-对比"><a href="#for-in-和-for-of-对比" class="headerlink" title="for in 和 for of 对比"></a>for in 和 for of 对比</h3><p>一个栗子就能锤到头皮发麻<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">// 0,1,2,3,4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">6</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>]</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)  <span class="comment">//6,6,4,2,8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h3><p>光说区别不行，我要讲怎么用！</p>
 <p><del>万能膏药<code>while</code></del> （不对走错片场…）</p>
@@ -293,26 +267,16 @@
 
 
     
-  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
-  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg)"></i>
+  <div class="post-comments" id="post-comments" style="display:block;margin:auto 16px">
     
     
     
-<!-- Disqus Comments -->
+
 <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<script type="text/javascript">
-    var disqus_shortname = 'co1mugxs-blog';
-
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+<script type="text/javascript">var disqus_shortname="co1mugxs-blog";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 
 
     
@@ -411,11 +375,11 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>colmugx</button>
+      <button>Redux</button>
     </div>
   
     <div class="tagcloud-tag">
-      <button>Redux</button>
+      <button>colmugx</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -427,15 +391,15 @@
     </div>
   
     <div class="tagcloud-tag">
-      <button>TypeScript</button>
-    </div>
-  
-    <div class="tagcloud-tag">
       <button>Functional Programming</button>
     </div>
   
     <div class="tagcloud-tag">
       <button>weapp</button>
+    </div>
+  
+    <div class="tagcloud-tag">
+      <button>TypeScript</button>
     </div>
   
     <div class="tagcloud-tag">
@@ -460,7 +424,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>CSS</h2>
       
         <div class="tagcloud-post">
@@ -472,7 +436,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>JavaScript</h2>
       
         <div class="tagcloud-post">
@@ -525,13 +489,6 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/11/20/js-console/">
-            <time class="tagcloud-posttime">2017 / 11 / 20</time>
-            <span>你还在用Console.log()？</span>
-          </a>
-        </div>
-      
-        <div class="tagcloud-post">
           <a href="2017/02/22/js-extends/">
             <time class="tagcloud-posttime">2017 / 02 / 22</time>
             <span>来搞一手关于Javascript对象继承</span>
@@ -539,9 +496,9 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2017/03/02/js-for/">
-            <time class="tagcloud-posttime">2017 / 03 / 02</time>
-            <span>JavaScript所有for</span>
+          <a href="2017/11/20/js-console/">
+            <time class="tagcloud-posttime">2017 / 11 / 20</time>
+            <span>你还在用Console.log()？</span>
           </a>
         </div>
       
@@ -549,6 +506,13 @@
           <a href="2017/12/23/js-method-chaining/">
             <time class="tagcloud-posttime">2017 / 12 / 23</time>
             <span>JavaScript链式方法</span>
+          </a>
+        </div>
+      
+        <div class="tagcloud-post">
+          <a href="2017/03/02/js-for/">
+            <time class="tagcloud-posttime">2017 / 03 / 02</time>
+            <span>JavaScript所有for</span>
           </a>
         </div>
       
@@ -610,7 +574,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>nlvi</h2>
       
         <div class="tagcloud-post">
@@ -629,7 +593,19 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Redux</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2019/03/08/combinereducers/">
+            <time class="tagcloud-posttime">2019 / 03 / 08</time>
+            <span>Redux —— combineReducers</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>colmugx</h2>
       
         <div class="tagcloud-post">
@@ -648,19 +624,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Redux</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2019/03/08/combinereducers/">
-            <time class="tagcloud-posttime">2019 / 03 / 08</time>
-            <span>Redux —— combineReducers</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vue</h2>
       
         <div class="tagcloud-post">
@@ -685,16 +649,16 @@
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/22/vuex-dva/">
-            <time class="tagcloud-posttime">2018 / 01 / 22</time>
-            <span>通过dva得到的思考 —— “滥用”VUEX</span>
+          <a href="2018/01/25/vuex-study-1/">
+            <time class="tagcloud-posttime">2018 / 01 / 25</time>
+            <span>vuex源码理解（一）</span>
           </a>
         </div>
       
         <div class="tagcloud-post">
-          <a href="2018/01/25/vuex-study-1/">
-            <time class="tagcloud-posttime">2018 / 01 / 25</time>
-            <span>vuex源码理解（一）</span>
+          <a href="2018/01/22/vuex-dva/">
+            <time class="tagcloud-posttime">2018 / 01 / 22</time>
+            <span>通过dva得到的思考 —— “滥用”VUEX</span>
           </a>
         </div>
       
@@ -714,7 +678,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>electron</h2>
       
         <div class="tagcloud-post">
@@ -733,7 +697,31 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
+      <h2>Functional Programming</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2017/12/27/funny-monad/">
+            <time class="tagcloud-posttime">2017 / 12 / 27</time>
+            <span>有意思的monad记录</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
+      <h2>weapp</h2>
+      
+        <div class="tagcloud-post">
+          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
+            <time class="tagcloud-posttime">2016 / 10 / 28</time>
+            <span>关于微信小程序</span>
+          </a>
+        </div>
+      
+    </div>
+  
+    <div class="tagcloud-postlist">
       <h2>TypeScript</h2>
       
         <div class="tagcloud-post">
@@ -759,31 +747,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
-      <h2>Functional Programming</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2017/12/27/funny-monad/">
-            <time class="tagcloud-posttime">2017 / 12 / 27</time>
-            <span>有意思的monad记录</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
-      <h2>weapp</h2>
-      
-        <div class="tagcloud-post">
-          <a href="2016/10/28/guan-yu-wei-xin-xiao-cheng-xu/">
-            <time class="tagcloud-posttime">2016 / 10 / 28</time>
-            <span>关于微信小程序</span>
-          </a>
-        </div>
-      
-    </div>
-  
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vim</h2>
       
         <div class="tagcloud-post">
@@ -795,7 +759,7 @@
       
     </div>
   
-    <div class="tagcloud-postlist ">
+    <div class="tagcloud-postlist">
       <h2>vuex</h2>
       
         <div class="tagcloud-post">
@@ -819,7 +783,7 @@
   </div>
   <div class="backtop syuanpi melt toTop" id="backtop">
     <i class="iconfont icon-up"></i>
-    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+    <span style="text-align:center;font-family:Georgia"><span style="font-family:Georgia" id="scrollpercent">1</span>%</span>
 </div>
 
   <div class="search" id="search">
@@ -851,19 +815,7 @@
 <script src="/blog/script/bootstarp.js"></script>
 
 
-<script>
-if (nlviconfig.theme.toc) {
-  setTimeout(function() {
-    if (nlviconfig.theme.scheme === 'balance') {
-      $("#header").addClass("show_toc");
-    } else if (nlviconfig.theme.scheme === 'banderole') {
-      $(".container-inner").addClass("has_toc");
-      $(".post-toc .title").addClass("show");
-      $(".toc-inner").addClass("show");
-    }
-  }, 1000);
-}
-</script>
+<script>nlviconfig.theme.toc&&setTimeout(function(){"balance"===nlviconfig.theme.scheme?$("#header").addClass("show_toc"):"banderole"===nlviconfig.theme.scheme&&($(".container-inner").addClass("has_toc"),$(".post-toc .title").addClass("show"),$(".toc-inner").addClass("show"))},1e3)</script>
 
 
 
