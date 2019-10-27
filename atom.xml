@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/blog/"/>
-  <updated>2019-07-27T10:45:38.963Z</updated>
+  <updated>2019-10-27T10:16:47.649Z</updated>
   <id>https://colmugx.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如果我把 Rust 用在网页呢</title>
+    <link href="https://colmugx.github.io/blog/2019/10/13/try-wasm/"/>
+    <id>https://colmugx.github.io/blog/2019/10/13/try-wasm/</id>
+    <published>2019-10-13T15:47:21.000Z</published>
+    <updated>2019-10-27T10:16:47.649Z</updated>
+    
+    <content type="html"><![CDATA[<p>已知<code>Rust</code>是个很硬核的编程语言</p><p>又已知<code>JavaScript</code>或者说在浏览器上的<code>JavaScript</code>在某种情况无法胜任工作。</p><p>So？</p><blockquote><p>🦀 Rust + 🕸 Wasm = ❤</p></blockquote><p>但是，单纯把教程或者 tutorial 拿出来复述是没意思的。So，搞点事情</p><p>那么前提是，你已经弄清楚了 <code>wasm-pack</code> 是怎么回事了<br><a id="more"></a></p><h3 id="题干？"><a href="#题干？" class="headerlink" title="题干？"></a>题干？</h3><p>最近着手一个项目，使用浏览器的<code>crypto</code>实现了加解密，加解密都需要在浏览器处理。但毕竟解释型，最多只是混淆。即使我在编写时已经使用了花里胡哨的东西，就差整上钓鱼的那套手段了。不过，毕竟二进制的东西，总比混淆型更不容易肉眼解析，人脑编译</p><p>这里倒是可以交代，我用到了<code>aes-256-cfb</code>，所以我们大概需要这些东西</p><h3 id="板条箱？"><a href="#板条箱？" class="headerlink" title="板条箱？"></a>板条箱？</h3><p>毕竟是 Rust，注定是“简陋”的，所以我决定直接去找现有的密码学类库。目前已经亲测的密码学库有：</p><ul><li><a href="https://github.com/DaGenix/rust-crypto" target="_blank" rel="noopener">DaGenix/rust-crypto</a></li><li><a href="https://github.com/RustCrypto" target="_blank" rel="noopener">RustCrypto 系列</a></li></ul><p>如果运行在 <code>wasm</code>，第一个库需要使用另外一个有针对适应的</p><ul><li><a href="https://github.com/buttercup/rust-crypto-wasm" target="_blank" rel="noopener">buttercup/rust-crypto-wasm</a></li></ul><p>在写文章前我已经都“绕”过一遍了…在这之间反复横跳。刚开始以为这些库无法适用<code>wasm</code>（报错无法定位），后来觉得用起来好难（写得很绕），再后来发现是我写错了…</p><p>接着，可能需要一个随机数库，只能是<code>rand</code>了，而且也是<code>crates.io</code>下载量最多的（为什么…）</p><h3 id="创建？"><a href="#创建？" class="headerlink" title="创建？"></a>创建？</h3><blockquote><p>> cargo generate –git <a href="https://github.com/rustwasm/wasm-pack-template" target="_blank" rel="noopener">https://github.com/rustwasm/wasm-pack-template</a></p></blockquote><p>接着，安排上依赖<br><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[dependencies]</span></span><br><span class="line"><span class="attr">wasm-bindgen</span> = <span class="string">"0.2"</span> <span class="comment"># 核心</span></span><br><span class="line"><span class="attr">rand</span> = <span class="string">"0.7.2"</span> <span class="comment"># 但接下来用不上</span></span><br><span class="line"><span class="attr">aes</span> = <span class="string">"0.3.2"</span> <span class="comment"># 添加这个只是为了分组依赖与类型</span></span><br><span class="line"><span class="attr">cfb-mode</span> = <span class="string">"0.3.2"</span> <span class="comment"># 这个才是加密核心</span></span><br></pre></td></tr></table></figure></p><p>然后运行一遍<code>cargo build</code>或者<code>wasm-pack build</code>，因为<code>rust</code>在编译时会检查依赖情况，所以索性我就直接通过这种方式安装依赖了，就像写<code>swift</code>随手<code>cmd + b</code></p><h3 id="食用？"><a href="#食用？" class="headerlink" title="食用？"></a>食用？</h3><h4 id="编译源码"><a href="#编译源码" class="headerlink" title="编译源码"></a>编译源码</h4><ol><li><p>加载 crate（上板条！）</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">crate</span> aes;</span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">crate</span> cfb_mode;</span><br></pre></td></tr></table></figure></li><li><p>声明依赖，或者说<code>import</code></p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> aes::Aes256; <span class="comment">// 使用 256</span></span><br><span class="line"><span class="keyword">use</span> cfb_mode::stream_cipher::&#123;NewStreamCipher, StreamCipher&#125;; <span class="comment">// cfb是基于流加密其中一种</span></span><br><span class="line"><span class="keyword">use</span> cfb_mode::Cfb; <span class="comment">// 需要用这个结构体</span></span><br></pre></td></tr></table></figure></li><li><p>声明一个类型别名，方便使用<br>Rust 可以声明类型别名。为了后面方便实用，定义一个</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 Cfb 结构体作为加密类型，Cfb 本身又需要一个类型…使用 Aes256 结构体声明长度</span></span><br><span class="line"><span class="class"><span class="keyword">type</span> <span class="title">AesCfb</span></span> = Cfb&lt;Aes256&gt;;</span><br></pre></td></tr></table></figure></li><li><p>随便写个加密</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#[wasm_bindgen]</span></span><br><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">test</span></span>() -&gt; <span class="built_in">Vec</span>&lt;<span class="built_in">u8</span>&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> key: &amp;[<span class="built_in">u8</span>; <span class="number">32</span>] = b"nashizhendeniup,,nashizhendeniup<span class="string">";</span></span><br><span class="line"><span class="string">  let iv: &amp;[u8; 16]  = b"</span>unique,un,unique<span class="string">";</span></span><br><span class="line"><span class="string">  let msg = "</span>那你是真的牛皮<span class="string">";</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  let mut buffer = msg.as_bytes().to_vec();</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  AesCfb::new_var(key, iv).unwrap().encrypt(&amp;mut buffer);</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  buffer</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure></li></ol><h4 id="到前端使用"><a href="#到前端使用" class="headerlink" title="到前端使用"></a>到前端使用</h4><p>经过编译<code>wasm-pack build</code>，可以得到一个<code>pkg</code>目录。目录下的文件就很熟悉了！</p><ul><li>package.json</li><li>&lt;xxx>.wasm</li><li>&lt;xxx>.d.ts</li><li>……</li></ul><p>你甚至可以直接把这个包上到<code>npm</code>，让更多人可以使用。这里我们就只是<code>yarn link</code>，然后创建一个前端项目</p><blockquote><p>> npm init wasm-app www</p></blockquote><p>接着，有着 50 年前端经验的老前端应该都会接下来的步骤了：<code>yarn</code> -&gt; <code>yarn link &lt;xxx&gt;</code></p><p>然后，把<code>JavaScript</code>的代码改改</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;test&#125; <span class="keyword">from</span> <span class="string">'crypto-test'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(test())</span><br></pre></td></tr></table></figure><p>因为 <code>Rust</code> 是强类型的语言，所以在类型推断不会有太多麻烦。同时，在通过工具编译到<code>wasm</code>时会多编译一个<code>d.ts</code>文件。这样，就算暴露给<code>JavaScript</code>的代码再复杂，只要使用 VSCode 或者支持 TS 的 Language Server 也没有太大压力</p><p>所以这样我就得到一个加密数据集合，<code>Vec&lt;u8&gt;</code>到<code>JavaScript</code>那边会直接变成<code>UTF8</code>类型数组，所以我们会打印出这东西<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Uint8Array(21) [230, 156, 59, 211, 78, 162, 142, 118, 193, 154, 45, 255, 203, 56, 123, 8, 143, 173, 46, 120, 25]</span><br></pre></td></tr></table></figure></p><p>用<code>node</code>的话，一般会把加密数据转成字符串保存（比如我提到的我在做的项目），这里就先裸着吧</p><p>那<code>wasm</code>画风是怎样的呢？给个节选参考一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  get_local $p0</span><br><span class="line">  i32.load</span><br><span class="line">  get_local $p1</span><br><span class="line">  call $core::fmt::Write::write_char::h90a3bac002e2aa8d)</span><br><span class="line">(func $&lt;&amp;T_as_core::fmt::Debug&gt;::fmt::h110ce52a73dd639b (type $t6) (param $p0 i32) (param $p1 i32) (result i32)</span><br><span class="line">  get_local $p0</span><br><span class="line">  i32.load</span><br><span class="line">  get_local $p1</span><br><span class="line">  call $core::fmt::num::&lt;impl_core::fmt::Debug_for_usize&gt;::fmt::hf84d386a4f5a1afb)</span><br><span class="line">(func $__rdl_dealloc (type $t7) (param $p0 i32) (param $p1 i32) (param $p2 i32)</span><br><span class="line">  i32.const 1056732</span><br><span class="line">  get_local $p0</span><br></pre></td></tr></table></figure></p><p>看得我都有女装的冲动了（大雾</p><h3 id="结束？"><a href="#结束？" class="headerlink" title="结束？"></a>结束？</h3><p>文章的目标只有两个：</p><ul><li>体验<code>rust + wasm</code></li><li>干一手加密，看看是否能取代浏览器的<code>crypto</code>，不考虑性能</li></ul><p>因为<code>Rust</code>的发展快接近完整了，这个时候入坑应该挺合适。所以接下来我就指望靠这个语言接近计科的世界了</p><p>最后，有一点需要注意，所选择的<code>AES</code>长度不同，会影响你需要的秘钥长度。所以，这个时候可以唠唠加密？</p><h3 id="（附加资料）加密？"><a href="#（附加资料）加密？" class="headerlink" title="（附加资料）加密？"></a>（附加资料）加密？</h3><h4 id="分组密码"><a href="#分组密码" class="headerlink" title="分组密码"></a>分组密码</h4><p>分组密码将明文分成多个等长的模块（block），使用确定的算法和对称密钥对每组分别加密解密。所以，这种加密方式带来的问题就是：对越长的字符串进行加密，代价越大</p><h4 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h4><p>对称加密的一种（对称加密就不解释了），也是目前最流行的对称加密算法之一。该算法属于分组加密算法。</p><p>AES的区块长度固定为128比特，密钥长度则可以是128，192或256比特。</p><p>加密方式也有很多模式：ecb, cfb, gcm, cbc。其中 ecb 没有 iv</p><p>我们在使用密码库的时候，都会接触到 <code>key</code>, <code>iv</code> 还有可能需要<code>padding</code></p><h5 id="iv"><a href="#iv" class="headerlink" title="iv?"></a>iv?</h5><p>初始化向量（IV，Initialization Vector）是许多任务作模式中用于将加密随机化的一个位块，由此即使同样的明文被多次加密也会产生不同的密文，避免了较慢的重新产生密钥的过程。</p><p>在大多数情况中，不应当在使用同一密钥的情况下两次使用同一个IV。对于CBC和CFB，重用IV会导致泄露明文首个块的某些信息，亦包括两个不同消息中相同的前缀。对于OFB和CTR而言，重用IV会导致完全失去安全性。</p><p>一般来说，向量用于分组加密中其中第一个块的加密，其他块均为自动生成（就是提供向量）</p><h5 id="key"><a href="#key" class="headerlink" title="key?"></a>key?</h5><p>加密密钥，对于 aes 来说就是每个块使用到的加密密钥</p><h5 id="padding"><a href="#padding" class="headerlink" title="padding?"></a>padding?</h5><p>padding 是用来填充最后一块使得变成一整块，所以对于加密解密两端需要使用同一的 PADDING 模式，大部分 PADDING 模式为PKCS5, PKCS7, NOPADDING。</p><h4 id="AES256-128"><a href="#AES256-128" class="headerlink" title="AES256? 128?"></a>AES256? 128?</h4><p>其中，<code>iv</code>肯定是 16 位。因为加密块的长度就是这么限制的</p><p>区别在于密钥长度，<code>Aes128</code> 的密钥长度需要 16 位，而 <code>Aes256</code> 需要的密钥长度是 32 位</p><p>为什么呢？算一下不就知道了</p><h4 id="AES256CFB"><a href="#AES256CFB" class="headerlink" title="AES256CFB?"></a>AES256CFB?</h4><p>就是使用 aes，长度 256，那么 cfb 呢？</p><p>密文反馈（CFB，Cipher feedback），可以理解是反向 CBC，因为 CFB 的解密过程几乎就是颠倒的CBC的加密过程</p><p>那，也不用想太多，就是使用 AES 加密，长度使用 256，模式使用 cfb</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;已知&lt;code&gt;Rust&lt;/code&gt;是个很硬核的编程语言&lt;/p&gt;
+&lt;p&gt;又已知&lt;code&gt;JavaScript&lt;/code&gt;或者说在浏览器上的&lt;code&gt;JavaScript&lt;/code&gt;在某种情况无法胜任工作。&lt;/p&gt;
+&lt;p&gt;So？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🦀 Rust + 🕸 Wasm = ❤&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是，单纯把教程或者 tutorial 拿出来复述是没意思的。So，搞点事情&lt;/p&gt;
+&lt;p&gt;那么前提是，你已经弄清楚了 &lt;code&gt;wasm-pack&lt;/code&gt; 是怎么回事了&lt;br&gt;
+    
+    </summary>
+    
+      <category term="实践尝试" scheme="https://colmugx.github.io/blog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+    
+    
+      <category term="TypeScript" scheme="https://colmugx.github.io/blog/tags/TypeScript/"/>
+    
+      <category term="Rust" scheme="https://colmugx.github.io/blog/tags/Rust/"/>
+    
+  </entry>
   
   <entry>
     <title>来自 swift 的跨界执法（零） —— Perfect</title>
@@ -567,35 +598,6 @@
     
     
       <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有意思的monad记录</title>
-    <link href="https://colmugx.github.io/blog/2017/12/27/funny-monad/"/>
-    <id>https://colmugx.github.io/blog/2017/12/27/funny-monad/</id>
-    <published>2017-12-27T15:24:58.000Z</published>
-    <updated>2018-01-01T14:11:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>看到monad我的第一反应竟然是莫纳德…</p></blockquote><p>最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad</p><p>之前在知乎看到轮子哥说：学习haskell是好事，但最好就是学到monad就停下来，然后去学别的。对别的语言帮助很大。</p><p>然后在知乎看了一些monad的答案，找了点关于monad的博客看，没看懂。英文的话更不可能了！直接看paper的话我会脆死的。</p><p>后来偶然找到一篇文章：<a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html" target="_blank" rel="noopener">Functors, Applicatives, And Monads In Pictures - adit.io</a></p><p>当然有中文版：<a href="http://jiyinyiyong.github.io/monads-in-pictures/" target="_blank" rel="noopener">Functors, Applicatives, And Monads In Pictures - adit.io</a>，<br><a href="http://www.ruanyifeng.com/blog/2015/07/monad.html" target="_blank" rel="noopener">图解 Monad - 阮一峰的网络日志</a></p><p>全程特别轻松，我以后写博客也要按照这个节奏来写！很有意思！<br>（那个抽东西的手直接戳爆了我的笑点…特别是解构传入胶水函数的时候）</p><p>关于理解的话，挖个坑以后总结~</p><p>但有一点是：我用 Vue-jsx 的时候，几乎全是Monad</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;看到monad我的第一反应竟然是莫纳德…&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;最近学习haskell的时候（意外的觉得入门不难），接触到函数式编程一个新的思想——Monad&lt;/p&gt;
-&lt;p&gt;之前在知乎看到轮子哥说：学习haskell是好事，但最
-      
-    
-    </summary>
-    
-      <category term="曲苑杂坛" scheme="https://colmugx.github.io/blog/categories/%E6%9B%B2%E8%8B%91%E6%9D%82%E5%9D%9B/"/>
-    
-    
-      <category term="Functional Programming" scheme="https://colmugx.github.io/blog/tags/Functional-Programming/"/>
     
   </entry>
   
