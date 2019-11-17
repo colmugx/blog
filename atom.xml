@@ -48,6 +48,29 @@
   </entry>
   
   <entry>
+    <title>来自 swift 的跨界执法（一） —— Vapor</title>
+    <link href="https://colmugx.github.io/blog/2019/06/23/try-vapor-0/"/>
+    <id>https://colmugx.github.io/blog/2019/06/23/try-vapor-0/</id>
+    <published>2019-06-23T08:17:53.000Z</published>
+    <updated>2019-11-17T05:13:20.431Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vapor 应该是目前比较成熟的服务器应用框架了，更新快，社区“繁荣”</p><p>所以，直接干吧<br><a id="more"></a></p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>直接装个工具集吧<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap vapor/tap</span><br><span class="line">brew install vapor/tap/vapor</span><br></pre></td></tr></table></figure></p><h3 id="生成应用"><a href="#生成应用" class="headerlink" title="生成应用"></a>生成应用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vapor new Hello</span><br></pre></td></tr></table></figure><p>等待一会，出现水滴图案时就初始化完成了</p><p>接着进目录，生成<code>xcode</code>可以使用的工程文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./Hello</span><br><span class="line">vapor xcode</span><br></pre></td></tr></table></figure><p>依然是等待一会之后，<code>cmd</code>会询问你是否打开<code>XCode</code>，打开便是</p><h3 id="编写体验"><a href="#编写体验" class="headerlink" title="编写体验"></a>编写体验</h3><p>vapor 默认会给几种方案，如果直接 new 的话默认是<code>api</code>方案，也就是“接口服务器”。</p><p>所以一打开，就能看到工程已经被“安排好了”：一般所需要的目录结构，以及默认使用<code>SQLite3</code>数据库（运行在内存）</p><p>本来我打算通过<code>Todos</code>练练手，现在看起来好像参考答案已经给出来了…默认情况下也不需要怎么去补充，按照自己的编程习惯直接用就行了。</p><p>但这里用内存数据库属实8合适，所以改一下数据库存储方式<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DirectoryConfig.detect().workDir 项目绝对路径</span></span><br><span class="line"><span class="keyword">let</span> storePath = <span class="type">DirectoryConfig</span>.detect().workDir + <span class="string">"Db/store.db"</span></span><br><span class="line"><span class="keyword">let</span> sqlite = <span class="keyword">try</span> <span class="type">SQLiteDatabase</span>(storage: .file(path: storePath))</span><br></pre></td></tr></table></figure></p><p>这样一来就把数据库位置移动到工程中<code>Db</code>目录下了，第一次运行就会直接创建数据库</p><p>对了，Vapor 自己带一个 ORM <code>Fluent</code>，所以关系型数据库操作不会太操蛋</p><p>所以下一篇应该是讨论一个更合适的<code>restful</code>写法？或者是用上<code>gRPC</code>？</p><h3 id="相关信息"><a href="#相关信息" class="headerlink" title="相关信息"></a>相关信息</h3><p>Vapor 自己提供一个<a href="http://vapor.university/" target="_blank" rel="noopener">「大学」</a>，这里都是组织自己录的教学视频，基本点都涵盖到了</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Vapor 应该是目前比较成熟的服务器应用框架了，更新快，社区“繁荣”&lt;/p&gt;
+&lt;p&gt;所以，直接干吧&lt;br&gt;
+    
+    </summary>
+    
+      <category term="实践尝试" scheme="https://colmugx.github.io/blog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+    
+    
+      <category term="swift" scheme="https://colmugx.github.io/blog/tags/swift/"/>
+    
+  </entry>
+  
+  <entry>
     <title>来自 swift 的跨界执法（零） —— Perfect</title>
     <link href="https://colmugx.github.io/blog/2019/06/07/try-swift-perfect/"/>
     <id>https://colmugx.github.io/blog/2019/06/07/try-swift-perfect/</id>
@@ -569,35 +592,6 @@
     
     
       <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>剑指Offer —— 替换空格</title>
-    <link href="https://colmugx.github.io/blog/2018/01/04/replace-space/"/>
-    <id>https://colmugx.github.io/blog/2018/01/04/replace-space/</id>
-    <published>2018-01-03T16:03:46.000Z</published>
-    <updated>2018-01-03T16:06:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>以后博客专职曲苑杂坛算了…</p><p>刚刚看到一题</p><blockquote><p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p></blockquote><p>我想这什么腿？然后什么都没想，直接就</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> str.replace(<span class="regexp">/\ /g</span>, <span class="string">'%20'</span>)</span><br></pre></td></tr></table></figure><p>然后过了……虽然100多毫秒</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;以后博客专职曲苑杂坛算了…&lt;/p&gt;
-&lt;p&gt;刚刚看到一题&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。&lt;/p&gt;
-&lt;/block
-      
-    
-    </summary>
-    
-      <category term="曲苑杂坛" scheme="https://colmugx.github.io/blog/categories/%E6%9B%B2%E8%8B%91%E6%9D%82%E5%9D%9B/"/>
-    
-    
-      <category term="JavaScript" scheme="https://colmugx.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
