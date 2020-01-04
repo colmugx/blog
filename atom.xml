@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://colmugx.github.io/blog/"/>
-  <updated>2020-01-01T09:56:25.434Z</updated>
+  <updated>2019-12-29T04:31:21.412Z</updated>
   <id>https://colmugx.github.io/blog/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>2019 总结</title>
-    <link href="https://colmugx.github.io/blog/2020/01/01/my-2019/"/>
-    <id>https://colmugx.github.io/blog/2020/01/01/my-2019/</id>
-    <published>2020-01-01T08:30:36.000Z</published>
-    <updated>2020-01-01T09:56:25.434Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>这篇文章诞生于支离破碎的主题中，因为博客主题正在改造，很长时间没更新也是因为改动太大完全收拾不开..</p><p>—— 2018 年终总结</p></blockquote><p>翻看了往年的年终总结，发现每次这个时候都在改博客…甚至有种没改完懒得写博客的心态…<br><a id="more"></a></p><h3 id="博客风格更新"><a href="#博客风格更新" class="headerlink" title="博客风格更新"></a>博客风格更新</h3><p>重构了主题，对颜色搭配重新定义了一下：灰阶 + 低明度的主色以不同比例分配。因此，不仅可以让每位用户都可以设置属于自己的主题，同时我可以每年都以潘通年度流行色来变化自己的博客……</p><p>2020 年流行色是经典蓝，呐</p><h3 id="前期卖血吃利息"><a href="#前期卖血吃利息" class="headerlink" title="前期卖血吃利息"></a>前期卖血吃利息</h3><p>经历了接近半年没有稳定工作的生活，调整了理财计划，所以不至于饿死。</p><p>期间面试了各种冷门中大厂，吃尽各种亏，回想起来都觉得去年去大疆那次太简单了。但也不是没有收获，至少我学会了应该怎么写简历，什么是“互联网”，大厂面试都在问什么。</p><p>所以一路疯狂卖血吃利息，最后去了一家技术型公司，总算目标达成。下意识的回想了一下，今年竟然没有抱怨任何，心态也算成长了吧。</p><h3 id="荒废技术"><a href="#荒废技术" class="headerlink" title="荒废技术"></a>荒废技术</h3><p>自己已经感受到我离大厂已经越来越远了，由于心态变化也减少了很多念想。可能有机会，但应该很难胜任技术岗。</p><p>现在在带前端小团队，同时做一个项目的项目管控，做了太多关于项目管理的工作，工作主要技能点也都在点资源分配、流程优化之类的工作。</p><p>然后依然每年传统艺能：一个人一支军队做一个项目……</p><p>技术工作也大多是内容管理，休息时间要不是觉得太累，就是技能树乱点。总的来说就是：前端没有继续深入学习，离资深前端又远了一步。</p><h3 id="开源乱葬岗"><a href="#开源乱葬岗" class="headerlink" title="开源乱葬岗"></a>开源乱葬岗</h3><p>GitHub 基本没有产出，有也是公司组件维护。（欢迎<code>Vue</code>技术栈试试，提升外包速度（X</p><p>而且今年工作都是用公司电脑（心愿达成x2（19Early顶配白买（垃圾库克出16背刺👴)))，由于工作环境变成了 Windows 所以有一半工具链无法使用，也懒得摸鱼也没有特别充足的时间摸鱼。</p><p>算是产出了一个能用的东西：<code>Resumer</code>，用来生成能用的简历，为自己面试准备的。时间上比较亏，因为写个简历没多久，改简历也没多久，写个工具耗费的时间完全补不回来。不过有些面试倒是起作用了，例如描述业余项目。</p><p>如果算的话还有一个，重构了<code>Nlvi</code>（年更主题，年年 breaking change</p><h3 id="书和电影"><a href="#书和电影" class="headerlink" title="书和电影"></a>书和电影</h3><p>书是这些：</p><ul><li>《旅行摄影圣经》</li><li>《沟通心理学》（别读，浪费时间）</li><li>《如何读一本书》</li><li>《遇见未知的自己》</li><li>《告别失控：软件开发团队管理必读》</li><li>《苏菲的世界》</li><li>《高效程序员的45个习惯》</li><li>《穗子的动物园》</li></ul><p>《穗子动物园》应该是读得最嗨的书，书出自严歌苓老师之手。总之文学小说还是自己读才能感受到魅力。<br>《遇见未知的自己》直接把我对未来的恐惧全部打掉，读完后对自己人生的看法发生了转变 —— 从「为什么我去不了大厂」到「我不配去大厂，但也不错」。</p><p>修了一个网课：《微观经济学》，临近结课的时候修不下去了</p><p>电影：</p><ul><li>《天气之子》</li><li>《冰雪奇缘2》</li><li>想不起来</li></ul><h3 id="关于音乐"><a href="#关于音乐" class="headerlink" title="关于音乐"></a>关于音乐</h3><p>今年听了很多类型的音乐，EDM 的流派基本都摸清楚了。最近也在复习乐理，然后做做 future bass</p><p>音乐跟编程真像啊，就像玩 future bass 一样，大家都在探索自己的音色和自己的鼓组搭配，带 DJ 也会调出自己的音色或者鼓组打包成套以便以后的编曲，或以此谋生。</p><p>像极了程序员的模块组件思维……</p><h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>所以出现了一些问题：</p><ul><li>时间管理</li><li>技术成长</li></ul><p>对此采取一点策略：</p><ul><li>把一年想做的列出清单，分季度做完，并且保证做完不要拖延</li><li>实现的时候还是用上番茄钟，坐太久身体不好又容易烦躁</li><li>开始规划做 leetcode，不过先找算法入门的书看看（总卡在这）</li><li>副系点了<code>Rust</code>，那么专注点完</li><li>博客继续更新，不再写划水文，例如脚手架使用什么的</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;这篇文章诞生于支离破碎的主题中，因为博客主题正在改造，很长时间没更新也是因为改动太大完全收拾不开..&lt;/p&gt;
-&lt;p&gt;—— 2018 年终总结&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;翻看了往年的年终总结，发现每次这个时候都在改博客…甚至有种没改完懒得写博客的心态…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="colmugx" scheme="https://colmugx.github.io/blog/tags/colmugx/"/>
-    
-  </entry>
   
   <entry>
     <title>如果我把 Rust 用在网页呢</title>
@@ -591,6 +567,31 @@
       <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
       <category term="vuex" scheme="https://colmugx.github.io/blog/tags/vuex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过dva得到的思考 —— “滥用”VUEX</title>
+    <link href="https://colmugx.github.io/blog/2018/01/22/vuex-dva/"/>
+    <id>https://colmugx.github.io/blog/2018/01/22/vuex-dva/</id>
+    <published>2018-01-22T15:35:15.000Z</published>
+    <updated>2019-03-25T06:43:19.149Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先这一手骚操作要感谢@ahonn，确实这几天学习dva，我自己都觉得自己有点烦了。但是老哥好耐心，真心感谢。</p><p>直接上正题吧不磨磨唧唧的了！</p><h3 id="dva是什么"><a href="#dva是什么" class="headerlink" title="dva是什么"></a>dva是什么</h3><p>这还用说吗，坦克啊！双命特性，大招是通过机甲自爆产生大范围爆炸，本体只有100血，可以反…啊！！！别打我啊！</p><p>好吧可能阿里的工程师也喜欢玩守望先锋，而且我清晰记得dva这个框架就是守望大火的时候诞生的，而且还有一个协同工具叫路霸吧。（看来阿里的工程师都不喜欢当C…）</p><a id="more"></a><p><code>dva</code>是针对<code>react</code>的框架，实际上就是关于<code>redux</code>的一个封装。首先是让本来很难理解和使用的redux变得相对容易理解和操作。另外一个就是因为数据集中管理，并且推荐使用无状态组件，操作者只需要关心数据的走向。</p><h3 id="从dva得到了启示"><a href="#从dva得到了启示" class="headerlink" title="从dva得到了启示"></a>从dva得到了启示</h3><p>毕竟阿里前端工程师，Ahonn是真的喜欢阿里的东西…最近跟他聊天也比较深入了解“为什么我们需要dva”。</p><p>后来我一个闪念：<code>dva</code>会不会就是一个数据库模型，实际上redux对我们来说就是一个数据库，前端没有状态，不干涉数据，实际上就是我们常说的只关心增删改查？</p><p>那么dva实际上还是对<code>redux</code>，<code>redux-saga</code>，<code>redux-thunk</code>的封装，但对于vue来说简直就是先天优势，因为对于vuex来说已经相当于redux + redux-saga了。从这里也直接萌生了一个想法：vuex + stateless component = 1/2 dva ？</p><h3 id="对启示更清晰的思考"><a href="#对启示更清晰的思考" class="headerlink" title="对启示更清晰的思考"></a>对启示更清晰的思考</h3><p>首先现在的dva，把数据都封装在<code>model</code>中，一个<code>model</code>对应一个redux，<code>state</code>, <code>reducer</code>概念得以保留，引入<code>effect</code>和<code>subscriptions</code>概念。</p><p>首先副作用的目的是，通过异步操作例如网络请求或者一些需要异同步配合的操作，然后去驱使<code>reducer</code>更新<code>state</code>，因为在流中，只有<code>reducer</code>有权利去动<code>state</code>。<code>subscriptions</code>就是一个订阅的概念，在我看来就是一个初始化，或者说是一个接受状态的概念。</p><p>那么为什么说vuex有先天优势？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// dva model</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  namespace: <span class="string">"users"</span>,</span><br><span class="line">  state: &#123;&#125;,</span><br><span class="line">  reducers: &#123;&#125;,</span><br><span class="line">  effects: &#123;&#125;,</span><br><span class="line">  subscriptions: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// vuex</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    users: &#123;</span><br><span class="line">      namespaced: <span class="literal">true</span>,</span><br><span class="line">      state: &#123;&#125;,</span><br><span class="line">      mutations: &#123;&#125;,</span><br><span class="line">      actions: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>如果你要无限逼近dva是什么感觉？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// users.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  namespaced: <span class="literal">true</span>,</span><br><span class="line">  state: &#123;&#125;,</span><br><span class="line">  mutations: &#123;&#125;,</span><br><span class="line">  actions: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//store.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    users</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>由于 vue/vuex 对于规则还是相对宽松，但理是理法是法，约定俗成<code>mutations</code>是用来做同步的工作，可以用来操作<code>state</code>；<code>actions</code>用来做异步工作，通知<code>mutations</code>去操作<code>state</code>。所以这里是不是就有一种新的概念？</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">state &lt;=&gt; state</span><br><span class="line">mutation &lt;=&gt; reducer</span><br><span class="line">action &lt;=&gt; effect</span><br><span class="line"></span><br><span class="line">_ &lt;=&gt; subscription</span><br></pre></td></tr></table></figure><p>对没错，订阅怎么办？</p><p>在dva的例子中，看一下示例的订阅是做了什么工作？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">subscriptions: &#123;</span><br><span class="line">  setup(&#123; dispatch, history &#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> history.listen(<span class="function">(<span class="params">&#123; pathname, query &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (pathname === <span class="string">'/users'</span>) &#123;</span><br><span class="line">        dispatch(&#123; <span class="attr">type</span>: <span class="string">'fetch'</span>, <span class="attr">payload</span>: query &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>所以关于这个简单订阅，我们完全可以直接用<code>vue-router</code>，而其中刚好有一个概念我们可以直接使用 —— 导航守卫</p><h3 id="针对vue的操作"><a href="#针对vue的操作" class="headerlink" title="针对vue的操作"></a>针对vue的操作</h3><p>老样子，我们是怎么理解dva的<code>model</code>，就怎么理解vuex的<code>store</code>。首先<code>state</code>和<code>reducer</code>跟vuex的定义是完全对等的，不需要多理解。<code>effects</code>是使用<code>generator</code>函数来解决异同步问题的，那好办啊，都2018年了，我们直接用async/await就行了。而且我们之前关于api都是使用<code>promise</code>，而且用的也是<code>axios</code>，所以这部分可以说是无缝切换。</p><p>那么关于订阅，直接使用<code>vue-router</code>的导航守卫对路由监控，另外在必要的时候还能使用<code>meta</code>。当然导航守卫并不是只能用在全局上，也可以注入到组件中，所以我们注入到页面组件即可。</p><p>接下来就是无状态组件问题了，vue默认是状态组件，而且无状态组件也没有react来的方便。</p><p>react想要无状态组件，无非就是一个函数就结束战斗了。vue也有一个概念叫函数式组件，也就是无状态，这种组件在使用上就已经不是很方便了。</p><p>vue的函数式组件就必须使用<code>render</code>函数不能用<code>template</code>模板，一直到vue2.5才可以在<code>&lt;template functional&gt;</code>使用。但我尝试了一下，手感并不好，所以还是只能用 jsx + vue 这种搭配来操作。不过vue的无状态组件也不像react那么好理解，它依然是一个Object</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  functional: <span class="literal">true</span>， <span class="comment">// 你只不过是通过这个开关来切换组件状态</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...mapActions(<span class="string">'spacename'</span>, &#123;</span><br><span class="line">      add: <span class="string">'create'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;props.msg&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>而且在实际使用中，实际上因为vue的概念，你还是没办法在所有组件完全不使用无状态组件（已经除去表单组件）。不过也无伤大雅了。</p><p>所以通过这个操作，也能近似的得到了dva的那种感觉。前端的工作只需要直观的反馈你的数据动向和状态，要那么复杂干什么？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先这一手骚操作要感谢@ahonn，确实这几天学习dva，我自己都觉得自己有点烦了。但是老哥好耐心，真心感谢。&lt;/p&gt;
+&lt;p&gt;直接上正题吧不磨磨唧唧的了！&lt;/p&gt;
+&lt;h3 id=&quot;dva是什么&quot;&gt;&lt;a href=&quot;#dva是什么&quot; class=&quot;headerlink&quot; title=&quot;dva是什么&quot;&gt;&lt;/a&gt;dva是什么&lt;/h3&gt;&lt;p&gt;这还用说吗，坦克啊！双命特性，大招是通过机甲自爆产生大范围爆炸，本体只有100血，可以反…啊！！！别打我啊！&lt;/p&gt;
+&lt;p&gt;好吧可能阿里的工程师也喜欢玩守望先锋，而且我清晰记得dva这个框架就是守望大火的时候诞生的，而且还有一个协同工具叫路霸吧。（看来阿里的工程师都不喜欢当C…）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="实践尝试" scheme="https://colmugx.github.io/blog/categories/%E5%AE%9E%E8%B7%B5%E5%B0%9D%E8%AF%95/"/>
+    
+    
+      <category term="vue" scheme="https://colmugx.github.io/blog/tags/vue/"/>
     
   </entry>
   
