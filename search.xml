@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>利用 Context 传递多语言文本</title>
+      <link href="/blog/2020/01/31/react-translate/"/>
+      <url>/blog/2020/01/31/react-translate/</url>
+      
+        <content type="html"><![CDATA[<p>Gatsby 比 Hexo 更像一个通用框架，关于博客的工具真是全靠社区衬托。Nlvi 迁移遇到了标签云和分类等各种问题，还有一个多语言问题…</p><p>找了一圈插件，i18n 大多数方案都是「一个站点同时多语言」，这对一个博客来说没必要啊（相对来说我博文是不是也得写个几份..），想了一圈好像也没必要上<code>react-intl</code>，直接手作一个吧 —— 按照<strong>「好看的皮囊千篇一律」</strong>写一个</p><p>但是主题毕竟是要开源的，所以如果有好兄弟萌觉得 i18n 处理不行，自行替换成 <code>gatsby-plugin-i18n</code> 或者 <code>react-intl</code> 就可以了<br><a id="more"></a></p><h3 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h3><p>直接从 react 分出 <code>createContext</code> 方法，直接用<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createContext &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> langContext = createContext(&#123;&#125; <span class="keyword">as</span> ContextInterface)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建上下文后输出 Provider 和 Consumer 还是要的</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> Provider = langContext.Provider</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> Consumer = langContext.Consumer</span><br><span class="line"></span><br><span class="line"><span class="comment">// ps: 其实 Consumer 用不上...</span></span><br></pre></td></tr></table></figure></p><h3 id="生成翻译"><a href="#生成翻译" class="headerlink" title="生成翻译"></a>生成翻译</h3><p>hexo 版 nlvi 已经有语言文件了，所以直接拿过来放到<code>lang</code>文件夹下，然后每个文件通过 yaml2json 转成了<code>json</code>，简单一点不上 yaml 了</p><p>大概思路就是：</p><ul><li>设定是通过主题的 <code>options</code> 传入 <code>lang</code> 属性，然后 <code>lang</code> 写到 <code>siteMetadata</code> 中</li><li>由 <code>layout</code> 读取语言，传入翻译生成文本，传入 <code>Provider</code></li><li>使用的地方使用 <code>formatMessage</code> 去接</li></ul><p>所以也就是接地气且极其简化啥都不考虑保证数据存在版的<code>react-intl</code>。方法这么写就完事儿了<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> genTranslate = <span class="function">(<span class="params">lang: <span class="built_in">string</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> _message = <span class="built_in">require</span>(<span class="string">`@/lang/<span class="subst">$&#123;lang&#125;</span>.json`</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!_message) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">`<span class="subst">$&#123;lang&#125;</span> language json was not found.`</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> formatMessage = (&#123; id, defaultMsg &#125;: FormatMessageType): <span class="function"><span class="params">string</span> =&gt;</span></span><br><span class="line">    <span class="comment">// _get 来自 lodash</span></span><br><span class="line">    _get(_message, id) || defaultMsg || <span class="string">''</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> formatter = <span class="function"><span class="params">()</span> =&gt;</span> (&#123; formatMessage, _message &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> formatter()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h3 id="使用翻译"><a href="#使用翻译" class="headerlink" title="使用翻译"></a>使用翻译</h3><p>直接用 <code>useContext</code> 去接，2020年该用 hooks 了（大雾<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useIntl = (): <span class="function"><span class="params">ContextInterface</span> =&gt;</span> useContext(langContext)</span><br></pre></td></tr></table></figure></p><p>所以这么写的话，只要在 <code>layout</code> 下的组件都可以用这个方式拿到翻译<br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; formatMessage: t &#125; = useIntl()</span><br></pre></td></tr></table></figure></p><p>这样一来其实跟使用 <code>react-intl</code> 是差不多的，就算日后要改也应该不用动业务代码</p><p>所以刚刚那句话还差一半来着？另一半应该是<strong>「糜烂的灵魂（?）凑合对付」</strong>！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端思考 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> react </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>创建一个 rust web server</title>
       <link href="/blog/2019/12/29/try-actix/"/>
       <url>/blog/2019/12/29/try-actix/</url>
