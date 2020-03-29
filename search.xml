@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>docker 容器内通信</title>
+      <link href="/blog/2020/03/29/docker-container-bridge/"/>
+      <url>/blog/2020/03/29/docker-container-bridge/</url>
+      
+        <content type="html"><![CDATA[<p>除了正常工作（特殊时期太搞人了，虽然我一直在 remote..），最近也在准备一个专栏，同时也在找文本存储或者说自己喜欢的笔记方案。我对数据的掌控性有些洁癖，不是很想用 Bear 这类东西，也摸不着头脑所以退而求其次有一段时间依赖 iCloud</p><p>最后整了一个本地 webdav 😆</p><p>当然商业网盘支持 WebDav 国内公司也有的，就曾四处安利过的坚果云</p><p>docker 好东西啊，一个宿主，一堆容器，互相隔离又互相吸引。自然 nextcloud 和数据库理所当然的处于两个容器。既然同 host 下，那容器应该内网连接就行了，这么一来人懵了</p><p><strong>两个容器不在一个网段内…</strong>因为有一个容器是处于一个 stack 内的</p><p>所以，水一篇文，单纯记录一下<br><a id="more"></a></p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>用 <code>--link</code> 参数确实可以让容器联系到一次，但想着就觉得可能会出现无法维护的情况。而且 docker 是有 <code>network</code> 的，最好还是通过创建不同的「内网」使容器可以在「正确的网路」内相互通信</p><h4 id="创建网络"><a href="#创建网络" class="headerlink" title="创建网络"></a>创建网络</h4><p>这类操作要的只是一个网桥，所以创建一个桥叫做<code>my-bridge</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create -d bridge my-bridge</span><br></pre></td></tr></table></figure><h4 id="连接容器"><a href="#连接容器" class="headerlink" title="连接容器"></a>连接容器</h4><p>家庭服务我是上了 <code>dashboard(portianer)</code> 的，所以两个容器在 <code>network</code> 区分别下拉拿到网桥点击添加就完事了，谁愿意写命令啊毕竟在家装b没人看（X</p><p>用命令行的话也就是把控制台自动做的繁琐操作手动做了一遍 —— 关掉容器然后添加 <code>--network</code> 运行容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --network my_bridge [...]</span><br></pre></td></tr></table></figure><p>吐槽一下自己的文章分类，是时候应该整理一下了，或者好几年前开个文章编辑器坑要填上了……</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 曲苑杂坛 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>利用 Context 传递多语言文本</title>
       <link href="/blog/2020/01/31/react-translate/"/>
       <url>/blog/2020/01/31/react-translate/</url>
