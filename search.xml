@@ -31,33 +31,6 @@
     
     
     <entry>
-      <title>数据库与json —— 用 actix 重构（一）</title>
-      <link href="/blog/2020/05/04/try-actix-1/"/>
-      <url>/blog/2020/05/04/try-actix-1/</url>
-      
-        <content type="html"><![CDATA[<p>本来还以为更不下去了，因为作者带了点脾气差点跑路。别说了，换我我也跑<br>好在作者人可能也是不忍心把已经很形成气候的社区破坏掉，最后还是选择让社区继续维护。不是 unsafe ptsd 吗！你们改！</p><p>前排友情不相关提示：玩动森要克制，挠点地天就黑了…</p><p>如题所示，直接正文</p><h2 id="TL-DR">TL;DR</h2><ul><li>数据库 ORM 用 <code>diesel</code></li><li>json 部分用 <code>serde</code> 全套</li><li>也妹其他的能选了啊</li></ul><a id="more"></a><h3 id="数据库连接">数据库连接</h3><p>真正比较强势的 ORM，应该只有 <code>diesel</code>，所以只能装<code>diesel</code>，<a href="https://github.com/actix/examples/blob/master/diesel" target="_blank" rel="noopener">示例参考链接</a></p><p>我盘算了下，「闹钟方块」其实没有多少需要本地化的数据，一个 sqlite 就够了，甚至选择 redis 可能比本地化数据库更优</p><p>选择 <code>postgresql</code> 还有其他原因：</p><ul><li>有现成的服务（挖掘点数据、图书数据管理、内网笔记服务）</li><li>nextcloud 在用这个（跟一有关，一个人的数据量也就 sqlite 水平</li></ul><p>现在都丢在同一台树莓派上运行，日后整套平台<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>肯定要跟着一块树莓派走的，方便移动，所以日后再换成 sqlite</p><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cargo.toml</span></span><br><span class="line"><span class="section">[dependencies]</span></span><br><span class="line"><span class="attr">diesel</span> = &#123; version = <span class="string">"1.4.4"</span>, features = [<span class="string">"postgres"</span>, <span class="string">"r2d2"</span>] &#125;</span><br></pre></td></tr></table></figure><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>把之前闹钟拆了，树莓派3B拿来做奴工，服务全往上面跑，挂一个二手磁盘。数据保存相当佛性，毕竟人傻胆子大 <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
-      
-      
-      <categories>
-          
-          <category> 实践尝试 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> rust </tag>
-            
-            <tag> actix </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>docker 容器内通信</title>
       <link href="/blog/2020/03/29/docker-container-bridge/"/>
       <url>/blog/2020/03/29/docker-container-bridge/</url>

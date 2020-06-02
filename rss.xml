@@ -32,31 +32,6 @@
     </item>
     
     <item>
-      <title>数据库与json —— 用 actix 重构（一）</title>
-      <link>https://colmugx.github.io/blog/2020/05/04/try-actix-1/</link>
-      <guid>https://colmugx.github.io/blog/2020/05/04/try-actix-1/</guid>
-      <pubDate>Mon, 04 May 2020 09:30:20 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;本来还以为更不下去了，因为作者带了点脾气差点跑路。别说了，换我我也跑&lt;br&gt;
-好在作者人可能也是不忍心把已经很形成气候的社区破坏掉，最后还是选择让社区继续维护。不是 unsafe ptsd 吗！你们改！&lt;/p&gt;
-&lt;p&gt;前排友情不相关提示：玩动森要克制，挠点地天就黑了…&lt;/p&gt;
-&lt;p&gt;如题所示，直接正文&lt;/p&gt;
-&lt;h2 id=&quot;TL-DR&quot;&gt;TL;DR&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;数据库 ORM 用 &lt;code&gt;diesel&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;json 部分用 &lt;code&gt;serde&lt;/code&gt; 全套&lt;/li&gt;
-&lt;li&gt;也妹其他的能选了啊&lt;/li&gt;
-&lt;/ul&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>本来还以为更不下去了，因为作者带了点脾气差点跑路。别说了，换我我也跑<br>好在作者人可能也是不忍心把已经很形成气候的社区破坏掉，最后还是选择让社区继续维护。不是 unsafe ptsd 吗！你们改！</p><p>前排友情不相关提示：玩动森要克制，挠点地天就黑了…</p><p>如题所示，直接正文</p><h2 id="TL-DR">TL;DR</h2><ul><li>数据库 ORM 用 <code>diesel</code></li><li>json 部分用 <code>serde</code> 全套</li><li>也妹其他的能选了啊</li></ul><a id="more"></a><h3 id="数据库连接">数据库连接</h3><p>真正比较强势的 ORM，应该只有 <code>diesel</code>，所以只能装<code>diesel</code>，<a href="https://github.com/actix/examples/blob/master/diesel" target="_blank" rel="noopener">示例参考链接</a></p><p>我盘算了下，「闹钟方块」其实没有多少需要本地化的数据，一个 sqlite 就够了，甚至选择 redis 可能比本地化数据库更优</p><p>选择 <code>postgresql</code> 还有其他原因：</p><ul><li>有现成的服务（挖掘点数据、图书数据管理、内网笔记服务）</li><li>nextcloud 在用这个（跟一有关，一个人的数据量也就 sqlite 水平</li></ul><p>现在都丢在同一台树莓派上运行，日后整套平台<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>肯定要跟着一块树莓派走的，方便移动，所以日后再换成 sqlite</p><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cargo.toml</span></span><br><span class="line"><span class="section">[dependencies]</span></span><br><span class="line"><span class="attr">diesel</span> = &#123; version = <span class="string">"1.4.4"</span>, features = [<span class="string">"postgres"</span>, <span class="string">"r2d2"</span>] &#125;</span><br></pre></td></tr></table></figure><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>把之前闹钟拆了，树莓派3B拿来做奴工，服务全往上面跑，挂一个二手磁盘。数据保存相当佛性，毕竟人傻胆子大 <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
-      
-      <comments>https://colmugx.github.io/blog/2020/05/04/try-actix-1/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>docker 容器内通信</title>
       <link>https://colmugx.github.io/blog/2020/03/29/docker-container-bridge/</link>
       <guid>https://colmugx.github.io/blog/2020/03/29/docker-container-bridge/</guid>
@@ -482,6 +457,27 @@ let inner;&lt;br&gt;
       <content:encoded><![CDATA[<p>怎么可能真的是四轴的踩坑指南，其实是大疆的受苦之旅。恼羞成怒下单了<code>mavic air</code>（所以dji还是赚了？）</p><p>怎么可能会让你回去还能等到通知，人家HR明明都告诉我面试入职一条龙了！算了本来就是自己的问题，能一路到看到四个大佬都是赚的。面试结束还送了架精灵还有一块工牌！（虽然是纸精灵和工牌套子。</p><p>总结一下印象深刻受苦的问题和答案，不过有一点想吐槽的…就<code>vue</code>和<code>react</code>之间的关系和选择，我看到了高一文理科分班的那种影子：人家都是哪科分高选哪科，我是选分低 + 主管臆想……</p><a id="more"></a><h3 id="html5-css3">html5 css3</h3><p>css3：圆角，变形，线性渐变，阴影。后两个没答，另外阴影我一直以为是<code>css2</code>的。</p><p>html5: 算了挺多的…基本上用过的都说了一遍… 下次记得背一下（真的需要用到那么多？</p><h3 id="Vue">Vue</h3><h3 id="created-和-mounted-区别，ajax会在哪里操作">created 和 mounted 区别，ajax会在哪里操作</h3><blockquote><p>放在 created，因为 mounted 的时候还没有渲染节点。</p></blockquote><p>虽然这个问题也有一些讨论，有些会在<code>created</code>就做了，有些是在<code>mounted</code>做。</p><p>有问题吗？还真有。因为我想到的是：在<code>created</code>过程把数据获取之后，从虚拟dom转为真实dom的时候可以顺便把数据带进去。而不需要一整个组件都创建完整之后再去加载数据。毕竟到<code>mounted</code>的时候实例都建立完了，这个时候再刷新数据不是会引起刷新/重绘？不过这个问题不应该是我没看源码的问题，而是有些问题没了解透彻，或者说，文章看太少。</p><p>恰好就坑这了，要的就是在<code>mounted</code>，因为这个时候已经有组件实例了，也就是<code>this.$el</code>已经有树了，如果<code>ajax</code>过来的内容是需要依赖<code>el</code>的话，那在<code>created</code>的时候还没有东西呢。</p><p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="Vue生命周期图示"></p><h3 id="深度-watcher">深度 watcher</h3><p>去翻了一下文档，我发现翻车的是自己吧！</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c: &#123;</span><br><span class="line">  handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">  deep: <span class="literal">true</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><p>只需要给对象加个<code>deep</code>就行了,而<code>a.b</code>这种情况应不属于深度watch，这只是需要监听的数据在比较深处而已…</p><h3 id="vue-函数式组件">vue 函数式组件</h3><p>这是一个补充问题，关于 什么时候可以使用函数式组件，我觉得确实没什么可以说的啊…</p><p>如果只是充当渲染任务，不需要持久化不需要状态，采用函数式组件可以减少开销。</p><p>总的来说，比较严重的问题还是出现在：表达能力有问题 + 理解框架不够深刻（但远不及原理） + 狗娘的英语表达。还有<code>css</code>过于依赖补全导致想口头表述语句的时候，单词中间那段想不起来所以说不出口导致的丢分。所以打算CSS部分关闭补全一段时间。</p><p>这属于机会完全被自己毁了（还不是技术层面问题），所以烦躁和不甘又有什么用呢…</p>]]></content:encoded>
       
       <comments>https://colmugx.github.io/blog/2018/03/12/dji-interview/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>promise链式调用</title>
+      <link>https://colmugx.github.io/blog/2018/02/28/promise-chaining/</link>
+      <guid>https://colmugx.github.io/blog/2018/02/28/promise-chaining/</guid>
+      <pubDate>Wed, 28 Feb 2018 02:16:22 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;学会了却不会活用是真的菜…&lt;/p&gt;
+&lt;p&gt;前几天面试，提到了回调地狱用&lt;code&gt;promise&lt;/code&gt;，然后抛出个衍生问题：&lt;code&gt;promise&lt;/code&gt;也会嵌套，怎么解决&lt;code&gt;promise&lt;/code&gt;的回调地狱。&lt;/p&gt;
+&lt;p&gt;我想不到，直接问
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>学会了却不会活用是真的菜…</p><p>前几天面试，提到了回调地狱用<code>promise</code>，然后抛出个衍生问题：<code>promise</code>也会嵌套，怎么解决<code>promise</code>的回调地狱。</p><p>我想不到，直接问能不能用<code>ES8</code>，说行，然后我就想到了<code>const p2 = await Promise</code>这种做法。</p><p>可是，我记得我在若干天前才写了一篇关于「JS方法链式调用」。</p><blockquote><p>只要函数返回值是一个函数，就可以连着调用</p></blockquote><p>So,</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p1.then(<span class="function">(<span class="params">&#123; p2 &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> p2</span><br><span class="line">&#125;).then(&#123; p3 &#125; =&gt; &#123;&#125;)</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://colmugx.github.io/blog/2018/02/28/promise-chaining/#disqus_thread</comments>
     </item>
     
   </channel>
