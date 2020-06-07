@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>整一个家庭服务器记录</title>
+      <link href="/blog/2020/06/07/home-server/"/>
+      <url>/blog/2020/06/07/home-server/</url>
+      
+        <content type="html"><![CDATA[<h2 id="准备">准备</h2><p>我自己使用的是树莓派组，可以选择的有很多，x86的开发板、淘汰的笔记本。废物再生计划！</p><h3 id="系统选择">系统选择</h3><p>推荐三个：</p><ul><li><a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="noopener">raspbian</a>（树莓派）</li><li><a href="https://clearlinux.org/" target="_blank" rel="noopener">clear linux</a>（英特尔CPU）</li><li><a href="https://www.debian.org/index.zh-cn.html" target="_blank" rel="noopener">debian</a>（传统服务器系统）</li><li>……</li></ul><a id="more"></a><p>树莓派的话直接用 raspbian 就好了，无论是驱动（如果用到了GPIO）还是稳定性</p><p><code>clearlinux</code> 可以推荐，这里并不是只有英特尔平台才能运行，而是这个系统针对英特尔平台有特殊优化，默认会启动所有优化。除此之外这也是一个滚动型系统，并且定制性强，也很轻便，最小安装下体积非常小。亲测同样的功能项，配置下来后对比 <code>archlinux</code> 的体积会小一点。</p><p>最后就是传统一点同时寻求帮助比较方便的 debian，当然 centos 也行。只是自己已有一段时间就不接触RPM系linux而感到陌生了…（respbian 也是 debian 型）</p><h3 id="系统安装">系统安装</h3><p>这里选择的是最小安装，如果对桌面有需求的话可以默认安装</p><p>建议不需要桌面，服务器类型的东西，一旦配置都做完之后，桌面就只是一个占用性能的鸡肋了</p><h3 id="系统配置">系统配置</h3><p>大概有这么几点是最好完成的：</p><ul><li>连接网络（有线或者无线）</li><li>设置开机自动连接网络</li><li>固定ip</li><li>打开SSH</li></ul><p>无桌面的系统可能需要自己去安装一些必要的网络管理工具，这里可以寻找各系统的 wiki。但基本上没有桌面的网络设置辅助的话，手动设置网络都需要再自行设置开启自动连接这一操作，需要记得设置</p><p>一般家庭网络都是路由器通过DHCP分发 ip，如果作为服务器的主机 ip 不确定的话日后操作会比较麻烦，所以索性直接静态固定下来，只是为了方便</p><p>打开SSH只是为了以后配置和操作都可以直接用其他设备连接，不需要再去动服务器</p><h2 id="服务">服务</h2><h3 id="docker">docker</h3><p>安装方法可以直接阅读官方文档：<a href="https://docs.docker.com/install/linux/docker-ce/debian/" target="_blank" rel="noopener">Get Docker Engine - Community for Debian</a>，如果选择 clear linux 等其他系统，可以直接依据官方提供方案（如 clear linux 集市）</p><p>需要注意的是，你需要了解你的CPU指令类型 —— x64/86 或者 arm32/64 。例如树莓派 3b 使用的指令集是arm7l，属于 32 位处理器，那么接下来的工作都应该寻找 32 位 arm 处理器的解决方案</p><p>可以使用 <code>uname -m</code> 来查看目前平台使用的处理器类型</p><h3 id="portainer">portainer</h3><p>这是一个可以管理 docker 容器的控制面板，可以对容器进行图形化的管理，控制运行状态比如运行停止重启、容器配置、删除容器镜像、拉取镜像构建、重新构建容器等等</p><p>应用本身开源：<a href="https://github.com/portainer/portainer" target="_blank" rel="noopener">portainer/portainer: Making Docker management easy.</a></p><p>推荐安装方式：直接 docker 拉取安装，镜像为官方提供，也提供了 arm 版本：<a href="https://hub.docker.com/r/portainer/portainer/" target="_blank" rel="noopener">https://hub.docker.com/r/portainer/portainer/</a>。使用单机版本就好了</p><h3 id="影音服务">影音服务</h3><p>一般来说需要两种东西：下载机 + 媒体服务器</p><h4 id="下载（aria2）">下载（aria2）</h4><p>如果是 linux 纯命令下载机应该非 aria2 莫属了</p><p>这里推荐一个项目：<a href="https://github.com/wahyd4/aria2-ariang-docker" target="_blank" rel="noopener">wahyd4/aria2-ariang-docker</a></p><p>这样下载机与在线文件管理就有了（网盘应用不喜欢可以换一个，比如 <code>Nextcloud</code>）</p><h4 id="媒体服务">媒体服务</h4><p>媒体服务有很多种协议，最后选择了 upnp dlna。原因很简单：</p><ul><li>通用性</li><li>综合来看 dlna 速度最快，相对稳定（亲测长时间观看情况下能把树莓派看挂…</li></ul><p>大多数电视厂商在自带媒体播放器也会内置 dlna 协议，所以综合来看 dlna 面对客户端也是麻烦最少的一种方式</p><p>那么服务应用就选择 minidlna 了，x86_64 可以直接使用这个镜像：<a href="https://hub.docker.com/r/vladgh/minidlna/" target="_blank" rel="noopener">https://hub.docker.com/r/vladgh/minidlna/</a></p><p>可惜的是arm 的 minidlna 最好是自己构建镜像，如果嫌麻烦的话，这个镜像未尝不能接受：<a href="https://hub.docker.com/r/fmartingr/minidlna-arm" target="_blank" rel="noopener">https://hub.docker.com/r/fmartingr/minidlna-arm</a></p><p>这里的网络需要设置，默认下 docker 会使用 docker 网段，所以需要允许容器使用 <code>host</code>，这样方便家庭网络环境中的设备自动寻找，简单来说就是方便电视机主动发现。应用配置没有太多讲究，只需要保证所映射目录下有 <code>Movie</code> , <code>Music</code> , <code>Picture</code> 目录即可，dlna 服务会自动识别</p><p>至于播放器的话，其他平台支持 dlna 的播放器有很多，安卓可以使用 vlc，iOS可以使用 infuse 等等</p><h4 id="Plex">Plex</h4><p>媒体服务还有一个选择：Plex</p><p>可以说 Plex 才是专业的影音库，它可以对你的电影和音乐进行分类，电影可以自动获取电影信息、下载封面等。如果用过早期Windows Vista 或者 7 专业版，都会见到一个叫做 Windows Media Center 的应用，跟这个相似</p><p>具体可以查看官方站点：<a href="https://www.plex.tv/zh/" target="_blank" rel="noopener">https://www.plex.tv/zh/</a></p><h2 id="最后">最后</h2><p>总的来说，用 NAS 主要还是存储功能， webdav、time mechine 啥的都可以依赖 NAS 应用（可能）的服务</p><p>但是自己搭建独立服务器目的是「全可控」，例如我现在有些玩具（闹钟，永远滴神），就在依赖这个服务（websocket 拉满！</p><p>比较不推荐的是在家<strong>搭建 Git 服务器</strong>，我不知道普通人有什么样的代码是需要藏着的；还有 <strong>NPM 服务器</strong>，你不会用到几次的，各种镜像源很快，而且 npm 包会塞爆你服务器硬盘</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 玩具制造 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我如何用 hammerspoon 实现剪贴板历史</title>
       <link href="/blog/2020/06/04/hammerspoon-clipboard/"/>
       <url>/blog/2020/06/04/hammerspoon-clipboard/</url>
