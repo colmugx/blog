@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>我的 2020</title>
+      <link href="/blog/2021/01/04/my-2020/"/>
+      <url>/blog/2021/01/04/my-2020/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>此时并不是在考虑这一年的收获，而是在考虑这是否又是一篇限时文章<br>又或者说是 RSS 限定？因为 RSS 是不会被动删除的</p></blockquote><p>经典一行 TL;DR 吧：2021 流行色现已实装 —— 灰黄使用灰色；今年没给开源干点什么；开始想要知识管理了；读书的书比以往都多对我来说…</p><a id="more"></a><h2 id="关于博客">关于博客</h2><p>今年计划是推出 gatsby 版本的 nlvi，可惜现在还没有。归结两个原因，有可能因为步子太大扯到蛋，也有是想摸</p><p>hexo 版本的 nlvi 没了维护热情，今年只是给归档页面重新设计了分界。即使如此今年还是零星收获几个 star，是该说对不起呢？还是劝他们一起用 hugo/gatsby 呢？</p><h3 id="流行色不会缺席">流行色不会缺席</h3><p>每年潘通都会宣布下一年的流行色<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，2021 又是一年双色，极度灰与明亮黄</p><p>2020 对于全世界都是一个不如意的年份，人类都陷入了灰色一段时间，但明亮的黄色却代表着希望。</p><blockquote><p>As people look for ways to fortify themselves with energy, clarity, and hope to overcome the continuing uncertainty, spirited and emboldening shades satisfy our quest for vitality.</p></blockquote><p>所以，坚如磐石同时需要充满希望的灰色和黄色即是今年的流行色。</p><p>如果通过页面访问我的博客的家！人！们！可以发现<span style="color: #004373">经典蓝</span>已经下线，虽然黄色是代表希望的一方，但是为了风格还是使用灰色吧</p><p><strong>但！</strong> 也许不久之后，我们就整一把渐变！因为最近有一个设计风格非常吸引我，它正运用在 2020 KDA 与微信读书年度总结</p><h3 id="说回-nlvi">说回 nlvi</h3><p>因为现在开始大面积使用 <code>org-mode</code>，用 hexo 发文章就变得非常麻烦，需要尽早切换到可以直接使用 <code>org</code> 的应用上，这也许是一次催促 gatsby 版甚至是新设计的机会</p><p>立个 flag，今年写一篇《做 nlvi 的时候想了些什么》，也许这个总结对以后更新设计有一定用处</p><h2 id="关于开源">关于开源</h2><p>今年的正经提交真没有。公司在 GitHub 有一个 Organization，工作内容有一部分就是管着这些东西，所以账号上虽然可以看到很多 commit 和 code review 其实大多都来自于这里</p><p>但该开还得开，不仅 gatsby nlvi 和前面关于简历文章提到的 Resumer，还有知识管理编辑器 <code>setsuna</code> 和算是一个工作台的东西 <code>kazusa</code></p><h3 id="编辑器">编辑器</h3><p>这算是机缘巧合，内部应用原本的富文本编辑器不够满足需求，所以希望重(ti)构(huan)编辑器，希望能有比较好的扩展能力要青龙又要白虎的结果最后时间没谈妥，于是决定用 ckeditor 5 干一个，过程还各种论证 npm package 在 GPLv3 到底属于源码分发还是二进制分发…</p><p>这期间看了下 editor.js, prosemirror, quill, 还有需要为 vue 提供前端的 slate core</p><p>加上正在找一个能让自己舒服的管理知识的姿势以及对语雀的嫌弃，所以开始编辑器的鼓捣。希望能写完</p><h2 id="关于技术">关于技术</h2><p>除了前端，应该是花有一半时间在 <code>rust</code> 上，目前还没有什么成果</p><p>今年不知为何又开始整起 e2e 测试，使用 <code>cypress</code> 框架，体验还行。算是在单元测试的基础上又补充集成测试</p><p>年末重新开始使用 emacs，不过与几年前不同，emacs 现在更多是充当一个文档编辑器，但又与普通编辑器不同 —— 可以在文档中直接执行代码块并获得结果 —— 从而可以直接在文档里做很多事情甚至是生成图表。于是做到了不仅保留尝试代码，还保留实验结果</p><p>遗憾的是现在的 emacs 配置被我打碎了在重建，关于编程功能（补全与高亮）达不到可用的程度，还需要继续配置</p><h2 id="知识管理">知识管理</h2><p>不知道为什么，从今年开始就看到很多关于知识管理的文章，所有人都在知识管理，都在卡片式笔记，都在 <code>notion</code>，<code>roam research</code>…不过这倒是一个统计与总结的好机会，了解「卡片式笔记」之后觉得能整，先用 apple 的备忘录整一段时间之后，改用 <code>obsidian</code></p><p>后来思索一会，既然都这么做笔记，为什么不直接用 <code>emacs</code>，<code>org</code> 本身在链接能力就很强。加上因为 <code>roam</code> 的兴起后，<code>org-roam</code> 也应运而生。这应该是 emacs 最吸引人的功能，以至于很多其实不写代码只是为了组织论文的硕博们也在用 emacs</p><p>所以不得不说 org-todo 和 org-agenda，这应该又是 org-mode 用户中几乎都会使用的功能。感觉以后可以写一个文章，记录一下我现在正在怎么使用这个编辑器（好家伙又开了一个坑）</p><p>为什么不用例如 <code>notion</code>，<code>bear</code> 等等，原因是这类应用都属于 SaaS，我会把我的数据放到他们的服务器上。果断说不，我接受不了数据在我看不到的地方</p><p>为了同步，首先考虑到 webdav，dropbox 毕竟有点不方便，退而求其次找到一家网盘服务商 teracloud，直连效率真的好，注册后<s>填一下邀请码 SBTVQ 还能多给 5G 空间</s>（咳咳）</p><p>目前感觉良好，手机端可以用 orgzly(android) 和 beorg(ios)</p><h2 id="书">书</h2><p>说实话，我甚至对这个列表陷入了沉思</p><ul><li>《基本乐理》</li><li>《深入浅出 Rust》</li><li>《前端架构：从入门到微前端》</li><li>《我的第一本算法书》</li><li>《程序员的数学》</li><li>《毛泽东传》（推荐）</li><li>《mysql 必知必会》</li><li>《人月神话》</li><li>《深入核心的敏捷开发》</li><li>《Google软件测试之道》</li></ul><p>几乎一本一个类型</p><p>《基本乐理》应该是今年自我感觉最受用的一本，为此还重构以前写过的一些曲子。所以也理解了为什么有些电子音乐人会说：”不过是公式化音乐“。虽然是「符合和弦的和谐」了，但听着不如重构前「好听」。而且《基本乐理》让人有一种「应试教育」的感觉，<strong>音乐真的应该这么描述吗？</strong> 这是个问题</p><p>接下来读什么书还没想好，数据结构和算法还有 rust 还是继续看，剩下的书继续走一步看一步</p><h2 id="新的目标">新的目标</h2><p>回顾去年总结留下来的目标，意外的发现完成得还不错，至少都达到及格线。索性今年的目标就简单一些：立下的 flag 还有预期要写完的应用都写完，再多写一些我称之为曲苑杂坛式的有趣的文章</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://www.pantone.com/color-of-the-year-2021">PANTONE COLOR OF THE YEAR 2021</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> colmugx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>composition-api 插件 —— Lifecycle</title>
+      <link href="/blog/2020/12/20/vue2-composition-api-4/"/>
+      <url>/blog/2020/12/20/vue2-composition-api-4/</url>
+      
+        <content type="html"><![CDATA[<p>书接上文：<a href="/blog/2020/11/28/vue2-composition-api-3">《composition-api 插件 —— Reactive》</a></p><p>本来觉得没什么好写的，还想逃了……看这个东西真的不如直接看 vue3……</p><p>甚至还不如下一篇文章的东西有趣！</p><a id="more"></a><h2 id="lifecycle">lifecycle</h2><p>直接上来就是一行注释掉的句子</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// export const onCreated = createLifeCycle(&#x27;created&#x27;);</span></span><br></pre></td></tr></table></figure><p>太硬核了以至于不知道插件作者是否忘记了 <code>setup</code> 即 <code>beforeCreate </code>和 <code>create</code></p><p>其他的生命周期函数都是统一交给 <code>createLifeCycle</code></p><h3 id="createLifeCycle">createLifeCycle</h3><p>回想一下生命周期函数的使用 —— 塞一个 callback</p><p>所以，确实没什么好写的 —— 配合 <code>injectHookOption</code> 做一个接收一个不使用入参的回调函数的函数。而原理上是使用 <code>optionMergeStrategies</code> 与原本 <code>option api</code>的回调函数们合并</p><p>关于 <code>optionMergeStrategies</code>，第一篇已经提到了，那个时候是用来声明<code>setup</code></p><h2 id="nextTick">nextTick</h2><p>nextTick 的存在是为了方便使用吧，这样就不需要每次想用的时候都在<code>refs.root</code>中取出来</p><p>所以本质上就是在一开始缓存的 Vue 实例中翻出 <code>nextTick</code>，做一次 <code>apply</code>，转移执行目标</p><h2 id="computed">computed</h2><p>使用 <code>computed</code> 的时候会发现一个问题：结构跟 <code>ref</code> 一样。从函数签名可以看到：</p><ul><li>直接给计算函数，则得到返回类型 <code>ComputedRef</code></li><li>像 vue2 一样给读写函数，得到返回类型 <code>WritableComputedRef</code></li><li><code>ComputedRef</code> 通过 <code>WritableComputedRef</code> 继承而得； <code>WritableComputedRef</code> 继承自 <code>Ref</code></li><li>唯一不同的是： <code>ComputedRef</code> 的 value 被打上 <strong>Readonly</strong></li></ul><p>回到函数本身。粗糙的看了一眼，实际上就是 vue2 内部实现 <code>computed</code> 的思路换了一个地方和操作再实现了一次，核心还是用到 <code>Watcher(computed watch)</code></p><h2 id="watch">watch</h2><p>先看这个。这部分 API，根据文档所述与 vue2 的 <code>watch</code> 没有区别</p><p>与 vue2 不一样的是，这里不需要把一个 <code>watch</code> 对象扫一遍拿到 <code>handler</code> ，因为一个 <code>watch</code> 只会有一个 <code>source</code> 作为第一个参数</p><p>所以稍微处理一下就可以送进 <code>createWatcher</code> ，作为共同依赖，放到后面写</p><p>需要留意的是，watch 送给 createWatcher 的参数顺序为：vm, source（第一参数）, callback（理解为第二参数）, opts（第三参数，可选）</p><h3 id="watchEffect">watchEffect</h3><p>说是新函数，结果代码更少 —— 三行</p><p>与 <code>composition-api watch</code> （这么长是为了区分）不同，第一参数为副作用函数，即一旦数据产生更改就会被调用</p><p>为什么上面写的需要留意呢，因为这里的传入顺序是：vm, <strong>ffect</strong>, null, opts</p><p>与 <code>watch</code> 不同于，本是传 source 的地方传入一个类似 callback 的函数</p><h3 id="createWatcher">createWatcher</h3><p>先创建一个用来「可以清空操作」的函数，在文档也可以看到用法</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果 id 发生改变则会调用 onInvalidate</span></span><br><span class="line">watchEffect(<span class="function">(<span class="params">onInvalidate</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> token = performAsyncOperation(id.value)</span><br><span class="line">  onInvalidate(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// id 改变时 或 停止侦听时</span></span><br><span class="line">    <span class="comment">// 取消之前的异步操作</span></span><br><span class="line">    token.cancel()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>至于接下来的，其核心还是把 watch 的工作交给了 vue2(<code>vm.$watch</code>)，最后返回一个可以用来停止观察的函数</p><h2 id="小结">小结</h2><p>确实应该直接去看 vue3，新的 diff 手段与新的观察手段啥的</p><p>（其实来没来得及写小结，先敷衍了事）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 源码阅读 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>composition-api 插件 —— Reactive</title>
       <link href="/blog/2020/12/08/vue2-composition-api-3/"/>
       <url>/blog/2020/12/08/vue2-composition-api-3/</url>
@@ -13,7 +57,7 @@
       
       <categories>
           
-          <category> 代码阅读 </category>
+          <category> 源码阅读 </category>
           
       </categories>
       
@@ -38,7 +82,7 @@
       
       <categories>
           
-          <category> 代码阅读 </category>
+          <category> 源码阅读 </category>
           
       </categories>
       
@@ -63,7 +107,7 @@
       
       <categories>
           
-          <category> 代码阅读 </category>
+          <category> 源码阅读 </category>
           
       </categories>
       
@@ -113,7 +157,7 @@
       
       <categories>
           
-          <category> 玩具制造 </category>
+          <category> 曲苑杂坛 </category>
           
       </categories>
       
@@ -140,7 +184,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 曲苑杂坛 </category>
           
       </categories>
       
@@ -169,7 +213,7 @@
       
       <categories>
           
-          <category> 玩具制造 </category>
+          <category> 整点花活 </category>
           
       </categories>
       
@@ -188,7 +232,7 @@
       
       <categories>
           
-          <category> 玩具制造 </category>
+          <category> 曲苑杂坛 </category>
           
       </categories>
       
@@ -215,7 +259,7 @@
       
       <categories>
           
-          <category> 玩具制造 </category>
+          <category> 曲苑杂坛 </category>
           
       </categories>
       
@@ -267,7 +311,7 @@
       
       <categories>
           
-          <category> 前端思考 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -292,7 +336,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 服务实践 </category>
           
       </categories>
       
@@ -319,7 +363,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -346,7 +390,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 服务实践 </category>
           
       </categories>
       
@@ -371,7 +415,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 服务实践 </category>
           
       </categories>
       
@@ -396,7 +440,7 @@
       
       <categories>
           
-          <category> 编程议论 </category>
+          <category> 前端思考 </category>
           
       </categories>
       
@@ -423,7 +467,7 @@
       
       <categories>
           
-          <category> 编程议论 </category>
+          <category> 前端思考 </category>
           
       </categories>
       
@@ -450,7 +494,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -475,7 +519,7 @@
       
       <categories>
           
-          <category> 编程议论 </category>
+          <category> 前端思考 </category>
           
       </categories>
       
@@ -552,7 +596,7 @@
       
       <categories>
           
-          <category> 前端思考 </category>
+          <category> 源码阅读 </category>
           
       </categories>
       
@@ -577,7 +621,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -622,7 +666,7 @@
       <link href="/blog/2018/07/12/kill-parentless-on-npm/"/>
       <url>/blog/2018/07/12/kill-parentless-on-npm/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>强烈谴责某些大厂，前端或者说 JavaScript 是一个极其依赖社区环境的语言，你们在招人之前能不能先调查一下准新人有没有在社区为非作歹？</p></blockquote><p>年前想搞定<code>React</code>的时候想了个骚操作：尝试用<code>React</code>的思路去做<code>Vue</code>的事情。又诞生了「Vue生态统一可以聚合」的骚想法，开始产生做<code>Ahri</code>的念头。想着那得搞个 npm 包吧，孤儿上线了。</p><p>嘛，在 npm 拿《英雄联盟》英雄名字抢注包名的做法都很弱智了，还“大义凛然”的在描述里写着：<code>League of Legends hero.</code></p><p>关于第一次遇到它的时候，我就想算了，重新找合适的名字吧，但后来因为其他原因就搁置了。现在重新回坑，依然遇到这个问题，这次我不忍了，我打算找 npm 肛他！</p><a id="more"></a><h2 id="寻找入口">寻找入口</h2><p>首先看了<code>profile</code>页，发现没有举报入口。（从这里进了Twitter，让人感觉这是一个为了装逼而活着的人。</p><p>看看 npm 本身页面有没有什么入口，比如“联系我们”之类的邮箱总有吧，最后在最下面找到了<code>Reporting Abuse</code>。</p><p>不得不说 npm 连“因为名字打起来”的可能都想到了，那“因为孤儿操作”应该也会列入其中吧，果不其然。在骚扰举报一栏找到了控空包的情况：如果有用户注册无用空包，或者利用包进行乱七八糟的活动，可能有两种措施：ban 了这个用户；清除这些东西。</p><p>我一看到可以 ban 了他我就可兴奋了，于是，发邮件走起。</p><h2 id="采取行动">采取行动</h2><p>操起我400分的4级水平英语，就开始写。</p><blockquote><p>hi,<br>here a profile page: xxxxxx.</p><p>this account keep a lot of empty packages which name as a role name in a game, it cause difficulty for me.</p><p>I NEED HELP! THANK YOU!</p></blockquote><p>过了一会收到回信：</p><blockquote><p>Our support hours are Monday through Friday, 9:00AM - 6:00PM PST, excluding US holidays.</p><p>Your request is being reviewed by our support staff and we’ll be responding soon.</p><p>To add additional comments, reply to this email.</p></blockquote><p>噢，没在工作时间还行。过了几秒又收到一封邮件：</p><blockquote><p>Hey there,</p><p>Thank you for reaching out. We hope you’re having a great week thus far, and are looking forward to responding to your request.</p><p>The npm support staff will be off on Wednesday, July 4th in observance of Independence Day. Due to this, you may experience some delay in expected reply times.</p><p>Thanks for your patience.</p></blockquote><p>狗屎还带放假的？美国员工真的舒服啊，不加班，节假日放满。像我们这种997节假日还放不满的简直受到了6把无尽的暴击。</p><p>等了几天发现不对，没理我，再按照第一封发了一次，这次过了半天多才回。这次差点就怕我气到了，大概的意思就是你上次的 ticket 还没解决，如果你没问题了我们就关了。。。美国人上班都这么摸的？</p><p>又过了半天收到一封邮件，这次是技术客服（邮件是有人名的大佬）发来的：</p><blockquote><p>Thanks for reaching out.</p><p>I was not able to find an account associated with (我发信的邮箱). Was there a specific one of these user’s package names you are interested in for a project?</p><p>If so, we may assist you with a transfer request or granting access to that package, depending on the package and contents.</p></blockquote><p>有点着急，看了第一句之后，下面没仔细看，就有点想搞他，我就回信了。信的内容大概是这样：谢谢你的回复。这是我的项目名字（发了<code>Ahri</code>的GitHub Repo），这是我的 npm 账号（意识到发信的账号不对）。我对<code>Ahri</code>有兴趣，但他是个空的而且被占用了，我没办法使用，对吧？还有这个 B 恶意占用了大量的空包（跟上孤儿账号），他是不是同时违反了规则，是不是应该有所动作？</p><p>第二天（有时差），收到了回信，说包名已经转移到我的账号上：</p><blockquote><p>Thanks for getting back to me with that information.</p><p>It’s all yours now, but you won’t be able to re-use any version numbers used by the previous author. In fact, I’d suggest publishing your first update as a major release, i.e., v1.0.0. Please publish an update to the package as soon as possible with your code.</p></blockquote><p>我上了我的 npm 看了一眼，惊了…这就拿到了…</p><p>但并没有解放其他的空包和 <strong>ban 了他</strong>，这点我有点失望。总之，要到想要的包，这才是想要的结果。</p>]]></content>
+        <content type="html"><![CDATA[<p>年前想搞定<code>React</code>的时候想了个骚操作：尝试用<code>React</code>的思路去做<code>Vue</code>的事情。又诞生了「Vue生态统一可以聚合」的骚想法，开始产生做<code>Ahri</code>的念头。想着那得搞个 npm 包吧，孤儿上线了。</p><p>嘛，在 npm 拿《英雄联盟》英雄名字抢注包名的做法都很弱智了，还“大义凛然”的在描述里写着：<code>League of Legends hero.</code></p><p>关于第一次遇到它的时候，我就想算了，重新找合适的名字吧，但后来因为其他原因就搁置了。现在重新回坑，依然遇到这个问题，这次我不忍了，我打算找 npm 肛他！</p><a id="more"></a><h2 id="寻找入口">寻找入口</h2><p>首先看了<code>profile</code>页，发现没有举报入口。（从这里进了Twitter，让人感觉这是一个为了装逼而活着的人。</p><p>看看 npm 本身页面有没有什么入口，比如“联系我们”之类的邮箱总有吧，最后在最下面找到了<code>Reporting Abuse</code>。</p><p>不得不说 npm 连“因为名字打起来”的可能都想到了，那“因为孤儿操作”应该也会列入其中吧，果不其然。在骚扰举报一栏找到了控空包的情况：如果有用户注册无用空包，或者利用包进行乱七八糟的活动，可能有两种措施：ban 了这个用户；清除这些东西。</p><p>我一看到可以 ban 了他我就可兴奋了，于是，发邮件走起。</p><h2 id="采取行动">采取行动</h2><p>操起我400分的4级水平英语，就开始写。</p><blockquote><p>hi,<br>here a profile page: xxxxxx.</p><p>this account keep a lot of empty packages which name as a role name in a game, it cause difficulty for me.</p><p>I NEED HELP! THANK YOU!</p></blockquote><p>过了一会收到回信：</p><blockquote><p>Our support hours are Monday through Friday, 9:00AM - 6:00PM PST, excluding US holidays.</p><p>Your request is being reviewed by our support staff and we’ll be responding soon.</p><p>To add additional comments, reply to this email.</p></blockquote><p>噢，没在工作时间还行。过了几秒又收到一封邮件：</p><blockquote><p>Hey there,</p><p>Thank you for reaching out. We hope you’re having a great week thus far, and are looking forward to responding to your request.</p><p>The npm support staff will be off on Wednesday, July 4th in observance of Independence Day. Due to this, you may experience some delay in expected reply times.</p><p>Thanks for your patience.</p></blockquote><p>狗屎还带放假的？美国员工真的舒服啊，不加班，节假日放满。像我们这种997节假日还放不满的简直受到了6把无尽的暴击。</p><p>等了几天发现不对，没理我，再按照第一封发了一次，这次过了半天多才回。这次差点就怕我气到了，大概的意思就是你上次的 ticket 还没解决，如果你没问题了我们就关了。。。美国人上班都这么摸的？</p><p>又过了半天收到一封邮件，这次是技术客服（邮件是有人名的大佬）发来的：</p><blockquote><p>Thanks for reaching out.</p><p>I was not able to find an account associated with (我发信的邮箱). Was there a specific one of these user’s package names you are interested in for a project?</p><p>If so, we may assist you with a transfer request or granting access to that package, depending on the package and contents.</p></blockquote><p>有点着急，看了第一句之后，下面没仔细看，就有点想搞他，我就回信了。信的内容大概是这样：谢谢你的回复。这是我的项目名字（发了<code>Ahri</code>的GitHub Repo），这是我的 npm 账号（意识到发信的账号不对）。我对<code>Ahri</code>有兴趣，但他是个空的而且被占用了，我没办法使用，对吧？还有这个 B 恶意占用了大量的空包（跟上孤儿账号），他是不是同时违反了规则，是不是应该有所动作？</p><p>第二天（有时差），收到了回信，说包名已经转移到我的账号上：</p><blockquote><p>Thanks for getting back to me with that information.</p><p>It’s all yours now, but you won’t be able to re-use any version numbers used by the previous author. In fact, I’d suggest publishing your first update as a major release, i.e., v1.0.0. Please publish an update to the package as soon as possible with your code.</p></blockquote><p>我上了我的 npm 看了一眼，惊了…这就拿到了…</p><p>但并没有解放其他的空包和 <strong>ban 了他</strong>，这点我有点失望。总之，要到想要的包，这才是想要的结果。</p>]]></content>
       
       
       <categories>
@@ -704,7 +748,7 @@
       
       <categories>
           
-          <category> 曲苑杂坛 </category>
+          <category> 前端思考 </category>
           
       </categories>
       
@@ -729,7 +773,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 整点花活 </category>
           
       </categories>
       
@@ -754,7 +798,7 @@
       
       <categories>
           
-          <category> 前端思考 </category>
+          <category> 源码阅读 </category>
           
       </categories>
       
@@ -781,7 +825,7 @@
       
       <categories>
           
-          <category> 前端思考 </category>
+          <category> 源码阅读 </category>
           
       </categories>
       
@@ -808,7 +852,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -933,7 +977,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -976,7 +1020,7 @@
     
     
     <entry>
-      <title>你还在用Console.log()？</title>
+      <title>我还在用Console.log()？</title>
       <link href="/blog/2017/11/20/js-console/"/>
       <url>/blog/2017/11/20/js-console/</url>
       
@@ -1010,7 +1054,7 @@
       
       <categories>
           
-          <category> 编程议论 </category>
+          <category> 前端思考 </category>
           
       </categories>
       
@@ -1035,7 +1079,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 曲苑杂坛 </category>
           
       </categories>
       
@@ -1062,7 +1106,7 @@
       
       <categories>
           
-          <category> 实践尝试 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -1090,31 +1134,6 @@
       <categories>
           
           <category> 前端思考 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于Javascript的条件判断</title>
-      <link href="/blog/2017/08/09/about-conditionals/"/>
-      <url>/blog/2017/08/09/about-conditionals/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>记录这个不为什么，就是遇到SB，不想争执。</p></blockquote><p>撕逼文，小标题都会比较小，方便撕逼思路的连续性！</p><a id="more"></a><h2 id="写在前面">写在前面</h2><p>之所以想到写这个。是因为，公司给我安排的领导一直做的J2SE，没怎么过JS。然后接触了点ES6就疯狂装逼，看谁都是错的。要代码优雅但不愿意开ESLint；不要滥用语法糖却强制让人所有函数使用Promise；代码强调简洁但是非常简单的类似于<code>() =&gt; console.log('hello world'))</code>都要分成三行写。这就是这次撕逼的源头了。</p><h2 id="JS的条件判断需不需要花括号？">JS的条件判断需不需要花括号？</h2><blockquote><p>大多数语言中，条件判断语句后不接花括号的话，默认只会取接下来的语句作为子语句。</p></blockquote><p>在这点的话，无论Java或者Javascript都是一样的。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 可以是这样的</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (;;) <span class="built_in">console</span>.log(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>那么这么说没有什么说服力，比如这样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++) <span class="built_in">console</span>.log(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">  <span class="built_in">console</span>.log(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">test1() <span class="comment">// 01234</span></span><br><span class="line">test2() <span class="comment">// 01234</span></span><br></pre></td></tr></table></figure><p>那么</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++) <span class="built_in">console</span>.log(i)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;你真TM搞笑&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">  <span class="built_in">console</span>.log(i)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;你真TM搞笑&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三种</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test3</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">  <span class="built_in">console</span>.log(i); <span class="built_in">console</span>.log(<span class="string">&#x27;你真TM搞笑&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这样的，三个答案是不是一样的？建议看到的如果不清楚答案，可以去试一下，如果你的node是从官网下的的话，就是这样的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">你真TM搞笑</span><br></pre></td></tr></table></figure><p>很失望是不是！为什么第二种不是这样的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">你真TM搞笑</span><br><span class="line">1</span><br><span class="line">你真TM搞笑</span><br><span class="line">2</span><br><span class="line">你真TM搞笑</span><br><span class="line">3</span><br><span class="line">你真TM搞笑</span><br><span class="line">4</span><br><span class="line">你真TM搞笑</span><br></pre></td></tr></table></figure><p><strong>那语言设计就是这样的，我能怎么办，我也很绝望啊</strong></p><p>那么“大神怎么说的”</p><blockquote><p>某“ES6专家”：你忘记的时候多写一行就会出现bug</p></blockquote><p>这又是什么情况呢？原题目的话是这样的</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (exist) <span class="keyword">return</span> <span class="string">&#x27;该数据存在&#x27;</span></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&#x27;不存在数据，需要添加&#x27;</span></span><br></pre></td></tr></table></figure><p>这实在让我抓破了头都不知道他想表达什么。难道他的意思是这样的？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (exist) <span class="keyword">return</span> <span class="string">&#x27;该数据存在&#x27;</span>  <span class="comment">// 不存在else 报错？</span></span><br><span class="line"><span class="comment">// else return &#x27;不存在数据，需要添加&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//或者第二种情况</span></span><br><span class="line"><span class="keyword">if</span> (exist) <span class="keyword">return</span> <span class="string">&#x27;该数据存在&#x27;</span></span><br><span class="line"><span class="comment">// else return &#x27;不存在数据，需要添加&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(exist) <span class="comment">// 报错？</span></span><br></pre></td></tr></table></figure><p>但是，根据JS “没有花括号的情况下只会把接下来的第一句作为子语句” 已经证明不存在该问题了。那么他要说明什么？</p><h2 id="可能声明式编程真的会出现这种错误">可能声明式编程真的会出现这种错误</h2><h3 id="第一种情况，if中为Boolean类型报错。">第一种情况，if中为Boolean类型报错。</h3><p>就上面问题，我去百度了（这种垃圾问题Google什么？是看不起百度还是看不起谷歌还是你想装逼展示你会把梯子竖起来？）关键词<code>java if 不写大括号 报错</code></p><p>在CSDN确实有一处，[<a target="_blank" rel="noopener" href="http://blog.csdn.net/androidiscoding/article/details/47725347">你不知道java问题if后面加不加括号的问题</a>](<a target="_blank" rel="noopener" href="http://blog.csdn.net/androidiscoding/article/details/47725347">http://blog.csdn.net/androidiscoding/article/details/47725347</a>)。（感谢大神分享）确实明确提到了</p><blockquote><p>if (boolean) 后面不使用花括号时，里面不能出现声明语句。</p></blockquote><p>哦，那还真对不起了ES6大神。</p><h3 id="第二种情况，作用域错误">第二种情况，作用域错误</h3><p>这个可能需要代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a <span class="keyword">instanceof</span> Dog)</span><br><span class="line">Dog d = (Dog) a;</span><br></pre></td></tr></table></figure><p>这里还是CSDN得内容，<a target="_blank" rel="noopener" href="http://bbs.csdn.net/topics/391057013?page=1">为什么省略if后的大括号｛｝会报错</a>，其中<a target="_blank" rel="noopener" href="http://my.csdn.net/finemi">@finemi</a>提到，可能是java虚拟机的作用域问题，会把下面那句当做大作用域的内容，并不归属于if语句了。这是因为作用域错乱导致的错误，所以用花括号括住保证if内部作用域不受污染。</p><p>哦~<strong>私的ES6大神是本当对不起了！</strong></p><p>这也说明了，声明式编程在语法上确实比较严谨，看起来比较安全。我当时学习Objective-C的时候也确实踩了不少类似于奇怪语法的坑，不过后来信仰了Swift的结构式时候会好了很多。</p><h2 id="最后补一手关于ES6箭头函数的换行与不换行">最后补一手关于ES6箭头函数的换行与不换行</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">() =&gt; <span class="built_in">console</span>.log(<span class="string">&#x27;hello world&#x27;</span>)</span><br></pre></td></tr></table></figure><p>其实关于这个，阮一峰老师的开源书<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/function#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">函数的扩展 - ECMAScript 6入门</a></p><blockquote><p>如果箭头函数的代码块部分多于一条语句，就要使用大括号将它们括起来，并且使用<code>return</code>语句返回。</p><p>由于大括号被解释为代码块，所以如果箭头函数直接返回一个对象，必须在对象外面加上括号。</p></blockquote><p>代码例子</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> num1 + num2;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>也就是</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test1 = <span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">let</span> test2 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果有些变态喜欢这么写</span></span><br><span class="line"><span class="keyword">let</span> test3 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最后阮老师强调了</p><blockquote><p><strong>箭头函数使得表达更加简洁。</strong></p><p><strong>如果不用箭头函数，可能就要占用多行，而且还不如现在这样写醒目。</strong></p></blockquote><h2 id="最后总结一手">最后总结一手</h2><p>在知乎，轮子哥解释过函数式编程</p><blockquote><p>函数是语言都倾向于让你用函数来组成函数，而不是把函数看成是一个数据弄成另一个数据的过程。</p></blockquote><p>还有我最喜欢的<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/be5invis">@Belleve</a>贴了一张图说明了“越往下面走离函数式编程越远”</p><p><img src="https://pic4.zhimg.com/v2-a31b50055c9b896f7e3b9bb4467204e3_b.png" alt=""></p><p>另外，在Javascript中，虽然被称为“玩具语言”，但是就现在被开发的情况来说，Javascript绝对是目前最灵活和最强大的语言了，虽然它运行环境苛刻而严格，还不能做到anyway。</p><p>不过一码归一码，我这么说是想表达，Javascript发展到现在，应该说还有一大块大陆需要去探索，可能这个语言就像我们大脑一样，虽然很厉害了，实际上才开发了一点点而已吧。我也是正在学习这个语言，我只是想说，从想成为JSer开始，就意味着要不断学习。因为这个语言只会随着时间被开发得越来越多。</p><p>而且，几乎每每都能看到有人一直强调：<strong>函数是JS的第一公民</strong>。</p><p>这是什么意思？如果是函数式编程的话，那么，它所定义的每一个语句或者每一个代码块都可以视为函数。</p><p>声明式编程是让你声明某些东西，把内容转化为数据，数据转化为数据。而很明显javascript并不隶属这一家族。而且，js好像连Object都是Function类型的吧！</p><p>而且脚本语言+函数式，这才是我热爱并追随的地方。虽然我在JS是真的菜！</p><h2 id="参考链接">参考链接</h2><p>（最后感谢所有被引用的文章和作者，谢谢。）<br><a target="_blank" rel="noopener" href="http://blog.csdn.net/androidiscoding/article/details/47725347">[你不知道java问题if后面加不加括号的问题]</a><br><a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/function#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">函数的扩展 - ECMAScript 6入门</a><br><a target="_blank" rel="noopener" href="http://bbs.csdn.net/topics/391057013?page=1">为什么省略if后的大括号｛｝会报错</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/be5invis">@Belleve的知乎回答</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程议论 </category>
           
       </categories>
       
@@ -1214,7 +1233,7 @@
       
       <categories>
           
-          <category> 玩具制造 </category>
+          <category> 前端思考 </category>
           
       </categories>
       
@@ -1239,7 +1258,7 @@
       
       <categories>
           
-          <category> 玩具制造 </category>
+          <category> 前端实践 </category>
           
       </categories>
       
@@ -1251,19 +1270,6 @@
             <tag> CSS </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>一次无聊的尝试 —— hexo-theme-blank</title>
-      <link href="/blog/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/"/>
-      <url>/blog/2016/11/02/xin-zhu-ti-ce-shi-wan-shan-zhong/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>一次Hexo主题的尝试</p></blockquote><p><strong>我先说好啊！Blank不是SKT T1的打野！</strong></p><h2 id="科技以换色为本！">科技以换色为本！</h2><h3 id="紫色">紫色</h3><p><img src="/blog/Image/Blank-violet.jpg" alt="Blank-紫罗兰"> <a id="more"></a></p><h3 id="灰色">灰色</h3><p><img src="/blog/Image/Blank-gray.jpg" alt="Blank-深空灰"></p><h3 id="粉色">粉色</h3><p><img src="/blog/Image/Blank-pink.jpg" alt="Blank-樱语粉"></p><h3 id="绿色">绿色</h3><p><img src="/blog/Image/Blank-green.jpg" alt="Blank-璐璐绿"></p><h3 id="蓝色">蓝色</h3><p><img src="/blog/Image/Blank-blue.jpg" alt="Blank-编不下去的蓝色"></p><h3 id="红色">红色</h3><p><img src="/blog/Image/Blank-red.jpg" alt="Blank-红红火火"></p><h3 id="橙色">橙色</h3><p><img src="/blog/Image/Blank-orange.jpg" alt="Blank-橙子一样的颜色"><br>真是不好意思又开了个坑<br>“方块律动”和“空”为思想的一个主题，同样现在依然是个半成品<br>但怎么说比Rousy（海底世界）好多了吧！</p><h2 id="这个主题从写法上，比Rousy改善很多">这个主题从写法上，比Rousy改善很多</h2><p>怎么来说，Rousy的话，是根据css然后全搬入stylus的，管理性能略差<br>但是Blank的话，我好像不知不觉用了stylus的用法，所以看起来应该…还是不简洁…<br>当然Blank只是半成品，至今只出生后第3天。（都是中午和大半夜，白天有课上）</p><h2 id="新主题有没有什么新东西">新主题有没有什么新东西</h2><p>肯定有啊！目标实现的效果是，任何操作都是依赖方块来进行，而且即摸即现（标签还没弄好）<br>然后，<strong>可以切换颜色主题了！</strong><br>目前是可以切换两种颜色主题，“灰色跟粉色”，明天应该能支持4种颜色了。<br>当然，我想把颜色接口开放到<code>_config.yml</code>中，然后就可以自定义了！</p>]]></content>
-      
-      
       
     </entry>
     
