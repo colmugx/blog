@@ -15,7 +15,7 @@
     <atom:link href="https://colmugx.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Co1MugX Blog</description>
-    <pubDate>Fri, 19 Feb 2021 13:30:46 GMT</pubDate>
+    <pubDate>Thu, 25 Feb 2021 14:21:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -45,6 +45,10 @@
       <category domain="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/">前端思考</category>
       
       
+      <category domain="https://colmugx.github.io/blog/tags/%E7%BB%84%E4%BB%B6%E5%8C%96/">组件化</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程</category>
+      
       
       <comments>https://colmugx.github.io/blog/2021/02/16/component-and-engineering/#disqus_thread</comments>
       
@@ -68,7 +72,7 @@
       
       
       
-      <category domain="https://colmugx.github.io/blog/tags/colmugx/">colmugx</category>
+      <category domain="https://colmugx.github.io/blog/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">年度总结</category>
       
       
       <comments>https://colmugx.github.io/blog/2021/01/04/my-2020/#disqus_thread</comments>
@@ -95,6 +99,8 @@
       
       <category domain="https://colmugx.github.io/blog/tags/vue/">vue</category>
       
+      <category domain="https://colmugx.github.io/blog/tags/composition-api/">composition-api</category>
+      
       
       <comments>https://colmugx.github.io/blog/2020/12/20/vue2-composition-api-4/#disqus_thread</comments>
       
@@ -118,6 +124,8 @@
       
       
       <category domain="https://colmugx.github.io/blog/tags/vue/">vue</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/composition-api/">composition-api</category>
       
       
       <comments>https://colmugx.github.io/blog/2020/12/08/vue2-composition-api-3/#disqus_thread</comments>
@@ -143,6 +151,8 @@
       
       <category domain="https://colmugx.github.io/blog/tags/vue/">vue</category>
       
+      <category domain="https://colmugx.github.io/blog/tags/composition-api/">composition-api</category>
+      
       
       <comments>https://colmugx.github.io/blog/2020/11/29/vue2-composition-api-2/#disqus_thread</comments>
       
@@ -167,6 +177,8 @@
       
       
       <category domain="https://colmugx.github.io/blog/tags/vue/">vue</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/composition-api/">composition-api</category>
       
       
       <comments>https://colmugx.github.io/blog/2020/11/28/vue2-composition-api-1/#disqus_thread</comments>
@@ -194,7 +206,7 @@
       <category domain="https://colmugx.github.io/blog/categories/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/">设计思考</category>
       
       
-      <category domain="https://colmugx.github.io/blog/tags/Resumer/">Resumer</category>
+      <category domain="https://colmugx.github.io/blog/tags/%E8%AE%BE%E8%AE%A1%EF%BC%8C%E7%AE%80%E5%8E%86/">设计，简历</category>
       
       
       <comments>https://colmugx.github.io/blog/2020/11/11/why-redesign-cv/#disqus_thread</comments>
@@ -309,6 +321,10 @@
       
       <category domain="https://colmugx.github.io/blog/categories/%E6%95%B4%E7%82%B9%E8%8A%B1%E6%B4%BB/">整点花活</category>
       
+      
+      <category domain="https://colmugx.github.io/blog/tags/NAS/">NAS</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/linux/">linux</category>
       
       
       <comments>https://colmugx.github.io/blog/2020/06/07/home-server/#disqus_thread</comments>
@@ -426,6 +442,8 @@
       
       <category domain="https://colmugx.github.io/blog/tags/react/">react</category>
       
+      <category domain="https://colmugx.github.io/blog/tags/i18n/">i18n</category>
+      
       
       <comments>https://colmugx.github.io/blog/2020/01/31/react-translate/#disqus_thread</comments>
       
@@ -515,6 +533,8 @@ rust 社区中关注了 &lt;code&gt;rocket&lt;/code&gt; 一段时间，后面发
       
       <category domain="https://colmugx.github.io/blog/tags/swift/">swift</category>
       
+      <category domain="https://colmugx.github.io/blog/tags/vapor/">vapor</category>
+      
       
       <comments>https://colmugx.github.io/blog/2019/06/23/try-vapor-0/#disqus_thread</comments>
       
@@ -542,6 +562,8 @@ rust 社区中关注了 &lt;code&gt;rocket&lt;/code&gt; 一段时间，后面发
       
       
       <category domain="https://colmugx.github.io/blog/tags/swift/">swift</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/perfect/">perfect</category>
       
       
       <comments>https://colmugx.github.io/blog/2019/06/07/try-swift-perfect/#disqus_thread</comments>

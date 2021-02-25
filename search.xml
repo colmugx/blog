@@ -18,6 +18,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 组件化 </tag>
+            
+            <tag> 软件工程 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -33,7 +41,7 @@
       
         <tags>
             
-            <tag> colmugx </tag>
+            <tag> 年度总结 </tag>
             
         </tags>
       
@@ -60,6 +68,8 @@
             
             <tag> vue </tag>
             
+            <tag> composition-api </tag>
+            
         </tags>
       
     </entry>
@@ -84,6 +94,8 @@
         <tags>
             
             <tag> vue </tag>
+            
+            <tag> composition-api </tag>
             
         </tags>
       
@@ -110,6 +122,8 @@
             
             <tag> vue </tag>
             
+            <tag> composition-api </tag>
+            
         </tags>
       
     </entry>
@@ -135,6 +149,8 @@
             
             <tag> vue </tag>
             
+            <tag> composition-api </tag>
+            
         </tags>
       
     </entry>
@@ -158,7 +174,7 @@
       
         <tags>
             
-            <tag> Resumer </tag>
+            <tag> 设计，简历 </tag>
             
         </tags>
       
@@ -236,6 +252,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> NAS </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     
@@ -339,6 +363,8 @@
             
             <tag> react </tag>
             
+            <tag> i18n </tag>
+            
         </tags>
       
     </entry>
@@ -418,6 +444,8 @@
             
             <tag> swift </tag>
             
+            <tag> vapor </tag>
+            
         </tags>
       
     </entry>
@@ -442,6 +470,8 @@
         <tags>
             
             <tag> swift </tag>
+            
+            <tag> perfect </tag>
             
         </tags>
       
@@ -520,7 +550,9 @@
       
         <tags>
             
-            <tag> nlvi </tag>
+            <tag> Nlvi </tag>
+            
+            <tag> PWA </tag>
             
         </tags>
       
@@ -558,7 +590,7 @@
       <link href="/blog/2019/03/25/bye-nlvi/"/>
       <url>/blog/2019/03/25/bye-nlvi/</url>
       
-        <content type="html"><![CDATA[<p><code>Nlvi</code> 可以说起源于正准备上班和刚上班工作不饱和(大雾。为了练习自己对语义化 HTML 理解和 CSS 的渐进式学习而诞生的，到现在已经 2 年了。</p><p>那个时候还用 iPad 画草图然后慢慢写起来，而且当时编程能力确实还挺弱，hexo 很多都弄不清楚。现在对 hexo 就熟悉很多了，设计稿也从随便画画变成了用 sketch，但也是杀鸡用牛刀。</p><p>过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想迭代了。</p><p>为什么？因为一旦工作太忙没时间，又想到这个东西，好累啊……</p><p>但，我的意思是，<strong>我不想维护 hexo 版本的 Nlvi 了</strong>，我的意思是，诶嘿嘿嘿嘿嘿！</p><a id="more"></a><p>所以 2.0 到 3.0 大概的改动会是：</p><ul><li>根据我对统一风格的想法，(又)变动部分设计风格</li><li>根据我对统一风格的想法，调整部分部件展示形式</li><li>根据我对统一风格的想法，对颜色变量重新管理</li><li>去掉以前的标签云，重写一个</li><li>去掉以前的搜索框，重写一个</li><li>变动部分不成熟动画，改动动画曲线</li><li><strong>加入渐变色的设定！(Maybe)</strong></li></ul>]]></content>
+        <content type="html"><![CDATA[<p><code>Nlvi</code> 可以说起源于正准备上班和刚上班工作不饱和(大雾。为了练习自己对语义化 HTML 理解和 CSS 的渐进式学习而诞生的，到现在已经 2 年了。</p><p>那个时候还用 iPad 画草图然后慢慢写起来，而且当时编程能力确实还挺弱，hexo 很多都弄不清楚。现在对 hexo 就熟悉很多了，设计稿也从随便画画变成了用 sketch，但也是杀鸡用牛刀。</p><p>过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想迭代了。</p><p>为什么？因为一旦工作太忙没时间，又想到这个东西，好累啊……</p><p>但，我的意思是，<strong>我不想维护 hexo 版本的 Nlvi 了</strong>，我的意思是，诶嘿嘿嘿嘿嘿！</p><a id="more"></a><p>所以 3.0 到 4.0 大概的改动会是：</p><ul><li>根据我对统一风格的想法，(又)变动部分设计风格</li><li>根据我对统一风格的想法，调整部分部件展示形式</li><li>根据我对统一风格的想法，对颜色变量重新管理</li><li>去掉以前的标签云，重写一个</li><li>去掉以前的搜索框，重写一个</li><li>变动部分不成熟动画，改动动画曲线</li><li><strong>加入渐变色的设定！(Maybe)</strong></li></ul>]]></content>
       
       
       <categories>
@@ -570,9 +602,7 @@
       
         <tags>
             
-            <tag> nlvi </tag>
-            
-            <tag> colmugx </tag>
+            <tag> Nlvi </tag>
             
         </tags>
       
@@ -622,7 +652,9 @@
       
         <tags>
             
-            <tag> Redux </tag>
+            <tag> react </tag>
+            
+            <tag> redux </tag>
             
         </tags>
       
@@ -647,7 +679,7 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
+            <tag> Redux </tag>
             
         </tags>
       
@@ -697,7 +729,7 @@
       
         <tags>
             
-            <tag> colmugx </tag>
+            <tag> NPM </tag>
             
         </tags>
       
@@ -799,6 +831,8 @@
       
         <tags>
             
+            <tag> editor </tag>
+            
             <tag> vim </tag>
             
         </tags>
@@ -878,7 +912,9 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> vuex </tag>
+            
+            <tag> dva </tag>
             
         </tags>
       
@@ -928,7 +964,7 @@
       
         <tags>
             
-            <tag> Functional Programming </tag>
+            <tag> 函数式编程 </tag>
             
         </tags>
       
@@ -1030,7 +1066,7 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
+            <tag> 函数式编程 </tag>
             
         </tags>
       
@@ -1135,6 +1171,8 @@
             <tag> vue </tag>
             
             <tag> electron </tag>
+            
+            <tag> editor </tag>
             
         </tags>
       
@@ -1243,32 +1281,7 @@
     
     
     <entry>
-      <title>async-await 初尝试</title>
-      <link href="/blog/2017/02/17/async-await-first/"/>
-      <url>/blog/2017/02/17/async-await-first/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>把去年在github的处作改造了一次。方便日后react学习… 另外我想换个主题了，这次用心做然后推入hexo themes。</p></blockquote><p>想起去年第一个放在github的东西，就是获取课程然后下载课程视频的下载器。<br>然后今天，想到弄一个服务端版本。这样我可以无论作为移动端还是webapp端都能用到爬虫的数据了。所以就做了一次改造。</p><a id="more"></a><p>github地址：<a target="_blank" rel="noopener" href="https://github.com/ColMugX/ImoocDownloader/tree/server">ColMugX/ImoocDownloader at server</a><br>地址跟ImoodDownloader一样，放在同一个项目里。多开了一个server版本分支。归类方便吧！</p><h2 id="ImoocDownloaderServer-请求样本">ImoocDownloaderServer 请求样本</h2><p>请求之后样本大概是这样的：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;code&quot;</span>: <span class="number">200</span>,</span><br><span class="line">  <span class="string">&quot;Info&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;使用Struts2+Hibernate开发学生信息管理功能&quot;</span>,</span><br><span class="line">    <span class="string">&quot;author&quot;</span>: <span class="string">&quot;milanlover&quot;</span>,</span><br><span class="line">    <span class="string">&quot;job&quot;</span>: <span class="string">&quot;JAVA开发工程师&quot;</span>,</span><br><span class="line">    <span class="string">&quot;classTime&quot;</span>: <span class="string">&quot;2小时35分&quot;</span>,</span><br><span class="line">    <span class="string">&quot;classValue&quot;</span>: <span class="string">&quot;高级&quot;</span>,</span><br><span class="line">    <span class="string">&quot;classInfo&quot;</span>: <span class="string">&quot;简介：本课程通过学生信息管理功能的开发，来介绍Struts2和Hibernate的整合。主要内容包括：Struts2和Hibernate整合，用户登录模块和学生信息管理模块的设计和实现。通过本课程的学习，一定会使小伙伴们的Java Web开发技能更上一层楼。&quot;</span>,</span><br><span class="line">    <span class="string">&quot;classKn&quot;</span>: <span class="string">&quot;各位小伙伴，学习本课程前需要对\r\nStruts2和Hibernate的基础知识有所了解。&quot;</span>,</span><br><span class="line">    <span class="string">&quot;classWh&quot;</span>: <span class="string">&quot;1、掌握Struts2和Hibernate的整合开发\r\n2、能够使用Struts2+Hibernate独立开发信息管理类的项目，进行数据的增删改查。&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;Video&quot;</span>: &#123; ... &#125;</span><br></pre></td></tr></table></figure><p>解析完采用json格式进行输出，这是app最好的数据来源方式有木有！所以这样就更方便做APP了。而且这估计也是我第一次正式后端入门吧。<br>至于imoocdownloader这个名字，随便吧毕竟不能算是很好的作品，所以不重新起名字了。</p><h2 id="小谈ES6和ES7">小谈ES6和ES7</h2><p>node更新到了v7.4，毋容置疑ES2016也就是顺势ES7也得到支持了，对于js或者说nodejs这种全靠异步吃饭的服务端有时候也是个很大的问题。<br>js是很经典的函数式语言，至少我这么觉得。函数式编程自然逃不过回调地狱…再加上nodejs这种非阻塞多并发的操作方式有时候确实是一种难题。（我的爬虫小记项目中的宝可梦基本数据爬虫<strong>已经是车祸现场</strong>了。）</p><p>按道理说，并没有ES6和ES7这种称呼，ESX最多只延续到了ES5。因为从ES1~ES5实际上都是ECMA-262的版本。根据百度百科</p><blockquote><p>ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。</p></blockquote><p>而到了ES6并不是叫ES6了，ECMA开始使用年份来命名，比如<code>ECMAScript 2015</code>，和<code>ECMAScript 2016</code>。1到5只是因为编号太长加上该编号一直在迭代。实际上该标准里面有两个语言，但渐渐的由于微软各种不给看好和JavaScript实在名声太大，所以变成了ES-262的扛把子。到了es2015我觉得已经变成一种跟JavaScript关系不大的语言了。虽然还有种**“如果es6取代了js，那么就把es6改名为js”**的说法。不过也不是不可行~</p><p>而ES6增加的内容和改变的内容实在太多了。多了类型的定义方式不再需要下划线约定俗成；简单的括号函数取代闭包函数臃肿的写法（不过括号函数不存在this，以后有机会掰扯。以前不懂事以为反正都一样，之后在微信小程序吃尽苦头）；引入了类的定义再也不需要被es5使用者各种邪魔化（在es6之前我唯一懂的es5对类的定义写法就是<code>new object()</code>）。</p><p>其实看到了es6之后，我就在后悔为什么当时不好好使用typescript和使用ts，这样的话到es6普及时我也可以成为扛把子了（逃。</p><p>所以ES6和ES7的说法，应该是因为ES5被叫顺口了，再说ES2015确实太长，那么顺位下来叫ES6也行，反正都懂就行了。</p><p>而ES2016不比ES2015，TMD竟然就只加入了一个能用的特性：<code>async-await</code>。</p><h2 id="浅谈promise-和-async-await">浅谈promise 和 async-await</h2><p><code>promise</code>是es6的特性，<code>async-await</code>是es7的特性。前者在es6的学习中被我直接忽视了…觉得用不到而且不知道怎么用。但是在async出现之后，意识到promise的作用，而且我认为他们才是天造地设，缺一不可。<br>es6时代的时候据说也是邪魔写法很多，使用promise解决同步问题，再到后面有Generator函数的说法。最后都并不理想。毕竟语言这东西，如果有原生支持肯定是再好不过了。就跟Android一样，如果原生安卓在这片大陆上能正常使用的话体验肯定比现在任何XUI舒服。</p><p>作为异步程序同步处理，async/await也有矫情的地方，后者只能出现在有前者的上下文中，单独不可使用。而await只能用在promise的函数上面，用在其他函数上也行只不过没作用，还是瞬发还是异步。</p><h2 id="为什么需要P-A-，我用在哪里了">为什么需要P/A+，我用在哪里了</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msgGet = <span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">        request.get(url, <span class="function"><span class="keyword">function</span>(<span class="params">err, res, body</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) <span class="keyword">return</span> reject(err);</span><br><span class="line">                resolve(body);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>首先在查询那部分已经使用到了，因为异步的关系，文件内所有函数几乎都是在同一时间请求（高并发），所以这就导致可能有某种情况：<strong>劳资TMD等着第一个函数执行完得到个值用在第二个函数中计算，等第一的数据准备就绪的时候，第二的老人家竟然告诉我我早在1s前已经完成工作了。请问你拿什么在完成工作！</strong><br>所以就这样，在请求的数据还没到的时候，下面早早把空值传入下一步的操作中了，自然什么都没有，毕竟传值这工作比请求好完成。所以这就体现到需要同步解决的重要性了，“你必须要等你前面的人进去之后你再进去，不能插队！”</p><p>而且，虽然new了，这是一个Promise对象，但是它可以直接去到值，直接取出resolve。不过怎么说，看下面：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fi = <span class="keyword">await</span> msgGet(url);     <span class="comment">//得到msgGet(url)的值</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">await</span> msgGet(url)); <span class="comment">//输出Promise &#123;&lt;padding...&gt;&#125;</span></span><br></pre></td></tr></table></figure><p>通过变量定义之后，获取的值是可以进一步使用的，可以丢入下一个函数进行下一步工作。不需要<code>.then()</code>。但是如果要它直接打印出来就不可能了！因为上面已经说了，这是一个对象并不是一个可直接使用的数值。只有其他函数可以直接get到对象的内容，而没办法直接显示。需要像第二种的方式只能是：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fi.then(<span class="function">(<span class="params">m</span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(m);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>这样操作才能得到真正里面的东西。take it off。不过这样也就依然跌入回调地狱…<br>而到了视频地址解析那部分的时候，由于需要去请求视频地址，同样又出现了相同的情况。但是调用我是在查询的位置调用，在这里</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line">    allMsg[<span class="string">&#x27;Info&#x27;</span>] = classData;</span><br><span class="line">    allMsg[<span class="string">&#x27;code&#x27;</span>] = <span class="number">200</span>;</span><br><span class="line">    allMsg[<span class="string">&#x27;vidic&#x27;</span>] = viDic;</span><br></pre></td></tr></table></figure><p>如果我不是把视频数据向前传，而是在里面直接调用操作的话。就第一次尝试那样：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vidInfo = getVideoUrl(viDic);</span><br><span class="line">allMsg[<span class="string">&#x27;Info&#x27;</span>] = classData;</span><br><span class="line">allMsg[<span class="string">&#x27;code&#x27;</span>] = <span class="number">200</span>;</span><br><span class="line">allMsg[<span class="string">&#x27;video&#x27;</span>] = vidInfo;</span><br></pre></td></tr></table></figure><p>反正差不多吧我忘记了……到后面取值输出的时候就是这样的</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;code&quot;</span>: <span class="number">200</span>,</span><br><span class="line">  <span class="string">&quot;Info&quot;</span>: &#123; ... &#125;</span><br><span class="line">  <span class="string">&quot;video&quot;</span>: &#123;<span class="built_in">Promise</span> &#123; <span class="xml"><span class="tag">&lt;<span class="name">padding...</span>&gt;</span> &#125; &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure><p>什么都取不到玩腿毛？<br>所以后来就抖了个小聪明，把整理完的视频信息往回传，在前面<code>.then()</code>操作之后取出真实数据再去请求，再得到数据再<code>.then()</code>一次，获得所有真实数据再反馈出来。得到现在要的所有数据。最后一步 send到express。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">msg.then(<span class="function">(<span class="params">data</span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> s = &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span> (!data[<span class="string">&#x27;err&#x27;</span>]) &#123;</span><br><span class="line">        <span class="keyword">var</span> vidInfo = getVideoUrl(data[<span class="string">&#x27;vidic&#x27;</span>]);</span><br><span class="line">        vidInfo.then(<span class="function">(<span class="params">v</span>)=&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> s = &#123;&#125;;</span><br><span class="line">            s[<span class="string">&#x27;code&#x27;</span>] = data[<span class="string">&#x27;code&#x27;</span>];</span><br><span class="line">            s[<span class="string">&#x27;classID&#x27;</span>] = id;</span><br><span class="line">            s[<span class="string">&#x27;Info&#x27;</span>] = data[<span class="string">&#x27;Info&#x27;</span>];</span><br><span class="line">            s[<span class="string">&#x27;Video&#x27;</span>] = v;</span><br><span class="line">            res.send(s);</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;request finish&#x27;</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>结束。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端思考 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>自己造轮子！——Syuanpi.css</title>
+      <title>自己造轮子！—— Syuanpi.css</title>
       <link href="/blog/2017/02/13/syuanpi-css/"/>
       <url>/blog/2017/02/13/syuanpi-css/</url>
       
