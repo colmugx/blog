@@ -4,6 +4,93 @@
   
     
     <entry>
+      <title>从零开始的 Pong Game - 一起玩吧</title>
+      <link href="/blog/2021/09/04/game-pong-enhance-2/"/>
+      <url>/blog/2021/09/04/game-pong-enhance-2/</url>
+      
+        <content type="html"><![CDATA[<p>稍微数了一下，要完整完成一个游戏其实要做的有很多。这篇依然是补完一个游戏</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR">TL;DR</h2><ul><li>启动页面、得分牌</li><li>加入简单的 AI</li></ul><a id="more"></a><h2 id="完成情况">完成情况</h2><p>这把已经像一个游戏了。所以，可以一起玩吧</p><p>以下是记录本次更新一部分内容</p><h3 id="UI">UI</h3><p>目前是加了一个标题场景，但是过于没东西讲。老前端熟悉的 <code>flex</code> 布局思路一通搞完事</p><h4 id="切换场景">切换场景</h4><p>游戏是按场景(scene)来区分页面(非常前端的描述)，比如关卡类游戏一般会做很多 level 的场景。不同的是这可没有所谓的路由，而是直接切换(change)</p><p>这里使用的是：获取场景树，得到实例，切换场景(change_scene)</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get_tree()-&gt;change_scene(path);</span><br></pre></td></tr></table></figure><p>这个项目里的实现是：把这种按钮直接做成「组件」，暴露场景接口。在标题场景 <code>connect</code> 所有这个类型的事件，用统一事件处理跳转。这样就封装了跳转场景，方便以后处理设置界面啥的</p><h4 id="记分牌动画">记分牌动画</h4><p>有一个控件 <code>AnimationPlayer</code> ，用来控制能访问到的节点的动画，例如运动、变形。如果使用过 <code>flash</code> 那是相当熟悉 —— 关键帧打起来</p><h3 id="加入-AI">加入 AI</h3><p>周伯通虽然也行，但是自己玩还是得有个「对手」</p><p>现在看到 AI 人就不知觉紧张起来，感觉是个非常难的东西。其实 AI 就只是「人工智能」，其目的就是「假装是个人」，那游戏 AI 就是「假装有个陪你打游戏的人」。只不过现在的「机器学习」确实给游戏 AI 也带来了不少想象力 —— 他们的操作越来越像人的思维方式了</p><p>多智能还得看开发者。例如中小学机器人编程比赛中的经典项目足球项目和灭火项目，</p><blockquote><p>足球项目：最简单的逻辑就是通过传感器（指南针）判断两边方向，超声波测距，忘记什么传感器用来找球。摸到球之后直接把球往对方门里「撞」，完事。</p></blockquote><blockquote><p>灭火项目：都带着指南针和热力传感，主要还是看谁的寻路比较nb</p></blockquote><p>游戏 AI 很早就有，最经典的游戏 AI 还属南梦宫的吃豆人(pacman)<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>（对于我来说一样属于游戏设计必修课，甚至机器学习也可以）。</p><blockquote><p>一共四个干扰怪物，逻辑都不相同</p><p>红色 blinky：追着豆子，通过寻路算法找距离最近的路线<br>粉色 pinky：追豆子前方第四个格子，通过寻路算法找距离最近的路线。如果向上移动，则是左上方四个格子<br>青色 lnky：blinky 与豆子各自前方射线的交点，并两倍延长的点<br>橙色 clyde：追豆子到方圆 8 格内就会散开（纯气氛组）</p><p>四个单个逻辑不复杂且工作量很小的 AI，组合成一个看似一直在围堵玩家的敌方小队。这就是最经典的地方</p></blockquote><p>这篇文章再开个坑：我要写一篇我对游戏 AI 的理解。例如游戏设计中，一些非常难的 gameplay 可能会设计出让 AI 「放水」，让玩家以为 AI 真的翻车了，以此来鼓励玩家</p><p>好了，这一部分的重点本应该是这个游戏的 AI，目前的设计是： <strong>在自己的 y 与球的 y 距离大于 25 时，追球。25 差不多是板子的 1/4。</strong> 逻辑就这，没了</p><p>但别小看这简单的逻辑，在目前没有什么骚东西的环境下，只要没有什么花里胡哨的操作（例如拿板边去敲球）几乎没有胜利的机会。而现在这个环境玩骚的只会把自己的分骚没（比如我）</p><h3 id="冷却与重置">冷却与重置</h3><p>当球落某方门后，球会重置到游戏中点，没有操作，直接关闭了惯性和直接 set position</p><p>不过有一个小设计：败方接球。如果某方上一回合输了，这一回合由该方接首发球</p><p>所以，虽然是可以玩了，但是还是缺东西，比如很多关于游戏规则的完善</p><h2 id="下一步">下一步</h2><ul><li>发球 y 随机：目前发球的 y 是固定的，直接去接球点等球多没意思啊</li><li>随机首发球：第一球现在都发给左方，或许应该随机</li><li>胜利规则：现在这游戏一开就没边了…</li><li>暂停与结束界面</li><li>声音</li></ul><p>游戏补完之后，往后的更新就越来越慢了，因为想法越骚，实现也会越来越难</p><h2 id="Link">Link</h2><ul><li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/82567889">游戏AI入门及AI优化</a></li><li><a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/stable/classes/class_animationplayer.html">AnimationPlayer</a></li></ul><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27177424">现代游戏AI的鼻祖——聊聊你所不知道的《吃豆人》</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> godot </tag>
+            
+            <tag> cpp </tag>
+            
+            <tag> pong </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>从零开始的 Pong Game - 发布</title>
+      <link href="/blog/2021/09/02/game-pong-enhance-1/"/>
+      <url>/blog/2021/09/02/game-pong-enhance-1/</url>
+      
+        <content type="html"><![CDATA[<p>其实游戏已经做很远了，为了真实性删了很多添加的东西…</p><p>本来可能已经开始描述第一个版本了，万万没想到发布到 web 时发生问题：编译产物报错</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR">TL;DR</h2><ul><li>完成基本的击打、胜利条件、球的恢复</li><li>编译与发布</li></ul><a id="more"></a><h2 id="完成情况">完成情况</h2><p>基本的 gameplay 已经完成 —— 两块板子一个球，板子的后面是各自的「门」。</p><p>门选择 <code>Area2D</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，原因是这个控件专门控制物理状态与检查物理状态；墙壁使用<code>StaticBody2D</code></p><p>板子和球目前均使用 <code>KinematicBody2D</code>，因为可以方便的模拟物理状态，反弹完全不需要代码描述。但板子可能应该换成<code>RigidBody2D</code>，这样可以模拟更多的真实物理，例如摩擦力，受力。不过目前需要求证：控制端使用 <code>RigidBody</code> 是否合理</p><p>完全没什么好讲的，非常简单的实现</p><h2 id="编译与发布">编译与发布</h2><p>由于 <code>native</code> 的关系，运行时会把 cpp 编译，并编译成动态链接库。例如 osx 使用 <code>.dylib</code>，那么 web 跟原生相关的肯定是 <code>.wasm</code> 。官方提供了原生端的案例<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，而开发时也只编译了 osx 版本。</p><p>直到要验证发布到 github pages 时，出大问题，浏览器只显示 <code>abort(undefined)</code></p><h3 id="目前不能使用最新的-emscripten-编译你的-wasm">目前不能使用最新的 emscripten 编译你的 wasm</h3><p>经历各种尝试，例如直接从源码编译新的 template，但编译时也频出问题，甚至 debug 无法成功编译，接着进入无尽改编译参数等各种操作……</p><p>直到看到这个 issue <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p><p>因为之前一直使用的 <code>emscripten</code> 版本已经是 26，所以猜<strong>是不是跟版本有关系，于是换成 17，成了</strong></p><p>于是有另一个猜想：<strong>官方发布的模板是否因为也使用 17 的版本发布，会导致 dll 对应不上。业务代码必须同样使用 17 编译代码才可以使用？</strong></p><h3 id="交给-github-action">交给 github action</h3><p>因为刚刚的 issue，发现这个作者对 godot 发布已经了然于胸，最后发现他提供了一个 ci 配置<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>，于是参考这个配置写了一个工作流，现在可以把整个发布路程交到 github 了</p><h3 id="记得提交-export-presets">记得提交 export_presets</h3><p>可能可以发现，前面大部分 action 都是失败的</p><p>如果选择了 github 的 .gitignore 模板，这个文件默认会被忽略。但缺少这个文件 ci 无法工作 —— 获取不到发布配置</p><p>so，记得提交，接着等待一切结束。顺带一提，github action 的配置应该不高，编译 godot-cpp 属实膀胱局</p><p>下一篇应该讲有完整 UI 的第一个版本，结束</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html">使用 Area2D</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/plugins/gdnative/gdnative-cpp-example.html">GDNative C++示例</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li><li id="fn3" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/godotengine/godot-cpp/issues/554">Building for HTML5 stopped working for emsdk 2.0.18+</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p></li><li id="fn4" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/2shady4u/godot-cpp-ci">2shady4u/godot-cpp-ci </a> <a href="#fnref4" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> godot </tag>
+            
+            <tag> cpp </tag>
+            
+            <tag> pong </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>从零开始的 Pong Game - 介绍</title>
+      <link href="/blog/2021/08/29/game-pong-enhance-0/"/>
+      <url>/blog/2021/08/29/game-pong-enhance-0/</url>
+      
+        <content type="html"><![CDATA[<p>做一个简单的项目介绍：</p><p>使用 <code>godot engine</code> 从零开始的 <code>pong game</code> 开发。开发会尽量保持简单，但希望不缺挑战</p><p>实现 <code>pong</code> 不是目的，作为我单方面宣布的「游戏开发中的 hello world」，完成它其实非常简单。所以我想做的：<strong>不断给游戏加入新东西，在显得合理的基础上，把能做的都加进去</strong></p><p>这个项目应该会一直进化，从越来越多的内容，到可能更合理的代码组织方式，一直到我认为的上限。可以是我做不来了，或者是达到游戏上限，毕竟这是一个雅达利时期的神作</p><p>所以项目将会使用：</p><ul><li>godot 3 (gdnative)</li><li><strong>C++</strong></li><li>photopea（用来弄点素材）</li><li>garageband / logic（声音）</li></ul><a id="more"></a><h2 id="你-TM-怎么想的">你 TM 怎么想的</h2><p>「在岸上永远学不会游泳」，这是在当时听到的兄弟对我说的一句话。<s>希望他不是因为嫌我菜让我爬而说出来的话</s></p><p>也为了记录，「如果单就以 pong 作为母版，到底能做到什么样子」，所以本身也是一个兴趣导向产物</p><p>这个系列还是不定期更新，甚至可能随时流产。流产的原因只有一个：搞不出来了…</p><p>就这样。下一篇先写一切的基础：如何让 pong 运行起来</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> godot </tag>
+            
+            <tag> cpp </tag>
+            
+            <tag> pong </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>flutter desktop 能不能跨平台多窗口</title>
       <link href="/blog/2021/06/17/flutter-tauri/"/>
       <url>/blog/2021/06/17/flutter-tauri/</url>

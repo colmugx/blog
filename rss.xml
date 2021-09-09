@@ -15,8 +15,112 @@
     <atom:link href="https://colmugx.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Co1MugX Blog</description>
-    <pubDate>Sun, 20 Jun 2021 08:04:46 GMT</pubDate>
+    <pubDate>Thu, 09 Sep 2021 16:19:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>从零开始的 Pong Game - 一起玩吧</title>
+      <link>https://colmugx.github.io/blog/2021/09/04/game-pong-enhance-2/</link>
+      <guid>https://colmugx.github.io/blog/2021/09/04/game-pong-enhance-2/</guid>
+      <pubDate>Fri, 03 Sep 2021 17:52:52 GMT</pubDate>
+      
+      <description>&lt;p&gt;稍微数了一下，要完整完成一个游戏其实要做的有很多。这篇依然是补完一个游戏&lt;/p&gt;
+&lt;p&gt;项目 &lt;a href=&quot;https://colmugx.github.io/godot-pong&quot;&gt;体验地址&lt;/a&gt;，&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot; href=&quot;https://github.com/colmugx/godot-pong&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;TL-DR&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;启动页面、得分牌&lt;/li&gt;
+&lt;li&gt;加入简单的 AI&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>稍微数了一下，要完整完成一个游戏其实要做的有很多。这篇依然是补完一个游戏</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR">TL;DR</h2><ul><li>启动页面、得分牌</li><li>加入简单的 AI</li></ul><a id="more"></a><h2 id="完成情况">完成情况</h2><p>这把已经像一个游戏了。所以，可以一起玩吧</p><p>以下是记录本次更新一部分内容</p><h3 id="UI">UI</h3><p>目前是加了一个标题场景，但是过于没东西讲。老前端熟悉的 <code>flex</code> 布局思路一通搞完事</p><h4 id="切换场景">切换场景</h4><p>游戏是按场景(scene)来区分页面(非常前端的描述)，比如关卡类游戏一般会做很多 level 的场景。不同的是这可没有所谓的路由，而是直接切换(change)</p><p>这里使用的是：获取场景树，得到实例，切换场景(change_scene)</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get_tree()-&gt;change_scene(path);</span><br></pre></td></tr></table></figure><p>这个项目里的实现是：把这种按钮直接做成「组件」，暴露场景接口。在标题场景 <code>connect</code> 所有这个类型的事件，用统一事件处理跳转。这样就封装了跳转场景，方便以后处理设置界面啥的</p><h4 id="记分牌动画">记分牌动画</h4><p>有一个控件 <code>AnimationPlayer</code> ，用来控制能访问到的节点的动画，例如运动、变形。如果使用过 <code>flash</code> 那是相当熟悉 —— 关键帧打起来</p><h3 id="加入-AI">加入 AI</h3><p>周伯通虽然也行，但是自己玩还是得有个「对手」</p><p>现在看到 AI 人就不知觉紧张起来，感觉是个非常难的东西。其实 AI 就只是「人工智能」，其目的就是「假装是个人」，那游戏 AI 就是「假装有个陪你打游戏的人」。只不过现在的「机器学习」确实给游戏 AI 也带来了不少想象力 —— 他们的操作越来越像人的思维方式了</p><p>多智能还得看开发者。例如中小学机器人编程比赛中的经典项目足球项目和灭火项目，</p><blockquote><p>足球项目：最简单的逻辑就是通过传感器（指南针）判断两边方向，超声波测距，忘记什么传感器用来找球。摸到球之后直接把球往对方门里「撞」，完事。</p></blockquote><blockquote><p>灭火项目：都带着指南针和热力传感，主要还是看谁的寻路比较nb</p></blockquote><p>游戏 AI 很早就有，最经典的游戏 AI 还属南梦宫的吃豆人(pacman)<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>（对于我来说一样属于游戏设计必修课，甚至机器学习也可以）。</p><blockquote><p>一共四个干扰怪物，逻辑都不相同</p><p>红色 blinky：追着豆子，通过寻路算法找距离最近的路线<br>粉色 pinky：追豆子前方第四个格子，通过寻路算法找距离最近的路线。如果向上移动，则是左上方四个格子<br>青色 lnky：blinky 与豆子各自前方射线的交点，并两倍延长的点<br>橙色 clyde：追豆子到方圆 8 格内就会散开（纯气氛组）</p><p>四个单个逻辑不复杂且工作量很小的 AI，组合成一个看似一直在围堵玩家的敌方小队。这就是最经典的地方</p></blockquote><p>这篇文章再开个坑：我要写一篇我对游戏 AI 的理解。例如游戏设计中，一些非常难的 gameplay 可能会设计出让 AI 「放水」，让玩家以为 AI 真的翻车了，以此来鼓励玩家</p><p>好了，这一部分的重点本应该是这个游戏的 AI，目前的设计是： <strong>在自己的 y 与球的 y 距离大于 25 时，追球。25 差不多是板子的 1/4。</strong> 逻辑就这，没了</p><p>但别小看这简单的逻辑，在目前没有什么骚东西的环境下，只要没有什么花里胡哨的操作（例如拿板边去敲球）几乎没有胜利的机会。而现在这个环境玩骚的只会把自己的分骚没（比如我）</p><h3 id="冷却与重置">冷却与重置</h3><p>当球落某方门后，球会重置到游戏中点，没有操作，直接关闭了惯性和直接 set position</p><p>不过有一个小设计：败方接球。如果某方上一回合输了，这一回合由该方接首发球</p><p>所以，虽然是可以玩了，但是还是缺东西，比如很多关于游戏规则的完善</p><h2 id="下一步">下一步</h2><ul><li>发球 y 随机：目前发球的 y 是固定的，直接去接球点等球多没意思啊</li><li>随机首发球：第一球现在都发给左方，或许应该随机</li><li>胜利规则：现在这游戏一开就没边了…</li><li>暂停与结束界面</li><li>声音</li></ul><p>游戏补完之后，往后的更新就越来越慢了，因为想法越骚，实现也会越来越难</p><h2 id="Link">Link</h2><ul><li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/82567889">游戏AI入门及AI优化</a></li><li><a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/stable/classes/class_animationplayer.html">AnimationPlayer</a></li></ul><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27177424">现代游戏AI的鼻祖——聊聊你所不知道的《吃豆人》</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
+      
+      
+      <category domain="https://colmugx.github.io/blog/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</category>
+      
+      
+      <category domain="https://colmugx.github.io/blog/tags/godot/">godot</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/cpp/">cpp</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/pong/">pong</category>
+      
+      
+      <comments>https://colmugx.github.io/blog/2021/09/04/game-pong-enhance-2/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>从零开始的 Pong Game - 发布</title>
+      <link>https://colmugx.github.io/blog/2021/09/02/game-pong-enhance-1/</link>
+      <guid>https://colmugx.github.io/blog/2021/09/02/game-pong-enhance-1/</guid>
+      <pubDate>Thu, 02 Sep 2021 15:55:09 GMT</pubDate>
+      
+      <description>&lt;p&gt;其实游戏已经做很远了，为了真实性删了很多添加的东西…&lt;/p&gt;
+&lt;p&gt;本来可能已经开始描述第一个版本了，万万没想到发布到 web 时发生问题：编译产物报错&lt;/p&gt;
+&lt;p&gt;项目 &lt;a href=&quot;https://colmugx.github.io/godot-pong&quot;&gt;体验地址&lt;/a&gt;，&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot; href=&quot;https://github.com/colmugx/godot-pong&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;TL-DR&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;完成基本的击打、胜利条件、球的恢复&lt;/li&gt;
+&lt;li&gt;编译与发布&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>其实游戏已经做很远了，为了真实性删了很多添加的东西…</p><p>本来可能已经开始描述第一个版本了，万万没想到发布到 web 时发生问题：编译产物报错</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR">TL;DR</h2><ul><li>完成基本的击打、胜利条件、球的恢复</li><li>编译与发布</li></ul><a id="more"></a><h2 id="完成情况">完成情况</h2><p>基本的 gameplay 已经完成 —— 两块板子一个球，板子的后面是各自的「门」。</p><p>门选择 <code>Area2D</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，原因是这个控件专门控制物理状态与检查物理状态；墙壁使用<code>StaticBody2D</code></p><p>板子和球目前均使用 <code>KinematicBody2D</code>，因为可以方便的模拟物理状态，反弹完全不需要代码描述。但板子可能应该换成<code>RigidBody2D</code>，这样可以模拟更多的真实物理，例如摩擦力，受力。不过目前需要求证：控制端使用 <code>RigidBody</code> 是否合理</p><p>完全没什么好讲的，非常简单的实现</p><h2 id="编译与发布">编译与发布</h2><p>由于 <code>native</code> 的关系，运行时会把 cpp 编译，并编译成动态链接库。例如 osx 使用 <code>.dylib</code>，那么 web 跟原生相关的肯定是 <code>.wasm</code> 。官方提供了原生端的案例<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，而开发时也只编译了 osx 版本。</p><p>直到要验证发布到 github pages 时，出大问题，浏览器只显示 <code>abort(undefined)</code></p><h3 id="目前不能使用最新的-emscripten-编译你的-wasm">目前不能使用最新的 emscripten 编译你的 wasm</h3><p>经历各种尝试，例如直接从源码编译新的 template，但编译时也频出问题，甚至 debug 无法成功编译，接着进入无尽改编译参数等各种操作……</p><p>直到看到这个 issue <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p><p>因为之前一直使用的 <code>emscripten</code> 版本已经是 26，所以猜<strong>是不是跟版本有关系，于是换成 17，成了</strong></p><p>于是有另一个猜想：<strong>官方发布的模板是否因为也使用 17 的版本发布，会导致 dll 对应不上。业务代码必须同样使用 17 编译代码才可以使用？</strong></p><h3 id="交给-github-action">交给 github action</h3><p>因为刚刚的 issue，发现这个作者对 godot 发布已经了然于胸，最后发现他提供了一个 ci 配置<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>，于是参考这个配置写了一个工作流，现在可以把整个发布路程交到 github 了</p><h3 id="记得提交-export-presets">记得提交 export_presets</h3><p>可能可以发现，前面大部分 action 都是失败的</p><p>如果选择了 github 的 .gitignore 模板，这个文件默认会被忽略。但缺少这个文件 ci 无法工作 —— 获取不到发布配置</p><p>so，记得提交，接着等待一切结束。顺带一提，github action 的配置应该不高，编译 godot-cpp 属实膀胱局</p><p>下一篇应该讲有完整 UI 的第一个版本，结束</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html">使用 Area2D</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/plugins/gdnative/gdnative-cpp-example.html">GDNative C++示例</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li><li id="fn3" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/godotengine/godot-cpp/issues/554">Building for HTML5 stopped working for emsdk 2.0.18+</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p></li><li id="fn4" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/2shady4u/godot-cpp-ci">2shady4u/godot-cpp-ci </a> <a href="#fnref4" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
+      
+      
+      <category domain="https://colmugx.github.io/blog/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</category>
+      
+      
+      <category domain="https://colmugx.github.io/blog/tags/godot/">godot</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/cpp/">cpp</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/pong/">pong</category>
+      
+      
+      <comments>https://colmugx.github.io/blog/2021/09/02/game-pong-enhance-1/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>从零开始的 Pong Game - 介绍</title>
+      <link>https://colmugx.github.io/blog/2021/08/29/game-pong-enhance-0/</link>
+      <guid>https://colmugx.github.io/blog/2021/08/29/game-pong-enhance-0/</guid>
+      <pubDate>Sun, 29 Aug 2021 14:10:49 GMT</pubDate>
+      
+      <description>&lt;p&gt;做一个简单的项目介绍：&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;godot engine&lt;/code&gt; 从零开始的 &lt;code&gt;pong game&lt;/code&gt; 开发。开发会尽量保持简单，但希望不缺挑战&lt;/p&gt;
+&lt;p&gt;实现 &lt;code&gt;pong&lt;/code&gt; 不是目的，作为我单方面宣布的「游戏开发中的 hello world」，完成它其实非常简单。所以我想做的：&lt;strong&gt;不断给游戏加入新东西，在显得合理的基础上，把能做的都加进去&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个项目应该会一直进化，从越来越多的内容，到可能更合理的代码组织方式，一直到我认为的上限。可以是我做不来了，或者是达到游戏上限，毕竟这是一个雅达利时期的神作&lt;/p&gt;
+&lt;p&gt;所以项目将会使用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;godot 3 (gdnative)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C++&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;photopea（用来弄点素材）&lt;/li&gt;
+&lt;li&gt;garageband / logic（声音）&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>做一个简单的项目介绍：</p><p>使用 <code>godot engine</code> 从零开始的 <code>pong game</code> 开发。开发会尽量保持简单，但希望不缺挑战</p><p>实现 <code>pong</code> 不是目的，作为我单方面宣布的「游戏开发中的 hello world」，完成它其实非常简单。所以我想做的：<strong>不断给游戏加入新东西，在显得合理的基础上，把能做的都加进去</strong></p><p>这个项目应该会一直进化，从越来越多的内容，到可能更合理的代码组织方式，一直到我认为的上限。可以是我做不来了，或者是达到游戏上限，毕竟这是一个雅达利时期的神作</p><p>所以项目将会使用：</p><ul><li>godot 3 (gdnative)</li><li><strong>C++</strong></li><li>photopea（用来弄点素材）</li><li>garageband / logic（声音）</li></ul><a id="more"></a><h2 id="你-TM-怎么想的">你 TM 怎么想的</h2><p>「在岸上永远学不会游泳」，这是在当时听到的兄弟对我说的一句话。<s>希望他不是因为嫌我菜让我爬而说出来的话</s></p><p>也为了记录，「如果单就以 pong 作为母版，到底能做到什么样子」，所以本身也是一个兴趣导向产物</p><p>这个系列还是不定期更新，甚至可能随时流产。流产的原因只有一个：搞不出来了…</p><p>就这样。下一篇先写一切的基础：如何让 pong 运行起来</p>]]></content:encoded>
+      
+      
+      <category domain="https://colmugx.github.io/blog/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</category>
+      
+      
+      <category domain="https://colmugx.github.io/blog/tags/godot/">godot</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/cpp/">cpp</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/pong/">pong</category>
+      
+      
+      <comments>https://colmugx.github.io/blog/2021/08/29/game-pong-enhance-0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>flutter desktop 能不能跨平台多窗口</title>
@@ -591,115 +695,6 @@ rust 社区中关注了 &lt;code&gt;rocket&lt;/code&gt; 一段时间，后面发
       
       
       <comments>https://colmugx.github.io/blog/2019/04/20/why-vue-proxy/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>关于 Nlvi 「添加到桌面」</title>
-      <link>https://colmugx.github.io/blog/2019/04/17/about-nlvi-pwa/</link>
-      <guid>https://colmugx.github.io/blog/2019/04/17/about-nlvi-pwa/</guid>
-      <pubDate>Wed, 17 Apr 2019 09:36:28 GMT</pubDate>
-      
-      <description>&lt;p&gt;其实这个功能早在 2.x 版本就加入了，那时候对 PWA 并没有什么概念。&lt;s&gt;好想换 iPad Mini (new)&lt;/s&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/blog/Image/nlvi-ios-desktop.gif&quot; alt=&quot;nlvi-ios-desktop&quot;&gt;&lt;/p&gt;
-&lt;p&gt;目前 3.x 只改了启动图，适配了 iPad 横屏和 iPhone 全面屏（普通屏和plus后续加）。之前看到苹果对 PWA 持拒绝态度我是震惊的，你 tm 早就给 safari 加入了这个功能，也有相关&lt;code&gt;meta&lt;/code&gt;配置（包括”识别为&lt;code&gt;WebApp&lt;/code&gt;“），然后你告诉我这东西不是 PWA？&lt;/p&gt;
-&lt;p&gt;本来确实想支持 PWA 的，想到除了要 &lt;code&gt;manifest.json&lt;/code&gt;，还要搞定对应生成 &lt;code&gt;service worker&lt;/code&gt;，使用不是很友好，所以取消计划。这部分添加功能就是一个尝试的甜点，所以也没有拿出来说。目前 3.x 开启 &lt;code&gt;pjax&lt;/code&gt; 然后添加到桌面，阅读体验还是挺好的。&lt;/p&gt;
-&lt;p&gt;所以这次打算讲讲「苹果式网页应用安装」，其实挺简单的。&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>其实这个功能早在 2.x 版本就加入了，那时候对 PWA 并没有什么概念。<s>好想换 iPad Mini (new)</s></p><p><img src="/blog/Image/nlvi-ios-desktop.gif" alt="nlvi-ios-desktop"></p><p>目前 3.x 只改了启动图，适配了 iPad 横屏和 iPhone 全面屏（普通屏和plus后续加）。之前看到苹果对 PWA 持拒绝态度我是震惊的，你 tm 早就给 safari 加入了这个功能，也有相关<code>meta</code>配置（包括”识别为<code>WebApp</code>“），然后你告诉我这东西不是 PWA？</p><p>本来确实想支持 PWA 的，想到除了要 <code>manifest.json</code>，还要搞定对应生成 <code>service worker</code>，使用不是很友好，所以取消计划。这部分添加功能就是一个尝试的甜点，所以也没有拿出来说。目前 3.x 开启 <code>pjax</code> 然后添加到桌面，阅读体验还是挺好的。</p><p>所以这次打算讲讲「苹果式网页应用安装」，其实挺简单的。</p><a id="more"></a><h2 id="meta">meta</h2><p>这里没有列出所有关于 safari 支持的 meta，只针对这个功能部分。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-touch-fullscreen&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yes&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-capable&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yes&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-title&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Colmugx&#x27;s Blog&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="attr">content</span>=<span class="string">&quot;default&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;apple-touch-icon&quot;</span>  <span class="attr">sizes</span>=<span class="string">&quot;72x72&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;icon.ico&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;apple-touch-icon-precomposed&quot;</span>  <span class="attr">sizes</span>=<span class="string">&quot;72x72&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;icon.ico&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;apple-touch-startup-image&quot;</span> <span class="attr">media</span>=<span class="string">&quot;(device-width: 375px)&quot;</span> <span class="attr">href</span>=<span class="string">&quot;apple-launch-1125x2436.png&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;apple-touch-startup-image&quot;</span> <span class="attr">media</span>=<span class="string">&quot;(orientation: landscape)&quot;</span> <span class="attr">href</span>=<span class="string">&quot;apple-touch-startup-image-2048x1496.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><p>从上到下分别是：</p><ul><li>添加到主屏幕后，是否全屏显示</li><li>是否显示 safari 菜单</li><li>应用默认名称（在添加的时候可以修改）</li><li>打开时，顶上状态栏应该呈现什么颜色（白色，黑色，透明）</li><li>设置 icon (72x72, 114x114)，图标在「书签」也可适用</li><li>设置启动画面（这里只设置了手机与平板横置）</li></ul><h2 id="apple-touch-startup-image">apple-touch-startup-image</h2><p>其他的没什么坑点，只是<code>apple-touch-startup-image</code>会复杂一些。它分成很多分辨率，设置不清楚的话就不会显示。而且它不能像图标一样设置<code>size</code>。只能用<code>media</code>一行一行写。</p><p>比如 iPad，设置倒是不需要跟手机一样那么多图片，只需要准备一张垂直一张水平。垂直 <code>768x1024</code>，水平<code>748x1024</code>，水平图也需要摆成垂直的，也就是<code>1024x748</code>，当然内容也是横直，相当于顺时针 90°。接着就考虑一下屏幕用的是二倍图还是三倍图了。</p><p>参考文章：<a target="_blank" rel="noopener" href="https://medium.com/appscope/adding-custom-ios-splash-screens-to-your-progressive-web-app-41a9b18bdca3">Adding Custom iOS Splash Screens To Your Progressive Web App</a></p>]]></content:encoded>
-      
-      
-      <category domain="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E5%AE%9E%E8%B7%B5/">前端实践</category>
-      
-      
-      <category domain="https://colmugx.github.io/blog/tags/Nlvi/">Nlvi</category>
-      
-      <category domain="https://colmugx.github.io/blog/tags/PWA/">PWA</category>
-      
-      
-      <comments>https://colmugx.github.io/blog/2019/04/17/about-nlvi-pwa/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>我今天给 let 安排了</title>
-      <link>https://colmugx.github.io/blog/2019/03/27/you-dont-know-let/</link>
-      <guid>https://colmugx.github.io/blog/2019/03/27/you-dont-know-let/</guid>
-      <pubDate>Wed, 27 Mar 2019 10:13:29 GMT</pubDate>
-      
-      <description>&lt;h3 id=&quot;Round-1&quot;&gt;Round 1&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;- 我现在把所有东西都注释掉，改成这样&lt;br&gt;
-function a() {&lt;br&gt;
-return inner;&lt;br&gt;
-let inner;&lt;br&gt;
-}&lt;br&gt;
-返回什么？&lt;/p&gt;
-&lt;p&gt;- 那就应该 undefined 了，反正后面不执行&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;自信的不行，出了门掏出全世界最牛逼的千元机&lt;strong&gt;坚果 Pro 2S&lt;/strong&gt;，验证了一下。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;inner is not defined&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;确实是不执行，但好像不是 &lt;code&gt;undefined&lt;/code&gt; 啊╭(*ﾟДﾟ*)╮&lt;/p&gt;
-&lt;h3 id=&quot;Round-2&quot;&gt;Round 2&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;- 如果改成这样呢&lt;br&gt;
-function a() {&lt;br&gt;
-function inner() {}&lt;br&gt;
-return inner;&lt;br&gt;
-let inner;&lt;br&gt;
-}&lt;br&gt;
-返回什么？&lt;/p&gt;
-&lt;p&gt;- 返回方法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;自信的不行，同样用全世界最牛逼的千元机&lt;strong&gt;坚果 Pro 2S&lt;/strong&gt;，验证了一下。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Identifier ‘inner’ has already been declared&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;(ﾟДﾟ≡ﾟдﾟ)!? 你在返回你🐴呢？&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h3 id="Round-1">Round 1</h3><blockquote><p>- 我现在把所有东西都注释掉，改成这样<br>function a() {<br>return inner;<br>let inner;<br>}<br>返回什么？</p><p>- 那就应该 undefined 了，反正后面不执行</p></blockquote><p>自信的不行，出了门掏出全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p><blockquote><p>inner is not defined</p></blockquote><p>确实是不执行，但好像不是 <code>undefined</code> 啊╭(*ﾟДﾟ*)╮</p><h3 id="Round-2">Round 2</h3><blockquote><p>- 如果改成这样呢<br>function a() {<br>function inner() {}<br>return inner;<br>let inner;<br>}<br>返回什么？</p><p>- 返回方法</p></blockquote><p>自信的不行，同样用全世界最牛逼的千元机<strong>坚果 Pro 2S</strong>，验证了一下。</p><blockquote><p>Identifier ‘inner’ has already been declared</p></blockquote><p>(ﾟДﾟ≡ﾟдﾟ)!? 你在返回你🐴呢？</p><a id="more"></a><h2 id="Why">Why?</h2><p>原本我以为只有 <code>var</code> 会变量提升，实际上错了，<code>var/let/const</code>都会。</p><p><code>var</code> 和 <code>let</code> 在某种时候是相似的，他们都会提升，但 <code>let</code> 少了初始化的过程。MDN 对 <code>let</code> 死区是这么解释的</p><blockquote><p>在 ECMAScript 2015 中，let 绑定不受变量提升的约束，这意味着 let  声明不会被提升到当前执行上下文的顶部。在块中的变量初始化之前，引用它将会导致 ReferenceError（而使用 var 声明变量则恰恰相反，该变量的值是 undefined ）。这个变量处于从块开始到 let 初始化处理的”暂存死区“之中。 —— MDN</p></blockquote><p>暂存死区又有这么个说法，用一个代码块解释一下</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  a = <span class="string">&#x27;caonima&#x27;</span> <span class="comment">// 下面有 let，a 直接被该块锁定，这里报错</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> a <span class="comment">// 到这里才完成初始化，变量开始正常使用，但变量早已提升</span></span><br><span class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// 这里不是 caonima 而是 undefined</span></span><br><span class="line"></span><br><span class="line">  a = <span class="string">&#x27;woshinidie&#x27;</span></span><br><span class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// woshinidie</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><a target="_blank" rel="noopener" href="https://github.com/getify/You-Dont-Know-JS/issues/767">You-Dont-Know-JS#767</a> 讨论了这个问题, creeperyang 总结了四点</p><blockquote><ol><li>Hoisting includes both declare and initialize.</li><li>Only initialized variable can be used in a scope.</li><li>var do both declare and initialize, the two cannot be split for var.</li><li>let do firstly declare in the top of the scope, and do initialize when encounter the let xxx statements.<br>—— @creeperyang</li></ol></blockquote><p>另外，方应杭在知乎专栏的文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28140450">《我用了两个月的时间才理解 let》</a>也总结出</p><blockquote><ol><li>let 的「创建」过程被提升了，但是初始化没有提升。</li><li>var 的「创建」和「初始化」都被提升了。</li><li>function 的「创建」「初始化」和「赋值」都被提升了。<br>—— <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/zhihusucks">@方应杭</a></li></ol></blockquote><p>理论上 <code>const</code> 应该是 <code>let</code> 的不可修改版本，所以应该是类似的。但也仅限提升原理相同，因为 <code>const</code> 只能初始化时赋值一次。</p><p>不过，阮一峰的《ECMAScript 6 入门》是什么意思？在 let 有单独一小节讲 <a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/let#%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87">不存在变量提升</a>，虽然后面解释了暂时性死区，但……</p><p>总结：被安排明白了。根据 @Ahonn 所说，这个问题在高程有讲过，书读少了读少了</p><p>（最后感谢所有被引用的文章和作者，谢谢。）</p>]]></content:encoded>
-      
-      
-      <category domain="https://colmugx.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E6%80%9D%E8%80%83/">前端思考</category>
-      
-      
-      <category domain="https://colmugx.github.io/blog/tags/JavaScript/">JavaScript</category>
-      
-      
-      <comments>https://colmugx.github.io/blog/2019/03/27/you-dont-know-let/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>最后的 Nlvi</title>
-      <link>https://colmugx.github.io/blog/2019/03/25/bye-nlvi/</link>
-      <guid>https://colmugx.github.io/blog/2019/03/25/bye-nlvi/</guid>
-      <pubDate>Mon, 25 Mar 2019 06:34:53 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;code&gt;Nlvi&lt;/code&gt; 可以说起源于正准备上班和刚上班工作不饱和(大雾。为了练习自己对语义化 HTML 理解和 CSS 的渐进式学习而诞生的，到现在已经 2 年了。&lt;/p&gt;
-&lt;p&gt;那个时候还用 iPad 画草图然后慢慢写起来，而且当时编程能力确实还挺弱，hexo 很多都弄不清楚。现在对 hexo 就熟悉很多了，设计稿也从随便画画变成了用 sketch，但也是杀鸡用牛刀。&lt;/p&gt;
-&lt;p&gt;过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想迭代了。&lt;/p&gt;
-&lt;p&gt;为什么？因为一旦工作太忙没时间，又想到这个东西，好累啊……&lt;/p&gt;
-&lt;p&gt;但，我的意思是，&lt;strong&gt;我不想维护 hexo 版本的 Nlvi 了&lt;/strong&gt;，我的意思是，诶嘿嘿嘿嘿嘿！&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p><code>Nlvi</code> 可以说起源于正准备上班和刚上班工作不饱和(大雾。为了练习自己对语义化 HTML 理解和 CSS 的渐进式学习而诞生的，到现在已经 2 年了。</p><p>那个时候还用 iPad 画草图然后慢慢写起来，而且当时编程能力确实还挺弱，hexo 很多都弄不清楚。现在对 hexo 就熟悉很多了，设计稿也从随便画画变成了用 sketch，但也是杀鸡用牛刀。</p><p>过程中也是各种骚想法，比如用 Vue/React 改写啊；脱离 jQuery 啊；用 pjax 啊；用更复杂的动画啊……不过我现在想的是：新版本(我博客正在用的半成品)做完之后，就不想迭代了。</p><p>为什么？因为一旦工作太忙没时间，又想到这个东西，好累啊……</p><p>但，我的意思是，<strong>我不想维护 hexo 版本的 Nlvi 了</strong>，我的意思是，诶嘿嘿嘿嘿嘿！</p><a id="more"></a><p>所以 3.0 到 4.0 大概的改动会是：</p><ul><li>根据我对统一风格的想法，(又)变动部分设计风格</li><li>根据我对统一风格的想法，调整部分部件展示形式</li><li>根据我对统一风格的想法，对颜色变量重新管理</li><li>去掉以前的标签云，重写一个</li><li>去掉以前的搜索框，重写一个</li><li>变动部分不成熟动画，改动动画曲线</li><li><strong>加入渐变色的设定！(Maybe)</strong></li></ul>]]></content:encoded>
-      
-      
-      <category domain="https://colmugx.github.io/blog/categories/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/">日常吐槽</category>
-      
-      
-      <category domain="https://colmugx.github.io/blog/tags/Nlvi/">Nlvi</category>
-      
-      
-      <comments>https://colmugx.github.io/blog/2019/03/25/bye-nlvi/#disqus_thread</comments>
       
     </item>
     
