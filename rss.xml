@@ -15,8 +15,47 @@
     <atom:link href="https://colmugx.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Co1MugX Blog</description>
-    <pubDate>Thu, 09 Sep 2021 16:19:34 GMT</pubDate>
+    <pubDate>Sun, 19 Dec 2021 15:23:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>为什么我没想过 EventBus</title>
+      <link>https://colmugx.github.io/blog/2021/11/24/why-not-eventbus/</link>
+      <guid>https://colmugx.github.io/blog/2021/11/24/why-not-eventbus/</guid>
+      <pubDate>Wed, 24 Nov 2021 14:32:35 GMT</pubDate>
+      
+      <description>&lt;blockquote&gt;
+&lt;p&gt;以下全是暴论&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一个发生在今年的对话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q：组件通信有几种方式？&lt;br&gt;
+A：balabalabala（无非 props, provide/inject，vue 还有 $parent/$children&lt;br&gt;
+Q：还有吗？&lt;br&gt;
+A：postmessage 可以算吗&lt;br&gt;
+Q：也行，还有吗？&lt;br&gt;
+A：localStorage/sessionStorage 可以算吗？&lt;br&gt;
+Q：算半个，还有吗？&lt;/p&gt;
+&lt;p&gt;这 TM 不就这些方式还有吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;回来一拉清单，各家文章盘点确实还多了一个：&lt;code&gt;EventBus&lt;/code&gt;&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<blockquote><p>以下全是暴论</p></blockquote><p>这是一个发生在今年的对话：</p><blockquote><p>Q：组件通信有几种方式？<br>A：balabalabala（无非 props, provide/inject，vue 还有 $parent/$children<br>Q：还有吗？<br>A：postmessage 可以算吗<br>Q：也行，还有吗？<br>A：localStorage/sessionStorage 可以算吗？<br>Q：算半个，还有吗？</p><p>这 TM 不就这些方式还有吗？</p></blockquote><p>回来一拉清单，各家文章盘点确实还多了一个：<code>EventBus</code></p><a id="more"></a><h2 id="什么是-eventbus">什么是 eventbus</h2><p>简单理解：事件总线，一种订阅/发布模型，即是在希望发生事件处理的地方创造一个监听器(listener)，接着在希望影响到监听器所在位置变化或更新的地方加上发射器(emitter)</p><p>这样的好处是，任何位置都可以透传。因为事件总线（可以）是全局的</p><p>从名字上看，它应该是属于事件驱动设计的产物。这没问题，GUI 一直都跟事件驱动有关，浏览器在交互部分也是这么做的</p><p>那，这么多前端框架有没有使用事件驱动的？有，御三家里的 <code>Angular</code>。除了御三家那更多了，反而数据驱动才是新品种</p><p>OK 目的达成，我就是要绕到这个点上：为什么面试上问 Vue，甚至是 React，我就没想过 EventBus。<strong>因为这本来就跟数据驱动没关系</strong></p><h2 id="为什么我不用-eventbus">为什么我不用 eventbus</h2><p>不带 Vue 玩了这领域有争议。就一个问题：什么时候 React 会触发更新？</p><p>这个时候就应该有个经典公式：view = f(props, state)。也就是当 <code>props</code> 或者 <code>state</code> 发生更新了，<code>view</code> 会更新。或者换句话说，<strong>数据更新了视图会更新</strong></p><p>那这里就有一个问题：如果触发了某个事件，视图会更新吗？<strong>会更个几把！</strong> 要会更新你还需要 <code>setState</code> 吗？这也是为什么 <code>rxjs</code> 在 <code>React</code> 用起来就是没有 <code>Angular</code> 来得无尿点，最核心的一点就是你想通过 <code>rxjs</code> 通知视图更新就肯定需要在订阅做一次 <code>setState</code>，不管你封装了还是在 business code 里订阅一次写一次</p><p>而且我不用还有另一个原因：这东西在我的理解中，就是一个 <code>goto</code> —— 它会把代码弄得非常糟。本来是单向的数据流向，现在会完全不知道某个组件会因为什么而产生更新，流向变得不可观察</p><p>你可能会说，那 context 也是这么传的啊！可 eventbus 可不禁止子组件 call 父组件，不约定好就造成逆数据流</p><p>除此之外，事件名称是一个字符串（暂且只能是字符串），那么这个时候需要保证事件名不要重复。为了解决这个问题可能就会引入一个叫事件表的东西 —— 但你想用到某一个事件时，import 这个常量，毕竟常量背后什么静态值对于事件来说无所谓，对得上就行。这会发生什么问题？在生产过程中这问题发生得不要太多，最经典的就是忘记更新事件表，或者嫌麻烦摆烂直接写，最后发现因为一个大小写导致事件对不上……</p><p>除此之外还有！毕竟是一个订阅发布模型，你订阅了是不是得取消订阅。事件的东西你一旦开了他就会一直留存在内存中，处理不当的话可能会出现两个一模一样的 listener，而这个原因仅是因为上一个没有销毁……当然了最轻的问题就是你的某一个事件处理会响应 n 次，是的这只是最轻的</p><p>总之这非常反思维，在一个数据驱动的环境中，为了一点点 buff 而引入大量 debuff 是否得不偿失。经过一轮网上冲浪后发现，相关讨论不少（指两个）</p><ul><li><a target="_blank" rel="noopener" href="https://forum.vuejs.org/t/event-bus-is-it-a-good-idea/49853">Event bus - is it a good idea?</a></li><li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/androiddev/comments/eksepr/why_some_people_dislike_eventbus/">Why some people dislike EventBus?</a></li><li><a target="_blank" rel="noopener" href="https://tkacz.pro/vue-js-why-event-bus-is-bad-idea/">Vue.js: why event bus is bad idea</a></li></ul><h2 id="你真的需要-eventbus？你用来做什么？">你真的需要 eventbus？你用来做什么？</h2><p>Vue 有 provider/inject，React 有 Context API，这应该够用了</p><p>跟数据有关的 API，Vue 有 Vuex，React 有 React / Recoil。他们本身也会遵循单向数据流</p><p>所以，到底是哪里需要在 React 环境中引入一个不属于数据驱动的东西。或者换个思路（挖个坑）：</p><p><strong>我们是否正在被框架绑定？一个本只是视图层框架，现在还包含了逻辑层？</strong></p>]]></content:encoded>
+      
+      
+      <category domain="https://colmugx.github.io/blog/categories/%E6%9E%B6%E6%9E%84%E6%80%9D%E8%80%83/">架构思考</category>
+      
+      
+      <category domain="https://colmugx.github.io/blog/tags/vue/">vue</category>
+      
+      <category domain="https://colmugx.github.io/blog/tags/react/">react</category>
+      
+      
+      <comments>https://colmugx.github.io/blog/2021/11/24/why-not-eventbus/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>从零开始的 Pong Game - 一起玩吧</title>
@@ -194,31 +233,6 @@
       
       
       <comments>https://colmugx.github.io/blog/2021/02/16/component-and-engineering/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>我的 2020</title>
-      <link>https://colmugx.github.io/blog/2021/01/04/my-2020/</link>
-      <guid>https://colmugx.github.io/blog/2021/01/04/my-2020/</guid>
-      <pubDate>Mon, 04 Jan 2021 15:43:06 GMT</pubDate>
-      
-      <description>&lt;blockquote&gt;
-&lt;p&gt;此时并不是在考虑这一年的收获，而是在考虑这是否又是一篇限时文章&lt;br&gt;
-又或者说是 RSS 限定？因为 RSS 是不会被动删除的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;经典一行 TL;DR 吧：2021 流行色现已实装 —— 灰黄使用灰色；今年没给开源干点什么；开始想要知识管理了；读书的书比以往都多对我来说…&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<blockquote><p>此时并不是在考虑这一年的收获，而是在考虑这是否又是一篇限时文章<br>又或者说是 RSS 限定？因为 RSS 是不会被动删除的</p></blockquote><p>经典一行 TL;DR 吧：2021 流行色现已实装 —— 灰黄使用灰色；今年没给开源干点什么；开始想要知识管理了；读书的书比以往都多对我来说…</p><a id="more"></a><h2 id="关于博客">关于博客</h2><p>今年计划是推出 gatsby 版本的 nlvi，可惜现在还没有。归结两个原因，有可能因为步子太大扯到蛋，也有是想摸</p><p>hexo 版本的 nlvi 没了维护热情，今年只是给归档页面重新设计了分界。即使如此今年还是零星收获几个 star，是该说对不起呢？还是劝他们一起用 hugo/gatsby 呢？</p><h3 id="流行色不会缺席">流行色不会缺席</h3><p>每年潘通都会宣布下一年的流行色<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，2021 又是一年双色，极度灰与明亮黄</p><p>2020 对于全世界都是一个不如意的年份，人类都陷入了灰色一段时间，但明亮的黄色却代表着希望。</p><blockquote><p>As people look for ways to fortify themselves with energy, clarity, and hope to overcome the continuing uncertainty, spirited and emboldening shades satisfy our quest for vitality.</p></blockquote><p>所以，坚如磐石同时需要充满希望的灰色和黄色即是今年的流行色。</p><p>如果通过页面访问我的博客的家！人！们！可以发现<span style="color: #004373">经典蓝</span>已经下线，虽然黄色是代表希望的一方，但是为了风格还是使用灰色吧</p><p><strong>但！</strong> 也许不久之后，我们就整一把渐变！因为最近有一个设计风格非常吸引我，它正运用在 2020 KDA 与微信读书年度总结</p><h3 id="说回-nlvi">说回 nlvi</h3><p>因为现在开始大面积使用 <code>org-mode</code>，用 hexo 发文章就变得非常麻烦，需要尽早切换到可以直接使用 <code>org</code> 的应用上，这也许是一次催促 gatsby 版甚至是新设计的机会</p><p>立个 flag，今年写一篇《做 nlvi 的时候想了些什么》，也许这个总结对以后更新设计有一定用处</p><h2 id="关于开源">关于开源</h2><p>今年的正经提交真没有。公司在 GitHub 有一个 Organization，工作内容有一部分就是管着这些东西，所以账号上虽然可以看到很多 commit 和 code review 其实大多都来自于这里</p><p>但该开还得开，不仅 gatsby nlvi 和前面关于简历文章提到的 Resumer，还有知识管理编辑器 <code>setsuna</code> 和算是一个工作台的东西 <code>kazusa</code></p><h3 id="编辑器">编辑器</h3><p>这算是机缘巧合，内部应用原本的富文本编辑器不够满足需求，所以希望重(ti)构(huan)编辑器，希望能有比较好的扩展能力要青龙又要白虎的结果最后时间没谈妥，于是决定用 ckeditor 5 干一个，过程还各种论证 npm package 在 GPLv3 到底属于源码分发还是二进制分发…</p><p>这期间看了下 editor.js, prosemirror, quill, 还有需要为 vue 提供前端的 slate core</p><p>加上正在找一个能让自己舒服的管理知识的姿势以及对语雀的嫌弃，所以开始编辑器的鼓捣。希望能写完</p><h2 id="关于技术">关于技术</h2><p>除了前端，应该是花有一半时间在 <code>rust</code> 上，目前还没有什么成果</p><p>今年不知为何又开始整起 e2e 测试，使用 <code>cypress</code> 框架，体验还行。算是在单元测试的基础上又补充集成测试</p><p>年末重新开始使用 emacs，不过与几年前不同，emacs 现在更多是充当一个文档编辑器，但又与普通编辑器不同 —— 可以在文档中直接执行代码块并获得结果 —— 从而可以直接在文档里做很多事情甚至是生成图表。于是做到了不仅保留尝试代码，还保留实验结果</p><p>遗憾的是现在的 emacs 配置被我打碎了在重建，关于编程功能（补全与高亮）达不到可用的程度，还需要继续配置</p><h2 id="知识管理">知识管理</h2><p>不知道为什么，从今年开始就看到很多关于知识管理的文章，所有人都在知识管理，都在卡片式笔记，都在 <code>notion</code>，<code>roam research</code>…不过这倒是一个统计与总结的好机会，了解「卡片式笔记」之后觉得能整，先用 apple 的备忘录整一段时间之后，改用 <code>obsidian</code></p><p>后来思索一会，既然都这么做笔记，为什么不直接用 <code>emacs</code>，<code>org</code> 本身在链接能力就很强。加上因为 <code>roam</code> 的兴起后，<code>org-roam</code> 也应运而生。这应该是 emacs 最吸引人的功能，以至于很多其实不写代码只是为了组织论文的硕博们也在用 emacs</p><p>所以不得不说 org-todo 和 org-agenda，这应该又是 org-mode 用户中几乎都会使用的功能。感觉以后可以写一个文章，记录一下我现在正在怎么使用这个编辑器（好家伙又开了一个坑）</p><p>为什么不用例如 <code>notion</code>，<code>bear</code> 等等，原因是这类应用都属于 SaaS，我会把我的数据放到他们的服务器上。果断说不，我接受不了数据在我看不到的地方</p><p>为了同步，首先考虑到 webdav，dropbox 毕竟有点不方便，退而求其次找到一家网盘服务商 teracloud，直连效率真的好，注册后<s>填一下邀请码 SBTVQ 还能多给 5G 空间</s>（咳咳）</p><p>目前感觉良好，手机端可以用 orgzly(android) 和 beorg(ios)</p><h2 id="书">书</h2><p>说实话，我甚至对这个列表陷入了沉思</p><ul><li>《基本乐理》</li><li>《深入浅出 Rust》</li><li>《前端架构：从入门到微前端》</li><li>《我的第一本算法书》</li><li>《程序员的数学》</li><li>《毛泽东传》（推荐）</li><li>《mysql 必知必会》</li><li>《人月神话》</li><li>《深入核心的敏捷开发》</li><li>《Google软件测试之道》</li></ul><p>几乎一本一个类型</p><p>《基本乐理》应该是今年自我感觉最受用的一本，为此还重构以前写过的一些曲子。所以也理解了为什么有些电子音乐人会说：”不过是公式化音乐“。虽然是「符合和弦的和谐」了，但听着不如重构前「好听」。而且《基本乐理》让人有一种「应试教育」的感觉，<strong>音乐真的应该这么描述吗？</strong> 这是个问题</p><p>接下来读什么书还没想好，数据结构和算法还有 rust 还是继续看，剩下的书继续走一步看一步</p><h2 id="新的目标">新的目标</h2><p>回顾去年总结留下来的目标，意外的发现完成得还不错，至少都达到及格线。索性今年的目标就简单一些：立下的 flag 还有预期要写完的应用都写完，再多写一些我称之为曲苑杂坛式的有趣的文章</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://www.pantone.com/color-of-the-year-2021">PANTONE COLOR OF THE YEAR 2021</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
-      
-      
-      
-      <category domain="https://colmugx.github.io/blog/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">年度总结</category>
-      
-      
-      <comments>https://colmugx.github.io/blog/2021/01/04/my-2020/#disqus_thread</comments>
       
     </item>
     
