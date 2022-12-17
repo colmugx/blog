@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>react 「性能优化」</title>
+      <link href="/blog/2022/12/15/web-optimization/"/>
+      <url>/blog/2022/12/15/web-optimization/</url>
+      
+        <content type="html"><![CDATA[<p>如果你在玩《剑网3缘起》，你会发现游戏有一个内置社区。虽然这个应用是个 CSR，但是会发现加载并不慢</p><p>而且这些都不是事后优化。所以正好可以分享一些可能对其产生作用的习惯和做法，或者说开发时可以注意的地方</p><h2 id="TL-DR-8">TL;DR</h2><p>总之就只有一个目标：尽量砍掉第一次加载的大小和尽量减少加载所需要花费的时间</p><ul><li>减少加载体积</li><li>懒加载/延迟加载：利用 import/export 做代码分段</li><li>充分利用 http2 和 vite（开箱即用版 rollup ）</li><li>非常巧合的做法，指跟 React Beta 版文档异曲同工</li></ul><span id="more"></span><h2 id="减少加载体积">减少加载体积</h2><p>前端的静态资源都在依赖网络传输，所以在第一屏尽量加载最小的资源。</p><h3 id="使用-preact">使用 preact</h3><p>这个应用在建立的时候 react 版本是 17，虽然已经有 react 18 但还不 stable。考虑一番之后觉得没有并发和批处理的 react 不够有吸引力。与此同时，preact 10 有：</p><ul><li>更小的体积，即使带着 <code>compact</code> 最后也就不到 10k，保守预估</li><li>更快的运行</li><li>react 16 兼容，沉淀组件直接用不用考虑需不需要升级或适配</li><li><code>&lt;Suspense&gt;</code> 在当时已经稳定</li></ul><p>当时的考虑是：现在用 preact 以后迁移回 react 18 问题也不是很大，所以在 react 18 没有稳定之前都可以用 preact。只不过在 <code>TypeScript</code> 环境下，写类型稍微痛苦了一些 —— 毕竟只有 <code>api</code> 是兼容的，类型可不兼容</p><h3 id="JS-加载">JS 加载</h3><p>首先是编译期处理，举个例子</p><pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">&#x2F;&#x2F; use-noop.tsexport function useNoop() &#123;  return () &#x3D;&gt; &#123;&#125;&#125;&#x2F;&#x2F; page.tsimport &#123; useNoop &#125; from &#39;.&#x2F;use-noop&#39;</code></pre><p>首先我们的规范决定了：工具放在 <code>utils</code> 目录中且<strong>一个文件仅有一个函数，并通过 <code>export</code> 导出</strong></p><p>所以我们在最开始就解决了一个问题：尽可能拆掉首包体积，或是能自然的利用 ES Module Tree Shaking (Rollup)</p><p>接着，由于我们的目标是Chromium(cef) 76 往上，那么<strong>可以直接使用 module 的形式加载</strong>且不需要 <code>polyfill</code></p><h2 id="懒加载">懒加载</h2><p>懒加载内容分两个：</p><ul><li>原本一起打包但已经 split 的 JS 文件</li><li>从网络上加载的媒体资源（图片，视频）</li></ul><h3 id="媒体资源懒加载">媒体资源懒加载</h3><p>这里主要是图片，虽然 Chrome 已经有浏览器级别的懒加载（loading=“lazy”）</p><p>Chrome 会根据当前网络环境决定要加载多远的图片，不过 Chrome 的阈值有点捉摸不透。最后还是决定使用 <code>lazysizes</code>，并且自己控制加载距离 —— 大概就在屏幕外面多一点点</p><p>于是「不必要」的网络请求又节省下来一点</p><h3 id="JS-懒加载">JS 懒加载</h3><p>可以懒加载的 JS 不少，对于我们来说大概有几种：</p><ul><li>首屏用不到的模块，懒加载</li><li>路由，组件懒加载</li></ul><p>首屏用不到的，或者在生产中用不到的模组例如 <code>vconsole</code>、<code>hls.js</code>，在第一次不参与加载</p><p>其次，我们在架构组织上采用分层组织，即页面组件(pages)作为消费层，业务代码根据需求和 <code>feature</code> 一一关联</p><p>我愿称之为渐进式 DDD，因为就是从 DDD 的思想不断简化，再通过磨合时间和程度逐步加上去，最后都习惯并理解「为什么持续维护项目型需要 DDD」</p><p>有机会的话下一篇分享 DDD 在我们实际场景中的运用。这里推荐一个项目叫 <a target="_blank" rel="noopener" href="https://github.com/remesh-js/remesh">remesh</a>，比较可惜的是这个框架诞生于我们的决定之后</p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"># 这里隐藏掉了部分细节- common  - component  - model  - repository  - service- [feature]  - component  - model  - repository  - service...- pages  - [page]</code></pre><p>这样，<code>page</code> 对于我们来说只是一个组合功能的载体，从而又带来一个好处：<strong>一个页面可以决定哪部分直接添加，哪部分进 lazyload</strong>。加上 <code>preact</code> 已经稳定的<code>&lt;Suspense&gt;</code>，就可以实现不那么生硬的体验效果</p><p>并且所有的 <code>page</code> 都是通过路由 lazyload 的，也就是第一次加载不会加载到别的页面的 JS（这好像已经变成了基操）</p><p>到这其实有个问题：以上关于一个页面拆分懒加载，但它们始终都要在第一屏加载，下载量可是不变的</p><p>所以还有下一步操作，大小尽量砍了，该想怎么弄快了</p><h2 id="利用-http2">利用 http2</h2><p>http2 没有改动 http 的语义，但改动了头部压缩，新增优先级排序和多路复用</p><p>在 http1.1，由于每个请求都会开一个连接，所以早期前端优化有这么一手：把静态资源分布在不同域名下，例如 <a target="_blank" rel="noopener" href="http://img1.example.com">img1.example.com</a>，<a target="_blank" rel="noopener" href="http://img2.example.com">img2.example.com</a>。其实现在观察 github 也能看到类似的做法</p><p>但因为 http2 有了二进制分帧，所以基于此实现了共享TCP，到位了再根据标记和头部重新组装报文。在这之前 http1.1 是一整块纯文本，分区用的换行符（指头部和身体）</p><p>其实以上都「不重要」，只需要知道现在同一CDN下载不阻塞了。所以在 h2 之下，<strong>静态资源可以同时加载</strong>。这就解答了上面关于页面拆分的问题</p><h2 id="异曲同工？">异曲同工？</h2><p>Dan Abramov 也就是 react 的创作者，被小右也就是 vue 的创作者大狙点头之后，对 react beta 文档爆更了 3 天。原因就是被吐槽 TTI 和 TBT 占用时间太长被 vue 的文档吊锤</p><p>所以他对 react beta 文档改动了什么？</p><ul><li>工具函数拆分，改成一文件一函数</li><li>移除过时浏览器支持，从而移除 <code>polyfill</code> 的加载（react 现在也仅支持现代浏览器）</li><li>懒加载资源，例如 <code>@codemirror/lint</code> 和 <code>eslint</code></li></ul><p>所以现代前端优化，好像基础版就这么些操作，大家都是一样的。首先尽可能压低大小（可仅参考 gzip 之后大小），然后尽可能抬高加载速度显示速度（SSR，CDN）</p><p>实在不行，发现瓶颈出现在远端数据，那就上缓存！资源慢缓存资源，数据接口慢缓存数据，什么 service worker 全给它叠起来（x</p><h2 id="Links-2">Links</h2><ul><li><a target="_blank" rel="noopener" href="https://github.com/mq2thez/blog/blob/main/upgrade-react-etsy/preact-vs-react.md">Updating React at Etsy</a></li><li><a target="_blank" rel="noopener" href="https://web.dev/browser-level-image-lazy-loading/">Browser-level image lazy-loading for the web</a></li><li><a target="_blank" rel="noopener" href="https://medium.com/geekculture/how-does-dan-abramov-optimize-beta-reactjs-org-after-be-complained-about-website-speed-840b02cf5ee8">How Does Dan Abramov Optimize beta.reactjs.org After Be Complained about Website Speed?</a></li><li><a target="_blank" rel="noopener" href="https://info.support.huawei.com/info-finder/encyclopedia/zh/HTTP--2.html">什么是HTTP/2？</a></li><li><a target="_blank" rel="noopener" href="https://github.com/aFarkas/lazysizes">aFarkas/lazysizes</a></li><li><a target="_blank" rel="noopener" href="https://github.com/remesh-js/remesh">remesh-js/remesh</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端思考 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> react </tag>
+            
+            <tag> preact </tag>
+            
+            <tag> 性能优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我早就想拿 QuickJS 做 SSR 了</title>
       <link href="/blog/2022/12/12/quickjs-ssr/"/>
       <url>/blog/2022/12/12/quickjs-ssr/</url>
@@ -591,9 +620,9 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> vue </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -1105,9 +1134,9 @@
       
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> vue </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
