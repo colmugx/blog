@@ -15,11 +15,33 @@
     <atom:link href="https://colmugx.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Co1MugX Blog</description>
-    <pubDate>Sat, 17 Dec 2022 15:13:21 GMT</pubDate>
+    <pubDate>Sat, 31 Dec 2022 16:13:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>react 「性能优化」</title>
+      <title>成为玩家 2022</title>
+      <link>https://colmugx.github.io/blog/2022/12/31/to-be-a-gamer-2022/</link>
+      <guid>https://colmugx.github.io/blog/2022/12/31/to-be-a-gamer-2022/</guid>
+      <pubDate>Sat, 31 Dec 2022 08:51:19 GMT</pubDate>
+      
+      <description>&lt;p&gt;本来想顺利过完 22 年，甚至一次都不想羊。他妈的防不胜防，22年最后一刻，现在觉得自己都不干净了&lt;/p&gt;
+&lt;p&gt;边咳边写故事，以后年终总结都是这样的形式，讲故事方便融资（x&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>本来想顺利过完 22 年，甚至一次都不想羊。他妈的防不胜防，22年最后一刻，现在觉得自己都不干净了</p><p>边咳边写故事，以后年终总结都是这样的形式，讲故事方便融资（x</p><span id="more"></span><h2 id="是该有所不一样了">是该有所不一样了</h2><p>去年的这个时候还在抑郁的期间，总结非常的 down</p><p>今年更多被一个压力更大的工作看上了，几乎一整年都在围绕这个工作</p><p>公司给机会了所以尝试开发一个框架。在最开始设计的时候并没有把它当框架设计，今年开始发现业务复杂度越来越「奇妙」之后，决定给它加个核心转成框架，以后讲</p><p>加上在公司活整得很散，所以今年感觉比较疲，几乎所有开坑的产品都是 idle</p><ul><li>kazusa - 游戏剧本编辑器</li><li>setsuna - 个人事项管理</li><li>ayaka - 文档生成器（CSR, SSG）</li><li>hikari - 图片预览器</li></ul><p>是该有所不一样了，原本给自己设计的知识管理工具后面推翻改成游戏剧本/文案编辑器，应该以后更多都会根据自己的需求开发工具</p><h2 id="我想做的就是-JRPG">我想做的就是 JRPG</h2><p>今年还有更多的时间花在系统学习音乐上，为什么</p><p>首先，JRPG 更强调剧情的推进，且有更强烈的 cosplay（相对于欧美RPG来说，代入日式RPG更需要想象），所以相对来说，JRPG 有一个更抽象的世界观。怎么交代清楚「现在身处一个怎样的环境」，除了文案旁敲侧击暗示之外，配乐起到非常关键的作用</p><p>自从去年聊完《原神》之后，我发现越来越多的新游戏（所谓的二次元游戏）都开始强调配乐了。但毕竟不是谁家都是米哈游，从一开始就深入跟策划文案磨世界观，和游戏基本到开发末期再“配乐”，本质上还是有所区别</p><p>所以在游戏，音乐有一个更新的称呼：互动音乐（设计），这已经是我们能叫出名的国外游戏公司的标配</p><p>举个例子，最近的《宝可梦朱/紫》，四个地区分别有自己一个 theme，但每一个 theme 在步行、骑行、水边、特殊场景、战斗所使用的配器均不同，且使用的配器更适合当时的环境 —— 步行更多是一个比较纯净的钢琴，但一旦上了摩托就会变成一个带 epic 的管弦，<strong>并且他们无缝衔接</strong>。这让探索旅途中，既体现了地区风格，又带给游玩者一个“更真实”的情绪</p><p>再加个例子，《八方旅人》和《异度之刃3》有一个差不多的设计</p><p>《八方旅人》讲的是八个不同的角色为了实现各自不同的目标在同一片大陆展开冒险的游戏，在他们分别进 boss 战之前都有一段嘴炮用于剧情铺垫，此时配乐开始使用对应角色一个可以循环的短音乐，进战斗之后开始切为一个从这个短音乐的音阶和节奏型转换为战斗配乐的音阶和节奏型（大多是升音阶，学者中间段先接上前面的 3/4 转 6/8 一路卡到 4/4 进战斗），也就是每个角色 boss 战之前配乐是这样的：循环段 -&gt; 过渡 -&gt; 战斗。这么做的好处同样很清晰：在你沉浸在故事时不会因为配乐切换而打断情绪，同时游戏大多时候在嘴炮期就已经让你感觉到气愤/可怜，在过渡段自然地滑进 battle theme 之后，玩家的情绪也已经非常自然地提到了激情的状态，巴不得直接就扬了这个b</p><p>《异度之刃3》可以聊的是冠名怪，冠名怪的配乐被分成了四段，进去一段，怪进狂暴期一段（血条在火焰之后），濒死一段，收势。并且紧张感一步一步逼近…</p><p>ok 巧了，我想做的就是 JRPG。如果制作人都不知道自己的游戏将会是什么样，那又有谁会知道呢</p><p>所以日后只要写关于游戏简评的文章，都会加上一个新章节：配乐分享</p><p>虽然但是，今年的钢琴没有任何进步。明年除了乐理要继续安排时间学习，要开始翻《配器法》</p><h2 id="游戏首先要好玩">游戏首先要好玩</h2><p>今年刚好内部有一个 gamejam，抱着试一试的心态参加了。拿到主题之后，我们首先有一个世界观想法，然后开始写 GDD，开始决定类型、特点、关卡设计、<strong>音乐设计</strong>…</p><p>虽然我们最后因为其他原因没有参赛（报名了但没参赛），但在路演期间，在去试玩其他组的游戏，特别是一个后来成为冠军的游戏时，我突然悟了一个道理</p><blockquote><p>游戏首先要好玩 —— 魏皮特</p></blockquote><p>任天堂也是这样的主张，游戏做得再好，它不好玩就不是好游戏。所以从最开始我们的路线就是错的 —— 浪费时间在决定是 2D 是 3D，是像素还是写实，<strong>甚至是 gamejam 没有时间考虑的音乐设计</strong>，都是无用功</p><p>也许这是 JRPG 的路线，但对于 gamejam 来说就是不适合，因为流程太长，无法在玩法上一击命中，那么短的试玩时间根本无法给试玩者留下任何印象，他们都是没有耐心的</p><p>并且我们在常规关卡设计中预计使用「华容道」，这其实已经被证明过多次这是个“偷懒”的游戏设计，如果关卡设计太难，这又会失去更多一部分玩家</p><p>总而言之，从此刻开始悟道，什么是纯粹的快乐。明年再来</p><p>就这样，今年没有那么多抱怨和抱负，大概是因为正在生病</p>]]></content:encoded>
+      
+      
+      
+      <category domain="https://colmugx.github.io/blog/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">年度总结</category>
+      
+      
+      <comments>https://colmugx.github.io/blog/2022/12/31/to-be-a-gamer-2022/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>web 「性能优化」</title>
       <link>https://colmugx.github.io/blog/2022/12/15/web-optimization/</link>
       <guid>https://colmugx.github.io/blog/2022/12/15/web-optimization/</guid>
       <pubDate>Thu, 15 Dec 2022 14:23:45 GMT</pubDate>
@@ -172,7 +194,7 @@ Q：算半个，还有吗？&lt;/p&gt;
       
       <description>&lt;p&gt;稍微数了一下，要完整完成一个游戏其实要做的有很多。这篇依然是补完一个游戏&lt;/p&gt;
 &lt;p&gt;项目 &lt;a href=&quot;https://colmugx.github.io/godot-pong&quot;&gt;体验地址&lt;/a&gt;，&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot; href=&quot;https://github.com/colmugx/godot-pong&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;TL-DR-4&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;h2 id=&quot;TL-DR-3&quot;&gt;TL;DR&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;启动页面、得分牌&lt;/li&gt;
 &lt;li&gt;加入简单的 AI&lt;/li&gt;
@@ -180,7 +202,7 @@ Q：算半个，还有吗？&lt;/p&gt;
       
       
       
-      <content:encoded><![CDATA[<p>稍微数了一下，要完整完成一个游戏其实要做的有很多。这篇依然是补完一个游戏</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR-4">TL;DR</h2><ul><li>启动页面、得分牌</li><li>加入简单的 AI</li></ul><span id="more"></span><h2 id="完成情况-2">完成情况</h2><p>这把已经像一个游戏了。所以，可以一起玩吧</p><p>以下是记录本次更新一部分内容</p><h3 id="UI">UI</h3><p>目前是加了一个标题场景，但是过于没东西讲。老前端熟悉的 <code>flex</code> 布局思路一通搞完事</p><h4 id="切换场景">切换场景</h4><p>游戏是按场景(scene)来区分页面(非常前端的描述)，比如关卡类游戏一般会做很多 level 的场景。不同的是这可没有所谓的路由，而是直接切换(change)</p><p>这里使用的是：获取场景树，得到实例，切换场景(change_scene)</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">get_tree()-&gt;change_scene(path);</code></pre><p>这个项目里的实现是：把这种按钮直接做成「组件」，暴露场景接口。在标题场景 <code>connect</code> 所有这个类型的事件，用统一事件处理跳转。这样就封装了跳转场景，方便以后处理设置界面啥的</p><h4 id="记分牌动画">记分牌动画</h4><p>有一个控件 <code>AnimationPlayer</code> ，用来控制能访问到的节点的动画，例如运动、变形。如果使用过 <code>flash</code> 那是相当熟悉 —— 关键帧打起来</p><h3 id="加入-AI">加入 AI</h3><p>周伯通虽然也行，但是自己玩还是得有个「对手」</p><p>现在看到 AI 人就不知觉紧张起来，感觉是个非常难的东西。其实 AI 就只是「人工智能」，其目的就是「假装是个人」，那游戏 AI 就是「假装有个陪你打游戏的人」。只不过现在的「机器学习」确实给游戏 AI 也带来了不少想象力 —— 他们的操作越来越像人的思维方式了</p><p>多智能还得看开发者。例如中小学机器人编程比赛中的经典项目足球项目和灭火项目，</p><blockquote><p>足球项目：最简单的逻辑就是通过传感器（指南针）判断两边方向，超声波测距，忘记什么传感器用来找球。摸到球之后直接把球往对方门里「撞」，完事。</p></blockquote><blockquote><p>灭火项目：都带着指南针和热力传感，主要还是看谁的寻路比较nb</p></blockquote><p>游戏 AI 很早就有，最经典的游戏 AI 还属南梦宫的吃豆人(pacman)<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>（对于我来说一样属于游戏设计必修课，甚至机器学习也可以）。</p><blockquote><p>一共四个干扰怪物，逻辑都不相同</p><p>红色 blinky：追着豆子，通过寻路算法找距离最近的路线<br>粉色 pinky：追豆子前方第四个格子，通过寻路算法找距离最近的路线。如果向上移动，则是左上方四个格子<br>青色 lnky：blinky 与豆子各自前方射线的交点，并两倍延长的点<br>橙色 clyde：追豆子到方圆 8 格内就会散开（纯气氛组）</p><p>四个单个逻辑不复杂且工作量很小的 AI，组合成一个看似一直在围堵玩家的敌方小队。这就是最经典的地方</p></blockquote><p>这篇文章再开个坑：我要写一篇我对游戏 AI 的理解。例如游戏设计中，一些非常难的 gameplay 可能会设计出让 AI 「放水」，让玩家以为 AI 真的翻车了，以此来鼓励玩家</p><p>好了，这一部分的重点本应该是这个游戏的 AI，目前的设计是： <strong>在自己的 y 与球的 y 距离大于 25 时，追球。25 差不多是板子的 1/4。</strong> 逻辑就这，没了</p><p>但别小看这简单的逻辑，在目前没有什么骚东西的环境下，只要没有什么花里胡哨的操作（例如拿板边去敲球）几乎没有胜利的机会。而现在这个环境玩骚的只会把自己的分骚没（比如我）</p><h3 id="冷却与重置">冷却与重置</h3><p>当球落某方门后，球会重置到游戏中点，没有操作，直接关闭了惯性和直接 set position</p><p>不过有一个小设计：败方接球。如果某方上一回合输了，这一回合由该方接首发球</p><p>所以，虽然是可以玩了，但是还是缺东西，比如很多关于游戏规则的完善</p><h2 id="下一步">下一步</h2><ul><li>发球 y 随机：目前发球的 y 是固定的，直接去接球点等球多没意思啊</li><li>随机首发球：第一球现在都发给左方，或许应该随机</li><li>胜利规则：现在这游戏一开就没边了…</li><li>暂停与结束界面</li><li>声音</li></ul><p>游戏补完之后，往后的更新就越来越慢了，因为想法越骚，实现也会越来越难</p><h2 id="Link">Link</h2><ul><li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/82567889">游戏AI入门及AI优化</a></li><li><a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/stable/classes/class_animationplayer.html">AnimationPlayer</a></li></ul><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27177424">现代游戏AI的鼻祖——聊聊你所不知道的《吃豆人》</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
+      <content:encoded><![CDATA[<p>稍微数了一下，要完整完成一个游戏其实要做的有很多。这篇依然是补完一个游戏</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR-3">TL;DR</h2><ul><li>启动页面、得分牌</li><li>加入简单的 AI</li></ul><span id="more"></span><h2 id="完成情况">完成情况</h2><p>这把已经像一个游戏了。所以，可以一起玩吧</p><p>以下是记录本次更新一部分内容</p><h3 id="UI">UI</h3><p>目前是加了一个标题场景，但是过于没东西讲。老前端熟悉的 <code>flex</code> 布局思路一通搞完事</p><h4 id="切换场景">切换场景</h4><p>游戏是按场景(scene)来区分页面(非常前端的描述)，比如关卡类游戏一般会做很多 level 的场景。不同的是这可没有所谓的路由，而是直接切换(change)</p><p>这里使用的是：获取场景树，得到实例，切换场景(change_scene)</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">get_tree()-&gt;change_scene(path);</code></pre><p>这个项目里的实现是：把这种按钮直接做成「组件」，暴露场景接口。在标题场景 <code>connect</code> 所有这个类型的事件，用统一事件处理跳转。这样就封装了跳转场景，方便以后处理设置界面啥的</p><h4 id="记分牌动画">记分牌动画</h4><p>有一个控件 <code>AnimationPlayer</code> ，用来控制能访问到的节点的动画，例如运动、变形。如果使用过 <code>flash</code> 那是相当熟悉 —— 关键帧打起来</p><h3 id="加入-AI">加入 AI</h3><p>周伯通虽然也行，但是自己玩还是得有个「对手」</p><p>现在看到 AI 人就不知觉紧张起来，感觉是个非常难的东西。其实 AI 就只是「人工智能」，其目的就是「假装是个人」，那游戏 AI 就是「假装有个陪你打游戏的人」。只不过现在的「机器学习」确实给游戏 AI 也带来了不少想象力 —— 他们的操作越来越像人的思维方式了</p><p>多智能还得看开发者。例如中小学机器人编程比赛中的经典项目足球项目和灭火项目，</p><blockquote><p>足球项目：最简单的逻辑就是通过传感器（指南针）判断两边方向，超声波测距，忘记什么传感器用来找球。摸到球之后直接把球往对方门里「撞」，完事。</p></blockquote><blockquote><p>灭火项目：都带着指南针和热力传感，主要还是看谁的寻路比较nb</p></blockquote><p>游戏 AI 很早就有，最经典的游戏 AI 还属南梦宫的吃豆人(pacman)<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>（对于我来说一样属于游戏设计必修课，甚至机器学习也可以）。</p><blockquote><p>一共四个干扰怪物，逻辑都不相同</p><p>红色 blinky：追着豆子，通过寻路算法找距离最近的路线<br>粉色 pinky：追豆子前方第四个格子，通过寻路算法找距离最近的路线。如果向上移动，则是左上方四个格子<br>青色 lnky：blinky 与豆子各自前方射线的交点，并两倍延长的点<br>橙色 clyde：追豆子到方圆 8 格内就会散开（纯气氛组）</p><p>四个单个逻辑不复杂且工作量很小的 AI，组合成一个看似一直在围堵玩家的敌方小队。这就是最经典的地方</p></blockquote><p>这篇文章再开个坑：我要写一篇我对游戏 AI 的理解。例如游戏设计中，一些非常难的 gameplay 可能会设计出让 AI 「放水」，让玩家以为 AI 真的翻车了，以此来鼓励玩家</p><p>好了，这一部分的重点本应该是这个游戏的 AI，目前的设计是： <strong>在自己的 y 与球的 y 距离大于 25 时，追球。25 差不多是板子的 1/4。</strong> 逻辑就这，没了</p><p>但别小看这简单的逻辑，在目前没有什么骚东西的环境下，只要没有什么花里胡哨的操作（例如拿板边去敲球）几乎没有胜利的机会。而现在这个环境玩骚的只会把自己的分骚没（比如我）</p><h3 id="冷却与重置">冷却与重置</h3><p>当球落某方门后，球会重置到游戏中点，没有操作，直接关闭了惯性和直接 set position</p><p>不过有一个小设计：败方接球。如果某方上一回合输了，这一回合由该方接首发球</p><p>所以，虽然是可以玩了，但是还是缺东西，比如很多关于游戏规则的完善</p><h2 id="下一步">下一步</h2><ul><li>发球 y 随机：目前发球的 y 是固定的，直接去接球点等球多没意思啊</li><li>随机首发球：第一球现在都发给左方，或许应该随机</li><li>胜利规则：现在这游戏一开就没边了…</li><li>暂停与结束界面</li><li>声音</li></ul><p>游戏补完之后，往后的更新就越来越慢了，因为想法越骚，实现也会越来越难</p><h2 id="Link">Link</h2><ul><li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/82567889">游戏AI入门及AI优化</a></li><li><a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/stable/classes/class_animationplayer.html">AnimationPlayer</a></li></ul><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27177424">现代游戏AI的鼻祖——聊聊你所不知道的《吃豆人》</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
       
       
       <category domain="https://colmugx.github.io/blog/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</category>
@@ -206,7 +228,7 @@ Q：算半个，还有吗？&lt;/p&gt;
       <description>&lt;p&gt;其实游戏已经做很远了，为了真实性删了很多添加的东西…&lt;/p&gt;
 &lt;p&gt;本来可能已经开始描述第一个版本了，万万没想到发布到 web 时发生问题：编译产物报错&lt;/p&gt;
 &lt;p&gt;项目 &lt;a href=&quot;https://colmugx.github.io/godot-pong&quot;&gt;体验地址&lt;/a&gt;，&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot; href=&quot;https://github.com/colmugx/godot-pong&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;TL-DR-3&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;h2 id=&quot;TL-DR-4&quot;&gt;TL;DR&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;完成基本的击打、胜利条件、球的恢复&lt;/li&gt;
 &lt;li&gt;编译与发布&lt;/li&gt;
@@ -214,7 +236,7 @@ Q：算半个，还有吗？&lt;/p&gt;
       
       
       
-      <content:encoded><![CDATA[<p>其实游戏已经做很远了，为了真实性删了很多添加的东西…</p><p>本来可能已经开始描述第一个版本了，万万没想到发布到 web 时发生问题：编译产物报错</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR-3">TL;DR</h2><ul><li>完成基本的击打、胜利条件、球的恢复</li><li>编译与发布</li></ul><span id="more"></span><h2 id="完成情况">完成情况</h2><p>基本的 gameplay 已经完成 —— 两块板子一个球，板子的后面是各自的「门」。</p><p>门选择 <code>Area2D</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，原因是这个控件专门控制物理状态与检查物理状态；墙壁使用<code>StaticBody2D</code></p><p>板子和球目前均使用 <code>KinematicBody2D</code>，因为可以方便的模拟物理状态，反弹完全不需要代码描述。但板子可能应该换成<code>RigidBody2D</code>，这样可以模拟更多的真实物理，例如摩擦力，受力。不过目前需要求证：控制端使用 <code>RigidBody</code> 是否合理</p><p>完全没什么好讲的，非常简单的实现</p><h2 id="编译与发布">编译与发布</h2><p>由于 <code>native</code> 的关系，运行时会把 cpp 编译，并编译成动态链接库。例如 osx 使用 <code>.dylib</code>，那么 web 跟原生相关的肯定是 <code>.wasm</code> 。官方提供了原生端的案例<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，而开发时也只编译了 osx 版本。</p><p>直到要验证发布到 github pages 时，出大问题，浏览器只显示 <code>abort(undefined)</code></p><h3 id="目前不能使用最新的-emscripten-编译你的-wasm">目前不能使用最新的 emscripten 编译你的 wasm</h3><p>经历各种尝试，例如直接从源码编译新的 template，但编译时也频出问题，甚至 debug 无法成功编译，接着进入无尽改编译参数等各种操作……</p><p>直到看到这个 issue <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p><p>因为之前一直使用的 <code>emscripten</code> 版本已经是 26，所以猜<strong>是不是跟版本有关系，于是换成 17，成了</strong></p><p>于是有另一个猜想：<strong>官方发布的模板是否因为也使用 17 的版本发布，会导致 dll 对应不上。业务代码必须同样使用 17 编译代码才可以使用？</strong></p><h3 id="交给-github-action">交给 github action</h3><p>因为刚刚的 issue，发现这个作者对 godot 发布已经了然于胸，最后发现他提供了一个 ci 配置<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>，于是参考这个配置写了一个工作流，现在可以把整个发布路程交到 github 了</p><h3 id="记得提交-export-presets">记得提交 export_presets</h3><p>可能可以发现，前面大部分 action 都是失败的</p><p>如果选择了 github 的 .gitignore 模板，这个文件默认会被忽略。但缺少这个文件 ci 无法工作 —— 获取不到发布配置</p><p>so，记得提交，接着等待一切结束。顺带一提，github action 的配置应该不高，编译 godot-cpp 属实膀胱局</p><p>下一篇应该讲有完整 UI 的第一个版本，结束</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html">使用 Area2D</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/plugins/gdnative/gdnative-cpp-example.html">GDNative C++示例</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li><li id="fn3" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/godotengine/godot-cpp/issues/554">Building for HTML5 stopped working for emsdk 2.0.18+</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p></li><li id="fn4" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/2shady4u/godot-cpp-ci">2shady4u/godot-cpp-ci </a> <a href="#fnref4" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
+      <content:encoded><![CDATA[<p>其实游戏已经做很远了，为了真实性删了很多添加的东西…</p><p>本来可能已经开始描述第一个版本了，万万没想到发布到 web 时发生问题：编译产物报错</p><p>项目 <a href="https://colmugx.github.io/godot-pong">体验地址</a>，<a target="_blank" rel="noopener" href="https://github.com/colmugx/godot-pong">项目地址</a></p><h2 id="TL-DR-4">TL;DR</h2><ul><li>完成基本的击打、胜利条件、球的恢复</li><li>编译与发布</li></ul><span id="more"></span><h2 id="完成情况-2">完成情况</h2><p>基本的 gameplay 已经完成 —— 两块板子一个球，板子的后面是各自的「门」。</p><p>门选择 <code>Area2D</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，原因是这个控件专门控制物理状态与检查物理状态；墙壁使用<code>StaticBody2D</code></p><p>板子和球目前均使用 <code>KinematicBody2D</code>，因为可以方便的模拟物理状态，反弹完全不需要代码描述。但板子可能应该换成<code>RigidBody2D</code>，这样可以模拟更多的真实物理，例如摩擦力，受力。不过目前需要求证：控制端使用 <code>RigidBody</code> 是否合理</p><p>完全没什么好讲的，非常简单的实现</p><h2 id="编译与发布">编译与发布</h2><p>由于 <code>native</code> 的关系，运行时会把 cpp 编译，并编译成动态链接库。例如 osx 使用 <code>.dylib</code>，那么 web 跟原生相关的肯定是 <code>.wasm</code> 。官方提供了原生端的案例<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，而开发时也只编译了 osx 版本。</p><p>直到要验证发布到 github pages 时，出大问题，浏览器只显示 <code>abort(undefined)</code></p><h3 id="目前不能使用最新的-emscripten-编译你的-wasm">目前不能使用最新的 emscripten 编译你的 wasm</h3><p>经历各种尝试，例如直接从源码编译新的 template，但编译时也频出问题，甚至 debug 无法成功编译，接着进入无尽改编译参数等各种操作……</p><p>直到看到这个 issue <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p><p>因为之前一直使用的 <code>emscripten</code> 版本已经是 26，所以猜<strong>是不是跟版本有关系，于是换成 17，成了</strong></p><p>于是有另一个猜想：<strong>官方发布的模板是否因为也使用 17 的版本发布，会导致 dll 对应不上。业务代码必须同样使用 17 编译代码才可以使用？</strong></p><h3 id="交给-github-action">交给 github action</h3><p>因为刚刚的 issue，发现这个作者对 godot 发布已经了然于胸，最后发现他提供了一个 ci 配置<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>，于是参考这个配置写了一个工作流，现在可以把整个发布路程交到 github 了</p><h3 id="记得提交-export-presets">记得提交 export_presets</h3><p>可能可以发现，前面大部分 action 都是失败的</p><p>如果选择了 github 的 .gitignore 模板，这个文件默认会被忽略。但缺少这个文件 ci 无法工作 —— 获取不到发布配置</p><p>so，记得提交，接着等待一切结束。顺带一提，github action 的配置应该不高，编译 godot-cpp 属实膀胱局</p><p>下一篇应该讲有完整 UI 的第一个版本，结束</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html">使用 Area2D</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/plugins/gdnative/gdnative-cpp-example.html">GDNative C++示例</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li><li id="fn3" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/godotengine/godot-cpp/issues/554">Building for HTML5 stopped working for emsdk 2.0.18+</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p></li><li id="fn4" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://github.com/2shady4u/godot-cpp-ci">2shady4u/godot-cpp-ci </a> <a href="#fnref4" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
       
       
       <category domain="https://colmugx.github.io/blog/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</category>
@@ -669,32 +691,6 @@ rust 社区中关注了 &lt;code&gt;rocket&lt;/code&gt; 一段时间，后面发
       
       
       <comments>https://colmugx.github.io/blog/2019/10/13/try-wasm/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>来自 swift 的跨界执法（一） —— Vapor</title>
-      <link>https://colmugx.github.io/blog/2019/06/23/try-vapor-0/</link>
-      <guid>https://colmugx.github.io/blog/2019/06/23/try-vapor-0/</guid>
-      <pubDate>Sun, 23 Jun 2019 08:17:53 GMT</pubDate>
-      
-      <description>&lt;p&gt;Vapor 应该是目前比较成熟的服务器应用框架了，更新快，社区“繁荣”&lt;/p&gt;
-&lt;p&gt;所以，直接干吧&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>Vapor 应该是目前比较成熟的服务器应用框架了，更新快，社区“繁荣”</p><p>所以，直接干吧</p><span id="more"></span><h2 id="安装-3">安装</h2><p>直接装个工具集吧</p><pre class="line-numbers language-none"><code class="language-none">brew tap vapor&#x2F;tapbrew install vapor&#x2F;tap&#x2F;vapor</code></pre><h2 id="生成应用">生成应用</h2><pre class="line-numbers language-none"><code class="language-none">vapor new Hello</code></pre><p>等待一会，出现水滴图案时就初始化完成了</p><p>接着进目录，生成<code>xcode</code>可以使用的工程文件</p><pre class="line-numbers language-none"><code class="language-none">.&#x2F;Hellovapor xcode</code></pre><p>依然是等待一会之后，<code>cmd</code>会询问你是否打开<code>XCode</code>，打开便是</p><h2 id="编写体验-2">编写体验</h2><p>vapor 默认会给几种方案，如果直接 new 的话默认是<code>api</code>方案，也就是“接口服务器”。</p><p>所以一打开，就能看到工程已经被“安排好了”：一般所需要的目录结构，以及默认使用<code>SQLite3</code>数据库（运行在内存）</p><p>本来我打算通过<code>Todos</code>练练手，现在看起来好像参考答案已经给出来了…默认情况下也不需要怎么去补充，按照自己的编程习惯直接用就行了。</p><p>但这里用内存数据库属实8合适，所以改一下数据库存储方式</p><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift">&#x2F;&#x2F; DirectoryConfig.detect().workDir 项目绝对路径let storePath &#x3D; DirectoryConfig.detect().workDir + &quot;Db&#x2F;store.db&quot;let sqlite &#x3D; try SQLiteDatabase(storage: .file(path: storePath))</code></pre><p>这样一来就把数据库位置移动到工程中<code>Db</code>目录下了，第一次运行就会直接创建数据库</p><p>对了，Vapor 自己带一个 ORM <code>Fluent</code>，所以关系型数据库操作不会太操蛋</p><p>所以下一篇应该是讨论一个更合适的<code>restful</code>写法？或者是用上<code>gRPC</code>？</p><h2 id="相关信息">相关信息</h2><p>Vapor 自己提供一个<a target="_blank" rel="noopener" href="http://vapor.university/">「大学」</a>，这里都是组织自己录的教学视频，基本点都涵盖到了</p>]]></content:encoded>
-      
-      
-      <category domain="https://colmugx.github.io/blog/categories/%E6%9C%8D%E5%8A%A1%E5%AE%9E%E8%B7%B5/">服务实践</category>
-      
-      
-      <category domain="https://colmugx.github.io/blog/tags/swift/">swift</category>
-      
-      <category domain="https://colmugx.github.io/blog/tags/vapor/">vapor</category>
-      
-      
-      <comments>https://colmugx.github.io/blog/2019/06/23/try-vapor-0/#disqus_thread</comments>
       
     </item>
     
